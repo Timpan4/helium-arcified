@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test';
-import { normalizeName, normalizeStored, safeWebUrl, snapshotUrls, upsertSpace } from '../src/state.js';
+import { normalizeName, normalizeStored, safeWebUrl, snapshotUrls, upsertSpace } from '../src/state.ts';
 
 describe('workspace snapshot helpers', () => {
   test('rejects privileged URLs and credentials', () => {
