@@ -2,7 +2,7 @@
 
 Downstream work on an Arc-style browser interface and an opt-in Dia-style assistant, based on the [Helium](https://github.com/imputnet/helium) Chromium patchset.
 
-This is an **independent fork**, not an upstream Helium release. Target platforms are **Windows and macOS**.
+This is an **independent fork**, not an upstream Helium release. Target platforms are **Linux, Windows and macOS**.
 
 ## Repository layout
 
@@ -30,7 +30,7 @@ Local AI is optional. In LM Studio start its server on 127.0.0.1:1234 and load a
 - Keep `main` aligned with `imputnet/helium`.
 - Develop features on short-lived branches and use PRs in **Timpan4/helium-arcified**, not upstream.
 - Keep browser-facing native work in quilt patches; prefer a separate `patches/arcified/` grouping once the first patch exists.
-- Test feature parity on Windows and macOS before considering native releases.
+- Test feature parity on Linux, Windows and macOS before considering native releases.
 - Never redistribute or copy proprietary Widevine CDMs. Streaming playback is optional best-effort.
 
 See [roadmap](docs/roadmap.md) and [native integration](docs/native-integration.md).
