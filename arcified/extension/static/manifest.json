@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Arcified Lab",
+  "short_name": "Arcified Lab",
+  "version": "0.1.0",
+  "description": "Local workspace snapshots and opt-in LM Studio AI for Helium Arcified.",
+  "minimum_chrome_version": "116",
+  "permissions": ["tabs", "storage", "scripting", "sidePanel"],
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "host_permissions": ["http://127.0.0.1:1234/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "side_panel": { "default_path": "panel.html" },
+  "action": { "default_title": "Open Arcified Lab" }
+}

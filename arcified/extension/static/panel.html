@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arcified Lab</title>
+  <link rel="stylesheet" href="./panel.css">
+  <script type="module" src="./panel.js"></script>
+</head>
+<body>
+  <header><h1>Arcified Lab</h1><p id="status" role="status">Loading…</p></header>
+  <section>
+    <h2>Spaces <small>(snapshots)</small></h2>
+    <div class="line"><input id="space-name" maxlength="40" placeholder="Space name" aria-label="Space name"><button id="save-space">Save window</button></div>
+    <div id="spaces"></div>
+  </section>
+  <section><h2>Current tabs</h2><button id="refresh-tabs">Refresh</button><div id="tabs"></div></section>
+  <section>
+    <h2>Local AI</h2>
+    <button id="read-page">Read current page</button>
+    <p id="context-status">No page context. Permission requested only when clicked.</p>
+    <textarea id="question" placeholder="Ask LM Studio (127.0.0.1:1234)" aria-label="Question"></textarea>
+    <button id="ask">Ask local model</button>
+    <pre id="answer" aria-live="polite"></pre>
+  </section>
+</body>
+</html>

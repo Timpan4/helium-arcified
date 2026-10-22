@@ -1,0 +1,18 @@
+{
+  "name": "@arcified/extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Arcified workspace and local AI prototype for Helium",
+  "packageManager": "bun@1.4.3",
+  "engines": { "bun": ">=1.4.3" },
+  "scripts": {
+    "build": "bunx tsc -p tsconfig.json && bun scripts/copy-assets.ts",
+    "typecheck": "bunx tsc -p tsconfig.json --noEmit",
+    "test": "bun test",
+    "check": "bun run typecheck && bun run build && bun run test"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2"
+  }
+}
