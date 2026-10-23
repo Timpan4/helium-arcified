@@ -1,0 +1,369 @@
+diff --git a/chrome/browser/ui/browser_shortcuts/browser_shortcut_service.cc b/chrome/browser/ui/browser_shortcuts/browser_shortcut_service.cc
+index 7a7d5d0b..e95f3cd1 100644
+--- a/chrome/browser/ui/browser_shortcuts/browser_shortcut_service.cc
++++ b/chrome/browser/ui/browser_shortcuts/browser_shortcut_service.cc
+@@ -150,6 +150,50 @@ bool BrowserShortcutService::HasDefaultAccelerator(
+   return it != defaults_.end() && ContainsAccelerator(it->second, accelerator);
+ }
+ 
++AcceleratorChangePreview BrowserShortcutService::PreviewAcceleratorAssignment(
++    int command_id,
++    const std::string& serialized) const {
++  if (!HasCommand(command_id)) {
++    return {AssignmentResult::kUnknownCommand, {}};
++  }
++  std::optional<AcceleratorEntry> entry = EntryFromString(serialized, true);
++  if (!entry) {
++    return {AssignmentResult::kInvalidAccelerator, {}};
++  }
++
++  AcceleratorChangePreview preview;
++  preview.conflicts = FindShortcutConflicts(
++      command_id, current_, std::vector<AcceleratorEntry>{*entry},
++      ConflictScope::kAssignment);
++#if BUILDFLAG(IS_MAC)
++  // Locked platform defaults may have no Settings label/current_ entry.
++  for (const auto& platform_default : GetPlatformDefaultAccelerators()) {
++    if (platform_default.command_id != command_id &&
++        !platform_default.user_modifiable &&
++        platform_default.accelerator == entry->accelerator) {
++      AddShortcutConflict(preview.conflicts, platform_default.command_id, true);
++    }
++  }
++#endif
++  if (IsAcceleratorLocked(entry->accelerator, command_id)) {
++    preview.result = AssignmentResult::kShortcutLocked;
++  }
++  return preview;
++}
++
++AcceleratorChangePreview BrowserShortcutService::PreviewAcceleratorReset(
++    int command_id) const {
++  const auto defaults_it = defaults_.find(command_id);
++  if (defaults_it == defaults_.end()) {
++    return {AssignmentResult::kUnknownCommand, {}};
++  }
++  // Reset replaces the target with its defaults, then removes only modifiable
++  // collisions elsewhere. It does not use assignment's lock refusal.
++  return {AssignmentResult::kSuccess,
++          FindShortcutConflicts(command_id, current_, defaults_it->second,
++                                ConflictScope::kReset)};
++}
++
+ AssignmentResult BrowserShortcutService::AssignAcceleratorToCommand(
+     int command_id,
+     const std::string& serialized) {
+diff --git a/chrome/browser/ui/browser_shortcuts/browser_shortcut_service.h b/chrome/browser/ui/browser_shortcuts/browser_shortcut_service.h
+index 60b84fcc..1ea860ea 100644
+--- a/chrome/browser/ui/browser_shortcuts/browser_shortcut_service.h
++++ b/chrome/browser/ui/browser_shortcuts/browser_shortcut_service.h
+@@ -13,6 +13,7 @@
+ 
+ #include "base/memory/raw_ptr.h"
+ #include "base/observer_list.h"
++#include "chrome/browser/ui/browser_shortcuts/conflict_preview.h"
+ #include "components/keyed_service/core/keyed_service.h"
+ #include "components/prefs/pref_change_registrar.h"
+ #include "ui/base/accelerators/accelerator.h"
+@@ -45,6 +46,13 @@ enum class AssignmentResult {
+   kShortcutLocked,
+ };
+ 
++struct AcceleratorChangePreview {
++  AssignmentResult result = AssignmentResult::kSuccess;
++  // Deduplicated by command ID. A locked assignment changes nothing; otherwise
++  // assignment/reset removes only the conflicting modifiable bindings.
++  std::vector<ShortcutConflict> conflicts;
++};
++
+ class BrowserShortcutService : public KeyedService {
+  public:
+   class Observer : public base::CheckedObserver {
+@@ -63,6 +71,14 @@ class BrowserShortcutService : public KeyedService {
+   bool HasDefaultAccelerator(int command_id,
+                              const ui::Accelerator& accelerator) const;
+ 
++  // Read-only snapshots, not reservations. Use the same Profile service and
++  // revalidate after any intervening change before user-confirmed mutation.
++  // These APIs do not detect arbitrary OS, extension or webpage shortcuts.
++  AcceleratorChangePreview PreviewAcceleratorAssignment(
++      int command_id,
++      const std::string& serialized) const;
++  AcceleratorChangePreview PreviewAcceleratorReset(int command_id) const;
++
+   AssignmentResult AssignAcceleratorToCommand(int command_id,
+                                               const std::string& serialized);
+   bool UnassignAcceleratorFromCommand(int command_id,
+diff --git a/chrome/browser/ui/browser_shortcuts/browser_shortcut_service_preview_unittest.cc b/chrome/browser/ui/browser_shortcuts/browser_shortcut_service_preview_unittest.cc
+new file mode 100644
+index 00000000..a672e0a1
+--- /dev/null
++++ b/chrome/browser/ui/browser_shortcuts/browser_shortcut_service_preview_unittest.cc
+@@ -0,0 +1,196 @@
++// Copyright 2026 The Helium Arcified Authors
++// Use, redistribution and modification are governed by the GPL-3.0 license
++// that can be found in the repository LICENSE file.
++
++#include "chrome/browser/ui/browser_shortcuts/browser_shortcut_service.h"
++
++#include <algorithm>
++#include <memory>
++
++#include "build/build_config.h"
++#include "chrome/app/chrome_command_ids.h"
++#include "chrome/browser/ui/browser_shortcuts/browser_shortcut_prefs.h"
++#include "chrome/test/base/testing_profile.h"
++#include "components/prefs/pref_service.h"
++#include "content/public/test/browser_task_environment.h"
++#include "testing/gtest/include/gtest/gtest.h"
++
++#if BUILDFLAG(IS_MAC)
++#include "chrome/browser/ui/browser_shortcuts/browser_shortcut_platform_mac.h"
++#include "chrome/browser/ui/browser_shortcuts/browser_shortcut_serialization.h"
++#endif
++
++namespace browser_shortcuts {
++namespace {
++
++class ChangeCounter : public BrowserShortcutService::Observer {
++ public:
++  void OnBrowserShortcutsChanged() override { ++changes; }
++  int changes = 0;
++};
++
++class BrowserShortcutPreviewTest : public testing::Test {
++ protected:
++  void SetUp() override {
++    service_ = std::make_unique<BrowserShortcutService>(profile_.GetPrefs());
++    service_->AddObserver(&counter_);
++  }
++  void TearDown() override { service_->RemoveObserver(&counter_); }
++
++  content::BrowserTaskEnvironment task_environment_;
++  TestingProfile profile_;
++  ChangeCounter counter_;
++  std::unique_ptr<BrowserShortcutService> service_;
++};
++
++TEST_F(BrowserShortcutPreviewTest, PreviewIsReadOnlyAndUsesNativeEquality) {
++  ASSERT_EQ(AssignmentResult::kSuccess,
++            service_->AssignAcceleratorToCommand(IDC_NEW_WINDOW,
++                                                 "Control+Shift+KeyY"));
++  const auto before = service_->GetAcceleratorMap();
++  const auto pref =
++      profile_.GetPrefs()->GetDict(prefs::kCustomAccelerators).Clone();
++  const int changes = counter_.changes;
++  // The recorder spelling differs from canonical serialization. Both parse to
++  // the same native accelerator, unlike frontend string equality.
++  const auto preview =
++      service_->PreviewAcceleratorAssignment(IDC_NEW_TAB, "Shift+Control+KeyY");
++  ASSERT_EQ(AssignmentResult::kSuccess, preview.result);
++  ASSERT_EQ(1u, preview.conflicts.size());
++  EXPECT_EQ(IDC_NEW_WINDOW, preview.conflicts[0].command_id);
++  EXPECT_FALSE(preview.conflicts[0].locked);
++  EXPECT_EQ(before, service_->GetAcceleratorMap());
++  EXPECT_EQ(pref, profile_.GetPrefs()->GetDict(prefs::kCustomAccelerators));
++  EXPECT_EQ(changes, counter_.changes);
++
++  EXPECT_EQ(preview.result, service_->AssignAcceleratorToCommand(
++                                IDC_NEW_TAB, "Shift+Control+KeyY"));
++  EXPECT_EQ(IDC_NEW_TAB,
++            service_->FindCommandForAccelerator("Control+Shift+KeyY"));
++}
++
++TEST_F(BrowserShortcutPreviewTest,
++       ValidationOrderAndSelfAssignmentMatchMutation) {
++  EXPECT_EQ(AssignmentResult::kUnknownCommand,
++            service_->PreviewAcceleratorAssignment(-1, "Control+").result);
++  EXPECT_EQ(AssignmentResult::kUnknownCommand,
++            service_->AssignAcceleratorToCommand(-1, "Control+"));
++  EXPECT_EQ(
++      AssignmentResult::kInvalidAccelerator,
++      service_->PreviewAcceleratorAssignment(IDC_NEW_TAB, "Control+").result);
++  EXPECT_EQ(AssignmentResult::kInvalidAccelerator,
++            service_->AssignAcceleratorToCommand(IDC_NEW_TAB, "Control+"));
++  ASSERT_EQ(AssignmentResult::kSuccess, service_->AssignAcceleratorToCommand(
++                                            IDC_NEW_TAB, "Control+Shift+KeyY"));
++  const auto preview =
++      service_->PreviewAcceleratorAssignment(IDC_NEW_TAB, "Control+Shift+KeyY");
++  EXPECT_EQ(AssignmentResult::kSuccess, preview.result);
++  EXPECT_TRUE(preview.conflicts.empty());
++}
++
++TEST_F(BrowserShortcutPreviewTest,
++       ResetPreviewMatchesDisplacementWithoutWrites) {
++  const auto& commands = service_->GetCommands();
++  // A macOS unit test may have no main menu, making Cocoa defaults locked.
++  // Select from the service's actual modifiable defaults instead of assuming
++  // that a particular menu-owned command can be reassigned.
++  const auto command = std::ranges::find_if(commands, [](const auto& entry) {
++    return entry.command_id != IDC_NEW_WINDOW && !entry.accelerators.empty() &&
++           std::ranges::all_of(entry.accelerators, [](const auto& shortcut) {
++             return shortcut.user_modifiable;
++           });
++  });
++  ASSERT_NE(commands.end(), command);
++  const int command_id = command->command_id;
++  const auto defaults = command->accelerators;
++  ASSERT_FALSE(defaults.empty());
++  for (const auto& shortcut : defaults) {
++    ASSERT_TRUE(shortcut.user_modifiable);
++    ASSERT_EQ(AssignmentResult::kSuccess,
++              service_->AssignAcceleratorToCommand(IDC_NEW_WINDOW,
++                                                   shortcut.serialized));
++  }
++  const auto before = service_->GetAcceleratorMap();
++  const auto pref =
++      profile_.GetPrefs()->GetDict(prefs::kCustomAccelerators).Clone();
++  const int changes = counter_.changes;
++  const auto preview = service_->PreviewAcceleratorReset(command_id);
++  ASSERT_EQ(AssignmentResult::kSuccess, preview.result);
++  ASSERT_EQ(1u, preview.conflicts.size());
++  EXPECT_EQ(IDC_NEW_WINDOW, preview.conflicts[0].command_id);
++  EXPECT_FALSE(preview.conflicts[0].locked);
++  EXPECT_EQ(before, service_->GetAcceleratorMap());
++  EXPECT_EQ(pref, profile_.GetPrefs()->GetDict(prefs::kCustomAccelerators));
++  EXPECT_EQ(changes, counter_.changes);
++  ASSERT_TRUE(service_->ResetAcceleratorsForCommand(command_id));
++  for (const auto& shortcut : defaults) {
++    EXPECT_EQ(command_id,
++              service_->FindCommandForAccelerator(shortcut.serialized));
++  }
++  EXPECT_TRUE(service_->PreviewAcceleratorReset(command_id).conflicts.empty());
++  EXPECT_EQ(AssignmentResult::kUnknownCommand,
++            service_->PreviewAcceleratorReset(-1).result);
++  EXPECT_FALSE(service_->ResetAcceleratorsForCommand(-1));
++}
++
++TEST_F(BrowserShortcutPreviewTest, CommandWithoutDefaultsResetsToEmpty) {
++  const auto& commands = service_->GetCommands();
++  const auto command = std::ranges::find_if(
++      commands, [](const auto& entry) { return entry.accelerators.empty(); });
++  ASSERT_NE(commands.end(), command);
++  const int command_id = command->command_id;
++  ASSERT_EQ(AssignmentResult::kSuccess, service_->AssignAcceleratorToCommand(
++                                            command_id, "Control+Shift+KeyY"));
++  const auto preview = service_->PreviewAcceleratorReset(command_id);
++  EXPECT_EQ(AssignmentResult::kSuccess, preview.result);
++  EXPECT_TRUE(preview.conflicts.empty());
++  ASSERT_TRUE(service_->ResetAcceleratorsForCommand(command_id));
++  EXPECT_FALSE(service_->FindCommandForAccelerator("Control+Shift+KeyY"));
++}
++
++TEST_F(BrowserShortcutPreviewTest, PreviewDoesNotReserveAnAccelerator) {
++  ASSERT_EQ(AssignmentResult::kSuccess, service_->AssignAcceleratorToCommand(
++                                            IDC_NEW_TAB, "Control+Shift+KeyY"));
++  const auto old_preview =
++      service_->PreviewAcceleratorAssignment(IDC_NEW_TAB, "Control+Shift+KeyY");
++  EXPECT_TRUE(old_preview.conflicts.empty());
++  ASSERT_EQ(AssignmentResult::kSuccess,
++            service_->AssignAcceleratorToCommand(IDC_NEW_WINDOW,
++                                                 "Control+Shift+KeyY"));
++  const auto refreshed =
++      service_->PreviewAcceleratorAssignment(IDC_NEW_TAB, "Control+Shift+KeyY");
++  ASSERT_EQ(1u, refreshed.conflicts.size());
++  EXPECT_EQ(IDC_NEW_WINDOW, refreshed.conflicts[0].command_id);
++  EXPECT_TRUE(old_preview.conflicts.empty());
++}
++
++#if BUILDFLAG(IS_MAC)
++TEST_F(BrowserShortcutPreviewTest, LockedPlatformDefaultsRefuseWithoutWrites) {
++  const auto defaults = GetPlatformDefaultAccelerators();
++  const auto locked = std::ranges::find_if(defaults, [](const auto& entry) {
++    return !entry.user_modifiable && entry.command_id != IDC_NEW_TAB;
++  });
++  ASSERT_NE(defaults.end(), locked);
++  const std::string serialized = AcceleratorToString(locked->accelerator);
++  ASSERT_FALSE(serialized.empty());
++  const auto before = service_->GetAcceleratorMap();
++  const auto pref =
++      profile_.GetPrefs()->GetDict(prefs::kCustomAccelerators).Clone();
++  const int changes = counter_.changes;
++  const auto preview =
++      service_->PreviewAcceleratorAssignment(IDC_NEW_TAB, serialized);
++  ASSERT_EQ(AssignmentResult::kShortcutLocked, preview.result);
++  const auto conflict = std::ranges::find(preview.conflicts, locked->command_id,
++                                          &ShortcutConflict::command_id);
++  ASSERT_NE(preview.conflicts.end(), conflict);
++  EXPECT_TRUE(conflict->locked);
++  EXPECT_EQ(preview.result,
++            service_->AssignAcceleratorToCommand(IDC_NEW_TAB, serialized));
++  EXPECT_EQ(before, service_->GetAcceleratorMap());
++  EXPECT_EQ(pref, profile_.GetPrefs()->GetDict(prefs::kCustomAccelerators));
++  EXPECT_EQ(changes, counter_.changes);
++}
++#endif
++
++}  // namespace
++}  // namespace browser_shortcuts
+diff --git a/chrome/browser/ui/browser_shortcuts/conflict_preview.h b/chrome/browser/ui/browser_shortcuts/conflict_preview.h
+new file mode 100644
+index 00000000..1106ccd7
+--- /dev/null
++++ b/chrome/browser/ui/browser_shortcuts/conflict_preview.h
+@@ -0,0 +1,65 @@
++// Copyright 2026 The Helium Arcified Authors
++// Use, redistribution and modification are governed by the GPL-3.0 license
++// that can be found in the repository LICENSE file.
++
++#ifndef CHROME_BROWSER_UI_BROWSER_SHORTCUTS_CONFLICT_PREVIEW_H_
++#define CHROME_BROWSER_UI_BROWSER_SHORTCUTS_CONFLICT_PREVIEW_H_
++
++#include <algorithm>
++#include <vector>
++
++namespace browser_shortcuts {
++
++struct ShortcutConflict {
++  int command_id;
++  bool locked;
++};
++
++// Assignment reports locked matches too. Reset removes only modifiable ones.
++enum class ConflictScope { kAssignment, kReset };
++
++inline void AddShortcutConflict(std::vector<ShortcutConflict>& conflicts,
++                                int command_id,
++                                bool locked) {
++  auto it = std::lower_bound(conflicts.begin(), conflicts.end(), command_id,
++                             [](const ShortcutConflict& conflict, int id) {
++                               return conflict.command_id < id;
++                             });
++  if (it != conflicts.end() && it->command_id == command_id) {
++    it->locked = it->locked || locked;
++  } else {
++    conflicts.insert(it, {command_id, locked});
++  }
++}
++
++// Borrow the service's current map and proposed AcceleratorEntry range. No
++// command catalog, binding store, parsing or accelerator equality lives here.
++// Production instantiates this with ui::Accelerator through AcceleratorEntry.
++template <typename CommandAccelerators, typename AcceleratorEntries>
++std::vector<ShortcutConflict> FindShortcutConflicts(
++    int command_id_to_ignore,
++    const CommandAccelerators& current,
++    const AcceleratorEntries& proposed,
++    ConflictScope scope) {
++  std::vector<ShortcutConflict> conflicts;
++  for (const auto& [command_id, entries] : current) {
++    if (command_id == command_id_to_ignore) {
++      continue;
++    }
++    for (const auto& entry : entries) {
++      if (scope == ConflictScope::kReset && !entry.user_modifiable) {
++        continue;
++      }
++      for (const auto& candidate : proposed) {
++        if (entry.accelerator == candidate.accelerator) {
++          AddShortcutConflict(conflicts, command_id, !entry.user_modifiable);
++        }
++      }
++    }
++  }
++  return conflicts;
++}
++
++}  // namespace browser_shortcuts
++
++#endif  // CHROME_BROWSER_UI_BROWSER_SHORTCUTS_CONFLICT_PREVIEW_H_
