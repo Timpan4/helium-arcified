@@ -4,7 +4,7 @@ Non-AI browser work comes first. AI has 23 later items and six sync proposals ar
 
 ## Current evidence
 
-Of 135 non-AI items, 0 are fully proven complete, 1 research item is locally complete awaiting publication, 56 are in progress and 78 are not started. All 51 additional primary assignments are confirmed as GPT-6.1 High. Assignment and reviewed local components are distinct from native acceptance.
+Of 135 non-AI items, 0 are fully proven complete, 1 research item is locally complete awaiting publication, 56 are in progress and 78 are not started. All 51 additional GPT-6.1 High local slices are independently reviewed and integrated. They remain distinct from native acceptance.
 
 The local baseline is checkpoint `c9748ec8e6d64524c1de9d943dd6f2cfacb319fe`. It contains the authorized fork-wide permission change, published backlog, native preparation foundations, lifecycle v3 candidate and performance fixtures. No implementation push or PR has run.
 
@@ -48,8 +48,8 @@ Approved: saved Space tabs shared across windows; temporaries window-local; live
 
 Activity protection, automatic cleanup, destructive actions and populated cross-Profile migration policies remain open. Teams must not assume approval. Cross-platform native UI, authentication isolation, real persistence and performance remain unverified.
 
-The [execution state](execution-state.json) and [fixture browser report](reviews/performance-browser-check.md) distinguish local checks from native evidence. Parent owns integration and GitHub state. Next: collect assignment receipts, integrate reviewed components and keep blocked native acceptance open.
+The [execution state](execution-state.json) and [fixture browser report](reviews/performance-browser-check.md) distinguish local checks from native evidence. Parent owns integration and GitHub state. All 51 local area slices are integrated; root composition review and pinned native ownership consumer inventory continue. Keep native acceptance open.
 
 ## Game pause request
 
-The owner chose cs2 detection every 30 seconds and manual resume only. T3 rejected this interval with `Expected a value greater than or equal to 60000`. No guard is armed. A structured question is pending to accept one-minute checks or leave automatic detection off. [State](game-pause-state.json) preserves that decision gate.
+The owner approved one-minute cs2 checks after T3 rejected 30 seconds. The guard is armed and bound to this root thread. Its first scheduled check is 2026-10-23T15:15:45.078Z. On detection it stops all other active T3 threads across projects, including descendants. This root stays active. Game exit never resumes work; only an explicit owner "resume" does. [State](game-pause-state.json) retains the scheduler ID and interruption ledger. Check it before new delegation on continuations.

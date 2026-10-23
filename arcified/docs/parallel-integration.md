@@ -1,8 +1,8 @@
 # Parallel integration evidence
 
-The parent integrated reviewed components for 48 of the 51 additional assigned issues on `feat/parallel-browser-work`. These are local slices. No native issue acceptance or browser release is claimed.
+The parent integrated reviewed components for all 51 additional assigned issues on `feat/parallel-browser-work`. These are local slices. No native issue acceptance or browser release is claimed.
 
-The [manifest](parallel-workstreams.json) retains every primary assignment, isolated area thread and source-to-integration commit. Sixteen area deliveries are integrated, including the reviewed source-only shortcut patch. That patch remains unapplied and its native gtests uncompiled. Capture, region capture and recent files remain outside this integration checkpoint, pending the final region precision-fix review.
+The [manifest](parallel-workstreams.json) retains every primary assignment, isolated area thread and source-to-integration commit. All seventeen area deliveries are integrated, including the reviewed source-only shortcut patch. That patch remains unapplied and its native gtests uncompiled. Region precision/doc defects were fixed and independently cleared before capture integration. All final area feature bytes match their reviewed branches/commits.
 
 ## Preserved review evidence
 
@@ -22,8 +22,12 @@ No sanitizer diagnostics occurred. This resolves the separate-checkout compile g
 
 ## Remaining work
 
-The sidebar task produced meaningful composed conformance scenarios rather than a production facade because authoritative native ordering/binding/localization inputs are absent. Fresh independent review is running. A separate GPT-6.1 High task composes native-context admission/persistence and requires independent review afterward. A separate task inventories production native window/Profile ownership consumers at pinned source identities. Same actual native-window cross-Profile feasibility remains unproven.
+The sidebar task produced meaningful composed conformance scenarios rather than a production facade because authoritative native ordering/binding/localization inputs are absent. Fresh independent review passed with no actionable findings and the scenarios were committed at `34c97b01`. The native-context/persistence adapter is implemented and in independent review. Its current shared callback interface cannot inspect snapshot attachments and prepared-write commit has no admission hook; native production enforcement must not be inferred. Layout/split/motion conformance and native consumer inventory remain active. A separate task inventories production native window/Profile ownership consumers at pinned source identities. Same actual native-window cross-Profile feasibility remains unproven.
 
 Split geometry's two independently reproduced numeric defects are fixed and cleared by fresh review. The final reviewed sources were integrated unchanged. No rendered split or native resize check is claimed.
 
 Full Chromium preparation/builds, native runtime, real filesystem durability, installed Linux/Windows/macOS interaction, authentication isolation, rendered accessibility/focus behavior and performance remain open. Safety/cleanup/destructive/populated migration policies remain open. No implementation push, PR, CI dispatch or issue closure occurred.
+
+## Final capture join
+
+The parent compiled `lifecycle.cc`, actual `region_capture.cc` and `capture.cc`, and `capture_region_test.cc` with strict C++17 and fail-fast ASan/UBSan, then ran `/tmp/arcified-combined-picker-capture-sanitized`. It exited 0 and printed `capture/region seam fixture passed`, without sanitizer diagnostics. This checks synthetic coordinate/raster/preview composition, not native page acquisition or a visible picker.

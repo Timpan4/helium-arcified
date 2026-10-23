@@ -1,14 +1,13 @@
 {
-  "status": "blocked_30_second_interval_unsupported",
+  "status": "armed_waiting_for_cs2",
   "ownerThreadId": "6733348c-3696-4b31-834c-2bbca45e70d2",
   "processName": "cs2",
-  "intervalMs": 30000,
-  "intervalSource": "Owner chose every 30 seconds on 2026-10-23.",
-  "resumePolicy": "Explicit owner message resume only; exiting game does not resume.",
+  "intervalMs": 60000,
+  "intervalSource": "Owner approved one-minute checks after T3 rejected 30 seconds; scheduler contract minimum is 60000 ms.",
+  "resumePolicy": "Explicit owner message resume only; game exit never resumes work.",
   "triggered": false,
   "pausedThreads": [],
-  "schedulerId": null,
-  "schedulerError": "T3 schedule_task requires everyMs >= 60000.",
-  "pendingDecision": "Owner asked whether to accept 60 seconds or leave automatic detection off.",
-  "armed": false
+  "schedulerId": "scheduled-task:command:mcp:437c3a2d-9d91-4e7d-9c31-61ace5783ba4:schedule-task:counter-strike-pause-guard-20261023-minute-v1",
+  "armed": true,
+  "nextRunAtOnCreation": "2026-10-23T15:15:45.078Z"
 }

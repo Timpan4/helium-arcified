@@ -12,7 +12,8 @@
     "Cross-Profile Space switching stays in the same actual native window, preserving isolation.",
     "One Profile per Space; multiple Spaces may share a Profile. Sign-ins, site settings and Favorites are Profile-scoped. Themes are Space-scoped.",
     "Outbound saved-page links open a temporary branch.",
-    "Tiny synthetic performance-fixture browser checks approved."
+    "Tiny synthetic performance-fixture browser checks approved.",
+    "One-minute Counter-Strike cs2 checks; stop every other T3 thread when detected, resume only on explicit owner resume."
   ],
   "openDecisions": [
     "Activity protection, automatic cleanup, destructive-action and populated cross-Profile migration policies remain open."
@@ -61,19 +62,19 @@
     "lightNativeCi": "UBSan P2 fixed and independently cleared by reviews/native-checks-review-round-2.md; hosted runtimes and native acceptance unverified."
   },
   "expansion": {
-    "status": "51_primary_assignments_confirmed",
+    "status": "51_reviewed_local_slices_integrated_native_acceptance_open",
     "manifest": "parallel-workstreams.json",
     "baseline": "c9748ec8e6d64524c1de9d943dd6f2cfacb319fe",
     "areaThreads": 17,
     "confirmedAdditionalPrimaries": 51,
     "localComponentCounts": {
       "expandedItems": 51,
-      "reviewedLocalComponentsIntegrated": 48,
-      "remainingLocalComponentsToIntegrate": 3,
+      "reviewedLocalComponentsIntegrated": 51,
+      "remainingLocalComponentsToIntegrate": 0,
       "nativeIssuesAccepted": 0
     }
   },
-  "nextAction": "Await final region-capture fix review then integrate capture area. Review composed sidebar/admission; continue native consumer inventory. Game guard remains unarmed pending accepted scheduler cadence.",
+  "nextAction": "Finish root composition reviews and native ownership consumer inventory. Before starting work on any continuation, check game-pause-state.json: if triggered, hold all other agents until explicit owner resume. All native acceptance remains OPEN.",
   "currentAssignments": [
     {
       "key": "ci-fix",
@@ -167,7 +168,8 @@
         "reasoningEffort": "high",
         "serviceTier": "default"
       },
-      "status": "running"
+      "status": "completed",
+      "evidence": "features/context-persistence-composition.md; new adapter review pending, shared admission gaps explicit."
     },
     {
       "key": "sidebar-composition-review",
@@ -177,22 +179,47 @@
         "reasoningEffort": "high",
         "serviceTier": "default"
       },
+      "status": "completed_clean",
+      "evidence": "reviews/sidebar-composition-review.md"
+    },
+    {
+      "key": "context-persistence-review",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-context-persistence-review-20261023-v1",
+      "model": "gpt-6.1-sol",
+      "options": {
+        "reasoningEffort": "high",
+        "serviceTier": "default"
+      },
+      "status": "running"
+    },
+    {
+      "key": "layout-split-composition",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-layout-split-composition-20261023-v1",
+      "model": "gpt-6.1-sol",
+      "options": {
+        "reasoningEffort": "high",
+        "serviceTier": "default"
+      },
       "status": "running"
     }
   ],
   "gamePause": {
-    "status": "blocked_30_second_interval_unsupported",
+    "status": "armed_waiting_for_cs2",
     "state": "game-pause-state.json",
-    "requestedIntervalMs": 30000,
+    "intervalMs": 60000,
     "minimumSchedulerIntervalMs": 60000,
-    "resumePolicy": "Explicit owner resume only",
-    "pendingDecision": "Accept one-minute scheduler or leave automatic detection off.",
-    "armed": false
+    "resumePolicy": "Explicit owner resume only, no automatic game-exit resume",
+    "schedulerId": "scheduled-task:command:mcp:437c3a2d-9d91-4e7d-9c31-61ace5783ba4:schedule-task:counter-strike-pause-guard-20261023-minute-v1",
+    "nextRunAtOnCreation": "2026-10-23T15:15:45.078Z",
+    "armed": true,
+    "triggered": false
   },
   "integrationChecks": {
-    "sourceIdentity": "All 44 integrated feature sources match their reviewed branch/commit bytes.",
+    "sourceIdentity": "All 51 integrated area feature sources match reviewed branch/commit bytes. Shortcut native patch remains unapplied/gtests uncompiled.",
     "commandsAndSiteTools": "Parent compiled actual combined tree and ran all three site-controls, DevTools and diagnostics fixture binaries under ASan/UBSan with -fno-sanitize-recover=undefined; all exited 0.",
     "fullBrowserBuilds": "Not run; owner deferred.",
-    "nativeAcceptance": "OPEN"
+    "nativeAcceptance": "OPEN",
+    "captureRegion": "Parent compiled and ran actual combined picker/capture fixture under fail-fast ASan/UBSan. Exit0, no diagnostics.",
+    "sidebar": "Conformance-only actual multi-area scenarios independently reviewed clean and committed at 34c97b01. No production facade or native AX claim."
   }
 }
