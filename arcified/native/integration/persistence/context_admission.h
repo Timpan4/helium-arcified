@@ -57,11 +57,13 @@ class NativeContextSource {
 //
 // The returned callbacks BORROW model and source. Use them immediately within
 // the same serialized native operation, keeping both alive. They re-read facts
-// and never cache a permit. The caller must bind the exact graph being
-// captured, encoded, written or restored, retain native objects and prevent
-// changes until use completes. The result is not a freshness token or native
-// authorization. Recompose for each operation, including revalidation before
-// native IO commit.
+// and never cache a permit. Whole-snapshot admission compares the complete
+// durable graph to model, then checks current native observations/peer stores,
+// even for empty or Window-only graphs. Bind the operation's graph, retain
+// native objects and prevent changes/reentrancy until use completes. The result
+// is not a freshness token or native authorization. Recompose for each
+// operation and supply current admission to CommitPreparedWrite before native
+// IO commit.
 durability::Result<durability::SnapshotAdmission> ComposeSnapshotAdmission(
     const lifecycle::Model& model,
     const NativeContextSource& source);

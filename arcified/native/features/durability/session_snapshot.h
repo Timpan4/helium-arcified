@@ -64,6 +64,11 @@ struct DurableSnapshot {
 // every Profile and every actual page context must explicitly be durable.
 // No native context identity or classification is serialized.
 struct SnapshotAdmission {
+  // Required for every graph, including empty and Window-only snapshots. Bind
+  // complete durable provenance and current native/peer checks to this
+  // operation.
+  std::function<std::optional<Failure>(const DurableSnapshot&)>
+      snapshot_may_persist;
   std::function<bool(const lifecycle::ProfileId&)> profile_may_persist;
   std::function<bool(const lifecycle::PageId&, const lifecycle::ProfileId&)>
       page_may_persist;
@@ -74,6 +79,11 @@ struct SnapshotAdmission {
 Result<DurableSnapshot> CaptureSnapshot(const lifecycle::Model& model,
                                         const SnapshotAdmission& admission);
 std::optional<Failure> ValidateSnapshot(const DurableSnapshot& snapshot);
+// Compares the complete durable graph through the shared validation/projection
+// and codec. Record order is ignored except ordered split membership. Native
+// navigation/activity are excluded. This comparison grants no admission.
+bool SnapshotMatchesModel(const DurableSnapshot& snapshot,
+                          const lifecycle::Model& model);
 // Probe reads the fixed envelope only. It does not validate the body/checksum.
 Result<EnvelopeVersion> ProbeEnvelope(std::string_view bytes);
 Result<std::string> EncodeSnapshot(const DurableSnapshot& snapshot,
@@ -116,6 +126,7 @@ Result<Recovery> Recover(const StoreImage& image);
 // Preparation retains exact source bytes. Persist and verify staged_image()
 // before the eventual native adapter may commit. No IO/flush/rename guarantee
 // follows from these in-memory transitions. A failed operation changes nothing.
+// No borrowed admission callback is retained here.
 class PreparedWrite {
  public:
   const StoreImage& source() const { return source_; }
@@ -133,8 +144,12 @@ class PreparedWrite {
 Result<PreparedWrite> PrepareWrite(StoreImage source,
                                    const DurableSnapshot& snapshot,
                                    const SnapshotAdmission& admission);
+// Supply current admission at commit. Exact staged-image comparison precedes
+// decoding and admitting that candidate. The host must serialize native facts,
+// final validation and actual replacement; preparation reserves no eligibility.
 Result<StoreImage> CommitPreparedWrite(const StoreImage& current_staged,
-                                       const PreparedWrite& prepared);
+                                       const PreparedWrite& prepared,
+                                       const SnapshotAdmission& admission);
 
 }  // namespace arcified::durability
 

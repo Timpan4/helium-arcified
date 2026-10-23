@@ -12,6 +12,15 @@ native host's existing live binding authority. The adapter owns no source facts
 and caches no prepared targets or allow decisions. Its local identity maps exist
 only during a consistency check.
 
+The required whole-snapshot callback compares the supplied durable graph with
+the bound operation model before reading current native facts and peer stores.
+`SnapshotMatchesModel` reuses durability's lifecycle validation, canonical model
+projection and existing codec without calling capture or public encoding. It
+compares every durable field, including Window identity/selection, attachments,
+Page owners and split membership order. Record sequence order is normalized;
+navigation and activity remain excluded. There is no second codec or registry.
+Missing callbacks refuse, including for empty and Window-only snapshots.
+
 ## Admission behavior
 
 Every registered Profile requires an explicit exact native binding through
@@ -82,8 +91,8 @@ they do not claim these payloads are absent in an installed browser.
    finish. The callbacks borrow both and recheck the complete graph at use.
    Do not retain them across asynchronous work, use a prepared target as a
    permit, or substitute a previously captured model for current native facts.
-   Composition itself checks Windows and peer payloads even for a graph on which
-   durability would invoke no Profile or Page callbacks.
+   Whole-snapshot admission executes at use even when there are no Profile or
+   Page records. Retained callbacks recheck peer absence and Window contexts.
 4. Preserve exact original and candidate byte images on every refusal. Use
    `migrations::CompatibilityGate` for version inspection and write preparation.
    Unsupported images and unresolved candidates remain explicit recovery cases.
@@ -93,32 +102,30 @@ they do not claim these payloads are absent in an installed browser.
 5. Revalidate current native admission and exact source/graph identity immediately
    before native staging and commit. Prepared bytes are not a freshness token.
    Abort and retain source data if contexts, attachments, feature state or source
-   images change. `CommitPreparedWrite` checks staged byte equality only.
+   images change. `CommitPreparedWrite(current_staged, prepared, admission)`
+   requires current admission, compares exact staged bytes, decodes that candidate
+   with the existing codec, then admits the same snapshot before promotion.
+   `PreparedWrite` retains bytes only, never borrowed callbacks.
 6. During restore, resolve fresh native contexts for every durable identity and
    establish the exact restore graph before using admission. A durable snapshot
    contains no native context identity. Obtain actual browser-policy-validated
    navigation commits and provide every `RestoredNavigation` report exactly
    once. The adapter opens no URL and grants no native restore authorization.
 
-## Shared API enforcement gaps
+## Enforcement and remaining guarantees
 
-`SnapshotAdmission` receives only Profile IDs and Page ID/Profile pairs. It has no
-whole-snapshot or Window callback, and its Page callback does not receive the
-snapshot's owner or attachment. Thus the adapter checks the complete caller-bound
-model and all Window contexts during composition and callback use, but cannot
-compare an arbitrary snapshot's attachment graph against that model inside those
-callbacks. Reusing admission with an older or different graph is outside its
-contract. Fresh composition for the exact graph is mandatory.
+Capture, encode, write preparation and restore share whole-snapshot admission.
+Commit requires an admission argument and uses that same path after candidate
+decoding. Fresh facts for a different bound graph cannot authorize an older
+snapshot. Empty graphs cannot bypass use-time peer checks. These pure API gaps
+from the [review](../reviews/context-persistence-review.md) are addressed in the
+[follow-up response](../reviews/snapshot-admission-response.md).
 
-If root requires mechanical enforcement across arbitrary durability callers,
-the concrete shared change is an admission callback receiving the entire
-`DurableSnapshot`, invoked even for an empty graph by capture, encode and restore.
-That would expose Window and attachment provenance to the seam. A separate
-admission/revalidation hook at `CommitPreparedWrite`, or a host transaction API
-that enforces the same obligation, is needed to make commit revalidation
-mandatory. No shared feature API was edited in this slice. These limits were
-reported before proposing such changes. Runtime freshness must still remain
-with the native host even with those hooks.
+The API cannot prove that callbacks resolve actual live native objects or that
+their reports are fresh. Serialization, no reentrancy and native object retention
+must cover final admission through real IO replacement. Mutually consistent
+stale reports still supply no native liveness evidence. These host duties remain
+open, along with IO durability and Linux, Windows and macOS acceptance.
 
 `window_restore::CaptureEligibility` is a separate close-undo boundary. This
 slice inspected its actual header but does not implement or authorize that
@@ -135,7 +142,11 @@ all defined nonregular kinds and an invalid kind, missing reports, wrong Profile
 and exact context bindings, duplicate context identity claims, stale attachment
 observations, explicit unsupported feature reports, and native navigation
 evidence. Refused capture, encode, write and restore retain the input model,
-navigation and committed source bytes. Future schemas, unresolved candidate
+navigation and committed source bytes. Commit refusals after native/peer changes
+retain both original and candidate bytes. The fixtures also cover fresh facts
+for an older attachment snapshot, every durable record category, retained
+empty-graph peer changes, Window-only graphs and valid same-graph commits.
+Future schemas, unresolved candidate
 images and changed source bytes remain preserved. Changing only runtime native
 IDs produces identical encoded bytes, and their marker strings are absent.
 
@@ -159,10 +170,19 @@ clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic \
 /tmp/arcified-context-persistence-test
 ```
 
-Repeat the same source list and strict flags with
-`-g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer`
-and a separate output path. Run it with `ASAN_OPTIONS=halt_on_error=1` and
-`UBSAN_OPTIONS=halt_on_error=1` for fail-fast execution.
+```sh
+clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic \
+  -g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer \
+  arcified/native/model/lifecycle.cc \
+  arcified/native/features/profiles/preparation.cc \
+  arcified/native/features/private_browsing/operation_boundary.cc \
+  arcified/native/features/durability/session_snapshot.cc \
+  arcified/native/features/migrations/schema_gate.cc \
+  arcified/native/integration/persistence/context_admission.cc \
+  arcified/native/integration/persistence/context_admission_test.cc \
+  -o /tmp/arcified-context-persistence-sanitized
+ASAN_OPTIONS=halt_on_error=1 UBSAN_OPTIONS=halt_on_error=1 /tmp/arcified-context-persistence-sanitized
+```
 
 The focused strict compilation, fixture execution, fail-fast ASan/UBSan run and
 Chromium formatter check passed on Linux with Clang/clang-format 23.1.3. Git

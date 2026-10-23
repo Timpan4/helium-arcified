@@ -44,16 +44,21 @@ Do not use this restart seam for transferring an existing live page.
 
 ## Admission and unsupported feature data
 
-`SnapshotAdmission` defaults to refusal. Capture, encoding, write preparation and
-restore require callbacks that admit each exact Profile and page context. Even
-Profiles with no pages are checked. The trusted root adapter must resolve live
+`SnapshotAdmission` defaults to refusal. Capture, encoding, write preparation,
+restore and commit require whole-snapshot admission as well as callbacks that
+admit each exact Profile and page context. Whole-snapshot admission executes even
+for empty and Window-only graphs. Missing callbacks refuse. Even Profiles with
+no pages are checked. The trusted root adapter must compare complete durable
+provenance to its bound operation graph, resolve live
 native objects and use the single shared
 `private_browsing/context_boundary.h::ClassifyContext`, accepting regular
 contexts only and verifying identity, Profile mapping and liveness. The local
 callbacks are an integration boundary, not a second privacy classifier. The
-peer header was inspected in the profiles worktree; it is not copied here. No
-native adapter exists in this checkout. Synthetic test booleans prove only this
-admission protocol. Callers must serialize changes and revalidate native
+peer header was inspected in the profiles worktree; it is not copied here. The
+[pure composition adapter](context-persistence-composition.md) binds graph
+comparison and shared preparation; no production native source exists here.
+Synthetic test callbacks prove only this admission protocol.
+Callers must serialize changes and revalidate native
 eligibility before performing real persistence or publication; preparation is
 not a native-context reservation.
 
@@ -128,7 +133,10 @@ an empty/corrupt original.
    retaining the original. This code supplies no file IO, flush, rename,
    directory sync, process locking, crash-atomic replace or OS durability claim.
 3. `CommitPreparedWrite` compares the caller's entire staged image with the
-   prepared bytes. A changed original or candidate refuses commit. Success
+   prepared bytes. A changed original or candidate refuses commit. Its required
+   current `SnapshotAdmission` argument then admits the candidate decoded by the
+   existing codec. `PreparedWrite` stores no borrowed callback. Refusal preserves
+   both images. Success
    returns a new image whose original is the candidate, with no candidate slot.
    The prepared object retains the prior original exactly. This is an in-memory
    result, not evidence that a disk commit occurred.
@@ -172,7 +180,10 @@ selected-Space preservation, navigation-evidence refusal, unknown restored
 activity, admission refusal, every strict candidate truncation preserving the
 committed original, every single-bit corruption of the fixture being rejected,
 and exact-byte stale-source commit refusal. Independent checksum fixtures check
-the wire envelope and a checksum-valid impossible record count.
+the wire envelope and a checksum-valid impossible record count. Missing whole
+admission and rejected Window-only graphs refuse through the public persistence
+operations, including commit. Integration fixtures cover graph provenance and
+native/peer changes after preparation.
 
 Issue 50 remains open. No installed-build Linux, Windows or macOS interaction,
 visual/accessibility check, browser crash, controlled native disk interruption,
@@ -189,6 +200,8 @@ Chromium build or native browser test.
 
 ```sh
 clang-format --style=Chromium --dry-run --Werror arcified/native/features/durability/session_snapshot.h arcified/native/features/durability/session_snapshot.cc arcified/native/features/durability/session_snapshot_test.cc
-clang++ -std=c++17 -Wall -Wextra -Werror -pedantic arcified/native/model/lifecycle.cc arcified/native/features/durability/session_snapshot.cc arcified/native/features/durability/session_snapshot_test.cc -o /tmp/arcified-session-durability-test
+clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic arcified/native/model/lifecycle.cc arcified/native/features/durability/session_snapshot.cc arcified/native/features/durability/session_snapshot_test.cc -o /tmp/arcified-session-durability-test
 /tmp/arcified-session-durability-test
+clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic -g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer arcified/native/model/lifecycle.cc arcified/native/features/durability/session_snapshot.cc arcified/native/features/durability/session_snapshot_test.cc -o /tmp/arcified-session-durability-sanitized
+ASAN_OPTIONS=halt_on_error=1 UBSAN_OPTIONS=halt_on_error=1 /tmp/arcified-session-durability-sanitized
 ```

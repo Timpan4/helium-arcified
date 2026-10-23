@@ -52,7 +52,8 @@ const std::string kRendererOnly = "https://example.test/renderer-memory-only";
 // shared ClassifyContext and exact live native context mapping, not these
 // mocks.
 SnapshotAdmission SyntheticAdmission() {
-  return {[](const ProfileId&) { return true; },
+  return {[](const DurableSnapshot&) { return std::optional<Failure>{}; },
+          [](const ProfileId&) { return true; },
           [](const PageId&, const ProfileId&) { return true; }, true};
 }
 
@@ -223,6 +224,20 @@ void AdmissionFailsClosed() {
   const auto snapshot = Snapshot();
   ExpectError(CaptureSnapshot(model, {}), Error::kUnsupportedFeatures);
   auto admission = SyntheticAdmission();
+  admission.snapshot_may_persist = {};
+  ExpectError(CaptureSnapshot(model, admission),
+              Error::kPersistenceNotAdmitted);
+  ExpectError(EncodeSnapshot(snapshot, admission),
+              Error::kPersistenceNotAdmitted);
+  ExpectError(PrepareWrite({}, snapshot, admission),
+              Error::kPersistenceNotAdmitted);
+  ExpectError(RestoreSnapshot(snapshot, NativeReports(), admission),
+              Error::kPersistenceNotAdmitted);
+  // Whole-graph admission is required even with no Profile/Page callbacks to
+  // run.
+  ExpectError(CaptureSnapshot(Model{}, admission),
+              Error::kPersistenceNotAdmitted);
+  admission = SyntheticAdmission();
   admission.profile_may_persist = {};
   ExpectError(CaptureSnapshot(model, admission),
               Error::kPersistenceNotAdmitted);
@@ -326,8 +341,8 @@ void WriteProtocol() {
   REQUIRE(!first.staged_image().original);
   REQUIRE(first.staged_image().candidate.has_value());
   ExpectError(Recover(first.staged_image()), Error::kRecoveryRequired);
-  const auto committed =
-      Value(CommitPreparedWrite(first.staged_image(), first));
+  const auto committed = Value(
+      CommitPreparedWrite(first.staged_image(), first, SyntheticAdmission()));
   REQUIRE(committed.original.has_value());
   REQUIRE(!committed.candidate);
   const auto second =
@@ -336,14 +351,64 @@ void WriteProtocol() {
   REQUIRE(second.staged_image().original == committed.original);
   auto partial = second.staged_image();
   partial.candidate->pop_back();
-  ExpectError(CommitPreparedWrite(partial, second), Error::kStaleSource);
+  ExpectError(CommitPreparedWrite(partial, second, SyntheticAdmission()),
+              Error::kStaleSource);
   auto stale = second.staged_image();
   stale.original = "changed by another writer";
-  ExpectError(CommitPreparedWrite(stale, second), Error::kStaleSource);
-  const auto result = Value(CommitPreparedWrite(second.staged_image(), second));
+  ExpectError(CommitPreparedWrite(stale, second, SyntheticAdmission()),
+              Error::kStaleSource);
+  auto missing = SyntheticAdmission();
+  missing.snapshot_may_persist = {};
+  const auto retained = second.staged_image();
+  ExpectError(CommitPreparedWrite(retained, second, missing),
+              Error::kPersistenceNotAdmitted);
+  REQUIRE(second.staged_image() == retained);
+  REQUIRE(second.source() == committed);
+  const auto result = Value(
+      CommitPreparedWrite(second.staged_image(), second, SyntheticAdmission()));
   REQUIRE(Value(EncodeSnapshot(Value(Recover(result)).snapshot,
                                SyntheticAdmission())) == *committed.original);
   REQUIRE(second.source() == committed);  // Exact originals remain accessible.
+}
+
+void WindowOnlyAdmission() {
+  Model model;
+  REQUIRE(model.AddWindow(kFirst) == Status::kOk);
+  const auto snapshot = Value(CaptureSnapshot(model, SyntheticAdmission()));
+  REQUIRE(snapshot.profiles.empty());
+  REQUIRE(snapshot.pages.empty());
+  const auto bytes = Value(EncodeSnapshot(snapshot, SyntheticAdmission()));
+  const StoreImage source{bytes, std::nullopt};
+  const auto prepared =
+      Value(PrepareWrite(source, snapshot, SyntheticAdmission()));
+  const auto staged = prepared.staged_image();
+  auto admission = SyntheticAdmission();
+  admission.snapshot_may_persist =
+      [](const DurableSnapshot& graph) -> std::optional<Failure> {
+    if (!graph.windows.empty())
+      return Failure{Error::kPersistenceNotAdmitted, "Window not admitted"};
+    return std::nullopt;
+  };
+  // These refusals require passing the actual Window-only graph to admission.
+  ExpectError(CaptureSnapshot(model, admission),
+              Error::kPersistenceNotAdmitted);
+  ExpectError(EncodeSnapshot(snapshot, admission),
+              Error::kPersistenceNotAdmitted);
+  ExpectError(PrepareWrite(source, snapshot, admission),
+              Error::kPersistenceNotAdmitted);
+  ExpectError(RestoreSnapshot(snapshot, {}, admission),
+              Error::kPersistenceNotAdmitted);
+  ExpectError(CommitPreparedWrite(staged, prepared, admission),
+              Error::kPersistenceNotAdmitted);
+  admission.snapshot_may_persist = {};
+  ExpectError(CaptureSnapshot(model, admission),
+              Error::kPersistenceNotAdmitted);
+  REQUIRE(prepared.source() == source);
+  REQUIRE(prepared.staged_image() == staged);
+  const auto committed =
+      Value(CommitPreparedWrite(staged, prepared, SyntheticAdmission()));
+  REQUIRE(committed.original == bytes);
+  REQUIRE(!committed.candidate);
 }
 
 }  // namespace
@@ -356,5 +421,6 @@ int main() {
   arcified::durability::CorruptionAndInterruption();
   arcified::durability::IndependentWireFixtures();
   arcified::durability::WriteProtocol();
+  arcified::durability::WindowOnlyAdmission();
   std::cout << "session durability synthetic checks passed\n";
 }

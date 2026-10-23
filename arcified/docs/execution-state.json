@@ -74,133 +74,18 @@
       "nativeIssuesAccepted": 0
     }
   },
-  "nextAction": "Finish root composition reviews and native ownership consumer inventory. Before starting work on any continuation, check game-pause-state.json: if triggered, hold all other agents until explicit owner resume. All native acceptance remains OPEN.",
+  "nextAction": "Commit reviewed graph/candidate admission and qualified native source inventory. Finish and independently review the native callback source draft using completed test packet. Construction-loss/reentrant shutdown and prepared/native acceptance remain OPEN; heavy work deferred. Enforce game hold on trigger until explicit owner resume.",
   "currentAssignments": [
     {
-      "key": "ci-fix",
-      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-ci-fix-20261023-v1",
-      "model": "gpt-6.1-sol",
-      "options": [
-        {
-          "id": "reasoningEffort",
-          "value": "high"
-        },
-        {
-          "id": "serviceTier",
-          "value": "default"
-        }
-      ],
-      "status": "completed",
-      "evidence": "reviews/native-checks-review-round-2.md"
-    },
-    {
-      "key": "model-review",
-      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-model-review-20261023-v1",
-      "model": "gpt-6.1-sol",
-      "options": [
-        {
-          "id": "reasoningEffort",
-          "value": "high"
-        },
-        {
-          "id": "serviceTier",
-          "value": "default"
-        }
-      ],
-      "status": "completed",
-      "evidence": "reviews/lifecycle-review-round-3.md"
-    },
-    {
-      "key": "spaces-fix",
-      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-spaces-fix-20261023-v1",
-      "model": "gpt-6.1-sol",
-      "options": [
-        {
-          "id": "reasoningEffort",
-          "value": "high"
-        },
-        {
-          "id": "serviceTier",
-          "value": "default"
-        }
-      ],
-      "status": "completed",
-      "evidence": "reviews/native-space-design-response.md"
-    },
-    {
-      "key": "sidebar-composition",
-      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-sidebar-composition-20261023-v1",
-      "model": "gpt-6.1-sol",
-      "options": [
-        {
-          "id": "reasoningEffort",
-          "value": "high"
-        },
-        {
-          "id": "serviceTier",
-          "value": "default"
-        }
-      ],
-      "status": "completed",
-      "evidence": "features/sidebar-composition.md; conformance-only fallback, fresh independent review running."
-    },
-    {
-      "key": "native-consumer-inventory",
-      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-native-consumer-inventory-20261023-v1",
-      "model": "gpt-6.1-sol",
-      "options": [
-        {
-          "id": "reasoningEffort",
-          "value": "high"
-        },
-        {
-          "id": "serviceTier",
-          "value": "default"
-        }
-      ],
-      "status": "running"
-    },
-    {
-      "key": "context-persistence-composition",
-      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-context-persistence-composition-20261023-v1",
+      "key": "native-destruction-extraction",
+      "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-native-destruction-patch-20261023-v1",
       "model": "gpt-6.1-sol",
       "options": {
         "reasoningEffort": "high",
         "serviceTier": "default"
       },
-      "status": "completed",
-      "evidence": "features/context-persistence-composition.md; new adapter review pending, shared admission gaps explicit."
-    },
-    {
-      "key": "sidebar-composition-review",
-      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-sidebar-composition-review-20261023-v1",
-      "model": "gpt-6.1-sol",
-      "options": {
-        "reasoningEffort": "high",
-        "serviceTier": "default"
-      },
-      "status": "completed_clean",
-      "evidence": "reviews/sidebar-composition-review.md"
-    },
-    {
-      "key": "context-persistence-review",
-      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-context-persistence-review-20261023-v1",
-      "model": "gpt-6.1-sol",
-      "options": {
-        "reasoningEffort": "high",
-        "serviceTier": "default"
-      },
-      "status": "running"
-    },
-    {
-      "key": "layout-split-composition",
-      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-layout-split-composition-20261023-v1",
-      "model": "gpt-6.1-sol",
-      "options": {
-        "reasoningEffort": "high",
-        "serviceTier": "default"
-      },
-      "status": "running"
+      "status": "running",
+      "evidence": "native/patches/window_lifetime/; production callback draft UNACCEPTED pending source/native gates."
     }
   ],
   "gamePause": {
@@ -215,11 +100,143 @@
     "triggered": false
   },
   "integrationChecks": {
-    "sourceIdentity": "All 51 integrated area feature sources match reviewed branch/commit bytes. Shortcut native patch remains unapplied/gtests uncompiled.",
+    "sourceIdentity": "At 0cd599bc all51area sources matched reviewed commits. Subsequent shared admission hardening has fresh independent correctness/contract and final-test closure reviews. All other area sources remain unchanged.",
     "commandsAndSiteTools": "Parent compiled actual combined tree and ran all three site-controls, DevTools and diagnostics fixture binaries under ASan/UBSan with -fno-sanitize-recover=undefined; all exited 0.",
     "fullBrowserBuilds": "Not run; owner deferred.",
     "nativeAcceptance": "OPEN",
     "captureRegion": "Parent compiled and ran actual combined picker/capture fixture under fail-fast ASan/UBSan. Exit0, no diagnostics.",
-    "sidebar": "Conformance-only actual multi-area scenarios independently reviewed clean and committed at 34c97b01. No production facade or native AX claim."
-  }
+    "sidebar": "Conformance-only actual multi-area scenarios independently reviewed clean and committed at 34c97b01. No production facade or native AX claim.",
+    "persistence": "Mandatory whole-snapshot provenance and decoded candidate commit admission independently clean in correctness/contract reviews plus test-only analyzer closure. Parent full six-unit analyzer run exited0 with one documented targeted suppression. Actual native truth, IO and platform acceptance OPEN.",
+    "layout": "Actual layout/split/motion conformance scenarios reviewed clean in round 2. P3 endpoint assertions closed; strict/sanitized checks passed on exact reviewed inputs. Committed locally, native UI/visual/platform behavior OPEN.",
+    "nativeOwnership": "Qualified source inventory and122-member catalog corrections independently closed. Astra guidance and real GN/test sources support an unapplied production callback draft; construction-loss/reentrant shutdown, complete consumer closure and native feasibility OPEN."
+  },
+  "completedAssignments": [
+    {
+      "key": "ci-fix",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-ci-fix-20261023-v1",
+      "status": "completed",
+      "evidence": "reviews/native-checks-review-round-2.md"
+    },
+    {
+      "key": "model-review",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-model-review-20261023-v1",
+      "status": "completed",
+      "evidence": "reviews/lifecycle-review-round-3.md"
+    },
+    {
+      "key": "spaces-fix",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-spaces-fix-20261023-v1",
+      "status": "completed",
+      "evidence": "reviews/native-space-design-response.md"
+    },
+    {
+      "key": "sidebar-composition",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-sidebar-composition-20261023-v1",
+      "status": "completed",
+      "evidence": "features/sidebar-composition.md and reviews/sidebar-composition-review.md; committed 34c97b01."
+    },
+    {
+      "key": "native-consumer-inventory",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-native-consumer-inventory-20261023-v1",
+      "status": "completed_documentation_closure_pending",
+      "evidence": "native-space-consumer-inventory.md; bounded first extraction grounded, exact catalog corrections in closure review."
+    },
+    {
+      "key": "context-persistence-composition",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-context-persistence-composition-20261023-v1",
+      "status": "completed",
+      "evidence": "features/context-persistence-composition.md and reviews/context-persistence-review.md; pure adapter committed 0ec717d3, mandatory admission followup awaiting review."
+    },
+    {
+      "key": "sidebar-composition-review",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-sidebar-composition-review-20261023-v1",
+      "status": "completed_clean",
+      "evidence": "reviews/sidebar-composition-review.md"
+    },
+    {
+      "key": "context-persistence-review",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-context-persistence-review-20261023-v1",
+      "status": "completed_clean_pure_scope",
+      "evidence": "reviews/context-persistence-review.md; confirmed shared mandatory-admission gaps, adapter committed 0ec717d3"
+    },
+    {
+      "key": "layout-split-composition",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-layout-split-composition-20261023-v1",
+      "status": "completed_clean_reviewed",
+      "evidence": "reviews/layout-split-composition-review-round-2.md; P3 endpoint assertions closed, local composition committed; native acceptance OPEN."
+    },
+    {
+      "key": "layout-split-composition-review",
+      "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-layout-split-composition-review-20261023-v1",
+      "status": "completed_nonblocking_p3",
+      "evidence": "reviews/layout-split-composition-review.md; reduced-motion endpoint assertion gap accepted"
+    },
+    {
+      "key": "whole-snapshot-admission",
+      "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-whole-snapshot-admission-20261023-v1",
+      "status": "completed_reviewed",
+      "evidence": "reviews/snapshot-admission-{correctness,contract,lint}-review.md; required graph/candidate admission independently clean."
+    },
+    {
+      "key": "layout-endpoint-fix",
+      "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-layout-endpoint-fix-20261023-v1",
+      "status": "completed_clean_reviewed",
+      "evidence": "reviews/layout-split-composition-review-round-2.md; P3 endpoint assertions closed, local composition committed; native acceptance OPEN."
+    },
+    {
+      "key": "layout-closure-review",
+      "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-layout-split-composition-review-20261023-v2",
+      "status": "completed_clean_reviewed",
+      "evidence": "reviews/layout-split-composition-review-round-2.md; P3 endpoint assertions closed, local composition committed; native acceptance OPEN."
+    },
+    {
+      "key": "native-inventory-review",
+      "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-native-consumer-review-20261023-v1",
+      "status": "completed_three_documentation_findings",
+      "evidence": "reviews/native-space-consumer-review.md; all three corrected in native-space-consumer-response.md, fresh closure review running."
+    },
+    {
+      "key": "snapshot-admission-contract-review",
+      "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-snapshot-admission-contract-20261023-v1",
+      "status": "completed_clean",
+      "evidence": "reviews/snapshot-admission-contract-review.md; all callers migrated, independent integration and supplemental probes passed."
+    },
+    {
+      "key": "snapshot-admission-correctness-review",
+      "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-snapshot-admission-correctness-20261023-v1",
+      "status": "completed_clean",
+      "evidence": "reviews/snapshot-admission-correctness-review.md; all three suites and adversarial boundary probes independently passed."
+    },
+    {
+      "key": "astra-destruction-guidance",
+      "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-astra-destruction-guidance-20261023-v1",
+      "status": "completed_guidance",
+      "model": "gpt-6-astra",
+      "evidence": "native-destruction-extraction-guidance.md; source-only callback draft advised, construction/reentry and native acceptance OPEN."
+    },
+    {
+      "key": "native-inventory-closure-review",
+      "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-native-consumer-review-20261023-v2",
+      "status": "completed_clean",
+      "evidence": "reviews/native-space-consumer-review-round-2.md; three source-catalog corrections closed."
+    },
+    {
+      "key": "native-lifetime-test-inputs",
+      "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-native-lifetime-test-inputs-20261023-v1",
+      "status": "completed_source_packet",
+      "evidence": "research/native-space-consumers/lifecycle-tests/README.md;21sources and3listings, no native execution."
+    },
+    {
+      "key": "admission-lint-fixture",
+      "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-admission-enum-fixture-20261023-v1",
+      "status": "completed_reviewed",
+      "evidence": "reviews/snapshot-admission-lint-review.md; unnamed enum case preserved, one justified targeted analyzer annotation."
+    },
+    {
+      "key": "admission-lint-closure-review",
+      "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-snapshot-admission-lint-review-20261023-v1",
+      "status": "completed_clean",
+      "evidence": "reviews/snapshot-admission-lint-review.md; exact hash reconstruction and independent strict/sanitizer/analyzer checks passed."
+    }
+  ]
 }

@@ -46,6 +46,7 @@ void ExpectFailure(const durability::Result<T>& result, Error error) {
 // context.
 durability::SnapshotAdmission RegularFixture() {
   return {
+      [](const DurableSnapshot&) { return std::optional<Failure>{}; },
       [](const ProfileId& profile) { return profile == ProfileId{"regular"}; },
       [](const PageId& page, const ProfileId& profile) {
         return page == PageId{"page"} && profile == ProfileId{"regular"};
@@ -260,10 +261,11 @@ void SharedTransactionAndStaleSources() {
   }
   auto tampered_stage = prepared.staged_image();
   tampered_stage.original = "changed source";
-  ExpectFailure(durability::CommitPreparedWrite(tampered_stage, prepared),
+  ExpectFailure(durability::CommitPreparedWrite(tampered_stage, prepared,
+                                                RegularFixture()),
                 Error::kStaleSource);
-  const auto committed = Success(
-      durability::CommitPreparedWrite(prepared.staged_image(), prepared));
+  const auto committed = Success(durability::CommitPreparedWrite(
+      prepared.staged_image(), prepared, RegularFixture()));
   REQUIRE(committed.original == Encode(changed));
   REQUIRE(!committed.candidate);
   REQUIRE(prepared.source() == image);
@@ -275,6 +277,10 @@ void PrivacyAndFeatureAdmissionStayFailClosed() {
   const StoreImage image{Encode(snapshot), std::nullopt};
   const CompatibilityGate gate(image);
   auto missing = RegularFixture();
+  missing.snapshot_may_persist = {};
+  ExpectFailure(gate.PrepareWrite(image, snapshot, missing),
+                Error::kPersistenceNotAdmitted);
+  missing = RegularFixture();
   missing.profile_may_persist = {};
   ExpectFailure(gate.PrepareWrite(image, snapshot, missing),
                 Error::kPersistenceNotAdmitted);

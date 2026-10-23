@@ -21,9 +21,12 @@ std::optional<Failure> Admit(const DurableSnapshot& snapshot,
   if (!admission.unsupported_feature_payloads_absent)
     return Failure{Error::kUnsupportedFeatures,
                    "Space metadata/split presentation absence not established"};
-  if (!admission.profile_may_persist || !admission.page_may_persist)
+  if (!admission.snapshot_may_persist || !admission.profile_may_persist ||
+      !admission.page_may_persist)
     return Failure{Error::kPersistenceNotAdmitted,
                    "native context eligibility checks required"};
+  if (auto failure = admission.snapshot_may_persist(snapshot))
+    return failure;
   for (const auto& profile : snapshot.profiles)
     if (!admission.profile_may_persist(profile))
       return Failure{Error::kPersistenceNotAdmitted,
@@ -212,10 +215,7 @@ class Reader {
   bool valid_ = true;
 };
 
-}  // namespace
-
-Result<DurableSnapshot> CaptureSnapshot(const Model& model,
-                                        const SnapshotAdmission& admission) {
+DurableSnapshot ProjectModel(const Model& model) {
   DurableSnapshot snapshot;
   for (const auto& [id, profile] : model.profiles())
     snapshot.profiles.push_back(id);
@@ -228,6 +228,16 @@ Result<DurableSnapshot> CaptureSnapshot(const Model& model,
   for (const auto& [id, page] : model.pages())
     snapshot.pages.push_back({id, page.profile, page.owner});
   snapshot.splits.assign(model.splits().begin(), model.splits().end());
+  return snapshot;
+}
+
+std::string EncodeRecords(const DurableSnapshot& snapshot);
+
+}  // namespace
+
+Result<DurableSnapshot> CaptureSnapshot(const Model& model,
+                                        const SnapshotAdmission& admission) {
+  auto snapshot = ProjectModel(model);
   if (auto failure = Admit(snapshot, admission))
     return *failure;
   return snapshot;
@@ -238,6 +248,13 @@ std::optional<Failure> ValidateSnapshot(const DurableSnapshot& snapshot) {
   if (const auto* failure = std::get_if<Failure>(&result))
     return *failure;
   return std::nullopt;
+}
+
+bool SnapshotMatchesModel(const DurableSnapshot& snapshot, const Model& model) {
+  const auto normalized = BuildModel(snapshot, nullptr);
+  const auto* graph = std::get_if<Model>(&normalized);
+  return graph && EncodeRecords(ProjectModel(*graph)) ==
+                      EncodeRecords(ProjectModel(model));
 }
 
 Result<EnvelopeVersion> ProbeEnvelope(std::string_view bytes) {
@@ -255,6 +272,12 @@ Result<std::string> EncodeSnapshot(const DurableSnapshot& snapshot,
     return *failure;
   if (auto failure = Admit(snapshot, admission))
     return *failure;
+  return EncodeRecords(snapshot);
+}
+
+namespace {
+
+std::string EncodeRecords(const DurableSnapshot& snapshot) {
   Writer w;
   w.bytes = kMagic;
   w.Integer(snapshot.schema_version);
@@ -307,6 +330,8 @@ Result<std::string> EncodeSnapshot(const DurableSnapshot& snapshot,
   w.Integer(Checksum(w.bytes));
   return std::move(w.bytes);
 }
+
+}  // namespace
 
 Result<DurableSnapshot> DecodeSnapshot(std::string_view bytes) {
   auto envelope = ProbeEnvelope(bytes);
@@ -444,10 +469,16 @@ Result<PreparedWrite> PrepareWrite(StoreImage source,
 }
 
 Result<StoreImage> CommitPreparedWrite(const StoreImage& current_staged,
-                                       const PreparedWrite& prepared) {
+                                       const PreparedWrite& prepared,
+                                       const SnapshotAdmission& admission) {
   if (!(current_staged == prepared.staged_image()))
     return Failure{Error::kStaleSource,
                    "store changed since preparation; retain every image"};
+  const auto decoded = DecodeSnapshot(*prepared.staged_image().candidate);
+  if (const auto* failure = std::get_if<Failure>(&decoded))
+    return *failure;
+  if (auto failure = Admit(std::get<DurableSnapshot>(decoded), admission))
+    return *failure;
   return StoreImage{prepared.staged_image().candidate, std::nullopt};
 }
 

@@ -92,6 +92,12 @@ durability::Result<durability::SnapshotAdmission> ComposeSnapshotAdmission(
   if (const auto refusal = CheckAll(model, source))
     return *refusal;
   return durability::SnapshotAdmission{
+      [&model, &source](const durability::DurableSnapshot& snapshot)
+          -> std::optional<durability::Failure> {
+        if (!durability::SnapshotMatchesModel(snapshot, model))
+          return Refused();
+        return CheckAll(model, source);
+      },
       [&model, &source](const lifecycle::ProfileId& profile) {
         return model.profiles().count(profile) && !CheckAll(model, source);
       },

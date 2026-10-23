@@ -16,7 +16,7 @@ Valid current images are available as explicit read-only recovery choices. The g
 
 `PrepareWrite` compares both observed images exactly with the owned source. It refuses changed input and unsupported versions, then calls the session component's `PrepareWrite`, which refuses unresolved recovery and invalid target snapshots. Only a genuinely empty store or a valid current original without a candidate can prepare a write. The session component owns staging and commit comparison. This is an in-memory preflight, not a filesystem lock or atomic compare-and-swap. The eventual IO adapter must serialize writers and retain the original through durable staging, readback, commit and failure recovery.
 
-The gate passes `SnapshotAdmission` unchanged to the session writer. Missing or rejecting Profile/page eligibility callbacks refuse persistence. Root integration must bind those callbacks to the single native private-browsing classifier, including exact page contexts. Schema compatibility is not privacy admission. The caller must also explicitly attest that unsupported Space metadata and split presentation payloads are absent. This component cannot serialize or silently discard those peer features. Decoded recovery metadata alone does not authorize restoration or persistence.
+The gate passes `SnapshotAdmission` unchanged to the session writer. Missing or rejecting whole-snapshot and Profile/page eligibility callbacks refuse persistence, including empty and Window-only graphs. Root integration binds complete graph provenance and current native/peer checks through the shared composition adapter. Schema compatibility is not privacy admission. The caller must also explicitly attest that unsupported Space metadata and split presentation payloads are absent. This component cannot serialize or silently discard those peer features. Decoded recovery metadata alone does not authorize restoration or persistence. Commit callers must pass current admission to `CommitPreparedWrite(current_staged, prepared, admission)`; it compares staged bytes, decodes and admits that candidate before promotion. Prepared writes retain no callbacks.
 
 ## Rollback and downgrade
 
@@ -53,13 +53,13 @@ clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic \
   -o /tmp/arcified-schema-gate-test
 /tmp/arcified-schema-gate-test
 clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic \
-  -g -fsanitize=address,undefined -fno-omit-frame-pointer \
+  -g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer \
   arcified/native/model/lifecycle.cc \
   arcified/native/features/durability/session_snapshot.cc \
   arcified/native/features/migrations/schema_gate.cc \
   arcified/native/features/migrations/schema_gate_test.cc \
   -o /tmp/arcified-schema-gate-sanitized
-/tmp/arcified-schema-gate-sanitized
+ASAN_OPTIONS=halt_on_error=1 UBSAN_OPTIONS=halt_on_error=1 /tmp/arcified-schema-gate-sanitized
 ```
 
 The strict-warning compile, fixture executable, AddressSanitizer/UndefinedBehaviorSanitizer execution and Chromium formatting check passed locally with Clang/clang-format 23.1.3. These checks exercise the shared C++ codec and byte-image protocol. They do not test disk durability, native recovery UI or installed browser upgrades. Windows/macOS compiler and runtime checks remain open.

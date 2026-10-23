@@ -1,5 +1,6 @@
 #include "context_admission.h"
 
+#include <algorithm>
 #include <cstdlib>
 #include <iostream>
 #include <map>
@@ -152,6 +153,10 @@ void EligibleRoundTrip() {
   REQUIRE(prepared.source() == source);
   REQUIRE(prepared.staged_image().original == source.original);
   REQUIRE(prepared.staged_image().candidate == bytes);
+  const auto committed = Value(durability::CommitPreparedWrite(
+      prepared.staged_image(), prepared, f.Admission()));
+  REQUIRE(committed.original == bytes);
+  REQUIRE(!committed.candidate);
   const auto restored =
       Value(durability::RestoreSnapshot(read, f.Navigation(), admission));
   REQUIRE(restored.pages().at(kSaved).current_navigation ==
@@ -180,17 +185,22 @@ void RefusalPreserves(Change change,
   const migrations::CompatibilityGate gate(source);
   const auto retained_facts = f.facts;
   const auto navigation = f.Navigation();
+  const auto prepared = Value(gate.PrepareWrite(source, snapshot, admission));
+  const auto staged = prepared.staged_image();
   change(f.facts);
   ExpectError(ComposeSnapshotAdmission(f.model, f.facts), compose_error);
   // Previously composed callbacks re-read the caller. No cached allow decision.
-  ExpectError(durability::CaptureSnapshot(f.model, admission),
-              Error::kPersistenceNotAdmitted);
-  ExpectError(durability::EncodeSnapshot(snapshot, admission),
-              Error::kPersistenceNotAdmitted);
-  ExpectError(gate.PrepareWrite(source, snapshot, admission),
-              Error::kPersistenceNotAdmitted);
+  ExpectError(durability::CaptureSnapshot(f.model, admission), compose_error);
+  ExpectError(durability::EncodeSnapshot(snapshot, admission), compose_error);
+  ExpectError(gate.PrepareWrite(source, snapshot, admission), compose_error);
   ExpectError(durability::RestoreSnapshot(snapshot, navigation, admission),
-              Error::kPersistenceNotAdmitted);
+              compose_error);
+  ExpectError(durability::CommitPreparedWrite(staged, prepared, admission),
+              compose_error);
+  REQUIRE(prepared.source() == source);
+  REQUIRE(prepared.staged_image() == staged);
+  REQUIRE(staged.original == bytes);
+  REQUIRE(staged.candidate == bytes);
   REQUIRE(source == gate.source());
   REQUIRE(source.original == bytes);
   REQUIRE(!source.candidate);
@@ -222,17 +232,21 @@ void MissingObservations() {
   Model empty;
   Observations absent;
   REQUIRE(empty.AddWindow(kEmptyWindow) == Status::kOk);
-  // Composition checks windows even when durability would invoke no callbacks.
+  // A Window without a registered regular Profile context cannot be admitted.
   ExpectError(ComposeSnapshotAdmission(empty, absent),
               Error::kPersistenceNotAdmitted);
 }
 
 void SharedClassifierRefusals() {
+  // C++17 permits this for a scoped enum's fixed int underlying type.
+  // Intentionally unnamed to exercise fail-closed boundary handling.
+  // NOLINTNEXTLINE(clang-analyzer-optin.core.EnumCastOutOfRange)
+  constexpr NativeContextKind kUnrecognizedKind{-1};
   for (const auto kind :
        {NativeContextKind::kUnknown, NativeContextKind::kOffTheRecord,
         NativeContextKind::kGuest, NativeContextKind::kGuestOffTheRecord,
         NativeContextKind::kSystem, NativeContextKind::kSystemOffTheRecord,
-        NativeContextKind::kOther, static_cast<NativeContextKind>(-1)}) {
+        NativeContextKind::kOther, kUnrecognizedKind}) {
     auto observed = Regular(kWork);
     observed.facts.kind = kind;
     REQUIRE(private_browsing::CheckOperation(
@@ -347,6 +361,11 @@ void NativeIdentityNeverSerialized() {
 void ChangedAttachmentRequiresNewNativeObservation() {
   Fixture f;
   const auto admission = f.Admission();
+  const auto old = Value(durability::CaptureSnapshot(f.model, admission));
+  const auto bytes = Value(durability::EncodeSnapshot(old, admission));
+  const durability::StoreImage source{bytes, std::nullopt};
+  const auto prepared = Value(durability::PrepareWrite(source, old, admission));
+  const auto staged = prepared.staged_image();
   REQUIRE(f.model.Attach({kEmptyWindow, kDesk}) == Status::kOk);
   REQUIRE(f.model.TransferSavedPage(kSaved, {kEmptyWindow, kDesk}) ==
           Status::kOk);
@@ -358,11 +377,127 @@ void ChangedAttachmentRequiresNewNativeObservation() {
           (Attachment{kEmptyWindow, kDesk}));
   f.facts.pages.at(kSaved).attachment = {kEmptyWindow, kDesk};
   const auto refreshed = f.Admission();
+  // Fresh, coherent native observations for a different graph cannot authorize
+  // the old snapshot's Window/attachment/Page-owner provenance.
+  ExpectError(durability::EncodeSnapshot(old, refreshed),
+              Error::kPersistenceNotAdmitted);
+  ExpectError(durability::RestoreSnapshot(old, f.Navigation(), refreshed),
+              Error::kPersistenceNotAdmitted);
+  const migrations::CompatibilityGate gate(source);
+  ExpectError(gate.PrepareWrite(source, old, refreshed),
+              Error::kPersistenceNotAdmitted);
+  ExpectError(durability::CommitPreparedWrite(staged, prepared, refreshed),
+              Error::kPersistenceNotAdmitted);
+  REQUIRE(prepared.source() == source);
+  REQUIRE(prepared.staged_image() == staged);
+  REQUIRE(staged.original == bytes);
+  REQUIRE(staged.candidate == bytes);
+  REQUIRE(gate.source() == source);
   const auto snapshot = Value(durability::CaptureSnapshot(f.model, refreshed));
   const auto restored =
       Value(durability::RestoreSnapshot(snapshot, f.Navigation(), refreshed));
   REQUIRE(restored.pages().at(kSaved).attachment() ==
           (Attachment{kEmptyWindow, kDesk}));
+  const auto next = Value(gate.PrepareWrite(source, snapshot, refreshed));
+  const auto committed = Value(durability::CommitPreparedWrite(
+      next.staged_image(), next, f.Admission()));
+  const auto recovered = Value(durability::Recover(committed));
+  REQUIRE(Value(durability::RestoreSnapshot(recovered.snapshot, f.Navigation(),
+                                            f.Admission()))
+              .pages()
+              .at(kSaved)
+              .attachment() == (Attachment{kEmptyWindow, kDesk}));
+}
+
+void EveryDurableRecordRequiresProvenance() {
+  const Fixture f;
+  const auto admission = f.Admission();
+  const auto snapshot = Value(durability::CaptureSnapshot(f.model, admission));
+  const auto bytes = Value(durability::EncodeSnapshot(snapshot, admission));
+  const durability::StoreImage source{bytes, std::nullopt};
+  const migrations::CompatibilityGate gate(source);
+  const std::function<void(durability::DurableSnapshot&)> changes[] = {
+      [](auto& s) { s.profiles.push_back(ProfileId("extra")); },
+      [](auto& s) { s.spaces.back().second.profile = kWork; },
+      [](auto& s) { s.windows.front().first = WindowId("other-empty-window"); },
+      [](auto& s) { s.windows.back().second.selected_space = kDesk; },
+      [](auto& s) { s.attachments.push_back({kEmptyWindow, kDesk}); },
+      [](auto& s) { s.items.front().second.saved_destination += "/changed"; },
+      [](auto& s) { s.items.front().second.owner = kWork; },
+      [](auto& s) {
+        s.shortcuts.push_back({ShortcutId("alias"), {kWork, kItem}});
+      },
+      [](auto& s) {
+        for (auto& page : s.pages)
+          if (page.id == kTemporary)
+            std::get<TemporaryTab>(page.owner).id = TemporaryTabId("other-tab");
+      },
+      [](auto& s) {
+        s.splits.push_back({SplitId("split"), {kHere, {kSaved, kTemporary}}});
+      },
+  };
+  for (const auto& change : changes) {
+    auto different = snapshot;
+    change(different);
+    REQUIRE(!durability::ValidateSnapshot(different));
+    ExpectError(durability::EncodeSnapshot(different, f.Admission()),
+                Error::kPersistenceNotAdmitted);
+    ExpectError(gate.PrepareWrite(source, different, f.Admission()),
+                Error::kPersistenceNotAdmitted);
+    ExpectError(
+        durability::RestoreSnapshot(different, f.Navigation(), f.Admission()),
+        Error::kPersistenceNotAdmitted);
+    REQUIRE(gate.source() == source);
+  }
+  // Sequence order is not provenance; split membership order remains durable.
+  auto reordered = snapshot;
+  std::reverse(reordered.profiles.begin(), reordered.profiles.end());
+  std::reverse(reordered.pages.begin(), reordered.pages.end());
+  Value(durability::EncodeSnapshot(reordered, f.Admission()));
+}
+
+void EmptyAndWindowOnlyGraphsRecheckAtUse() {
+  Model model;
+  Observations facts;
+  const auto admission = Value(ComposeSnapshotAdmission(model, facts));
+  const auto empty = Value(durability::CaptureSnapshot(model, admission));
+  const auto bytes = Value(durability::EncodeSnapshot(empty, admission));
+  const durability::StoreImage source{bytes, std::nullopt};
+  const auto prepared =
+      Value(durability::PrepareWrite(source, empty, admission));
+  const auto staged = prepared.staged_image();
+  facts.payloads.folders = PayloadPresence::kPresent;
+  ExpectError(durability::CaptureSnapshot(model, admission),
+              Error::kUnsupportedFeatures);
+  ExpectError(durability::EncodeSnapshot(empty, admission),
+              Error::kUnsupportedFeatures);
+  ExpectError(durability::PrepareWrite(source, empty, admission),
+              Error::kUnsupportedFeatures);
+  ExpectError(durability::RestoreSnapshot(empty, {}, admission),
+              Error::kUnsupportedFeatures);
+  ExpectError(durability::CommitPreparedWrite(staged, prepared, admission),
+              Error::kUnsupportedFeatures);
+  REQUIRE(prepared.source() == source);
+  REQUIRE(prepared.staged_image() == staged);
+  facts.payloads.folders = PayloadPresence::kAbsent;
+  REQUIRE(model.AddWindow(kEmptyWindow) == Status::kOk);
+  // No per-Profile or per-Page check can see this unobserved Window.
+  ExpectError(durability::CaptureSnapshot(model, admission),
+              Error::kPersistenceNotAdmitted);
+  ExpectError(ComposeSnapshotAdmission(model, facts),
+              Error::kPersistenceNotAdmitted);
+  REQUIRE(model.AddProfile(kWork) == Status::kOk);
+  facts.profiles.emplace(kWork, Regular(kWork));
+  facts.windows.emplace(kEmptyWindow,
+                        std::vector<ContextObservation>{Regular(kWork)});
+  const auto current = Value(ComposeSnapshotAdmission(model, facts));
+  const auto window = Value(durability::CaptureSnapshot(model, current));
+  REQUIRE(window.pages.empty());
+  REQUIRE(window.spaces.empty());
+  facts.windows.at(kEmptyWindow).front().facts.kind =
+      NativeContextKind::kOffTheRecord;
+  ExpectError(durability::EncodeSnapshot(window, current),
+              Error::kPersistenceNotAdmitted);
 }
 
 void SchemaGatePreservesImages() {
@@ -409,6 +544,8 @@ int main() {
   arcified::persistence::PeerPayloadsRemainExplicit();
   arcified::persistence::NativeIdentityNeverSerialized();
   arcified::persistence::ChangedAttachmentRequiresNewNativeObservation();
+  arcified::persistence::EveryDurableRecordRequiresProvenance();
+  arcified::persistence::EmptyAndWindowOnlyGraphsRecheckAtUse();
   arcified::persistence::SchemaGatePreservesImages();
   std::cout << "composed persistence synthetic checks passed\n";
 }
