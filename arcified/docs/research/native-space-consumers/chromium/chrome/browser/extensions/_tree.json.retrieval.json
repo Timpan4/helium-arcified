@@ -1,0 +1,10 @@
+{
+  "path": "chrome/browser/extensions/",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/extensions/?format=JSON",
+  "retrievedAt": "2026-10-23T15:00:39.109Z",
+  "kind": "tree",
+  "bytes": 95827,
+  "sha256": "8e5a0dd52a2f051b660498f8b7911670d84c0d661d4d764d60f2d8a32d849556",
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

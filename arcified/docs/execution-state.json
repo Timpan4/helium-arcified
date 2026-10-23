@@ -74,7 +74,7 @@
       "nativeIssuesAccepted": 0
     }
   },
-  "nextAction": "Commit reviewed graph/candidate admission and qualified native source inventory. Finish and independently review the native callback source draft using completed test packet. Construction-loss/reentrant shutdown and prepared/native acceptance remain OPEN; heavy work deferred. Enforce game hold on trigger until explicit owner resume.",
+  "nextAction": "Finish and independently review the native callback source draft using the completed test packet. Construction loss, reentrant shutdown and prepared/native acceptance remain OPEN; heavy work deferred. Enforce game hold on trigger until explicit owner resume.",
   "currentAssignments": [
     {
       "key": "native-destruction-extraction",
@@ -100,15 +100,15 @@
     "triggered": false
   },
   "integrationChecks": {
-    "sourceIdentity": "At 0cd599bc all51area sources matched reviewed commits. Subsequent shared admission hardening has fresh independent correctness/contract and final-test closure reviews. All other area sources remain unchanged.",
+    "sourceIdentity": "At 0cd599bc, all 51 component sources matched reviewed commits. Shared admission hardening at f634070a has independent correctness, contract and final-test closure reviews. All other area sources remain unchanged.",
     "commandsAndSiteTools": "Parent compiled actual combined tree and ran all three site-controls, DevTools and diagnostics fixture binaries under ASan/UBSan with -fno-sanitize-recover=undefined; all exited 0.",
     "fullBrowserBuilds": "Not run; owner deferred.",
     "nativeAcceptance": "OPEN",
     "captureRegion": "Parent compiled and ran actual combined picker/capture fixture under fail-fast ASan/UBSan. Exit0, no diagnostics.",
     "sidebar": "Conformance-only actual multi-area scenarios independently reviewed clean and committed at 34c97b01. No production facade or native AX claim.",
-    "persistence": "Mandatory whole-snapshot provenance and decoded candidate commit admission independently clean in correctness/contract reviews plus test-only analyzer closure. Parent full six-unit analyzer run exited0 with one documented targeted suppression. Actual native truth, IO and platform acceptance OPEN.",
+    "persistence": "Committed f634070a: mandatory whole-snapshot provenance and decoded candidate commit admission independently clean in correctness, contract and test-only analyzer closure reviews. Parent analyzer across six translation units exited 0 with one documented targeted suppression. Native truth, IO and platform acceptance OPEN.",
     "layout": "Actual layout/split/motion conformance scenarios reviewed clean in round 2. P3 endpoint assertions closed; strict/sanitized checks passed on exact reviewed inputs. Committed locally, native UI/visual/platform behavior OPEN.",
-    "nativeOwnership": "Qualified source inventory and122-member catalog corrections independently closed. Astra guidance and real GN/test sources support an unapplied production callback draft; construction-loss/reentrant shutdown, complete consumer closure and native feasibility OPEN."
+    "nativeOwnership": "Qualified source inventory and 122-member catalog corrections independently closed. Astra guidance and real GN/test sources support an unapplied production callback draft; construction loss, reentrant shutdown, complete consumer closure and native feasibility OPEN."
   },
   "completedAssignments": [
     {
@@ -224,7 +224,7 @@
       "key": "native-lifetime-test-inputs",
       "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-native-lifetime-test-inputs-20261023-v1",
       "status": "completed_source_packet",
-      "evidence": "research/native-space-consumers/lifecycle-tests/README.md;21sources and3listings, no native execution."
+      "evidence": "research/native-space-consumers/lifecycle-tests/README.md; 21 sources and three listings, no native execution."
     },
     {
       "key": "admission-lint-fixture",

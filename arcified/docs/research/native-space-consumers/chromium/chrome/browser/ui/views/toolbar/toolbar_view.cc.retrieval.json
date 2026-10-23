@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/views/toolbar/toolbar_view.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/toolbar/toolbar_view.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:28.010Z",
+  "kind": "file",
+  "bytes": 82075,
+  "sha256": "fa25d6d4344babe90fa82379789ae0cd464ab44c020d2105cc892f7065c17828",
+  "gitBlob": "bfc981b7ee720c039cd927c5cfc717ed72fa1bd5",
+  "lines": 2132,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

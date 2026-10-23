@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/views/frame/browser_native_widget_aura.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/frame/browser_native_widget_aura.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:39.252Z",
+  "kind": "file",
+  "bytes": 4576,
+  "sha256": "1bd20e21f3ade8fb4f8ccdbff45a1fa8875a64744ae644fb5cf22ad63b6a990f",
+  "gitBlob": "5faa351fd5d3990155f59a6b39fde203cb70a2a2",
+  "lines": 131,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/browser_window/internal/browser_window_features.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/browser_window/internal/browser_window_features.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:02.383Z",
+  "kind": "file",
+  "bytes": 59667,
+  "sha256": "6b80e0022064cf61704cbf7fadccf72d0d411fa51d4242541755bfc599f3083a",
+  "gitBlob": "f911366792f8af3d948ccdf081890a12009714e5",
+  "lines": 1310,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

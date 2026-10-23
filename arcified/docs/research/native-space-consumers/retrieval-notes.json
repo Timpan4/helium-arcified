@@ -1,0 +1,21 @@
+{
+  "successful": 88,
+  "sourceFiles": 75,
+  "shallowTrees": 12,
+  "tagMetadata": 1,
+  "sourceBytes": 2436067,
+  "webReader": "Gitiles URL was inaccessible through web open. Direct curl read-only GET with format=TEXT and base64 decoding succeeded.",
+  "failedGuesses": [
+    "chrome/browser/ui/browser_close_manager.cc",
+    "chrome/browser/ui/browser_finder.cc",
+    "chrome/browser/ui/permissions/",
+    "chrome/browser/ui/devtools/",
+    "chrome/browser/ui/browser_window/public/browser_window_util.h",
+    "chrome/browser/ui/browser_window/public/browser_window_util.cc",
+    "chrome/browser/ui/location_bar/location_bar_util.cc",
+    "chrome/browser/ui/browser_window/internal/browser_window_interface.cc"
+  ],
+  "failureMeaning": "HTTP 404. No evidence from guessed path. Correct lifetime, views/permissions, devtools and extensions/browser_window_util paths were located from trees or includes. No browser_finder replacement was inferred.",
+  "loggerRepair": "The failure logger originally used encoded slashes in a file URL and failed to persist two failure records. Replaced slashes in local filenames. Failures above are retained from tool results; later failures have per-request records.",
+  "runtimeProof": "None. No checkout, archive, preparation, compilation, native interaction, or installed-platform verification."
+}

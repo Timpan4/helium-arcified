@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/devtools/devtools_window.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/devtools/devtools_window.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:03:28.701Z",
+  "kind": "file",
+  "bytes": 80833,
+  "sha256": "33cbc23f200e0c543abd9e1377b82055ca9cb8e82fc291b2c736500e58fb60f1",
+  "gitBlob": "464cf1ba1767e61c818971666e2762f826bf0653",
+  "lines": 2343,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

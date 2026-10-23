@@ -1,0 +1,561 @@
+[
+  {
+    "id": "native-lookup-lifetime-session",
+    "request": {
+      "paths": [
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser.h",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_window/internal/global_browser_collection.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_window/internal/global_browser_collection_platform_delegate_non_android.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_window/internal/browser_window_features.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_window/internal/create_browser_window_non_android.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_window/internal/profile_browser_collection.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_window/internal/embedder_browser_window_features.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_window/internal/browser_collection.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_window/public/browser_window_features.h",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_window/public/global_browser_collection.h",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_window/public/browser_window_interface.h",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_window/public/profile_browser_collection.h",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_window/public/embedder_browser_window_features.h",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_window/public/browser_window_interface_iterator.h",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_window/public/create_browser_window.h",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_widget.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_view.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_desktop_window_tree_host_win.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_window_factory.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_native_widget_mac.mm",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/windows_taskbar_icon_updater.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_native_widget_aura.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_desktop_window_tree_host_linux.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/tab_modal_dialog_host.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/dbus_appmenu.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_widget.h",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_view.h",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/multi_contents_view.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/permissions/chooser_bubble_ui.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/permissions/permission_prompt_bubble.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/permissions/permission_prompt_desktop.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/color_provider_browser_helper.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/location_bar/location_bar_view.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/toolbar/toolbar_view.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/download/bubble/download_toolbar_ui_controller.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/chrome_views_delegate.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/theme_profile_key.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_manager_service.h",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_manager_service_factory.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_manager_service.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/cocoa/browser_window_command_handler.mm",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/exclusive_access/fullscreen_controller.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/exclusive_access/exclusive_access_manager.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/unload_controller.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_live_tab_context.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/sessions/session_service_browser_helper.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/toolbar/chrome_location_bar_model_delegate.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/tabs/tab_model.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/tabs/tab_drag_api/desktop_tab_drag_impl/tab_drag_window_adapter_impl.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/tabs/tab_strip_model.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_commands.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/navigator/browser_navigator.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_command_controller.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/web_modal/browser_window_modal_dialog_delegate.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_web_contents_delegate/browser_web_contents_delegate.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_select_file_dialog_controller.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/sync/browser_synced_window_delegate.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_window_state.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/focus/browser_focus_controller_views.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/sessions/session_restore.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/extensions/extension_tab_util.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/extensions/browser_extension_window_controller.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/extensions/api/tabs/tabs_api.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/extensions/browser_window_util.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/lifetime/browser_shutdown.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/lifetime/application_lifetime_desktop.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/lifetime/browser_close_manager.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/devtools/devtools_ui_controller.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/devtools/devtools_window.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/app_controller_mac.mm",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/media/webrtc/desktop_capture_access_handler.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/profiles/keep_alive/scoped_profile_keep_alive.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/ui/views/controls/webview/webview.cc"
+      ],
+      "pattern": "kProfileKey|kBrowserViewKey|FindBrowserWithWindow|SetThemeProfileForWindow|GetThemeProfileForWindow|IsLastWindow\\(|SynchronouslyDestroyBrowser|OnWindowCloseComplete|WindowOpened\\(|WindowClosed\\(|CreateRestoredBrowser|WindowsRemoveFunction::Run",
+      "case_sensitive": true
+    },
+    "result": {
+      "pattern": "kProfileKey|kBrowserViewKey|FindBrowserWithWindow|SetThemeProfileForWindow|GetThemeProfileForWindow|IsLastWindow\\(|SynchronouslyDestroyBrowser|OnWindowCloseComplete|WindowOpened\\(|WindowClosed\\(|CreateRestoredBrowser|WindowsRemoveFunction::Run",
+      "elapsed_ms": 3,
+      "searched_files": 75,
+      "matched_lines": 30,
+      "truncated": false,
+      "matches": [
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_window/internal/browser_collection.cc",
+          "line": 82,
+          "column": 43,
+          "text": "BrowserWindowInterface* BrowserCollection::FindBrowserWithWindow(",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_widget.cc",
+          "line": 406,
+          "column": 25,
+          "text": "  BrowserManagerService::SynchronouslyDestroyBrowser(browser);",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_view.cc",
+          "line": 1188,
+          "column": 54,
+          "text": "                      widget->GetNativeWindowProperty(kBrowserViewKey))",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_view.cc",
+          "line": 1755,
+          "column": 51,
+          "text": "  // but utility functions like BrowserCollection::FindBrowserWithWindow will",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_view.cc",
+          "line": 4995,
+          "column": 39,
+          "text": "  GetWidget()->SetNativeWindowProperty(kBrowserViewKey, this);",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_view.cc",
+          "line": 4999,
+          "column": 48,
+          "text": "  GetWidget()->SetNativeWindowProperty(Profile::kProfileKey,",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_view.cc",
+          "line": 5005,
+          "column": 2,
+          "text": "  SetThemeProfileForWindow(GetNativeWindow(), browser_->GetProfile());",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_view.h",
+          "line": 148,
+          "column": 24,
+          "text": "  static constexpr char kBrowserViewKey[] = \"__BROWSER_VIEW__\";",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/chrome_views_delegate.cc",
+          "line": 47,
+          "column": 47,
+          "text": "      window->GetNativeWindowProperty(Profile::kProfileKey));",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/theme_profile_key.cc",
+          "line": 45,
+          "column": 5,
+          "text": "void SetThemeProfileForWindow(aura::Window* window, Profile* profile) {",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/theme_profile_key.cc",
+          "line": 50,
+          "column": 9,
+          "text": "Profile* GetThemeProfileForWindow(aura::Window* window) {",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_manager_service.h",
+          "line": 36,
+          "column": 14,
+          "text": "  static void SynchronouslyDestroyBrowser(BrowserWindowInterface* browser);",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser.cc",
+          "line": 326,
+          "column": 21,
+          "text": "    session_service->WindowOpened(this);",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser.cc",
+          "line": 391,
+          "column": 13,
+          "text": "    service->WindowClosed(session_id_);",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/browser_manager_service.cc",
+          "line": 32,
+          "column": 28,
+          "text": "void BrowserManagerService::SynchronouslyDestroyBrowser(",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/unload_controller.cc",
+          "line": 69,
+          "column": 22,
+          "text": "std::pair<bool, bool> IsLastWindow(const BrowserWindowInterface* browser) {",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/unload_controller.cc",
+          "line": 188,
+          "column": 4,
+          "text": "    OnWindowCloseComplete();",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/unload_controller.cc",
+          "line": 830,
+          "column": 48,
+          "text": "  auto [last_window, last_window_for_profile] = IsLastWindow(browser_);",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/unload_controller.cc",
+          "line": 942,
+          "column": 23,
+          "text": "void UnloadController::OnWindowCloseComplete() {",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/unload_controller.cc",
+          "line": 979,
+          "column": 37,
+          "text": "              BrowserManagerService::SynchronouslyDestroyBrowser(browser.get());",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/tabs/tab_drag_api/desktop_tab_drag_impl/tab_drag_window_adapter_impl.cc",
+          "line": 263,
+          "column": 46,
+          "text": "      GlobalBrowserCollection::GetInstance()->FindBrowserWithWindow(",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/sessions/session_restore.cc",
+          "line": 425,
+          "column": 39,
+          "text": "      BrowserWindowInterface* window = CreateRestoredBrowser(",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/sessions/session_restore.cc",
+          "line": 837,
+          "column": 28,
+          "text": "            \"SessionRestore-CreateRestoredBrowser-Start\", false);",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/sessions/session_restore.cc",
+          "line": 846,
+          "column": 18,
+          "text": "        browser = CreateRestoredBrowser(",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/sessions/session_restore.cc",
+          "line": 863,
+          "column": 28,
+          "text": "            \"SessionRestore-CreateRestoredBrowser-End\", false);",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/sessions/session_restore.cc",
+          "line": 1274,
+          "column": 26,
+          "text": "  BrowserWindowInterface* CreateRestoredBrowser(",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/extensions/api/tabs/tabs_api.cc",
+          "line": 1696,
+          "column": 34,
+          "text": "ExtensionFunction::ResponseAction WindowsRemoveFunction::Run() {",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/lifetime/browser_close_manager.cc",
+          "line": 236,
+          "column": 33,
+          "text": "          BrowserManagerService::SynchronouslyDestroyBrowser(browser_window);",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/app_controller_mac.mm",
+          "line": 1127,
+          "column": 46,
+          "text": "      GlobalBrowserCollection::GetInstance()->FindBrowserWithWindow(",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/app_controller_mac.mm",
+          "line": 2390,
+          "column": 46,
+          "text": "      GlobalBrowserCollection::GetInstance()->FindBrowserWithWindow(",
+          "before": [],
+          "after": []
+        }
+      ],
+      "next_cursor": null,
+      "errors": []
+    }
+  },
+  {
+    "id": "platform-input-accessibility",
+    "request": {
+      "paths": [
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_view.cc",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_native_widget_mac.mm",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/app_controller_mac.mm",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/dbus_appmenu.cc"
+      ],
+      "pattern": "OnWidgetActivationChanged\\(|GetAccessiblePanes\\(|AcceleratorPressed\\(|ValidateUserInterfaceItem\\(|WillExecuteCommand\\(|ExecuteCommand\\(|updateMenuItemKeyEquivalents|windowHasBrowserTabs|DbusAppmenu::DbusAppmenu",
+      "case_sensitive": true
+    },
+    "result": {
+      "pattern": "OnWidgetActivationChanged\\(|GetAccessiblePanes\\(|AcceleratorPressed\\(|ValidateUserInterfaceItem\\(|WillExecuteCommand\\(|ExecuteCommand\\(|updateMenuItemKeyEquivalents|windowHasBrowserTabs|DbusAppmenu::DbusAppmenu",
+      "elapsed_ms": 0,
+      "searched_files": 4,
+      "matched_lines": 25,
+      "truncated": false,
+      "matches": [
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_view.cc",
+          "line": 1624,
+          "column": 5,
+          "text": "  // OnWidgetActivationChanged() until we return to the runloop. Therefore any",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_view.cc",
+          "line": 3414,
+          "column": 22,
+          "text": "        focused_view->AcceleratorPressed(accelerator)) {",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_view.cc",
+          "line": 3992,
+          "column": 17,
+          "text": "  return chrome::ExecuteCommand(browser_.get(), command_id);",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_view.cc",
+          "line": 4163,
+          "column": 18,
+          "text": "void BrowserView::OnWidgetActivationChanged(views::Widget* widget,",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_view.cc",
+          "line": 4456,
+          "column": 18,
+          "text": "void BrowserView::GetAccessiblePanes(std::vector<views::View*>* panes) {",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_view.cc",
+          "line": 4508,
+          "column": 49,
+          "text": "  for (views::View* pane : multi_contents_view_->GetAccessiblePanes()) {",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_view.cc",
+          "line": 5227,
+          "column": 18,
+          "text": "bool BrowserView::AcceleratorPressed(const ui::Accelerator& accelerator) {",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_native_widget_mac.mm",
+          "line": 343,
+          "column": 12,
+          "text": "    chrome::ExecuteCommand(browser_view_->browser(), IDC_FOCUS_TOOLBAR);",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_native_widget_mac.mm",
+          "line": 399,
+          "column": 29,
+          "text": "void BrowserNativeWidgetMac::ValidateUserInterfaceItem(",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_native_widget_mac.mm",
+          "line": 607,
+          "column": 29,
+          "text": "bool BrowserNativeWidgetMac::WillExecuteCommand(",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_native_widget_mac.mm",
+          "line": 644,
+          "column": 29,
+          "text": "bool BrowserNativeWidgetMac::ExecuteCommand(",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_native_widget_mac.mm",
+          "line": 648,
+          "column": 7,
+          "text": "  if (!WillExecuteCommand(command, window_open_disposition,",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/browser_native_widget_mac.mm",
+          "line": 812,
+          "column": 29,
+          "text": "void BrowserNativeWidgetMac::OnWidgetActivationChanged(views::Widget* widget,",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/app_controller_mac.mm",
+          "line": 816,
+          "column": 38,
+          "text": "      [AppController.sharedController updateMenuItemKeyEquivalents];",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/app_controller_mac.mm",
+          "line": 1111,
+          "column": 8,
+          "text": "  [self updateMenuItemKeyEquivalents];",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/app_controller_mac.mm",
+          "line": 1750,
+          "column": 16,
+          "text": "        chrome::ExecuteCommand(browser, IDC_NEW_TAB);",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/app_controller_mac.mm",
+          "line": 1758,
+          "column": 14,
+          "text": "      chrome::ExecuteCommand(ActivateOrCreateBrowser(profile),",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/app_controller_mac.mm",
+          "line": 1762,
+          "column": 14,
+          "text": "      chrome::ExecuteCommand(ActivateOrCreateBrowser(profile),",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/app_controller_mac.mm",
+          "line": 1773,
+          "column": 14,
+          "text": "      chrome::ExecuteCommand(CreateBrowser(profile), IDC_OPEN_FILE);",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/app_controller_mac.mm",
+          "line": 2385,
+          "column": 8,
+          "text": "- (BOOL)windowHasBrowserTabs:(NSWindow*)window {",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/app_controller_mac.mm",
+          "line": 2419,
+          "column": 8,
+          "text": "- (void)updateMenuItemKeyEquivalents {",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/app_controller_mac.mm",
+          "line": 2444,
+          "column": 12,
+          "text": "  if ([self windowHasBrowserTabs:[self windowForPerformClose]]) {",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/dbus_appmenu.cc",
+          "line": 214,
+          "column": 0,
+          "text": "DbusAppmenu::DbusAppmenu(BrowserView* browser_view,",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/dbus_appmenu.cc",
+          "line": 631,
+          "column": 18,
+          "text": "void DbusAppmenu::ExecuteCommand(int command_id, int event_flags) {",
+          "before": [],
+          "after": []
+        },
+        {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/native-space-consumers/chromium/chrome/browser/ui/views/frame/dbus_appmenu.cc",
+          "line": 633,
+          "column": 12,
+          "text": "    chrome::ExecuteCommand(browser_, command_id);",
+          "before": [],
+          "after": []
+        }
+      ],
+      "next_cursor": null,
+      "errors": []
+    }
+  }
+]

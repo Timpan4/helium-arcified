@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/exclusive_access/fullscreen_controller.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/exclusive_access/fullscreen_controller.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:23.756Z",
+  "kind": "file",
+  "bytes": 27040,
+  "sha256": "1fc4eb2851fde435608a91a6ccc37271217bf139ebc4909a0dda73f35aede7ba",
+  "gitBlob": "1e0d6650245c12c2320a7cbc5157d8e24bc45b76",
+  "lines": 733,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

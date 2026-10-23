@@ -1,0 +1,107 @@
+{
+  "id": "fb01cd3131462b3d981d11050afb2589718b0ccd",
+  "entries": [
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ef3ebaa68ad6ea801d151fb0bbf2b17851db44ce",
+      "name": "BUILD.gn"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b306d870ac4b73dccdd20611aa6cf7c0a22d8025",
+      "name": "OWNERS"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "d25c7386ee8f4ab9b5c100419da6f82ac66897e4",
+      "name": "android"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c534a9e4a680cbc0ddbfcfce678fa9b7c4840d11",
+      "name": "browser_collection.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f8b024c19875cf9d58a922a5c6f25b42411eb8b4",
+      "name": "browser_collection_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f911366792f8af3d948ccdf081890a12009714e5",
+      "name": "browser_window_features.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "325fc1a4b3dd2aa77ba5bf22a4e00afe2310c663",
+      "name": "browser_window_interface_iterator_non_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b75cc19363559a1c76af4408c70075b51e27d5b3",
+      "name": "create_browser_window.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "64c225ab83dd1fd4a68c672f0df8071fbe2f0dcb",
+      "name": "create_browser_window_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3b394efe9f13108a1e259f693b0385dbacaa8492",
+      "name": "create_browser_window_non_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ed414c488696424c2fc10bb31a7d6ce9c8912a54",
+      "name": "desktop_browser_window_capabilities.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a2c0889f7003c1f1b70c76beb1e6b481d8ac649e",
+      "name": "embedder_browser_window_features.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "958bbae74342c3299ca3633913a8e22f5e28cbe3",
+      "name": "global_browser_collection.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "26399212474171bb8dd417d0a5caa24dbe95c3b0",
+      "name": "global_browser_collection_interactive_ui_test.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "31631776db6e35f9b54b828d8fb91b37c91b776b",
+      "name": "global_browser_collection_platform_delegate_non_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1859358eac925a0fb19ae2fd1629a649864a8ae6",
+      "name": "profile_browser_collection.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e2773a0b2bc83975be9cb4da32cfe22929059ff3",
+      "name": "profile_browser_collection_browsertest.cc"
+    }
+  ]
+}

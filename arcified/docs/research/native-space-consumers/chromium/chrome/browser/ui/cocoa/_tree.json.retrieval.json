@@ -1,0 +1,10 @@
+{
+  "path": "chrome/browser/ui/cocoa/",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/cocoa/?format=JSON",
+  "retrievedAt": "2026-10-23T15:00:38.904Z",
+  "kind": "tree",
+  "bytes": 11049,
+  "sha256": "570ffe9ed40ecb75a6dff19aafe1dcab7e61ea34b442eac0ac44d904c15f31c6",
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

@@ -1,0 +1,10 @@
+{
+  "path": "chrome/browser/ui/views/permissions/",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/permissions/?format=JSON",
+  "retrievedAt": "2026-10-23T15:01:23.543Z",
+  "kind": "tree",
+  "bytes": 11536,
+  "sha256": "a94a9807e0e3b7685769a8aa0960189ada0781e7d1f1825fb5d9c5ec5f4db418",
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

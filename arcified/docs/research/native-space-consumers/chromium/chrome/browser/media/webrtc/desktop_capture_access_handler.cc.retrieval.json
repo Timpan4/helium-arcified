@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/media/webrtc/desktop_capture_access_handler.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/media/webrtc/desktop_capture_access_handler.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:03:28.359Z",
+  "kind": "file",
+  "bytes": 36626,
+  "sha256": "d6a30fb36caf2a9d7d35c185c9d022446ca8cc1a5880a16d9ee79fcd3a395cfb",
+  "gitBlob": "6edfb105820e4dd684d54be9a42093c8b61eb1de",
+  "lines": 900,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

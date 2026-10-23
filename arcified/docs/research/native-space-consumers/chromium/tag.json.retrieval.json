@@ -1,0 +1,10 @@
+{
+  "path": "@tag",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/155.0.8059.79?format=JSON",
+  "retrievedAt": "2026-10-23T15:00:01.953Z",
+  "kind": "tag",
+  "bytes": 2557,
+  "sha256": "87e51702344cde473d0a0f489adbc408f75841f4117ba8a6603f7403ff75f655",
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

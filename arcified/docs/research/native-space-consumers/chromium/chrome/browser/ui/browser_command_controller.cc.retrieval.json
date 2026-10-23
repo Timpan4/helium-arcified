@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/browser_command_controller.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/browser_command_controller.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:23.677Z",
+  "kind": "file",
+  "bytes": 111898,
+  "sha256": "cadfe36a3496322103af5aa758475ce7af38fe878b8f158c57f8146d70e93a1f",
+  "gitBlob": "3741ba7671d225e307800a48c23c4c4bd1fd121c",
+  "lines": 2820,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

@@ -1,0 +1,419 @@
+{
+  "id": "e8a2e6edef701f0ba3cb6c663c9c9072af7860ec",
+  "entries": [
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b661a02e91fa89a677da72e1d3955e5f242476ca",
+      "name": "BUILD.gn"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1deebb9545ac76052327450ccf2c832aa6c4da8f",
+      "name": "DIR_METADATA"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cebe287f2f8371198b7ca9adeb73892474842541",
+      "name": "OWNERS"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "aba5001cfaece34fd357929c8e77225cedf2904a",
+      "name": "chip"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "31ff36d2552acda446c7e178b6850eeac4780ccb",
+      "name": "chooser_bubble_ui.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d0d9322965d0fd1c176c6845c91e6047f956ae81",
+      "name": "embedded_permission_prompt.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7b327adca307566e102fa7afce5b694678648838",
+      "name": "embedded_permission_prompt.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f9ad15315fd08ad8250e3b292f6a2cdd09b880f1",
+      "name": "embedded_permission_prompt_ask_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cf502d38ff19bc58a0193097ee8b409caf74bd13",
+      "name": "embedded_permission_prompt_ask_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0f2fba28287f0bda14cee95507132417011d8df4",
+      "name": "embedded_permission_prompt_base_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "aca91f0631075a3b7832ff9aac95d071a8fd06d6",
+      "name": "embedded_permission_prompt_base_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ab686099e7a9261b3b44195be857faf7ea486183",
+      "name": "embedded_permission_prompt_content_scrim_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b172f3ec00b0cd0c09eb8a2ae044c6de56531357",
+      "name": "embedded_permission_prompt_content_scrim_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7cd6a0002e07e7a4d6905b348e97accb8315da6b",
+      "name": "embedded_permission_prompt_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "57f96ed3acf2e8c033535f5fe5e2e39c3a416ec4",
+      "name": "embedded_permission_prompt_policy_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2680e7e1bc2c067313fd177291466854c959e80c",
+      "name": "embedded_permission_prompt_policy_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a7860486ac73bb08eb90dab2e3d4c28747300311",
+      "name": "embedded_permission_prompt_previously_denied_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "22bfbb86a4080baddb020f48d2b9ace7ac760fdd",
+      "name": "embedded_permission_prompt_previously_denied_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "401f7c5df64050ddabca0283759dafa88dbe2c62",
+      "name": "embedded_permission_prompt_previously_granted_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5d17cae26a87c34c055953fea92134038afa9e9b",
+      "name": "embedded_permission_prompt_previously_granted_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4d2f013779576200d05be60b0748f3381e21fb58",
+      "name": "embedded_permission_prompt_show_system_prompt_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "169c8da541f869e7c1e223805bc677b9b982f27c",
+      "name": "embedded_permission_prompt_show_system_prompt_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "002b5e3f546b290a06ab05ed1640f61a95b6325f",
+      "name": "embedded_permission_prompt_system_settings_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d5c86e761de1b7008ba4b8ce00407a45daafcc71",
+      "name": "embedded_permission_prompt_system_settings_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "673ec294745ecb0a1bdb2ade8f089c5f676a7387",
+      "name": "embedded_permission_prompt_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "91fbb4d481b1faf2e836aee5845fd7279e671c1e",
+      "name": "embedded_permission_prompt_view_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c7b8006adf7ad643120a7ed2b6f797fc57e0122e",
+      "name": "exclusive_access_permission_prompt.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "af863bd319e2abc76b4eae5ef0a3563851506252",
+      "name": "exclusive_access_permission_prompt.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b5153a79a37b35e57b8f0df7024bddd27a1ed765",
+      "name": "exclusive_access_permission_prompt_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fbf30715133e5ab3d5348e3f381ec8d55f2b4f18",
+      "name": "exclusive_access_permission_prompt_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "feff83f60cad829ea0bcd016fa82e1014c115497",
+      "name": "exclusive_access_permission_prompt_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "36ebcff122b59165a4e3d3434d210c8128240711",
+      "name": "exclusive_access_permission_prompt_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6d2797ec2885e2c884483ab86bfda17f0c06fb66",
+      "name": "midi_permissions_flow_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "43c524bc0366682fafb338a306ad9ee5668f8695",
+      "name": "one_time_permission_interactive_ui_test.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a3a762101ccf8342afe5204d4d7472f9a57be618",
+      "name": "permission_bubble_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "37e4c1df9055db84254c94742912887b33a6ce11",
+      "name": "permission_indicators_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "092b451227db6144a15162d9480414bd025d6484",
+      "name": "permission_metrics_ui_test.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "547ab0ecfda84fa39dad03881a324609c27ba4cc",
+      "name": "permission_prompt_base_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bdd34c9cd4cb472e2122d768ef70d5a1d0110fd7",
+      "name": "permission_prompt_base_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e05dba1eedc9d38557e32476a18cae7e4fb5df80",
+      "name": "permission_prompt_base_view_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bdb8fbbc63703367b384a17e4baa26dfa87a3175",
+      "name": "permission_prompt_bubble.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f4d365b8d920d1d0c2e18ce1ee0b0bf418d33e84",
+      "name": "permission_prompt_bubble.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b4d22908619c1adc2d95ff5672325a1a8ba181fb",
+      "name": "permission_prompt_bubble_base_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dd4b7eb10b9cc80a4fac6451531b030bd95f8acd",
+      "name": "permission_prompt_bubble_base_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c800755be121ecdc900e82b4f1d675d36a09e932",
+      "name": "permission_prompt_bubble_base_view_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bbb06f241c0f6a558e50c1216d370e23688603be",
+      "name": "permission_prompt_bubble_one_origin_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "55f306cfc69757264cf22f6151a4eb4dcaf809be",
+      "name": "permission_prompt_bubble_one_origin_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "64c3278b1e6fd279d2b84dfe496761287f0e2bf6",
+      "name": "permission_prompt_bubble_one_origin_view_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d1cda20c080b2a30892fe23dc4e9a95c7ad0cb49",
+      "name": "permission_prompt_bubble_two_origins_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b90dae7f2101731e4bd79e80d15a916389c7b99d",
+      "name": "permission_prompt_bubble_two_origins_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ce7433608681147b0218a817fb4d74cc2fcee1cd",
+      "name": "permission_prompt_bubble_two_origins_view_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c91736432b8fa4b2fef7805bf6e51f0037232a14",
+      "name": "permission_prompt_bubble_view_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cd30b28dc32e87e3b3f84ebc48dbfdc5b2c7216b",
+      "name": "permission_prompt_bubble_view_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "aa2f95a69606f15f3b60f1dcc6fd23662b64e65d",
+      "name": "permission_prompt_chip.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5a6d4aa5063b152c2885c0976de2dba5a99cf288",
+      "name": "permission_prompt_chip.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "289df4b2daa0fb13955b282f98adf477e88bfa6d",
+      "name": "permission_prompt_desktop.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "91b77c3c4cd81c2deede7dd74338c4a2626d822e",
+      "name": "permission_prompt_desktop.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b74e0bc888fcfa7d7e96712d1137dc75aae550f5",
+      "name": "permission_prompt_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f358f6563ec5dff4dac749c76a9e01d3f1b6621c",
+      "name": "permission_prompt_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f0202afc0eb27a42a8e390e0567482fc0c6b0f0c",
+      "name": "permission_prompt_notifications_mac.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cd8ad95d4bfdc41a4dc420ea629ec9c2fc918c77",
+      "name": "permission_prompt_notifications_mac.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "094f54e2ffe9cf66e94f58ef480bdad49f9325a6",
+      "name": "permission_prompt_observer.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "177962d1436daebd5119cb52e90fb8b63beb0627",
+      "name": "permission_prompt_observer.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0ed255296442708a5cd29bab587e102b2b990c45",
+      "name": "permission_prompt_quiet_icon.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e2a8e49e9a1b68f11f0ce0a68a25b2aa70e3ca72",
+      "name": "permission_prompt_quiet_icon.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "131412b64346861d862bce3f7aa77607cac3b021",
+      "name": "permission_prompt_style.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9499a6ce811c668758102b8d2bbe1c148ae463e1",
+      "name": "permission_request_chip_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9a8a473b093cbd31ec93ef05a3635e1cbccd19f9",
+      "name": "permission_rhs_indicators_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dd97e4b04720927e855b8641951348f797927d14",
+      "name": "quiet_prompt_interactive_uitest.cc"
+    }
+  ]
+}

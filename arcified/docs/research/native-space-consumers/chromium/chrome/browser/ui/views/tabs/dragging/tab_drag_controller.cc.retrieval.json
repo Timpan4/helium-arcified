@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:06:07.237Z",
+  "kind": "file",
+  "bytes": 125713,
+  "sha256": "0cda200a5ecb34ae037ef2efa7f2a4764154391c26e715c5f7fa4a85b635b615",
+  "gitBlob": "63ca8403e9f603fdaa9201af1f38ce0f5e4cd782",
+  "lines": 3244,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

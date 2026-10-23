@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/views/frame/windows_taskbar_icon_updater.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/frame/windows_taskbar_icon_updater.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:39.234Z",
+  "kind": "file",
+  "bytes": 2413,
+  "sha256": "04ee63125d44792aa83a6df30967043df6a5439e2c5536f325f559a367ddd47c",
+  "gitBlob": "5d7b326d3dea17a99cf90c8e97704deafebea8c6",
+  "lines": 71,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

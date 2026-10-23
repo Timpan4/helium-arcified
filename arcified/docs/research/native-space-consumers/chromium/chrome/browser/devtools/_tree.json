@@ -1,0 +1,743 @@
+{
+  "id": "6f6a732ffddcef71d2f2f299c770949f0a048fd4",
+  "entries": [
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2e694986c7617565320e7259f4548ba6e75561b4",
+      "name": "BUILD.gn"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d089bc02917c3fb2ac2ebbd5ff4bb1072b85e756",
+      "name": "DEPS"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f517716f510f1e02e90a9ac6ebf288c855272bf8",
+      "name": "DIR_METADATA"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "db1136ca0bbae0c38c3f939340e406b5f536fb07",
+      "name": "OWNERS"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d7157ea4bb9228b7cfc106e7544cc025346f8390",
+      "name": "README.md"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "82bac2adbf84fc6b38a128fb28809ac28f882f0e",
+      "name": "aida_client.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "852ce5a7e84567855f0925491c6a88cf043b0411",
+      "name": "aida_client.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "38f6586a0f3d48e0e9963f8c1eaef15b94cd3035",
+      "name": "aida_client_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6ab2b3af9e906f5d604a3d0dc855c73c7ae752c1",
+      "name": "aida_service_handler.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e9d178dbb462c35e7e676e4f4fe964513f9b59f7",
+      "name": "aida_service_handler.h"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "255d2fd2c96d508e2abe7c4c073f426999608982",
+      "name": "android"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "37a83372cec45117a84b810f9b4667bcc8a26a74",
+      "name": "chrome_devtools_manager_delegate.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5a1fb503d2ce171289b6ac406fdaff303f76a28c",
+      "name": "chrome_devtools_manager_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a93a5d26c146eaa90f89294a804bf74ace3439de",
+      "name": "chrome_devtools_session.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f703912a1b785a1f17c786b9645c84a2f38aa2d4",
+      "name": "chrome_devtools_session.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8c0fb40e81b509da8bd295baa2336a718739a15b",
+      "name": "chrome_devtools_session_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "88f516253464ec9c610d1e976ead69d5f1c3b532",
+      "name": "chrome_devtools_session_android.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e407590dee64262c51f0779e0908f63d40de98ff",
+      "name": "chrome_devtools_session_base.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "031b08e9d32e0403abc02b7bff389a7c473ce2b4",
+      "name": "chrome_devtools_session_base.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a30bf0d9657f0b5d7ef845b302851450e0d63024",
+      "name": "cros_protocol.pdl"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "85dba270ba55196e0918ea04747974cb969231ac",
+      "name": "device"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9367f3913c72c41ef77ec2f800233aca5e20cdef",
+      "name": "devtools_auto_opener.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "aa60dd8c2d6d0c4f22ef3c5fcb01912db39edeb6",
+      "name": "devtools_auto_opener.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "19a9f4d762c457ef7a3ba320198e9e2ae444dbec",
+      "name": "devtools_availability_checker.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5cc4b50d356e15a88cafebac4d82ab71f22a9dd6",
+      "name": "devtools_availability_checker.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f46c819cb5583ad3056dc0681e01d47fdec808de",
+      "name": "devtools_availability_checker_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8137e5f95157d4fcb045f325d6d4b0bde11b2b37",
+      "name": "devtools_browser_context_manager.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1898b7eec71c0810afc4a75074aa3178f19067b4",
+      "name": "devtools_browser_context_manager.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dfb7eb2978df0293f744dbf7ff7ee572b48df76e",
+      "name": "devtools_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "87243b09b81b79c5dab68700ee2d16214dd51940",
+      "name": "devtools_connection_dialog.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1c87683d909fbaab4267185d26802a4711af1ed3",
+      "name": "devtools_connection_dialog.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9139fa93d099d885cc9f72294f791dce8ad0c70c",
+      "name": "devtools_connection_dialog_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f94904e127646efa34f7f68153aec350307a2db3",
+      "name": "devtools_contents_resizing_strategy.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c771d3fb45f4f64a9a6d1e19cce3745232382f0f",
+      "name": "devtools_contents_resizing_strategy.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7d054c83e766ba0db0374b2a7442f805cdffb592",
+      "name": "devtools_contents_resizing_strategy_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1c691a5608092168aa122730ea2db2572626142e",
+      "name": "devtools_dispatch_http_request_params.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7a6d25770d3c4e7af3d44201fec5f2316246d9a9",
+      "name": "devtools_dispatch_http_request_params.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a9d552ac3d67aae6c660d6a9e0086f1227dafce9",
+      "name": "devtools_dock_side.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "990933bd955cc7cf5ae3b773a60ebe287572cf93",
+      "name": "devtools_dock_tile.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ca516c823c668eec68c1250e96b5eaed25055992",
+      "name": "devtools_dock_tile.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a36197bdfc2a3efa09c3f52e9af3e761bcfd32bf",
+      "name": "devtools_dock_tile_mac.mm"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8acb5064287cd9b83024a19a843938d331d27e1f",
+      "name": "devtools_embedder_message_dispatcher.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "150805a1938d0529256fc7721e1ba1faed3102a8",
+      "name": "devtools_embedder_message_dispatcher.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "80711395fc4e51933a662eb57e4015e4f98eb6e1",
+      "name": "devtools_eye_dropper.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e0f979c7ffc8aa2a0fb9fdfd16a9f43fe2d96f3c",
+      "name": "devtools_eye_dropper.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3284853c91e38d8b10ff64e8f9e3c17218b20b3e",
+      "name": "devtools_file_helper.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4516a63fd71e7b3b500708b7ad06a2800ee5b973",
+      "name": "devtools_file_helper.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "75b99061c24dfb99dde3b2a5d594263e7e224fe2",
+      "name": "devtools_file_helper_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a89c4cf3afce286fa4b38ad0460fef472e4a2068",
+      "name": "devtools_file_storage.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5980ff2116e8282c8a8fc000f46db481c1bfc0cf",
+      "name": "devtools_file_storage.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dcb2269df9fb6f29bfaa64ba1f56462f8dc6454c",
+      "name": "devtools_file_system_indexer.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6867f33d4ee3b681b5cf400df624e7377e99fb17",
+      "name": "devtools_file_system_indexer.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "26ccff5b960b3cba2830f865dd45f977a5e83a8c",
+      "name": "devtools_file_system_indexer_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "48f3adec99856cd21af5a4a45106ce8bd8240d66",
+      "name": "devtools_file_watcher.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c346306f41b39bcb4d1efe3a8a41ff2304621c98",
+      "name": "devtools_file_watcher.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9d6895c418c0c7fe7918170d828a6a044423d567",
+      "name": "devtools_file_watcher_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a2852613cb13f66a9be26933ba82410443aaa201",
+      "name": "devtools_http_service_handler.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9ab3776f7d1fceae1749e7e6e06a3848ee57ca90",
+      "name": "devtools_http_service_handler.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d87cd102d41e9480f7f12398cba934625b2329e6",
+      "name": "devtools_http_service_handler_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "04266ae9e8910e827bbacbf4974e72a0c74adead",
+      "name": "devtools_http_service_registry.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dafbe943bdc7f9213bb6adb97cd449ed9d180f6b",
+      "name": "devtools_http_service_registry.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f1b1e533b58ee057f2e01a29acfd9557b0c3295c",
+      "name": "devtools_infobar_delegate.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8da057822a39482f58b7334c23fb004f6e2b251c",
+      "name": "devtools_infobar_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8cc52e522aec100b11a15070af879b43ace9d0a7",
+      "name": "devtools_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8c67970466a11d5a8165d0b04bfcc508e3e755f3",
+      "name": "devtools_navigation_gating_rule_manager.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "50c218293e2a989723c1f0c4f979b8c307c20db5",
+      "name": "devtools_navigation_gating_rule_manager.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "523bc9bac95769327e69dd3196d5e73597d3e1fe",
+      "name": "devtools_navigation_gating_rule_manager_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e8e03533e3418e9af064707296161a509e3c7231",
+      "name": "devtools_navigation_throttle.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "42aaa491bd391b6c6c5685a8e723f54c71f47b02",
+      "name": "devtools_navigation_throttle.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f6b3793f24c34f4cb4914650ddcc095f6c90f1ef",
+      "name": "devtools_navigation_throttle_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6c5f138272d9e5d3a38cfa16eaebaf5f5f56d1ef",
+      "name": "devtools_policy_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "84f8ce08425951e604c9f489874bb19fcb1e0dfd",
+      "name": "devtools_policy_dialog.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "82c580bc10f4d6214c14fbf6ed3aa131c758a9ec",
+      "name": "devtools_policy_dialog.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "041fefd3e8ee6df651c44b24cafa6dcc86111074",
+      "name": "devtools_remote_server_infobar_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c6ec25a0006847274faead59d785ca249542955d",
+      "name": "devtools_remote_server_infobar_delegate.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ab5dfaf059437c20964799208d119f8d270a61dc",
+      "name": "devtools_remote_server_infobar_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4df6c93b8290556f65d9fcf8750aad109c8b9a66",
+      "name": "devtools_select_file_dialog.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b2f6c8ce5c661a164f53e55992202dd981d410ad",
+      "name": "devtools_select_file_dialog.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b3a936cb16b4fbcf3ffa8d0781fe2323e2fc5629",
+      "name": "devtools_select_file_dialog_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a44c59a4b259eaf0ce85f4a3db79fbb3c9a5d8a4",
+      "name": "devtools_settings.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b31570a373b148e01a73b3163041b710c3a8075c",
+      "name": "devtools_settings.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "31e51e894deccdfb768f284c31175794ab825ebe",
+      "name": "devtools_settings_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ff68fa80c7ca39dc2b4feaf2e1eff4fff311b736",
+      "name": "devtools_targets_ui.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d3de56e94765bf1a8d328caf48e6215b17721b44",
+      "name": "devtools_targets_ui.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d6063dc829d3d826b78a7ef2041386d0d8b16263",
+      "name": "devtools_toggle_action.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1cae712b4772059a4627af060b2c5dfd9dda68f7",
+      "name": "devtools_toggle_action.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ccda4d63d53b9c7aad3a867d3e15f2c31472efc1",
+      "name": "devtools_ui_bindings.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0b6b6d364274581765aa29bd5728d8db52c2af7f",
+      "name": "devtools_ui_bindings.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "939cc25c6edf9e27570763f4443a2cda9434bcb2",
+      "name": "devtools_ui_bindings_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f2a3fe25fe45f4f356b15f5e7ad0ce2f704d255c",
+      "name": "devtools_ui_controller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "aecb3609bfa9a1137f5dd96320e0c4049082e3f0",
+      "name": "devtools_ui_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "464cf1ba1767e61c818971666e2762f826bf0653",
+      "name": "devtools_window.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e44b0c31ee66d121dad6e464efe9edcf611164b1",
+      "name": "devtools_window.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3eeff6a847ace3b5eaf360ae4a5cf62bfb243c75",
+      "name": "devtools_window_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "92aca1fc757d25559da86d020010a26d285a98b7",
+      "name": "devtools_window_testing.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5c240627268447bb2d5ef44188cbb129f30f3092",
+      "name": "devtools_window_testing.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9331bad3ad2b8da875199ef664ee4fb732988df7",
+      "name": "devtools_window_views.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5ee7e11791c3a566611d091983a7cf08bb396c29",
+      "name": "features.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "35884b72a3d91b461b40802320031a04d5f203f4",
+      "name": "features.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ffbd4fa41779764d14ded5a456869c8a18a3d49a",
+      "name": "gca_service_handler.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "11ba632491eef15e2e146a5abc956502aaa344aa",
+      "name": "gca_service_handler.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0790711901bb4d18cf99c27d5bb9df7715e0284a",
+      "name": "gdp_service_handler.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "248c1d13562295cac1ce4e676531c33fbfb92d1e",
+      "name": "gdp_service_handler.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "774a946b8298eed61fb500a643d3e4d2803433f9",
+      "name": "global_confirm_info_bar.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f8b1fa39491dc3c31c8d2123d82dc5d3af53d108",
+      "name": "global_confirm_info_bar.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "65e63932de289ab285d8e1cb0b404d26ad495bfc",
+      "name": "global_confirm_info_bar_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9bee8d21f5c89c70a591d084ae067d6b5acf40a8",
+      "name": "inspector_protocol_config.json"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5622afe80ab70a8b3e0621422a686e52fa99faff",
+      "name": "process_sharing_infobar.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d1e5749edec00af908d5b84dcd709129e36f6ad8",
+      "name": "process_sharing_infobar.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "366204ff776fe553f1c2f63bf76efa4a145976e2",
+      "name": "process_sharing_infobar_delegate.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8dcea86eb31f26777fb0890b137dea09afc4b974",
+      "name": "process_sharing_infobar_delegate.h"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "a70a12c2f53561fb80ea639ea60288cacc59ef86",
+      "name": "protocol"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d348e8695ef2a024d9076eab6a820923121c0525",
+      "name": "remote_debugging_server.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1049841026b2bbf9270609da8e93aae983f5f820",
+      "name": "remote_debugging_server.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f4108a1ff8379729571425e1181c2cfde87dd1ad",
+      "name": "remote_debugging_server_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f95f11650ba6e3026767a8064c9cd4be85749ce4",
+      "name": "serialize_host_descriptions.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "77fcdbb78b95cca69d86fe2546645fb135de8fe4",
+      "name": "serialize_host_descriptions.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ba64d3efd6a115971f4b9f7a6aac3986cd9adf42",
+      "name": "serialize_host_descriptions_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "56579ac890769dbf8368cda46002f6040c5f16ac",
+      "name": "url_constants.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2fd977699b6a7af4c7e597f848de55649e76d7c4",
+      "name": "url_constants.h"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "c6f1478e1ecadb2a30edd9249e5a76be200d963a",
+      "name": "views"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a4650e7dc55cb96bb03d781969d90fc9c059c30e",
+      "name": "visual_logging.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b6dd8e8663c27f87caf6bb51d9a82445f0505072",
+      "name": "visual_logging.h"
+    }
+  ]
+}

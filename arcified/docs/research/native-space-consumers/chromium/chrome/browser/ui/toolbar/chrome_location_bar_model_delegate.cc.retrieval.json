@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/toolbar/chrome_location_bar_model_delegate.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/toolbar/chrome_location_bar_model_delegate.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:39.259Z",
+  "kind": "file",
+  "bytes": 11457,
+  "sha256": "985125eba64bbca7dc524920185cf7de19a8ff5f6ef72895d39938a0cea91d4c",
+  "gitBlob": "4e23238dea7450b72de44d4fdc73df72ad13f336",
+  "lines": 320,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

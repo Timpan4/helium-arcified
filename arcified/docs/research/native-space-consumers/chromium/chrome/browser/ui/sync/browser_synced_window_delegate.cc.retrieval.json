@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/sync/browser_synced_window_delegate.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/sync/browser_synced_window_delegate.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:24.050Z",
+  "kind": "file",
+  "bytes": 4023,
+  "sha256": "fdc98db93d96d9cd275bab120090be4417349440db9aa1d5aa709b907d24331a",
+  "gitBlob": "ba60daab30acc1c07e0907732dfd05e9c0c77a0b",
+  "lines": 123,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

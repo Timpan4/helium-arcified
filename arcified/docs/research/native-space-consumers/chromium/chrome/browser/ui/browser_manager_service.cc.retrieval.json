@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/browser_manager_service.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/browser_manager_service.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:03.647Z",
+  "kind": "file",
+  "bytes": 13503,
+  "sha256": "492fbdf3867cddffe1c93ce83da91a3b8226635f8293640ebd89f792b2fa5d84",
+  "gitBlob": "c9ca8806600c5af524c96c0d876feb203f09fdaf",
+  "lines": 321,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

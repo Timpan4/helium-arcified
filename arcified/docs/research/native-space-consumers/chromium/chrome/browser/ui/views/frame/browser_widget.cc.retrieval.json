@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/views/frame/browser_widget.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/frame/browser_widget.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:02.295Z",
+  "kind": "file",
+  "bytes": 24151,
+  "sha256": "ac57dfd43c13c4a5d38be013d6326816582a8b1153a63d67491d04494b087c33",
+  "gitBlob": "a335e2d5ccd0e9d54b0335d58642f4440b22b992",
+  "lines": 623,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

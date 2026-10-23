@@ -1,0 +1,95 @@
+{
+  "recorded": "2026-10-23",
+  "scope": "Only arcified/docs/native-space-consumer-inventory.md and evidence under arcified/docs/research/native-space-consumers/. Source/document checks only.",
+  "retrieval": {
+    "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+    "version": "155.0.8059.79",
+    "tagCommitMatches": true,
+    "sourceFiles": 75,
+    "shallowTrees": 12,
+    "tagRecords": 1,
+    "sourceBytes": 2436067,
+    "command": "sha256sum on every captured source file",
+    "exitCode": 0,
+    "checked": 75,
+    "mismatches": [],
+    "pinnedTreeComparison": {
+      "listings": 12,
+      "pinnedBlobMatches": 53,
+      "errors": [],
+      "remainingWithoutDirectParentListing": 22
+    }
+  },
+  "documentation": {
+    "pinnedSourceLinks": 414,
+    "pinnedSourceCoordinateErrors": [],
+    "featureDeclarations": 122,
+    "featureOwned": 119,
+    "featureBorrowed": 3,
+    "missingDeclarations": [],
+    "extraDeclarations": [],
+    "featureSiteErrors": [],
+    "edgeEntries": 25,
+    "localLinks": 22,
+    "localTargetCount": 22,
+    "missingLocalTargets": [],
+    "localAnchor": {
+      "target": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md#source-design-exit-and-consumer-inventory",
+      "found": true
+    },
+    "authoredMarkdownUsesLF": true,
+    "formatting": {
+      "packageScripts": {
+        "build": "bunx tsc -p tsconfig.json && bun scripts/copy-assets.ts",
+        "typecheck": "bunx tsc -p tsconfig.json --noEmit",
+        "test": "bun test",
+        "check": "bun run typecheck && bun run build && bun run test"
+      },
+      "markdownFormatterOrLinterDeclared": false,
+      "scope": "Root and arcified config/instructions; repository config-name search to depth 4 found only arcified/extension/package.json. No Markdown tool installed."
+    },
+    "whitespaceChecks": [
+      {
+        "path": "arcified/docs/native-space-consumer-inventory.md",
+        "command": "git diff --no-index --check /dev/null arcified/docs/native-space-consumer-inventory.md",
+        "exitCode": 1,
+        "diagnostics": ""
+      },
+      {
+        "path": "arcified/docs/research/native-space-consumers/feature-members.md",
+        "command": "git diff --no-index --check /dev/null arcified/docs/research/native-space-consumers/feature-members.md",
+        "exitCode": 1,
+        "diagnostics": ""
+      },
+      {
+        "path": "arcified/docs/research/native-space-consumers/retrieve.mjs",
+        "command": "git diff --no-index --check /dev/null arcified/docs/research/native-space-consumers/retrieve.mjs",
+        "exitCode": 1,
+        "diagnostics": ""
+      }
+    ],
+    "whitespaceExitMeaning": "Status 1 with no diagnostics means new-file differences; no whitespace errors were emitted.",
+    "retrievalHelperSyntax": {
+      "command": "node --check arcified/docs/research/native-space-consumers/retrieve.mjs",
+      "exitCode": 0
+    },
+    "gateDocumentsUnchanged": true,
+    "jsonParsing": "Parsed source manifest, feature catalog, all retrieval metadata, all shallow tree JSON, tag, local inputs, search ledger at creation, and the two persisted failure records. No JSON syntax errors."
+  },
+  "coverageLimits": {
+    "enabledConfiguration": "No generated GN/buildflag or runtime FeatureList snapshot. Header declarations are completely enumerated; implementation/caller closure is not complete.",
+    "globalSearch": "No Chromium-wide index or caller search. Only explicitly captured source files and selected local patch-header patterns.",
+    "platforms": "Source paths inspected for Linux, Windows and macOS; no installed behavior or platform acceptance checked.",
+    "nativeRuntime": "None. No prepared source tree, compilation, native browser interaction, actual window identity trace, storage separation or exact page transfer/recovery test.",
+    "policies": "Safety signals, cleanup, destructive actions and populated migration/source disposition remain OPEN."
+  },
+  "effects": {
+    "productCodeChanged": false,
+    "commit": false,
+    "remoteWrites": false,
+    "installs": false,
+    "fullCheckoutOrArchive": false,
+    "preparedTreeOrBuild": false,
+    "delegation": false
+  }
+}

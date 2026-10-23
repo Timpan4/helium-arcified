@@ -1,0 +1,2373 @@
+[
+  {
+    "member": "unload_controller_",
+    "headerLine": 341,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 268,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "actor_border_view_controller_",
+    "headerLine": 342,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 272,
+        "stage": "Init",
+        "predicate": "kGlicActorUi and border-glow parameter"
+      }
+    ],
+    "preWindowTeardown": [
+      1257
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "ai_overlay_dialog_controller_",
+    "headerLine": 343,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 588,
+        "stage": "Init",
+        "predicate": "normal and kAiOverlayDialog"
+      }
+    ],
+    "preWindowTeardown": [
+      1232
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "app_browser_controller_",
+    "headerLine": 348,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 276,
+        "stage": "Init",
+        "predicate": "MaybeCreateAppBrowserController"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "bookmark_bar_controller_",
+    "headerLine": 350,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 313,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1223
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "bookmarks_service_feature_",
+    "headerLine": 351,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 288,
+        "stage": "Init",
+        "predicate": "merged bookmark service exists"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "bookmarks_side_panel_coordinator_",
+    "headerLine": 352,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 295,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "breadcrumb_manager_browser_agent_",
+    "headerLine": 356,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 300,
+        "stage": "Init",
+        "predicate": "breadcrumbs::IsEnabled(local_state)"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "browser_actions_",
+    "headerLine": 359,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 333,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "browser_active_state_manager_",
+    "headerLine": 360,
+    "ownership": "unique_ptr",
+    "proposedOwner": "H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 280,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "browser_animation_controller_",
+    "headerLine": 361,
+    "ownership": "unique_ptr",
+    "proposedOwner": "H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 339,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1256
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "browser_command_controller_",
+    "headerLine": 362,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 336,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "browser_elements_",
+    "headerLine": 363,
+    "ownership": "unique_ptr",
+    "proposedOwner": "H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 351,
+        "stage": "Init",
+        "predicate": "WebUI browser enabled and normal"
+      },
+      {
+        "line": 355,
+        "stage": "Init",
+        "predicate": "otherwise Views"
+      }
+    ],
+    "preWindowTeardown": [
+      1254
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established.",
+    "preWindowTeardownPredicate": "Conditional Views provider returned by AsA<BrowserElementsViews>() at line 1253; before browser animation and actor-border teardown."
+  },
+  {
+    "member": "browser_focus_controller_",
+    "headerLine": 364,
+    "ownership": "unique_ptr",
+    "proposedOwner": "H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 707,
+        "stage": "Post-window",
+        "predicate": "BrowserView"
+      },
+      {
+        "line": 713,
+        "stage": "Post-window",
+        "predicate": "WebUIBrowserWindow"
+      },
+      {
+        "line": 717,
+        "stage": "Post-window",
+        "predicate": "neither, stub"
+      }
+    ],
+    "preWindowTeardown": [
+      1222
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "browser_select_file_dialog_controller_",
+    "headerLine": 365,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 722,
+        "stage": "Post-window",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1221
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "browser_ui_controller_",
+    "headerLine": 367,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 728,
+        "stage": "Post-window",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1220
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "browser_web_contents_delegate_",
+    "headerLine": 368,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 805,
+        "stage": "Post-window",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1205
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "browser_window_modal_dialog_delegate_",
+    "headerLine": 369,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 360,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "browser_window_theme_observer_",
+    "headerLine": 371,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 364,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "browser_window_zoom_observer_",
+    "headerLine": 372,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 368,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "call_to_action_lock_",
+    "headerLine": 373,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 372,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "chrome_labs_coordinator_",
+    "headerLine": 374,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 1000,
+        "stage": "Post-window",
+        "predicate": "normal and ChromeLabs enabled"
+      }
+    ],
+    "preWindowTeardown": [
+      1157
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "comments_side_panel_coordinator_",
+    "headerLine": 375,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 376,
+        "stage": "Init",
+        "predicate": "CommentsSidePanelCoordinator::IsSupported"
+      }
+    ],
+    "preWindowTeardown": [
+      1252
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "content_setting_bubble_model_delegate_",
+    "headerLine": 379,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 381,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "context_highlight_window_feature_",
+    "headerLine": 382,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 386,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1251
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "tab_list_bridge_",
+    "headerLine": 388,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 524,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "contextual_tasks_browser_controller_",
+    "headerLine": 390,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 664,
+        "stage": "Init",
+        "predicate": "ContextualTasks UI enabled"
+      }
+    ],
+    "preWindowTeardown": [
+      1240
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "cookie_controls_bubble_coordinator_",
+    "headerLine": 392,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 389,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "cookie_controls_controller_",
+    "headerLine": 394,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 393,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "data_sharing_bubble_controller_",
+    "headerLine": 396,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 403,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "desktop_browser_window_capabilities_",
+    "headerLine": 402,
+    "ownership": "unique_ptr",
+    "proposedOwner": "H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 776,
+        "stage": "Post-window",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1213
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "exclusive_access_manager_",
+    "headerLine": 405,
+    "ownership": "unique_ptr",
+    "proposedOwner": "H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 799,
+        "stage": "Post-window",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1206
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "extension_installed_watcher_",
+    "headerLine": 406,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 413,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1250
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "extension_keybinding_registry_",
+    "headerLine": 410,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 824,
+        "stage": "Post-window",
+        "predicate": "focus manager exists"
+      }
+    ],
+    "preWindowTeardown": [
+      1198
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "extension_window_controller_",
+    "headerLine": 415,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 836,
+        "stage": "Post-window",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1196
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "find_bar_controller_",
+    "headerLine": 420,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 1281,
+        "stage": "Lazy",
+        "predicate": "lazy GetFindBarController, browser exists"
+      }
+    ],
+    "preWindowTeardown": [
+      1249
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "find_bar_owner_",
+    "headerLine": 422,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 840,
+        "stage": "Post-window",
+        "predicate": "BrowserView"
+      },
+      {
+        "line": 843,
+        "stage": "Post-window",
+        "predicate": "WebUIBrowserWindow"
+      }
+    ],
+    "preWindowTeardown": [
+      1195
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "fullscreen_controller_",
+    "headerLine": 423,
+    "ownership": "unique_ptr",
+    "proposedOwner": "H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 311,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "glic_iph_controller_",
+    "headerLine": 424,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 597,
+        "stage": "Init",
+        "predicate": "normal and Glic eligible Profile and service"
+      }
+    ],
+    "preWindowTeardown": [
+      1229
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "glic_split_button_controller_",
+    "headerLine": 425,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 600,
+        "stage": "Init",
+        "predicate": "normal and Glic eligible Profile and service"
+      }
+    ],
+    "preWindowTeardown": [
+      1230
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "history_clusters_side_panel_coordinator_",
+    "headerLine": 427,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 416,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1246
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "history_side_panel_coordinator_",
+    "headerLine": 429,
+    "ownership": "unique_ptr",
+    "proposedOwner": "U",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "incognito_clear_browsing_data_dialog_coordinator_",
+    "headerLine": 430,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 856,
+        "stage": "Post-window",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1191
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "initial_web_ui_manager_",
+    "headerLine": 432,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 606,
+        "stage": "Init",
+        "predicate": "normal"
+      }
+    ],
+    "preWindowTeardown": [
+      1231
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "initial_webui_window_metrics_manager_",
+    "headerLine": 433,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 439,
+        "stage": "Init",
+        "predicate": "normal"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "instant_controller_",
+    "headerLine": 435,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 609,
+        "stage": "Init",
+        "predicate": "normal and Instant Extended API enabled"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "ios_promo_controller_",
+    "headerLine": 436,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 1006,
+        "stage": "Post-window",
+        "predicate": "normal and MobilePromoOnDesktopEnabled"
+      }
+    ],
+    "preWindowTeardown": [
+      1155
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "lens_overlay_entry_point_controller_",
+    "headerLine": 437,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 446,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1243
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "lens_region_search_controller_",
+    "headerLine": 439,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 451,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "live_tab_context_",
+    "headerLine": 443,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 861,
+        "stage": "Post-window",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1190
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "location_bar_model_delegate_",
+    "headerLine": 446,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 456,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "location_bar_model_",
+    "headerLine": 449,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 458,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "memory_saver_bubble_controller_",
+    "headerLine": 451,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 461,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "most_recent_shared_tab_update_store_",
+    "headerLine": 453,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 616,
+        "stage": "Init",
+        "predicate": "normal, regular Profile, tab groups, sync service"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "profile_menu_coordinator_",
+    "headerLine": 455,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 885,
+        "stage": "Post-window",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1185
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "organizer_panel_controller_",
+    "headerLine": 456,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 627,
+        "stage": "Init",
+        "predicate": "normal and OrganizerPanel enabled"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "qrcode_window_controller_",
+    "headerLine": 457,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 1045,
+        "stage": "Post-window",
+        "predicate": "normal"
+      }
+    ],
+    "preWindowTeardown": [
+      1152
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "reading_list_side_panel_coordinator_",
+    "headerLine": 459,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 507,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "recent_activity_bubble_coordinator_",
+    "headerLine": 461,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 1066,
+        "stage": "Post-window",
+        "predicate": "normal, tab groups/shared groups/sync"
+      }
+    ],
+    "preWindowTeardown": [
+      1147
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "searchbox_context_data_",
+    "headerLine": 463,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 511,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "send_tab_to_self_toolbar_bubble_controller_",
+    "headerLine": 464,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 1050,
+        "stage": "Post-window",
+        "predicate": "normal"
+      }
+    ],
+    "preWindowTeardown": [
+      1151
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "session_service_browser_helper_",
+    "headerLine": 466,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 515,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "session_service_tab_group_sync_observer_",
+    "headerLine": 467,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 621,
+        "stage": "Init",
+        "predicate": "normal, regular Profile, tab groups, sync service"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "sharing_hub_window_controller_",
+    "headerLine": 469,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 1071,
+        "stage": "Post-window",
+        "predicate": "normal"
+      }
+    ],
+    "preWindowTeardown": [
+      1146
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "sharing_window_controller_",
+    "headerLine": 471,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 1076,
+        "stage": "Post-window",
+        "predicate": "normal"
+      }
+    ],
+    "preWindowTeardown": [
+      1145
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "side_panel_registry_",
+    "headerLine": 472,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 325,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "signin_view_controller_",
+    "headerLine": 473,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 527,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1242
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "split_view_iph_controller_",
+    "headerLine": 474,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 1092,
+        "stage": "Post-window",
+        "predicate": "normal and side-by-side IPH feature"
+      }
+    ],
+    "preWindowTeardown": [
+      1143
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "synced_window_delegate_",
+    "headerLine": 475,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 913,
+        "stage": "Post-window",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1177
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "tab_drag_service_feature_",
+    "headerLine": 476,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 533,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "tab_group_deletion_dialog_controller_",
+    "headerLine": 477,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 538,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "tab_menu_model_delegate_",
+    "headerLine": 479,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 542,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "tab_strip_service_feature_",
+    "headerLine": 482,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 549,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "tab_strip_ui_controller_",
+    "headerLine": 485,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 556,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "tabs_from_other_devices_side_panel_coordinator_",
+    "headerLine": 487,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 564,
+        "stage": "Init",
+        "predicate": "TabsFromOtherDevicesSidePanelCoordinator::IsSupported(profile)"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "toast_service_",
+    "headerLine": 489,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 920,
+        "stage": "Post-window",
+        "predicate": "normal or app"
+      }
+    ],
+    "preWindowTeardown": [
+      1176
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "translate_bubble_controller_",
+    "headerLine": 490,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 570,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "upgrade_notification_controller_",
+    "headerLine": 491,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 924,
+        "stage": "Post-window",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1175
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "user_education_",
+    "headerLine": 493,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 574,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1172
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "send_tab_to_self_iph_controller_",
+    "headerLine": 494,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 1106,
+        "stage": "Post-window",
+        "predicate": "normal and send-tab tutorial feature"
+      }
+    ],
+    "preWindowTeardown": [
+      1141
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "vertical_tab_iph_controller_",
+    "headerLine": 496,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 1099,
+        "stage": "Post-window",
+        "predicate": "normal and vertical-tab tutorial feature"
+      }
+    ],
+    "preWindowTeardown": [
+      1142
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "vertical_tab_strip_state_controller_",
+    "headerLine": 497,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 647,
+        "stage": "Init",
+        "predicate": "normal, restored/session-or-Profile pref state"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "window_feature_controller_",
+    "headerLine": 501,
+    "ownership": "unique_ptr",
+    "proposedOwner": "H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 316,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "immersive_mode_controller_",
+    "headerLine": 502,
+    "ownership": "unique_ptr",
+    "proposedOwner": "H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 426,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1245
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "window_metadata_controller_",
+    "headerLine": 504,
+    "ownership": "unique_ptr",
+    "proposedOwner": "H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 578,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "zoom_bubble_manager_",
+    "headerLine": 507,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 943,
+        "stage": "Post-window",
+        "predicate": "BrowserView"
+      },
+      {
+        "line": 950,
+        "stage": "Post-window",
+        "predicate": "WebUIBrowserWindow"
+      }
+    ],
+    "preWindowTeardown": [
+      1167
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "zoom_bubble_coordinator_",
+    "headerLine": 508,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 946,
+        "stage": "Post-window",
+        "predicate": "BrowserView"
+      },
+      {
+        "line": 952,
+        "stage": "Post-window",
+        "predicate": "WebUIBrowserWindow"
+      }
+    ],
+    "preWindowTeardown": [
+      1166
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "actor_ui_window_controller_",
+    "headerLine": 511,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 973,
+        "stage": "Post-window",
+        "predicate": "normal, BrowserView, kGlicActorUi"
+      }
+    ],
+    "preWindowTeardown": [
+      1162
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "ai_mode_page_action_controller_",
+    "headerLine": 512,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 982,
+        "stage": "Post-window",
+        "predicate": "normal, BrowserView, AI mode service, location bar"
+      }
+    ],
+    "preWindowTeardown": [
+      1160
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "cast_browser_controller_",
+    "headerLine": 514,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 992,
+        "stage": "Post-window",
+        "predicate": "normal, BrowserView, MediaRouterEnabled(Profile)"
+      }
+    ],
+    "preWindowTeardown": [
+      1159
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "color_provider_browser_helper_",
+    "headerLine": 515,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 734,
+        "stage": "Post-window",
+        "predicate": "BrowserView"
+      }
+    ],
+    "preWindowTeardown": [
+      1219
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "contents_border_controller_",
+    "headerLine": 516,
+    "ownership": "unique_ptr",
+    "proposedOwner": "H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 740,
+        "stage": "Post-window",
+        "predicate": "BrowserView"
+      }
+    ],
+    "preWindowTeardown": [
+      1218
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "data_protection_ui_controller_",
+    "headerLine": 517,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 748,
+        "stage": "Post-window",
+        "predicate": "BrowserView and normal/popup/web app"
+      }
+    ],
+    "preWindowTeardown": [
+      1217
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "devtools_ui_controller_",
+    "headerLine": 519,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 783,
+        "stage": "Post-window",
+        "predicate": "BrowserView"
+      }
+    ],
+    "preWindowTeardown": [
+      1211
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "extension_side_panel_manager_",
+    "headerLine": 523,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 831,
+        "stage": "Post-window",
+        "predicate": "BrowserView"
+      }
+    ],
+    "preWindowTeardown": [
+      1197
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "fullscreen_control_host_",
+    "headerLine": 526,
+    "ownership": "unique_ptr",
+    "proposedOwner": "H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 850,
+        "stage": "Post-window",
+        "predicate": "BrowserView"
+      }
+    ],
+    "preWindowTeardown": [
+      1194
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "memory_saver_opt_in_iph_controller_",
+    "headerLine": 527,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 1033,
+        "stage": "Post-window",
+        "predicate": "normal and BrowserView"
+      }
+    ],
+    "preWindowTeardown": [
+      1154
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "new_tab_footer_controller_",
+    "headerLine": 529,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 870,
+        "stage": "Post-window",
+        "predicate": "BrowserView and kNtpFooter"
+      }
+    ],
+    "preWindowTeardown": [
+      1188
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "omnibox_popup_closer_",
+    "headerLine": 531,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 880,
+        "stage": "Post-window",
+        "predicate": "BrowserView"
+      }
+    ],
+    "preWindowTeardown": [
+      1186
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "scrim_view_controller_",
+    "headerLine": 532,
+    "ownership": "unique_ptr",
+    "proposedOwner": "H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 890,
+        "stage": "Post-window",
+        "predicate": "BrowserView"
+      }
+    ],
+    "preWindowTeardown": [
+      1184
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "shared_tab_group_feedback_controller_",
+    "headerLine": 533,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 1060,
+        "stage": "Post-window",
+        "predicate": "normal, tab groups/shared groups/sync, BrowserView"
+      }
+    ],
+    "preWindowTeardown": [
+      1149
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "side_panel_coordinator_",
+    "headerLine": 535,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 900,
+        "stage": "Post-window",
+        "predicate": "BrowserView"
+      }
+    ],
+    "preWindowTeardown": [
+      1182
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "ui_controller_factory_",
+    "headerLine": 536,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 927,
+        "stage": "Post-window",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1174
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "skills_ui_window_controller_",
+    "headerLine": 537,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 909,
+        "stage": "Post-window",
+        "predicate": "BrowserView"
+      }
+    ],
+    "preWindowTeardown": [
+      1178
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "split_tab_highlight_controller_",
+    "headerLine": 539,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 1081,
+        "stage": "Post-window",
+        "predicate": "normal and BrowserView"
+      }
+    ],
+    "preWindowTeardown": [
+      1144
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "webui_browser_exclusive_access_context_",
+    "headerLine": 543,
+    "ownership": "unique_ptr",
+    "proposedOwner": "H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 792,
+        "stage": "Post-window",
+        "predicate": "WebUIBrowserWindow"
+      }
+    ],
+    "preWindowTeardown": [
+      1209
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "webui_browser_side_panel_ui_",
+    "headerLine": 545,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 904,
+        "stage": "Post-window",
+        "predicate": "WebUIBrowserWindow"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "windows_taskbar_icon_updater_",
+    "headerLine": 549,
+    "ownership": "unique_ptr",
+    "proposedOwner": "H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_",
+      "#if BUILDFLAG(IS_WIN)"
+    ],
+    "initializers": [
+      {
+        "line": 937,
+        "stage": "Post-window",
+        "predicate": "BrowserView"
+      }
+    ],
+    "preWindowTeardown": [
+      1169
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "pdf_infobar_controller_",
+    "headerLine": 553,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_",
+      "#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)"
+    ],
+    "initializers": [
+      {
+        "line": 485,
+        "stage": "Init",
+        "predicate": "kPdfInfoBar"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "pin_infobar_controller_",
+    "headerLine": 554,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_",
+      "#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)"
+    ],
+    "initializers": [
+      {
+        "line": 489,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "profile_customization_bubble_sync_controller_",
+    "headerLine": 559,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_",
+      "#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)"
+    ],
+    "initializers": [
+      {
+        "line": 496,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "session_restore_infobar_controller_",
+    "headerLine": 561,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_",
+      "#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)"
+    ],
+    "initializers": [
+      {
+        "line": 500,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "locked_state_controller_",
+    "headerLine": 566,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_",
+      "#if BUILDFLAG(IS_CHROMEOS)"
+    ],
+    "initializers": [
+      {
+        "line": 467,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "on_task_locked_controller_",
+    "headerLine": 567,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_",
+      "#if BUILDFLAG(IS_CHROMEOS)"
+    ],
+    "initializers": [
+      {
+        "line": 470,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "download_toolbar_ui_controller_",
+    "headerLine": 571,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_",
+      "#if !BUILDFLAG(IS_CHROMEOS)"
+    ],
+    "initializers": [
+      {
+        "line": 814,
+        "stage": "Post-window",
+        "predicate": "BrowserView"
+      }
+    ],
+    "preWindowTeardown": [
+      1202
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "overscroll_pref_manager_",
+    "headerLine": 575,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_",
+      "#if defined(USE_AURA)"
+    ],
+    "initializers": [
+      {
+        "line": 476,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "extension_browser_window_helper_",
+    "headerLine": 579,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_",
+      "#if BUILDFLAG(ENABLE_EXTENSIONS)"
+    ],
+    "initializers": [
+      {
+        "line": 408,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "default_search_extension_controlled_controller_",
+    "headerLine": 583,
+    "ownership": "unique_ptr",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_",
+      "#if BUILDFLAG(ENABLE_EXTENSIONS)",
+      "#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)"
+    ],
+    "initializers": [
+      {
+        "line": 768,
+        "stage": "Post-window",
+        "predicate": "BrowserView and kSearchEngineExplicitChoiceDialog"
+      }
+    ],
+    "preWindowTeardown": [
+      1215
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "browser_",
+    "headerLine": 590,
+    "ownership": "borrowed",
+    "proposedOwner": "C/H/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 249,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "pinned_toolbar_actions_",
+    "headerLine": 592,
+    "ownership": "borrowed",
+    "proposedOwner": "C/P",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 1041,
+        "stage": "Post-window",
+        "predicate": "normal and BrowserView; borrowed toolbar actions"
+      }
+    ],
+    "preWindowTeardown": [
+      1153
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "tab_strip_model_",
+    "headerLine": 593,
+    "ownership": "borrowed",
+    "proposedOwner": "C",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 254,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  },
+  {
+    "member": "embedder_browser_window_features_",
+    "headerLine": 598,
+    "ownership": "unique_ptr",
+    "proposedOwner": "E",
+    "compileGuards": [
+      "#ifndef CHROME_BROWSER_UI_BROWSER_WINDOW_PUBLIC_BROWSER_WINDOW_FEATURES_H_"
+    ],
+    "initializers": [
+      {
+        "line": 671,
+        "stage": "Init",
+        "predicate": "no additional local runtime guard"
+      }
+    ],
+    "preWindowTeardown": [
+      1135
+    ],
+    "implementationDepth": "Constructor/call-site classification. Internal dependency closure is not established."
+  }
+]

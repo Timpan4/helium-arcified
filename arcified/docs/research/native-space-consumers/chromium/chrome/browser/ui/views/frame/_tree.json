@@ -1,0 +1,1307 @@
+{
+  "id": "619739957b440265683cf72cd913a84a42feea01",
+  "entries": [
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ee117be4ec882f665722a5ed44780980edf7de3c",
+      "name": "BUILD.gn"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a401c86e385da5ec6764643fce0c41253586ad4b",
+      "name": "DEPS"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "126518097b0169b43c59909015b1bf801100f75a",
+      "name": "OWNERS"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cccba745f9e14bae9a28ce209a5f4802504141ad",
+      "name": "README.md"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e0d817653b6659e5d4f52cfa107aaa1017d8e8ed",
+      "name": "app_menu_button.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5b6a5719a9e850cc1660303f07d48bd3ffa57612",
+      "name": "app_menu_button.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1af6a3dacf25eefeaa243c6f234ef6995c6c174e",
+      "name": "app_menu_button_observer.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d3905b815fc60a6a98eb6aca0e9538343af650aa",
+      "name": "base_tab_strip_region_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "676f1c6d68bb7b24a36db7dddc56bd45af933187",
+      "name": "base_tab_strip_region_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d0f0f711eaa58b43837d69c62dbe5e15301dea95",
+      "name": "browser_caption_button_container_win.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bda5b2b0ab02d4d4b254bf3ed64e1ccbfbf51b83",
+      "name": "browser_caption_button_container_win.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6f304c5167f6d2558115c96027cf61bc248bcdb0",
+      "name": "browser_desktop_window_tree_host.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "32e5c1a27f7b00bff7f9259713708da237d337b0",
+      "name": "browser_desktop_window_tree_host_linux.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b4a7275b02cfb859b05cbb76be56ede975d90864",
+      "name": "browser_desktop_window_tree_host_linux.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "49786bd90d798fe094a8066cd02658d47a724776",
+      "name": "browser_desktop_window_tree_host_win.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "85d6ce03f81da01135941e30146cc7f3d4bf786e",
+      "name": "browser_desktop_window_tree_host_win.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ba50e786bfe8deba1267cdd2f96f2a3b9135d2ac",
+      "name": "browser_frame_ash_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a127327976526cdd2f9f4aca21aa29d6435d0114",
+      "name": "browser_frame_header_chromeos.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5926fd1033bef8964ff4a659595002a981c43a42",
+      "name": "browser_frame_header_chromeos.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fcac4fe2258bb73ad659b5f7ae0db2a5d73e1576",
+      "name": "browser_frame_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "20fb9c88938a947912628fe7f3e86454bea99ae9",
+      "name": "browser_frame_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "550ba7a50d41d79992dfee26c2c34403d6658718",
+      "name": "browser_frame_view_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a6c37495de1bdb1139e20423967ae0200c2f3330",
+      "name": "browser_frame_view_browsertest_win.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f4c1ef8b5262fd67d462d72bae4045ae12d1c0e7",
+      "name": "browser_frame_view_chromeos.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "58e96b72702da562036610efbfe79d0c258da77c",
+      "name": "browser_frame_view_chromeos.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "56af4bab54cf94d744c8f119fa3200b8f6f7ef35",
+      "name": "browser_frame_view_chromeos_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9af272eb306445a35f57996a12e50e808c2ad565",
+      "name": "browser_frame_view_factory_chromeos.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "02e570740bcc05d1921350bc672b919c254a4a84",
+      "name": "browser_frame_view_factory_mac.mm"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8a4dd7514fb0c18087bb738ad248d565a609af48",
+      "name": "browser_frame_view_factory_views.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "62208395da94afad83c1d47c4df590bfc11b5840",
+      "name": "browser_frame_view_layout_linux.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "64928feb6c014ee144d41b4c95579dccca6dc6c3",
+      "name": "browser_frame_view_layout_linux.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ba031701b0ae309d7cada792e1afab0494f51684",
+      "name": "browser_frame_view_layout_linux_native.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b23c92cdd5b9cbd0f38a2e46be11c43c58655f94",
+      "name": "browser_frame_view_layout_linux_native.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b190285b481a7e1d251b3b9bdfd4cacfb8c450bf",
+      "name": "browser_frame_view_layout_linux_native_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0269fb850e8d194f51a0201a5363ea3874475ac2",
+      "name": "browser_frame_view_layout_linux_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "474b8356afdbaf6bc5b059820893b8504751a90d",
+      "name": "browser_frame_view_linux.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "382436b045585da44597845a9f2b74434673b2b1",
+      "name": "browser_frame_view_linux.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9b2012decf47e4a4aa058f6dba6f32525a8d8afd",
+      "name": "browser_frame_view_linux_native.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a00ae50dfe5dadff49255d326ea44f69108d0765",
+      "name": "browser_frame_view_linux_native.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4e55674d357ad4023f79445b44c770b3f9d309d5",
+      "name": "browser_frame_view_mac.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8354a9179ef79627b05447f3810808ccd6a0e78a",
+      "name": "browser_frame_view_mac.mm"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "067500b829459e8c86ad12f51c1ed51c3318e135",
+      "name": "browser_frame_view_mac_browsertest.mm"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5b7aa7203114f12765c3f71c2a2d7b33265db2e3",
+      "name": "browser_frame_view_win.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e731b2c4c161f1fae16606e07892bc7adf2771cc",
+      "name": "browser_frame_view_win.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b91c2faf729b6745e3d86d355ae724e14df99e30",
+      "name": "browser_frame_view_win_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4a4a0c0eb3050ca3b15ae49faefad8a0cc720eaa",
+      "name": "browser_native_widget.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2eb10448d40df18d0fbddba297663c96fe0f136a",
+      "name": "browser_native_widget_ash.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b8a631253b33a722f873baf2ec41c7c5660da1d4",
+      "name": "browser_native_widget_ash.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5faa351fd5d3990155f59a6b39fde203cb70a2a2",
+      "name": "browser_native_widget_aura.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "746909359a6d5d283719bc180b0cc9c3710c2a25",
+      "name": "browser_native_widget_aura.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f8737ba6c713e346c2f231043eab63f99f3f689e",
+      "name": "browser_native_widget_aura_linux.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6487dbb22fcdd6af90f2377fd102e5d958a9bc6a",
+      "name": "browser_native_widget_aura_linux.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b394671c289f5b611aba6a0996ea59ee61cb907a",
+      "name": "browser_native_widget_aura_linux_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "37af436133cb8e86948e33d05c30c9a2487585fa",
+      "name": "browser_native_widget_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "58e71c1e260defaf5e64b8b4ed61b00065b63897",
+      "name": "browser_native_widget_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "710bc687ac4940c19bb13a142ccfbf1267b7f0fe",
+      "name": "browser_native_widget_factory_aura.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9b263ccc8b5a261a8f13bea47af78ff1e148a7e1",
+      "name": "browser_native_widget_factory_chromeos.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ccb8362d05229ed6b466ab9da961b489f729757b",
+      "name": "browser_native_widget_factory_mac.mm"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "927117fb0565681bd25261211e48188cd011ebc9",
+      "name": "browser_native_widget_mac.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "03f7acd0bf3484a45beb221c16e206ae0d0d6643",
+      "name": "browser_native_widget_mac.mm"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "38466543f2ce3a72ea1b6260213444da32ed9899",
+      "name": "browser_native_widget_mac_interactive_uitest.mm"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8a0f9cd21c508f6a84cb955278f1efabe3bdfc43",
+      "name": "browser_root_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6bff662b1f477b699ac53c152886e3a0579273e6",
+      "name": "browser_root_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "507e295500ac3e12acdb285a7818e2e904fb9801",
+      "name": "browser_root_view_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "63c3090b4c75b90ea4ddaf02e61c8ff800636194",
+      "name": "browser_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d786fede5da896d28046083eeca53e429d9df975",
+      "name": "browser_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8766c0315f9514fd73e3e12b34f7028179782b35",
+      "name": "browser_view_ash.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3c6013d60709f0d6f4be8820f3bb1450971c0f4f",
+      "name": "browser_view_ash.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2c21baca429f506dd8738977053a05b738217ed4",
+      "name": "browser_view_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f749d23ce237f8878919b0f27e213f1c899c74fc",
+      "name": "browser_view_focus_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "906390fe89af78654297bc295a50b706dfbfaf07",
+      "name": "browser_view_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a335e2d5ccd0e9d54b0335d58642f4440b22b992",
+      "name": "browser_widget.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d384a2c99a1c1d8f160de20ea8518a6a4cc5ab71",
+      "name": "browser_widget.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dd521ecd5afb787f74ad5de8866ecad4faf7a770",
+      "name": "browser_widget_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ad579aa818666d92ca6f5446c8251b4e841c0b1b",
+      "name": "browser_window_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e76e9187abe9e67cf964643eb5026131c1ee0a44",
+      "name": "browser_window_property_manager_browsertest_win.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "00445dbee1a207264eb601d25ed8852171fb197e",
+      "name": "browser_window_property_manager_win.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dfc90ace667705a9db14df829cf0320ae05f7c9d",
+      "name": "browser_window_property_manager_win.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f0620963e152f46432d39e39a1db3548519bce4e",
+      "name": "caption_button_placeholder_container.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "003e6b3a94ff8d6ce6739a51fdf378bff2ef34b1",
+      "name": "caption_button_placeholder_container.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "aede147f28b832bb790264a1fc85c31fa7be807c",
+      "name": "contents_border_controller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4966e74c146d79977701d40f676f634f72d4d58a",
+      "name": "contents_border_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9c2cff0e0f5c0aaae10c5e4e4f0b740b2b582b42",
+      "name": "contents_capture_border_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2edd90c79be489a09fa1973c5e03519e66e489fa",
+      "name": "contents_capture_border_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d4cf5067cc380b29ff81ae2e6bc3efeb862b13a6",
+      "name": "contents_container_outline.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3dd6c5cf3093b6ab68040a4b6d37395618f03730",
+      "name": "contents_container_outline.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "099b89a24c04886a696793d7f9dd163982b8052f",
+      "name": "contents_container_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e3ae9d104db2d7e03712a6f0dbc3c4c2f34af0d8",
+      "name": "contents_container_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8f511c51bfaaf83bf28739abfa95b11984bbf237",
+      "name": "contents_separator.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "897c5fb89a50e4f07dc5d7d5c5a795c19a442625",
+      "name": "contents_separator.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8f29bb4291546ddec1643d46e52c21b8c3b31128",
+      "name": "contents_web_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dba4f324e7e9d3a8c60a5b0e807912b7051d03fb",
+      "name": "contents_web_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fc0d906ef8f47b0a8d8ebb47b5d35e55448ef218",
+      "name": "custom_corners.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6fd02d2af50d9bb423bf577e3793fff9b4f80f13",
+      "name": "custom_corners.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "30ce09ed1d22c45ffce3853a7fbfe1637333481a",
+      "name": "custom_corners_background.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e74fb7f798667a9fec000117a65563415a6e0148",
+      "name": "custom_corners_background.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "095487af60b6a3672cf6a2ebc0d52390c1220ef4",
+      "name": "custom_floating_corner.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4aeb921bc843aef1a6a32c2f2bf14f209f2a3e77",
+      "name": "custom_floating_corner.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "35a78946cd703e548c70896e9f763de4bcd40dcb",
+      "name": "dbus_appmenu.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "166b928a79664b79359d39fc1d6b958937b7e383",
+      "name": "dbus_appmenu.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ffebff002291670f0e976417fa63bddd06f66ed9",
+      "name": "dbus_appmenu_registrar.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "33509f98e7da09eb5c18e52aafb8ea9f6836e7ec",
+      "name": "dbus_appmenu_registrar.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "af2d2b29a92b8c415e66d0791206c8c884db830b",
+      "name": "find_bar_owner_views.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0a5a66b131227207c84158a1362012b8cb260b9c",
+      "name": "find_bar_owner_views.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "858420782ba6a103c2e4a4982a3fd7ad526d5631",
+      "name": "glass_frame_service.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3fb15b6083c28fd0152f9038010cb2e46932ced2",
+      "name": "glass_frame_service.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ea3560b6a54bdd7fc6735ca92a6d8af2832d0113",
+      "name": "glass_frame_service_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "aa8f7da4265009f1f12516d3c1bf96dcd4cf0157",
+      "name": "horizontal_tab_strip_region_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3860b6181381b5a3dde01f39c8789242a0caedd6",
+      "name": "horizontal_tab_strip_region_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e807fdae62c1a87035ebdfe11aec4b11c483c310",
+      "name": "horizontal_tab_strip_region_view_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "069d46be4b177e0f12e135cf5bb9e886c22a5b47",
+      "name": "horizontal_tab_strip_region_view_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6b980d165d50aee2141c05a2a5bf0ef4f6fc4846",
+      "name": "immersive_mode_browser_view_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ea20c2e5d4913fe150c439f0e69c7da6738a2a9a",
+      "name": "immersive_mode_controller_chromeos.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0fbb43b45c815ce2a78af7a3c1f8fe944b598f95",
+      "name": "immersive_mode_controller_chromeos.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9990ee75095b75b5f353cfcad88c283c02ea498c",
+      "name": "immersive_mode_controller_chromeos_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "99d1d91252531da1ab54c194d0be3067dd036d78",
+      "name": "immersive_mode_controller_factory_views.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "18ab7eecac83ff9b6296b6e64354ad343ade3f69",
+      "name": "immersive_mode_controller_mac.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fdbb4cf741eb3de803fdf4b053813d8f1ad2d16e",
+      "name": "immersive_mode_controller_mac.mm"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a2a1b05607360ac80e66c538a26c6f1b2468c386",
+      "name": "immersive_mode_controller_mac_interactive_uitest.mm"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f04b2b53e2803e224516e8ecc84dc87d3d55d864",
+      "name": "immersive_mode_controller_stub.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "be7eaa5eb44629f59fbf9f51286c9dbd75bbe3e7",
+      "name": "immersive_mode_controller_stub.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d4c5a546b10047447ef8183d2a422c329e78566c",
+      "name": "immersive_mode_overlay_views_mac.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7bd19414468e9062e51c55171652b0bda5cb117e",
+      "name": "immersive_mode_overlay_views_mac.mm"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d3a2efe3e12f6442d9f1e91a58166186a270cb8b",
+      "name": "immersive_mode_tester.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "59402890ae3ce1126290249725dbcfa919608c92",
+      "name": "immersive_mode_tester.h"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "c41ac9fe3118f5ea994eea9ec049f65b457b52d6",
+      "name": "layout"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5bd63ec31b63437b06d8723a734c1baf19e9bf96",
+      "name": "main_background_region_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3d0354f4e17a3a1ee3fb64c51744c7291a031fbf",
+      "name": "main_background_region_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9be342dcf03c7b1cddac9549a3b71bafcd4cbbf2",
+      "name": "minimize_button_metrics_win.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c8b282c8876d7a05a73d1dc37605140e7d297d5e",
+      "name": "minimize_button_metrics_win.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "37843af00c47e6d7b526d41e022600ddf9e0859e",
+      "name": "mock_immersive_mode_controller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d5f86d54896c2655cd382f18b606d8acd5dc83a1",
+      "name": "mock_immersive_mode_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "56e57faa10148b44cba0993aed5eaed74adedb0b",
+      "name": "multi_contents_background_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1328eaffd9cfd7ba7af1da3011288ed78ba67e32",
+      "name": "multi_contents_background_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "99703151fb8399f75e2528dc91afc01daa199cb9",
+      "name": "multi_contents_drop_target_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "563a91145c5feafe896c1d25a03bf5238840e3d2",
+      "name": "multi_contents_drop_target_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "96f6940763b3db19d9d227ae63ddd5895ca6be00",
+      "name": "multi_contents_drop_target_view_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "37a68df743470656997d8fc707ffa5b9055e2a1d",
+      "name": "multi_contents_resize_area.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "460c40a7c5033c97ace6c442d347d7ebab13a82f",
+      "name": "multi_contents_resize_area.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "76475b569327f1ffef76923c4114f1445885286c",
+      "name": "multi_contents_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6ecb49a239f704f61442eee7d14a0454553aea4f",
+      "name": "multi_contents_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1bc01a4ba602a3d40400dd4cd6466b6411649c50",
+      "name": "multi_contents_view_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dbaa65affbe62cdfcee4033c907dab5a0ccaae96",
+      "name": "multi_contents_view_delegate.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e182430481fed7ac4c17b0fd11b57c3d511a80b9",
+      "name": "multi_contents_view_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "da782256b2f1e6bfa941f5418c8561c0871c38e3",
+      "name": "multi_contents_view_drop_target_controller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8d0b3bf3d5cc88b9047b2a4e17e2c3bebd6b230c",
+      "name": "multi_contents_view_drop_target_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b92bf899fda492834c2c15ad42dd01d759023283",
+      "name": "multi_contents_view_drop_target_controller_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ea69fe758e404d94508b58197035482557c907f5",
+      "name": "multi_contents_view_drop_target_controller_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "812c4414ca4e2d822e6e67e05a5748c9eca0ce0e",
+      "name": "multi_contents_view_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3d3d583887d6be2eca64ad91fef3e5b7d979b353",
+      "name": "multi_contents_view_mini_toolbar.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "de2fb5ff5f7f6fc249f729731fe9e2dd7038c2ae",
+      "name": "multi_contents_view_mini_toolbar.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d6d10ffc541b2f123b1ffda8d0a161be626e8d79",
+      "name": "multi_contents_view_tab_drag_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "62f69255e0ecb978bc8837b89f43474b45f5b689",
+      "name": "opaque_browser_frame_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cd6fa39dad05f2297f45703989fc2063dab5e2a3",
+      "name": "opaque_browser_frame_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "edb50e3a8bfda37c6a2888a3877c1cbab16a76fb",
+      "name": "opaque_browser_frame_view_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9aecf47b861f8bc98822121b385b4a5ab89df9cf",
+      "name": "opaque_browser_frame_view_layout.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4a92fd22a44b2af4a38935da5dbf93d54e958842",
+      "name": "opaque_browser_frame_view_layout.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0f3994b0c321f6322210d19ab1fceedc00679a16",
+      "name": "opaque_browser_frame_view_layout_delegate.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "70bba051f5ccae532f0e69f5c84d5aacdb7203c7",
+      "name": "opaque_browser_frame_view_layout_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9170f55ac647f54523280b92ccb6f8e5a375f84e",
+      "name": "opaque_browser_frame_view_layout_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2ed2551ecd268e624bd7b32769b46b8f90342662",
+      "name": "picture_in_picture_browser_frame_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "98c4c26c879fcd57a42cad3f2a3bb8653f9d202c",
+      "name": "picture_in_picture_browser_frame_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c0d3ca59be482614d76fc399f0bc6881228d8112",
+      "name": "picture_in_picture_browser_frame_view_ash.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "403cf61bca67668c7d36786ae896cb9fb274f2bb",
+      "name": "picture_in_picture_browser_frame_view_ash.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b4644c44b9c5427b04677e58972450efbfdde87f",
+      "name": "picture_in_picture_browser_frame_view_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "af6377db88d9b915b74c6ad9c8562d0a42a5af96",
+      "name": "picture_in_picture_browser_frame_view_linux.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b694cb70ba68adc15d37c4e6cd0bb7e048a0846d",
+      "name": "picture_in_picture_browser_frame_view_linux.h"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "613b58272c80b0aa31d79faeb2c900fb9dcf0124",
+      "name": "safe_invoke"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "17be4043e10540e4fa0729a2a71af4b9c4350ece",
+      "name": "scrim_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "964e483197e3766b8712cf28c1dd54bbfbcdf535",
+      "name": "scrim_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1faf8b0f0bfaf4bf142969d5b4bd00c5e9db4cf0",
+      "name": "scrim_view_controller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e2ba4cbcfd9648bc4c4727ed4f7b6b151de92d47",
+      "name": "scrim_view_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "83e78744d6c108ee035702cb2dad78c57b8b3803",
+      "name": "shadow_frame_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "92fc80d90304ed74acde753c3ff91b70054c06ee",
+      "name": "shadow_frame_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "93d0cf6ecfaeb89aa7e21077f6fa057384e3a005",
+      "name": "shadow_overlay_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2231fd0b37944f19358db0aa2f7845f839d71f61",
+      "name": "shadow_overlay_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "20917923c53c0c83b835dce9ddfb3ed2cf9eebff",
+      "name": "system_menu_insertion_delegate_win.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f12258f9530b72a82d3dd9513dfe6c0093f81e14",
+      "name": "system_menu_insertion_delegate_win.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "20c579d108dd5211ab635beffbb37ca2e9080090",
+      "name": "system_menu_model_builder.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ee3e4c24425626006772267288b9d9191ddc7622",
+      "name": "system_menu_model_builder.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "db491477f98e363b32014e9cf43981bf163f4d7b",
+      "name": "system_menu_model_builder_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3382f6648ed85bd474941e082bc1aa0e9266de66",
+      "name": "system_menu_model_builder_browsertest_chromeos.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9cc93371838578dbbc0447d06cc84f4b85bfb11c",
+      "name": "system_menu_model_delegate.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d29a81cd58784738f476be099ec36c6aa5693acd",
+      "name": "system_menu_model_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a16665da139217688a93520a2de65f1375401a26",
+      "name": "system_web_app_frame_view_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7ad0e2b5aa68192110b721666509c2bc97d285da",
+      "name": "tab_modal_dialog_host.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b7ce53d985c720a3bce6c4bcee098a4083a8af5d",
+      "name": "tab_modal_dialog_host.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d6bccf567ee3ac10d3493d6cb5698881b8a31320",
+      "name": "tab_strip_region_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0faf95e5a53e7289a4175b9ba9b58d36fca6b514",
+      "name": "tab_strip_region_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "169aee34fb3855b3e85fc99725013a2259290e08",
+      "name": "themed_background.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "66b5ec2944471b2cd6058f2b0e02099ac29c83d4",
+      "name": "themed_background.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "80227dcb03d50f23dd85c8af423690bc3b3d471a",
+      "name": "toolbar_button_provider.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "004405b2ff8eea4e2427e2e869e00bfaa56fe99d",
+      "name": "toolbar_button_provider.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bb6460de5b31672af8a8b13ac2a5e18cfe889a9c",
+      "name": "top_container_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "df8bba99aa9ccf4360a8e8b8d9a19f0849a3e849",
+      "name": "top_container_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e59431981d45b0ef3a3214017c2affee05f76f68",
+      "name": "top_controls_slide_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6f057db70171c4b396e6d5a328a3d49c0a3b8276",
+      "name": "top_controls_slide_controller_chromeos.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e223205bffe86c4561e4cd87f0aa182450afc351",
+      "name": "top_controls_slide_controller_chromeos.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e10ba2228d82c5d5418cd9922b02db3c6c7093f0",
+      "name": "top_controls_slide_controller_chromeos_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c8ecd225df6fd09e72e0cc1856daa93a66345ab4",
+      "name": "vertical_tab_strip_background_blur_backdrop.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dee6d3a0ceb32ca32747ec392f5622be6e847d23",
+      "name": "vertical_tab_strip_background_blur_backdrop.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b7cdb8f55758ada28f37ffe6b78cfe1725fbc291",
+      "name": "vertical_tab_strip_region_view.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "76f8e997d61b2d606024eb72e6bcaf538265d290",
+      "name": "vertical_tab_strip_region_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3a11bcfeaa2119bd63684f60d2ab26d254d8aa94",
+      "name": "vertical_tab_strip_region_view_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8d4a5b9362f1b449417dbb07379f097b5818b7df",
+      "name": "vertical_tab_strip_region_view_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bd8e81cd23edf29d46a6f17921cf79331b5eb5ab",
+      "name": "web_contents_close_handler.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "688451ce30a0c0fc882b1a99fd7179793d5c2fe6",
+      "name": "web_contents_close_handler.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "774b56caf292ff685ebaa1b9d6c9fb1c560602af",
+      "name": "web_contents_close_handler_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "634fe3f564eb9049edd4a6c3cab1f09d1059e211",
+      "name": "web_contents_close_handler_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4e52ff017f31f6821b6240dc038c6c6ba573e99f",
+      "name": "widget_accessibility_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a24088e544656cbe911895ef714c7ee08b93fb2e",
+      "name": "windows_caption_button.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4f46f5cd83829e1fb38f11d09b837b46df05903a",
+      "name": "windows_caption_button.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a17f39b8264e2d302fe9b7ce4d0740fa7c6683ee",
+      "name": "windows_caption_button_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ced9b6df28267c297f8ce44c9e4ff83fdb7b907f",
+      "name": "windows_icon_painter.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5556148daf287657e72220dda2d6de97b6ac9d5a",
+      "name": "windows_icon_painter.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5d7b326d3dea17a99cf90c8e97704deafebea8c6",
+      "name": "windows_taskbar_icon_updater.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a371304428281e3caa4ee241ccb23628cc5f5454",
+      "name": "windows_taskbar_icon_updater.h"
+    }
+  ]
+}

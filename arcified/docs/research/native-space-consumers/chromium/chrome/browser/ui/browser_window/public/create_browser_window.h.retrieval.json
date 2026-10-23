@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/browser_window/public/create_browser_window.h",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/browser_window/public/create_browser_window.h?format=TEXT",
+  "retrievedAt": "2026-10-23T15:06:07.536Z",
+  "kind": "file",
+  "bytes": 10620,
+  "sha256": "3d30aac9882004130a8ccce2c2b7e0be4d5389092123ceb540939d7b982b3fe7",
+  "gitBlob": "6ecba965f89fdfb9d1ebacc318d8b7470e6ffaa3",
+  "lines": 276,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

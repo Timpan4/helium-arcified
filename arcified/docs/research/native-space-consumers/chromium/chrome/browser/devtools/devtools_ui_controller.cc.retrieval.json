@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/devtools/devtools_ui_controller.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/devtools/devtools_ui_controller.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:02:19.254Z",
+  "kind": "file",
+  "bytes": 7052,
+  "sha256": "f36095ccf26eb17202aac98ceb0e1e4d0fdb3e0cc8e8a5ed06c2383f930f3e7c",
+  "gitBlob": "f2a3fe25fe45f4f356b15f5e7ad0ce2f704d255c",
+  "lines": 184,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/views/frame/browser_view.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/frame/browser_view.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:38.928Z",
+  "kind": "file",
+  "bytes": 237440,
+  "sha256": "d60b7ac34ee9e0a21f49632ba7f43aaf1c04190fbba2b53b0f2536adc1f32936",
+  "gitBlob": "63c3090b4c75b90ea4ddaf02e61c8ff800636194",
+  "lines": 6151,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

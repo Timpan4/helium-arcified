@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/views/frame/multi_contents_view.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/frame/multi_contents_view.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:06:07.578Z",
+  "kind": "file",
+  "bytes": 33899,
+  "sha256": "228656abe05ca719436c435e2ff872f761e7c7352d2e7b4d3daa080d8a3a22ce",
+  "gitBlob": "76475b569327f1ffef76923c4114f1445885286c",
+  "lines": 872,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

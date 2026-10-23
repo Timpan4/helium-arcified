@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/browser_window/public/browser_window_interface.h",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/browser_window/public/browser_window_interface.h?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:02.328Z",
+  "kind": "file",
+  "bytes": 14599,
+  "sha256": "97dc7e368b29bd43bb0ce24bcbc2b9795b842bbdeb68aa58a2cfc85e20024c4a",
+  "gitBlob": "8a2e9f19aa3f5deba0c76f6420f9e156159509ae",
+  "lines": 342,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

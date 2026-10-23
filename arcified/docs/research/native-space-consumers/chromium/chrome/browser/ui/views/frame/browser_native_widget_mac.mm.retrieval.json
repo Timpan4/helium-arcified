@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/views/frame/browser_native_widget_mac.mm",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/frame/browser_native_widget_mac.mm?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:38.988Z",
+  "kind": "file",
+  "bytes": 42368,
+  "sha256": "a7ebb3f65065f11beb006e7adc36c40a180b57d23dc84ce33044a597af0c8f25",
+  "gitBlob": "03f7acd0bf3484a45beb221c16e206ae0d0d6643",
+  "lines": 1141,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

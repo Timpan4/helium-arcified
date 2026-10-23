@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/browser_live_tab_context.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/browser_live_tab_context.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:39.131Z",
+  "kind": "file",
+  "bytes": 21834,
+  "sha256": "0b92d817aa7cfb291bbb9ae74475d4dd53be8b6791ea693cae4f6a4a95250a5f",
+  "gitBlob": "b220ba6c8f4390cd0d770d6c4ff8175403825014",
+  "lines": 568,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/focus/browser_focus_controller_views.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/focus/browser_focus_controller_views.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:06:07.359Z",
+  "kind": "file",
+  "bytes": 5708,
+  "sha256": "0f66f911c5021b98be1b62cd230a55efa56a1c9467d9b80220d126d646a5a283",
+  "gitBlob": "22f7e9ce399f668e8e960484c35a47eed2d815e7",
+  "lines": 149,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

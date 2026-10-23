@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/browser_window/public/browser_window_interface_iterator.h",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/browser_window/public/browser_window_interface_iterator.h?format=TEXT",
+  "retrievedAt": "2026-10-23T15:03:28.244Z",
+  "kind": "file",
+  "bytes": 4546,
+  "sha256": "e13644ac4d4caed23ce00bea7273ce44d4d25f1050cf044b6ff28aa199ca8468",
+  "gitBlob": "6f6d87a62486e6d5c905c15b19e0d2b10bcbe014",
+  "lines": 87,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

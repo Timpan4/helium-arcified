@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/browser_select_file_dialog_controller.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/browser_select_file_dialog_controller.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:23.848Z",
+  "kind": "file",
+  "bytes": 3904,
+  "sha256": "0da1a9c2baf632c70c03964ab1012b80851673b06c4f8cab59d10e16bf23ce59",
+  "gitBlob": "e870c53029216a03f321253dc941f7bdaad70f6b",
+  "lines": 104,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}
