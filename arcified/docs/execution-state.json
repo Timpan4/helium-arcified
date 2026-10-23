@@ -65,24 +65,19 @@
     "manifest": "parallel-workstreams.json",
     "baseline": "c9748ec8e6d64524c1de9d943dd6f2cfacb319fe",
     "areaThreads": 17,
-    "confirmedAdditionalPrimaries": 51
+    "confirmedAdditionalPrimaries": 51,
+    "localComponentCounts": {
+      "expandedItems": 51,
+      "reviewedLocalComponentsIntegrated": 45,
+      "remainingLocalComponentsToIntegrate": 6,
+      "nativeIssuesAccepted": 0
+    }
   },
-  "nextAction": "Integrate reviewed components from area branches, preserving native acceptance gaps. Await owner scheduler-cadence decision before arming game guard.",
+  "nextAction": "Integrate six remaining capture/split slices after clean fix reviews; review composed scenarios/admission; continue native consumer inventory. Game guard remains unarmed pending accepted scheduler cadence.",
   "currentAssignments": [
     {
       "key": "ci-fix",
       "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-ci-fix-20261023-v1",
-      "childThreadId": "thread:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-ci-fix-20261023-v1",
-      "childRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253Abc08437f-a0a6-426e-ab26-74f1fa89af31%253Adelegate-task%253Aarcified-expanded-ci-fix-20261023-v1:ordinal:1",
-      "childNodeId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-ci-fix-20261023-v1",
-      "status": "running",
-      "workState": "working",
-      "hasPendingChildRuns": false,
-      "latestTerminalRunId": null,
-      "latestTerminalStatus": null,
-      "latestTerminalSummary": null,
-      "latestTerminalResultContextTransferId": null,
-      "providerInstanceId": "codex",
       "model": "gpt-6.1-sol",
       "options": [
         {
@@ -94,26 +89,12 @@
           "value": "default"
         }
       ],
-      "summary": null,
-      "resultContextTransferId": null,
-      "hasPendingQuestion": false,
-      "pendingApproval": null,
-      "waitTimedOut": false
+      "status": "completed",
+      "evidence": "reviews/native-checks-review-round-2.md"
     },
     {
       "key": "model-review",
       "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-model-review-20261023-v1",
-      "childThreadId": "thread:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-model-review-20261023-v1",
-      "childRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253Abc08437f-a0a6-426e-ab26-74f1fa89af31%253Adelegate-task%253Aarcified-expanded-model-review-20261023-v1:ordinal:1",
-      "childNodeId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-model-review-20261023-v1",
-      "status": "running",
-      "workState": "working",
-      "hasPendingChildRuns": false,
-      "latestTerminalRunId": null,
-      "latestTerminalStatus": null,
-      "latestTerminalSummary": null,
-      "latestTerminalResultContextTransferId": null,
-      "providerInstanceId": "codex",
       "model": "gpt-6.1-sol",
       "options": [
         {
@@ -125,26 +106,12 @@
           "value": "default"
         }
       ],
-      "summary": null,
-      "resultContextTransferId": null,
-      "hasPendingQuestion": false,
-      "pendingApproval": null,
-      "waitTimedOut": false
+      "status": "completed",
+      "evidence": "reviews/lifecycle-review-round-3.md"
     },
     {
       "key": "spaces-fix",
       "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-spaces-fix-20261023-v1",
-      "childThreadId": "thread:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-spaces-fix-20261023-v1",
-      "childRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253Abc08437f-a0a6-426e-ab26-74f1fa89af31%253Adelegate-task%253Aarcified-expanded-spaces-fix-20261023-v1:ordinal:1",
-      "childNodeId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-spaces-fix-20261023-v1",
-      "status": "running",
-      "workState": "working",
-      "hasPendingChildRuns": false,
-      "latestTerminalRunId": null,
-      "latestTerminalStatus": null,
-      "latestTerminalSummary": null,
-      "latestTerminalResultContextTransferId": null,
-      "providerInstanceId": "codex",
       "model": "gpt-6.1-sol",
       "options": [
         {
@@ -156,11 +123,61 @@
           "value": "default"
         }
       ],
-      "summary": null,
-      "resultContextTransferId": null,
-      "hasPendingQuestion": false,
-      "pendingApproval": null,
-      "waitTimedOut": false
+      "status": "completed",
+      "evidence": "reviews/native-space-design-response.md"
+    },
+    {
+      "key": "sidebar-composition",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-sidebar-composition-20261023-v1",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "evidence": "features/sidebar-composition.md; conformance-only fallback, fresh independent review running."
+    },
+    {
+      "key": "native-consumer-inventory",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-native-consumer-inventory-20261023-v1",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "running"
+    },
+    {
+      "key": "context-persistence-composition",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-context-persistence-composition-20261023-v1",
+      "model": "gpt-6.1-sol",
+      "options": {
+        "reasoningEffort": "high",
+        "serviceTier": "default"
+      },
+      "status": "running"
+    },
+    {
+      "key": "sidebar-composition-review",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-sidebar-composition-review-20261023-v1",
+      "model": "gpt-6.1-sol",
+      "options": {
+        "reasoningEffort": "high",
+        "serviceTier": "default"
+      },
+      "status": "running"
     }
   ],
   "gamePause": {
@@ -171,5 +188,11 @@
     "resumePolicy": "Explicit owner resume only",
     "pendingDecision": "Accept one-minute scheduler or leave automatic detection off.",
     "armed": false
+  },
+  "integrationChecks": {
+    "sourceIdentity": "All 44 integrated feature sources match their reviewed branch/commit bytes.",
+    "commandsAndSiteTools": "Parent compiled actual combined tree and ran all three site-controls, DevTools and diagnostics fixture binaries under ASan/UBSan with -fno-sanitize-recover=undefined; all exited 0.",
+    "fullBrowserBuilds": "Not run; owner deferred.",
+    "nativeAcceptance": "OPEN"
   }
 }

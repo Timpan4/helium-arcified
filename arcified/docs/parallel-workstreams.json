@@ -45,7 +45,7 @@
         ]
       },
       "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-tabs-workstream",
-      "status": "running",
+      "status": "reviewed_local_components_integrated_native_open",
       "primaryAssignments": [
         {
           "key": "temporary-tabs",
@@ -56,8 +56,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "pins",
@@ -68,8 +69,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "favorites",
@@ -80,10 +82,21 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         }
-      ]
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "5bf00173d40d9e4f5e2e4e56d2b72d9048a35863",
+            "integrated": "1db96109"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
     },
     {
       "area": "organization",
@@ -126,7 +139,7 @@
         ]
       },
       "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-organization-workstream",
-      "status": "running",
+      "status": "reviewed_local_components_integrated_native_open",
       "primaryAssignments": [
         {
           "key": "folders",
@@ -137,8 +150,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "folder-preview",
@@ -149,8 +163,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "multi-select",
@@ -161,10 +176,21 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         }
-      ]
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "b908b9e9d8a83822ab60fd8a8b661cad25c77622",
+            "integrated": "a0b579d9"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
     },
     {
       "area": "workspace",
@@ -207,7 +233,7 @@
         ]
       },
       "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-workspace-workstream",
-      "status": "running",
+      "status": "reviewed_local_components_integrated_native_open",
       "primaryAssignments": [
         {
           "key": "space-management",
@@ -218,8 +244,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "workspace-organizer",
@@ -230,8 +257,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "window-ownership",
@@ -242,10 +270,25 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         }
-      ]
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "95502332077666e45fb39bab05ca0bfbdf1632f4",
+            "integrated": "40052868"
+          },
+          {
+            "source": "4bea343d1f4b50d2f498567800ba27fa0d3a6231",
+            "integrated": "1ffa51af"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
     },
     {
       "area": "profiles",
@@ -288,7 +331,7 @@
         ]
       },
       "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-profiles-workstream",
-      "status": "running",
+      "status": "reviewed_local_components_integrated_native_open",
       "primaryAssignments": [
         {
           "key": "profiles",
@@ -299,8 +342,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "profile-safety",
@@ -311,8 +355,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "private-browsing",
@@ -323,10 +368,33 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         }
-      ]
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "94695e08b76b0ee0907ca9dab64e684de98c0f62",
+            "integrated": "99022f6d"
+          },
+          {
+            "source": "cd5ef3034ede62bdbfb80462687adee78886ea22",
+            "integrated": "949e12d5"
+          },
+          {
+            "source": "17d27544309d404b137ac699e5d2acd2acb573f5",
+            "integrated": "2fe4b0b6"
+          },
+          {
+            "source": "fc6734afeb1b0f41f86a16f2fff07c2aa11f4b34",
+            "integrated": "88705f86"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
     },
     {
       "area": "durability",
@@ -369,7 +437,7 @@
         ]
       },
       "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-durability-workstream",
-      "status": "running",
+      "status": "reviewed_local_components_integrated_native_open",
       "primaryAssignments": [
         {
           "key": "session-durability",
@@ -380,8 +448,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "schema-migrations",
@@ -392,8 +461,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "undo-windows",
@@ -404,10 +474,21 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         }
-      ]
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "faa5f8a9c9b2be1a4af04eb41149383750de93e4",
+            "integrated": "d69a246b"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
     },
     {
       "area": "portability",
@@ -450,7 +531,7 @@
         ]
       },
       "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-portability-workstream",
-      "status": "running",
+      "status": "reviewed_local_components_integrated_native_open",
       "primaryAssignments": [
         {
           "key": "export",
@@ -461,8 +542,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "workspace-import",
@@ -473,8 +555,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "prototype-migration",
@@ -485,10 +568,21 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         }
-      ]
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "d35fbb92f2a62af91e971616d7acbb792f9457ca",
+            "integrated": "3769fc91"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
     },
     {
       "area": "commands",
@@ -531,7 +625,7 @@
         ]
       },
       "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-commands-workstream",
-      "status": "running",
+      "status": "reviewed_local_components_integrated_native_open",
       "primaryAssignments": [
         {
           "key": "command-bar",
@@ -542,8 +636,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "command-ranking",
@@ -554,8 +649,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "site-search",
@@ -566,10 +662,25 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         }
-      ]
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "a2cd18c07807399874b9c38702c36671b9ae8326",
+            "integrated": "1d279014"
+          },
+          {
+            "source": "4f5805dadfaab72188db1ddae36d1c76a68c4609",
+            "integrated": "83fd4629"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
     },
     {
       "area": "navigation",
@@ -612,7 +723,7 @@
         ]
       },
       "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-navigation-workstream",
-      "status": "running",
+      "status": "reviewed_local_components_integrated_native_open",
       "primaryAssignments": [
         {
           "key": "tab-switcher",
@@ -623,8 +734,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "tab-order-navigation",
@@ -635,8 +747,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "find",
@@ -647,10 +760,33 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         }
-      ]
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "5f154076e5f14cffa220602bbfe115b6040e1788",
+            "integrated": "be8418be"
+          },
+          {
+            "source": "cb96921948acdd0ba5920918d4be212528274b05",
+            "integrated": "7b2177be"
+          },
+          {
+            "source": "6b5e16de853898c8957ef9099ff30df00492fed6",
+            "integrated": "2280a3fa"
+          },
+          {
+            "source": "afdc3d5f018ccf95ac2a7eb3c23fdb386e4be40c",
+            "integrated": "f70d984d"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
     },
     {
       "area": "transients",
@@ -693,7 +829,7 @@
         ]
       },
       "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-transients-workstream",
-      "status": "running",
+      "status": "reviewed_local_components_integrated_native_open",
       "primaryAssignments": [
         {
           "key": "peek",
@@ -704,8 +840,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "little-arc",
@@ -716,8 +853,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "air-traffic",
@@ -728,10 +866,33 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         }
-      ]
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "9328e0a74607254a9f28fe7c4373014c1fef4e2c",
+            "integrated": "7d27b04d"
+          },
+          {
+            "source": "a4d33249dce55e430ec55d43e210eff62040776e",
+            "integrated": "a54d6b7c"
+          },
+          {
+            "source": "82e1f82a08892969be463cdcbe437bd6249be26f",
+            "integrated": "83649956"
+          },
+          {
+            "source": "e0e41e5a7a1e3fe24395a087ef9b2e332b45654b",
+            "integrated": "31a96388"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
     },
     {
       "area": "splits",
@@ -855,7 +1016,7 @@
         ]
       },
       "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-layout-workstream",
-      "status": "running",
+      "status": "reviewed_local_components_integrated_native_open",
       "primaryAssignments": [
         {
           "key": "sidebar-layout",
@@ -866,8 +1027,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "tab-layout-choice",
@@ -878,8 +1040,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "focus-mode",
@@ -890,10 +1053,21 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         }
-      ]
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "127bf18939ebcfb21b8bc9351d35946d19d2c7ac",
+            "integrated": "cab92944"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
     },
     {
       "area": "appearance",
@@ -936,7 +1110,7 @@
         ]
       },
       "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-appearance-workstream",
-      "status": "running",
+      "status": "reviewed_local_slices_integrated_native_open",
       "primaryAssignments": [
         {
           "key": "space-themes",
@@ -947,8 +1121,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_slice_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "motion",
@@ -959,8 +1134,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_slice_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "shortcut-settings",
@@ -971,10 +1147,33 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_slice_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         }
-      ]
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "e2057bd12cddbf51a3341db02a087bc1831fbba3",
+            "integrated": "97a5c013"
+          },
+          {
+            "source": "827256606ebe4b087188f1687c354c711bc1ea02",
+            "integrated": "56c28f75"
+          },
+          {
+            "source": "cc43738b011a25935f4aafab10eea8f88b0f56ec",
+            "integrated": "7c546119"
+          },
+          {
+            "source": "6f0e940bd86d1f14094725c054dff9deaa2dbbe1",
+            "integrated": "e53603e4"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
     },
     {
       "area": "library",
@@ -1017,7 +1216,7 @@
         ]
       },
       "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-library-workstream",
-      "status": "running",
+      "status": "reviewed_local_components_integrated_native_open",
       "primaryAssignments": [
         {
           "key": "library",
@@ -1028,8 +1227,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "downloads",
@@ -1040,8 +1240,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "history-controls",
@@ -1052,10 +1253,33 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         }
-      ]
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "bb5cf37e9133b7cad59b0221c882b18308bb8fbe",
+            "integrated": "a126f605"
+          },
+          {
+            "source": "6f2f3d63720924e38fef7258eb2a875f70e644e7",
+            "integrated": "a726a2b4"
+          },
+          {
+            "source": "1fe514c7e481b5fc7b717f8841f400248948d2e7",
+            "integrated": "081ba95e"
+          },
+          {
+            "source": "dc2308c2d819d63839f2dbda8bdeeea3ba304fbd",
+            "integrated": "ec2834ef"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
     },
     {
       "area": "capture",
@@ -1179,7 +1403,7 @@
         ]
       },
       "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-media-workstream",
-      "status": "running",
+      "status": "reviewed_local_components_integrated_native_open",
       "primaryAssignments": [
         {
           "key": "pip",
@@ -1190,8 +1414,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "media-controls",
@@ -1202,8 +1427,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "tab-status",
@@ -1214,10 +1440,21 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         }
-      ]
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "0637ee6cb37039ba6ccaf1f7cdee097bbbef1352",
+            "integrated": "2f9c0494"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
     },
     {
       "area": "site-tools",
@@ -1260,7 +1497,7 @@
         ]
       },
       "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-site-tools-workstream",
-      "status": "running",
+      "status": "reviewed_local_components_integrated_native_open",
       "primaryAssignments": [
         {
           "key": "site-controls",
@@ -1271,8 +1508,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "developer-mode",
@@ -1283,8 +1521,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "browser-diagnostics",
@@ -1295,10 +1534,21 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         }
-      ]
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "11423743b492611e13274926d08d6a70d9fe5b2f",
+            "integrated": "f3ea6de4"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
     },
     {
       "area": "accessibility",
@@ -1341,7 +1591,7 @@
         ]
       },
       "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-accessibility-workstream",
-      "status": "running",
+      "status": "reviewed_local_components_integrated_native_open",
       "primaryAssignments": [
         {
           "key": "accessibility",
@@ -1352,8 +1602,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "ime-localization",
@@ -1364,8 +1615,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "window-chrome",
@@ -1376,10 +1628,27 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         }
-      ]
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "5da4a82d743cd94ab02c6b18158b79d5adecf76b",
+            "integrated": "d3ecf874"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
     }
-  ]
+  ],
+  "integrationCounts": {
+    "expandedItems": 51,
+    "reviewedLocalComponentsIntegrated": 45,
+    "remainingLocalComponentsToIntegrate": 6,
+    "nativeIssuesAccepted": 0
+  }
 }
