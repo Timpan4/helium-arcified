@@ -1,10 +1,11 @@
 {
   "status": "in_progress",
-  "scope": "Non-AI browser work first. AI later. Cross-device sync excluded.",
+  "scope": "Implement, independently review, publish and merge all in-scope non-AI issues, proving native behavior and good UX. AI later; cross-device sync excluded.",
   "constraints": {
-    "fullBuilds": "Deferred by owner. No full Chromium preparation, compilation, remote CI dispatch or benchmark loads.",
+    "fullBuilds": "Owner authorized heavy CPU tasks only in root thread 6733348c-3696-4b31-834c-2bbca45e70d2 at 2026-10-23 21:33 UTC. Root owns source preparation, native builds/tests and benchmark loads; other threads remain light.",
     "model": "gpt-6.1-sol",
-    "reasoningEffort": "high"
+    "reasoningEffort": "high",
+    "publication": "Owner authorized managing old/new threads and merging in-scope non-AI work in Timpan4/helium-arcified. Independent review and required checks precede merge; no upstream imputnet writes."
   },
   "ownerDecisions": [
     "Saved Space tabs shared across windows; temporary tabs window-local.",
@@ -13,7 +14,9 @@
     "One Profile per Space; multiple Spaces may share a Profile. Sign-ins, site settings and Favorites are Profile-scoped. Themes are Space-scoped.",
     "Outbound saved-page links open a temporary branch.",
     "Tiny synthetic performance-fixture browser checks approved.",
-    "One-minute Counter-Strike cs2 checks; stop every other T3 thread when detected, resume only on explicit owner resume."
+    "One-minute Counter-Strike cs2 checks; stop every other T3 thread when detected, resume only on explicit owner resume.",
+    "Owner explicitly resumed non-AI implementation at 2026-10-23 21:30 UTC; game guard disabled, interruption ledger preserved.",
+    "2026-10-23 21:33 UTC: all non-AI issues merged and working with good UX is the target; manage/settle/create threads as needed. Heavy CPU work authorized in root only."
   ],
   "openDecisions": [
     "Activity protection, automatic cleanup, destructive-action and populated cross-Profile migration policies remain open."
@@ -74,41 +77,65 @@
       "nativeIssuesAccepted": 0
     }
   },
-  "nextAction": "Finish and independently review the native callback source draft using the completed test packet. Construction loss, reentrant shutdown and prepared/native acceptance remain OPEN; heavy work deferred. Enforce game hold on trigger until explicit owner resume.",
+  "nextAction": "Root: prepare pinned Linux Chromium tree, compile and test native paths as source contracts become reviewable. Children finish metadata durability, independent destruction review and lifetime contract resolution. Publish reviewed foundation changes without claiming unproven issue acceptance.",
   "currentAssignments": [
     {
-      "key": "native-destruction-extraction",
-      "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-native-destruction-patch-20261023-v1",
+      "key": "native-lifetime-contract-resolution",
+      "taskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-native-lifetime-contract-resolution-20261023-v1",
       "model": "gpt-6.1-sol",
-      "options": {
-        "reasoningEffort": "high",
-        "serviceTier": "default"
-      },
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
       "status": "running",
-      "evidence": "native/patches/window_lifetime/; production callback draft UNACCEPTED pending source/native gates."
+      "evidence": "Source-backed construction-loss and owner-deleting reentry contract investigation before further production changes."
+    },
+    {
+      "key": "native-library-production",
+      "taskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-native-library-production-20261023-v1",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "running",
+      "evidence": "Production patch/real test source for native Library entry and Profile-local providers; root owns builds and browser proof."
     }
   ],
   "gamePause": {
-    "status": "armed_waiting_for_cs2",
+    "status": "resumed_by_owner",
     "state": "game-pause-state.json",
     "intervalMs": 60000,
     "minimumSchedulerIntervalMs": 60000,
     "resumePolicy": "Explicit owner resume only, no automatic game-exit resume",
     "schedulerId": "scheduled-task:command:mcp:437c3a2d-9d91-4e7d-9c31-61ace5783ba4:schedule-task:counter-strike-pause-guard-20261023-minute-v1",
     "nextRunAtOnCreation": "2026-10-23T15:15:45.078Z",
-    "armed": true,
-    "triggered": false
+    "armed": false,
+    "triggered": true,
+    "schedulerEnabled": false
   },
   "integrationChecks": {
-    "sourceIdentity": "At 0cd599bc, all 51 component sources matched reviewed commits. Shared admission hardening at f634070a has independent correctness, contract and final-test closure reviews. All other area sources remain unchanged.",
+    "sourceIdentity": "At 0cd599bc, all 51 component sources matched reviewed commits. Admission hardening at f634070a has fresh independent reviews. New Space metadata serialization changes are in progress and will require fresh review.",
     "commandsAndSiteTools": "Parent compiled actual combined tree and ran all three site-controls, DevTools and diagnostics fixture binaries under ASan/UBSan with -fno-sanitize-recover=undefined; all exited 0.",
-    "fullBrowserBuilds": "Not run; owner deferred.",
+    "fullBrowserBuilds": "Pinned Linux preparation PASSED all17stages through GN; baseline chrome/chromedriver compilation running only in root. Native browser tests/launch and platform acceptance OPEN.",
     "nativeAcceptance": "OPEN",
     "captureRegion": "Parent compiled and ran actual combined picker/capture fixture under fail-fast ASan/UBSan. Exit0, no diagnostics.",
     "sidebar": "Conformance-only actual multi-area scenarios independently reviewed clean and committed at 34c97b01. No production facade or native AX claim.",
-    "persistence": "Committed f634070a: mandatory whole-snapshot provenance and decoded candidate commit admission independently clean in correctness, contract and test-only analyzer closure reviews. Parent analyzer across six translation units exited 0 with one documented targeted suppression. Native truth, IO and platform acceptance OPEN.",
+    "persistence": "b47468ae adds schema2 canonical Space metadata. Independent review clean; strict/sanitized3suites, formatting/tidy passed. Native binding/IO/installed restart/platform acceptance OPEN.",
     "layout": "Actual layout/split/motion conformance scenarios reviewed clean in round 2. P3 endpoint assertions closed; strict/sanitized checks passed on exact reviewed inputs. Committed locally, native UI/visual/platform behavior OPEN.",
-    "nativeOwnership": "Qualified source inventory and 122-member catalog corrections independently closed. Astra guidance and real GN/test sources support an unapplied production callback draft; construction loss, reentrant shutdown, complete consumer closure and native feasibility OPEN."
+    "nativeOwnership": "Source inventory corrections closed and committed 05ace22e. Production callback draft and real native fixture tests are unapplied/uncompiled; construction loss, reentrant shutdown and native acceptance OPEN."
   },
   "completedAssignments": [
     {
@@ -224,7 +251,8 @@
       "key": "native-lifetime-test-inputs",
       "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-native-lifetime-test-inputs-20261023-v1",
       "status": "completed_source_packet",
-      "evidence": "research/native-space-consumers/lifecycle-tests/README.md; 21 sources and three listings, no native execution."
+      "evidence": "Local working tree only: research/native-space-consumers/lifecycle-tests/README.md;21sources and3listings. Not inspectable in frozen foundation05ace22e. No native execution.",
+      "publicationDisposition": "Local uncommitted source packet, excluded from frozen foundation05ace22e and its publication evidence. Commit separately only with reviewed provenance/license and source registration limits."
     },
     {
       "key": "admission-lint-fixture",
@@ -237,6 +265,40 @@
       "taskId": "node:delegated-task:command%3Amcp%3A437c3a2d-9d91-4e7d-9c31-61ace5783ba4%3Adelegate-task%3Aarcified-snapshot-admission-lint-review-20261023-v1",
       "status": "completed_clean",
       "evidence": "reviews/snapshot-admission-lint-review.md; exact hash reconstruction and independent strict/sanitizer/analyzer checks passed."
+    },
+    {
+      "key": "space-metadata-durability",
+      "taskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-space-metadata-durability-resume-20261023-v2",
+      "status": "completed",
+      "commit": "b47468ae",
+      "reviewTaskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-space-metadata-durability-review-20261023-v1",
+      "evidence": "Standalone schema2 metadata preservation strict/sanitized3suites, formatting/tidy, clean bounded independent review."
+    },
+    {
+      "key": "native-destruction-extraction-review",
+      "taskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-native-destruction-review-20261023-v1",
+      "status": "completed",
+      "evidence": "No new regression. Construction-loss and owner-deleting reentry blockers remain; draft unapplied/unaccepted."
+    },
+    {
+      "key": "foundations-publication-review",
+      "taskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-foundations-publication-review-20261023-v1",
+      "status": "completed_with_documentation_findings",
+      "evidence": "reviews/foundations-publication-review.md: no blocking aggregate defect at frozen05ace22e; P3 admission/status text and excluded-packet references corrected in followup."
     }
-  ]
+  ],
+  "nativeBuild": {
+    "ownerThreadId": "6733348c-3696-4b31-834c-2bbca45e70d2",
+    "workDir": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1",
+    "sessionId": 30092,
+    "status": "baseline_compiling",
+    "preparation": "PREPARED_NOT_BUILT",
+    "report": "native-linux-run-20261023.md"
+  },
+  "publicationBlock": {
+    "status": "blocked_on_credential_scope",
+    "action": "push feat/parallel-browser-work to origin",
+    "reason": "GitHub OAuth App credential lacks workflow scope for .github/workflows/arcified-native-checks.yml",
+    "neededDecision": "Pending owner approval for gh auth refresh --hostname github.com --scopes workflow, or owner-provided authentication repair. Do not bypass the rejected workflow update."
+  }
 }

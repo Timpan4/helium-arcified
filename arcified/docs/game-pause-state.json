@@ -1,13 +1,139 @@
 {
-  "status": "armed_waiting_for_cs2",
+  "status": "resumed_by_owner",
   "ownerThreadId": "6733348c-3696-4b31-834c-2bbca45e70d2",
   "processName": "cs2",
   "intervalMs": 60000,
   "intervalSource": "Owner approved one-minute checks after T3 rejected 30 seconds; scheduler contract minimum is 60000 ms.",
   "resumePolicy": "Explicit owner message resume only; game exit never resumes work.",
-  "triggered": false,
-  "pausedThreads": [],
+  "triggered": true,
+  "detectedProcessId": 9664,
+  "pauseEnforcement": "disabled_by_owner",
+  "pausedThreads": [
+    {
+      "threadId": "thread:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-space-metadata-durability-20261023-v1",
+      "projectId": "4f998c04-a395-4e11-9de9-19134c01f3fb",
+      "latestRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0df0acf4-a099-405c-9347-c0de1bf10947%253Adelegate-task%253Aarcified-space-metadata-durability-20261023-v1:ordinal:1",
+      "activeRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0df0acf4-a099-405c-9347-c0de1bf10947%253Adelegate-task%253Aarcified-space-metadata-durability-20261023-v1:ordinal:1",
+      "parentThreadId": "6733348c-3696-4b31-834c-2bbca45e70d2",
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261",
+      "status": "running",
+      "taskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-space-metadata-durability-20261023-v1",
+      "originalStatus": "running",
+      "interruptionStatus": "interrupted",
+      "verificationStatus": "not_active",
+      "taskStateAfterStop": "interrupted",
+      "hasPendingChildRuns": false,
+      "resumeDisposition": "Unfinished browser task restarted under a new T3 delegated task; preserve original interruption context.",
+      "resumedTaskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-space-metadata-durability-resume-20261023-v2"
+    },
+    {
+      "threadId": "d83c7f43-7fba-4117-8161-a3dd11421dac",
+      "projectId": "ea12def7-db69-47d0-9673-3a85ca370321",
+      "latestRunId": "run:thread:d83c7f43-7fba-4117-8161-a3dd11421dac:ordinal:22",
+      "activeRunId": null,
+      "parentThreadId": null,
+      "worktreePath": "/home/timpan4/.t3/scratch/2026-10-19-look-through-my-older-t3-11421dac",
+      "originalStatus": "completed",
+      "interruptionStatus": "no_active_run",
+      "verifiedStatus": "completed",
+      "verificationStatus": "not_active",
+      "resumeDisposition": "No active run existed when interruption was requested. Inspect current completion state; do not restart completed work."
+    },
+    {
+      "threadId": "7b9dde00-75ab-4248-a67b-f609d76c9683",
+      "projectId": "2d1707df-1026-469b-b561-0f612f641c10",
+      "latestRunId": "run:thread:7b9dde00-75ab-4248-a67b-f609d76c9683:ordinal:2",
+      "activeRunId": "run:thread:7b9dde00-75ab-4248-a67b-f609d76c9683:ordinal:2",
+      "parentThreadId": null,
+      "worktreePath": "/home/timpan4/.t3/scratch/2026-10-23-why-cant-i-connect-to-d76c9683",
+      "status": "running",
+      "originalStatus": "running",
+      "interruptionStatus": "interrupted",
+      "verifiedStatus": "interrupted",
+      "verificationStatus": "not_active",
+      "interruptedRuns": [
+        {
+          "latestRunId": "run:thread:7b9dde00-75ab-4248-a67b-f609d76c9683:ordinal:1",
+          "activeRunId": "run:thread:7b9dde00-75ab-4248-a67b-f609d76c9683:ordinal:1",
+          "originalStatus": "running",
+          "interruptionStatus": "interrupted",
+          "verifiedStatus": "interrupted"
+        },
+        {
+          "latestRunId": "run:thread:7b9dde00-75ab-4248-a67b-f609d76c9683:ordinal:2",
+          "activeRunId": "run:thread:7b9dde00-75ab-4248-a67b-f609d76c9683:ordinal:2",
+          "originalStatus": "running",
+          "interruptionStatus": "interrupted",
+          "verifiedStatus": "interrupted"
+        }
+      ],
+      "resumeDisposition": "Owner resumed non-AI browser implementation. Unrelated Wi-Fi troubleshooting is outside that scope and remains interrupted."
+    }
+  ],
   "schedulerId": "scheduled-task:command:mcp:437c3a2d-9d91-4e7d-9c31-61ace5783ba4:schedule-task:counter-strike-pause-guard-20261023-minute-v1",
-  "armed": true,
-  "nextRunAtOnCreation": "2026-10-23T15:15:45.078Z"
+  "armed": false,
+  "nextRunAtOnCreation": "2026-10-23T15:15:45.078Z",
+  "detectedAt": "2026-10-23 16:14:03 UTC",
+  "enumeratedProjectIds": [
+    "6864672d-5086-57a6-b79b-236c173d9144",
+    "537b8641-1162-56ba-91f3-3ce559a87388",
+    "f43a1280-4797-50bf-bab8-e224471136cf",
+    "33f5d4af-dd27-5683-b7e6-56f8d3866920",
+    "5652948b-1e4d-41ab-80b4-b590c1e8bf47",
+    "11656750-3353-4ca5-a88c-d5a93518f3cd",
+    "e7255090-1446-49f3-8f7b-cf3948f3813f",
+    "02ef579f-3785-4bfa-a202-78f70f2fd9ac",
+    "a5036bc4-c3ca-495a-b0f8-0ee2be58a3d6",
+    "12eba022-30b0-4a09-b7a6-0cb75305d700",
+    "b86f016c-2c02-4655-8197-0150caf10e7b",
+    "2d1707df-1026-469b-b561-0f612f641c10",
+    "mcp:2646bf4b-be8c-4249-a245-e81a3a96ca88",
+    "1ba0d229-5fbf-4661-a030-6a6ada5a3888",
+    "ea12def7-db69-47d0-9673-3a85ca370321",
+    "1da6e915-703e-40e1-a06e-5ae415891e6f",
+    "4f998c04-a395-4e11-9de9-19134c01f3fb"
+  ],
+  "enumerationFailures": [],
+  "remainingActiveThreadIds": [],
+  "lastVerifiedAt": "2026-10-23 19:51:46 UTC",
+  "verificationFailures": [],
+  "stopResults": [
+    {
+      "threadId": "thread:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-space-metadata-durability-20261023-v1",
+      "result": {
+        "threadId": "thread:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-space-metadata-durability-20261023-v1",
+        "runId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0df0acf4-a099-405c-9347-c0de1bf10947%253Adelegate-task%253Aarcified-space-metadata-durability-20261023-v1:ordinal:1",
+        "status": "interrupt_requested"
+      }
+    },
+    {
+      "threadId": "thread:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-space-metadata-durability-20261023-v1",
+      "taskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-space-metadata-durability-20261023-v1",
+      "cancelResult": {
+        "taskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-space-metadata-durability-20261023-v1",
+        "status": "cancel_requested"
+      }
+    },
+    {
+      "threadId": "7b9dde00-75ab-4248-a67b-f609d76c9683",
+      "result": {
+        "threadId": "7b9dde00-75ab-4248-a67b-f609d76c9683",
+        "runId": "run:thread:7b9dde00-75ab-4248-a67b-f609d76c9683:ordinal:1",
+        "status": "interrupt_requested"
+      }
+    },
+    {
+      "threadId": "7b9dde00-75ab-4248-a67b-f609d76c9683",
+      "result": {
+        "threadId": "7b9dde00-75ab-4248-a67b-f609d76c9683",
+        "runId": "run:thread:7b9dde00-75ab-4248-a67b-f609d76c9683:ordinal:2",
+        "status": "interrupt_requested"
+      }
+    }
+  ],
+  "schedulerEnabled": false,
+  "reportedPaused": true,
+  "resumeInstructions": "Guard disabled by explicit owner resume. Preserve pausedThreads and stopResults. Recover unfinished non-AI browser work safely; completed work must not restart.",
+  "resumedAt": "2026-10-23 21:30:12 UTC",
+  "resumeAuthorization": "Owner: you can resume to implement the non ai things. im going to bed"
 }

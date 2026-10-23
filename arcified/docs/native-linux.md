@@ -1,6 +1,6 @@
 # Downstream Linux preparation
 
-Issue [#16](https://github.com/Timpan4/helium-arcified/issues/16) remains open. This repository supplies Chromium patches and configuration, not Chromium sources or a native Arcified executable. The tooling below establishes input identity and a preparation route. No real Chromium source preparation, browser compilation, or native launch has been verified by this change.
+Issue [#16](https://github.com/Timpan4/helium-arcified/issues/16) remains open. This repository supplies Chromium patches and configuration, not Chromium sources or a native Arcified executable. The [2026-10-23 Linux run](native-linux-run-20261023.md) verified source preparation through GN against the pins below. Root baseline compilation is running; browser compilation, native launch and UX acceptance are not yet proven.
 
 Core browser UX, platform integration, and performance take priority over AI. This route adds no AI integration, cross-device sync, or required browser account.
 
@@ -57,7 +57,7 @@ git -C /absolute/path/to/pinned-helium-linux checkout --detach b154afccb44729359
      > /tmp/arcified-linux-plan.json
    ```
 
-3. On that authorized build host, run the same command with `--execute` to retrieve and unpack the full source archives, apply patches, and generate GN output. **Do not run this step on the resource-constrained implementation machine. Full browser builds are prohibited on that machine.** Preparation is also substantial source I/O even though it does not compile:
+3. On that authorized build host, run the same command with `--execute` to retrieve and unpack the full source archives, apply patches, and generate GN output. The owner authorized heavy CPU work on the implementation machine only in root thread `6733348c-3696-4b31-834c-2bbca45e70d2` on 2026-10-23. Other threads must leave heavy preparation and builds to root. Preparation also performs substantial source IO:
 
    ```bash
    python3 arcified/native/tooling/linux.py prepare \
@@ -80,7 +80,7 @@ For additional source applicability validation, `devutils/validate_patches.py --
 
 All issue acceptance remains **OPEN** until native evidence is available. Local preflight and synthetic fixture tests cannot close these items.
 
-1. On an authorized build host, retain `preparation.json`, all stage logs, archive checksum sidecars, the fork and platform revisions, working-input digests, final `args.gn`, environment identity, and the exact compilation command and exit status. Confirm the complete common and Linux series applied. Source preparation and GN generation are currently unverified against Chromium.
+1. Retain `preparation.json`, all stage logs, archive checksum sidecars, fork and platform revisions, working-input digests, final `args.gn`, environment identity, and the exact compilation command and exit status. Source preparation and GN generation passed in the linked Linux run. This is source-application evidence, not successful compilation.
 2. Compile the prepared source on that host using the pinned platform build toolchain and a separately approved resource policy. Preserve build logs and the resulting executable's digest. Do not invoke the unmodified platform `scripts/build.sh` or `docker-build.sh` as a continuation of this route: they choose their own source paths and include compilation. There is no downstream build or launch artifact yet.
 3. Launch the resulting browser with a new test profile and retain a screenshot or recording plus exact binary/profile identity. Exercise native navigation, loading an extension, completing a download, and profile restart with persisted state. Record failures, accessibility checks, session/display configuration, and any unavailable platform evidence. Never substitute extension-only checks for these native checks.
 

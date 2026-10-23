@@ -1,6 +1,6 @@
 # Implementation execution
 
-Non-AI browser work comes first. AI has 23 later items and six sync proposals are excluded. Full browser builds, heavy source preparation and remote CI dispatch remain deferred.
+The target is all in-scope non-AI issues merged and working with good UX. AI has 23 later items and six sync proposals are excluded. At 2026-10-23 21:33 UTC, the owner authorized managing old/new threads, publishing and merging reviewed fork changes, and heavy CPU work only in this root thread. Root owns heavy source preparation, native builds/tests and benchmarks; other threads stay light. Native acceptance still requires actual platform and UX evidence.
 
 ## Current evidence
 
@@ -52,4 +52,4 @@ The [execution state](execution-state.json) and [fixture browser report](reviews
 
 ## Game pause request
 
-The owner approved one-minute cs2 checks after T3 rejected 30 seconds. The guard is armed and bound to this root thread. Its first scheduled check is 2026-10-23T15:15:45.078Z. On detection it stops all other active T3 threads across projects, including descendants. This root stays active. Game exit never resumes work; only an explicit owner "resume" does. [State](game-pause-state.json) retains the scheduler ID and interruption ledger. Check it before new delegation on continuations.
+The owner explicitly resumed non-AI implementation at 2026-10-23 21:30 UTC. The one-minute game guard is disabled and disarmed. [State](game-pause-state.json) preserves its scheduler ID and interruption ledger. The unfinished Space metadata task has a new task ID in [execution state](execution-state.json); completed work is not restarted. The unrelated interrupted Wi-Fi thread remains outside this browser implementation scope.
