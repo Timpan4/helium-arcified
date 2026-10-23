@@ -935,7 +935,7 @@
         ]
       },
       "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-splits-workstream",
-      "status": "running",
+      "status": "reviewed_local_slices_integrated_native_open",
       "primaryAssignments": [
         {
           "key": "split-horizontal",
@@ -946,8 +946,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_slice_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "split-vertical",
@@ -958,8 +959,9 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_slice_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         },
         {
           "key": "split-persistence",
@@ -970,10 +972,21 @@
             "reasoningEffort": "high",
             "serviceTier": "default"
           },
-          "stage": "implementation_or_source_interface_in_progress",
-          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent."
+          "stage": "reviewed_local_slice_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
         }
-      ]
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "eba06b390b7a2f135fd63596e3a21a9999ec0131",
+            "integrated": "be2ec40e"
+          }
+        ],
+        "sourceBytes": "Matched final reviewed area source via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
     },
     {
       "area": "layout",
@@ -1647,8 +1660,8 @@
   ],
   "integrationCounts": {
     "expandedItems": 51,
-    "reviewedLocalComponentsIntegrated": 45,
-    "remainingLocalComponentsToIntegrate": 6,
+    "reviewedLocalComponentsIntegrated": 48,
+    "remainingLocalComponentsToIntegrate": 3,
     "nativeIssuesAccepted": 0
   }
 }

@@ -68,12 +68,12 @@
     "confirmedAdditionalPrimaries": 51,
     "localComponentCounts": {
       "expandedItems": 51,
-      "reviewedLocalComponentsIntegrated": 45,
-      "remainingLocalComponentsToIntegrate": 6,
+      "reviewedLocalComponentsIntegrated": 48,
+      "remainingLocalComponentsToIntegrate": 3,
       "nativeIssuesAccepted": 0
     }
   },
-  "nextAction": "Integrate six remaining capture/split slices after clean fix reviews; review composed scenarios/admission; continue native consumer inventory. Game guard remains unarmed pending accepted scheduler cadence.",
+  "nextAction": "Await final region-capture fix review then integrate capture area. Review composed sidebar/admission; continue native consumer inventory. Game guard remains unarmed pending accepted scheduler cadence.",
   "currentAssignments": [
     {
       "key": "ci-fix",
