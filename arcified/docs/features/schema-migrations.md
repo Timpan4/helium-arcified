@@ -6,7 +6,7 @@ Status: local C++ compatibility and recovery component for [issue 99](https://gi
 
 The [session snapshot component](../../native/features/durability/session_snapshot.h) owns the only durable workspace format, decoder, graph validation and byte-image write protocol. The [lifecycle model](../../native/model/lifecycle.h) remains the ownership model. Migration admission adds no serializer, navigation state, persistence file layout or native session store.
 
-The supported-format registry contains only schema 1 with lifecycle contract 3. Schema 1 is the initial local implementation, not a shipped historical format. Lifecycle contract versions 1 and 2 were semantic model revisions and have no supported disk upgrade path. There are no registered predecessor transformations. An installed upgrade cannot be claimed until an actual prior format, its fixtures and a native integration exist.
+The supported-format registry contains only schema 2 with lifecycle contract 3. Schema 1 is the actual prior local implementation at `05ace22e`, not a claimed shipped browser format. Its codec omitted Space display/order values, so it cannot reconstruct complete canonical metadata without inventing values or order. No predecessor transform is registered. Exact original schema-1 fixture bytes are retained and classified unsupported in either slot. The prior-format transform gate remains OPEN. Lifecycle contracts 1 and 2 are semantic revisions, not predecessor disk formats.
 
 ## Admission and recovery
 
@@ -16,13 +16,13 @@ Valid current images are available as explicit read-only recovery choices. The g
 
 `PrepareWrite` compares both observed images exactly with the owned source. It refuses changed input and unsupported versions, then calls the session component's `PrepareWrite`, which refuses unresolved recovery and invalid target snapshots. Only a genuinely empty store or a valid current original without a candidate can prepare a write. The session component owns staging and commit comparison. This is an in-memory preflight, not a filesystem lock or atomic compare-and-swap. The eventual IO adapter must serialize writers and retain the original through durable staging, readback, commit and failure recovery.
 
-The gate passes `SnapshotAdmission` unchanged to the session writer. Missing or rejecting whole-snapshot and Profile/page eligibility callbacks refuse persistence, including empty and Window-only graphs. Root integration binds complete graph provenance and current native/peer checks through the shared composition adapter. Schema compatibility is not privacy admission. The caller must also explicitly attest that unsupported Space metadata and split presentation payloads are absent. This component cannot serialize or silently discard those peer features. Decoded recovery metadata alone does not authorize restoration or persistence. Commit callers must pass current admission to `CommitPreparedWrite(current_staged, prepared, admission)`; it compares staged bytes, decodes and admits that candidate before promotion. Prepared writes retain no callbacks.
+The gate passes `SnapshotAdmission` unchanged to the session writer. Missing or rejecting whole-snapshot and Profile/page eligibility callbacks refuse persistence, including empty and Window-only graphs. Root integration binds complete graph and ordered Space metadata provenance and current native/peer checks through the shared composition adapter. Schema compatibility is not privacy admission. The caller must also explicitly attest that folders, custom theme/palette payload beyond theme_key, split presentation and other omitted payloads are absent. This component cannot serialize or silently discard those peer features. Decoded recovery metadata alone does not authorize restoration or persistence. Commit callers must pass current admission to `CommitPreparedWrite(current_staged, prepared, admission)`; it compares staged bytes, decodes and admits that candidate before promotion. Prepared writes retain no callbacks.
 
 ## Rollback and downgrade
 
 Current-version admission is a no-op on the original bytes. A successful byte-image commit leaves its source in `PreparedWrite`; an IO adapter must preserve that source before replacing on-disk data. This component neither implements backup retention nor authorizes deleting recovery data.
 
-A downgraded reader refuses any unregistered schema or contract, preserves its exact input and offers only explicitly validated recovery choices. It must not rewrite a future schema using schema 1, silently select an older image, or label unsupported bytes corrupt merely because a full decode is unavailable. Rolling back metadata cannot undo server effects or restore live forms, authentication, renderer state or navigation history. Native Profile-local session storage remains authoritative for navigation restoration.
+A downgraded reader refuses any unregistered schema or contract, preserves its exact input and offers only explicitly validated recovery choices. It must not rewrite a future schema using schema 2, silently select an older image, or label unsupported bytes corrupt merely because a full decode is unavailable. Rolling back metadata cannot undo server effects or restore live forms, authentication, renderer state or navigation history. Native Profile-local session storage remains authoritative for navigation restoration.
 
 ## Evidence and remaining acceptance
 
@@ -30,13 +30,13 @@ The [issue brief](../research/arc-dia/publication/schema-migrations.md) and `bac
 
 The [native integration plan](../native-space-integration.md) requires validated workspace/session joins and an actual native host that survives cross-Profile Space switching. Its [pinned source references](../native-space-source-references.md#c4-navigation-and-session-boundaries) identify Profile-local `SessionService` ownership and selection records. The existing [lazy restore patch](../../../patches/helium/core/lazy-session-restore.patch) restores selected tabs and split order, but does not implement workspace schema migration. These are source observations, not installed upgrade results.
 
-Open acceptance includes actual predecessor migrations, names and presentation order absent from the current lifecycle snapshot, native session joins, durable file replacement and rollback behavior, recovery UI and accessibility, and installed native upgrades on all target platforms. No Chromium preparation, build, download, benchmark, real browsing data, provider access or external write is needed for these local checks.
+Open acceptance includes actual predecessor migrations, installed names and presentation-order restoration, native session joins, durable file replacement and rollback behavior, recovery UI and accessibility, and installed native upgrades on all target platforms. No Chromium preparation, build, download, benchmark, real browsing data, provider access or external write is needed for these local checks.
 
 ## Focused checks
 
 `schema_gate_test.cc` uses synthetic `.test` destinations and fixed fixture identities. It executes current-format inspection without changing original bytes, absent versus empty input, valid/truncated/empty interrupted candidates, corrupt original with valid candidate, CRC/truncation/trailing-data failures, unsupported headers in either image, stale preflight and staging inputs, and the shared prepare/commit protocol. Privacy callbacks are synthetic allowlists, not a test of native private browsing. Separate missing/denying Profile and page callbacks and unconfirmed feature absence prove that the gate preserves the writer's refusals.
 
-Unsupported fixtures change only the actual schema-1 envelope version fields. They include incomplete bodies deliberately, because a recognizable unsupported header must remain distinguishable from corruption. They are not claimed as prior shipped formats or successful migrations. A valid original beside an unsupported candidate still refuses writes.
+Unsupported-header fixtures change only the current envelope version fields. A separate fixture retains the actual schema-1 empty image and CRC unchanged from the baseline. They include incomplete bodies deliberately, because a recognizable unsupported header must remain distinguishable from corruption. They are not claimed as prior shipped formats or successful migrations. A valid original beside an unsupported candidate still refuses writes.
 
 Run from the repository root with the existing toolchain:
 
@@ -47,6 +47,7 @@ clang-format --style=Chromium --dry-run --Werror \
   arcified/native/features/migrations/schema_gate_test.cc
 clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic \
   arcified/native/model/lifecycle.cc \
+  arcified/native/features/space_management/space_management.cc \
   arcified/native/features/durability/session_snapshot.cc \
   arcified/native/features/migrations/schema_gate.cc \
   arcified/native/features/migrations/schema_gate_test.cc \
@@ -55,6 +56,7 @@ clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic \
 clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic \
   -g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer \
   arcified/native/model/lifecycle.cc \
+  arcified/native/features/space_management/space_management.cc \
   arcified/native/features/durability/session_snapshot.cc \
   arcified/native/features/migrations/schema_gate.cc \
   arcified/native/features/migrations/schema_gate_test.cc \

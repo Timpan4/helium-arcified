@@ -3,21 +3,23 @@
 [context_admission.h](../../native/integration/persistence/context_admission.h)
 and [context_admission.cc](../../native/integration/persistence/context_admission.cc)
 compose the actual lifecycle v3, Profile preparation, shared native context
-classifier and schema 1 durability APIs. This is a standalone admission adapter.
+classifier and schema 2 durability APIs. This is a standalone admission adapter.
 It implements no native registry, classifier, file IO, migration or second codec.
 
-`ComposeSnapshotAdmission(model, source)` returns either a durability failure or
-the mandatory `SnapshotAdmission` callbacks. The source is an interface to the
+`ComposeSnapshotAdmission(model, metadata, source)` returns either a durability
+failure or the mandatory `SnapshotAdmission` callbacks. The source is an interface to the
 native host's existing live binding authority. The adapter owns no source facts
 and caches no prepared targets or allow decisions. Its local identity maps exist
 only during a consistency check.
 
 The required whole-snapshot callback compares the supplied durable graph with
-the bound operation model before reading current native facts and peer stores.
+the bound operation Model and exact canonical ordered metadata before reading
+current native facts and peer stores.
 `SnapshotMatchesModel` reuses durability's lifecycle validation, canonical model
 projection and existing codec without calling capture or public encoding. It
 compares every durable field, including Window identity/selection, attachments,
-Page owners and split membership order. Record sequence order is normalized;
+Page owners, split membership order and Space metadata. Graph record order is
+normalized; metadata display order and absent versus empty optionals remain exact;
 navigation and activity remain excluded. There is no second codec or registry.
 Missing callbacks refuse, including for empty and Window-only snapshots.
 
@@ -54,22 +56,24 @@ There is no private-source filtering or selected-Space shortcut. Refusal returns
 no snapshot, encoded bytes, prepared write or restored model from the relevant
 durability call.
 
-## Schema 1 feature completeness
+## Schema 2 feature completeness
 
-`Schema1PeerPayloads` requires a separate caller report for actual Space display
-and order metadata, folders, themes and split presentation. Every report defaults
-to unknown. Only explicit absence of all these payloads can set durability's
-`unsupported_feature_payloads_absent` field. Unknown and present both refuse.
-The reports cover the whole operation scope, including peer stores used during
-restore. An empty lifecycle model does not prove absence.
+The caller supplies complete `space_management::Metadata`, validated by the
+canonical `ValidateMetadata` against Model. It covers every Space including
+unattached Spaces. Order and each optional name/icon_key/theme_key participate
+in whole-snapshot admission at capture, encode, prepare, restore and candidate
+commit. Changed or stale metadata refuses; no reconciliation or defaults run.
+Restore returns `RestoredSession{model, space_metadata}`, so callers must adopt
+both values together.
 
-The adapter does not inspect the peer stores or discard their data. Real Space
-names, user order, folder state, themes and split presentation remain unsupported
-by schema 1. Lifecycle split membership references do not establish absence of
-split presentation payloads. A native feature host with any such state must
-retain it and refuse this persistence path until a reviewed shared codec can
-represent it. The eligible fixtures explicitly provide absent synthetic stores;
-they do not claim these payloads are absent in an installed browser.
+`UnsupportedPeerPayloads` replaces `Schema1PeerPayloads`. It reports folders,
+custom theme/palette payload beyond theme_key, split presentation and other
+omitted payloads. Every field defaults to unknown; unknown and present refuse.
+Space metadata is represented by the canonical value, with no absence flag.
+Reports cover the whole operation scope, including restore. An empty Model
+cannot establish absence. Native feature hosts must retain unsupported payloads
+and refuse this path. Synthetic absent reports do not establish installed
+browser completeness.
 
 ## Required native call-site duties
 
@@ -87,8 +91,9 @@ they do not claim these payloads are absent in an installed browser.
    liveness remain host responsibilities; mutually consistent stale reports
    cannot prove them.
 3. Compose fresh admission for the exact graph involved in each capture,
-   encode, write or restore. Keep the model and source alive until callbacks
-   finish. The callbacks borrow both and recheck the complete graph at use.
+   encode, write or restore. Keep the Model, metadata and source alive until
+   callbacks finish. The callbacks borrow all three and recheck the complete
+   graph and metadata at use.
    Do not retain them across asynchronous work, use a prepared target as a
    permit, or substitute a previously captured model for current native facts.
    Whole-snapshot admission executes at use even when there are no Profile or
@@ -146,8 +151,13 @@ navigation and committed source bytes. Commit refusals after native/peer changes
 retain both original and candidate bytes. The fixtures also cover fresh facts
 for an older attachment snapshot, every durable record category, retained
 empty-graph peer changes, Window-only graphs and valid same-graph commits.
-Future schemas, unresolved candidate
-images and changed source bytes remain preserved. Changing only runtime native
+Metadata fixtures cover every Model Space, including unattached Spaces,
+independent identities sharing a Profile, Unicode and absent versus empty
+values. Missing/duplicate/unknown metadata refuses; valid forged or stale
+order/display values refuse through current admission, including after staging.
+A new candidate with current metadata can replace an older committed original.
+Future schemas, unresolved candidate images and changed source bytes remain
+preserved. Changing only runtime native
 IDs produces identical encoded bytes, and their marker strings are absent.
 
 Run from the repository root with the existing local toolchain:
@@ -160,6 +170,7 @@ clang-format --style=Chromium --dry-run --Werror \
 
 clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic \
   arcified/native/model/lifecycle.cc \
+  arcified/native/features/space_management/space_management.cc \
   arcified/native/features/profiles/preparation.cc \
   arcified/native/features/private_browsing/operation_boundary.cc \
   arcified/native/features/durability/session_snapshot.cc \
@@ -174,6 +185,7 @@ clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic \
 clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic \
   -g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer \
   arcified/native/model/lifecycle.cc \
+  arcified/native/features/space_management/space_management.cc \
   arcified/native/features/profiles/preparation.cc \
   arcified/native/features/private_browsing/operation_boundary.cc \
   arcified/native/features/durability/session_snapshot.cc \
@@ -190,4 +202,7 @@ whitespace checks passed for the changed files. No full Chromium preparation,
 native browser build, download or live-browser test ran. Windows and macOS,
 production native binding producers, actual file IO, restart durability,
 cross-Profile isolation, browser security and close-undo acceptance remain
-unverified. Root's independent code review remains pending.
+unverified. [The metadata response](../reviews/space-metadata-durability-response.md)
+records the scoped analyzer checks and exact test evidence. The independent
+[review](../reviews/space-metadata-durability-review.md) found no actionable
+findings in the standalone change. Native acceptance remains open.

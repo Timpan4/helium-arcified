@@ -23,11 +23,12 @@ enum class PayloadPresence { kUnknown, kAbsent, kPresent };
 
 // Reports from the actual peer feature stores, over the whole operation scope.
 // Model inspection cannot establish any of these absences.
-struct Schema1PeerPayloads {
-  PayloadPresence space_display_and_order = PayloadPresence::kUnknown;
+struct UnsupportedPeerPayloads {
   PayloadPresence folders = PayloadPresence::kUnknown;
+  // Custom theme/palette payload beyond Space DisplayIdentity::theme_key.
   PayloadPresence themes = PayloadPresence::kUnknown;
   PayloadPresence split_presentation = PayloadPresence::kUnknown;
+  PayloadPresence other = PayloadPresence::kUnknown;
 };
 
 // Implemented by the native host's existing live binding/freshness authority.
@@ -46,7 +47,7 @@ class NativeContextSource {
   // or original-Profile substitution is permitted.
   virtual std::optional<std::vector<ContextObservation>> ReadWindow(
       const lifecycle::WindowId& window) const = 0;
-  virtual Schema1PeerPayloads ReadPeerPayloads() const = 0;
+  virtual UnsupportedPeerPayloads ReadPeerPayloads() const = 0;
 };
 
 // Stateless composition of profiles preparation (and its shared classifier)
@@ -55,17 +56,18 @@ class NativeContextSource {
 // Distinct lifecycle Profiles cannot claim one exact native context identity.
 // No runtime identity is added to the snapshot or codec.
 //
-// The returned callbacks BORROW model and source. Use them immediately within
-// the same serialized native operation, keeping both alive. They re-read facts
-// and never cache a permit. Whole-snapshot admission compares the complete
-// durable graph to model, then checks current native observations/peer stores,
-// even for empty or Window-only graphs. Bind the operation's graph, retain
-// native objects and prevent changes/reentrancy until use completes. The result
-// is not a freshness token or native authorization. Recompose for each
+// The returned callbacks BORROW model, metadata and source. Use immediately
+// within the same serialized native operation, keeping all three alive. They
+// re-read facts and never cache a permit. Whole-snapshot admission compares the
+// complete durable graph and exact ordered metadata, then current native/peer
+// stores, even for empty or Window-only graphs. Bind the operation's graph,
+// retain native objects and prevent changes/reentrancy until use completes. The
+// result is not a freshness token or native authorization. Recompose for each
 // operation and supply current admission to CommitPreparedWrite before native
 // IO commit.
 durability::Result<durability::SnapshotAdmission> ComposeSnapshotAdmission(
     const lifecycle::Model& model,
+    const space_management::Metadata& metadata,
     const NativeContextSource& source);
 
 }  // namespace arcified::persistence

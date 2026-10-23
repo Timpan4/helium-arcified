@@ -73,7 +73,9 @@ DurableSnapshot FixtureSnapshot() {
           Status::kOk);
   REQUIRE(model.ReportActivity(PageId{"page"}, Activity::kProtected) ==
           Status::kOk);
-  return Success(durability::CaptureSnapshot(model, RegularFixture()));
+  return Success(durability::CaptureSnapshot(
+      model, {{SpaceId{"space"}, {"名前", "", std::nullopt}}},
+      RegularFixture()));
 }
 
 std::string Encode(const DurableSnapshot& snapshot) {
@@ -104,6 +106,30 @@ void CurrentNoopAndOwnedSource() {
   REQUIRE(gate.source().original == bytes);
   ExpectFailure(gate.ReadSnapshot(ImageSource::kCandidate),
                 Error::kRecoveryRequired);
+}
+
+void ActualSchema1BytesRemainUnsupported() {
+  // Exact original empty schema-1 fixture at 05ace22e, including its CRC.
+  std::string body(80, '\0');
+  body.replace(0, 8, "ARCSESS\n");
+  body[8] = 1;
+  body[12] = 3;
+  const auto prior = body + std::string("\x3e\x63\xbe\xf3", 4);
+  const auto snapshot = FixtureSnapshot();
+  const auto current = Encode(snapshot);
+  for (const auto& image :
+       {StoreImage{prior, std::nullopt}, StoreImage{prior, current},
+        StoreImage{current, prior}}) {
+    const CompatibilityGate gate(image);
+    const auto slot = image.original == prior ? ImageSource::kOriginal
+                                              : ImageSource::kCandidate;
+    REQUIRE(gate.inspection(slot).state == ImageState::kUnsupportedSchema);
+    REQUIRE(gate.inspection(slot).version->schema_version == 1);
+    ExpectFailure(gate.ReadSnapshot(slot), Error::kUnsupportedSchema);
+    ExpectFailure(gate.PrepareWrite(image, snapshot, RegularFixture()),
+                  Error::kUnsupportedSchema);
+    REQUIRE(gate.source() == image);
+  }
 }
 
 void EmptyIsDifferentFromCorrupt() {
@@ -313,6 +339,7 @@ void PrivacyAndFeatureAdmissionStayFailClosed() {
 }  // namespace arcified::migrations
 
 int main() {
+  arcified::migrations::ActualSchema1BytesRemainUnsupported();
   using namespace arcified::migrations;
   CurrentNoopAndOwnedSource();
   EmptyIsDifferentFromCorrupt();

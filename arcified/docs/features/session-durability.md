@@ -8,21 +8,29 @@ is blocked. This code does not write files or restore a browser.
 
 [`session_snapshot.h`](../../native/features/durability/session_snapshot.h)
 uses the existing [lifecycle model](../../native/model/lifecycle.h), semantic
-contract version 3. Snapshot schema version 1 is independent of that semantic
-version. No prior durable schema or upgrade path is claimed.
+contract version 3. Snapshot schema version 2 is independent of that semantic
+version. Schema 1 is the actual prior local codec at `05ace22e`. It omitted
+Space display/order, so no lossless transform is registered. Its exact original
+and candidate bytes remain retained on unsupported-schema refusal. The upgrade
+gate remains OPEN.
 
 `DurableSnapshot` is an owned dormant snapshot of existing lifecycle identities
 and references. It records Profiles, Spaces and their Profile mapping, windows
 and selected Space, attachments, saved destinations, Profile shortcut aliases,
-page identity/Profile/owner, and split membership/order. It is neither another
+page identity/Profile/owner, split membership/order, and complete ordered
+`space_management::Metadata` in `space_metadata`. It is neither another
 active lifecycle model nor a navigation owner. `ValidateSnapshot` builds a
 private staging model through the existing lifecycle commands to check the
 complete graph. It additionally rejects duplicates in commands that ordinarily
 allow idempotent attachment or split replacement. It rejects saved-page records
 that would resolve to another owning Space or another already-live saved page.
-Validation-only navigation never leaves that private model.
+Validation-only navigation never leaves that private model. The canonical
+`space_management::ValidateMetadata` requires exactly one metadata record per
+Model Space, including unattached Spaces. Duplicate, unknown and missing records
+return `kInvalidMetadata`; no reconciliation or defaults run.
 
-`CaptureSnapshot` omits `LivePage::current_navigation` and activity. Native
+`CaptureSnapshot(model, metadata, admission)` requires the complete canonical
+metadata vector and omits `LivePage::current_navigation` and activity. Native
 Profile-local session machinery remains responsible for navigation history and
 committed navigation. Cookies, authentication, settings, forms, POST bodies,
 renderer memory, native pointers, native context identities and raw native
@@ -36,10 +44,12 @@ migration policy is introduced.
 recorded page, exactly once, with its original Profile and a nonempty
 browser-policy-validated committed destination. Missing, extra, duplicate and
 Profile-mismatched reports fail without changing caller state. Successful
-restoration constructs a new lifecycle model with the original IDs and unknown
-activity. This function does not invoke native navigation, submit forms, open a
-window, activate a tab, or prove that a reported native object exists. The caller
-must reconcile actual native success before replacing its authoritative model.
+restoration returns `Result<RestoredSession>`, containing a staged `model` with
+the original IDs and unknown activity, plus exact `space_metadata`. Callers adopt
+both together; there is no Model-only overload or conversion. This function does
+not invoke native navigation, submit forms, open a window, activate a tab, or
+prove that a reported native object exists. The caller must reconcile actual
+native success before adopting the staged Model and metadata.
 Do not use this restart seam for transferring an existing live page.
 
 ## Admission and unsupported feature data
@@ -62,16 +72,18 @@ Callers must serialize changes and revalidate native
 eligibility before performing real persistence or publication; preparation is
 not a native-context reservation.
 
-Schema 1 omits peer Space name/icon/theme payloads, Space presentation order,
-split orientation/weights, selected page/pane, group payloads, undo history and
-native session joins. It supplies no generic opaque extension payload or second
-peer DTO/codec. Callers must inspect their feature stores and explicitly attest
-that unsupported feature payloads are absent; missing/false attestation rejects
-capture, encoding, preparation and restore. Record vector order is serialization
-order, not user presentation order. Existing `Model::splits` membership order is
-retained, without claiming presentation persistence. Binding the exact canonical
-peer headers and evolving the format remains root integration work. A model
-alone cannot establish that these external stores are empty.
+Schema 2 preserves the canonical Space name/icon_key/theme_key optionals and
+explicit vector display order. Missing values and explicit empty strings remain
+distinct. Shared-Profile Spaces retain independent identities. It omits folders,
+custom theme/palette payload beyond theme_key, split orientation/weights,
+selected page/pane, group payloads, undo history and native session joins.
+Callers must explicitly attest that every omitted payload is absent;
+missing/false attestation refuses. The composition adapter requires separate
+unknown/absent/present reports for folders, custom themes, split presentation
+and other omitted payloads. Only absent reports pass. Graph record order is
+normalized for comparison, except ordered split membership. Space metadata order
+and all optional values compare exactly through
+`SnapshotMatchesModel(snapshot, model, metadata)`.
 
 Decode and recovery inspect previously stored metadata without native admission.
 They do not publish it to a browser or authorize writing it back. Future schema
@@ -79,15 +91,16 @@ or semantic versions are refused, never normalized into the current format.
 
 ## Wire format
 
-Schema 1 is an uncompressed binary artifact. Unsigned integers use little endian.
+Schema 2 is an uncompressed binary artifact. Unsigned integers use little endian.
 The fixed envelope contains ASCII `ARCSESS\n` at byte 0, a `uint32` schema version
 at byte 8, and a `uint32` semantic contract version at byte 12. `ProbeEnvelope`
 reads only this complete envelope, including unsupported version numbers. It
 does not authenticate or validate the body.
 
-The body contains eight record sequences in this order: Profiles, Spaces,
-windows, attachments, items, shortcuts, pages, splits. Each sequence starts with
-a `uint64` count. Each string starts with its byte length as `uint64`, then exact
+The body contains nine record sequences in this order: Profiles, Spaces,
+windows, attachments, items, shortcuts, pages, splits, Space metadata. Each
+sequence starts with a `uint64` count. Each string starts with its byte length as
+`uint64`, then exact
 bytes. Identity strings use the existing model's nonempty-ID rules and are not
 interpreted as display names, URLs or native identities. Schema field order is
 defined by the single encoder/decoder:
@@ -100,6 +113,13 @@ defined by the single encoder/decoder:
 6. Shortcut: ID, Profile ID, target item ID.
 7. Page: ID, Profile ID, owner tag, owner ID, attachment.
 8. Split: ID, attachment, page-ID sequence in membership order.
+9. Space metadata: Space ID, name presence tag and optional text, icon_key
+   presence tag and optional text, theme_key presence tag and optional text.
+   Record sequence is explicit display order.
+
+Metadata presence tags use 0 for absent and 1 for present. Present text uses the
+same byte-length-prefixed string encoding, including length zero. No second
+metadata schema, registry or codec is added.
 
 Tags are one byte. Window tags are 0 absent and 1 present. Item tags are 0 Space
 and 1 Profile. Page tags are 0 temporary-tab owner and 1 saved-item owner. Other
@@ -182,13 +202,16 @@ committed original, every single-bit corruption of the fixture being rejected,
 and exact-byte stale-source commit refusal. Independent checksum fixtures check
 the wire envelope and a checksum-valid impossible record count. Missing whole
 admission and rejected Window-only graphs refuse through the public persistence
-operations, including commit. Integration fixtures cover graph provenance and
-native/peer changes after preparation.
+operations, including commit. Integration fixtures cover graph and complete
+metadata provenance, forged candidates, stale order/display edits after staging,
+native/peer changes after preparation, and a newly admitted metadata candidate
+replacing an older original. Exact checks and remaining limits are recorded in
+[the metadata response](../reviews/space-metadata-durability-response.md).
 
 Issue 50 remains open. No installed-build Linux, Windows or macOS interaction,
 visual/accessibility check, browser crash, controlled native disk interruption,
 OS filesystem durability, native identity mapping or same-OS-window Profile
-restore was tested. Space presentation order/page selection, native skipped-tab
+restore was tested. Native Space presentation order/page selection, native skipped-tab
 reconciliation, allocation/tombstones, disk commit protocol, recovery UI and
 canonical peer feature persistence remain integration needs. Unsaved renderer
 memory and form resubmission are not supported recovery guarantees.
@@ -200,8 +223,8 @@ Chromium build or native browser test.
 
 ```sh
 clang-format --style=Chromium --dry-run --Werror arcified/native/features/durability/session_snapshot.h arcified/native/features/durability/session_snapshot.cc arcified/native/features/durability/session_snapshot_test.cc
-clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic arcified/native/model/lifecycle.cc arcified/native/features/durability/session_snapshot.cc arcified/native/features/durability/session_snapshot_test.cc -o /tmp/arcified-session-durability-test
+clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic arcified/native/model/lifecycle.cc arcified/native/features/space_management/space_management.cc arcified/native/features/durability/session_snapshot.cc arcified/native/features/durability/session_snapshot_test.cc -o /tmp/arcified-session-durability-test
 /tmp/arcified-session-durability-test
-clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic -g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer arcified/native/model/lifecycle.cc arcified/native/features/durability/session_snapshot.cc arcified/native/features/durability/session_snapshot_test.cc -o /tmp/arcified-session-durability-sanitized
+clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic -g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer arcified/native/model/lifecycle.cc arcified/native/features/space_management/space_management.cc arcified/native/features/durability/session_snapshot.cc arcified/native/features/durability/session_snapshot_test.cc -o /tmp/arcified-session-durability-sanitized
 ASAN_OPTIONS=halt_on_error=1 UBSAN_OPTIONS=halt_on_error=1 /tmp/arcified-session-durability-sanitized
 ```

@@ -15,16 +15,21 @@ durability::Failure Refused() {
           "coherent regular native bindings required"};
 }
 
-std::optional<durability::Failure> CheckAll(const lifecycle::Model& model,
-                                            const NativeContextSource& source) {
+std::optional<durability::Failure> CheckAll(
+    const lifecycle::Model& model,
+    const space_management::Metadata& metadata,
+    const NativeContextSource& source) {
+  if (space_management::ValidateMetadata(model, metadata))
+    return durability::Failure{durability::Error::kInvalidMetadata,
+                               "incomplete/invalid Space metadata"};
   const auto payloads = source.ReadPeerPayloads();
-  if (payloads.space_display_and_order != PayloadPresence::kAbsent ||
-      payloads.folders != PayloadPresence::kAbsent ||
+  if (payloads.folders != PayloadPresence::kAbsent ||
       payloads.themes != PayloadPresence::kAbsent ||
-      payloads.split_presentation != PayloadPresence::kAbsent) {
+      payloads.split_presentation != PayloadPresence::kAbsent ||
+      payloads.other != PayloadPresence::kAbsent) {
     return durability::Failure{
         durability::Error::kUnsupportedFeatures,
-        "schema 1 peer feature payload absence not established"};
+        "omitted peer feature payload absence not established"};
   }
 
   // Temporary consistency evidence for this invocation, never a live registry.
@@ -88,24 +93,27 @@ std::optional<durability::Failure> CheckAll(const lifecycle::Model& model,
 
 durability::Result<durability::SnapshotAdmission> ComposeSnapshotAdmission(
     const lifecycle::Model& model,
+    const space_management::Metadata& metadata,
     const NativeContextSource& source) {
-  if (const auto refusal = CheckAll(model, source))
+  if (const auto refusal = CheckAll(model, metadata, source))
     return *refusal;
   return durability::SnapshotAdmission{
-      [&model, &source](const durability::DurableSnapshot& snapshot)
+      [&model, &metadata, &source](const durability::DurableSnapshot& snapshot)
           -> std::optional<durability::Failure> {
-        if (!durability::SnapshotMatchesModel(snapshot, model))
+        if (!durability::SnapshotMatchesModel(snapshot, model, metadata))
           return Refused();
-        return CheckAll(model, source);
+        return CheckAll(model, metadata, source);
       },
-      [&model, &source](const lifecycle::ProfileId& profile) {
-        return model.profiles().count(profile) && !CheckAll(model, source);
+      [&model, &metadata, &source](const lifecycle::ProfileId& profile) {
+        return model.profiles().count(profile) &&
+               !CheckAll(model, metadata, source);
       },
-      [&model, &source](const lifecycle::PageId& page,
-                        const lifecycle::ProfileId& profile) {
+      [&model, &metadata, &source](const lifecycle::PageId& page,
+                                   const lifecycle::ProfileId& profile) {
         const auto found = model.pages().find(page);
         return found != model.pages().end() &&
-               found->second.profile == profile && !CheckAll(model, source);
+               found->second.profile == profile &&
+               !CheckAll(model, metadata, source);
       },
       true};
 }

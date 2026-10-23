@@ -11,16 +11,18 @@
 #include <vector>
 
 #include "../../model/lifecycle.h"
+#include "../space_management/space_management.h"
 
 namespace arcified::durability {
 
-inline constexpr std::uint32_t kSchemaVersion = 1;
+inline constexpr std::uint32_t kSchemaVersion = 2;
 
 enum class Error {
   kMalformed,
   kUnsupportedSchema,
   kUnsupportedContract,
   kInvalidGraph,
+  kInvalidMetadata,
   kNavigationEvidenceRequired,
   kRecoveryRequired,
   kStaleSource,
@@ -51,6 +53,7 @@ struct DurableSnapshot {
   std::uint32_t contract_version = lifecycle::kContractVersion;
   std::vector<lifecycle::ProfileId> profiles;
   std::vector<std::pair<lifecycle::SpaceId, lifecycle::Space>> spaces;
+  space_management::Metadata space_metadata;
   std::vector<std::pair<lifecycle::WindowId, lifecycle::Window>> windows;
   std::vector<lifecycle::Attachment> attachments;
   std::vector<std::pair<lifecycle::ItemId, lifecycle::PersistentItem>> items;
@@ -72,18 +75,22 @@ struct SnapshotAdmission {
   std::function<bool(const lifecycle::ProfileId&)> profile_may_persist;
   std::function<bool(const lifecycle::PageId&, const lifecycle::ProfileId&)>
       page_may_persist;
-  // Schema 1 has no Space metadata or split presentation payload codec. The
-  // caller must inspect its feature stores and attest those payloads absent.
+  // Folders, custom theme/palette payload beyond theme_key, split presentation
+  // and other omitted feature payloads must be explicitly absent.
   bool unsupported_feature_payloads_absent = false;
 };
-Result<DurableSnapshot> CaptureSnapshot(const lifecycle::Model& model,
-                                        const SnapshotAdmission& admission);
+Result<DurableSnapshot> CaptureSnapshot(
+    const lifecycle::Model& model,
+    const space_management::Metadata& metadata,
+    const SnapshotAdmission& admission);
 std::optional<Failure> ValidateSnapshot(const DurableSnapshot& snapshot);
 // Compares the complete durable graph through the shared validation/projection
-// and codec. Record order is ignored except ordered split membership. Native
+// and codec. Record order is ignored except Space display order and ordered
+// split membership. Optional display values compare exactly. Native
 // navigation/activity are excluded. This comparison grants no admission.
 bool SnapshotMatchesModel(const DurableSnapshot& snapshot,
-                          const lifecycle::Model& model);
+                          const lifecycle::Model& model,
+                          const space_management::Metadata& metadata);
 // Probe reads the fixed envelope only. It does not validate the body/checksum.
 Result<EnvelopeVersion> ProbeEnvelope(std::string_view bytes);
 Result<std::string> EncodeSnapshot(const DurableSnapshot& snapshot,
@@ -98,7 +105,13 @@ struct RestoredNavigation {
   lifecycle::ProfileId profile;
   std::string committed_destination;
 };
-Result<lifecycle::Model> RestoreSnapshot(
+// Callers must adopt both values together. No conversion to Model discards the
+// metadata, and no presentation defaults or reconciliation run during restore.
+struct RestoredSession {
+  lifecycle::Model model;
+  space_management::Metadata space_metadata;
+};
+Result<RestoredSession> RestoreSnapshot(
     const DurableSnapshot& snapshot,
     const std::vector<RestoredNavigation>& navigation,
     const SnapshotAdmission& admission);

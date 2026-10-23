@@ -20,7 +20,7 @@ std::optional<Failure> Admit(const DurableSnapshot& snapshot,
                              const SnapshotAdmission& admission) {
   if (!admission.unsupported_feature_payloads_absent)
     return Failure{Error::kUnsupportedFeatures,
-                   "Space metadata/split presentation absence not established"};
+                   "omitted feature payload absence not established"};
   if (!admission.snapshot_may_persist || !admission.profile_may_persist ||
       !admission.page_may_persist)
     return Failure{Error::kPersistenceNotAdmitted,
@@ -56,6 +56,9 @@ Result<Model> BuildModel(
   for (const auto& [id, space] : snapshot.spaces)
     if (model.AddSpace(id, space.profile) != Status::kOk)
       return Invalid("Space identity/Profile");
+  if (space_management::ValidateMetadata(model, snapshot.space_metadata))
+    return Failure{Error::kInvalidMetadata,
+                   "incomplete/invalid Space metadata"};
   for (const auto& [id, window] : snapshot.windows)
     if (model.AddWindow(id) != Status::kOk)
       return Invalid("window identity");
@@ -135,6 +138,11 @@ class Writer {
     Integer<std::uint64_t>(value.size());
     bytes.append(value);
   }
+  void OptionalText(const std::optional<std::string>& value) {
+    Integer<std::uint8_t>(value.has_value());
+    if (value)
+      Text(*value);
+  }
   template <typename Tag>
   void Identity(const Id<Tag>& id) {
     Text(id.value);
@@ -184,6 +192,11 @@ class Reader {
     bytes_.remove_prefix(static_cast<std::size_t>(length));
     return text;
   }
+  std::optional<std::string> OptionalText() {
+    if (Tag())
+      return Text();
+    return std::nullopt;
+  }
   template <typename T>
   T Identity() {
     return T(Text());
@@ -215,8 +228,10 @@ class Reader {
   bool valid_ = true;
 };
 
-DurableSnapshot ProjectModel(const Model& model) {
+DurableSnapshot ProjectModel(const Model& model,
+                             const space_management::Metadata& metadata) {
   DurableSnapshot snapshot;
+  snapshot.space_metadata = metadata;
   for (const auto& [id, profile] : model.profiles())
     snapshot.profiles.push_back(id);
   snapshot.spaces.assign(model.spaces().begin(), model.spaces().end());
@@ -235,9 +250,13 @@ std::string EncodeRecords(const DurableSnapshot& snapshot);
 
 }  // namespace
 
-Result<DurableSnapshot> CaptureSnapshot(const Model& model,
-                                        const SnapshotAdmission& admission) {
-  auto snapshot = ProjectModel(model);
+Result<DurableSnapshot> CaptureSnapshot(
+    const Model& model,
+    const space_management::Metadata& metadata,
+    const SnapshotAdmission& admission) {
+  auto snapshot = ProjectModel(model, metadata);
+  if (auto failure = ValidateSnapshot(snapshot))
+    return *failure;
   if (auto failure = Admit(snapshot, admission))
     return *failure;
   return snapshot;
@@ -250,11 +269,14 @@ std::optional<Failure> ValidateSnapshot(const DurableSnapshot& snapshot) {
   return std::nullopt;
 }
 
-bool SnapshotMatchesModel(const DurableSnapshot& snapshot, const Model& model) {
+bool SnapshotMatchesModel(const DurableSnapshot& snapshot,
+                          const Model& model,
+                          const space_management::Metadata& metadata) {
   const auto normalized = BuildModel(snapshot, nullptr);
   const auto* graph = std::get_if<Model>(&normalized);
-  return graph && EncodeRecords(ProjectModel(*graph)) ==
-                      EncodeRecords(ProjectModel(model));
+  return graph && !space_management::ValidateMetadata(model, metadata) &&
+         EncodeRecords(ProjectModel(*graph, snapshot.space_metadata)) ==
+             EncodeRecords(ProjectModel(model, metadata));
 }
 
 Result<EnvelopeVersion> ProbeEnvelope(std::string_view bytes) {
@@ -326,6 +348,12 @@ std::string EncodeRecords(const DurableSnapshot& snapshot) {
     w.Identity(record.first);
     w.Attached(record.second.attachment);
     w.Records(record.second.pages, [&](const auto& id) { w.Identity(id); });
+  });
+  w.Records(snapshot.space_metadata, [&](const auto& record) {
+    w.Identity(record.space);
+    w.OptionalText(record.identity.name);
+    w.OptionalText(record.identity.icon_key);
+    w.OptionalText(record.identity.theme_key);
   });
   w.Integer(Checksum(w.bytes));
   return std::move(w.bytes);
@@ -402,6 +430,14 @@ Result<DurableSnapshot> DecodeSnapshot(std::string_view bytes) {
     return std::make_pair(std::move(id),
                           Split{std::move(attachment), std::move(pages)});
   });
+  s.space_metadata = r.Records([&] {
+    auto space = r.Identity<SpaceId>();
+    auto name = r.OptionalText();
+    auto icon = r.OptionalText();
+    auto theme = r.OptionalText();
+    return space_management::SpaceMetadata{
+        std::move(space), {std::move(name), std::move(icon), std::move(theme)}};
+  });
   if (!r.complete())
     return Failure{Error::kMalformed,
                    "invalid/truncated/trailing workspace data"};
@@ -410,9 +446,10 @@ Result<DurableSnapshot> DecodeSnapshot(std::string_view bytes) {
   return s;
 }
 
-Result<Model> RestoreSnapshot(const DurableSnapshot& snapshot,
-                              const std::vector<RestoredNavigation>& navigation,
-                              const SnapshotAdmission& admission) {
+Result<RestoredSession> RestoreSnapshot(
+    const DurableSnapshot& snapshot,
+    const std::vector<RestoredNavigation>& navigation,
+    const SnapshotAdmission& admission) {
   if (auto failure = ValidateSnapshot(snapshot))
     return *failure;
   if (auto failure = Admit(snapshot, admission))
@@ -432,7 +469,11 @@ Result<Model> RestoreSnapshot(const DurableSnapshot& snapshot,
       return Failure{Error::kNavigationEvidenceRequired,
                      "native page identity/Profile report mismatch"};
   }
-  return BuildModel(snapshot, &reports);
+  auto model = BuildModel(snapshot, &reports);
+  if (const auto* failure = std::get_if<Failure>(&model))
+    return *failure;
+  return RestoredSession{std::get<Model>(std::move(model)),
+                         snapshot.space_metadata};
 }
 
 Result<Recovery> Recover(const StoreImage& image) {

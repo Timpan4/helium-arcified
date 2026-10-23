@@ -40,6 +40,7 @@ void ExpectError(const durability::Result<T>& result, Error error) {
   REQUIRE(std::get<Failure>(result).code == error);
 }
 
+const space_management::Metadata kNoMetadata;
 const ProfileId kWork{"work"};
 const ProfileId kHome{"home"};
 const ProfileId kUnattached{"unattached"};
@@ -65,7 +66,7 @@ struct Observations final : NativeContextSource {
   std::map<ProfileId, ContextObservation> profiles;
   std::map<PageId, PageObservation> pages;
   std::map<WindowId, std::vector<ContextObservation>> windows;
-  Schema1PeerPayloads payloads{
+  UnsupportedPeerPayloads payloads{
       PayloadPresence::kAbsent, PayloadPresence::kAbsent,
       PayloadPresence::kAbsent, PayloadPresence::kAbsent};
 
@@ -84,11 +85,16 @@ struct Observations final : NativeContextSource {
     const auto found = windows.find(id);
     return found == windows.end() ? std::nullopt : std::optional(found->second);
   }
-  Schema1PeerPayloads ReadPeerPayloads() const override { return payloads; }
+  UnsupportedPeerPayloads ReadPeerPayloads() const override { return payloads; }
 };
 
 struct Fixture {
   Model model;
+  space_management::Metadata metadata{
+      {kUnattachedSpace, {std::nullopt, "", "theme:夜"}},
+      {SpaceId("other-work"), {"仕事 🌌", std::nullopt, ""}},
+      {kHomeSpace, {"", "星", std::nullopt}},
+      {kDesk, {std::nullopt, std::nullopt, std::nullopt}}};
   Observations facts;
 
   Fixture() {
@@ -99,6 +105,7 @@ struct Fixture {
     REQUIRE(model.AddSpace(kDesk, kWork) == Status::kOk);
     REQUIRE(model.AddSpace(kHomeSpace, kHome) == Status::kOk);
     REQUIRE(model.AddSpace(kUnattachedSpace, kUnattached) == Status::kOk);
+    REQUIRE(model.AddSpace(SpaceId("other-work"), kWork) == Status::kOk);
     REQUIRE(model.AddWindow(kWindow) == Status::kOk);
     REQUIRE(model.AddWindow(kEmptyWindow) == Status::kOk);
     REQUIRE(model.Attach(kHere) == Status::kOk);
@@ -126,7 +133,7 @@ struct Fixture {
   }
 
   durability::SnapshotAdmission Admission() const {
-    return Value(ComposeSnapshotAdmission(model, facts));
+    return Value(ComposeSnapshotAdmission(model, metadata, facts));
   }
   std::vector<durability::RestoredNavigation> Navigation() const {
     std::vector<durability::RestoredNavigation> reports;
@@ -139,7 +146,8 @@ struct Fixture {
 void EligibleRoundTrip() {
   const Fixture f;
   const auto admission = f.Admission();
-  const auto snapshot = Value(durability::CaptureSnapshot(f.model, admission));
+  const auto snapshot =
+      Value(durability::CaptureSnapshot(f.model, f.metadata, admission));
   REQUIRE(snapshot.profiles.size() == f.model.profiles().size());
   REQUIRE(snapshot.pages.size() == f.model.pages().size());
   const auto bytes = Value(durability::EncodeSnapshot(snapshot, admission));
@@ -159,14 +167,16 @@ void EligibleRoundTrip() {
   REQUIRE(!committed.candidate);
   const auto restored =
       Value(durability::RestoreSnapshot(read, f.Navigation(), admission));
-  REQUIRE(restored.pages().at(kSaved).current_navigation ==
+  REQUIRE(restored.model.pages().at(kSaved).current_navigation ==
           f.model.pages().at(kSaved).current_navigation);
-  REQUIRE(restored.windows().at(kWindow).selected_space == kHomeSpace);
-  REQUIRE(restored.profiles().count(kUnattached));
-  REQUIRE(restored.pages().at(kSaved).profile == kWork);
-  REQUIRE(restored.pages().at(kSaved).activity == Activity::kUnknown);
+  REQUIRE(restored.model.windows().at(kWindow).selected_space == kHomeSpace);
+  REQUIRE(restored.model.profiles().count(kUnattached));
+  REQUIRE(restored.space_metadata == f.metadata);
+  REQUIRE(restored.model.pages().at(kSaved).profile == kWork);
+  REQUIRE(restored.model.pages().at(kSaved).activity == Activity::kUnknown);
   REQUIRE(Value(durability::EncodeSnapshot(
-              Value(durability::CaptureSnapshot(restored, admission)),
+              Value(durability::CaptureSnapshot(
+                  restored.model, restored.space_metadata, admission)),
               admission)) == bytes);
   REQUIRE(source == gate.source());
   REQUIRE(!admission.profile_may_persist(ProfileId("unknown")));
@@ -179,7 +189,8 @@ void RefusalPreserves(Change change,
                       Error compose_error = Error::kPersistenceNotAdmitted) {
   Fixture f;
   const auto admission = f.Admission();
-  const auto snapshot = Value(durability::CaptureSnapshot(f.model, admission));
+  const auto snapshot =
+      Value(durability::CaptureSnapshot(f.model, f.metadata, admission));
   const auto bytes = Value(durability::EncodeSnapshot(snapshot, admission));
   const durability::StoreImage source{bytes, std::nullopt};
   const migrations::CompatibilityGate gate(source);
@@ -188,9 +199,11 @@ void RefusalPreserves(Change change,
   const auto prepared = Value(gate.PrepareWrite(source, snapshot, admission));
   const auto staged = prepared.staged_image();
   change(f.facts);
-  ExpectError(ComposeSnapshotAdmission(f.model, f.facts), compose_error);
+  ExpectError(ComposeSnapshotAdmission(f.model, f.metadata, f.facts),
+              compose_error);
   // Previously composed callbacks re-read the caller. No cached allow decision.
-  ExpectError(durability::CaptureSnapshot(f.model, admission), compose_error);
+  ExpectError(durability::CaptureSnapshot(f.model, f.metadata, admission),
+              compose_error);
   ExpectError(durability::EncodeSnapshot(snapshot, admission), compose_error);
   ExpectError(gate.PrepareWrite(source, snapshot, admission), compose_error);
   ExpectError(durability::RestoreSnapshot(snapshot, navigation, admission),
@@ -206,9 +219,9 @@ void RefusalPreserves(Change change,
   REQUIRE(!source.candidate);
   REQUIRE(f.Navigation().size() == navigation.size());
   f.facts = retained_facts;
-  REQUIRE(Value(durability::EncodeSnapshot(
-              Value(durability::CaptureSnapshot(f.model, admission)),
-              admission)) == bytes);
+  REQUIRE(Value(durability::EncodeSnapshot(Value(durability::CaptureSnapshot(
+                                               f.model, f.metadata, admission)),
+                                           admission)) == bytes);
   for (const auto& report : navigation)
     REQUIRE(f.model.pages().at(report.page).current_navigation ==
             report.committed_destination);
@@ -233,7 +246,7 @@ void MissingObservations() {
   Observations absent;
   REQUIRE(empty.AddWindow(kEmptyWindow) == Status::kOk);
   // A Window without a registered regular Profile context cannot be admitted.
-  ExpectError(ComposeSnapshotAdmission(empty, absent),
+  ExpectError(ComposeSnapshotAdmission(empty, kNoMetadata, absent),
               Error::kPersistenceNotAdmitted);
 }
 
@@ -319,9 +332,9 @@ void BindingConfusion() {
 
 void PeerPayloadsRemainExplicit() {
   for (const auto member :
-       {&Schema1PeerPayloads::space_display_and_order,
-        &Schema1PeerPayloads::folders, &Schema1PeerPayloads::themes,
-        &Schema1PeerPayloads::split_presentation}) {
+       {&UnsupportedPeerPayloads::folders, &UnsupportedPeerPayloads::themes,
+        &UnsupportedPeerPayloads::split_presentation,
+        &UnsupportedPeerPayloads::other}) {
     for (const auto presence :
          {PayloadPresence::kUnknown, PayloadPresence::kPresent}) {
       RefusalPreserves(
@@ -332,14 +345,15 @@ void PeerPayloadsRemainExplicit() {
   Model empty;
   Observations unknown;
   unknown.payloads = {};
-  ExpectError(ComposeSnapshotAdmission(empty, unknown),
+  ExpectError(ComposeSnapshotAdmission(empty, kNoMetadata, unknown),
               Error::kUnsupportedFeatures);
 }
 
 void NativeIdentityNeverSerialized() {
   Fixture f;
   const auto first = f.Admission();
-  const auto snapshot = Value(durability::CaptureSnapshot(f.model, first));
+  const auto snapshot =
+      Value(durability::CaptureSnapshot(f.model, f.metadata, first));
   const auto bytes = Value(durability::EncodeSnapshot(snapshot, first));
   for (const auto& [profile, context] : f.facts.profiles)
     REQUIRE(bytes.find(context.binding.context.value) == std::string::npos);
@@ -361,7 +375,8 @@ void NativeIdentityNeverSerialized() {
 void ChangedAttachmentRequiresNewNativeObservation() {
   Fixture f;
   const auto admission = f.Admission();
-  const auto old = Value(durability::CaptureSnapshot(f.model, admission));
+  const auto old =
+      Value(durability::CaptureSnapshot(f.model, f.metadata, admission));
   const auto bytes = Value(durability::EncodeSnapshot(old, admission));
   const durability::StoreImage source{bytes, std::nullopt};
   const auto prepared = Value(durability::PrepareWrite(source, old, admission));
@@ -371,7 +386,7 @@ void ChangedAttachmentRequiresNewNativeObservation() {
           Status::kOk);
   // Retaining the old Page observation after an actual model transfer refuses.
   // The old callback does not retain a prepared Page or attachment permit.
-  ExpectError(durability::CaptureSnapshot(f.model, admission),
+  ExpectError(durability::CaptureSnapshot(f.model, f.metadata, admission),
               Error::kPersistenceNotAdmitted);
   REQUIRE(f.model.pages().at(kSaved).attachment() ==
           (Attachment{kEmptyWindow, kDesk}));
@@ -393,10 +408,11 @@ void ChangedAttachmentRequiresNewNativeObservation() {
   REQUIRE(staged.original == bytes);
   REQUIRE(staged.candidate == bytes);
   REQUIRE(gate.source() == source);
-  const auto snapshot = Value(durability::CaptureSnapshot(f.model, refreshed));
+  const auto snapshot =
+      Value(durability::CaptureSnapshot(f.model, f.metadata, refreshed));
   const auto restored =
       Value(durability::RestoreSnapshot(snapshot, f.Navigation(), refreshed));
-  REQUIRE(restored.pages().at(kSaved).attachment() ==
+  REQUIRE(restored.model.pages().at(kSaved).attachment() ==
           (Attachment{kEmptyWindow, kDesk}));
   const auto next = Value(gate.PrepareWrite(source, snapshot, refreshed));
   const auto committed = Value(durability::CommitPreparedWrite(
@@ -404,7 +420,7 @@ void ChangedAttachmentRequiresNewNativeObservation() {
   const auto recovered = Value(durability::Recover(committed));
   REQUIRE(Value(durability::RestoreSnapshot(recovered.snapshot, f.Navigation(),
                                             f.Admission()))
-              .pages()
+              .model.pages()
               .at(kSaved)
               .attachment() == (Attachment{kEmptyWindow, kDesk}));
 }
@@ -412,7 +428,8 @@ void ChangedAttachmentRequiresNewNativeObservation() {
 void EveryDurableRecordRequiresProvenance() {
   const Fixture f;
   const auto admission = f.Admission();
-  const auto snapshot = Value(durability::CaptureSnapshot(f.model, admission));
+  const auto snapshot =
+      Value(durability::CaptureSnapshot(f.model, f.metadata, admission));
   const auto bytes = Value(durability::EncodeSnapshot(snapshot, admission));
   const durability::StoreImage source{bytes, std::nullopt};
   const migrations::CompatibilityGate gate(source);
@@ -456,18 +473,124 @@ void EveryDurableRecordRequiresProvenance() {
   Value(durability::EncodeSnapshot(reordered, f.Admission()));
 }
 
+void CompleteMetadataAndCandidateProvenance() {
+  Fixture f;
+  const auto admission = f.Admission();
+  const auto snapshot =
+      Value(durability::CaptureSnapshot(f.model, f.metadata, admission));
+  const auto bytes = Value(durability::EncodeSnapshot(snapshot, admission));
+  const durability::StoreImage source{bytes, std::nullopt};
+  const migrations::CompatibilityGate gate(source);
+  const auto prepared = Value(gate.PrepareWrite(source, snapshot, admission));
+  const auto staged = prepared.staged_image();
+  const auto original_metadata = f.metadata;
+
+  auto missing = original_metadata;
+  missing.pop_back();
+  auto duplicate = original_metadata;
+  duplicate.push_back(duplicate.front());
+  auto unknown = original_metadata;
+  unknown.front().space = SpaceId("unknown");
+  for (const auto& invalid :
+       {space_management::Metadata{}, missing, duplicate, unknown}) {
+    f.metadata = invalid;
+    ExpectError(ComposeSnapshotAdmission(f.model, f.metadata, f.facts),
+                Error::kInvalidMetadata);
+    ExpectError(durability::CaptureSnapshot(f.model, f.metadata, admission),
+                Error::kInvalidMetadata);
+    auto malformed = snapshot;
+    malformed.space_metadata = invalid;
+    REQUIRE(durability::ValidateSnapshot(malformed)->code ==
+            Error::kInvalidMetadata);
+    ExpectError(durability::EncodeSnapshot(malformed, admission),
+                Error::kInvalidMetadata);
+    ExpectError(gate.PrepareWrite(source, malformed, admission),
+                Error::kInvalidMetadata);
+    ExpectError(
+        durability::RestoreSnapshot(malformed, f.Navigation(), admission),
+        Error::kInvalidMetadata);
+    REQUIRE(!durability::SnapshotMatchesModel(snapshot, f.model, invalid));
+    REQUIRE(prepared.source() == source);
+    REQUIRE(prepared.staged_image() == staged);
+    REQUIRE(gate.source() == source);
+  }
+  f.metadata = original_metadata;
+  const std::function<void(space_management::Metadata&)> changes[] = {
+      [](auto& m) { std::reverse(m.begin(), m.end()); },
+      [](auto& m) { m.front().identity.name = ""; },
+      [](auto& m) { m.front().identity.icon_key.reset(); },
+      [](auto& m) { m.front().identity.theme_key = "other-theme"; },
+  };
+  for (const auto& change : changes) {
+    auto forged = snapshot;
+    change(forged.space_metadata);
+    REQUIRE(!durability::ValidateSnapshot(forged));
+    ExpectError(durability::EncodeSnapshot(forged, admission),
+                Error::kPersistenceNotAdmitted);
+    ExpectError(gate.PrepareWrite(source, forged, admission),
+                Error::kPersistenceNotAdmitted);
+    ExpectError(durability::RestoreSnapshot(forged, f.Navigation(), admission),
+                Error::kPersistenceNotAdmitted);
+
+    // A legitimate display edit after preparation invalidates the old candidate
+    // with both retained callbacks and newly composed current admission.
+    f.metadata = forged.space_metadata;
+    ExpectError(
+        durability::CaptureSnapshot(f.model, original_metadata, admission),
+        Error::kPersistenceNotAdmitted);
+    const auto current = f.Admission();
+    ExpectError(durability::EncodeSnapshot(snapshot, current),
+                Error::kPersistenceNotAdmitted);
+    ExpectError(gate.PrepareWrite(source, snapshot, current),
+                Error::kPersistenceNotAdmitted);
+    ExpectError(durability::RestoreSnapshot(snapshot, f.Navigation(), current),
+                Error::kPersistenceNotAdmitted);
+    for (const auto& check : {admission, current})
+      ExpectError(durability::CommitPreparedWrite(staged, prepared, check),
+                  Error::kPersistenceNotAdmitted);
+    REQUIRE(prepared.source() == source);
+    REQUIRE(prepared.staged_image() == staged);
+    REQUIRE(gate.source() == source);
+
+    // Candidate metadata, rather than the older committed original, is
+    // admitted.
+    const auto next =
+        Value(durability::CaptureSnapshot(f.model, f.metadata, current));
+    const auto next_write = Value(gate.PrepareWrite(source, next, current));
+    const auto next_staged = next_write.staged_image();
+    REQUIRE(next_staged.original == bytes);
+    REQUIRE(next_staged.candidate != bytes);
+    const auto committed = Value(
+        durability::CommitPreparedWrite(next_staged, next_write, current));
+    const auto recovered = Value(durability::Recover(committed));
+    const auto restored = Value(durability::RestoreSnapshot(
+        recovered.snapshot, f.Navigation(), current));
+    REQUIRE(restored.space_metadata == f.metadata);
+    REQUIRE(Value(durability::EncodeSnapshot(
+                Value(durability::CaptureSnapshot(
+                    restored.model, restored.space_metadata, current)),
+                current)) == *committed.original);
+    REQUIRE(next_write.source() == source);
+    REQUIRE(next_write.staged_image() == next_staged);
+    f.metadata = original_metadata;
+  }
+}
+
 void EmptyAndWindowOnlyGraphsRecheckAtUse() {
   Model model;
+  const space_management::Metadata metadata;
   Observations facts;
-  const auto admission = Value(ComposeSnapshotAdmission(model, facts));
-  const auto empty = Value(durability::CaptureSnapshot(model, admission));
+  const auto admission =
+      Value(ComposeSnapshotAdmission(model, metadata, facts));
+  const auto empty =
+      Value(durability::CaptureSnapshot(model, metadata, admission));
   const auto bytes = Value(durability::EncodeSnapshot(empty, admission));
   const durability::StoreImage source{bytes, std::nullopt};
   const auto prepared =
       Value(durability::PrepareWrite(source, empty, admission));
   const auto staged = prepared.staged_image();
   facts.payloads.folders = PayloadPresence::kPresent;
-  ExpectError(durability::CaptureSnapshot(model, admission),
+  ExpectError(durability::CaptureSnapshot(model, metadata, admission),
               Error::kUnsupportedFeatures);
   ExpectError(durability::EncodeSnapshot(empty, admission),
               Error::kUnsupportedFeatures);
@@ -482,16 +605,17 @@ void EmptyAndWindowOnlyGraphsRecheckAtUse() {
   facts.payloads.folders = PayloadPresence::kAbsent;
   REQUIRE(model.AddWindow(kEmptyWindow) == Status::kOk);
   // No per-Profile or per-Page check can see this unobserved Window.
-  ExpectError(durability::CaptureSnapshot(model, admission),
+  ExpectError(durability::CaptureSnapshot(model, metadata, admission),
               Error::kPersistenceNotAdmitted);
-  ExpectError(ComposeSnapshotAdmission(model, facts),
+  ExpectError(ComposeSnapshotAdmission(model, metadata, facts),
               Error::kPersistenceNotAdmitted);
   REQUIRE(model.AddProfile(kWork) == Status::kOk);
   facts.profiles.emplace(kWork, Regular(kWork));
   facts.windows.emplace(kEmptyWindow,
                         std::vector<ContextObservation>{Regular(kWork)});
-  const auto current = Value(ComposeSnapshotAdmission(model, facts));
-  const auto window = Value(durability::CaptureSnapshot(model, current));
+  const auto current = Value(ComposeSnapshotAdmission(model, metadata, facts));
+  const auto window =
+      Value(durability::CaptureSnapshot(model, metadata, current));
   REQUIRE(window.pages.empty());
   REQUIRE(window.spaces.empty());
   facts.windows.at(kEmptyWindow).front().facts.kind =
@@ -503,7 +627,8 @@ void EmptyAndWindowOnlyGraphsRecheckAtUse() {
 void SchemaGatePreservesImages() {
   const Fixture f;
   const auto admission = f.Admission();
-  const auto snapshot = Value(durability::CaptureSnapshot(f.model, admission));
+  const auto snapshot =
+      Value(durability::CaptureSnapshot(f.model, f.metadata, admission));
   const auto bytes = Value(durability::EncodeSnapshot(snapshot, admission));
   auto future = bytes;
   future[8] = static_cast<char>(durability::kSchemaVersion + 1);
@@ -537,6 +662,7 @@ void SchemaGatePreservesImages() {
 }  // namespace arcified::persistence
 
 int main() {
+  arcified::persistence::CompleteMetadataAndCandidateProvenance();
   arcified::persistence::EligibleRoundTrip();
   arcified::persistence::MissingObservations();
   arcified::persistence::SharedClassifierRefusals();

@@ -11,7 +11,8 @@
 namespace arcified::migrations {
 
 // Only actual formats belong here. Semantic lifecycle revisions are not
-// historical disk schemas, and no predecessor transform is registered.
+// historical disk schemas. Schema 1 is an actual prior local format but lacks
+// Space display/order; no lossless predecessor transform is registered.
 inline constexpr std::array<durability::EnvelopeVersion, 1> kSupportedFormats{{
     {durability::kSchemaVersion, lifecycle::kContractVersion},
 }};

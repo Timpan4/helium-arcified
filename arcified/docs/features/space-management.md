@@ -1,6 +1,6 @@
 # Space management metadata
 
-This slice of [issue 64](https://github.com/Timpan4/helium-arcified/issues/64) implements caller-owned Space display identity and order values, pure transformations, and an advisory lifecycle reference inventory. Standalone synthetic C++ checks pass. It does not implement a native Space management interface, persistence, removal, archive, migration or undo. The issue remains open.
+This slice of [issue 64](https://github.com/Timpan4/helium-arcified/issues/64) implements caller-owned Space display identity and order values, pure transformations, and an advisory lifecycle reference inventory. Standalone synthetic C++ checks pass. It does not implement a native Space management interface, removal, archive, migration or undo. The [durability join](session-durability.md) now preserves its canonical values in the standalone codec and staged restore; installed persistence remains open. The issue remains open.
 
 ## Authority and shared interface
 
@@ -45,9 +45,21 @@ Activity detection, cleanup, archive/delete policies and populated cross-Profile
 
 ## Persistence seam
 
-Durability accepted the shared DTO in principle and owns serialization and IO. Its initial schema 1 omits Space name/icon/theme/order pending integration of this exact header. That integration remains pending; no restart durability is proven for these values.
+The [schema-2 durability join](session-durability.md) uses this exact header and
+`ValidateMetadata`. Capture requires the complete ordered vector. Encoding
+preserves each optional name/icon_key/theme_key, including explicit empty strings,
+and explicit display order. Restore returns the staged Model and metadata
+together in `RestoredSession`. Whole-snapshot and candidate admission bind both;
+missing, duplicate, unknown, forged or stale metadata refuses without changing
+source images. No persistence path calls `ReconcileMetadata` or supplies defaults.
 
-The agreed durability seam requires an explicit `unsupported-feature-payloads-absent` attestation for capture/encode and refuses otherwise. Nonempty unsupported Space metadata must not silently disappear through a fallback. This component does not issue that attestation, serialize its values, or claim to verify the durability peer's implementation. An eventual schema must preserve explicit vector order and optional display values while validating Space references against the authoritative lifecycle graph.
+Schema 1 is an actual prior local format that omitted these values. No complete,
+lossless prior-format transform is registered, so its exact images are retained
+as unsupported. The upgrade gate remains OPEN. Folders, custom theme/palette
+payload beyond theme_key, split presentation and other omitted payloads still
+require explicit absence. Source/component codec checks prove neither installed
+restart durability nor native adoption of restored values. Details and focused
+evidence are in [the response](../reviews/space-metadata-durability-response.md).
 
 ## Focused synthetic checks
 

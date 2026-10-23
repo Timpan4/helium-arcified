@@ -35,6 +35,7 @@ const ProfileId kHome{"home"};
 const SpaceId kDesk{"desk"};
 const SpaceId kOther{"other"};
 const SpaceId kHomeSpace{"home-space"};
+const SpaceId kLoose{"loose"};
 const WindowId kFirst{"first"};
 const WindowId kSecond{"second"};
 const PageId kSavedPage{"saved-page"};
@@ -57,6 +58,13 @@ SnapshotAdmission SyntheticAdmission() {
           [](const PageId&, const ProfileId&) { return true; }, true};
 }
 
+space_management::Metadata Metadata() {
+  return {{kOther, {"仕事 🌌", "", std::nullopt}},
+          {kLoose, {std::nullopt, "星", ""}},
+          {kHomeSpace, {"", std::nullopt, "theme:夜"}},
+          {kDesk, {std::nullopt, std::nullopt, std::nullopt}}};
+}
+
 Model Workspace() {
   Model m;
   REQUIRE(m.AddProfile(kWork) == Status::kOk);
@@ -64,6 +72,7 @@ Model Workspace() {
   REQUIRE(m.AddSpace(kDesk, kWork) == Status::kOk);
   REQUIRE(m.AddSpace(kOther, kWork) == Status::kOk);
   REQUIRE(m.AddSpace(kHomeSpace, kHome) == Status::kOk);
+  REQUIRE(m.AddSpace(kLoose, kWork) == Status::kOk);
   REQUIRE(m.AddWindow(kFirst) == Status::kOk);
   REQUIRE(m.AddWindow(kSecond) == Status::kOk);
   REQUIRE(m.Attach(kHere) == Status::kOk);
@@ -91,7 +100,7 @@ Model Workspace() {
 }
 
 DurableSnapshot Snapshot() {
-  return Value(CaptureSnapshot(Workspace(), SyntheticAdmission()));
+  return Value(CaptureSnapshot(Workspace(), Metadata(), SyntheticAdmission()));
 }
 
 std::vector<RestoredNavigation> NativeReports() {
@@ -105,38 +114,42 @@ void RoundTripAndNativeEvidence() {
   REQUIRE(bytes.find(kRendererOnly) == std::string::npos);
   REQUIRE(bytes.find(kSaved) != std::string::npos);
   const auto version = Value(ProbeEnvelope(bytes));
-  REQUIRE(version.schema_version == 1);
+  REQUIRE(version.schema_version == kSchemaVersion);
   REQUIRE(version.contract_version == 3);
   const auto decoded = Value(DecodeSnapshot(bytes));
   REQUIRE(Value(EncodeSnapshot(decoded, SyntheticAdmission())) == bytes);
   auto restored =
       Value(RestoreSnapshot(decoded, NativeReports(), SyntheticAdmission()));
-  REQUIRE(restored.profiles().size() == 2);
-  REQUIRE(restored.windows().size() == 2);
-  REQUIRE(restored.spaces().size() == 3);
-  REQUIRE(restored.items().size() == 3);
-  REQUIRE(restored.pages().size() == 2);
-  REQUIRE(restored.windows().at(kFirst).selected_space == kHomeSpace);
-  REQUIRE(restored.windows().at(kSecond).selected_space == kDesk);
-  REQUIRE(restored.items().at(kItem).saved_destination == kSaved);
-  REQUIRE(restored.pages().at(kSavedPage).current_navigation == kNativeSaved);
-  REQUIRE(restored.pages().at(kTemporaryPage).current_navigation ==
+  REQUIRE(restored.model.profiles().size() == 2);
+  REQUIRE(restored.model.windows().size() == 2);
+  REQUIRE(restored.model.spaces().size() == 4);
+  REQUIRE(restored.space_metadata == Metadata());
+  REQUIRE(decoded.space_metadata == Metadata());
+  REQUIRE(restored.model.items().size() == 3);
+  REQUIRE(restored.model.pages().size() == 2);
+  REQUIRE(restored.model.windows().at(kFirst).selected_space == kHomeSpace);
+  REQUIRE(restored.model.windows().at(kSecond).selected_space == kDesk);
+  REQUIRE(restored.model.items().at(kItem).saved_destination == kSaved);
+  REQUIRE(restored.model.pages().at(kSavedPage).current_navigation ==
+          kNativeSaved);
+  REQUIRE(restored.model.pages().at(kTemporaryPage).current_navigation ==
           kNativeTemporary);
-  REQUIRE(restored.pages().at(kSavedPage).profile == kWork);
-  REQUIRE(restored.pages().at(kSavedPage).activity == Activity::kUnknown);
-  REQUIRE(restored.pages().at(kTemporaryPage).activity == Activity::kUnknown);
-  REQUIRE(restored.TemporaryPages(kThere).empty());
-  REQUIRE(restored.TemporaryPages(kHere) ==
+  REQUIRE(restored.model.pages().at(kSavedPage).profile == kWork);
+  REQUIRE(restored.model.pages().at(kSavedPage).activity == Activity::kUnknown);
+  REQUIRE(restored.model.pages().at(kTemporaryPage).activity ==
+          Activity::kUnknown);
+  REQUIRE(restored.model.TemporaryPages(kThere).empty());
+  REQUIRE(restored.model.TemporaryPages(kHere) ==
           std::vector<PageId>{kTemporaryPage});
-  REQUIRE(restored.splits().at(kSplit).pages ==
+  REQUIRE(restored.model.splits().at(kSplit).pages ==
           (std::vector<PageId>{kTemporaryPage, kSavedPage}));
-  REQUIRE(restored.CloseWindow(kFirst) == Status::kWorkNotQuiescent);
-  auto opened = restored.OpenItem(kItem, kThere, PageId("unused"));
+  REQUIRE(restored.model.CloseWindow(kFirst) == Status::kWorkNotQuiescent);
+  auto opened = restored.model.OpenItem(kItem, kThere, PageId("unused"));
   REQUIRE(std::get<OpenedPage>(opened).page == kSavedPage);
   REQUIRE(std::get<OpenedPage>(opened).disposition ==
           OpenDisposition::kExisting);
-  REQUIRE(restored.pages().size() == 2);
-  REQUIRE(restored.pages().at(kSavedPage).attachment() == kThere);
+  REQUIRE(restored.model.pages().size() == 2);
+  REQUIRE(restored.model.pages().at(kSavedPage).attachment() == kThere);
 
   auto missing = NativeReports();
   missing.pop_back();
@@ -222,10 +235,11 @@ void InvalidGraphs() {
 void AdmissionFailsClosed() {
   const auto model = Workspace();
   const auto snapshot = Snapshot();
-  ExpectError(CaptureSnapshot(model, {}), Error::kUnsupportedFeatures);
+  ExpectError(CaptureSnapshot(model, Metadata(), {}),
+              Error::kUnsupportedFeatures);
   auto admission = SyntheticAdmission();
   admission.snapshot_may_persist = {};
-  ExpectError(CaptureSnapshot(model, admission),
+  ExpectError(CaptureSnapshot(model, Metadata(), admission),
               Error::kPersistenceNotAdmitted);
   ExpectError(EncodeSnapshot(snapshot, admission),
               Error::kPersistenceNotAdmitted);
@@ -235,11 +249,11 @@ void AdmissionFailsClosed() {
               Error::kPersistenceNotAdmitted);
   // Whole-graph admission is required even with no Profile/Page callbacks to
   // run.
-  ExpectError(CaptureSnapshot(Model{}, admission),
+  ExpectError(CaptureSnapshot(Model{}, {}, admission),
               Error::kPersistenceNotAdmitted);
   admission = SyntheticAdmission();
   admission.profile_may_persist = {};
-  ExpectError(CaptureSnapshot(model, admission),
+  ExpectError(CaptureSnapshot(model, Metadata(), admission),
               Error::kPersistenceNotAdmitted);
   admission = SyntheticAdmission();
   admission.page_may_persist = {};
@@ -250,7 +264,7 @@ void AdmissionFailsClosed() {
     return id != kHome;
   };
   // Home has no pages but still requires regular-context admission.
-  ExpectError(CaptureSnapshot(model, admission),
+  ExpectError(CaptureSnapshot(model, Metadata(), admission),
               Error::kPersistenceNotAdmitted);
   admission = SyntheticAdmission();
   admission.page_may_persist = [](const PageId& id, const ProfileId&) {
@@ -296,8 +310,9 @@ void CorruptionAndInterruption() {
   }
   ExpectError(DecodeSnapshot(original + "trailing"), Error::kMalformed);
   auto future = original;
-  future[8] = 2;  // Synthetic unknown schema header, no historical format.
-  REQUIRE(Value(ProbeEnvelope(future)).schema_version == 2);
+  future[8] = kSchemaVersion +
+              1;  // Synthetic unknown schema header, no historical format.
+  REQUIRE(Value(ProbeEnvelope(future)).schema_version == kSchemaVersion + 1);
   ExpectError(DecodeSnapshot(future), Error::kUnsupportedSchema);
   ExpectError(PrepareWrite({future, std::nullopt}, next, SyntheticAdmission()),
               Error::kUnsupportedSchema);
@@ -315,22 +330,57 @@ void CorruptionAndInterruption() {
 }
 
 void IndependentWireFixtures() {
-  // CRCs calculated independently with Node's built-in zlib.crc32. Eight empty
+  // Preserve the actual schema-1 fixture from 05ace22e exactly. Its missing
+  // display identity/order has no lossless inferred upgrade.
+  std::string prior(80, '\0');
+  prior.replace(0, 8, "ARCSESS\n");
+  prior[8] = 1;
+  prior[12] = 3;
+  const auto schema1 = prior + std::string("\x3e\x63\xbe\xf3", 4);
+  REQUIRE(Value(ProbeEnvelope(schema1)).schema_version == 1);
+  ExpectError(DecodeSnapshot(schema1), Error::kUnsupportedSchema);
+  const StoreImage source{schema1, schema1};
+  const auto retained = source;
+  ExpectError(Recover(source), Error::kUnsupportedSchema);
+  ExpectError(
+      PrepareWrite({schema1, std::nullopt}, Snapshot(), SyntheticAdmission()),
+      Error::kUnsupportedSchema);
+  REQUIRE(source == retained);
+
+  // CRCs calculated independently with Node's built-in zlib.crc32. Nine empty
   // record sequences follow the fixed header. This pins checksum convention,
   // section count, version offsets, byte order, and exact end-of-input.
-  std::string empty(80, '\0');
+  std::string empty(88, '\0');
   empty.replace(0, 8, "ARCSESS\n");
-  empty[8] = 1;
+  empty[8] = 2;
   empty[12] = 3;
-  const auto complete = empty + std::string("\x3e\x63\xbe\xf3", 4);
+  const auto complete = empty + std::string("\xe9\x38\x07\x44", 4);
   REQUIRE(Value(EncodeSnapshot(DurableSnapshot{}, SyntheticAdmission())) ==
           complete);
   REQUIRE(Value(DecodeSnapshot(complete)).pages.empty());
 
+  // Checksum-valid metadata with no corresponding Model Space, then an invalid
+  // optional-value tag. These reach metadata validation and parsing
+  // respectively.
+  auto unknown_metadata = complete.substr(0, 88);
+  unknown_metadata[80] = 1;
+  std::string record(12, '\0');
+  record[0] = 1;  // Space ID byte length.
+  record[8] = '?';
+  unknown_metadata += record;
+  ExpectError(
+      DecodeSnapshot(unknown_metadata + std::string("\xe3\x83\x68\x0b", 4)),
+      Error::kInvalidMetadata);
+  unknown_metadata[97] =
+      2;  // Name presence tag, not a valid absent/present tag.
+  ExpectError(
+      DecodeSnapshot(unknown_metadata + std::string("\x8d\x57\xec\x08", 4)),
+      Error::kMalformed);
+
   // A syntactically impossible count with a VALID independent checksum must
   // reach and fail the parser, rather than merely fail the checksum gate.
   empty.replace(16, 8, std::string(8, '\xff'));
-  const auto impossible_count = empty + std::string("\x00\x89\x21\x82", 4);
+  const auto impossible_count = empty + std::string("\x16\xed\x12\x5b", 4);
   ExpectError(DecodeSnapshot(impossible_count), Error::kMalformed);
 }
 
@@ -374,7 +424,7 @@ void WriteProtocol() {
 void WindowOnlyAdmission() {
   Model model;
   REQUIRE(model.AddWindow(kFirst) == Status::kOk);
-  const auto snapshot = Value(CaptureSnapshot(model, SyntheticAdmission()));
+  const auto snapshot = Value(CaptureSnapshot(model, {}, SyntheticAdmission()));
   REQUIRE(snapshot.profiles.empty());
   REQUIRE(snapshot.pages.empty());
   const auto bytes = Value(EncodeSnapshot(snapshot, SyntheticAdmission()));
@@ -390,7 +440,7 @@ void WindowOnlyAdmission() {
     return std::nullopt;
   };
   // These refusals require passing the actual Window-only graph to admission.
-  ExpectError(CaptureSnapshot(model, admission),
+  ExpectError(CaptureSnapshot(model, {}, admission),
               Error::kPersistenceNotAdmitted);
   ExpectError(EncodeSnapshot(snapshot, admission),
               Error::kPersistenceNotAdmitted);
@@ -401,7 +451,7 @@ void WindowOnlyAdmission() {
   ExpectError(CommitPreparedWrite(staged, prepared, admission),
               Error::kPersistenceNotAdmitted);
   admission.snapshot_may_persist = {};
-  ExpectError(CaptureSnapshot(model, admission),
+  ExpectError(CaptureSnapshot(model, {}, admission),
               Error::kPersistenceNotAdmitted);
   REQUIRE(prepared.source() == source);
   REQUIRE(prepared.staged_image() == staged);
