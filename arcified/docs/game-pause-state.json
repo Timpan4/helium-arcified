@@ -1,0 +1,14 @@
+{
+  "status": "blocked_30_second_interval_unsupported",
+  "ownerThreadId": "6733348c-3696-4b31-834c-2bbca45e70d2",
+  "processName": "cs2",
+  "intervalMs": 30000,
+  "intervalSource": "Owner chose every 30 seconds on 2026-10-23.",
+  "resumePolicy": "Explicit owner message resume only; exiting game does not resume.",
+  "triggered": false,
+  "pausedThreads": [],
+  "schedulerId": null,
+  "schedulerError": "T3 schedule_task requires everyMs >= 60000.",
+  "pendingDecision": "Owner asked whether to accept 60 seconds or leave automatic detection off.",
+  "armed": false
+}

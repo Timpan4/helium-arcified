@@ -1,0 +1,110 @@
+name: Arcified native foundation checks
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  components:
+    name: Components (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-26.04, windows-2025, macos-26-intel]
+    runs-on: ${{ matrix.os }}
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - name: Check out fork without submodules
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Select repository Python baseline
+        uses: actions/setup-python@v7.1.0
+        with:
+          python-version-file: .python-version
+
+      - name: Locate preinstalled Windows patch
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $git = (Get-Command git.exe -ErrorAction Stop).Source
+          $patch = Join-Path (Split-Path (Split-Path $git)) 'usr\bin\patch.exe'
+          if (-not (Test-Path -LiteralPath $patch -PathType Leaf)) {
+            throw "Git for Windows patch.exe is unavailable at $patch"
+          }
+          "PATCH_BIN=$patch" >> $env:GITHUB_ENV
+
+      - name: Python focused and component tests
+        run: python -B arcified/native/checks/python_checks.py test
+
+      - name: Standalone lifecycle fixtures on Linux and macOS
+        if: ${{ !cancelled() && runner.os != 'Windows' }}
+        shell: bash
+        run: |
+          set -eu
+          printf 'ImageOS=%s ImageVersion=%s\n' "$ImageOS" "$ImageVersion"
+          uname -sm
+          clang++ --version
+          if [ "$RUNNER_OS" = 'macOS' ]; then
+            sw_vers
+            xcodebuild -version
+            xcrun --show-sdk-version
+          fi
+          clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic \
+            arcified/native/model/lifecycle.cc arcified/native/model/lifecycle_test.cc \
+            -o "$RUNNER_TEMP/arcified-lifecycle-test"
+          "$RUNNER_TEMP/arcified-lifecycle-test"
+          clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic \
+            -g -fsanitize=address,undefined -fno-sanitize-recover=undefined \
+            -fno-omit-frame-pointer \
+            arcified/native/model/lifecycle.cc arcified/native/model/lifecycle_test.cc \
+            -o "$RUNNER_TEMP/arcified-lifecycle-sanitized"
+          "$RUNNER_TEMP/arcified-lifecycle-sanitized"
+
+      - name: Standalone lifecycle fixtures on Windows
+        if: ${{ !cancelled() && runner.os == 'Windows' }}
+        shell: pwsh
+        run: ./arcified/native/checks/windows_model.ps1
+
+  style:
+    name: Scoped Python and C++ style
+    runs-on: ubuntu-26.04
+    steps:
+      - name: Check out fork without submodules
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Select repository Python baseline
+        uses: actions/setup-python@v7.1.0
+        with:
+          python-version-file: .python-version
+
+      # Future dispatch only. Reuse repository pins in an isolated runner environment.
+      - name: Prepare scoped lint tools from repository policy
+        shell: bash
+        run: |
+          set -eu
+          python -m venv "$RUNNER_TEMP/arcified-native-lint"
+          "$RUNNER_TEMP/arcified-native-lint/bin/python" -m pip install \
+            -c .requirements.txt pylint yapf
+
+      - name: Format and lint focused Python files
+        shell: bash
+        run: '"$RUNNER_TEMP/arcified-native-lint/bin/python" -B arcified/native/checks/python_checks.py lint'
+
+      - name: Check standalone C++ formatting
+        if: ${{ !cancelled() }}
+        shell: bash
+        run: |
+          set -eu
+          clang-format --version
+          clang-format --style=Chromium --dry-run --Werror \
+            arcified/native/model/lifecycle.h \
+            arcified/native/model/lifecycle.cc \
+            arcified/native/model/lifecycle_test.cc

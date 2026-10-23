@@ -20,8 +20,8 @@
   "nonAiCounts": {
     "provenDone": 0,
     "doneAwaitingRelease": 1,
-    "inProgress": 5,
-    "notStarted": 129
+    "inProgress": 56,
+    "notStarted": 78
   },
   "laterAiItems": 23,
   "excludedSyncItems": 6,
@@ -48,22 +48,128 @@
     },
     {
       "key": "lifecycle-contract",
-      "status": "v3_implemented_fresh_review_pending",
-      "evidence": "16 fixtures; earlier ID-lifetime finding cleared. reviews/lifecycle-policy-response.md."
+      "status": "v3_reviewed_native_acceptance_open",
+      "evidence": "reviews/lifecycle-review-round-3.md: 16 fixtures and 1,080 supplemental routing decisions passed under ASan/UBSan, clean bounded review."
     },
     {
       "key": "spaces",
-      "status": "source_design_reviewed_refinement_pending",
+      "status": "source_design_refined_native_proof_open",
       "evidence": "reviews/native-space-design-review.md. Same-window native feasibility remains OPEN."
     }
   ],
   "supportingWork": {
-    "lightNativeCi": "Manual-only candidate. Review P2: add nonrecovering UBSan flag. No CI dispatch."
+    "lightNativeCi": "UBSan P2 fixed and independently cleared by reviews/native-checks-review-round-2.md; hosted runtimes and native acceptance unverified."
   },
   "expansion": {
-    "status": "allocated_not_launched",
+    "status": "51_primary_assignments_confirmed",
     "manifest": "parallel-workstreams.json",
-    "additionalKeys": 51
+    "baseline": "c9748ec8e6d64524c1de9d943dd6f2cfacb319fe",
+    "areaThreads": 17,
+    "confirmedAdditionalPrimaries": 51
   },
-  "nextAction": "Checkpoint the local baseline, launch isolated area threads and obtain actual per-task assignments. Fix CI sanitizer finding and independently review lifecycle v3."
+  "nextAction": "Integrate reviewed components from area branches, preserving native acceptance gaps. Await owner scheduler-cadence decision before arming game guard.",
+  "currentAssignments": [
+    {
+      "key": "ci-fix",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-ci-fix-20261023-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-ci-fix-20261023-v1",
+      "childRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253Abc08437f-a0a6-426e-ab26-74f1fa89af31%253Adelegate-task%253Aarcified-expanded-ci-fix-20261023-v1:ordinal:1",
+      "childNodeId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-ci-fix-20261023-v1",
+      "status": "running",
+      "workState": "working",
+      "hasPendingChildRuns": false,
+      "latestTerminalRunId": null,
+      "latestTerminalStatus": null,
+      "latestTerminalSummary": null,
+      "latestTerminalResultContextTransferId": null,
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "summary": null,
+      "resultContextTransferId": null,
+      "hasPendingQuestion": false,
+      "pendingApproval": null,
+      "waitTimedOut": false
+    },
+    {
+      "key": "model-review",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-model-review-20261023-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-model-review-20261023-v1",
+      "childRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253Abc08437f-a0a6-426e-ab26-74f1fa89af31%253Adelegate-task%253Aarcified-expanded-model-review-20261023-v1:ordinal:1",
+      "childNodeId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-model-review-20261023-v1",
+      "status": "running",
+      "workState": "working",
+      "hasPendingChildRuns": false,
+      "latestTerminalRunId": null,
+      "latestTerminalStatus": null,
+      "latestTerminalSummary": null,
+      "latestTerminalResultContextTransferId": null,
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "summary": null,
+      "resultContextTransferId": null,
+      "hasPendingQuestion": false,
+      "pendingApproval": null,
+      "waitTimedOut": false
+    },
+    {
+      "key": "spaces-fix",
+      "taskId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-spaces-fix-20261023-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-spaces-fix-20261023-v1",
+      "childRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253Abc08437f-a0a6-426e-ab26-74f1fa89af31%253Adelegate-task%253Aarcified-expanded-spaces-fix-20261023-v1:ordinal:1",
+      "childNodeId": "node:delegated-task:command%3Amcp%3Abc08437f-a0a6-426e-ab26-74f1fa89af31%3Adelegate-task%3Aarcified-expanded-spaces-fix-20261023-v1",
+      "status": "running",
+      "workState": "working",
+      "hasPendingChildRuns": false,
+      "latestTerminalRunId": null,
+      "latestTerminalStatus": null,
+      "latestTerminalSummary": null,
+      "latestTerminalResultContextTransferId": null,
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "summary": null,
+      "resultContextTransferId": null,
+      "hasPendingQuestion": false,
+      "pendingApproval": null,
+      "waitTimedOut": false
+    }
+  ],
+  "gamePause": {
+    "status": "blocked_30_second_interval_unsupported",
+    "state": "game-pause-state.json",
+    "requestedIntervalMs": 30000,
+    "minimumSchedulerIntervalMs": 60000,
+    "resumePolicy": "Explicit owner resume only",
+    "pendingDecision": "Accept one-minute scheduler or leave automatic detection off.",
+    "armed": false
+  }
 }

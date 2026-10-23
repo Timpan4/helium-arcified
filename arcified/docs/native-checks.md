@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | Python components | Ubuntu 26.04 x64, Windows Server 2025 x64, macOS 26 Intel | Every `test_*.py` under `arcified/native/tooling`, including shared input identity, Linux, Windows and Mac preparation contracts. Each host runs all component suites. |
 | Devutils component | Same hosts | The script entrypoint in `devutils/tests/test_check_patch_files.py`, which currently invokes both function tests. These functions are not discovered by `unittest`. |
-| Standalone C++ | Same hosts | Compile and execute `lifecycle.cc` with `lifecycle_test.cc`. The current model has 13 v2 fixtures, including borrowed arguments and Profile/Space transition groups. |
+| Standalone C++ | Same hosts | Compile and execute `lifecycle.cc` with `lifecycle_test.cc`. The current model has 16 v3 fixtures, including borrowed arguments, Profile/Space transitions and link routing. |
 | C++ sanitizers | Linux and macOS | Compile and execute the same fixtures with AddressSanitizer and UndefinedBehaviorSanitizer. Windows sanitizer coverage is not supplied. |
 | Scoped style | Linux | YAPF using `.style.yapf`, the reviewed scoped Pylint checks, and Chromium-style `clang-format` on the standalone C++ files. |
 
@@ -58,11 +58,14 @@ clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic \
   -o "$check_output_dir/lifecycle-test"
 "$check_output_dir/lifecycle-test"
 clang++ --driver-mode=g++ -std=c++17 -Wall -Wextra -Werror -pedantic \
-  -g -fsanitize=address,undefined -fno-omit-frame-pointer \
+  -g -fsanitize=address,undefined -fno-sanitize-recover=undefined \
+  -fno-omit-frame-pointer \
   arcified/native/model/lifecycle.cc arcified/native/model/lifecycle_test.cc \
   -o "$check_output_dir/lifecycle-sanitized"
 "$check_output_dir/lifecycle-sanitized"
 ```
+
+`-fno-sanitize-recover=undefined` makes UBSan findings terminate with a nonzero exit status, so a diagnostic cannot leave the sanitizer check passing.
 
 For Windows, use the standalone runner from PowerShell:
 
@@ -112,8 +115,9 @@ Prepared on Linux x86_64 with Python 3.14.8, Git 2.56.0, GNU patch 2.8 and Clang
 | Validation | Result |
 | --- | --- |
 | Component runner on Linux | All 41 discovered tests passed with no skips, plus both devutils script functions. |
-| Standalone strict C++ compilation/run on Linux | All 13 v2 fixtures passed. |
-| Standalone ASan/UBSan compilation/run on Linux | All 13 v2 fixtures passed with no sanitizer diagnostics. |
+| Standalone strict C++ compilation/run on Linux | All 16 v3 fixtures passed. |
+| Standalone ASan/UBSan compilation/run on Linux | All 16 v3 fixtures passed with no sanitizer diagnostics and UBSan recovery disabled. |
+| Deliberate signed-overflow probe on Linux | Printed a UBSan diagnostic and exited 1 with the revised sanitizer flags. The control with recovery enabled printed the diagnostic but exited 0. See the [P2 fix response](reviews/native-checks-fix-response.md). |
 | Scoped YAPF/Pylint command | Passed on the focused files with the existing local tool versions above. Default combined lint remains failing as recorded in the reviews. |
 | Chromium-style C++ formatting | Passed for all three model files. |
 | Runner result handling | Small mocked checks passed for success, assertion failure, missing symlink support, the exact case-insensitive-volume skip, an unexpected skip reason, and empty discovery. |
