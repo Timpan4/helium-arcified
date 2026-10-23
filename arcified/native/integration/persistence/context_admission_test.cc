@@ -1,0 +1,414 @@
+#include "context_admission.h"
+
+#include <cstdlib>
+#include <iostream>
+#include <map>
+
+#include "../../features/migrations/schema_gate.h"
+#include "../../features/private_browsing/operation_boundary.h"
+
+namespace arcified::persistence {
+namespace {
+
+using namespace lifecycle;
+using durability::Error;
+using durability::Failure;
+using private_browsing::NativeContextId;
+using private_browsing::NativeContextKind;
+
+void Require(bool condition, const char* expression, int line) {
+  if (condition)
+    return;
+  std::cerr << "line " << line << ": " << expression << '\n';
+  std::exit(EXIT_FAILURE);
+}
+#define REQUIRE(expression) Require((expression), #expression, __LINE__)
+
+template <typename T>
+T Value(durability::Result<T> result) {
+  if (const auto* failure = std::get_if<Failure>(&result)) {
+    std::cerr << failure->context << '\n';
+    std::exit(EXIT_FAILURE);
+  }
+  return std::get<T>(std::move(result));
+}
+
+template <typename T>
+void ExpectError(const durability::Result<T>& result, Error error) {
+  REQUIRE(std::holds_alternative<Failure>(result));
+  REQUIRE(std::get<Failure>(result).code == error);
+}
+
+const ProfileId kWork{"work"};
+const ProfileId kHome{"home"};
+const ProfileId kUnattached{"unattached"};
+const SpaceId kDesk{"desk"};
+const SpaceId kHomeSpace{"home-space"};
+const SpaceId kUnattachedSpace{"unattached-space"};
+const WindowId kWindow{"window"};
+const WindowId kEmptyWindow{"empty-window"};
+const PageId kSaved{"saved-page"};
+const PageId kTemporary{"temporary-page"};
+const PageId kHomePage{"home-page"};
+const ItemId kItem{"saved-item"};
+const Attachment kHere{kWindow, kDesk};
+
+ContextObservation Regular(const ProfileId& profile) {
+  const NativeContextId id("runtime-native-only-" + profile.value);
+  return {{profile, id}, {NativeContextKind::kRegular, id, profile}};
+}
+
+// Synthetic observations only. This fixture is not a production registry,
+// native binding producer or browser security acceptance test.
+struct Observations final : NativeContextSource {
+  std::map<ProfileId, ContextObservation> profiles;
+  std::map<PageId, PageObservation> pages;
+  std::map<WindowId, std::vector<ContextObservation>> windows;
+  Schema1PeerPayloads payloads{
+      PayloadPresence::kAbsent, PayloadPresence::kAbsent,
+      PayloadPresence::kAbsent, PayloadPresence::kAbsent};
+
+  std::optional<ContextObservation> ReadProfile(
+      const ProfileId& id) const override {
+    const auto found = profiles.find(id);
+    return found == profiles.end() ? std::nullopt
+                                   : std::optional(found->second);
+  }
+  std::optional<PageObservation> ReadPage(const PageId& id) const override {
+    const auto found = pages.find(id);
+    return found == pages.end() ? std::nullopt : std::optional(found->second);
+  }
+  std::optional<std::vector<ContextObservation>> ReadWindow(
+      const WindowId& id) const override {
+    const auto found = windows.find(id);
+    return found == windows.end() ? std::nullopt : std::optional(found->second);
+  }
+  Schema1PeerPayloads ReadPeerPayloads() const override { return payloads; }
+};
+
+struct Fixture {
+  Model model;
+  Observations facts;
+
+  Fixture() {
+    for (const auto& profile : {kWork, kHome, kUnattached}) {
+      REQUIRE(model.AddProfile(profile) == Status::kOk);
+      facts.profiles.emplace(profile, Regular(profile));
+    }
+    REQUIRE(model.AddSpace(kDesk, kWork) == Status::kOk);
+    REQUIRE(model.AddSpace(kHomeSpace, kHome) == Status::kOk);
+    REQUIRE(model.AddSpace(kUnattachedSpace, kUnattached) == Status::kOk);
+    REQUIRE(model.AddWindow(kWindow) == Status::kOk);
+    REQUIRE(model.AddWindow(kEmptyWindow) == Status::kOk);
+    REQUIRE(model.Attach(kHere) == Status::kOk);
+    REQUIRE(model.Attach({kWindow, kHomeSpace}) == Status::kOk);
+    REQUIRE(model.SelectSpace(kWindow, kHomeSpace) == Status::kOk);
+    REQUIRE(model.AddItem(kItem, kDesk, "https://example.test/saved") ==
+            Status::kOk);
+    REQUIRE(std::holds_alternative<OpenedPage>(
+        model.OpenItem(kItem, kHere, kSaved)));
+    REQUIRE(model.RecordNavigation(kSaved, "https://example.test/committed") ==
+            Status::kOk);
+    REQUIRE(model.OpenTemporary(kTemporary, TemporaryTabId("temporary"), kHere,
+                                "https://example.test/temporary") ==
+            Status::kOk);
+    REQUIRE(model.OpenTemporary(kHomePage, TemporaryTabId("home-tab"),
+                                {kWindow, kHomeSpace},
+                                "https://example.test/home") == Status::kOk);
+    for (const auto& [id, page] : model.pages())
+      facts.pages.emplace(
+          id, PageObservation{page.attachment(), Regular(page.profile)});
+    facts.windows.emplace(kWindow, std::vector<ContextObservation>{
+                                       Regular(kWork), Regular(kHome)});
+    facts.windows.emplace(kEmptyWindow,
+                          std::vector<ContextObservation>{Regular(kWork)});
+  }
+
+  durability::SnapshotAdmission Admission() const {
+    return Value(ComposeSnapshotAdmission(model, facts));
+  }
+  std::vector<durability::RestoredNavigation> Navigation() const {
+    std::vector<durability::RestoredNavigation> reports;
+    for (const auto& [id, page] : model.pages())
+      reports.push_back({id, page.profile, page.current_navigation});
+    return reports;
+  }
+};
+
+void EligibleRoundTrip() {
+  const Fixture f;
+  const auto admission = f.Admission();
+  const auto snapshot = Value(durability::CaptureSnapshot(f.model, admission));
+  REQUIRE(snapshot.profiles.size() == f.model.profiles().size());
+  REQUIRE(snapshot.pages.size() == f.model.pages().size());
+  const auto bytes = Value(durability::EncodeSnapshot(snapshot, admission));
+  const durability::StoreImage source{bytes, std::nullopt};
+  const migrations::CompatibilityGate gate(source);
+  REQUIRE(gate.inspection(migrations::ImageSource::kOriginal).state ==
+          migrations::ImageState::kCurrent);
+  const auto read =
+      Value(gate.ReadSnapshot(migrations::ImageSource::kOriginal));
+  const auto prepared = Value(gate.PrepareWrite(source, read, admission));
+  REQUIRE(prepared.source() == source);
+  REQUIRE(prepared.staged_image().original == source.original);
+  REQUIRE(prepared.staged_image().candidate == bytes);
+  const auto restored =
+      Value(durability::RestoreSnapshot(read, f.Navigation(), admission));
+  REQUIRE(restored.pages().at(kSaved).current_navigation ==
+          f.model.pages().at(kSaved).current_navigation);
+  REQUIRE(restored.windows().at(kWindow).selected_space == kHomeSpace);
+  REQUIRE(restored.profiles().count(kUnattached));
+  REQUIRE(restored.pages().at(kSaved).profile == kWork);
+  REQUIRE(restored.pages().at(kSaved).activity == Activity::kUnknown);
+  REQUIRE(Value(durability::EncodeSnapshot(
+              Value(durability::CaptureSnapshot(restored, admission)),
+              admission)) == bytes);
+  REQUIRE(source == gate.source());
+  REQUIRE(!admission.profile_may_persist(ProfileId("unknown")));
+  REQUIRE(!admission.page_may_persist(PageId("unknown"), kWork));
+  REQUIRE(!admission.page_may_persist(kSaved, kHome));
+}
+
+template <typename Change>
+void RefusalPreserves(Change change,
+                      Error compose_error = Error::kPersistenceNotAdmitted) {
+  Fixture f;
+  const auto admission = f.Admission();
+  const auto snapshot = Value(durability::CaptureSnapshot(f.model, admission));
+  const auto bytes = Value(durability::EncodeSnapshot(snapshot, admission));
+  const durability::StoreImage source{bytes, std::nullopt};
+  const migrations::CompatibilityGate gate(source);
+  const auto retained_facts = f.facts;
+  const auto navigation = f.Navigation();
+  change(f.facts);
+  ExpectError(ComposeSnapshotAdmission(f.model, f.facts), compose_error);
+  // Previously composed callbacks re-read the caller. No cached allow decision.
+  ExpectError(durability::CaptureSnapshot(f.model, admission),
+              Error::kPersistenceNotAdmitted);
+  ExpectError(durability::EncodeSnapshot(snapshot, admission),
+              Error::kPersistenceNotAdmitted);
+  ExpectError(gate.PrepareWrite(source, snapshot, admission),
+              Error::kPersistenceNotAdmitted);
+  ExpectError(durability::RestoreSnapshot(snapshot, navigation, admission),
+              Error::kPersistenceNotAdmitted);
+  REQUIRE(source == gate.source());
+  REQUIRE(source.original == bytes);
+  REQUIRE(!source.candidate);
+  REQUIRE(f.Navigation().size() == navigation.size());
+  f.facts = retained_facts;
+  REQUIRE(Value(durability::EncodeSnapshot(
+              Value(durability::CaptureSnapshot(f.model, admission)),
+              admission)) == bytes);
+  for (const auto& report : navigation)
+    REQUIRE(f.model.pages().at(report.page).current_navigation ==
+            report.committed_destination);
+}
+
+void MissingObservations() {
+  for (const auto& profile : {kWork, kHome, kUnattached})
+    RefusalPreserves(
+        [&](Observations& facts) { facts.profiles.erase(profile); });
+  for (const auto& page : {kSaved, kTemporary, kHomePage})
+    RefusalPreserves([&](Observations& facts) { facts.pages.erase(page); });
+  for (const auto& window : {kWindow, kEmptyWindow}) {
+    RefusalPreserves([&](Observations& facts) { facts.windows.erase(window); });
+    RefusalPreserves(
+        [&](Observations& facts) { facts.windows.at(window).clear(); });
+  }
+  RefusalPreserves([](Observations& facts) {
+    // The selected Home context cannot conceal the Work attachment.
+    facts.windows.at(kWindow) = {Regular(kHome)};
+  });
+  Model empty;
+  Observations absent;
+  REQUIRE(empty.AddWindow(kEmptyWindow) == Status::kOk);
+  // Composition checks windows even when durability would invoke no callbacks.
+  ExpectError(ComposeSnapshotAdmission(empty, absent),
+              Error::kPersistenceNotAdmitted);
+}
+
+void SharedClassifierRefusals() {
+  for (const auto kind :
+       {NativeContextKind::kUnknown, NativeContextKind::kOffTheRecord,
+        NativeContextKind::kGuest, NativeContextKind::kGuestOffTheRecord,
+        NativeContextKind::kSystem, NativeContextKind::kSystemOffTheRecord,
+        NativeContextKind::kOther, static_cast<NativeContextKind>(-1)}) {
+    auto observed = Regular(kWork);
+    observed.facts.kind = kind;
+    REQUIRE(private_browsing::CheckOperation(
+                observed.facts,
+                private_browsing::Operation::kWorkspacePersistence) !=
+            private_browsing::Decision::kEligible);
+    RefusalPreserves([&](Observations& facts) {
+      facts.profiles.at(kUnattached).facts.kind = kind;
+    });
+    for (const auto& page : {kSaved, kTemporary, kHomePage})
+      RefusalPreserves([&](Observations& facts) {
+        facts.pages.at(page).context.facts.kind = kind;
+      });
+    RefusalPreserves([&](Observations& facts) {
+      facts.windows.at(kEmptyWindow).front().facts.kind = kind;
+    });
+  }
+  RefusalPreserves([](Observations& facts) {
+    facts.profiles.at(kWork).facts.context.reset();
+  });
+  RefusalPreserves([](Observations& facts) {
+    facts.profiles.at(kWork).facts.original_profile.reset();
+  });
+  RefusalPreserves([](Observations& facts) {
+    facts.pages.at(kSaved).context.facts.context = NativeContextId("");
+  });
+}
+
+void BindingConfusion() {
+  RefusalPreserves(
+      [](Observations& facts) { facts.profiles.at(kWork) = Regular(kHome); });
+  RefusalPreserves([](Observations& facts) {
+    facts.profiles.at(kWork).facts.original_profile = kHome;
+  });
+  RefusalPreserves([](Observations& facts) {
+    facts.profiles.at(kWork).binding.context = NativeContextId("sibling");
+  });
+  RefusalPreserves([](Observations& facts) {
+    // Each local report looks regular, but two Profiles claim one native ID.
+    auto& other = facts.profiles.at(kUnattached);
+    other.binding.context = facts.profiles.at(kWork).binding.context;
+    other.facts.context = other.binding.context;
+  });
+  RefusalPreserves([](Observations& facts) {
+    facts.pages.at(kSaved).context = Regular(kHome);
+  });
+  RefusalPreserves([](Observations& facts) {
+    auto& page = facts.pages.at(kSaved).context;
+    page.binding.context = NativeContextId("different-exact-regular-object");
+    page.facts.context = page.binding.context;
+  });
+  RefusalPreserves([](Observations& facts) {
+    facts.pages.at(kSaved).attachment.space = kHomeSpace;
+  });
+  RefusalPreserves([](Observations& facts) {
+    facts.pages.at(kSaved).attachment.window = kEmptyWindow;
+  });
+  RefusalPreserves([](Observations& facts) {
+    facts.windows.at(kWindow).push_back(Regular(kWork));
+  });
+  RefusalPreserves([](Observations& facts) {
+    auto& context = facts.windows.at(kWindow).front();
+    context.binding.context = NativeContextId("stale-window-context");
+    context.facts.context = context.binding.context;
+  });
+  RefusalPreserves([](Observations& facts) {
+    facts.windows.at(kEmptyWindow) = {Regular(ProfileId("unregistered"))};
+  });
+}
+
+void PeerPayloadsRemainExplicit() {
+  for (const auto member :
+       {&Schema1PeerPayloads::space_display_and_order,
+        &Schema1PeerPayloads::folders, &Schema1PeerPayloads::themes,
+        &Schema1PeerPayloads::split_presentation}) {
+    for (const auto presence :
+         {PayloadPresence::kUnknown, PayloadPresence::kPresent}) {
+      RefusalPreserves(
+          [&](Observations& facts) { facts.payloads.*member = presence; },
+          Error::kUnsupportedFeatures);
+    }
+  }
+  Model empty;
+  Observations unknown;
+  unknown.payloads = {};
+  ExpectError(ComposeSnapshotAdmission(empty, unknown),
+              Error::kUnsupportedFeatures);
+}
+
+void NativeIdentityNeverSerialized() {
+  Fixture f;
+  const auto first = f.Admission();
+  const auto snapshot = Value(durability::CaptureSnapshot(f.model, first));
+  const auto bytes = Value(durability::EncodeSnapshot(snapshot, first));
+  for (const auto& [profile, context] : f.facts.profiles)
+    REQUIRE(bytes.find(context.binding.context.value) == std::string::npos);
+  auto replace = [](ContextObservation& context) {
+    context.binding.context.value += "-new-live-object";
+    context.facts.context = context.binding.context;
+  };
+  for (auto& [id, context] : f.facts.profiles)
+    replace(context);
+  for (auto& [id, page] : f.facts.pages)
+    replace(page.context);
+  for (auto& [id, contexts] : f.facts.windows)
+    for (auto& context : contexts)
+      replace(context);
+  const auto second = f.Admission();
+  REQUIRE(Value(durability::EncodeSnapshot(snapshot, second)) == bytes);
+}
+
+void ChangedAttachmentRequiresNewNativeObservation() {
+  Fixture f;
+  const auto admission = f.Admission();
+  REQUIRE(f.model.Attach({kEmptyWindow, kDesk}) == Status::kOk);
+  REQUIRE(f.model.TransferSavedPage(kSaved, {kEmptyWindow, kDesk}) ==
+          Status::kOk);
+  // Retaining the old Page observation after an actual model transfer refuses.
+  // The old callback does not retain a prepared Page or attachment permit.
+  ExpectError(durability::CaptureSnapshot(f.model, admission),
+              Error::kPersistenceNotAdmitted);
+  REQUIRE(f.model.pages().at(kSaved).attachment() ==
+          (Attachment{kEmptyWindow, kDesk}));
+  f.facts.pages.at(kSaved).attachment = {kEmptyWindow, kDesk};
+  const auto refreshed = f.Admission();
+  const auto snapshot = Value(durability::CaptureSnapshot(f.model, refreshed));
+  const auto restored =
+      Value(durability::RestoreSnapshot(snapshot, f.Navigation(), refreshed));
+  REQUIRE(restored.pages().at(kSaved).attachment() ==
+          (Attachment{kEmptyWindow, kDesk}));
+}
+
+void SchemaGatePreservesImages() {
+  const Fixture f;
+  const auto admission = f.Admission();
+  const auto snapshot = Value(durability::CaptureSnapshot(f.model, admission));
+  const auto bytes = Value(durability::EncodeSnapshot(snapshot, admission));
+  auto future = bytes;
+  future[8] = static_cast<char>(durability::kSchemaVersion + 1);
+  for (const auto& source : {durability::StoreImage{future, std::nullopt},
+                             durability::StoreImage{bytes, future}}) {
+    const migrations::CompatibilityGate gate(source);
+    ExpectError(gate.PrepareWrite(source, snapshot, admission),
+                Error::kUnsupportedSchema);
+    REQUIRE(source == gate.source());
+  }
+  const durability::StoreImage interrupted{bytes, bytes};
+  const migrations::CompatibilityGate gate(interrupted);
+  ExpectError(gate.PrepareWrite(interrupted, snapshot, admission),
+              Error::kRecoveryRequired);
+  REQUIRE(interrupted == gate.source());
+  auto changed = interrupted;
+  changed.original = "independent writer";
+  ExpectError(gate.PrepareWrite(changed, snapshot, admission),
+              Error::kStaleSource);
+  REQUIRE(changed.original == "independent writer");
+  REQUIRE(changed.candidate == bytes);
+  REQUIRE(gate.source() == interrupted);
+  auto missing = f.Navigation();
+  missing.pop_back();
+  ExpectError(durability::RestoreSnapshot(snapshot, missing, admission),
+              Error::kNavigationEvidenceRequired);
+  REQUIRE(gate.source() == interrupted);
+}
+
+}  // namespace
+}  // namespace arcified::persistence
+
+int main() {
+  arcified::persistence::EligibleRoundTrip();
+  arcified::persistence::MissingObservations();
+  arcified::persistence::SharedClassifierRefusals();
+  arcified::persistence::BindingConfusion();
+  arcified::persistence::PeerPayloadsRemainExplicit();
+  arcified::persistence::NativeIdentityNeverSerialized();
+  arcified::persistence::ChangedAttachmentRequiresNewNativeObservation();
+  arcified::persistence::SchemaGatePreservesImages();
+  std::cout << "composed persistence synthetic checks passed\n";
+}
