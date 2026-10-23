@@ -1,0 +1,449 @@
+{
+  "status": "allocated_not_launched",
+  "parentThreadId": "6733348c-3696-4b31-834c-2bbca45e70d2",
+  "baseline": "Local checkpoint pending",
+  "areas": [
+    {
+      "area": "tabs",
+      "branch": "feat/tabs-workstream",
+      "keys": [
+        "temporary-tabs",
+        "pins",
+        "favorites"
+      ],
+      "issues": [
+        {
+          "key": "temporary-tabs",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/49",
+          "title": "Open and close temporary tabs within a Space"
+        },
+        {
+          "key": "pins",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/67",
+          "title": "Pin a tab with a durable home URL and reset action"
+        },
+        {
+          "key": "favorites",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/106",
+          "title": "Keep Profile Favorites available across Spaces"
+        }
+      ]
+    },
+    {
+      "area": "organization",
+      "branch": "feat/organization-workstream",
+      "keys": [
+        "folders",
+        "folder-preview",
+        "multi-select"
+      ],
+      "issues": [
+        {
+          "key": "folders",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/107",
+          "title": "Organize pinned tabs into nested sidebar folders"
+        },
+        {
+          "key": "folder-preview",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/158",
+          "title": "Find a tab inside a collapsed folder"
+        },
+        {
+          "key": "multi-select",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/68",
+          "title": "Select and move several sidebar tabs"
+        }
+      ]
+    },
+    {
+      "area": "workspace",
+      "branch": "feat/workspace-workstream",
+      "keys": [
+        "space-management",
+        "workspace-organizer",
+        "window-ownership"
+      ],
+      "issues": [
+        {
+          "key": "space-management",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/64",
+          "title": "Rename, reorder and remove a Space with recovery"
+        },
+        {
+          "key": "workspace-organizer",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/147",
+          "title": "Inspect and repair workspace ownership in one organizer"
+        },
+        {
+          "key": "window-ownership",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/72",
+          "title": "Move tabs and Spaces between native windows"
+        }
+      ]
+    },
+    {
+      "area": "profiles",
+      "branch": "feat/profiles-workstream",
+      "keys": [
+        "profiles",
+        "profile-safety",
+        "private-browsing"
+      ],
+      "issues": [
+        {
+          "key": "profiles",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/48",
+          "title": "Attach Spaces to isolated browser Profiles"
+        },
+        {
+          "key": "profile-safety",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/103",
+          "title": "Reassign or delete a Profile without relabeling authenticated pages"
+        },
+        {
+          "key": "private-browsing",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/98",
+          "title": "Keep private windows out of workspace persistence and AI"
+        }
+      ]
+    },
+    {
+      "area": "durability",
+      "branch": "feat/durability-workstream",
+      "keys": [
+        "session-durability",
+        "schema-migrations",
+        "undo-windows"
+      ],
+      "issues": [
+        {
+          "key": "session-durability",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/50",
+          "title": "Recover the native workspace after an interrupted write"
+        },
+        {
+          "key": "schema-migrations",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/99",
+          "title": "Upgrade stored workspace schemas without losing the original"
+        },
+        {
+          "key": "undo-windows",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/70",
+          "title": "Reopen a closed window with its workspace"
+        }
+      ]
+    },
+    {
+      "area": "portability",
+      "branch": "feat/portability-workstream",
+      "keys": [
+        "export",
+        "workspace-import",
+        "prototype-migration"
+      ],
+      "issues": [
+        {
+          "key": "export",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/73",
+          "title": "Export portable Arcified workspace data"
+        },
+        {
+          "key": "workspace-import",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/136",
+          "title": "Preview and merge a portable Arcified workspace import"
+        },
+        {
+          "key": "prototype-migration",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/76",
+          "title": "Migrate Arcified Lab snapshots into native Spaces"
+        }
+      ]
+    },
+    {
+      "area": "commands",
+      "branch": "feat/commands-workstream",
+      "keys": [
+        "command-bar",
+        "command-ranking",
+        "site-search"
+      ],
+      "issues": [
+        {
+          "key": "command-bar",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/77",
+          "title": "Navigate and run browser actions from one command bar"
+        },
+        {
+          "key": "command-ranking",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/109",
+          "title": "Find open and pinned tabs across Spaces"
+        },
+        {
+          "key": "site-search",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/110",
+          "title": "Use configurable site-search shortcuts in the command bar"
+        }
+      ]
+    },
+    {
+      "area": "navigation",
+      "branch": "feat/navigation-workstream",
+      "keys": [
+        "tab-switcher",
+        "tab-order-navigation",
+        "find"
+      ],
+      "issues": [
+        {
+          "key": "tab-switcher",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/78",
+          "title": "Switch recent tabs with a keyboard preview"
+        },
+        {
+          "key": "tab-order-navigation",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/100",
+          "title": "Navigate tabs and Spaces in sidebar order"
+        },
+        {
+          "key": "find",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/33",
+          "title": "Find page text without breaking selection or focus"
+        }
+      ]
+    },
+    {
+      "area": "transients",
+      "branch": "feat/transients-workstream",
+      "keys": [
+        "peek",
+        "little-arc",
+        "air-traffic"
+      ],
+      "issues": [
+        {
+          "key": "peek",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/79",
+          "title": "Preview a link in Peek and promote or dismiss it"
+        },
+        {
+          "key": "little-arc",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/111",
+          "title": "Open external links in a lightweight browser window"
+        },
+        {
+          "key": "air-traffic",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/80",
+          "title": "Route external links to the intended Space or Profile"
+        }
+      ]
+    },
+    {
+      "area": "splits",
+      "branch": "feat/splits-workstream",
+      "keys": [
+        "split-horizontal",
+        "split-vertical",
+        "split-persistence"
+      ],
+      "issues": [
+        {
+          "key": "split-horizontal",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/81",
+          "title": "Browse two tabs side by side with independent navigation"
+        },
+        {
+          "key": "split-vertical",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/112",
+          "title": "Switch split panes between horizontal and vertical orientation"
+        },
+        {
+          "key": "split-persistence",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/169",
+          "title": "Restore a saved split's layout and active pane"
+        }
+      ]
+    },
+    {
+      "area": "layout",
+      "branch": "feat/layout-workstream",
+      "keys": [
+        "sidebar-layout",
+        "tab-layout-choice",
+        "focus-mode"
+      ],
+      "issues": [
+        {
+          "key": "sidebar-layout",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/51",
+          "title": "Resize, hide and reveal the sidebar without moving focus"
+        },
+        {
+          "key": "tab-layout-choice",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/104",
+          "title": "Present the same tabs in sidebar or top-row layouts"
+        },
+        {
+          "key": "focus-mode",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/82",
+          "title": "Enter a distraction-free layout with controls on demand"
+        }
+      ]
+    },
+    {
+      "area": "appearance",
+      "branch": "feat/appearance-workstream",
+      "keys": [
+        "space-themes",
+        "motion",
+        "shortcut-settings"
+      ],
+      "issues": [
+        {
+          "key": "space-themes",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/52",
+          "title": "Customize each Space's color, name and icon"
+        },
+        {
+          "key": "motion",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/83",
+          "title": "Respect motion and sound preferences in sidebar transitions"
+        },
+        {
+          "key": "shortcut-settings",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/34",
+          "title": "Discover and customize browser keyboard shortcuts"
+        }
+      ]
+    },
+    {
+      "area": "library",
+      "branch": "feat/library-workstream",
+      "keys": [
+        "library",
+        "downloads",
+        "history-controls"
+      ],
+      "issues": [
+        {
+          "key": "library",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/19",
+          "title": "Open a unified Library for saved browsing material"
+        },
+        {
+          "key": "downloads",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/36",
+          "title": "Manage downloads with clear progress and recovery"
+        },
+        {
+          "key": "history-controls",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/102",
+          "title": "Browse and clear local history separately from Archive"
+        }
+      ]
+    },
+    {
+      "area": "capture",
+      "branch": "feat/capture-workstream",
+      "keys": [
+        "capture",
+        "region-capture",
+        "recent-files"
+      ],
+      "issues": [
+        {
+          "key": "capture",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/37",
+          "title": "Capture a full page and reuse it from Library"
+        },
+        {
+          "key": "region-capture",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/60",
+          "title": "Capture a selected region with a cancellable picker"
+        },
+        {
+          "key": "recent-files",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/53",
+          "title": "Drag recent downloads and captures from the sidebar"
+        }
+      ]
+    },
+    {
+      "area": "media",
+      "branch": "feat/media-workstream",
+      "keys": [
+        "pip",
+        "media-controls",
+        "tab-status"
+      ],
+      "issues": [
+        {
+          "key": "pip",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/114",
+          "title": "Keep video available in picture in picture"
+        },
+        {
+          "key": "media-controls",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/115",
+          "title": "Control background audio from the browser shell"
+        },
+        {
+          "key": "tab-status",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/71",
+          "title": "Show tab loading, audio, capture and attention state"
+        }
+      ]
+    },
+    {
+      "area": "site-tools",
+      "branch": "feat/site-tools-workstream",
+      "keys": [
+        "site-controls",
+        "developer-mode",
+        "browser-diagnostics"
+      ],
+      "issues": [
+        {
+          "key": "site-controls",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/38",
+          "title": "Reach site permissions and extensions from compact chrome"
+        },
+        {
+          "key": "developer-mode",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/39",
+          "title": "Inspect the active page and keep developer controls discoverable"
+        },
+        {
+          "key": "browser-diagnostics",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/142",
+          "title": "Open native task manager and performance recording"
+        }
+      ]
+    },
+    {
+      "area": "accessibility",
+      "branch": "feat/accessibility-workstream",
+      "keys": [
+        "accessibility",
+        "ime-localization",
+        "window-chrome"
+      ],
+      "issues": [
+        {
+          "key": "accessibility",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/149",
+          "title": "Operate Spaces and the sidebar with assistive technology"
+        },
+        {
+          "key": "ime-localization",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/113",
+          "title": "Edit browser chrome reliably with IME and bidirectional text"
+        },
+        {
+          "key": "window-chrome",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/35",
+          "title": "Respect native caption controls, displays and window states"
+        }
+      ]
+    }
+  ]
+}

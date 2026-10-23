@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unconfigured synthetic workload</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/workload.mjs"></script>
+  <main>
+    <h1 id="identity">Synthetic workload</h1>
+    <p id="status" role="status">Loading fixture script</p>
+    <p><a href="/">Workload choices</a> <a id="next" hidden>Navigate to paired document</a></p>
+    <label>Synthetic state for history and restore checks <input id="state" autocomplete="off"></label>
+    <p><button id="echo">Echo input</button> <output id="echo-result" aria-live="polite">No echo yet</output></p>
+    <p><button id="cancel">Cancel remaining work</button> <button id="export">Export raw page observations</button></p>
+    <p>The echo handler and animation-frame callback do not prove screen presentation or native readiness.</p>
+    <ol id="rows"></ol>
+    <noscript>This fixture requires JavaScript. Record this as unavailable, not ready.</noscript>
+  </main>
+</html>

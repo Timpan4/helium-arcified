@@ -1,0 +1,53 @@
+{
+  "schema": "arcified-run-v1",
+  "note": "Null means unrecorded. Do not turn a missing milestone into zero latency.",
+  "runId": null,
+  "platform": null,
+  "referenceHardware": {
+    "machineId": null,
+    "cpuAndTopology": null,
+    "ram": null,
+    "storageAndFilesystem": null,
+    "gpuDriverAndCompositor": null,
+    "displayRefreshScaleAndResolution": null,
+    "osVersionKernelAndPowerPolicy": null,
+    "powerSourceThermalStateAndBackgroundWork": null,
+    "inputDeviceAndConnection": null
+  },
+  "build": {
+    "product": null,
+    "repositoryRevisionAndDirtyDiffHash": null,
+    "heliumBaseRevision": null,
+    "chromiumRevision": null,
+    "binaryHashArchitectureAndVersion": null,
+    "buildModeCompilerGnArgsAndPackaging": null,
+    "flagsPoliciesSettingsLocaleAndLayout": null,
+    "extensionsBlockerVersionAndFilterRevision": null,
+    "accountAndBackgroundServicesState": null
+  },
+  "conditions": {
+    "sessionManifestPathAndHash": null,
+    "profileSeedIdentityAndPreparation": null,
+    "processColdOrWarm": null,
+    "filesystemCacheStateAndEvidence": null,
+    "browserHttpCodeGpuDnsTlsCacheStates": null,
+    "networkRouteShapingAndServerLog": null,
+    "restorePolicyAndLoadedDiscardedTabStates": null,
+    "runOrderAndPairedBaselineRunId": null,
+    "instrumentationVersionCategoriesSamplingAndOverhead": null
+  },
+  "scenario": null,
+  "outcome": null,
+  "cancellationOrFailureReason": null,
+  "milestones": [],
+  "rawArtifactsWithHashesAndClockDomains": [],
+  "processAccountingMethodMembershipAndSamples": null,
+  "analysis": {
+    "metricDefinitionUnitsAndDenominator": null,
+    "rawObservationIdsAndDistribution": null,
+    "limitingResourceOrCodePathAndEvidence": null,
+    "alternativeExplanationsAndChecks": null,
+    "instrumentResolutionOverheadAndUncertainty": null,
+    "missingEvidenceAndPlatformLimits": null
+  }
+}

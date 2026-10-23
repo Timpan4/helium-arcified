@@ -4,6 +4,8 @@ Helium's main repository contains a patch series for Chromium, not an entire che
 
 The native feature implementation will use C++/Chromium and quilt patches. The TypeScript extension in ../extension is only a test harness for state and UX.
 
+The [downstream Linux preparation guide](native-linux.md) documents the local source/patch identity preflight and an explicit preparation route using pinned Linux platform tooling and this fork's inputs. Preparation is a plan by default and stops after GN generation when executed on an authorized build host. It does not compile or launch a browser. Issue #16's build and native interaction acceptance remains open.
+
 ## Constraints
 
 - Maintain a downstream patch group, eventually patches/arcified, referenced in patches/series in the required order.

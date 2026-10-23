@@ -1,0 +1,3125 @@
+{
+  "status": "published-verified-owner-scope",
+  "root": {
+    "id": "I_kwDOVJGcMM8AAAABZXMyWA",
+    "number": 2,
+    "title": "Arcified desktop roadmap: Arc, Dia and YAB, improved across platforms",
+    "url": "https://github.com/Timpan4/helium-arcified/issues/2"
+  },
+  "areas": {
+    "platform": {
+      "id": "I_kwDOVJGcMM8AAAABZXNQ_g",
+      "number": 3,
+      "title": "Track native builds and platform integration",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/3",
+      "state": "OPEN",
+      "stateReason": null,
+      "priority": "Before AI"
+    },
+    "core": {
+      "id": "I_kwDOVJGcMM8AAAABZXNTGw",
+      "number": 4,
+      "title": "Track spaces and tab lifecycle",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/4",
+      "state": "OPEN",
+      "stateReason": null,
+      "priority": "Before AI"
+    },
+    "data": {
+      "id": "I_kwDOVJGcMM8AAAABZXNVdw",
+      "number": 5,
+      "title": "Track data migration and privacy",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/5",
+      "state": "OPEN",
+      "stateReason": null,
+      "priority": "Before AI"
+    },
+    "navigation": {
+      "id": "I_kwDOVJGcMM8AAAABZXNXXw",
+      "number": 6,
+      "title": "Track navigation and multitasking",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/6",
+      "state": "OPEN",
+      "stateReason": null,
+      "priority": "Before AI"
+    },
+    "appearance": {
+      "id": "I_kwDOVJGcMM8AAAABZXNZcg",
+      "number": 7,
+      "title": "Track appearance, input and onboarding",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/7",
+      "state": "OPEN",
+      "stateReason": null,
+      "priority": "Before AI"
+    },
+    "library": {
+      "id": "I_kwDOVJGcMM8AAAABZXNblg",
+      "number": 8,
+      "title": "Track library, files and capture",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/8",
+      "state": "OPEN",
+      "stateReason": null,
+      "priority": "Before AI"
+    },
+    "media": {
+      "id": "I_kwDOVJGcMM8AAAABZXNdUg",
+      "number": 9,
+      "title": "Track media controls",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/9",
+      "state": "OPEN",
+      "stateReason": null,
+      "priority": "Before AI"
+    },
+    "extras": {
+      "id": "I_kwDOVJGcMM8AAAABZXNfQw",
+      "number": 10,
+      "title": "Track creation and live integrations",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/10",
+      "state": "OPEN",
+      "stateReason": null,
+      "priority": "Before AI"
+    },
+    "assistant": {
+      "id": "I_kwDOVJGcMM8AAAABZXNhIw",
+      "number": 11,
+      "title": "Track optional intelligence",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/11",
+      "state": "OPEN",
+      "stateReason": null,
+      "priority": "Later"
+    },
+    "performance": {
+      "id": "I_kwDOVJGcMM8AAAABZXNi2Q",
+      "number": 12,
+      "title": "Track measured performance and recovery",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/12",
+      "state": "OPEN",
+      "stateReason": null,
+      "priority": "Before AI"
+    },
+    "sync": {
+      "id": "I_kwDOVJGcMM8AAAABZXNkuQ",
+      "number": 13,
+      "title": "Track optional encrypted sync",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/13",
+      "state": "CLOSED",
+      "stateReason": "NOT_PLANNED",
+      "priority": "Excluded"
+    },
+    "release": {
+      "id": "I_kwDOVJGcMM8AAAABZXNnHA",
+      "number": 14,
+      "title": "Track distribution and engine maintenance",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/14",
+      "state": "OPEN",
+      "stateReason": null,
+      "priority": "Before AI"
+    },
+    "research": {
+      "id": "I_kwDOVJGcMM8AAAABZXNpEA",
+      "number": 15,
+      "title": "Track reference evidence and release coverage",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/15",
+      "state": "OPEN",
+      "stateReason": null,
+      "priority": "Before AI"
+    }
+  },
+  "issues": {
+    "native-linux": {
+      "id": "I_kwDOVJGcMM8AAAABZXX2xw",
+      "number": 16,
+      "title": "Boot a downstream native Arcified build on Linux",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/16",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "native-windows": {
+      "id": "I_kwDOVJGcMM8AAAABZXX4nQ",
+      "number": 17,
+      "title": "Boot a downstream native Arcified build on Windows",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/17",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "native-macos": {
+      "id": "I_kwDOVJGcMM8AAAABZXX6sw",
+      "number": 18,
+      "title": "Boot a downstream native Arcified build on macOS",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/18",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "spaces": {
+      "id": "I_kwDOVJGcMM8AAAABZXYXfQ",
+      "number": 32,
+      "title": "Create and switch live Spaces in the native sidebar",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/32",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "profiles": {
+      "id": "I_kwDOVJGcMM8AAAABZXY22w",
+      "number": 48,
+      "title": "Attach Spaces to isolated browser Profiles",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/48",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "temporary-tabs": {
+      "id": "I_kwDOVJGcMM8AAAABZXY4uQ",
+      "number": 49,
+      "title": "Open and close temporary tabs within a Space",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/49",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "pins": {
+      "id": "I_kwDOVJGcMM8AAAABZXZbMA",
+      "number": 67,
+      "title": "Pin a tab with a durable home URL and reset action",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/67",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "favorites": {
+      "id": "I_kwDOVJGcMM8AAAABZXanRA",
+      "number": 106,
+      "title": "Keep Profile Favorites available across Spaces",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/106",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "folders": {
+      "id": "I_kwDOVJGcMM8AAAABZXapzQ",
+      "number": 107,
+      "title": "Organize pinned tabs into nested sidebar folders",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/107",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "multi-select": {
+      "id": "I_kwDOVJGcMM8AAAABZXZc_g",
+      "number": 68,
+      "title": "Select and move several sidebar tabs",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/68",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "archive": {
+      "id": "I_kwDOVJGcMM8AAAABZXZe8w",
+      "number": 69,
+      "title": "Browse and restore manually archived tabs",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/69",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "auto-archive": {
+      "id": "I_kwDOVJGcMM8AAAABZXasOQ",
+      "number": 108,
+      "title": "Clean up inactive temporary tabs without losing work",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/108",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "session-durability": {
+      "id": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "number": 50,
+      "title": "Recover the native workspace after an interrupted write",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/50",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "undo-windows": {
+      "id": "I_kwDOVJGcMM8AAAABZXZg4w",
+      "number": 70,
+      "title": "Reopen a closed window with its workspace",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/70",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "tab-status": {
+      "id": "I_kwDOVJGcMM8AAAABZXZing",
+      "number": 71,
+      "title": "Show tab loading, audio, capture and attention state",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/71",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "window-ownership": {
+      "id": "I_kwDOVJGcMM8AAAABZXZkfg",
+      "number": 72,
+      "title": "Move tabs and Spaces between native windows",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/72",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "export": {
+      "id": "I_kwDOVJGcMM8AAAABZXZmcg",
+      "number": 73,
+      "title": "Export portable Arcified workspace data",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/73",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "arc-import": {
+      "id": "I_kwDOVJGcMM8AAAABZXZoGQ",
+      "number": 74,
+      "title": "Import Arc Spaces, folders and custom tab names",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/74",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "browser-import": {
+      "id": "I_kwDOVJGcMM8AAAABZXZpyA",
+      "number": 75,
+      "title": "Import browser bookmarks, history and selected settings",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/75",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "prototype-migration": {
+      "id": "I_kwDOVJGcMM8AAAABZXZrsg",
+      "number": 76,
+      "title": "Migrate Arcified Lab snapshots into native Spaces",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/76",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "command-bar": {
+      "id": "I_kwDOVJGcMM8AAAABZXZt7w",
+      "number": 77,
+      "title": "Navigate and run browser actions from one command bar",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/77",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "command-ranking": {
+      "id": "I_kwDOVJGcMM8AAAABZXat_g",
+      "number": 109,
+      "title": "Find open and pinned tabs across Spaces",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/109",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "site-search": {
+      "id": "I_kwDOVJGcMM8AAAABZXavxg",
+      "number": 110,
+      "title": "Use configurable site-search shortcuts in the command bar",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/110",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "tab-switcher": {
+      "id": "I_kwDOVJGcMM8AAAABZXZv7Q",
+      "number": 78,
+      "title": "Switch recent tabs with a keyboard preview",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/78",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "find": {
+      "id": "I_kwDOVJGcMM8AAAABZXYZng",
+      "number": 33,
+      "title": "Find page text without breaking selection or focus",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/33",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "peek": {
+      "id": "I_kwDOVJGcMM8AAAABZXZxtQ",
+      "number": 79,
+      "title": "Preview a link in Peek and promote or dismiss it",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/79",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "little-arc": {
+      "id": "I_kwDOVJGcMM8AAAABZXaxXw",
+      "number": 111,
+      "title": "Open external links in a lightweight browser window",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/111",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "air-traffic": {
+      "id": "I_kwDOVJGcMM8AAAABZXZzkg",
+      "number": 80,
+      "title": "Route external links to the intended Space or Profile",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/80",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "sidebar-layout": {
+      "id": "I_kwDOVJGcMM8AAAABZXY9YA",
+      "number": 51,
+      "title": "Resize, hide and reveal the sidebar without moving focus",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/51",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "split-horizontal": {
+      "id": "I_kwDOVJGcMM8AAAABZXZ1cg",
+      "number": 81,
+      "title": "Browse two tabs side by side with independent navigation",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/81",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "split-vertical": {
+      "id": "I_kwDOVJGcMM8AAAABZXazPw",
+      "number": 112,
+      "title": "Switch split panes between horizontal and vertical orientation",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/112",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "focus-mode": {
+      "id": "I_kwDOVJGcMM8AAAABZXZ3Ug",
+      "number": 82,
+      "title": "Enter a distraction-free layout with controls on demand",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/82",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "space-themes": {
+      "id": "I_kwDOVJGcMM8AAAABZXY_fQ",
+      "number": 52,
+      "title": "Customize each Space's color, name and icon",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/52",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "motion": {
+      "id": "I_kwDOVJGcMM8AAAABZXZ5Jw",
+      "number": 83,
+      "title": "Respect motion and sound preferences in sidebar transitions",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/83",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "shortcut-settings": {
+      "id": "I_kwDOVJGcMM8AAAABZXYbUg",
+      "number": 34,
+      "title": "Discover and customize browser keyboard shortcuts",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/34",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "accessibility": {
+      "id": "I_kwDOVJGcMM8AAAABZXb6Tw",
+      "number": 149,
+      "title": "Operate Spaces and the sidebar with assistive technology",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/149",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "ime-localization": {
+      "id": "I_kwDOVJGcMM8AAAABZXa1XA",
+      "number": 113,
+      "title": "Edit browser chrome reliably with IME and bidirectional text",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/113",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "window-chrome": {
+      "id": "I_kwDOVJGcMM8AAAABZXYdpw",
+      "number": 35,
+      "title": "Respect native caption controls, displays and window states",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/35",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "library": {
+      "id": "I_kwDOVJGcMM8AAAABZXX8tg",
+      "number": 19,
+      "title": "Open a unified Library for saved browsing material",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/19",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "downloads": {
+      "id": "I_kwDOVJGcMM8AAAABZXYgAA",
+      "number": 36,
+      "title": "Manage downloads with clear progress and recovery",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/36",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "recent-files": {
+      "id": "I_kwDOVJGcMM8AAAABZXZBiQ",
+      "number": 53,
+      "title": "Drag recent downloads and captures from the sidebar",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/53",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "capture": {
+      "id": "I_kwDOVJGcMM8AAAABZXYiLA",
+      "number": 37,
+      "title": "Capture a full page and reuse it from Library",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/37",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "pip": {
+      "id": "I_kwDOVJGcMM8AAAABZXa3LA",
+      "number": 114,
+      "title": "Keep video available in picture in picture",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/114",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "media-controls": {
+      "id": "I_kwDOVJGcMM8AAAABZXa5Fg",
+      "number": 115,
+      "title": "Control background audio from the browser shell",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/115",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "site-controls": {
+      "id": "I_kwDOVJGcMM8AAAABZXYj6Q",
+      "number": 38,
+      "title": "Reach site permissions and extensions from compact chrome",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/38",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "developer-mode": {
+      "id": "I_kwDOVJGcMM8AAAABZXYlmw",
+      "number": 39,
+      "title": "Inspect the active page and keep developer controls discoverable",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/39",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "boost-style": {
+      "id": "I_kwDOVJGcMM8AAAABZXZDRg",
+      "number": 54,
+      "title": "Customize a site's appearance with a reversible Boost",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/54",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "boost-zap": {
+      "id": "I_kwDOVJGcMM8AAAABZXZ6sA",
+      "number": 84,
+      "title": "Hide selected site elements with a reversible picker",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/84",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "boost-code": {
+      "id": "I_kwDOVJGcMM8AAAABZXZ8ZA",
+      "number": 85,
+      "title": "Offer explicit local code customization with safety boundaries",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/85",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "easel": {
+      "id": "I_kwDOVJGcMM8AAAABZXZ-KQ",
+      "number": 86,
+      "title": "Collect links, text and captures on a local visual board",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/86",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "live-capture": {
+      "id": "I_kwDOVJGcMM8AAAABZXa7Dw",
+      "number": 116,
+      "title": "Refresh a selected web region on a visual board",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/116",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "notes": {
+      "id": "I_kwDOVJGcMM8AAAABZXaADg",
+      "number": 87,
+      "title": "Preserve historical Arc Notes through import and export",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/87",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "share-folders": {
+      "id": "I_kwDOVJGcMM8AAAABZXcnuQ",
+      "number": 172,
+      "title": "Share a folder or split as an inspectable set of links",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/172",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "live-folders": {
+      "id": "I_kwDOVJGcMM8AAAABZXb8RQ",
+      "number": 150,
+      "title": "Keep a user-connected work folder current",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/150",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "local-assistant": {
+      "id": "I_kwDOVJGcMM8AAAABZXZFHw",
+      "number": 55,
+      "title": "Ask an explicitly selected local model from the browser",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/55",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "context-selector": {
+      "id": "I_kwDOVJGcMM8AAAABZXaB2w",
+      "number": 88,
+      "title": "Choose and inspect @tab and @space context before sending",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/88",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "remote-provider": {
+      "id": "I_kwDOVJGcMM8AAAABZXa8xA",
+      "number": 117,
+      "title": "Connect a remote AI provider through explicit consent",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/117",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "streaming": {
+      "id": "I_kwDOVJGcMM8AAAABZXaDoA",
+      "number": 89,
+      "title": "Stream, stop and retry assistant answers without blocking browsing",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/89",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "citations": {
+      "id": "I_kwDOVJGcMM8AAAABZXa-ZA",
+      "number": 118,
+      "title": "Attribute answers to the exact page context used",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/118",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "page-reading": {
+      "id": "I_kwDOVJGcMM8AAAABZXbAJA",
+      "number": 119,
+      "title": "Read supported page content outside the browser UI path",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/119",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "ask-page": {
+      "id": "I_kwDOVJGcMM8AAAABZXb-Gw",
+      "number": 151,
+      "title": "Ask about a page from an explicit local find action",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/151",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "link-summaries": {
+      "id": "I_kwDOVJGcMM8AAAABZXb_9A",
+      "number": 152,
+      "title": "Preview a link summary only after an explicit request",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/152",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "tidy-titles": {
+      "id": "I_kwDOVJGcMM8AAAABZXbCAw",
+      "number": 120,
+      "title": "Suggest better tab titles with user control",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/120",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "tidy-downloads": {
+      "id": "I_kwDOVJGcMM8AAAABZXbDsQ",
+      "number": 121,
+      "title": "Suggest descriptive download names before committing them",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/121",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "tidy-tabs": {
+      "id": "I_kwDOVJGcMM8AAAABZXcCHA",
+      "number": 153,
+      "title": "Preview AI-suggested tab groups and apply them with undo",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/153",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "chat-command": {
+      "id": "I_kwDOVJGcMM8AAAABZXbFhw",
+      "number": 122,
+      "title": "Send an explicit question from the command bar",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/122",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "skills": {
+      "id": "I_kwDOVJGcMM8AAAABZXZHJQ",
+      "number": 56,
+      "title": "Decide reusable assistant prompt workflows",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/56",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "read-tools": {
+      "id": "I_kwDOVJGcMM8AAAABZXZI7w",
+      "number": 57,
+      "title": "Decide additional assistant retrieval capabilities",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/57",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "write-tools": {
+      "id": "I_kwDOVJGcMM8AAAABZXZK2w",
+      "number": 58,
+      "title": "Decide assistant actions with external effects",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/58",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "ai-boundary": {
+      "id": "I_kwDOVJGcMM8AAAABZXcD9w",
+      "number": 154,
+      "title": "Validate assistant authorization with hostile page fixtures",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/154",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "chat-history": {
+      "id": "I_kwDOVJGcMM8AAAABZXcFkw",
+      "number": 155,
+      "title": "Manage local assistant conversations and generated artifacts",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/155",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "memory-decision": {
+      "id": "I_kwDOVJGcMM8AAAABZXcppA",
+      "number": 173,
+      "title": "Decide optional assistant memory with inspect and delete controls",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/173",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "perf-baseline": {
+      "id": "I_kwDOVJGcMM8AAAABZXX-rg",
+      "number": 20,
+      "title": "Define reproducible browser performance fixtures and milestones",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/20",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "perf-activation": {
+      "id": "I_kwDOVJGcMM8AAAABZXaFSg",
+      "number": 90,
+      "title": "Present the next tab before doing close cleanup",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/90",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "perf-startup": {
+      "id": "I_kwDOVJGcMM8AAAABZXaHBw",
+      "number": 91,
+      "title": "Restore a usable window before loading background tabs",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/91",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "perf-discard": {
+      "id": "I_kwDOVJGcMM8AAAABZXbHZw",
+      "number": 123,
+      "title": "Sleep eligible background tabs and restore them safely",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/123",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "perf-profiles": {
+      "id": "I_kwDOVJGcMM8AAAABZXaI8g",
+      "number": 92,
+      "title": "Unload inactive Profile resources without mixing identities",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/92",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "bfcache": {
+      "id": "I_kwDOVJGcMM8AAAABZXbJLA",
+      "number": 124,
+      "title": "Preserve eligible pages through back and forward cache",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/124",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "perf-hidden": {
+      "id": "I_kwDOVJGcMM8AAAABZXaKzQ",
+      "number": 93,
+      "title": "Stop redundant work in hidden sidebar and split surfaces",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/93",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "perf-layout": {
+      "id": "I_kwDOVJGcMM8AAAABZXbLHA",
+      "number": 125,
+      "title": "Keep page content anchored during sidebar and split transitions",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/125",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "perf-leaks": {
+      "id": "I_kwDOVJGcMM8AAAABZXbM2Q",
+      "number": 126,
+      "title": "Detect browser-owned resource leaks through repeated workflows",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/126",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "perf-energy": {
+      "id": "I_kwDOVJGcMM8AAAABZXYnUA",
+      "number": 40,
+      "title": "Keep idle browsing quiet and allow OS sleep",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/40",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "perf-ai": {
+      "id": "I_kwDOVJGcMM8AAAABZXbPHQ",
+      "number": 127,
+      "title": "Measure assistant startup and rendering without slowing browsing",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/127",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "crashed-tab": {
+      "id": "I_kwDOVJGcMM8AAAABZXaMsw",
+      "number": 94,
+      "title": "Recover a crashed renderer with a clear retry surface",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/94",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "sync-contract": {
+      "id": "I_kwDOVJGcMM8AAAABZXYAcQ",
+      "number": 21,
+      "title": "Decide encrypted sync scope and key ownership",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/21",
+      "priority": "Excluded",
+      "state": "CLOSED",
+      "stateReason": "NOT_PLANNED"
+    },
+    "sync-enroll": {
+      "id": "I_kwDOVJGcMM8AAAABZXcHXQ",
+      "number": 156,
+      "title": "Enroll another device and show encrypted sync status",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/156",
+      "priority": "Excluded",
+      "state": "CLOSED",
+      "stateReason": "NOT_PLANNED"
+    },
+    "sync-conflicts": {
+      "id": "I_kwDOVJGcMM8AAAABZXcJHQ",
+      "number": 157,
+      "title": "Merge offline workspace edits without losing tabs",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/157",
+      "priority": "Excluded",
+      "state": "CLOSED",
+      "stateReason": "NOT_PLANNED"
+    },
+    "sync-recovery": {
+      "id": "I_kwDOVJGcMM8AAAABZXcrdg",
+      "number": 174,
+      "title": "Recover encrypted workspace access with trusted recovery material",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/174",
+      "priority": "Excluded",
+      "state": "CLOSED",
+      "stateReason": "NOT_PLANNED"
+    },
+    "folder-preview": {
+      "id": "I_kwDOVJGcMM8AAAABZXcLOg",
+      "number": 158,
+      "title": "Find a tab inside a collapsed folder",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/158",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "tab-handoff": {
+      "id": "I_kwDOVJGcMM8AAAABZXcOJA",
+      "number": 159,
+      "title": "Hand off a persistent tab between native windows",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/159",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "calendar": {
+      "id": "I_kwDOVJGcMM8AAAABZXcQpw",
+      "number": 160,
+      "title": "Show an opt-in calendar countdown and join action",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/160",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "share-quote": {
+      "id": "I_kwDOVJGcMM8AAAABZXaO8A",
+      "number": 95,
+      "title": "Copy links as plain URL, Markdown or attributed text",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/95",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "easel-drawing": {
+      "id": "I_kwDOVJGcMM8AAAABZXbRDw",
+      "number": 128,
+      "title": "Draw and align content on a research board",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/128",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "shared-board": {
+      "id": "I_kwDOVJGcMM8AAAABZXYCkA",
+      "number": 22,
+      "title": "Decide hosting and access for revocable content sharing",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/22",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "boost-sharing": {
+      "id": "I_kwDOVJGcMM8AAAABZXaRaQ",
+      "number": 96,
+      "title": "Preview, import and export visual Boosts safely",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/96",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "instant-links": {
+      "id": "I_kwDOVJGcMM8AAAABZXctdQ",
+      "number": 175,
+      "title": "Evaluate explicit Instant Links from the command bar",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/175",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "settings": {
+      "id": "I_kwDOVJGcMM8AAAABZXbTKA",
+      "number": 129,
+      "title": "Find and reset settings without losing browsing data",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/129",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "onboarding": {
+      "id": "I_kwDOVJGcMM8AAAABZXaTZQ",
+      "number": 97,
+      "title": "Set up a usable local browser without a cloud account",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/97",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "private-browsing": {
+      "id": "I_kwDOVJGcMM8AAAABZXaVUw",
+      "number": 98,
+      "title": "Keep private windows out of workspace persistence and AI",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/98",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "automation": {
+      "id": "I_kwDOVJGcMM8AAAABZXbUzA",
+      "number": 130,
+      "title": "Expose permissioned browser automation through platform adapters",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/130",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "compatibility": {
+      "id": "I_kwDOVJGcMM8AAAABZXZMpg",
+      "number": 59,
+      "title": "Record the native Chromium compatibility release matrix",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/59",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "release-linux": {
+      "id": "I_kwDOVJGcMM8AAAABZXbWig",
+      "number": 131,
+      "title": "Install a Linux Arcified package safely",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/131",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "release-windows": {
+      "id": "I_kwDOVJGcMM8AAAABZXbYMw",
+      "number": 132,
+      "title": "Install a signed Windows Arcified package",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/132",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "release-macos": {
+      "id": "I_kwDOVJGcMM8AAAABZXbaUA",
+      "number": 133,
+      "title": "Install a signed macOS Arcified app",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/133",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "engine-updates": {
+      "id": "I_kwDOVJGcMM8AAAABZXYo-w",
+      "number": 41,
+      "title": "Prove a repeatable Chromium update procedure",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/41",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "runtime-reference": {
+      "id": "I_kwDOVJGcMM8AAAABZXYrJw",
+      "number": 42,
+      "title": "Observe reference UX on supported desktop operating systems",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/42",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "retirements": {
+      "id": "I_kwDOVJGcMM8AAAABZXYEJQ",
+      "number": 23,
+      "title": "Record historical feature and service replacement decisions",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/23",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "release-ux-check": {
+      "id": "I_kwDOVJGcMM8AAAABZXcSiQ",
+      "number": 161,
+      "title": "Verify complete desktop UX coverage on all target platforms",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/161",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "lifecycle-contract": {
+      "id": "I_kwDOVJGcMM8AAAABZXYF9g",
+      "number": 24,
+      "title": "Settle native tab ownership and cleanup semantics",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/24",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "pin-section-controls": {
+      "id": "I_kwDOVJGcMM8AAAABZXbcJQ",
+      "number": 134,
+      "title": "Reset visible pins and collapse the pinned section",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/134",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "bulk-close": {
+      "id": "I_kwDOVJGcMM8AAAABZXbd_A",
+      "number": 135,
+      "title": "Close selected tabs with active-work protection and undo",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/135",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "bulk-split": {
+      "id": "I_kwDOVJGcMM8AAAABZXcUbg",
+      "number": 162,
+      "title": "Open a selected set of tabs as a split",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/162",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "workspace-import": {
+      "id": "I_kwDOVJGcMM8AAAABZXbgRg",
+      "number": 136,
+      "title": "Preview and merge a portable Arcified workspace import",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/136",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "saved-search": {
+      "id": "I_kwDOVJGcMM8AAAABZXcWOQ",
+      "number": 163,
+      "title": "Search folders, archive and history from the command bar",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/163",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "region-capture": {
+      "id": "I_kwDOVJGcMM8AAAABZXZOpQ",
+      "number": 60,
+      "title": "Capture a selected region with a cancellable picker",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/60",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "board-export": {
+      "id": "I_kwDOVJGcMM8AAAABZXcX8A",
+      "number": 164,
+      "title": "Export an editable research board and a visual snapshot",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/164",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "extension-workflow": {
+      "id": "I_kwDOVJGcMM8AAAABZXZQYw",
+      "number": 61,
+      "title": "Keep extension toolbar actions usable in compact chrome",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/61",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "web-apps": {
+      "id": "I_kwDOVJGcMM8AAAABZXZSSA",
+      "number": 62,
+      "title": "Preserve installed web app launch and window behavior",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/62",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "credentials-flow": {
+      "id": "I_kwDOVJGcMM8AAAABZXbiTg",
+      "number": 137,
+      "title": "Keep autofill and passkey prompts attached to the right page",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/137",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "print-flow": {
+      "id": "I_kwDOVJGcMM8AAAABZXbkOg",
+      "number": 138,
+      "title": "Print and save a page to PDF from compact chrome",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/138",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "sync-roundtrip": {
+      "id": "I_kwDOVJGcMM8AAAABZXbl1A",
+      "number": 139,
+      "title": "Prove an encrypted workspace round-trip with synthetic data",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/139",
+      "priority": "Excluded",
+      "state": "CLOSED",
+      "stateReason": "NOT_PLANNED"
+    },
+    "sync-revoke": {
+      "id": "I_kwDOVJGcMM8AAAABZXcvOw",
+      "number": 176,
+      "title": "Revoke a synced device and restrict future key access",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/176",
+      "priority": "Excluded",
+      "state": "CLOSED",
+      "stateReason": "NOT_PLANNED"
+    },
+    "hosted-sharing": {
+      "id": "I_kwDOVJGcMM8AAAABZXc0iw",
+      "number": 179,
+      "title": "Publish and revoke a workspace link snapshot",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/179",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "automation-contract": {
+      "id": "I_kwDOVJGcMM8AAAABZXYH7g",
+      "number": 25,
+      "title": "Choose the browser automation surface and authorization model",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/25",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "integration-policy": {
+      "id": "I_kwDOVJGcMM8AAAABZXYJxQ",
+      "number": 26,
+      "title": "Choose account scopes for live folder and calendar integrations",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/26",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "update-linux": {
+      "id": "I_kwDOVJGcMM8AAAABZXcZ7w",
+      "number": 165,
+      "title": "Deliver authenticated Arcified updates on Linux",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/165",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "update-windows": {
+      "id": "I_kwDOVJGcMM8AAAABZXccOA",
+      "number": 166,
+      "title": "Deliver authenticated Arcified updates on Windows",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/166",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "update-macos": {
+      "id": "I_kwDOVJGcMM8AAAABZXceKw",
+      "number": 167,
+      "title": "Deliver authenticated Arcified updates on macOS",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/167",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "assistant-consent-contract": {
+      "id": "I_kwDOVJGcMM8AAAABZXYtQw",
+      "number": 43,
+      "title": "Define browser-owned consent and authorization for optional AI",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/43",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "schema-migrations": {
+      "id": "I_kwDOVJGcMM8AAAABZXaXVg",
+      "number": 99,
+      "title": "Upgrade stored workspace schemas without losing the original",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/99",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "arc-import-format": {
+      "id": "I_kwDOVJGcMM8AAAABZXYMkw",
+      "number": 27,
+      "title": "Discover what supported Arc exports actually contain",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/27",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "library-file-removal": {
+      "id": "I_kwDOVJGcMM8AAAABZXZT9Q",
+      "number": 63,
+      "title": "Remove Library entries and delete real files safely",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/63",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "favorite-previews-decision": {
+      "id": "I_kwDOVJGcMM8AAAABZXYPeQ",
+      "number": 28,
+      "title": "Decide which historical Favorite site previews are useful",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/28",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "tab-order-navigation": {
+      "id": "I_kwDOVJGcMM8AAAABZXaZLw",
+      "number": 100,
+      "title": "Navigate tabs and Spaces in sidebar order",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/100",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "blank-window": {
+      "id": "I_kwDOVJGcMM8AAAABZXbn0A",
+      "number": 140,
+      "title": "Open a Blank Window distinct from normal and private windows",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/140",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "gesture-navigation": {
+      "id": "I_kwDOVJGcMM8AAAABZXabFw",
+      "number": 101,
+      "title": "Route trackpad and touch gestures to Spaces or history",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/101",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "manual-cleanup": {
+      "id": "I_kwDOVJGcMM8AAAABZXbpyg",
+      "number": 141,
+      "title": "Clear temporary tabs with a preview and undo",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/141",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "automatic-pip": {
+      "id": "I_kwDOVJGcMM8AAAABZXcf7g",
+      "number": 168,
+      "title": "Offer automatic Mini Player with global and site opt-out",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/168",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "history-controls": {
+      "id": "I_kwDOVJGcMM8AAAABZXad7w",
+      "number": 102,
+      "title": "Browse and clear local history separately from Archive",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/102",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "quote-card-decision": {
+      "id": "I_kwDOVJGcMM8AAAABZXYRpw",
+      "number": 29,
+      "title": "Decide a local replacement for historical Share Quote cards",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/29",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "browser-diagnostics": {
+      "id": "I_kwDOVJGcMM8AAAABZXbrdw",
+      "number": 142,
+      "title": "Open native task manager and performance recording",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/142",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "security-surfaces": {
+      "id": "I_kwDOVJGcMM8AAAABZXbthw",
+      "number": 143,
+      "title": "Preserve trustworthy security prompts in compact browser chrome",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/143",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "easel-collaboration-decision": {
+      "id": "I_kwDOVJGcMM8AAAABZXYTdw",
+      "number": 30,
+      "title": "Decide whether live board collaboration belongs in scope",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/30",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "reference-windows-artifacts": {
+      "id": "I_kwDOVJGcMM8AAAABZXYVgQ",
+      "number": 31,
+      "title": "Identify official Windows Arc and Dia reference packages",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/31",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "space-management": {
+      "id": "I_kwDOVJGcMM8AAAABZXZVsg",
+      "number": 64,
+      "title": "Rename, reorder and remove a Space with recovery",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/64",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "profile-safety": {
+      "id": "I_kwDOVJGcMM8AAAABZXagVA",
+      "number": 103,
+      "title": "Reassign or delete a Profile without relabeling authenticated pages",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/103",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "split-persistence": {
+      "id": "I_kwDOVJGcMM8AAAABZXciJg",
+      "number": 169,
+      "title": "Restore a saved split's layout and active pane",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/169",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "split-actions": {
+      "id": "I_kwDOVJGcMM8AAAABZXcw7Q",
+      "number": 177,
+      "title": "Pin, move and maximize a durable split",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/177",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "peek-split-promotion": {
+      "id": "I_kwDOVJGcMM8AAAABZXbvxg",
+      "number": 144,
+      "title": "Promote Peek into a split without reloading its page",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/144",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "tab-layout-choice": {
+      "id": "I_kwDOVJGcMM8AAAABZXaiqg",
+      "number": 104,
+      "title": "Present the same tabs in sidebar or top-row layouts",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/104",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "layout-inspection": {
+      "id": "I_kwDOVJGcMM8AAAABZXZXXQ",
+      "number": 65,
+      "title": "Inspect local page spacing with reversible layout tools",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/65",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "snippets": {
+      "id": "I_kwDOVJGcMM8AAAABZXbyAw",
+      "number": 145,
+      "title": "Save and insert local user-authored text snippets",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/145",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "local-ocr": {
+      "id": "I_kwDOVJGcMM8AAAABZXb0YQ",
+      "number": 146,
+      "title": "Select text from an image through an explicit local OCR action",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/146",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "call-controls": {
+      "id": "I_kwDOVJGcMM8AAAABZXckAw",
+      "number": 170,
+      "title": "Keep an active call reachable while switching workspaces",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/170",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "agent-workspace": {
+      "id": "I_kwDOVJGcMM8AAAABZXZZTg",
+      "number": 66,
+      "title": "Keep an optional agent task in a visibly separate workspace",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/66",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "agent-takeover": {
+      "id": "I_kwDOVJGcMM8AAAABZXak8g",
+      "number": 105,
+      "title": "Pause agent browsing and hand control to the user",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/105",
+      "priority": "Later, after non-AI browser UX and performance",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "data-flow-controls": {
+      "id": "I_kwDOVJGcMM8AAAABZXcl6Q",
+      "number": 171,
+      "title": "Explain and control every browser data destination",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/171",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "workspace-organizer": {
+      "id": "I_kwDOVJGcMM8AAAABZXb2Ng",
+      "number": 147,
+      "title": "Inspect and repair workspace ownership in one organizer",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/147",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "workspace-operation-journal": {
+      "id": "I_kwDOVJGcMM8AAAABZXb4OQ",
+      "number": 148,
+      "title": "Undo a workspace change as the action the user performed",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/148",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "focus-routing-contract": {
+      "id": "I_kwDOVJGcMM8AAAABZXYvZw",
+      "number": 44,
+      "title": "Define which page, pane or overlay receives a browser action",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/44",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "board-sharing": {
+      "id": "I_kwDOVJGcMM8AAAABZXcywQ",
+      "number": 178,
+      "title": "Publish and revoke a board snapshot independently",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/178",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "perf-measure-linux": {
+      "id": "I_kwDOVJGcMM8AAAABZXYxUw",
+      "number": 45,
+      "title": "Record the native browser performance baseline on Linux",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/45",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "perf-measure-windows": {
+      "id": "I_kwDOVJGcMM8AAAABZXYzFQ",
+      "number": 46,
+      "title": "Record the native browser performance baseline on Windows",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/46",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    },
+    "perf-measure-macos": {
+      "id": "I_kwDOVJGcMM8AAAABZXY0zg",
+      "number": 47,
+      "title": "Record the native browser performance baseline on macOS",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/47",
+      "priority": "Before AI",
+      "state": "OPEN",
+      "stateReason": null
+    }
+  },
+  "dependencies": [
+    {
+      "key": "spaces",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX2xw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYXfQ"
+    },
+    {
+      "key": "spaces",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX4nQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXYXfQ"
+    },
+    {
+      "key": "spaces",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX6sw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYXfQ"
+    },
+    {
+      "key": "spaces",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYF9g",
+      "issue": "I_kwDOVJGcMM8AAAABZXYXfQ"
+    },
+    {
+      "key": "profiles",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYXfQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXY22w"
+    },
+    {
+      "key": "profiles",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYF9g",
+      "issue": "I_kwDOVJGcMM8AAAABZXY22w"
+    },
+    {
+      "key": "temporary-tabs",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYXfQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXY4uQ"
+    },
+    {
+      "key": "pins",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY4uQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXZbMA"
+    },
+    {
+      "key": "pins",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYF9g",
+      "issue": "I_kwDOVJGcMM8AAAABZXZbMA"
+    },
+    {
+      "key": "favorites",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZbMA",
+      "issue": "I_kwDOVJGcMM8AAAABZXanRA"
+    },
+    {
+      "key": "favorites",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY22w",
+      "issue": "I_kwDOVJGcMM8AAAABZXanRA"
+    },
+    {
+      "key": "folders",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZbMA",
+      "issue": "I_kwDOVJGcMM8AAAABZXapzQ"
+    },
+    {
+      "key": "multi-select",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY4uQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXZc_g"
+    },
+    {
+      "key": "archive",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY4uQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXZe8w"
+    },
+    {
+      "key": "auto-archive",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZe8w",
+      "issue": "I_kwDOVJGcMM8AAAABZXasOQ"
+    },
+    {
+      "key": "auto-archive",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZbMA",
+      "issue": "I_kwDOVJGcMM8AAAABZXasOQ"
+    },
+    {
+      "key": "session-durability",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYXfQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXY7CA"
+    },
+    {
+      "key": "undo-windows",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXZg4w"
+    },
+    {
+      "key": "tab-status",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY4uQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXZing"
+    },
+    {
+      "key": "window-ownership",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY22w",
+      "issue": "I_kwDOVJGcMM8AAAABZXZkfg"
+    },
+    {
+      "key": "window-ownership",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYF9g",
+      "issue": "I_kwDOVJGcMM8AAAABZXZkfg"
+    },
+    {
+      "key": "export",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXZmcg"
+    },
+    {
+      "key": "arc-import",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXZoGQ"
+    },
+    {
+      "key": "arc-import",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY22w",
+      "issue": "I_kwDOVJGcMM8AAAABZXZoGQ"
+    },
+    {
+      "key": "arc-import",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYMkw",
+      "issue": "I_kwDOVJGcMM8AAAABZXZoGQ"
+    },
+    {
+      "key": "browser-import",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY22w",
+      "issue": "I_kwDOVJGcMM8AAAABZXZpyA"
+    },
+    {
+      "key": "prototype-migration",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXZrsg"
+    },
+    {
+      "key": "command-bar",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY4uQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXZt7w"
+    },
+    {
+      "key": "command-ranking",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZt7w",
+      "issue": "I_kwDOVJGcMM8AAAABZXat_g"
+    },
+    {
+      "key": "site-search",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZt7w",
+      "issue": "I_kwDOVJGcMM8AAAABZXavxg"
+    },
+    {
+      "key": "tab-switcher",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY4uQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXZv7Q"
+    },
+    {
+      "key": "find",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX2xw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYZng"
+    },
+    {
+      "key": "find",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX4nQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXYZng"
+    },
+    {
+      "key": "find",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX6sw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYZng"
+    },
+    {
+      "key": "peek",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY4uQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXZxtQ"
+    },
+    {
+      "key": "peek",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYF9g",
+      "issue": "I_kwDOVJGcMM8AAAABZXZxtQ"
+    },
+    {
+      "key": "peek",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYvZw",
+      "issue": "I_kwDOVJGcMM8AAAABZXZxtQ"
+    },
+    {
+      "key": "little-arc",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZkfg",
+      "issue": "I_kwDOVJGcMM8AAAABZXaxXw"
+    },
+    {
+      "key": "air-traffic",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYXfQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXZzkg"
+    },
+    {
+      "key": "air-traffic",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY22w",
+      "issue": "I_kwDOVJGcMM8AAAABZXZzkg"
+    },
+    {
+      "key": "sidebar-layout",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYXfQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXY9YA"
+    },
+    {
+      "key": "split-horizontal",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY4uQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXZ1cg"
+    },
+    {
+      "key": "split-horizontal",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYvZw",
+      "issue": "I_kwDOVJGcMM8AAAABZXZ1cg"
+    },
+    {
+      "key": "split-vertical",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZ1cg",
+      "issue": "I_kwDOVJGcMM8AAAABZXazPw"
+    },
+    {
+      "key": "focus-mode",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY9YA",
+      "issue": "I_kwDOVJGcMM8AAAABZXZ3Ug"
+    },
+    {
+      "key": "space-themes",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYXfQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXY_fQ"
+    },
+    {
+      "key": "motion",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY9YA",
+      "issue": "I_kwDOVJGcMM8AAAABZXZ5Jw"
+    },
+    {
+      "key": "shortcut-settings",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX2xw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYbUg"
+    },
+    {
+      "key": "shortcut-settings",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX4nQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXYbUg"
+    },
+    {
+      "key": "shortcut-settings",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX6sw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYbUg"
+    },
+    {
+      "key": "accessibility",
+      "blocker": "I_kwDOVJGcMM8AAAABZXapzQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXb6Tw"
+    },
+    {
+      "key": "accessibility",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY9YA",
+      "issue": "I_kwDOVJGcMM8AAAABZXb6Tw"
+    },
+    {
+      "key": "ime-localization",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZt7w",
+      "issue": "I_kwDOVJGcMM8AAAABZXa1XA"
+    },
+    {
+      "key": "window-chrome",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX2xw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYdpw"
+    },
+    {
+      "key": "window-chrome",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX4nQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXYdpw"
+    },
+    {
+      "key": "window-chrome",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX6sw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYdpw"
+    },
+    {
+      "key": "downloads",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX2xw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYgAA"
+    },
+    {
+      "key": "downloads",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX4nQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXYgAA"
+    },
+    {
+      "key": "downloads",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX6sw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYgAA"
+    },
+    {
+      "key": "recent-files",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYgAA",
+      "issue": "I_kwDOVJGcMM8AAAABZXZBiQ"
+    },
+    {
+      "key": "capture",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX8tg",
+      "issue": "I_kwDOVJGcMM8AAAABZXYiLA"
+    },
+    {
+      "key": "pip",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZkfg",
+      "issue": "I_kwDOVJGcMM8AAAABZXa3LA"
+    },
+    {
+      "key": "media-controls",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZing",
+      "issue": "I_kwDOVJGcMM8AAAABZXa5Fg"
+    },
+    {
+      "key": "site-controls",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX2xw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYj6Q"
+    },
+    {
+      "key": "site-controls",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX4nQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXYj6Q"
+    },
+    {
+      "key": "site-controls",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX6sw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYj6Q"
+    },
+    {
+      "key": "developer-mode",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX2xw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYlmw"
+    },
+    {
+      "key": "developer-mode",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX4nQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXYlmw"
+    },
+    {
+      "key": "developer-mode",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX6sw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYlmw"
+    },
+    {
+      "key": "boost-style",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYj6Q",
+      "issue": "I_kwDOVJGcMM8AAAABZXZDRg"
+    },
+    {
+      "key": "boost-zap",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZDRg",
+      "issue": "I_kwDOVJGcMM8AAAABZXZ6sA"
+    },
+    {
+      "key": "boost-code",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZDRg",
+      "issue": "I_kwDOVJGcMM8AAAABZXZ8ZA"
+    },
+    {
+      "key": "easel",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXZ-KQ"
+    },
+    {
+      "key": "live-capture",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZ-KQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXa7Dw"
+    },
+    {
+      "key": "notes",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXaADg"
+    },
+    {
+      "key": "share-folders",
+      "blocker": "I_kwDOVJGcMM8AAAABZXapzQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXcnuQ"
+    },
+    {
+      "key": "share-folders",
+      "blocker": "I_kwDOVJGcMM8AAAABZXciJg",
+      "issue": "I_kwDOVJGcMM8AAAABZXcnuQ"
+    },
+    {
+      "key": "share-folders",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZmcg",
+      "issue": "I_kwDOVJGcMM8AAAABZXcnuQ"
+    },
+    {
+      "key": "live-folders",
+      "blocker": "I_kwDOVJGcMM8AAAABZXapzQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXb8RQ"
+    },
+    {
+      "key": "live-folders",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY22w",
+      "issue": "I_kwDOVJGcMM8AAAABZXb8RQ"
+    },
+    {
+      "key": "live-folders",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYJxQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXb8RQ"
+    },
+    {
+      "key": "local-assistant",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX2xw",
+      "issue": "I_kwDOVJGcMM8AAAABZXZFHw"
+    },
+    {
+      "key": "local-assistant",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX4nQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXZFHw"
+    },
+    {
+      "key": "local-assistant",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX6sw",
+      "issue": "I_kwDOVJGcMM8AAAABZXZFHw"
+    },
+    {
+      "key": "local-assistant",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYtQw",
+      "issue": "I_kwDOVJGcMM8AAAABZXZFHw"
+    },
+    {
+      "key": "context-selector",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZFHw",
+      "issue": "I_kwDOVJGcMM8AAAABZXaB2w"
+    },
+    {
+      "key": "context-selector",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY22w",
+      "issue": "I_kwDOVJGcMM8AAAABZXaB2w"
+    },
+    {
+      "key": "context-selector",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYtQw",
+      "issue": "I_kwDOVJGcMM8AAAABZXaB2w"
+    },
+    {
+      "key": "remote-provider",
+      "blocker": "I_kwDOVJGcMM8AAAABZXaB2w",
+      "issue": "I_kwDOVJGcMM8AAAABZXa8xA"
+    },
+    {
+      "key": "remote-provider",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYtQw",
+      "issue": "I_kwDOVJGcMM8AAAABZXa8xA"
+    },
+    {
+      "key": "streaming",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZFHw",
+      "issue": "I_kwDOVJGcMM8AAAABZXaDoA"
+    },
+    {
+      "key": "citations",
+      "blocker": "I_kwDOVJGcMM8AAAABZXaB2w",
+      "issue": "I_kwDOVJGcMM8AAAABZXa-ZA"
+    },
+    {
+      "key": "page-reading",
+      "blocker": "I_kwDOVJGcMM8AAAABZXaB2w",
+      "issue": "I_kwDOVJGcMM8AAAABZXbAJA"
+    },
+    {
+      "key": "page-reading",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYtQw",
+      "issue": "I_kwDOVJGcMM8AAAABZXbAJA"
+    },
+    {
+      "key": "ask-page",
+      "blocker": "I_kwDOVJGcMM8AAAABZXa-ZA",
+      "issue": "I_kwDOVJGcMM8AAAABZXb-Gw"
+    },
+    {
+      "key": "ask-page",
+      "blocker": "I_kwDOVJGcMM8AAAABZXbAJA",
+      "issue": "I_kwDOVJGcMM8AAAABZXb-Gw"
+    },
+    {
+      "key": "ask-page",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYZng",
+      "issue": "I_kwDOVJGcMM8AAAABZXb-Gw"
+    },
+    {
+      "key": "link-summaries",
+      "blocker": "I_kwDOVJGcMM8AAAABZXa-ZA",
+      "issue": "I_kwDOVJGcMM8AAAABZXb_9A"
+    },
+    {
+      "key": "link-summaries",
+      "blocker": "I_kwDOVJGcMM8AAAABZXbAJA",
+      "issue": "I_kwDOVJGcMM8AAAABZXb_9A"
+    },
+    {
+      "key": "tidy-titles",
+      "blocker": "I_kwDOVJGcMM8AAAABZXaB2w",
+      "issue": "I_kwDOVJGcMM8AAAABZXbCAw"
+    },
+    {
+      "key": "tidy-titles",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZbMA",
+      "issue": "I_kwDOVJGcMM8AAAABZXbCAw"
+    },
+    {
+      "key": "tidy-downloads",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYgAA",
+      "issue": "I_kwDOVJGcMM8AAAABZXbDsQ"
+    },
+    {
+      "key": "tidy-downloads",
+      "blocker": "I_kwDOVJGcMM8AAAABZXaB2w",
+      "issue": "I_kwDOVJGcMM8AAAABZXbDsQ"
+    },
+    {
+      "key": "tidy-tabs",
+      "blocker": "I_kwDOVJGcMM8AAAABZXapzQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXcCHA"
+    },
+    {
+      "key": "tidy-tabs",
+      "blocker": "I_kwDOVJGcMM8AAAABZXaB2w",
+      "issue": "I_kwDOVJGcMM8AAAABZXcCHA"
+    },
+    {
+      "key": "chat-command",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZt7w",
+      "issue": "I_kwDOVJGcMM8AAAABZXbFhw"
+    },
+    {
+      "key": "chat-command",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZFHw",
+      "issue": "I_kwDOVJGcMM8AAAABZXbFhw"
+    },
+    {
+      "key": "skills",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYtQw",
+      "issue": "I_kwDOVJGcMM8AAAABZXZHJQ"
+    },
+    {
+      "key": "read-tools",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYtQw",
+      "issue": "I_kwDOVJGcMM8AAAABZXZI7w"
+    },
+    {
+      "key": "write-tools",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYtQw",
+      "issue": "I_kwDOVJGcMM8AAAABZXZK2w"
+    },
+    {
+      "key": "ai-boundary",
+      "blocker": "I_kwDOVJGcMM8AAAABZXaB2w",
+      "issue": "I_kwDOVJGcMM8AAAABZXcD9w"
+    },
+    {
+      "key": "ai-boundary",
+      "blocker": "I_kwDOVJGcMM8AAAABZXbAJA",
+      "issue": "I_kwDOVJGcMM8AAAABZXcD9w"
+    },
+    {
+      "key": "ai-boundary",
+      "blocker": "I_kwDOVJGcMM8AAAABZXaDoA",
+      "issue": "I_kwDOVJGcMM8AAAABZXcD9w"
+    },
+    {
+      "key": "chat-history",
+      "blocker": "I_kwDOVJGcMM8AAAABZXa-ZA",
+      "issue": "I_kwDOVJGcMM8AAAABZXcFkw"
+    },
+    {
+      "key": "chat-history",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZmcg",
+      "issue": "I_kwDOVJGcMM8AAAABZXcFkw"
+    },
+    {
+      "key": "memory-decision",
+      "blocker": "I_kwDOVJGcMM8AAAABZXcFkw",
+      "issue": "I_kwDOVJGcMM8AAAABZXcppA"
+    },
+    {
+      "key": "memory-decision",
+      "blocker": "I_kwDOVJGcMM8AAAABZXcD9w",
+      "issue": "I_kwDOVJGcMM8AAAABZXcppA"
+    },
+    {
+      "key": "perf-activation",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX-rg",
+      "issue": "I_kwDOVJGcMM8AAAABZXaFSg"
+    },
+    {
+      "key": "perf-activation",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY4uQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXaFSg"
+    },
+    {
+      "key": "perf-startup",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX-rg",
+      "issue": "I_kwDOVJGcMM8AAAABZXaHBw"
+    },
+    {
+      "key": "perf-startup",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXaHBw"
+    },
+    {
+      "key": "perf-discard",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX-rg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbHZw"
+    },
+    {
+      "key": "perf-discard",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZing",
+      "issue": "I_kwDOVJGcMM8AAAABZXbHZw"
+    },
+    {
+      "key": "perf-profiles",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY22w",
+      "issue": "I_kwDOVJGcMM8AAAABZXaI8g"
+    },
+    {
+      "key": "perf-profiles",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX-rg",
+      "issue": "I_kwDOVJGcMM8AAAABZXaI8g"
+    },
+    {
+      "key": "bfcache",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX-rg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbJLA"
+    },
+    {
+      "key": "bfcache",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZ1cg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbJLA"
+    },
+    {
+      "key": "perf-hidden",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX-rg",
+      "issue": "I_kwDOVJGcMM8AAAABZXaKzQ"
+    },
+    {
+      "key": "perf-hidden",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY9YA",
+      "issue": "I_kwDOVJGcMM8AAAABZXaKzQ"
+    },
+    {
+      "key": "perf-layout",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX-rg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbLHA"
+    },
+    {
+      "key": "perf-layout",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZ1cg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbLHA"
+    },
+    {
+      "key": "perf-layout",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY9YA",
+      "issue": "I_kwDOVJGcMM8AAAABZXbLHA"
+    },
+    {
+      "key": "perf-leaks",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX-rg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbM2Q"
+    },
+    {
+      "key": "perf-leaks",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZxtQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXbM2Q"
+    },
+    {
+      "key": "perf-leaks",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZ1cg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbM2Q"
+    },
+    {
+      "key": "perf-energy",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX-rg",
+      "issue": "I_kwDOVJGcMM8AAAABZXYnUA"
+    },
+    {
+      "key": "perf-ai",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX-rg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbPHQ"
+    },
+    {
+      "key": "perf-ai",
+      "blocker": "I_kwDOVJGcMM8AAAABZXaDoA",
+      "issue": "I_kwDOVJGcMM8AAAABZXbPHQ"
+    },
+    {
+      "key": "crashed-tab",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY4uQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXaMsw"
+    },
+    {
+      "key": "crashed-tab",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXaMsw"
+    },
+    {
+      "key": "folder-preview",
+      "blocker": "I_kwDOVJGcMM8AAAABZXapzQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXcLOg"
+    },
+    {
+      "key": "tab-handoff",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZkfg",
+      "issue": "I_kwDOVJGcMM8AAAABZXcOJA"
+    },
+    {
+      "key": "tab-handoff",
+      "blocker": "I_kwDOVJGcMM8AAAABZXanRA",
+      "issue": "I_kwDOVJGcMM8AAAABZXcOJA"
+    },
+    {
+      "key": "calendar",
+      "blocker": "I_kwDOVJGcMM8AAAABZXanRA",
+      "issue": "I_kwDOVJGcMM8AAAABZXcQpw"
+    },
+    {
+      "key": "calendar",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY22w",
+      "issue": "I_kwDOVJGcMM8AAAABZXcQpw"
+    },
+    {
+      "key": "calendar",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYJxQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXcQpw"
+    },
+    {
+      "key": "share-quote",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY4uQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXaO8A"
+    },
+    {
+      "key": "easel-drawing",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZ-KQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXbRDw"
+    },
+    {
+      "key": "boost-sharing",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZDRg",
+      "issue": "I_kwDOVJGcMM8AAAABZXaRaQ"
+    },
+    {
+      "key": "instant-links",
+      "blocker": "I_kwDOVJGcMM8AAAABZXbFhw",
+      "issue": "I_kwDOVJGcMM8AAAABZXctdQ"
+    },
+    {
+      "key": "instant-links",
+      "blocker": "I_kwDOVJGcMM8AAAABZXcD9w",
+      "issue": "I_kwDOVJGcMM8AAAABZXctdQ"
+    },
+    {
+      "key": "settings",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY22w",
+      "issue": "I_kwDOVJGcMM8AAAABZXbTKA"
+    },
+    {
+      "key": "settings",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZt7w",
+      "issue": "I_kwDOVJGcMM8AAAABZXbTKA"
+    },
+    {
+      "key": "onboarding",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYXfQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXaTZQ"
+    },
+    {
+      "key": "onboarding",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY22w",
+      "issue": "I_kwDOVJGcMM8AAAABZXaTZQ"
+    },
+    {
+      "key": "private-browsing",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY22w",
+      "issue": "I_kwDOVJGcMM8AAAABZXaVUw"
+    },
+    {
+      "key": "private-browsing",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYF9g",
+      "issue": "I_kwDOVJGcMM8AAAABZXaVUw"
+    },
+    {
+      "key": "automation",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYH7g",
+      "issue": "I_kwDOVJGcMM8AAAABZXbUzA"
+    },
+    {
+      "key": "automation",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZkfg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbUzA"
+    },
+    {
+      "key": "compatibility",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYj6Q",
+      "issue": "I_kwDOVJGcMM8AAAABZXZMpg"
+    },
+    {
+      "key": "compatibility",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYdpw",
+      "issue": "I_kwDOVJGcMM8AAAABZXZMpg"
+    },
+    {
+      "key": "release-linux",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX2xw",
+      "issue": "I_kwDOVJGcMM8AAAABZXbWig"
+    },
+    {
+      "key": "release-linux",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXbWig"
+    },
+    {
+      "key": "release-linux",
+      "blocker": "I_kwDOVJGcMM8AAAABZXaXVg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbWig"
+    },
+    {
+      "key": "release-windows",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX4nQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXbYMw"
+    },
+    {
+      "key": "release-windows",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXbYMw"
+    },
+    {
+      "key": "release-windows",
+      "blocker": "I_kwDOVJGcMM8AAAABZXaXVg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbYMw"
+    },
+    {
+      "key": "release-macos",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX6sw",
+      "issue": "I_kwDOVJGcMM8AAAABZXbaUA"
+    },
+    {
+      "key": "release-macos",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXbaUA"
+    },
+    {
+      "key": "release-macos",
+      "blocker": "I_kwDOVJGcMM8AAAABZXaXVg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbaUA"
+    },
+    {
+      "key": "engine-updates",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX2xw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYo-w"
+    },
+    {
+      "key": "engine-updates",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX4nQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXYo-w"
+    },
+    {
+      "key": "engine-updates",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX6sw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYo-w"
+    },
+    {
+      "key": "runtime-reference",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYVgQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXYrJw"
+    },
+    {
+      "key": "release-ux-check",
+      "blocker": "I_kwDOVJGcMM8AAAABZXbWig",
+      "issue": "I_kwDOVJGcMM8AAAABZXcSiQ"
+    },
+    {
+      "key": "release-ux-check",
+      "blocker": "I_kwDOVJGcMM8AAAABZXbYMw",
+      "issue": "I_kwDOVJGcMM8AAAABZXcSiQ"
+    },
+    {
+      "key": "release-ux-check",
+      "blocker": "I_kwDOVJGcMM8AAAABZXbaUA",
+      "issue": "I_kwDOVJGcMM8AAAABZXcSiQ"
+    },
+    {
+      "key": "pin-section-controls",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZbMA",
+      "issue": "I_kwDOVJGcMM8AAAABZXbcJQ"
+    },
+    {
+      "key": "bulk-close",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZc_g",
+      "issue": "I_kwDOVJGcMM8AAAABZXbd_A"
+    },
+    {
+      "key": "bulk-close",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZe8w",
+      "issue": "I_kwDOVJGcMM8AAAABZXbd_A"
+    },
+    {
+      "key": "bulk-split",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZc_g",
+      "issue": "I_kwDOVJGcMM8AAAABZXcUbg"
+    },
+    {
+      "key": "bulk-split",
+      "blocker": "I_kwDOVJGcMM8AAAABZXazPw",
+      "issue": "I_kwDOVJGcMM8AAAABZXcUbg"
+    },
+    {
+      "key": "workspace-import",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZmcg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbgRg"
+    },
+    {
+      "key": "saved-search",
+      "blocker": "I_kwDOVJGcMM8AAAABZXat_g",
+      "issue": "I_kwDOVJGcMM8AAAABZXcWOQ"
+    },
+    {
+      "key": "saved-search",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZe8w",
+      "issue": "I_kwDOVJGcMM8AAAABZXcWOQ"
+    },
+    {
+      "key": "saved-search",
+      "blocker": "I_kwDOVJGcMM8AAAABZXapzQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXcWOQ"
+    },
+    {
+      "key": "region-capture",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYiLA",
+      "issue": "I_kwDOVJGcMM8AAAABZXZOpQ"
+    },
+    {
+      "key": "board-export",
+      "blocker": "I_kwDOVJGcMM8AAAABZXbRDw",
+      "issue": "I_kwDOVJGcMM8AAAABZXcX8A"
+    },
+    {
+      "key": "extension-workflow",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYj6Q",
+      "issue": "I_kwDOVJGcMM8AAAABZXZQYw"
+    },
+    {
+      "key": "web-apps",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYdpw",
+      "issue": "I_kwDOVJGcMM8AAAABZXZSSA"
+    },
+    {
+      "key": "credentials-flow",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYj6Q",
+      "issue": "I_kwDOVJGcMM8AAAABZXbiTg"
+    },
+    {
+      "key": "credentials-flow",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZxtQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXbiTg"
+    },
+    {
+      "key": "credentials-flow",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZ1cg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbiTg"
+    },
+    {
+      "key": "print-flow",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYj6Q",
+      "issue": "I_kwDOVJGcMM8AAAABZXbkOg"
+    },
+    {
+      "key": "print-flow",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZ1cg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbkOg"
+    },
+    {
+      "key": "hosted-sharing",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYCkA",
+      "issue": "I_kwDOVJGcMM8AAAABZXc0iw"
+    },
+    {
+      "key": "hosted-sharing",
+      "blocker": "I_kwDOVJGcMM8AAAABZXcnuQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXc0iw"
+    },
+    {
+      "key": "update-linux",
+      "blocker": "I_kwDOVJGcMM8AAAABZXbWig",
+      "issue": "I_kwDOVJGcMM8AAAABZXcZ7w"
+    },
+    {
+      "key": "update-linux",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXcZ7w"
+    },
+    {
+      "key": "update-windows",
+      "blocker": "I_kwDOVJGcMM8AAAABZXbYMw",
+      "issue": "I_kwDOVJGcMM8AAAABZXccOA"
+    },
+    {
+      "key": "update-windows",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXccOA"
+    },
+    {
+      "key": "update-macos",
+      "blocker": "I_kwDOVJGcMM8AAAABZXbaUA",
+      "issue": "I_kwDOVJGcMM8AAAABZXceKw"
+    },
+    {
+      "key": "update-macos",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXceKw"
+    },
+    {
+      "key": "assistant-consent-contract",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYF9g",
+      "issue": "I_kwDOVJGcMM8AAAABZXYtQw"
+    },
+    {
+      "key": "schema-migrations",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXaXVg"
+    },
+    {
+      "key": "library-file-removal",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX8tg",
+      "issue": "I_kwDOVJGcMM8AAAABZXZT9Q"
+    },
+    {
+      "key": "library-file-removal",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYgAA",
+      "issue": "I_kwDOVJGcMM8AAAABZXZT9Q"
+    },
+    {
+      "key": "tab-order-navigation",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY4uQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXaZLw"
+    },
+    {
+      "key": "tab-order-navigation",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYF9g",
+      "issue": "I_kwDOVJGcMM8AAAABZXaZLw"
+    },
+    {
+      "key": "blank-window",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZkfg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbn0A"
+    },
+    {
+      "key": "blank-window",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYF9g",
+      "issue": "I_kwDOVJGcMM8AAAABZXbn0A"
+    },
+    {
+      "key": "gesture-navigation",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYXfQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXabFw"
+    },
+    {
+      "key": "gesture-navigation",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY9YA",
+      "issue": "I_kwDOVJGcMM8AAAABZXabFw"
+    },
+    {
+      "key": "manual-cleanup",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZe8w",
+      "issue": "I_kwDOVJGcMM8AAAABZXbpyg"
+    },
+    {
+      "key": "manual-cleanup",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY4uQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXbpyg"
+    },
+    {
+      "key": "manual-cleanup",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYF9g",
+      "issue": "I_kwDOVJGcMM8AAAABZXbpyg"
+    },
+    {
+      "key": "automatic-pip",
+      "blocker": "I_kwDOVJGcMM8AAAABZXa3LA",
+      "issue": "I_kwDOVJGcMM8AAAABZXcf7g"
+    },
+    {
+      "key": "automatic-pip",
+      "blocker": "I_kwDOVJGcMM8AAAABZXa5Fg",
+      "issue": "I_kwDOVJGcMM8AAAABZXcf7g"
+    },
+    {
+      "key": "history-controls",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY22w",
+      "issue": "I_kwDOVJGcMM8AAAABZXad7w"
+    },
+    {
+      "key": "browser-diagnostics",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZt7w",
+      "issue": "I_kwDOVJGcMM8AAAABZXbrdw"
+    },
+    {
+      "key": "security-surfaces",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYj6Q",
+      "issue": "I_kwDOVJGcMM8AAAABZXbthw"
+    },
+    {
+      "key": "security-surfaces",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZxtQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXbthw"
+    },
+    {
+      "key": "security-surfaces",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZ1cg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbthw"
+    },
+    {
+      "key": "space-management",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYXfQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXZVsg"
+    },
+    {
+      "key": "space-management",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYF9g",
+      "issue": "I_kwDOVJGcMM8AAAABZXZVsg"
+    },
+    {
+      "key": "profile-safety",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY22w",
+      "issue": "I_kwDOVJGcMM8AAAABZXagVA"
+    },
+    {
+      "key": "profile-safety",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYF9g",
+      "issue": "I_kwDOVJGcMM8AAAABZXagVA"
+    },
+    {
+      "key": "split-persistence",
+      "blocker": "I_kwDOVJGcMM8AAAABZXazPw",
+      "issue": "I_kwDOVJGcMM8AAAABZXciJg"
+    },
+    {
+      "key": "split-persistence",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXciJg"
+    },
+    {
+      "key": "split-actions",
+      "blocker": "I_kwDOVJGcMM8AAAABZXciJg",
+      "issue": "I_kwDOVJGcMM8AAAABZXcw7Q"
+    },
+    {
+      "key": "split-actions",
+      "blocker": "I_kwDOVJGcMM8AAAABZXanRA",
+      "issue": "I_kwDOVJGcMM8AAAABZXcw7Q"
+    },
+    {
+      "key": "split-actions",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZkfg",
+      "issue": "I_kwDOVJGcMM8AAAABZXcw7Q"
+    },
+    {
+      "key": "peek-split-promotion",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZxtQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXbvxg"
+    },
+    {
+      "key": "peek-split-promotion",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZ1cg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbvxg"
+    },
+    {
+      "key": "tab-layout-choice",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY9YA",
+      "issue": "I_kwDOVJGcMM8AAAABZXaiqg"
+    },
+    {
+      "key": "tab-layout-choice",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYdpw",
+      "issue": "I_kwDOVJGcMM8AAAABZXaiqg"
+    },
+    {
+      "key": "layout-inspection",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYlmw",
+      "issue": "I_kwDOVJGcMM8AAAABZXZXXQ"
+    },
+    {
+      "key": "snippets",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZt7w",
+      "issue": "I_kwDOVJGcMM8AAAABZXbyAw"
+    },
+    {
+      "key": "snippets",
+      "blocker": "I_kwDOVJGcMM8AAAABZXaVUw",
+      "issue": "I_kwDOVJGcMM8AAAABZXbyAw"
+    },
+    {
+      "key": "local-ocr",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYiLA",
+      "issue": "I_kwDOVJGcMM8AAAABZXb0YQ"
+    },
+    {
+      "key": "local-ocr",
+      "blocker": "I_kwDOVJGcMM8AAAABZXaVUw",
+      "issue": "I_kwDOVJGcMM8AAAABZXb0YQ"
+    },
+    {
+      "key": "call-controls",
+      "blocker": "I_kwDOVJGcMM8AAAABZXa5Fg",
+      "issue": "I_kwDOVJGcMM8AAAABZXckAw"
+    },
+    {
+      "key": "call-controls",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZing",
+      "issue": "I_kwDOVJGcMM8AAAABZXckAw"
+    },
+    {
+      "key": "agent-workspace",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYH7g",
+      "issue": "I_kwDOVJGcMM8AAAABZXZZTg"
+    },
+    {
+      "key": "agent-workspace",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYtQw",
+      "issue": "I_kwDOVJGcMM8AAAABZXZZTg"
+    },
+    {
+      "key": "agent-takeover",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZZTg",
+      "issue": "I_kwDOVJGcMM8AAAABZXak8g"
+    },
+    {
+      "key": "data-flow-controls",
+      "blocker": "I_kwDOVJGcMM8AAAABZXbTKA",
+      "issue": "I_kwDOVJGcMM8AAAABZXcl6Q"
+    },
+    {
+      "key": "workspace-organizer",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYF9g",
+      "issue": "I_kwDOVJGcMM8AAAABZXb2Ng"
+    },
+    {
+      "key": "workspace-organizer",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY22w",
+      "issue": "I_kwDOVJGcMM8AAAABZXb2Ng"
+    },
+    {
+      "key": "workspace-organizer",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZkfg",
+      "issue": "I_kwDOVJGcMM8AAAABZXb2Ng"
+    },
+    {
+      "key": "workspace-organizer",
+      "blocker": "I_kwDOVJGcMM8AAAABZXagVA",
+      "issue": "I_kwDOVJGcMM8AAAABZXb2Ng"
+    },
+    {
+      "key": "workspace-operation-journal",
+      "blocker": "I_kwDOVJGcMM8AAAABZXY7CA",
+      "issue": "I_kwDOVJGcMM8AAAABZXb4OQ"
+    },
+    {
+      "key": "workspace-operation-journal",
+      "blocker": "I_kwDOVJGcMM8AAAABZXZe8w",
+      "issue": "I_kwDOVJGcMM8AAAABZXb4OQ"
+    },
+    {
+      "key": "focus-routing-contract",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYF9g",
+      "issue": "I_kwDOVJGcMM8AAAABZXYvZw"
+    },
+    {
+      "key": "board-sharing",
+      "blocker": "I_kwDOVJGcMM8AAAABZXYCkA",
+      "issue": "I_kwDOVJGcMM8AAAABZXcywQ"
+    },
+    {
+      "key": "board-sharing",
+      "blocker": "I_kwDOVJGcMM8AAAABZXcX8A",
+      "issue": "I_kwDOVJGcMM8AAAABZXcywQ"
+    },
+    {
+      "key": "perf-measure-linux",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX-rg",
+      "issue": "I_kwDOVJGcMM8AAAABZXYxUw"
+    },
+    {
+      "key": "perf-measure-linux",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX2xw",
+      "issue": "I_kwDOVJGcMM8AAAABZXYxUw"
+    },
+    {
+      "key": "perf-measure-windows",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX-rg",
+      "issue": "I_kwDOVJGcMM8AAAABZXYzFQ"
+    },
+    {
+      "key": "perf-measure-windows",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX4nQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXYzFQ"
+    },
+    {
+      "key": "perf-measure-macos",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX-rg",
+      "issue": "I_kwDOVJGcMM8AAAABZXY0zg"
+    },
+    {
+      "key": "perf-measure-macos",
+      "blocker": "I_kwDOVJGcMM8AAAABZXX6sw",
+      "issue": "I_kwDOVJGcMM8AAAABZXY0zg"
+    }
+  ],
+  "scopeChanges": "scope-change-receipts.json",
+  "verification": {
+    "date": "2026-10-23",
+    "scope": "No cross-device sync. Non-AI browser UX/platforms/core performance precede AI.",
+    "issuesExpected": 178,
+    "issuesRead": 178,
+    "issuesEnabled": true,
+    "openIssues": 171,
+    "closedNotPlanned": 7,
+    "activeLeafIssues": 158,
+    "excludedSyncLeafIssues": 6,
+    "activeNonAiItems": 135,
+    "laterAiSupportingItems": 23,
+    "exactTitlesAndBodies": 178,
+    "localFilesCompared": 178,
+    "localFileErrors": [],
+    "parentLinks": 177,
+    "blockingLinks": 262,
+    "coreAiBlockers": [],
+    "pages": 2,
+    "truncatedConnections": [],
+    "mismatches": [],
+    "failures": [],
+    "nativeRuntimeVerified": false,
+    "performanceMeasured": false,
+    "method": "Paginated GraphQL readback of every OPEN/CLOSED issue. Compare IDs, SHA-256 of JSON [title,body], parent/child sets, blockers, expected states/reasons and leaf labels. Compare all local Markdown bodies to exact publication inputs. Traverse dependencies to rule out AI on non-AI work paths.",
+    "titleBodySha256ByKey": {
+      "native-linux": "0299420e741867fef79977721cf0d07b2e80bf8289e0d18b215eeebc2bf7ce49",
+      "native-windows": "3b63ddff1142a895b23f8f0cdc1a9d289eafd7485c19c0ea6938e7a19b6d1a63",
+      "native-macos": "420a18349290baa41fb93c96b9f3e41415b9387f4751c8501544cb0ecfdd2964",
+      "accessibility": "13360c479d21a32248fcd5a2d3c2de8f23e07ad582f5df7ee7ecf8519de447d4",
+      "ime-localization": "8f3177896322c6e388a283a0a0dcd4aecd2f321e54a393fa47e6eac8aab34ddb",
+      "window-chrome": "c81bb0c12771568021be66e015a320e70f3331fd6b8ba0382fb4202488678773",
+      "automation": "f89b2f549a1a710694040e56b10abf6eaf725971d1187f6db168c8628fa24f4e",
+      "extension-workflow": "34011f9034a9d06c25ea1b3d7a2ecda329e5a3efe5b5f4675bca2e4c47b01aa0",
+      "web-apps": "2c4d91f5521ef52977270582ef0fd138421a065621856070c7b9981ea3e7d159",
+      "credentials-flow": "5ac2922905817589160c6456acb058149ff7a2cdf03c82e80c3266230a85c631",
+      "print-flow": "a4510d0daefeca550cb391ee03e21218e2c210ad99b01e66490b7c76cec64d1a",
+      "gesture-navigation": "4ac17b56655abb1332e3084912043c67a9479242b8c3153bd1ea8b662f7bbd26",
+      "browser-diagnostics": "3c6192cbb2a47402cc436357ddc58bf784a17c747cb40e71af58f33371f825b9",
+      "security-surfaces": "d02142baaf942e5b99957362bdd317503c0670e0971a9f1778f519b9b503ed7c",
+      "layout-inspection": "47fdc2fb3f062ebf74a54e0a40cf9d85ec916f17b493fb90cb3b23b9569bea0f",
+      "area-platform": "3c9d755c488dd8646d11e7bdb3a1541aead1b962f65128d0515330f84352c060",
+      "spaces": "917ce39a9d2592bd0db95b9c4e7d5b99edf96669a4cb1f5b9c9dc5099b4b9be8",
+      "profiles": "52df7c1d483c70819e5fa9dea9769c0b6d3137d622c020e156efb9479cc94f6c",
+      "temporary-tabs": "c5f8ce5b087bf3fef55643df170997ead1b4f981afcec626d7eade902b6d6455",
+      "pins": "fe4e2a1196473708d69dea1269270f6039a695060b97ad6fb252907f9b216092",
+      "favorites": "5923b7ef63e9e3debc908018033aaa542cdd77ce1842da27092d2add3bee0e8c",
+      "folders": "edf650f993170e00322256a8195c2135030a7b5cb259709c5134bc4983686237",
+      "multi-select": "ee1bff0f64ca7fd51b6164105a4ba528954dd9f636e87c8d39a80c63d045fe95",
+      "archive": "9f21a0f443108ba60ab08b61600a3570c73399474e6ba60589a51631cfd9c1de",
+      "auto-archive": "4978e77c935ac5e15f5b7f0e13d01bbdb7da1be74b25afe8ab2a20914afaed1b",
+      "session-durability": "cc696e706be32bec795d6df0e1dbdca0aee356ccc422de47174dd208b7bbc339",
+      "undo-windows": "f44fc337b13f331b7a8a0d76c420c5d35e7d1a38a38cc761d575b446b588090b",
+      "tab-status": "a84f896419a96a4c2726a817f16181e65ee9283d26486d714b69c14aeba29b6e",
+      "window-ownership": "2625cafd82262f97aa07ee233afa13a2a608dc2fe8892265e53acbff1b0f0d4e",
+      "folder-preview": "5aba6708134ec1fde90586c6631e068882d66e79454e68cb30db9cf64d073509",
+      "tab-handoff": "9134c9f5a8fd3fc724a2d84f6c1548eb0d5555ef3bf74966eb92ce0fa229da6c",
+      "pin-section-controls": "5c4b2663021a4a331d05ef3ab17b803515234e1adfeea598959398e96f5f47d8",
+      "bulk-close": "cb92d7d05bd3ed4f1b14995c037aa9d75673bb5083cf55c03d07743f75ec3042",
+      "manual-cleanup": "276c763253f68d03d5303a44b6803c561fd9fce870bdcd353a75d18fc29e5eba",
+      "space-management": "d101651675bd8009108514bd9b4b27276d4bb496859f34924dc19f9b09fb04bd",
+      "profile-safety": "8327b4d9416d04031c4fad7b8c90ae14e30e1aa3e026d3c2337bf320cd7744e5",
+      "workspace-organizer": "9226f52009da77ac95928e131ba3f12970ec66589b3fb03733b892a575e1a50c",
+      "workspace-operation-journal": "9ceace1eb35c473593d12482650d569434a60e6003d80562efdbc8d98ba5936c",
+      "area-core": "7a6b0c329d99ef26608756e61689c593c45baf54a3a9044a04c6cb01a15faf7e",
+      "export": "fe7198d43d55dc20d1babb90bedeaa03235ca60ed368b9350e728c9fb4706cbb",
+      "arc-import": "3cabcd9d755fd0d09d05384da3053b4e9a5029ec6bfd766546ace384f121b618",
+      "browser-import": "f2888f3a84c63c4d741c1a884adf963517fc0d6e76ff67d77da391f69b9c2d66",
+      "prototype-migration": "03d57d78c8f9e370e456169c09b8c49232239c3b75b5e196566860913a63b885",
+      "private-browsing": "cddda4d0c548e60fa41fb44acc33ec364cf06fc41943726a395473993cb8492a",
+      "workspace-import": "1673f9461991fef420e6b590934375345529780699b9a004af3050fc47381880",
+      "schema-migrations": "c31e560bdf953e61b402fffd51bf408c53273a8345ba9525f4f2c120a366c66a",
+      "data-flow-controls": "49662587b77d3e6cfb1e9fdf34dab66d03e50eb27fa6e4b72e792f88721812d0",
+      "area-data": "7286bc42ced7953ba9cee49b9cf319ee5ef33939d0db95fe242d2dd63c806592",
+      "command-bar": "287a6ec82ea57a5f461754750eb887a7f59d185ee3d4a42a7050255ac7ed22ef",
+      "command-ranking": "e45795b7681f405673f5a2893142a5b3bcd94b038ff696bac8115c9d0beeb706",
+      "site-search": "33908ff9499425d8ed10fc6b50c3ba999c707a0df09743b06c7b83a498c750d2",
+      "tab-switcher": "f61a7057b6bb033bc52469fed26cf98a5e58a74b47966c0e2b3cb0fad0612ff9",
+      "find": "01ffcdfac71e7bd287aa36f0cfbc21a8dd220703fb57450577bead8f17dcacd6",
+      "peek": "ef263221174551bb92fd43d2852986c73f36707f11a6b2f66d778d0d33f6bf41",
+      "little-arc": "aa9d1780c8a4877288e07f07caf2ed962c4a887718932e8a4d421fba23e3f99c",
+      "air-traffic": "919a94dbb0bd8f0e88d81921949389c314b0487dd82699a13f1a617c2a39a30d",
+      "split-horizontal": "205e4ee3eccad559540ecb5ed9636b5d8fcafe95869b9ff22e6fb245610ec347",
+      "split-vertical": "e23ec7ff16e1c15a188559c3270646203ec3c8a8580c5c680e0bc5a7a8aad744",
+      "site-controls": "b5f344bd1043d06836cb6c64fd73c1fc6ada829480794fee36b918c877546874",
+      "developer-mode": "8a817bdf089d6c898453d65f25fbb83737c37640c99ace660da6f43b73e5d79c",
+      "share-quote": "0a4d193bb974a062fb5317cbb428ab14ec928f9900156cdee1dd8ce1f2d4f399",
+      "bulk-split": "756442aec7c56465f67a0c460229f384e0c790c4dfc2dfcfe8f7e634162fb468",
+      "saved-search": "cc4a48a64dd545ffcdde8ffca745f4b61c7e024e4f8cf444d8e82a837170d4b3",
+      "tab-order-navigation": "93dfbcb07c987f16f6b7327fe0b60f415b56126442d843889da701ec2b1846ff",
+      "blank-window": "16442f02d0a50553c504c99331c91b9275070305dec3c504fc9be3bc7b97b5f0",
+      "split-persistence": "8c941985133ac19d19c9dbb78c0475f0b39b6d6c92605b04fd0f96b5d526ab74",
+      "split-actions": "698572ecd44e5e26543251a87fae12cb495cf8c165a69865d667128f0d1d4446",
+      "peek-split-promotion": "3649345aac03e29ea20018b61c430bf9949288e108a1cdcffa591c3b51808542",
+      "area-navigation": "2d7748b0d2c69b49c982788864f19435598ee56831d840fe894827374a3c67a9",
+      "sidebar-layout": "4250217e8f7d54e9725584e87450ea73191637d49920eebdaaf0638136dbae6d",
+      "focus-mode": "a5cc462e7b91db58131fbc75ef5216b30b92304852e5aa74b2ae57eabf714af5",
+      "space-themes": "43c9d6d82aae664b5d25fdf5ed3404570f8e3a33eac91218023e4ea3e3bfefb3",
+      "motion": "63d697ac4a1ef1973b8aa2b40172278fe7b662d6a09ec08c8bf8783ba74f50fe",
+      "shortcut-settings": "60ea76c38844c837c9da20a8a323a3cd7bda58d0224820b24ae33b3d72b27d3c",
+      "settings": "906a717165e90b09f20d5b444d7d17f5d06c05083fc261598eee6d14b11bb507",
+      "onboarding": "bad811e4faa759d0bf27dba5a1425be97ab35960c44c2198a0b2efce46035986",
+      "tab-layout-choice": "ce096cff4ab28705cca3763d348342f230b56661fa98fcf231da9830ebb45e6b",
+      "area-appearance": "da723e15470da6ce41e6f8f77652658172408699b7657d0f1c2e475ae4301367",
+      "library": "f1424c4b61b599480512f31e243631cb3cd69bf830224648427b4ba715c15ee4",
+      "downloads": "609fb255f91c6d0d17f13021c3a2c7cb146164b5b7b6946b3589a16dfa8276c5",
+      "recent-files": "e76500fb01d52b86c50c2003b469387e16234edf64db69b6a1091b957bd663b3",
+      "capture": "1a94ccd850627529a4a271eba9c6a8724a5f1b63988e7720738cc554b83b0df8",
+      "region-capture": "483c72d51bf03edf4dbc1321b3da799780a0e9e5eb010107d940bbf3be2e9d4b",
+      "library-file-removal": "e42684f3f2d270eff3fe9fad66320854efb9d82f2c0d5fe00ddd4ac95b49034d",
+      "history-controls": "8dc8b6729759eb8a54996a29dbae32dc6cfe8c8ec5c01f74094b149fdddfbb46",
+      "area-library": "87bba950ee564b540911ea952f66241b8527a22bfa654c153b510ea07ab3d5c2",
+      "pip": "3c6764791ca31eb43219fe5968700a72bb6327f3b6cf797a69d1d0739fd35d8e",
+      "media-controls": "ddb704116b1101a4cf510bfd362318b92ad9ef3f463cea5b8c5369873b7ae613",
+      "automatic-pip": "cb40a818295bc73fbdbb3022a1c1daae19b9eb7d82135e6d9aafea1083db5a8c",
+      "call-controls": "8612f468ca09cc6c16649a9f198212efd0a50a7c53d548ff45367577aa408706",
+      "area-media": "81ad3db8b2db74d4c1889d72876f5871622a1cc03fb8a402062d5d46a3ae307f",
+      "boost-style": "62b0771608fac44f86d4625e97fd08f57fd1007fc0d746571cdd224f92022d30",
+      "boost-zap": "2f53966a7cb662923c388de93bef9095aea53d52a36dbaa37c0f4bc802af90e1",
+      "boost-code": "64a295dac09c6f579e8781e8cc9c492e26d43085f4fd4db2c8c4962968f6b171",
+      "easel": "c2a28b4afa8c3227075deb6665492a0733c496154a782b74cffda1a6b4dede66",
+      "live-capture": "6449de32c65f7ad6aba3ef86efe8a2fbb20b6a028256eb7941cfd9b42742fcf4",
+      "notes": "848cc8957d751a0add1f8881db9b7111a4e4b4fa049266a5139dd322e98d7002",
+      "share-folders": "2db9b1b73b47e541d348f1a1fea115f3be20eb64387812412ae1b0a90beff72b",
+      "live-folders": "d29382775c60dd421ff32bddcde27f1b08a7d633ae145c175807c542255afda3",
+      "calendar": "e2bc342b81d738b47a732dcc48a389c469ef942c202ccc913b1fc454cf52c1ba",
+      "easel-drawing": "9d7747e19bf7efac3ac2d2bf4455e25e1397e7c9ed793b5de5d37298977d98da",
+      "shared-board": "0960f1be3249182088d59db1ad9cbec7b99abc05adebe4e0b8520d295887b8e4",
+      "boost-sharing": "6ae44784057c1479716ff158b64fb1574bb1a9026fe80e60955e497100a8c3ec",
+      "board-export": "cd8bee1ae96d4deddb3a993c06d43a3561c7d29eb0f35b9ceb1eca52333d4b77",
+      "hosted-sharing": "9d987405e28cc6ecb322176850a951683e6aba96507ef17a7a11c9071041aedb",
+      "snippets": "577853ea205e376f6f0a8de6c9cf9b48a47eb4954aa6b38060987f1d69dd2b07",
+      "local-ocr": "9cd1456dea6d19743e90830a22767e120063c13b4cf16add104aec9ad59c1a26",
+      "board-sharing": "2439986f9bfe0a3b08696d089ba223eef06337e3d0889e113410d90864095fa7",
+      "area-extras": "7c08c88e7580f2a40bcd133f35bc93062ff782a16e599e5b3089c148997ccad3",
+      "local-assistant": "254c77585d8ae991626bca9b9a99aa5b5232959c3b7a14bc98265bcaef2413bd",
+      "context-selector": "bb651dd3a4acdef94dc9369ef34b6048e6d8d5fa7ea953ffbdabdd9e08d11df6",
+      "remote-provider": "33258a4de3f30c02378747eb1634948c84dbacb6da6b477356063cf107c1573b",
+      "streaming": "442a22bc3eef310e7d0bfb0d2d34e97b3376d40a32a853f2db6f5244ac5764a9",
+      "citations": "711868771308edd1687582a431a6c534e705d3865dac38dcd594e08f9c88dbce",
+      "page-reading": "3fa4ff40a8ef8717cc57872a8f47b969176299cd6d0ad9f8f7fddc412f745535",
+      "ask-page": "90d924e1d0b10d83438e85cba2e1f2eb6ab968f9e27e58300071a325377c9ee6",
+      "link-summaries": "6835632dad76ae076f63ab5911b5759f02b981db895be5a66a9416c2298ea0d1",
+      "tidy-titles": "1cb899f1e8219c709b30a8eb1e893b20b595461a366b77583530731074e03b0b",
+      "tidy-downloads": "e8d5d049f6b5f151c7320f64ff382dcc742b2bd38913c2058f912e218d7dabdb",
+      "tidy-tabs": "982b1075d5c42fd358cf3347358d7502b0fa4b29cc4e814e12f451b63e72ff64",
+      "chat-command": "b02e00ff1222aa78cf025e1e56d4b26343e2b391ee55ae6da068e61a511950b0",
+      "skills": "49f8f51d9bffb59885ce9f41d4583242330d3a7eae6c6117aeac1826b45fc7bf",
+      "read-tools": "dc11086962204aa4d0443f4e965e806d6728f1bb8768cd0b32e9d11acbd5eb68",
+      "write-tools": "c9b390aa340f2da23657c7c6eaf9ecfe9249d1b6c2c66a994202dde310c3079d",
+      "ai-boundary": "0de1506be44cc6f8c335a0d3820780960df7f09fd3a7d2468c0afd9d5dc200c5",
+      "chat-history": "13329c5aa4295a750b0ab3ea9a5a8e0e29e37e5cd846ba3c43515324c4257b1c",
+      "memory-decision": "4c16c19d2b8ec86bbc339151a50745a8b96f421d21d89573e12938c16a6ca948",
+      "instant-links": "c9f953e650684ba4d2871c5cd06286212dc05338b7a04f61e6a96ad96d4a3e1a",
+      "agent-workspace": "9d688cc6fb06cec5b3de24c326b44a78d998afc1377c37e34a4d2635920fd4f1",
+      "agent-takeover": "3197b35d80153fd4d8e57ac7a953d843bd74ae2bf0187e9e578d45e868e5c15c",
+      "area-assistant": "16b565e67ed2f1a738023e3c297f1dbc9aec17ef6391082b34564cace6a9e2ba",
+      "perf-baseline": "31edc02ec249858dfcee784dc572f77b681509339c6010824238536f7ca043eb",
+      "perf-activation": "8b8c6ab1a0b54fe6212951a6b95e9155c744e8377a4099c6519711309866051a",
+      "perf-startup": "a73a0e886137312843b6e8e8f0effea9cf2b7679775e243927d75e93b585175a",
+      "perf-discard": "08c0a95bbcbff0fa312311b06ea999425ab99c19a121a71b5b0fc05685b23e57",
+      "perf-profiles": "592ce945f408c12ee0e3ed14b8bafeea247d2c408b10178fe080d59b0ab896f2",
+      "bfcache": "eb5367689c6b91d5037ed732888f070ad9d1e9b5a78c8d1e40e9763877646bf6",
+      "perf-hidden": "852894c8605a62877db1becc4065ccd5786decf87b2132854bbacb63bdaa41e4",
+      "perf-layout": "811205722c107ba2250a156f531a33a970a7008f3f99ebe5200b37e1ed68b1b8",
+      "perf-leaks": "0fd6f018874272ef733ca3632e3ae0ec2017da7a8a3a7b61e01ea4d6e3c81e68",
+      "perf-energy": "d0354b118db731a565840bc7ef6976993a1b30d3ad314be7cec49d2a4e9d476f",
+      "perf-ai": "85c556d4107348a4c0d768834cb4686537fe5bc62d31d4354ccaab154bd25d6e",
+      "crashed-tab": "5d66d18dac55f6c24055953d8f45d3eb64ebf95696b44db1448e9b812dc73b19",
+      "perf-measure-linux": "327656ae06cd4da7e3d60c8b49eeb750bbc2be22a3a64516c6a4d81f81ba39c6",
+      "perf-measure-windows": "938cc59267af0d74b58e7d530ac72b38369d2635b718d913bb735ef3a83883e9",
+      "perf-measure-macos": "9a811f519e65aaa3ae2758af29cb196d7fd664d99df8002144be493e49f060a3",
+      "area-performance": "109fa212bca984c8c323087857f2902a4a9b5653099f8ffcf2b834888532fdf3",
+      "sync-contract": "f2440fb199df5c11c977787dbb2bbc7a54a1f6fb311b6edaeb4cbd47f231c3f6",
+      "sync-enroll": "ecc41281feeddcfa30408f6fa6f570c472aa6aa19cb8b6c50b9348e261d69760",
+      "sync-conflicts": "e6f0fa637d2e1ddacd6e94c40959f6c6c0b6f1f9f485e986277f80ea9a8cd6ed",
+      "sync-recovery": "86e2d877363b9678d7acb61fd38ee6491d0faa8a3288f2e6cfd6675697a6c89f",
+      "sync-roundtrip": "cefc2a3198e7bd3cb59c9c30fadd3ad058d68d1027b89fb6a12dbd1f6c89dabe",
+      "sync-revoke": "8b6d995c1eebe6f854df93efffe8a3726ab9933f1c62b85b635ca8943e273757",
+      "area-sync": "074c7bbbecdc719c1a1c166bed24fb2dc752953b995cdd4750ee61c6c02f68d4",
+      "release-linux": "010eaeca5aa59b0498f1d36d47ee2770741b84f829021cf4a80dec37bf06b965",
+      "release-windows": "a848c748d41fde5e91afdf5c8b4408c274f41bb19970d5e9d80822860657df1a",
+      "release-macos": "19e7b04bdd965486b8f07de6cc79bf547f5cd0fa294baac4cdae236c266f992a",
+      "engine-updates": "ebca8d1b676820df1b0e29416386df1ef383f20b744350cb423317e6ad1c1819",
+      "update-linux": "f71507e079b5b980736981b2c1a75ee4192d08de4008d438370d2891fc1459f3",
+      "update-windows": "571d3447048f9e68387cc3804a8ef48781c50038fb8ead898f487b5aec21723e",
+      "update-macos": "69d5701a120583aac61be95ac08e4292e0ac18079b2d45e1f3aea87c08707e4a",
+      "area-release": "3672736ac601bbb16cb476fbaa8045d03a4b06c475991092385022ac7aeba54e",
+      "compatibility": "767790f216e10d6ff4a7257f1a00ba328fa4a52b32dd81529afd1c0e05e8b7e4",
+      "runtime-reference": "75ecd1955a4b2631fbdf3c2ae0a38bac3f5d5fc24019b3310f80a94d44caf721",
+      "retirements": "87dc303a1e05953bc73979cd101ccfd27bcf509fd582893cb061f555bb771933",
+      "release-ux-check": "6af4b523a20a99864337d7dbcb1ddcdc8131cf7c0c00c26bc0990168254b5cce",
+      "lifecycle-contract": "f15463bd02dd5eb39739850eecdf0459ae9561ca02892c2cfde45f2b1a5bd261",
+      "automation-contract": "119f108bf3544a5692afe3ebc782223582884e81d345fc8ea3f668b9e0cf7642",
+      "integration-policy": "a421160654639239bd107727601ca9de93a28bdbc445a55bc29292323bb0c9ff",
+      "assistant-consent-contract": "dc04023c0f17f725e8768fac98dc608436683f1c916040bf2400e468a94a796a",
+      "arc-import-format": "bfc0a37702e1f310f952fb239173647f70d936f5c0a51481142efcdd8b1401c4",
+      "favorite-previews-decision": "a597e9edaaae21d5aa83024bc99582aff7af3382eb01c7f36eeae59ee5483f16",
+      "quote-card-decision": "e7efe923958f2b2d6f93073c6d857a42abb6c47a10369a5bf6550e0edd1e9e86",
+      "easel-collaboration-decision": "08270447410196f245baaead450830c46a318feca46c5db925f1271680af2857",
+      "reference-windows-artifacts": "11f58af8d2563bd7c6260d12a308d81d775a30109880393c427cd4e47b0378fb",
+      "focus-routing-contract": "3f76837992d95ddf062ebf2dd6ab384b552d7021d47f3a786a97b77cf950cbbc",
+      "area-research": "3bac7a7b5e37aa80cf08684637f59e0498399baaa5dfc2bd737ab83e87803a08",
+      "roadmap": "a131a0bb4197cbc864b8d96d50e6d03007a19dd0e40312bef2ebfad09e745a5c"
+    }
+  }
+}

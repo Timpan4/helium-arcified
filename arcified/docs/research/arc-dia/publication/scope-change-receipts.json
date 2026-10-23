@@ -1,0 +1,231 @@
+{
+  "date": "2026-10-23",
+  "ownerDecision": "Exclude cross-device sync; prioritize non-AI browser work above AI.",
+  "excludedSyncKeys": [
+    "sync-contract",
+    "sync-enroll",
+    "sync-conflicts",
+    "sync-recovery",
+    "sync-roundtrip",
+    "sync-revoke"
+  ],
+  "laterAiAndSupportingKeys": [
+    "local-assistant",
+    "context-selector",
+    "remote-provider",
+    "streaming",
+    "citations",
+    "page-reading",
+    "ask-page",
+    "link-summaries",
+    "tidy-titles",
+    "tidy-downloads",
+    "tidy-tabs",
+    "chat-command",
+    "skills",
+    "read-tools",
+    "write-tools",
+    "ai-boundary",
+    "chat-history",
+    "memory-decision",
+    "instant-links",
+    "agent-workspace",
+    "agent-takeover",
+    "assistant-consent-contract",
+    "perf-ai"
+  ],
+  "removedEdges": [
+    {
+      "key": "sync-enroll",
+      "blocker": "sync-roundtrip"
+    },
+    {
+      "key": "sync-conflicts",
+      "blocker": "sync-roundtrip"
+    },
+    {
+      "key": "sync-recovery",
+      "blocker": "sync-enroll"
+    },
+    {
+      "key": "sync-roundtrip",
+      "blocker": "sync-contract"
+    },
+    {
+      "key": "sync-roundtrip",
+      "blocker": "export"
+    },
+    {
+      "key": "sync-roundtrip",
+      "blocker": "profiles"
+    },
+    {
+      "key": "sync-revoke",
+      "blocker": "sync-enroll"
+    },
+    {
+      "key": "sync-revoke",
+      "blocker": "sync-contract"
+    },
+    {
+      "key": "data-flow-controls",
+      "blocker": "assistant-consent-contract"
+    }
+  ],
+  "operations": {
+    "remove:sync-enroll|sync-roundtrip": {
+      "blocker": "I_kwDOVJGcMM8AAAABZXbl1A",
+      "issue": "I_kwDOVJGcMM8AAAABZXcHXQ"
+    },
+    "remove:sync-conflicts|sync-roundtrip": {
+      "blocker": "I_kwDOVJGcMM8AAAABZXbl1A",
+      "issue": "I_kwDOVJGcMM8AAAABZXcJHQ"
+    },
+    "remove:sync-recovery|sync-enroll": {
+      "blocker": "I_kwDOVJGcMM8AAAABZXcHXQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXcrdg"
+    },
+    "remove:sync-roundtrip|sync-contract": {
+      "blocker": "I_kwDOVJGcMM8AAAABZXYAcQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXbl1A"
+    },
+    "remove:sync-roundtrip|export": {
+      "blocker": "I_kwDOVJGcMM8AAAABZXZmcg",
+      "issue": "I_kwDOVJGcMM8AAAABZXbl1A"
+    },
+    "remove:sync-roundtrip|profiles": {
+      "blocker": "I_kwDOVJGcMM8AAAABZXY22w",
+      "issue": "I_kwDOVJGcMM8AAAABZXbl1A"
+    },
+    "remove:sync-revoke|sync-enroll": {
+      "blocker": "I_kwDOVJGcMM8AAAABZXcHXQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXcvOw"
+    },
+    "remove:sync-revoke|sync-contract": {
+      "blocker": "I_kwDOVJGcMM8AAAABZXYAcQ",
+      "issue": "I_kwDOVJGcMM8AAAABZXcvOw"
+    },
+    "remove:data-flow-controls|assistant-consent-contract": {
+      "blocker": "I_kwDOVJGcMM8AAAABZXYtQw",
+      "issue": "I_kwDOVJGcMM8AAAABZXcl6Q"
+    },
+    "body:sync-contract": {
+      "id": "I_kwDOVJGcMM8AAAABZXYAcQ",
+      "number": 21
+    },
+    "body:sync-enroll": {
+      "id": "I_kwDOVJGcMM8AAAABZXcHXQ",
+      "number": 156
+    },
+    "body:sync-conflicts": {
+      "id": "I_kwDOVJGcMM8AAAABZXcJHQ",
+      "number": 157
+    },
+    "body:sync-recovery": {
+      "id": "I_kwDOVJGcMM8AAAABZXcrdg",
+      "number": 174
+    },
+    "body:sync-roundtrip": {
+      "id": "I_kwDOVJGcMM8AAAABZXbl1A",
+      "number": 139
+    },
+    "body:sync-revoke": {
+      "id": "I_kwDOVJGcMM8AAAABZXcvOw",
+      "number": 176
+    },
+    "body:area-sync": {
+      "id": "I_kwDOVJGcMM8AAAABZXNkuQ",
+      "number": 13
+    },
+    "close:sync-contract": {
+      "id": "I_kwDOVJGcMM8AAAABZXYAcQ",
+      "number": 21,
+      "state": "CLOSED",
+      "stateReason": "NOT_PLANNED"
+    },
+    "close:sync-enroll": {
+      "id": "I_kwDOVJGcMM8AAAABZXcHXQ",
+      "number": 156,
+      "state": "CLOSED",
+      "stateReason": "NOT_PLANNED"
+    },
+    "close:sync-conflicts": {
+      "id": "I_kwDOVJGcMM8AAAABZXcJHQ",
+      "number": 157,
+      "state": "CLOSED",
+      "stateReason": "NOT_PLANNED"
+    },
+    "close:sync-recovery": {
+      "id": "I_kwDOVJGcMM8AAAABZXcrdg",
+      "number": 174,
+      "state": "CLOSED",
+      "stateReason": "NOT_PLANNED"
+    },
+    "close:sync-roundtrip": {
+      "id": "I_kwDOVJGcMM8AAAABZXbl1A",
+      "number": 139,
+      "state": "CLOSED",
+      "stateReason": "NOT_PLANNED"
+    },
+    "close:sync-revoke": {
+      "id": "I_kwDOVJGcMM8AAAABZXcvOw",
+      "number": 176,
+      "state": "CLOSED",
+      "stateReason": "NOT_PLANNED"
+    },
+    "close:area-sync": {
+      "id": "I_kwDOVJGcMM8AAAABZXNkuQ",
+      "number": 13,
+      "state": "CLOSED",
+      "stateReason": "NOT_PLANNED"
+    },
+    "body:assistant-consent-contract": {
+      "id": "I_kwDOVJGcMM8AAAABZXYtQw",
+      "number": 43
+    },
+    "body:perf-ai": {
+      "id": "I_kwDOVJGcMM8AAAABZXbPHQ",
+      "number": 127
+    },
+    "body:boost-code": {
+      "id": "I_kwDOVJGcMM8AAAABZXZ8ZA",
+      "number": 85
+    },
+    "body:onboarding": {
+      "id": "I_kwDOVJGcMM8AAAABZXaTZQ",
+      "number": 97
+    },
+    "body:private-browsing": {
+      "id": "I_kwDOVJGcMM8AAAABZXaVUw",
+      "number": 98
+    },
+    "body:retirements": {
+      "id": "I_kwDOVJGcMM8AAAABZXYEJQ",
+      "number": 23
+    },
+    "body:data-flow-controls": {
+      "id": "I_kwDOVJGcMM8AAAABZXcl6Q",
+      "number": 171
+    },
+    "body:area-assistant": {
+      "id": "I_kwDOVJGcMM8AAAABZXNhIw",
+      "number": 11
+    },
+    "body:area-performance": {
+      "id": "I_kwDOVJGcMM8AAAABZXNi2Q",
+      "number": 12
+    },
+    "body:area-research": {
+      "id": "I_kwDOVJGcMM8AAAABZXNpEA",
+      "number": 15
+    },
+    "body:roadmap": {
+      "id": "I_kwDOVJGcMM8AAAABZXMyWA",
+      "number": 2
+    }
+  },
+  "activeNonAiItems": 135,
+  "laterAiAndSupportingItems": 23,
+  "closedNotPlanned": 7,
+  "coreAiBlockers": []
+}

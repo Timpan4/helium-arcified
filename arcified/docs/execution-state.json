@@ -1,0 +1,69 @@
+{
+  "status": "in_progress",
+  "scope": "Non-AI browser work first. AI later. Cross-device sync excluded.",
+  "constraints": {
+    "fullBuilds": "Deferred by owner. No full Chromium preparation, compilation, remote CI dispatch or benchmark loads.",
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "high"
+  },
+  "ownerDecisions": [
+    "Saved Space tabs shared across windows; temporary tabs window-local.",
+    "Selecting a live saved page brings that same page here with state preserved.",
+    "Cross-Profile Space switching stays in the same actual native window, preserving isolation.",
+    "One Profile per Space; multiple Spaces may share a Profile. Sign-ins, site settings and Favorites are Profile-scoped. Themes are Space-scoped.",
+    "Outbound saved-page links open a temporary branch.",
+    "Tiny synthetic performance-fixture browser checks approved."
+  ],
+  "openDecisions": [
+    "Activity protection, automatic cleanup, destructive-action and populated cross-Profile migration policies remain open."
+  ],
+  "nonAiCounts": {
+    "provenDone": 0,
+    "doneAwaitingRelease": 1,
+    "inProgress": 5,
+    "notStarted": 129
+  },
+  "laterAiItems": 23,
+  "excludedSyncItems": 6,
+  "items": [
+    {
+      "key": "perf-baseline",
+      "status": "locally_complete_awaiting_publication",
+      "evidence": "reviews/performance-review-round-2.md and reviews/performance-browser-check.md. No native performance result."
+    },
+    {
+      "key": "native-linux",
+      "status": "reviewed_preparation_foundation",
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "native-windows",
+      "status": "reviewed_plan_only_foundation",
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "native-macos",
+      "status": "reviewed_plan_only_foundation",
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "lifecycle-contract",
+      "status": "v3_implemented_fresh_review_pending",
+      "evidence": "16 fixtures; earlier ID-lifetime finding cleared. reviews/lifecycle-policy-response.md."
+    },
+    {
+      "key": "spaces",
+      "status": "source_design_reviewed_refinement_pending",
+      "evidence": "reviews/native-space-design-review.md. Same-window native feasibility remains OPEN."
+    }
+  ],
+  "supportingWork": {
+    "lightNativeCi": "Manual-only candidate. Review P2: add nonrecovering UBSan flag. No CI dispatch."
+  },
+  "expansion": {
+    "status": "allocated_not_launched",
+    "manifest": "parallel-workstreams.json",
+    "additionalKeys": 51
+  },
+  "nextAction": "Checkpoint the local baseline, launch isolated area threads and obtain actual per-task assignments. Fix CI sanitizer finding and independently review lifecycle v3."
+}

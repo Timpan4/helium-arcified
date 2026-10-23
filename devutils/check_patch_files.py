@@ -86,9 +86,12 @@ def check_unused_patches(patches_dir, series_path=Path('series')):
             continue
         if path.suffix in _PATCHES_IGNORE_SUFFIXES:
             continue
-        unused_patches.add(str(path.relative_to(patches_dir)))
-    unused_patches -= set(_read_series_file(patches_dir, series_path))
-    unused_patches.remove(str(series_path))
+        unused_patches.add(path.relative_to(patches_dir).as_posix())
+    unused_patches -= {
+        Path(entry).as_posix()
+        for entry in _read_series_file(patches_dir, series_path)
+    }
+    unused_patches.remove(series_path.as_posix())
     logger = get_logger()
     for entry in sorted(unused_patches):
         logger.warning('Unused patch: %s', entry)
