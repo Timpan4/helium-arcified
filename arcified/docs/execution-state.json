@@ -16,7 +16,8 @@
     "Tiny synthetic performance-fixture browser checks approved.",
     "One-minute Counter-Strike cs2 checks; stop every other T3 thread when detected, resume only on explicit owner resume.",
     "Owner explicitly resumed non-AI implementation at 2026-10-23 21:30 UTC; game guard disabled, interruption ledger preserved.",
-    "2026-10-23 21:33 UTC: all non-AI issues merged and working with good UX is the target; manage/settle/create threads as needed. Heavy CPU work authorized in root only."
+    "2026-10-23 21:33 UTC: all non-AI issues merged and working with good UX is the target; manage/settle/create threads as needed. Heavy CPU work authorized in root only.",
+    "Owner approved GitHub CLI workflow-scope refresh and Computer Use for its approval. CLI refresh is pending device authorization after native portal input failed."
   ],
   "openDecisions": [
     "Activity protection, automatic cleanup, destructive-action and populated cross-Profile migration policies remain open."
@@ -77,25 +78,8 @@
       "nativeIssuesAccepted": 0
     }
   },
-  "nextAction": "Root: prepare pinned Linux Chromium tree, compile and test native paths as source contracts become reviewable. Children finish metadata durability, independent destruction review and lifetime contract resolution. Publish reviewed foundation changes without claiming unproven issue acceptance.",
+  "nextAction": "Monitor root baseline build session30092 and build-baseline.log. Review native Library production draft, checked-creation design and Profile destruction-admission guidance before applying changes. GitHub workflow scope refresh approved and started in session64401; desktop input timed out, awaiting owner completion of device authorization. Do not bypass GitHub scope refusal.",
   "currentAssignments": [
-    {
-      "key": "native-lifetime-contract-resolution",
-      "taskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-native-lifetime-contract-resolution-20261023-v1",
-      "model": "gpt-6.1-sol",
-      "options": [
-        {
-          "id": "reasoningEffort",
-          "value": "high"
-        },
-        {
-          "id": "serviceTier",
-          "value": "default"
-        }
-      ],
-      "status": "running",
-      "evidence": "Source-backed construction-loss and owner-deleting reentry contract investigation before further production changes."
-    },
     {
       "key": "native-library-production",
       "taskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-native-library-production-20261023-v1",
@@ -112,6 +96,40 @@
       ],
       "status": "running",
       "evidence": "Production patch/real test source for native Library entry and Profile-local providers; root owns builds and browser proof."
+    },
+    {
+      "key": "native-checked-creation-design",
+      "taskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-native-checked-creation-design-20261023-v1",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "running",
+      "evidence": "Separate source contract work; root owns heavy native proof."
+    },
+    {
+      "key": "profile-destruction-admission-guidance",
+      "taskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-astra-profile-destruction-admission-20261023-v1",
+      "model": "gpt-6-astra",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "running",
+      "evidence": "Separate source contract work; root owns heavy native proof."
     }
   ],
   "gamePause": {
@@ -127,7 +145,7 @@
     "schedulerEnabled": false
   },
   "integrationChecks": {
-    "sourceIdentity": "At 0cd599bc, all 51 component sources matched reviewed commits. Admission hardening at f634070a has fresh independent reviews. New Space metadata serialization changes are in progress and will require fresh review.",
+    "sourceIdentity": "At0cd599bc all51 component sources matched reviewed area commits. Admission followup f634070a and schema2 metadata followup b47468ae have clean independent reviews. Later production drafts require their own reviews and native proof.",
     "commandsAndSiteTools": "Parent compiled actual combined tree and ran all three site-controls, DevTools and diagnostics fixture binaries under ASan/UBSan with -fno-sanitize-recover=undefined; all exited 0.",
     "fullBrowserBuilds": "Pinned Linux preparation PASSED all17stages through GN; baseline chrome/chromedriver compilation running only in root. Native browser tests/launch and platform acceptance OPEN.",
     "nativeAcceptance": "OPEN",
@@ -285,6 +303,18 @@
       "taskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-foundations-publication-review-20261023-v1",
       "status": "completed_with_documentation_findings",
       "evidence": "reviews/foundations-publication-review.md: no blocking aggregate defect at frozen05ace22e; P3 admission/status text and excluded-packet references corrected in followup."
+    },
+    {
+      "key": "native-lifetime-contract-resolution",
+      "taskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-native-lifetime-contract-resolution-20261023-v1",
+      "status": "completed_source_investigation",
+      "evidence": "Local uncommitted native-lifetime-contract-resolution.md and supplemental sources. Both ownership blockers remain unresolved; source investigation identifies exact checked-creation and pre-destruction admission obligations."
+    },
+    {
+      "key": "foundations-publication-review-round-2",
+      "taskId": "node:delegated-task:command%3Amcp%3A0df0acf4-a099-405c-9347-c0de1bf10947%3Adelegate-task%3Aarcified-foundations-publication-review-20261023-v2",
+      "status": "completed_with_nonblocking_documentation_findings",
+      "evidence": "Both originalP3findings closed. Current status contradictions and3links to excluded artifacts corrected by root followup."
     }
   ],
   "nativeBuild": {
@@ -296,9 +326,9 @@
     "report": "native-linux-run-20261023.md"
   },
   "publicationBlock": {
-    "status": "blocked_on_credential_scope",
-    "action": "push feat/parallel-browser-work to origin",
-    "reason": "GitHub OAuth App credential lacks workflow scope for .github/workflows/arcified-native-checks.yml",
-    "neededDecision": "Pending owner approval for gh auth refresh --hostname github.com --scopes workflow, or owner-provided authentication repair. Do not bypass the rejected workflow update."
+    "status": "device_authorization_pending",
+    "action": "Publish reviewed non-AI fork foundations",
+    "reason": "GitHub OAuth workflow scope missing. Owner approved gh auth refresh --hostname github.com --scopes workflow; refresh started in session64401. Computer Use portal input timed out without sending input. Native browser is on device activation; owner must complete authorization.",
+    "neededDecision": "No further permission is required for the approved scope. Await successful device authorization before retrying push."
   }
 }
