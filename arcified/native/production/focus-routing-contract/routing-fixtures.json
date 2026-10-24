@@ -1,0 +1,906 @@
+{
+  "issueKey": "focus-routing-contract",
+  "purpose": "Synthetic review fixtures. Expected routing and proposed focus transitions, not executed native results or product approval.",
+  "commands": {
+    "page": [
+      "address",
+      "reload",
+      "find",
+      "zoom",
+      "security",
+      "credential"
+    ],
+    "workspace": [
+      "move",
+      "keep",
+      "archive"
+    ]
+  },
+  "workspaceEligibility": "A workspace target is not permission to move, keep or archive it. Use lifecycle and feature-specific eligibility; do not infer a page or fallback.",
+  "pageEligibility": "A page target is not permission to dispatch while modal/fullscreen/inactive/stale. Origin-sensitive operations additionally require the actual document/frame/security context.",
+  "scenarios": [
+    {
+      "id": "single-page",
+      "transition": "baseline",
+      "beforeFocus": "page-a",
+      "afterFocus": "page-a",
+      "activePage": "page-a",
+      "selectedObject": "item-a",
+      "commandTargets": {
+        "page": "page-a",
+        "workspace": "item-a"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "Each page command addresses page-a's real context; workspace commands only inspect item-a eligibility.",
+      "visibleCue": "Active page page-a; selected workspace item-a shown separately.",
+      "accessibleCue": "Actual focus page-a; active page page-a; workspace selection item-a.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "split-pointer",
+      "transition": "split-enter",
+      "beforeFocus": "page-left",
+      "afterFocus": "page-right",
+      "activePage": "page-right",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "item-left"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "Pointer activation in right pane updates page target without inferring workspace selection.",
+      "visibleCue": "Active page page-right; selected workspace item-left shown separately.",
+      "accessibleCue": "Actual focus page-right; active page page-right; workspace selection item-left.",
+      "ownerQuestions": [
+        "Q1"
+      ],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "split-keyboard",
+      "transition": "split-enter",
+      "beforeFocus": "page-right",
+      "afterFocus": "page-left",
+      "activePage": "page-left",
+      "selectedObject": "item-right",
+      "commandTargets": {
+        "page": "page-left",
+        "workspace": "item-right"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "Keyboard traversal and pointer activation publish the same target semantics.",
+      "visibleCue": "Active page page-left; selected workspace item-right shown separately.",
+      "accessibleCue": "Actual focus page-left; active page page-left; workspace selection item-right.",
+      "ownerQuestions": [
+        "Q1"
+      ],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "split-hover",
+      "transition": "split-hover",
+      "beforeFocus": "page-left",
+      "afterFocus": "page-left",
+      "activePage": "page-left",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-left",
+        "workspace": "item-left"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "Hovering the right pane does not activate it.",
+      "visibleCue": "Active page page-left; selected workspace item-left shown separately.",
+      "accessibleCue": "Actual focus page-left; active page page-left; workspace selection item-left.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "split-address",
+      "transition": "address-entry",
+      "beforeFocus": "page-right",
+      "afterFocus": "omnibox-for-page-right",
+      "activePage": "page-right",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "item-left"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "Address focus and displayed origin remain bound to page-right; no typed-navigation policy is inferred.",
+      "visibleCue": "Active page page-right; selected workspace item-left shown separately.",
+      "accessibleCue": "Actual focus omnibox-for-page-right; active page page-right; workspace selection item-left.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "split-exit",
+      "transition": "split-exit",
+      "beforeFocus": "page-right",
+      "afterFocus": "page-right",
+      "activePage": "page-right",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "item-left"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "Removing layout preserves the live right page; sibling stays owned by lifecycle.",
+      "visibleCue": "Active page page-right; selected workspace item-left shown separately.",
+      "accessibleCue": "Actual focus page-right; active page page-right; workspace selection item-left.",
+      "ownerQuestions": [
+        "Q3"
+      ],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "peek-enter",
+      "transition": "peek-enter",
+      "beforeFocus": "page-parent",
+      "afterFocus": "page-preview",
+      "activePage": "page-preview",
+      "selectedObject": "item-parent",
+      "commandTargets": {
+        "page": "page-preview",
+        "workspace": "item-parent"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "All page commands target preview, including page-specific security and credentials; move/keep/archive still target selected parent object.",
+      "visibleCue": "Active page page-preview; selected workspace item-parent shown separately.",
+      "accessibleCue": "Actual focus page-preview; active page page-preview; workspace selection item-parent.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "peek-exit",
+      "transition": "peek-exit",
+      "beforeFocus": "page-preview",
+      "afterFocus": "page-parent",
+      "activePage": "page-parent",
+      "selectedObject": "item-parent",
+      "commandTargets": {
+        "page": "page-parent",
+        "workspace": "item-parent"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "After a permitted dismissal, restore live parent focus. This row does not authorize hiding or destroying preview.",
+      "visibleCue": "Active page page-parent; selected workspace item-parent shown separately.",
+      "accessibleCue": "Actual focus page-parent; active page page-parent; workspace selection item-parent.",
+      "ownerQuestions": [
+        "Q3"
+      ],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "peek-parent-gone",
+      "transition": "peek-exit",
+      "beforeFocus": "page-preview",
+      "afterFocus": "empty-host",
+      "activePage": null,
+      "selectedObject": "item-parent",
+      "commandTargets": {
+        "page": null,
+        "workspace": "item-parent"
+      },
+      "dispatch": "unavailable",
+      "expectedEffect": "If parent is no longer an eligible return target, show empty accessible host pending explicit selection. Never reopen or clone it.",
+      "visibleCue": "No active page; selected workspace item-parent shown separately.",
+      "accessibleCue": "Actual focus empty-host; active page none; workspace selection item-parent.",
+      "ownerQuestions": [
+        "Q3"
+      ],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "peek-promotion",
+      "transition": "peek-promotion",
+      "beforeFocus": "page-preview",
+      "afterFocus": "page-preview",
+      "activePage": "page-preview",
+      "selectedObject": "item-parent",
+      "commandTargets": {
+        "page": "page-preview",
+        "workspace": "item-parent"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "After separately authorized promotion, retain preview identity/Profile/native history. Remove only presentation reference.",
+      "visibleCue": "Active page page-preview; selected workspace item-parent shown separately.",
+      "accessibleCue": "Actual focus page-preview; active page page-preview; workspace selection item-parent.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "chrome-pointer",
+      "transition": "chrome-enter",
+      "beforeFocus": "page-right",
+      "afterFocus": "page-right",
+      "activePage": "page-right",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "item-left"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "Intentional pointer reveal preserves page focus and target.",
+      "visibleCue": "Active page page-right; selected workspace item-left shown separately.",
+      "accessibleCue": "Actual focus page-right; active page page-right; workspace selection item-left.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "chrome-keyboard",
+      "transition": "chrome-enter",
+      "beforeFocus": "page-right",
+      "afterFocus": "chrome-controls",
+      "activePage": "page-right",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "item-left"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "Keyboard reveal moves input to controls but retains their active page binding.",
+      "visibleCue": "Active page page-right; selected workspace item-left shown separately.",
+      "accessibleCue": "Actual focus chrome-controls; active page page-right; workspace selection item-left.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "chrome-dismiss",
+      "transition": "chrome-exit",
+      "beforeFocus": "chrome-controls",
+      "afterFocus": "page-right",
+      "activePage": "page-right",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "item-left"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "Return only after native focus success; keep focused chrome visible while return is pending.",
+      "visibleCue": "Active page page-right; selected workspace item-left shown separately.",
+      "accessibleCue": "Actual focus page-right; active page page-right; workspace selection item-left.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "chrome-return-failed",
+      "transition": "chrome-exit",
+      "beforeFocus": "chrome-controls",
+      "afterFocus": "chrome-controls",
+      "activePage": "page-right",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "item-left"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "Failed native return is not focus exit; retained active-page target still requires native input eligibility.",
+      "visibleCue": "Active page page-right; selected workspace item-left shown separately.",
+      "accessibleCue": "Actual focus chrome-controls; active page page-right; workspace selection item-left.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "modal-enter",
+      "transition": "modal-enter",
+      "beforeFocus": "page-right",
+      "afterFocus": "modal-for-page-right",
+      "activePage": "page-right",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "item-left"
+      },
+      "dispatch": "blocked",
+      "expectedEffect": "Modal owns input. Its credential/security callbacks remain bound to page-right/document; generic commands do not fall through.",
+      "visibleCue": "Active page page-right; selected workspace item-left shown separately.",
+      "accessibleCue": "Actual focus modal-for-page-right; active page page-right; workspace selection item-left.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "modal-exit",
+      "transition": "modal-exit",
+      "beforeFocus": "modal-for-page-right",
+      "afterFocus": "page-right",
+      "activePage": "page-right",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "item-left"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "After modal completion and native revalidation, return to its live source.",
+      "visibleCue": "Active page page-right; selected workspace item-left shown separately.",
+      "accessibleCue": "Actual focus page-right; active page page-right; workspace selection item-left.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "modal-switch-refused",
+      "transition": "profile-switch",
+      "beforeFocus": "modal-for-page-right",
+      "afterFocus": "modal-for-page-right",
+      "activePage": "page-right",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "item-left"
+      },
+      "dispatch": "blocked",
+      "expectedEffect": "If modal cannot remain safely owned/reanchored, defer/fail switch and retain binding. Do not dismiss it to switch.",
+      "visibleCue": "Active page page-right; selected workspace item-left shown separately.",
+      "accessibleCue": "Actual focus modal-for-page-right; active page page-right; workspace selection item-left.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "fullscreen-enter",
+      "transition": "fullscreen-enter",
+      "beforeFocus": "page-right",
+      "afterFocus": "page-right",
+      "activePage": "page-right",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "item-left"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "Page fullscreen retains owner, origin/security indicators and native Escape precedence.",
+      "visibleCue": "Active page page-right; selected workspace item-left shown separately.",
+      "accessibleCue": "Actual focus page-right; active page page-right; workspace selection item-left.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "fullscreen-reveal-denied",
+      "transition": "fullscreen-reveal",
+      "beforeFocus": "page-right",
+      "afterFocus": "page-right",
+      "activePage": "page-right",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "item-left"
+      },
+      "dispatch": "blocked",
+      "expectedEffect": "Exclusive fullscreen can deny chrome reveal; no hidden sibling receives the action.",
+      "visibleCue": "Active page page-right; selected workspace item-left shown separately.",
+      "accessibleCue": "Actual focus page-right; active page page-right; workspace selection item-left.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "fullscreen-exit",
+      "transition": "fullscreen-exit",
+      "beforeFocus": "page-right",
+      "afterFocus": "page-right",
+      "activePage": "page-right",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "item-left"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "Restore current eligible presentation without replaying stale chrome focus.",
+      "visibleCue": "Active page page-right; selected workspace item-left shown separately.",
+      "accessibleCue": "Actual focus page-right; active page page-right; workspace selection item-left.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "close-cancelled",
+      "transition": "close-cancel",
+      "beforeFocus": "page-right",
+      "afterFocus": "page-right",
+      "activePage": "page-right",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "item-left"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "Cancellation preserves page, focus and saved item. No archive operation is inferred.",
+      "visibleCue": "Active page page-right; selected workspace item-left shown separately.",
+      "accessibleCue": "Actual focus page-right; active page page-right; workspace selection item-left.",
+      "ownerQuestions": [
+        "Q2"
+      ],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "close-active",
+      "transition": "close-success",
+      "beforeFocus": "page-right",
+      "afterFocus": "page-left",
+      "activePage": "page-left",
+      "selectedObject": "item-right",
+      "commandTargets": {
+        "page": "page-left",
+        "workspace": "item-right"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "Only after native close succeeds, activate surviving visible sibling and prune closed-page references.",
+      "visibleCue": "Active page page-left; selected workspace item-right shown separately.",
+      "accessibleCue": "Actual focus page-left; active page page-left; workspace selection item-right.",
+      "ownerQuestions": [
+        "Q2",
+        "Q3"
+      ],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "close-explicit-inactive",
+      "transition": "close-success",
+      "beforeFocus": "page-right",
+      "afterFocus": "page-right",
+      "activePage": "page-right",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "item-left"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "An explicitly named inactive close target never substitutes the active page; saved item survives under lifecycle.",
+      "visibleCue": "Active page page-right; selected workspace item-left shown separately.",
+      "accessibleCue": "Actual focus page-right; active page page-right; workspace selection item-left.",
+      "ownerQuestions": [
+        "Q2"
+      ],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "close-last-page",
+      "transition": "close-success",
+      "beforeFocus": "page-a",
+      "afterFocus": "empty-host",
+      "activePage": null,
+      "selectedObject": "item-a",
+      "commandTargets": {
+        "page": null,
+        "workspace": "item-a"
+      },
+      "dispatch": "unavailable",
+      "expectedEffect": "Empty host has no page command target. Saved item can remain selected; no dummy WebContents is created.",
+      "visibleCue": "No active page; selected workspace item-a shown separately.",
+      "accessibleCue": "Actual focus empty-host; active page none; workspace selection item-a.",
+      "ownerQuestions": [
+        "Q2",
+        "Q3"
+      ],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "queued-transfer",
+      "transition": "stale-target",
+      "beforeFocus": "page-a",
+      "afterFocus": "page-b",
+      "activePage": "page-b",
+      "selectedObject": "item-a",
+      "commandTargets": {
+        "page": "page-b",
+        "workspace": "item-a"
+      },
+      "dispatch": "cancel-stale",
+      "expectedEffect": "Cancel queued page-a command after attachment change. Do not replay it on currently active page-b.",
+      "visibleCue": "Active page page-b; selected workspace item-a shown separately.",
+      "accessibleCue": "Actual focus page-b; active page page-b; workspace selection item-a.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "queued-aba",
+      "transition": "stale-target",
+      "beforeFocus": "page-a",
+      "afterFocus": "page-a",
+      "activePage": "page-a",
+      "selectedObject": "item-a",
+      "commandTargets": {
+        "page": "page-a",
+        "workspace": "item-a"
+      },
+      "dispatch": "cancel-stale",
+      "expectedEffect": "Native binding generation rejects away-and-back or WebContents replacement even when semantic snapshot matches.",
+      "visibleCue": "Active page page-a; selected workspace item-a shown separately.",
+      "accessibleCue": "Actual focus page-a; active page page-a; workspace selection item-a.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "cross-profile",
+      "transition": "profile-switch",
+      "beforeFocus": "page-work",
+      "afterFocus": "page-home",
+      "activePage": "page-home",
+      "selectedObject": "item-work",
+      "commandTargets": {
+        "page": "page-home",
+        "workspace": "item-work"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "After root-owned native activation succeeds, page commands use page-home's real Profile; workspace selection never supplies credentials.",
+      "visibleCue": "Active page page-home; selected workspace item-work shown separately.",
+      "accessibleCue": "Actual focus page-home; active page page-home; workspace selection item-work.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "host-deactivated",
+      "transition": "host-exit",
+      "beforeFocus": "page-right",
+      "afterFocus": "outside-host",
+      "activePage": "page-right",
+      "selectedObject": "item-left",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "item-left"
+      },
+      "dispatch": "blocked",
+      "expectedEffect": "Inactive host must not steal focus or run its stale accelerator; retained page identity does not grant input authority.",
+      "visibleCue": "Active page page-right; selected workspace item-left shown separately.",
+      "accessibleCue": "No focus claim by this host.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "folder-selected",
+      "transition": "workspace-selection",
+      "beforeFocus": "page-right",
+      "afterFocus": "workspace-folder",
+      "activePage": "page-right",
+      "selectedObject": "folder-a",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "folder-a"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "Page commands target right. Keep/move/archive of folder-a require owner-defined kind/eligibility; no fallback to right page.",
+      "visibleCue": "Active page page-right; selected workspace folder-a shown separately.",
+      "accessibleCue": "Actual focus workspace-folder; active page page-right; workspace selection folder-a.",
+      "ownerQuestions": [
+        "Q1"
+      ],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "reload-multiselect",
+      "transition": "workspace-selection",
+      "beforeFocus": "page-right",
+      "afterFocus": "workspace-multiselection",
+      "activePage": "page-right",
+      "selectedObject": "selection-a-b",
+      "commandTargets": {
+        "page": "page-right",
+        "workspace": "selection-a-b"
+      },
+      "dispatch": "eligible",
+      "expectedEffect": "Default page reload addresses right only. Explicit Reload selected is a separate labeled operation requiring its own scope.",
+      "visibleCue": "Active page page-right; selected workspace selection-a-b shown separately.",
+      "accessibleCue": "Actual focus workspace-multiselection; active page page-right; workspace selection selection-a-b.",
+      "ownerQuestions": [
+        "Q4"
+      ],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    },
+    {
+      "id": "unsupported-route",
+      "transition": "unsupported",
+      "beforeFocus": "empty-host",
+      "afterFocus": "empty-host",
+      "activePage": null,
+      "selectedObject": null,
+      "commandTargets": {
+        "page": null,
+        "workspace": null
+      },
+      "dispatch": "unavailable",
+      "expectedEffect": "No native route is claimed for unsupported Profile/host binding. Preserve shared private/download classifiers; expose unavailable action.",
+      "visibleCue": "No active page; selected workspace none shown separately.",
+      "accessibleCue": "Actual focus empty-host; active page none; workspace selection none.",
+      "ownerQuestions": [],
+      "nativeResults": {
+        "linux": "OPEN",
+        "windows": "OPEN",
+        "macos": "OPEN"
+      }
+    }
+  ],
+  "externalRoutes": {
+    "purpose": "Proposed external-event target constraints, not routing implementation. Unavailable describes the unresolved/unverified contract route, not an observed release limitation.",
+    "rules": [
+      "Preserve exact originating/registered Profile if known.",
+      "No guessed last-active Profile or host/Space fallback.",
+      "Missing initiator does not authorize local focus-return fallback, URL reopen or host creation.",
+      "Native dialog parent and security/storage context are distinct evidence obligations."
+    ],
+    "scenarios": [
+      {
+        "id": "os-link-known-profile",
+        "event": "incoming-os-link",
+        "knownProfile": "profile-work",
+        "profileResolution": "exact-registration",
+        "originState": "no-originating-page",
+        "otherLastActiveProfile": "profile-unrelated",
+        "resolvedTarget": null,
+        "availability": "unavailable",
+        "policyState": "OPEN",
+        "expected": "Preserve registered profile-work. No host/Space chosen. A same-Profile explicit destination chooser is only a recommendation pending Q5.",
+        "ownerQuestions": [
+          "Q5"
+        ],
+        "sourceRisk": null,
+        "nativeResults": {
+          "linux": "OPEN",
+          "windows": "OPEN",
+          "macos": "OPEN"
+        }
+      },
+      {
+        "id": "os-link-unattributed",
+        "event": "incoming-os-link",
+        "knownProfile": null,
+        "profileResolution": "unresolved",
+        "originState": "no-originating-page",
+        "otherLastActiveProfile": "profile-unrelated",
+        "resolvedTarget": null,
+        "availability": "unavailable",
+        "policyState": "OPEN",
+        "expected": "No Profile, host or Space inferred. Route remains unavailable pending Q6.",
+        "ownerQuestions": [
+          "Q6"
+        ],
+        "sourceRisk": null,
+        "nativeResults": {
+          "linux": "OPEN",
+          "windows": "OPEN",
+          "macos": "OPEN"
+        }
+      },
+      {
+        "id": "notification-page-gone",
+        "event": "notification-click",
+        "knownProfile": "profile-work",
+        "profileResolution": "exact-registration",
+        "originState": "initiator-missing-host-survives",
+        "otherLastActiveProfile": "profile-unrelated",
+        "resolvedTarget": null,
+        "availability": "unavailable",
+        "policyState": "OPEN",
+        "expected": "Keep profile-work identity. Surviving original host does not itself approve a replacement page/Space or reuse of local focus fallback.",
+        "ownerQuestions": [
+          "Q5"
+        ],
+        "sourceRisk": null,
+        "nativeResults": {
+          "linux": "OPEN",
+          "windows": "OPEN",
+          "macos": "OPEN"
+        }
+      },
+      {
+        "id": "notification-host-gone",
+        "event": "notification-click",
+        "knownProfile": "profile-work",
+        "profileResolution": "exact-registration",
+        "originState": "initiator-and-host-missing",
+        "otherLastActiveProfile": "profile-unrelated",
+        "resolvedTarget": null,
+        "availability": "unavailable",
+        "policyState": "OPEN",
+        "expected": "Keep profile-work identity. No guessed surviving host/Space, replacement window or page reopen.",
+        "ownerQuestions": [
+          "Q5"
+        ],
+        "sourceRisk": null,
+        "nativeResults": {
+          "linux": "OPEN",
+          "windows": "OPEN",
+          "macos": "OPEN"
+        }
+      },
+      {
+        "id": "pip-initiator-gone",
+        "event": "pip-return",
+        "knownProfile": "profile-work",
+        "profileResolution": "exact-origin",
+        "originState": "initiator-missing",
+        "otherLastActiveProfile": "profile-unrelated",
+        "resolvedTarget": null,
+        "availability": "unavailable",
+        "policyState": "OPEN",
+        "expected": "Retain exact profile-work. Do not reinterpret Return to tab as a URL reopen, saved-item selection or another Profile's last-active page.",
+        "ownerQuestions": [
+          "Q5"
+        ],
+        "sourceRisk": null,
+        "nativeResults": {
+          "linux": "OPEN",
+          "windows": "OPEN",
+          "macos": "OPEN"
+        }
+      },
+      {
+        "id": "origin-generation-stale",
+        "event": "notification-or-pip-return",
+        "knownProfile": "profile-work",
+        "profileResolution": "exact-origin",
+        "originState": "initiator-native-binding-replaced",
+        "otherLastActiveProfile": "profile-unrelated",
+        "resolvedTarget": null,
+        "availability": "unavailable",
+        "policyState": "OPEN",
+        "expected": "Reject stale originating page/document/native generation. Never redirect old action to a replacement page merely sharing an ID, host or URL.",
+        "ownerQuestions": [
+          "Q5"
+        ],
+        "sourceRisk": null,
+        "nativeResults": {
+          "linux": "OPEN",
+          "windows": "OPEN",
+          "macos": "OPEN"
+        }
+      },
+      {
+        "id": "extension-saveas-no-contents",
+        "event": "extension-save-as",
+        "knownProfile": "profile-work",
+        "profileResolution": "exact-download-browser-context",
+        "originState": "associated-webcontents-absent-unrelated-profile-last-active",
+        "otherLastActiveProfile": "profile-unrelated",
+        "resolvedTarget": null,
+        "availability": "unavailable",
+        "policyState": "OPEN",
+        "expected": "Keep DownloadItem BrowserContext and existing download/private classifiers. Native dialog-parent ownership is unverified; do not adopt last-active-any-Profile as approved fallback. Forward for native reproduction and ownership review.",
+        "ownerQuestions": [
+          "Q5"
+        ],
+        "sourceRisk": "compatibility D1 SOURCE_RISK_NOT_RUNTIME_REPRODUCED",
+        "nativeResults": {
+          "linux": "OPEN",
+          "windows": "OPEN",
+          "macos": "OPEN"
+        }
+      },
+      {
+        "id": "exact-live-origin",
+        "event": "notification-or-pip-return",
+        "knownProfile": "profile-work",
+        "profileResolution": "exact-origin",
+        "originState": "initiator-live-native-validation-not-run",
+        "otherLastActiveProfile": "profile-unrelated",
+        "resolvedTarget": null,
+        "availability": "unavailable",
+        "policyState": "OPEN",
+        "expected": "Proposed target is the exact originating native page/context/host/attachment after validation. No substitute is allowed if validation fails. Actual native route remains unverified/unavailable in this packet.",
+        "ownerQuestions": [],
+        "sourceRisk": null,
+        "nativeResults": {
+          "linux": "OPEN",
+          "windows": "OPEN",
+          "macos": "OPEN"
+        }
+      }
+    ]
+  }
+}

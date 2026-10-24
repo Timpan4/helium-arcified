@@ -1,0 +1,8 @@
+{
+  "issueKey": "focus-routing-contract",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/44",
+  "primaryCommandId": 40744,
+  "owner": "assigned primary",
+  "scope": "This packet only. Coordinator reconciles common source changes.",
+  "nativeAcceptance": "OPEN"
+}
