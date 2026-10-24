@@ -1,0 +1,50 @@
+{
+  "issueKey": "release-ux-check",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/161",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "recordedOn": "2026-10-24",
+  "nativeAcceptance": "OPEN",
+  "scope": {
+    "activeNonAi": 135,
+    "laterAiAndSupporting": 23,
+    "excludedSync": 6,
+    "totalCatalog": 164,
+    "acceptanceScenarios": 558,
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "workflowFamilies": 23,
+    "sourceFamilies": 43,
+    "historicalDispositions": 19
+  },
+  "matrixFiles": [
+    "matrix/platform.json",
+    "matrix/core.json",
+    "matrix/data.json",
+    "matrix/navigation.json",
+    "matrix/appearance.json",
+    "matrix/library.json",
+    "matrix/media.json",
+    "matrix/extras.json",
+    "matrix/assistant.json",
+    "matrix/performance.json",
+    "matrix/sync.json",
+    "matrix/research.json",
+    "matrix/release.json"
+  ],
+  "sourceFamilyFile": "source-family-coverage.json",
+  "crossCuttingFile": "cross-cutting-scenarios.json",
+  "statusVocabulary": {
+    "OPEN": "Required or unresolved; no native result supplied.",
+    "NOT_APPLICABLE_OWNER_EXCLUDED": "Explicit owner sync exclusion, not tested success.",
+    "DEFERRED_PRIORITY": "Later AI/supporting work outside active non-AI priority, not product completion.",
+    "NOT_APPLICABLE_DECLARED_OS": "Platform-specific build/package/measurement issue belongs to another named OS.",
+    "UNVERIFIED": "No substantiated feature-native implementation/release evidence in this packet.",
+    "NOT_RUN": "This leaf did not execute a native/runtime scenario."
+  },
+  "countsMeaning": "Inventory reconciliation counts records, not completed native work. No row is promoted by packaging, source inspection, component checks or assignment status.",
+  "nativeProvenDone": 0,
+  "nativeReleasedProven": 0
+}

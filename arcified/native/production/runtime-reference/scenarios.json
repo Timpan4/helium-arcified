@@ -1,0 +1,419 @@
+{
+  "license": "GPL-3.0-only",
+  "issueKey": "runtime-reference",
+  "nativeAcceptance": "OPEN",
+  "captureContract": {
+    "status": "NOT_EXECUTED",
+    "authorization": "Future separately authorized supported-host session only. Current task forbids browser/visual execution, accounts and live-host changes.",
+    "requiredRunFields": [
+      "product",
+      "exactVersionAndBuild",
+      "packageSha256",
+      "packageAcquisitionUrl",
+      "architecture",
+      "osVersionAndArchitecture",
+      "testProfileAlias",
+      "accountAuthorizationReference",
+      "scenarioId",
+      "stepsActuallyRun",
+      "observedOutcome",
+      "platformDifference",
+      "featureReachability",
+      "screenshotsOrRecordings",
+      "captureSha256",
+      "openQuestions"
+    ],
+    "accountRules": "Use allocated authorized test Profiles/accounts. Do not publish credentials, authenticated URLs, private browsing data or account identifiers. Record aliases and authorization references only.",
+    "captureRules": "Pair screenshots of relevant before/after states with a recording for transitions and focus return. Record the real action, UI label, keyboard path and result. Screenshots alone cannot prove uninterrupted native-window or page identity. No recording duration, frame-rate, timeout or quota is specified.",
+    "resultRules": "Record OBSERVED only for executed actions with linked evidence. Separate UNREACHABLE_LOGIN, RETIRED_DOCUMENTED, NOT_FOUND_IN_BUILD, UNSUPPORTED_DOCUMENTED, BLOCKED_ENVIRONMENT and NOT_RUN. A disabled control, static selector, fetch failure or missing capture is not a pass or proof of retirement.",
+    "nativeBoundary": "Reference UX capture is not downstream native implementation evidence. Arcified still needs real native window, Profile, page/document and command-target instrumentation in installed builds."
+  },
+  "scenarios": [
+    {
+      "id": "peek-pin-url",
+      "title": "Peek and pinned URL rules",
+      "sourceIds": [
+        "arc-pins",
+        "arc-peek-legacy",
+        "dia-changelog"
+      ],
+      "steps": [
+        "Record saved URL and distinct current committed URL of a pinned/Favorite page; compare an ordinary temporary tab.",
+        "Follow same-site and outbound links, then independently record redirect, script, typed and explicit-invocation cases without assuming shared rules.",
+        "Observe close, Escape, outside click, expand, reset-to-pin and Peek-to-split actions where actually present. Record parent/preview navigation and active surface before and after."
+      ],
+      "capture": [
+        "Pinned URL and current URL before/after",
+        "Invocation and dismiss/promotion recording",
+        "Visible and accessible active target; dialog/security target"
+      ],
+      "unknowns": [
+        "Actual site classification and redirect handling",
+        "Explicit/nested Peek availability per product",
+        "Focus return and reset safety"
+      ],
+      "downstream": "Only browser-proven outbound links from saved pages are approved to branch. Same-site/unknown/non-link routes remain unresolved. Reference differences cannot override lifecycle v3.",
+      "observations": [
+        {
+          "platformId": "arc-macos",
+          "state": "NOT_RUN",
+          "documentaryNote": "Pinned-site Peek described by cached article; menu declarations remain static leads.",
+          "captures": []
+        },
+        {
+          "platformId": "dia-macos",
+          "state": "NOT_RUN",
+          "documentaryNote": "Pinned behavior needs observation on recorded 1.54.2 DMG.",
+          "captures": []
+        },
+        {
+          "platformId": "arc-windows",
+          "state": "BLOCKED_PACKAGE_AND_RUNTIME",
+          "documentaryNote": "Pinned article explicitly includes Windows; runtime triggers and focus remain unobserved.",
+          "captures": []
+        },
+        {
+          "platformId": "dia-windows",
+          "state": "BLOCKED_PACKAGE_AND_RUNTIME",
+          "documentaryNote": "Back to Pinned documented for v1.2.0; exact package and behavior not verified.",
+          "captures": []
+        },
+        {
+          "platformId": "linux",
+          "state": "NO_OFFICIAL_REFERENCE_PRODUCT",
+          "documentaryNote": "Downstream Linux native scenario remains OPEN. No emulated or other Linux browser is a reference substitute.",
+          "captures": []
+        }
+      ]
+    },
+    {
+      "id": "tab-handoff",
+      "title": "Tab handoff and same-window Profile routing",
+      "sourceIds": [],
+      "steps": [
+        "Use isolated test Profiles and distinct same-origin fixture markers. In separate windows select the same saved item and record whether the existing page moves, duplicates or reloads.",
+        "Track form content, history, scroll, current URL, source window and destination Profile while selecting the saved item elsewhere; separately distinguish cross-Profile URL reopen.",
+        "Observe last-tab source, closing destination, active modal/capture and failure only within the host session's specific authorization. Do not force destructive resolution."
+      ],
+      "capture": [
+        "Two-window before/after and continuous handoff recording",
+        "Profile context and active window cues",
+        "Cancellation/refusal and retained source evidence"
+      ],
+      "unknowns": [
+        "Reference live identity versus new navigation",
+        "Profile/window constraints",
+        "Failure and modal focus behavior"
+      ],
+      "downstream": "Same-window multi-Profile and saved live-page handoff are approved production gates. Preserve actual native page/document/history/Profile, not Model::OpenItem success, URL equivalence or a screenshot proxy.",
+      "observations": [
+        {
+          "platformId": "arc-macos",
+          "state": "NOT_RUN",
+          "documentaryNote": "No runtime handoff observation.",
+          "captures": []
+        },
+        {
+          "platformId": "dia-macos",
+          "state": "NOT_RUN",
+          "documentaryNote": "No runtime handoff observation.",
+          "captures": []
+        },
+        {
+          "platformId": "arc-windows",
+          "state": "BLOCKED_PACKAGE_AND_RUNTIME",
+          "documentaryNote": "No runtime handoff observation; package prerequisite open.",
+          "captures": []
+        },
+        {
+          "platformId": "dia-windows",
+          "state": "BLOCKED_PACKAGE_AND_RUNTIME",
+          "documentaryNote": "No runtime handoff observation; package prerequisite open.",
+          "captures": []
+        },
+        {
+          "platformId": "linux",
+          "state": "NO_OFFICIAL_REFERENCE_PRODUCT",
+          "documentaryNote": "Downstream Linux native scenario remains OPEN. No emulated or other Linux browser is a reference substitute.",
+          "captures": []
+        }
+      ]
+    },
+    {
+      "id": "folder-preview",
+      "title": "Folder preview and active descendant",
+      "sourceIds": [
+        "arc-folders"
+      ],
+      "steps": [
+        "Create nested fixture folders and duplicate tab labels using an authorized disposable test Profile.",
+        "Hover and keyboard-invoke preview where offered; search/scroll without expanding the tree, select a descendant and record expansion state.",
+        "Check active descendant, background selection, rename and moving an item; observe focus and accessible hierarchy."
+      ],
+      "capture": [
+        "Closed folder and preview",
+        "Selection recording and retained expansion state",
+        "Keyboard and accessibility cues"
+      ],
+      "unknowns": [
+        "Keyboard preview parity",
+        "Windows preview reachability",
+        "Focus restoration and deep hierarchy behavior"
+      ],
+      "downstream": "Existing folder preview is a pure projection only. No new tree, metadata store, focus authority or native popup is introduced.",
+      "observations": [
+        {
+          "platformId": "arc-macos",
+          "state": "NOT_RUN",
+          "documentaryNote": "Cached article explicitly documents hover/search/scroll and active child below closed folder.",
+          "captures": []
+        },
+        {
+          "platformId": "dia-macos",
+          "state": "NOT_RUN",
+          "documentaryNote": "Folder/group preview not established by sources used here.",
+          "captures": []
+        },
+        {
+          "platformId": "arc-windows",
+          "state": "BLOCKED_PACKAGE_AND_RUNTIME",
+          "documentaryNote": "General folders documented; preview subsection is macOS-specific. Windows preview remains UNKNOWN, not assumed absent.",
+          "captures": []
+        },
+        {
+          "platformId": "dia-windows",
+          "state": "BLOCKED_PACKAGE_AND_RUNTIME",
+          "documentaryNote": "Folder/group preview not established by sources used here.",
+          "captures": []
+        },
+        {
+          "platformId": "linux",
+          "state": "NO_OFFICIAL_REFERENCE_PRODUCT",
+          "documentaryNote": "Downstream Linux native scenario remains OPEN. No emulated or other Linux browser is a reference substitute.",
+          "captures": []
+        }
+      ]
+    },
+    {
+      "id": "split-transitions",
+      "title": "Split creation, focus, promotion and dissolution",
+      "sourceIds": [
+        "arc-multitasking",
+        "dia-changelog"
+      ],
+      "steps": [
+        "Create split by available pointer and keyboard routes; record initial focus, pane order and native command targets.",
+        "Resize, reorder, maximize, separate, close a pane and promote Peek where offered. Record document/history continuity and empty/single-pane presentation.",
+        "Observe fullscreen and modal return, reduced-motion setting if supported and visible/accessibility active-pane state."
+      ],
+      "capture": [
+        "Continuous split transition recording",
+        "Pane focus and address/find/reload/zoom target evidence",
+        "Promotion/dissolution before and after"
+      ],
+      "unknowns": [
+        "Platform orientation/promotion differences",
+        "Focus ordering",
+        "Native continuity through transitions"
+      ],
+      "downstream": "Preserve reference-only layouts, parent/preview identity and immutable Profile. Do not invent pane limits, auto-close rules or a new split authority.",
+      "observations": [
+        {
+          "platformId": "arc-macos",
+          "state": "NOT_RUN",
+          "documentaryNote": "Mac-oriented multitasking page documents drag/command split creation.",
+          "captures": []
+        },
+        {
+          "platformId": "dia-macos",
+          "state": "NOT_RUN",
+          "documentaryNote": "v1.53.0 lists sidebar/split transition fixes; recorded DMG still requires runtime capture.",
+          "captures": []
+        },
+        {
+          "platformId": "arc-windows",
+          "state": "BLOCKED_PACKAGE_AND_RUNTIME",
+          "documentaryNote": "No runtime split transition evidence; Mac shortcut page is insufficient.",
+          "captures": []
+        },
+        {
+          "platformId": "dia-windows",
+          "state": "BLOCKED_PACKAGE_AND_RUNTIME",
+          "documentaryNote": "v1.3.0 documents Focus Mode with split support; runtime transitions unknown.",
+          "captures": []
+        },
+        {
+          "platformId": "linux",
+          "state": "NO_OFFICIAL_REFERENCE_PRODUCT",
+          "documentaryNote": "Downstream Linux native scenario remains OPEN. No emulated or other Linux browser is a reference substitute.",
+          "captures": []
+        }
+      ]
+    },
+    {
+      "id": "sidebar-reveal",
+      "title": "Sidebar reveal and chrome focus",
+      "sourceIds": [
+        "dia-changelog"
+      ],
+      "steps": [
+        "Record selected workspace object separately from focused page; hide/reveal sidebar through each exposed pointer/keyboard route.",
+        "Move focus through page, revealed chrome, omnibox and back; repeat in split/fullscreen and with an anchored modal.",
+        "Observe when controls remain visible and where find/reload/address/security actions route during reveal and on dismissal."
+      ],
+      "capture": [
+        "Hidden/revealed state and hover/keyboard recording",
+        "Focus cue and accessibility state",
+        "Command receiver before/after reveal"
+      ],
+      "unknowns": [
+        "Reveal timing and dismissal rules",
+        "Pointer versus keyboard parity",
+        "Modal/fullscreen interaction"
+      ],
+      "downstream": "Coordinate with focus-routing-contract. Revealing chrome must not fabricate a selected page or retarget callbacks to another Profile.",
+      "observations": [
+        {
+          "platformId": "arc-macos",
+          "state": "NOT_RUN",
+          "documentaryNote": "No runtime reveal evidence.",
+          "captures": []
+        },
+        {
+          "platformId": "dia-macos",
+          "state": "NOT_RUN",
+          "documentaryNote": "Mac transition fix is documentary only.",
+          "captures": []
+        },
+        {
+          "platformId": "arc-windows",
+          "state": "BLOCKED_PACKAGE_AND_RUNTIME",
+          "documentaryNote": "No runtime reveal evidence.",
+          "captures": []
+        },
+        {
+          "platformId": "dia-windows",
+          "state": "BLOCKED_PACKAGE_AND_RUNTIME",
+          "documentaryNote": "v1.3.0 lists Focus Mode hiding tabs with hover reveal; no timing or focus rule proven.",
+          "captures": []
+        },
+        {
+          "platformId": "linux",
+          "state": "NO_OFFICIAL_REFERENCE_PRODUCT",
+          "documentaryNote": "Downstream Linux native scenario remains OPEN. No emulated or other Linux browser is a reference substitute.",
+          "captures": []
+        }
+      ]
+    },
+    {
+      "id": "media-return",
+      "title": "Media and PiP return to source",
+      "sourceIds": [
+        "arc-multitasking"
+      ],
+      "steps": [
+        "Play authorized local/fixture audio/video, navigate to a different page/Space/window and observe mini-player/PiP if supported.",
+        "Invoke return-to-tab/source after selection changes and a same-Profile handoff where supported. Record exact source document/Profile/window and focus.",
+        "Record paused/stopped, missing/crashed source, fullscreen and multiple-player behavior only when available. Record unsupported DRM routes without adding CDMs."
+      ],
+      "capture": [
+        "Source and player before leaving",
+        "Return recording and source identity",
+        "Unavailable/stale source state"
+      ],
+      "unknowns": [
+        "Return target after transfer",
+        "Competing player selection",
+        "Audio/video and platform capability differences"
+      ],
+      "downstream": "Preserve source-owned native media association and private/capture classifiers. No cleanup/provider/DRM policy is chosen. Existing media component tests cannot prove native return.",
+      "observations": [
+        {
+          "platformId": "arc-macos",
+          "state": "NOT_RUN",
+          "documentaryNote": "Mac-oriented multitasking page documents sidebar mini-player/video PiP, not source-return identity.",
+          "captures": []
+        },
+        {
+          "platformId": "dia-macos",
+          "state": "NOT_RUN",
+          "documentaryNote": "No runtime media-return evidence.",
+          "captures": []
+        },
+        {
+          "platformId": "arc-windows",
+          "state": "BLOCKED_PACKAGE_AND_RUNTIME",
+          "documentaryNote": "No runtime media-return evidence.",
+          "captures": []
+        },
+        {
+          "platformId": "dia-windows",
+          "state": "BLOCKED_PACKAGE_AND_RUNTIME",
+          "documentaryNote": "No runtime media-return evidence.",
+          "captures": []
+        },
+        {
+          "platformId": "linux",
+          "state": "NO_OFFICIAL_REFERENCE_PRODUCT",
+          "documentaryNote": "Downstream Linux native scenario remains OPEN. No emulated or other Linux browser is a reference substitute.",
+          "captures": []
+        }
+      ]
+    },
+    {
+      "id": "native-dialogs",
+      "title": "Native dialog ownership and return",
+      "sourceIds": [
+        "dia-changelog"
+      ],
+      "steps": [
+        "From ordinary page, split and Peek where available, open permission, file chooser, print/download and external-protocol dialogs using inert fixtures and mock-free native paths.",
+        "Record owner Profile/window/page, browser/security text, keyboard/default action, cancellation and focus return. Exercise sign-in/passkey/credential prompts only with specific authorized test accounts/hardware.",
+        "Change selection or attempt handoff while dialog is open; record defer/refusal/reanchor behavior. Cancel without accepting unwanted external effects."
+      ],
+      "capture": [
+        "Each available native dialog with owner cue",
+        "Keyboard cancellation and focus-return recording",
+        "Selection/handoff refusal or retention"
+      ],
+      "unknowns": [
+        "Dialog target across Profile switches",
+        "OS-specific modality",
+        "Credential/hardware/login gates"
+      ],
+      "downstream": "Keep security, before-unload and native account/permission gates intact. Active page commands and selected workspace actions stay distinct; consult focus-routing-contract.",
+      "observations": [
+        {
+          "platformId": "arc-macos",
+          "state": "NOT_RUN",
+          "documentaryNote": "No native dialog executed. Static MainMenu/Sparkle resources do not prove application dialogs.",
+          "captures": []
+        },
+        {
+          "platformId": "dia-macos",
+          "state": "NOT_RUN",
+          "documentaryNote": "v1.54.0 documents external-app-dialog shortcut support; updater-only decoded interfaces are insufficient.",
+          "captures": []
+        },
+        {
+          "platformId": "arc-windows",
+          "state": "BLOCKED_PACKAGE_AND_RUNTIME",
+          "documentaryNote": "No native dialog executed; Windows package unknown.",
+          "captures": []
+        },
+        {
+          "platformId": "dia-windows",
+          "state": "BLOCKED_PACKAGE_AND_RUNTIME",
+          "documentaryNote": "v1.3.0 documents external-app-dialog shortcut support; other dialogs remain unobserved.",
+          "captures": []
+        },
+        {
+          "platformId": "linux",
+          "state": "NO_OFFICIAL_REFERENCE_PRODUCT",
+          "documentaryNote": "Downstream Linux native scenario remains OPEN. No emulated or other Linux browser is a reference substitute.",
+          "captures": []
+        }
+      ]
+    }
+  ]
+}

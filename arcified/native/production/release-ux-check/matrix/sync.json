@@ -1,0 +1,699 @@
+{
+  "issueKey": "release-ux-check",
+  "area": "sync",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "nativeAcceptance": "OPEN",
+  "featureRows": [
+    {
+      "issueKey": "sync-contract",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/21",
+      "title": "Decide encrypted sync scope and key ownership",
+      "kind": "decision",
+      "priority": "Excluded",
+      "recordedDisposition": "Excluded by owner on 2026-10-23. Cross-device sync and its account/backend are not required.",
+      "scopeDecision": "OWNER_EXCLUDED",
+      "sourceFamilies": [
+        "arc-sync",
+        "dia-security"
+      ],
+      "dependencies": [],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "sync-contract/criterion/1",
+          "criterion": "Record included/excluded fields, visible service metadata, identity, service ownership, retention, key lifecycle and recovery choices.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "sync-contract/criterion/2",
+          "criterion": "Use stable object IDs and document offline/conflict/deletion semantics, preserving a usable local-only browser.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "sync-contract/criterion/3",
+          "criterion": "Have the fork owner approve or defer the decision in this issue; no test account, remote write or production service is authorized by this decision ticket.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "sync-enroll",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/156",
+      "title": "Enroll another device and show encrypted sync status",
+      "kind": "implementation",
+      "priority": "Excluded",
+      "recordedDisposition": "Excluded by owner on 2026-10-23. Cross-device sync and its account/backend are not required.",
+      "scopeDecision": "OWNER_EXCLUDED",
+      "sourceFamilies": [
+        "arc-sync",
+        "dia-security"
+      ],
+      "dependencies": [],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "sync-enroll/criterion/1",
+          "criterion": "Authenticate/enroll explicitly, disclose which data syncs, and keep excluded cookies/passwords/credentials out of the payload.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "sync-enroll/criterion/2",
+          "criterion": "Store keys through each OS's secure facilities and show pending, syncing, offline and failed states.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "sync-enroll/criterion/3",
+          "criterion": "Verify a new device receives the intended workspace and a declined or untrusted enrollment receives no readable data.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "sync-conflicts",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/157",
+      "title": "Merge offline workspace edits without losing tabs",
+      "kind": "implementation",
+      "priority": "Excluded",
+      "recordedDisposition": "Excluded by owner on 2026-10-23. Cross-device sync and its account/backend are not required.",
+      "scopeDecision": "OWNER_EXCLUDED",
+      "sourceFamilies": [
+        "arc-sync"
+      ],
+      "dependencies": [],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "sync-conflicts/criterion/1",
+          "criterion": "Test concurrent moves, renames, edits, deletes/restores and clock skew without cycles, duplication or silent loss.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "sync-conflicts/criterion/2",
+          "criterion": "Persist deletion/tombstone semantics and prevent old clients from resurrecting removed work.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "sync-conflicts/criterion/3",
+          "criterion": "Show conflicts that require a user choice and preserve a recoverable local export.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "sync-recovery",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/174",
+      "title": "Recover encrypted workspace access with trusted recovery material",
+      "kind": "implementation",
+      "priority": "Excluded",
+      "recordedDisposition": "Excluded by owner on 2026-10-23. Cross-device sync and its account/backend are not required.",
+      "scopeDecision": "OWNER_EXCLUDED",
+      "sourceFamilies": [
+        "arc-sync"
+      ],
+      "dependencies": [],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "sync-recovery/criterion/1",
+          "criterion": "Explain the approved recovery secret/trusted-device model and the consequence of losing all recovery material.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "sync-recovery/criterion/2",
+          "criterion": "Complete one synthetic key-loss recovery and one password-change scenario without leaking recovery material into logs or exports.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "sync-recovery/criterion/3",
+          "criterion": "Interrupted/failed recovery preserves surviving local data; show an export path when service access is unavailable.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "sync-roundtrip",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/139",
+      "title": "Prove an encrypted workspace round-trip with synthetic data",
+      "kind": "implementation",
+      "priority": "Excluded",
+      "recordedDisposition": "Excluded by owner on 2026-10-23. Cross-device sync and its account/backend are not required.",
+      "scopeDecision": "OWNER_EXCLUDED",
+      "sourceFamilies": [
+        "arc-sync",
+        "dia-security"
+      ],
+      "dependencies": [],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "sync-roundtrip/criterion/1",
+          "criterion": "Demonstrate upload/download through the approved test service or local harness with stable object identity.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "sync-roundtrip/criterion/2",
+          "criterion": "Inspect raw payloads to verify authenticated encryption and exclusion of plaintext workspace/credentials.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "sync-roundtrip/criterion/3",
+          "criterion": "Service failure/cancellation leaves local state usable and exportable; production enrollment remains separately authorized.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "sync-revoke",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/176",
+      "title": "Revoke a synced device and restrict future key access",
+      "kind": "implementation",
+      "priority": "Excluded",
+      "recordedDisposition": "Excluded by owner on 2026-10-23. Cross-device sync and its account/backend are not required.",
+      "scopeDecision": "OWNER_EXCLUDED",
+      "sourceFamilies": [
+        "arc-sync",
+        "dia-security"
+      ],
+      "dependencies": [],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "NOT_APPLICABLE_OWNER_EXCLUDED",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "sync-revoke/criterion/1",
+          "criterion": "Preview the device and scope of revocation and require an explicit owner action.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "sync-revoke/criterion/2",
+          "criterion": "Verify revoked-device future access is denied and key rotation/restriction behaves as designed.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "sync-revoke/criterion/3",
+          "criterion": "Exercise offline/interrupted revocation and explain residual access to material already downloaded.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_OWNER_EXCLUDED",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

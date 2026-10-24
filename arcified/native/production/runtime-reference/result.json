@@ -1,0 +1,112 @@
+{
+  "license": "GPL-3.0-only",
+  "issueKey": "runtime-reference",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/42",
+  "disposition": "RESEARCH_PACKET_DELIVERED_RUNTIME_BLOCKED",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "evidencePaths": [
+    "README.md",
+    "authoritative-issue.json",
+    "sources.json",
+    "scenarios.json",
+    "verify.jq",
+    "checks.json",
+    "result.json"
+  ],
+  "changes": [
+    "Captured the full authoritative leaf issue and exact documentary source identities.",
+    "Recorded pinned macOS artifact provenance and distinct missing Windows package identities.",
+    "Added complete scenario inventory with per-product/platform unrun states and capture contract.",
+    "Proposed acceptance amendments and consolidated owner questions without modifying shared controls."
+  ],
+  "checks": [
+    {
+      "report": "checks.json",
+      "scope": "Light packet structure, formatting, source-byte identity and coverage checks only. No browser, native test or app runtime."
+    }
+  ],
+  "ownerQuestions": [
+    {
+      "question": "Which supported macOS and Windows test hosts and existing authorized Arc test account/Profiles can the coordinator allocate for the recorded-artifact captures?",
+      "recommendation": "Use existing dedicated test Profiles/accounts and fixture pages.",
+      "tradeoff": "Allows reference captures without personal browsing data, but requires actual host/account allocation; publisher says fresh Arc accounts closed on 2026-10-22.",
+      "asked": false,
+      "route": "Coordinator consolidation only"
+    },
+    {
+      "question": "If an Arc scenario is inaccessible because of login or sunset, should its acceptance explicitly retain historical-only reference evidence and an OPEN downstream verification gate?",
+      "recommendation": "Record historical-only reference evidence, precise inaccessible cause and remaining native gate.",
+      "tradeoff": "Honest reference coverage remains incomplete and cannot settle runtime behavior.",
+      "asked": false,
+      "route": "Coordinator consolidation only"
+    }
+  ],
+  "dependencies": [
+    {
+      "issueKey": "reference-windows-artifacts",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/31",
+      "state": "OPEN_FOR_THIS_PACKET",
+      "needed": "Separate official Arc/Dia Windows package identities, signatures/extraction limits and exact evidence paths. Dependency result absent at check; coordinator reconciles concurrent delivery."
+    },
+    {
+      "key": "supported-hosts-and-authorized-test-profiles",
+      "state": "UNALLOCATED",
+      "needed": "Supported OS/app environment and authorized existing account/Profile references; separate runtime authorization."
+    }
+  ],
+  "integrationRequests": [
+    {
+      "target": "research coordinator",
+      "request": "Reconcile this packet with issue 31; retain package hashes and build/architecture identities per Windows product. Do not inherit macOS identifiers."
+    },
+    {
+      "target": "focus-routing-contract primary",
+      "request": "Consume Peek/split/chrome/modal/media focus scenarios; separate active page surface, selected workspace item and originating asynchronous target. Settle unresolved product choices through coordinator, not a competing lifecycle contract."
+    },
+    {
+      "target": "retirements primary and research coordinator",
+      "request": "Carry documented retired versus inaccessible versus not-found actions into acceptance, including legacy Notes/Boost selectors and sunset/login constraints; do not infer runtime availability from retained menu declarations."
+    },
+    {
+      "target": "root native integration",
+      "request": "Keep same-window real multi-Profile and exact-object saved-page handoff gates OPEN. Runtime reference observations cannot close them. No patch registration requested by this leaf."
+    },
+    {
+      "target": "research coordinator",
+      "request": "Obtain fresh independent review and later separately authorized captures on supported hosts. This task did not execute any visual interaction."
+    }
+  ],
+  "remainingCriteria": [
+    {
+      "criterion": 1,
+      "text": "Use the recorded macOS artifacts for macOS and separately identified Windows packages for Windows, with authorized test accounts/Profiles. Linux has no official reference product.",
+      "state": "OPEN",
+      "reason": "macOS identity is recorded static evidence only; Windows identities and supported host/account allocation unavailable."
+    },
+    {
+      "criterion": 2,
+      "text": "Cover Peek/pin URL rules, tab handoff, folder preview, split transitions, sidebar reveal, media return and native dialogs with screenshots/recordings and scenario notes.",
+      "state": "OPEN",
+      "reason": "All required scenario families inventoried but all runtime product/platform rows unexecuted; no captures."
+    },
+    {
+      "criterion": 3,
+      "text": "Separate platform differences, retired actions and inaccessible login-dependent features; update affected acceptance criteria instead of claiming generic parity.",
+      "state": "OPEN",
+      "reason": "Documentary platform/retirement/access distinctions recorded; runtime reconciliation and coordinator acceptance edits remain outstanding."
+    }
+  ],
+  "coverage": {
+    "scenarioFamilies": 7,
+    "productPlatformRows": 28,
+    "runtimeObserved": 0,
+    "runtimePassed": 0,
+    "linuxNotApplicableRows": 7,
+    "countsBasis": "Seven named acceptance families by four Arc/Dia macOS/Windows combinations, plus Linux non-reference states. Counts describe inventory, not passed native scenarios."
+  },
+  "nativePatch": {
+    "status": "INAPPLICABLE_RESEARCH_LEAF",
+    "reason": "No observed runtime behavior or justified native implementation in this authorized research scope. No prepared-source base/result, production patch, registered native tests, ActionItem or message added."
+  },
+  "nativeAcceptance": "OPEN"
+}

@@ -1,0 +1,2785 @@
+{
+  "issueKey": "release-ux-check",
+  "area": "assistant",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "nativeAcceptance": "OPEN",
+  "featureRows": [
+    {
+      "issueKey": "local-assistant",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/55",
+      "title": "Ask an explicitly selected local model from the browser",
+      "kind": "implementation",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Recommended optional capability, independently disableable. It does not block basic local browsing.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "dia",
+        "fork"
+      ],
+      "dependencies": [
+        "native-linux",
+        "native-windows",
+        "native-macos",
+        "assistant-consent-contract"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "local-assistant/criterion/1",
+          "criterion": "Without invocation, send no page text, browsing history or questions to any AI provider.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "local-assistant/criterion/2",
+          "criterion": "Show endpoint/model and connection state; handle unavailable models and provider errors without blocking browsing.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "local-assistant/criterion/3",
+          "criterion": "Use synthetic/public fixtures to verify request payloads, cancellation and local-network boundary handling.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "local-assistant/criterion/4",
+          "criterion": "Before enabling this capability outside the development harness, pass its applicable ai-boundary hostile-context, consent, cancellation and destination-change cases. This is an enablement gate, separate from implementation prerequisites.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "context-selector",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/88",
+      "title": "Choose and inspect @tab and @space context before sending",
+      "kind": "implementation",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Recommended optional capability, independently disableable. It does not block basic local browsing.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "dia",
+        "fork"
+      ],
+      "dependencies": [
+        "local-assistant",
+        "profiles",
+        "assistant-consent-contract"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "context-selector/criterion/1",
+          "criterion": "Preview each source, origin and content scope; allow removal and show inaccessible or stale content.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "context-selector/criterion/2",
+          "criterion": "Read only authorized sources and exclude private/sensitive contexts by default unless explicitly selected and allowed.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "context-selector/criterion/3",
+          "criterion": "Switching tabs/Profiles between selection and send does not silently substitute content or mix identities.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "remote-provider",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/117",
+      "title": "Connect a remote AI provider through explicit consent",
+      "kind": "implementation",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Recommended optional capability, independently disableable. It does not block basic local browsing.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "dia",
+        "fork"
+      ],
+      "dependencies": [
+        "context-selector",
+        "assistant-consent-contract"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "remote-provider/criterion/1",
+          "criterion": "Show the exact provider and selected content before first send and support revocation and credential deletion.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "remote-provider/criterion/2",
+          "criterion": "Store credentials through platform-provided secure storage and never include them in logs or exports.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "remote-provider/criterion/3",
+          "criterion": "Provider setup, declined consent, auth failure and model availability have usable recovery paths; no hard-coded model/version or request cap is invented.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "remote-provider/criterion/4",
+          "criterion": "Enforce endpoint/transport/redirect rules and fail safely if a platform credential store is unavailable. Never silently fall back to plaintext storage, another provider or another content destination.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "remote-provider/criterion/5",
+          "criterion": "Before enabling this capability outside the development harness, pass its applicable ai-boundary hostile-context, consent, cancellation and destination-change cases. This is an enablement gate, separate from implementation prerequisites.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "streaming",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/89",
+      "title": "Stream, stop and retry assistant answers without blocking browsing",
+      "kind": "implementation",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Recommended optional capability, independently disableable. It does not block basic local browsing.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "dia",
+        "fork"
+      ],
+      "dependencies": [
+        "local-assistant"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "streaming/criterion/1",
+          "criterion": "Stop halts app-owned work, leaves a labeled partial result and keeps the browser responsive.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "streaming/criterion/2",
+          "criterion": "Retry/edit/resume has documented context behavior and does not silently repeat tool side effects.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "streaming/criterion/3",
+          "criterion": "Scrolling, focus and keyboard input remain usable during rendering, including long tables and code blocks.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "citations",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/118",
+      "title": "Attribute answers to the exact page context used",
+      "kind": "implementation",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Recommended optional capability, independently disableable. It does not block basic local browsing.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "dia",
+        "fork"
+      ],
+      "dependencies": [
+        "context-selector"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "citations/criterion/1",
+          "criterion": "A citation opens the correct source/tab and distinguishes quoted/extracted evidence from model inference.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "citations/criterion/2",
+          "criterion": "Changing or closing a source after send preserves its recorded identity and shows stale/unavailable status.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "citations/criterion/3",
+          "criterion": "No-source, conflicting-source and unreadable-page cases avoid implying that unsupported claims were verified.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "page-reading",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/119",
+      "title": "Read supported page content outside the browser UI path",
+      "kind": "implementation",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Recommended optional capability, independently disableable. It does not block basic local browsing.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "dia",
+        "fork"
+      ],
+      "dependencies": [
+        "context-selector",
+        "assistant-consent-contract"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "page-reading/criterion/1",
+          "criterion": "Keep extraction cancellable and outside the foreground UI path; show scope and failure for unsupported frames, PDFs and other formats.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "page-reading/criterion/2",
+          "criterion": "Respect origins, permissions, private Profiles and user-selected text, and disclose omissions before sending.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "page-reading/criterion/3",
+          "criterion": "Use public/synthetic fixtures to verify attribution and that hidden/unselected page content is excluded.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "page-reading/criterion/4",
+          "criterion": "Before enabling this capability outside the development harness, pass its applicable ai-boundary hostile-context, consent, cancellation and destination-change cases. This is an enablement gate, separate from implementation prerequisites.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "ask-page",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/151",
+      "title": "Ask about a page from an explicit local find action",
+      "kind": "implementation",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Historical/retired reference. Recommended replacement or decision, not current runtime parity.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "arc-max",
+        "dia"
+      ],
+      "dependencies": [
+        "citations",
+        "page-reading",
+        "find"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "ask-page/criterion/1",
+          "criterion": "Ordinary find stays local and works with AI disabled.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "ask-page/criterion/2",
+          "criterion": "Ask shows the selected provider and page context, streams a cancellable answer and links supporting passages.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "ask-page/criterion/3",
+          "criterion": "Insufficient content, denied access, changed page and unsupported answers have explicit states.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "link-summaries",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/152",
+      "title": "Preview a link summary only after an explicit request",
+      "kind": "implementation",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Recommended optional capability, independently disableable. It does not block basic local browsing.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "arc-max"
+      ],
+      "dependencies": [
+        "citations",
+        "page-reading"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "link-summaries/criterion/1",
+          "criterion": "Invocation clearly identifies that a linked page may be fetched and sent to the selected provider.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "link-summaries/criterion/2",
+          "criterion": "Cancel, failed fetch, authentication and cross-origin restrictions return to the original page without navigation surprises.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "link-summaries/criterion/3",
+          "criterion": "Show source attribution and distinguish a generated summary from verified page contents.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "link-summaries/criterion/4",
+          "criterion": "Support the selected local or remote provider rather than requiring a cloud service; a remote path also consumes explicit remote-provider consent.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "link-summaries/criterion/5",
+          "criterion": "Check credentials, redirects and private/local-network targets before fetching; generated citations and remote images are not fetched merely to render an answer.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "tidy-titles",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/120",
+      "title": "Suggest better tab titles with user control",
+      "kind": "implementation",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Recommended optional capability, independently disableable. It does not block basic local browsing.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "arc-max",
+        "dia"
+      ],
+      "dependencies": [
+        "context-selector",
+        "pins"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "tidy-titles/criterion/1",
+          "criterion": "Preview/accept/revert suggestions and let manually named pins override automatic suggestions.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "tidy-titles/criterion/2",
+          "criterion": "Disclose what title/URL/page content is sent; disabled means no background title processing.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "tidy-titles/criterion/3",
+          "criterion": "Navigation, duplicate titles and failed generation do not corrupt persistent names.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "tidy-downloads",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/121",
+      "title": "Suggest descriptive download names before committing them",
+      "kind": "implementation",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Recommended optional capability, independently disableable. It does not block basic local browsing.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "arc-max"
+      ],
+      "dependencies": [
+        "downloads",
+        "context-selector"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "tidy-downloads/criterion/1",
+          "criterion": "Preview and revert a suggestion; retain file type, extension and safe path rules.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "tidy-downloads/criterion/2",
+          "criterion": "Disclose the metadata/content shared and do not upload file bodies implicitly.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "tidy-downloads/criterion/3",
+          "criterion": "Handle collisions, failed downloads, repeated suggestions and unavailable providers without overwriting files.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "tidy-tabs",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/153",
+      "title": "Preview AI-suggested tab groups and apply them with undo",
+      "kind": "implementation",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Recommended optional capability, independently disableable. It does not block basic local browsing.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "arc-max",
+        "dia"
+      ],
+      "dependencies": [
+        "folders",
+        "context-selector"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "tidy-tabs/criterion/1",
+          "criterion": "Preview proposed groups and unaffected tabs; apply/reject individual changes.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "tidy-tabs/criterion/2",
+          "criterion": "Preserve tab identity and manual organization; every applied organization operation is undoable.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "tidy-tabs/criterion/3",
+          "criterion": "Use only explicitly selected metadata/context and keep private/Profile boundaries intact.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "chat-command",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/122",
+      "title": "Send an explicit question from the command bar",
+      "kind": "implementation",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Recommended optional capability, independently disableable. It does not block basic local browsing.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "arc-max",
+        "dia"
+      ],
+      "dependencies": [
+        "command-bar",
+        "local-assistant"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "chat-command/criterion/1",
+          "criterion": "Search, URL navigation and assistant invocation remain distinct user choices.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "chat-command/criterion/2",
+          "criterion": "Show provider and attached sources; preserve a canceled query and restore focus.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "chat-command/criterion/3",
+          "criterion": "AI disabled or unavailable leaves ordinary command-bar behavior intact.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "skills",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/56",
+      "title": "Decide reusable assistant prompt workflows",
+      "kind": "decision",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Candidate beyond Arc parity. Evaluate a concrete owner-valued workflow before implementation; no enterprise-agent platform is required for core UX.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "dia",
+        "fork"
+      ],
+      "dependencies": [
+        "assistant-consent-contract"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "skills/criterion/1",
+          "criterion": "Record the fork owner's supported workflow and approve or defer scope before implementing this optional capability.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "skills/criterion/2",
+          "criterion": "If accepted, preview steps and sources before execution; keep user prompts distinct from untrusted page text.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "skills/criterion/3",
+          "criterion": "If accepted, cancel a workflow and explain partial results; edit/delete/export does not expose provider credentials.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "skills/criterion/4",
+          "criterion": "If accepted, imported workflows are inspectable and cannot grant themselves page access or tool permissions.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "read-tools",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/57",
+      "title": "Decide additional assistant retrieval capabilities",
+      "kind": "decision",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Candidate beyond Arc parity. Evaluate a concrete owner-valued workflow before implementation; no enterprise-agent platform is required for core UX.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "dia",
+        "fork"
+      ],
+      "dependencies": [
+        "assistant-consent-contract"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "read-tools/criterion/1",
+          "criterion": "Record the fork owner's supported workflow and approve or defer scope before implementing this optional capability.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "read-tools/criterion/2",
+          "criterion": "If accepted, show tool identity, source scope and context actually used, and allow access revocation.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "read-tools/criterion/3",
+          "criterion": "If accepted, authenticate per service/Profile and prevent arbitrary page instructions from granting tool access.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "read-tools/criterion/4",
+          "criterion": "If accepted, record tool errors and cancellation without hidden retries or invented request quotas.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "write-tools",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/58",
+      "title": "Decide assistant actions with external effects",
+      "kind": "decision",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Candidate beyond Arc parity. Evaluate a concrete owner-valued workflow before implementation; no enterprise-agent platform is required for core UX.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "dia",
+        "fork"
+      ],
+      "dependencies": [
+        "assistant-consent-contract"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "write-tools/criterion/1",
+          "criterion": "Record the fork owner's supported workflow and approve or defer scope before implementing this optional capability.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "write-tools/criterion/2",
+          "criterion": "If accepted, preview destination/account, action and relevant payload before approval; rejection sends no mutation.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "write-tools/criterion/3",
+          "criterion": "If accepted, bind approval to the reviewed action and detect changed context rather than silently reusing approval.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "write-tools/criterion/4",
+          "criterion": "If accepted, cancellation, ambiguous response and retry avoid duplicated side effects and show what is known to have happened.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "write-tools/criterion/5",
+          "criterion": "If accepted, if accepted, approval must bind to the reviewed account/destination/payload. Rejection, changed context and ambiguous retry cannot silently mutate or duplicate effects.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "ai-boundary",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/154",
+      "title": "Validate assistant authorization with hostile page fixtures",
+      "kind": "implementation",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Recommended optional capability, independently disableable. It does not block basic local browsing.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "dia",
+        "fork"
+      ],
+      "dependencies": [
+        "context-selector",
+        "page-reading",
+        "streaming"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "ai-boundary/criterion/1",
+          "criterion": "Verify browser-owned authorization rejects attempts by page text to change providers, select other pages, expose credentials or approve actions. A prompt or passing corpus alone is not a security guarantee.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "ai-boundary/criterion/2",
+          "criterion": "Protect private inputs and sensitive forms; make any allowed page-read scope visible.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "ai-boundary/criterion/3",
+          "criterion": "Maintain adversarial fixtures for navigation, generated links, tool results and multi-step workflows, with remaining limitations documented.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "ai-boundary/criterion/4",
+          "criterion": "Cover every capability actually enabled; later accepted tools require new adversarial cases before enablement. Record residual risks instead of claiming prompt injection is solved.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "chat-history",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/155",
+      "title": "Manage local assistant conversations and generated artifacts",
+      "kind": "implementation",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Recommended optional capability, independently disableable. It does not block basic local browsing.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "dia",
+        "fork"
+      ],
+      "dependencies": [
+        "citations",
+        "export"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "chat-history/criterion/1",
+          "criterion": "Rename/delete/export a conversation and reopen cited sources without exposing another Profile's data.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "chat-history/criterion/2",
+          "criterion": "Show attachments/artifacts and originating context; failures and partial responses remain distinguishable.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "chat-history/criterion/3",
+          "criterion": "Private sessions and disabled history follow explicit retention behavior, and deletion covers related local artifacts.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "memory-decision",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/173",
+      "title": "Decide optional assistant memory with inspect and delete controls",
+      "kind": "decision",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Recommended optional capability, independently disableable. It does not block basic local browsing.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "dia",
+        "fork"
+      ],
+      "dependencies": [
+        "chat-history",
+        "ai-boundary"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "memory-decision/criterion/1",
+          "criterion": "Document the evidence conflict and choose supported scope, retention and sensitive-site exclusions before implementation.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "memory-decision/criterion/2",
+          "criterion": "If enabled, users can inspect/edit/delete memories, disable collection and distinguish memory from history.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "memory-decision/criterion/3",
+          "criterion": "If accepted, verify revocation/deletion and cross-Profile separation with synthetic data; do not treat vendor Memory claims as current runtime proof.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "instant-links",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/175",
+      "title": "Evaluate explicit Instant Links from the command bar",
+      "kind": "research",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Historical/retired reference. Recommended replacement or decision, not current runtime parity.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "arc-max"
+      ],
+      "dependencies": [
+        "chat-command",
+        "ai-boundary"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "instant-links/criterion/1",
+          "criterion": "First verify current/historical scope and compare a synthetic search task against ordinary result navigation.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "instant-links/criterion/2",
+          "criterion": "Preview destination/source and require an explicit action; generated or redirected URLs pass normal browser validation.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "instant-links/criterion/3",
+          "criterion": "Keep provider consent, cancellation and fallback to ordinary search; no arbitrary number of links or feature trigger threshold.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "instant-links/criterion/4",
+          "criterion": "Check credentials, redirects and private/local-network targets before fetching; generated citations and remote images are not fetched merely to render an answer.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "agent-workspace",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/66",
+      "title": "Keep an optional agent task in a visibly separate workspace",
+      "kind": "implementation",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Recommended optional capability, independently disableable. It does not block basic local browsing.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "yab-agent",
+        "dia-security"
+      ],
+      "dependencies": [
+        "automation-contract",
+        "assistant-consent-contract"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "YAB sources describe macOS/WebKit. Arc/Dia documentation contributes only where explicitly cited. Linux and Windows are independent downstream targets.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "agent-workspace/criterion/1",
+          "criterion": "The user chooses task/Profile/page access; agent tabs never silently take focus or acquire unrelated authenticated context.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "agent-workspace/criterion/2",
+          "criterion": "Show ownership, task state, created tabs, retention/cleanup policy and a recoverable result with sources.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "agent-workspace/criterion/3",
+          "criterion": "Keep history/private data policy explicit, and require browser-owned approval before consequential actions; no copied helper counts or close timers.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "agent-workspace/criterion/4",
+          "criterion": "Before enabling this capability outside the development harness, pass its applicable ai-boundary hostile-context, consent, cancellation and destination-change cases. This is an enablement gate, separate from implementation prerequisites.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "agent-takeover",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/105",
+      "title": "Pause agent browsing and hand control to the user",
+      "kind": "implementation",
+      "priority": "Later, after non-AI browser UX and performance",
+      "recordedDisposition": "Recommended optional capability, independently disableable. It does not block basic local browsing.",
+      "scopeDecision": "LATER_PRIORITY",
+      "sourceFamilies": [
+        "yab-agent",
+        "dia-security"
+      ],
+      "dependencies": [
+        "agent-workspace"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "YAB sources describe macOS/WebKit. Arc/Dia documentation contributes only where explicitly cited. Linux and Windows are independent downstream targets.",
+      "optionalStateScenarioIds": [
+        "optional-disabled",
+        "optional-authorized-enabled"
+      ],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "DEFERRED_PRIORITY",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "agent-takeover/criterion/1",
+          "criterion": "Pause before human action and show task state, last action and pending effects.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "agent-takeover/criterion/2",
+          "criterion": "On resume, inspect changed page/source identity and seek fresh approval for changed actions rather than replaying stale input.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "agent-takeover/criterion/3",
+          "criterion": "Cancel, page navigation, account changes and failed resume preserve work and do not duplicate external effects.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "agent-takeover/criterion/4",
+          "criterion": "Before enabling this capability outside the development harness, pass its applicable ai-boundary hostile-context, consent, cancellation and destination-change cases. This is an enablement gate, separate from implementation prerequisites.",
+          "results": {
+            "Linux": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "DEFERRED_PRIORITY",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

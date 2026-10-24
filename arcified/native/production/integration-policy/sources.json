@@ -1,0 +1,179 @@
+{
+  "sampledAtUtc": "2026-10-23 22:28:14 UTC",
+  "localCalendarDate": "2026-10-24",
+  "preparedChromiumVersion": "155.0.8059.79",
+  "method": "fast_filesystem read/search of local authority and scoped native headers; web tool primary-source documentary retrieval; sha256sum of local source bytes.",
+  "localFiles": [
+    {
+      "sha256": "cc8ec03443b18a749b486e484a56b86218d8f41653970dea94185f76c9685354",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+      "role": "root authority",
+      "resultSha256": null
+    },
+    {
+      "sha256": "daf98f1cf993c1a21686289a88489bf001266d7fff4d85089d30055584c8a7b0",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+      "role": "root authority",
+      "resultSha256": null
+    },
+    {
+      "sha256": "244488864d15d093f7f80e1cc40f490a979454e2a8e74db438c7e51283518a1c",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md",
+      "role": "root authority",
+      "resultSha256": null
+    },
+    {
+      "sha256": "e5951ba265be3587cb1df8f2ab73ce6768071ac55b8d481240ed57819b39ab56",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md",
+      "role": "root authority",
+      "resultSha256": null
+    },
+    {
+      "sha256": "dae2aed7885b1f03f5f96a1285265a1189b8776a6472880c0f12c94de7f7ad02",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json",
+      "role": "root authority",
+      "resultSha256": null
+    },
+    {
+      "sha256": "97dc7e368b29bd43bb0ce24bcbc2b9795b842bbdeb68aa58a2cfc85e20024c4a",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser_window/public/browser_window_interface.h",
+      "role": "read-only native source",
+      "resultSha256": "97dc7e368b29bd43bb0ce24bcbc2b9795b842bbdeb68aa58a2cfc85e20024c4a"
+    },
+    {
+      "sha256": "f66ee8520890c906d9e762a52881e30d0e58ab8aa809109fdfaae3edf69d5fb5",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/notifications/notification_display_service.h",
+      "role": "read-only native source",
+      "resultSha256": "f66ee8520890c906d9e762a52881e30d0e58ab8aa809109fdfaae3edf69d5fb5"
+    },
+    {
+      "sha256": "c6a2f30a9306a37febbf5a9646638d8976a49977db19258f5da9f5e70cb4121f",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/components/os_crypt/async/browser/os_crypt_async.h",
+      "role": "read-only native source",
+      "resultSha256": "c6a2f30a9306a37febbf5a9646638d8976a49977db19258f5da9f5e70cb4121f"
+    }
+  ],
+  "preparedSourceResult": "No native source changed. Base and result identities are identical for all listed prepared headers.",
+  "otherFoundationReads": [
+    "arcified/docs/features/profile-safety.md",
+    "arcified/docs/features/private-browsing.md",
+    "arcified/native/features/private_browsing/operation_boundary.h",
+    "arcified/native/features/private_browsing/operation_boundary.cc",
+    "arcified/docs/research/arc-dia/coverage-matrix.md",
+    "arcified/docs/research/arc-dia/publication/integration-policy.md"
+  ],
+  "external": [
+    {
+      "id": "arc-live",
+      "url": "https://resources.arc.net/hc/en-us/articles/22731612065815-Automatic-GitHub-Live-Folders",
+      "retrievalDateUtc": "2026-10-23",
+      "retrievalStatus": "404",
+      "findings": "Original assigned reference unavailable on retrieval. Historical implementation scopes and current runtime cannot be established."
+    },
+    {
+      "id": "arc-calendar",
+      "url": "https://resources.arc.net/hc/en-us/articles/24158102740631-Live-Calendars",
+      "retrievalDateUtc": "2026-10-23",
+      "retrievalStatus": "404",
+      "findings": "Original assigned reference unavailable on retrieval."
+    },
+    {
+      "id": "arc-notes",
+      "url": "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+      "retrievalDateUtc": "2026-10-23",
+      "retrievalStatus": "retrieved",
+      "findings": "April 2024 GitHub PR/review folders; June 2024 Google Calendar favorite and Join; July 2024 team review requests. macOS documentary evidence only."
+    },
+    {
+      "id": "github-pulls",
+      "url": "https://docs.github.com/en/rest/pulls/pulls",
+      "retrievalDateUtc": "2026-10-23",
+      "retrievalStatus": "retrieved",
+      "findings": "List pull requests requires Pull requests read permission for fine-grained authenticated access; public resources can be read unauthenticated. Response can include PR bodies."
+    },
+    {
+      "id": "github-user-token",
+      "url": "https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app",
+      "retrievalDateUtc": "2026-10-23",
+      "retrievalStatus": "retrieved",
+      "findings": "GitHub App device flow uses client ID and device grant, requires registration enablement, and supplies authorization interval/expiry. Permission comes from app and user access, not OAuth data scopes."
+    },
+    {
+      "id": "github-refresh",
+      "url": "https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/refreshing-user-access-tokens",
+      "retrievalDateUtc": "2026-10-23",
+      "retrievalStatus": "retrieved",
+      "findings": "Device-flow tokens can refresh without client secret; rotation invalidates old access/refresh tokens. Respect returned expiration values."
+    },
+    {
+      "id": "github-revocation",
+      "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/token-expiration-and-revocation",
+      "retrievalDateUtc": "2026-10-23",
+      "retrievalStatus": "retrieved",
+      "findings": "Expired or revoked credentials must not be presented as healthy authorization."
+    },
+    {
+      "id": "github-token-storage",
+      "url": "https://docs.github.com/en/enterprise-cloud%40latest/apps/creating-github-apps/about-creating-github-apps/best-practices-for-creating-a-github-app",
+      "retrievalDateUtc": "2026-10-23",
+      "retrievalStatus": "retrieved",
+      "findings": "Native clients should use user tokens and platform storage rather than shipping an app private key to generate installation tokens."
+    },
+    {
+      "id": "google-scopes",
+      "url": "https://developers.google.com/workspace/calendar/api/auth",
+      "retrievalDateUtc": "2026-10-23",
+      "retrievalStatus": "retrieved",
+      "findings": "Distinguishes owned-event read access, all-calendar event read access, calendar-list read access and free/busy. OAuth scope remains broader than an application filter."
+    },
+    {
+      "id": "google-events",
+      "url": "https://developers.google.com/workspace/calendar/api/v3/reference/events/list",
+      "retrievalDateUtc": "2026-10-23",
+      "retrievalStatus": "retrieved",
+      "findings": "Events list uses a calendar ID or primary alias. No live query executed."
+    },
+    {
+      "id": "google-oauth",
+      "url": "https://developers.google.com/identity/protocols/oauth2/native-app",
+      "retrievalDateUtc": "2026-10-23",
+      "retrievalStatus": "retrieved",
+      "findings": "Desktop OAuth, PKCE, token refresh and revocation endpoints. Current documentation includes optional DPoP. No OAuth client registered or tested."
+    },
+    {
+      "id": "google-identity",
+      "url": "https://developers.google.com/identity/openid-connect/openid-connect",
+      "retrievalDateUtc": "2026-10-23",
+      "retrievalStatus": "retrieved",
+      "findings": "OIDC provides a stable subject after ID-token validation. The shorter /identity/openid-connect path returned 404; this canonical page resolved."
+    },
+    {
+      "id": "google-sync",
+      "url": "https://developers.google.com/workspace/calendar/api/guides/sync",
+      "retrievalDateUtc": "2026-10-23",
+      "retrievalStatus": "retrieved",
+      "findings": "Invalid sync token can return 410 and require rebuilding the provider-derived cache. This is not workspace or user-file deletion authority."
+    },
+    {
+      "id": "native-oauth",
+      "url": "https://www.rfc-editor.org/info/rfc8252/",
+      "retrievalDateUtc": "2026-10-23",
+      "retrievalStatus": "retrieved",
+      "findings": "Native-app authorization uses an external user agent and PKCE, with public-client secret limitations."
+    },
+    {
+      "id": "microsoft-scope",
+      "url": "https://learn.microsoft.com/en-us/graph/permissions-reference",
+      "retrievalDateUtc": "2026-10-23",
+      "retrievalStatus": "search_result",
+      "findings": "Official search result documents delegated Calendars.ReadBasic and its body/attachment/extension exclusions. Microsoft support is deferred; full auth/endpoint mapping was not investigated."
+    }
+  ],
+  "limitations": [
+    "No authenticated provider requests, issue comments, reference runtime or native runtime inspected.",
+    "External sources are paraphrased, not archived or byte-pinned. Retrieval status and URLs do not prove provider behavior in this build.",
+    "Root controls are active coordinator files. Hashes identify the sampled bytes, not immutable future state.",
+    "Initial default-size manifest read truncated. A complete fast_filesystem read with max_bytes 200000 subsequently parsed all root controls and the assigned issue.",
+    "GitHub permission overview URL was inaccessible; endpoint-specific pull-request documentation supplies permission evidence instead."
+  ]
+}

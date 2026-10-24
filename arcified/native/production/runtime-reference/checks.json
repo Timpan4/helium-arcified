@@ -1,0 +1,92 @@
+{
+  "license": "GPL-3.0-only",
+  "issueKey": "runtime-reference",
+  "checkedOn": "2026-10-24",
+  "scope": "Documentary packet only. No native setup/preparation/build/test, benchmark, remote CI, browser, reference app, account or live-host operation.",
+  "checks": [
+    {
+      "id": "baseline",
+      "command": "git rev-parse HEAD",
+      "exitCode": 0,
+      "outcome": "PASS",
+      "stdout": "a4b6b480d3de07857ab6e939149254a8359e5449"
+    },
+    {
+      "id": "source-identities",
+      "command": "sha256sum /home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json /home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json /home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md /home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md /home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json arcified/docs/research/arc-dia/artifacts.md arcified/docs/research/arc-dia/arc-ux.md arcified/docs/features/peek.md arcified/docs/features/pins.md arcified/docs/organization-folder-preview.md arcified/docs/media-picture-in-picture.md",
+      "exitCode": 0,
+      "outcome": "SNAPSHOT_IDENTITIES_RECORDED_CONCURRENT_CONTROL_CHANGE_RECONCILED",
+      "details": "Initial hashes in sources.json. Later scan matched every listed source except the mutable root manifest. Both manifest hashes retained. Full fast_filesystem reread found unchanged leaf assignment, baseline, scope, read-only access, ownership and command allocation. Root added assignment-verification/shared-dependency metadata and compacted repeated per-primary settings. No controls written."
+    },
+    {
+      "id": "packet-contract",
+      "command": "jq -s -e -f arcified/native/production/runtime-reference/verify.jq arcified/native/production/runtime-reference/authoritative-issue.json arcified/native/production/runtime-reference/sources.json arcified/native/production/runtime-reference/scenarios.json arcified/native/production/runtime-reference/result.json",
+      "exitCode": 0,
+      "outcome": "PASS",
+      "stdout": "true",
+      "covers": "Full authoritative leaf identity, baseline consistency, all seven scenario families and all five platform entries per family, valid source IDs, no fabricated captures, distinct Windows artifact gaps, research-only patch disposition and OPEN criteria/native acceptance.",
+      "iteration": "Initial check reported 'boolean (false) cannot be sorted'. Grouped the comparison operands in verify.jq and reran successfully; no product behavior was changed."
+    },
+    {
+      "id": "json-format",
+      "command": "for file in arcified/native/production/runtime-reference/authoritative-issue.json arcified/native/production/runtime-reference/sources.json arcified/native/production/runtime-reference/scenarios.json arcified/native/production/runtime-reference/result.json; do jq --indent 2 . \"$file\" | cmp - \"$file\" || exit; done",
+      "exitCode": 0,
+      "outcome": "PASS",
+      "covers": "JSON syntax, two-space canonical jq formatting and final newline."
+    },
+    {
+      "id": "readback-and-markdown",
+      "tool": "fast_filesystem.fs_read_many",
+      "paths": [
+        "README.md",
+        "authoritative-issue.json",
+        "sources.json",
+        "scenarios.json",
+        "verify.jq",
+        "result.json"
+      ],
+      "outcome": "PASS",
+      "command": "Read packet UTF-8 files with fs_read_many; reject error/truncated. Require content.endsWith('\\n'), no '\\r', and no /[ \\t]+$/m match. JSON.parse(authoritative-issue.json).issue must equal full selected assignment scope object.",
+      "covers": "File readback, LF/final-newline/trailing-space lint and exact authoritative issue object preservation."
+    },
+    {
+      "id": "local-links",
+      "tool": "fast_filesystem.fs_stat_many",
+      "outcome": "PASS",
+      "command": "Extract README Markdown link targets with /\\]\\(([^)]+)\\)/g; resolve non-HTTP paths against the packet; fs_stat_many each resolved target. checks.json was created after the initial link scan and is checked in final packet readback.",
+      "covers": "Packet and reused foundation Markdown link targets exist. External links are evidence references with separately recorded retrieval limitations."
+    },
+    {
+      "id": "markdown-diff-whitespace",
+      "command": "git diff --no-index --check /dev/null arcified/native/production/runtime-reference/README.md",
+      "exitCode": 1,
+      "outcome": "NO_WHITESPACE_DIAGNOSTICS",
+      "stdout": "",
+      "details": "New-file comparison reports differences. Whitespace correctness is separately checked by explicit readback lint; this exit is not treated as a standalone passing test."
+    },
+    {
+      "id": "formatter-availability",
+      "command": "command -v node jq prettier markdownlint bun",
+      "exitCode": 1,
+      "outcome": "TOOLS_INSPECTED",
+      "details": "node, jq and bun found; prettier and markdownlint absent. Inspected root listing and extension package.json expose no Markdown formatter/linter workflow. No package installed; jq formatting and explicit Markdown whitespace/link checks used."
+    },
+    {
+      "id": "scope-status",
+      "command": "git status --short -- arcified/native/production/runtime-reference",
+      "exitCode": 0,
+      "outcome": "UNTRACKED_PACKET",
+      "stdout": "?? arcified/native/production/runtime-reference/",
+      "details": "No staging, commit, patch/series or prepared-tree mutation."
+    }
+  ],
+  "runtimeCounts": {
+    "observed": 0,
+    "passed": 0,
+    "unexecutedProductPlatformRows": 28,
+    "noOfficialLinuxReferenceRows": 7
+  },
+  "nativePatch": "INAPPLICABLE_RESEARCH_LEAF",
+  "nativeAcceptance": "OPEN",
+  "remaining": "Reference runtime captures, Windows artifact reconciliation, supported hosts and authorized Profiles/accounts, owner decisions and fresh independent coordinator review."
+}

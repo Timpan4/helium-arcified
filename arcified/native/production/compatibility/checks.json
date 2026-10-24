@@ -1,0 +1,104 @@
+{
+  "license": "GPL-3.0-only",
+  "recordedAt": "2026-10-24",
+  "scope": "Light packet/source checks only. No native compilation, test execution or visual observation.",
+  "checks": [
+    {
+      "command": "git rev-parse HEAD",
+      "outcome": "Exit 0: a4b6b480d3de07857ab6e939149254a8359e5449. Baseline identity only."
+    },
+    {
+      "command": "sha256sum '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/VERSION' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/web_applications/web_app_launch_process.cc' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/views/extensions/extension_popup.cc' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/autofill/autofill_popup_controller_impl.cc' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/webauthn/chrome_authenticator_request_delegate.cc' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/printing/print_preview_dialog_controller.cc' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/download/download_file_picker.cc' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/notifications/non_persistent_notification_handler.cc' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/notifications/persistent_notification_handler.cc' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/external_protocol/external_protocol_handler.cc' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/media/router/media_router_feature.cc' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/picture_in_picture/picture_in_picture_window_manager.cc' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/third_party/widevine/cdm/widevine.gni' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/third_party/widevine/LICENSE' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json' '/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/publication/compatibility.md' '/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/artifacts.md' '/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/flags.gn'",
+      "outcome": "Exit 0. Exact SHA-256 values recorded in source-identities.json; prepared-source values also in prepared-source.sha256."
+    },
+    {
+      "command": "sha256sum --check arcified/native/production/compatibility/prepared-source.sha256",
+      "outcome": "Exit 0. All 14 scoped prepared-source files matched."
+    },
+    {
+      "command": "git diff --no-index --check /dev/null arcified/native/production/compatibility/ownership.json",
+      "outcome": "Exit 1; no whitespace diagnostics. Exit 1 reflects the new-file difference against /dev/null, not a reported whitespace error."
+    },
+    {
+      "command": "git diff --no-index --check /dev/null arcified/native/production/compatibility/issue-object.json",
+      "outcome": "Exit 1; no whitespace diagnostics. Exit 1 reflects the new-file difference against /dev/null, not a reported whitespace error."
+    },
+    {
+      "command": "git diff --no-index --check /dev/null arcified/native/production/compatibility/source-identities.json",
+      "outcome": "Exit 1; no whitespace diagnostics. Exit 1 reflects the new-file difference against /dev/null, not a reported whitespace error."
+    },
+    {
+      "command": "git diff --no-index --check /dev/null arcified/native/production/compatibility/compatibility-matrix.json",
+      "outcome": "Exit 1; no whitespace diagnostics. Exit 1 reflects the new-file difference against /dev/null, not a reported whitespace error."
+    },
+    {
+      "command": "git diff --no-index --check /dev/null arcified/native/production/compatibility/defects.json",
+      "outcome": "Exit 1; no whitespace diagnostics. Exit 1 reflects the new-file difference against /dev/null, not a reported whitespace error."
+    },
+    {
+      "command": "git diff --no-index --check /dev/null arcified/native/production/compatibility/README.md",
+      "outcome": "Exit 1; no whitespace diagnostics. Exit 1 reflects the new-file difference against /dev/null, not a reported whitespace error."
+    },
+    {
+      "command": "git diff --no-index --check /dev/null arcified/native/production/compatibility/result.json",
+      "outcome": "Exit 1; no whitespace diagnostics. Exit 1 reflects the new-file difference against /dev/null, not a reported whitespace error."
+    },
+    {
+      "command": "git diff --no-index --check /dev/null arcified/native/production/compatibility/prepared-source.sha256",
+      "outcome": "Exit 1; no whitespace diagnostics. Exit 1 reflects the new-file difference against /dev/null, not a reported whitespace error."
+    },
+    {
+      "tool": "fast_filesystem.fs_read_many",
+      "arguments": {
+        "paths": [
+          "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/ownership.json",
+          "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/issue-object.json",
+          "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/source-identities.json",
+          "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/compatibility-matrix.json",
+          "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/defects.json",
+          "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/README.md",
+          "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/result.json",
+          "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/prepared-source.sha256"
+        ]
+      },
+      "outcome": "All eight files returned without truncation/errors before hosted validation."
+    },
+    {
+      "tool": "functions.exec",
+      "inputs": "contents maps packet basenames to UTF-8 content returned by fast_filesystem. authoritativeIssue is the compatibility object read from root assignment.json.",
+      "expression": "const matrix = JSON.parse(contents[\"compatibility-matrix.json\"]);\nconst sources = JSON.parse(contents[\"source-identities.json\"]);\nconst result = JSON.parse(contents[\"result.json\"]);\nconst issue = JSON.parse(contents[\"issue-object.json\"]);\nconst defects = JSON.parse(contents[\"defects.json\"]);\nconst assert = (value, message) => { if (!value) throw Error(message); };\nfor (const [name, content] of Object.entries(contents)) {\n  if (name.endsWith(\".json\")) assert(content === JSON.stringify(JSON.parse(content), null, 2) + \"\\n\", \"JSON formatting: \" + name);\n  assert(content.endsWith(\"\\n\") && !content.includes(\"\\r\") && !content.includes(\"\\0\"), \"Text encoding: \" + name);\n  assert(!content.split(\"\\n\").some(line => /[ \\t]+$/.test(line)), \"Whitespace: \" + name);\n}\nassert(JSON.stringify(issue.issue) === JSON.stringify(authoritativeIssue), \"Issue mismatch\");\nconst sourceIds = new Set(sources.sources.map(source => source.id));\nassert(new Set(matrix.scenarios.map(row => row.id)).size === matrix.scenarios.length, \"Duplicate scenarios\");\nfor (const row of matrix.scenarios) {\n  assert([1, 2, 3].includes(row.acceptanceCriterion), \"Bad criterion\");\n  for (const id of row.sourceIds) assert(sourceIds.has(id), \"Source missing\");\n  for (const variant of row.variants) assert(variant in matrix.variantDefinitions, \"Variant missing\");\n  assert(JSON.stringify(Object.keys(row.results)) === JSON.stringify(matrix.platforms), \"Platform missing\");\n  for (const platform of matrix.platforms) {\n    const value = row.results[platform];\n    assert(value.state === \"OPEN\" && value.evidence.length === 0 && value.defects.length === 0, \"False native evidence\");\n  }\n}\nfor (const criterion of [1, 2, 3]) assert(matrix.scenarios.some(row => row.acceptanceCriterion === criterion), \"Criterion missing\");\nassert(matrix.releaseCandidate.state === \"UNDECLARED\" && matrix.releaseCandidate.id === null, \"Invented RC\");\nassert(matrix.nativeAcceptance === \"OPEN\" && result.nativeAcceptance === \"OPEN\", \"Native gate lost\");\nassert(result.counts.platformCells === matrix.scenarios.length * matrix.platforms.length, \"Cell count mismatch\");\nassert(result.counts.nativeOpen === result.counts.platformCells && result.counts.nativePass === 0, \"False closure\");\nassert(defects.runtimeDefects.length === 0 && defects.candidates[0].state === \"SOURCE_RISK_NOT_RUNTIME_REPRODUCED\", \"Wrong defect classification\");\nfor (const source of sources.sources) assert(/^[a-f0-9]{64}$/.test(source.sha256), \"Invalid hash\");\nconst names = new Set([...Object.keys(contents), \"checks.json\"]);\nfor (const match of contents[\"README.md\"].matchAll(/\\]\\(([^)]+)\\)/g)) assert(names.has(match[1]), \"Missing link\");\nfor (const path of result.evidencePaths) assert(names.has(path), \"Missing evidence\");",
+      "outcome": {
+        "jsonParsed": 6,
+        "jsonCanonical": 6,
+        "issueAuthorityEqual": true,
+        "scenarios": 20,
+        "criteriaCovered": [
+          1,
+          2,
+          3
+        ],
+        "platformCells": 60,
+        "allPlatformCellsOpen": true,
+        "sourceIdentities": 22,
+        "preparedSourceIdentities": 14,
+        "markdownLocalLinksValid": true,
+        "lineEndingsAndWhitespace": true
+      }
+    },
+    {
+      "command": "git diff --no-index --check /dev/null arcified/native/production/compatibility/checks.json",
+      "outcome": "Exit 1, no whitespace diagnostics; new-file difference against /dev/null."
+    },
+    {
+      "command": "GIT_OPTIONAL_LOCKS=0 git status --short -- arcified/native/production/compatibility",
+      "outcome": "Exit 0. Packet is untracked; no staging or commit performed."
+    },
+    {
+      "tool": "functions.exec",
+      "expression": "Re-run the recorded validation expression with all nine packet files returned by fast_filesystem.fs_read_many, including checks.json.",
+      "outcome": "PASS. Nine text files, seven canonical JSON files; complete issue-object equality; 20 scenario IDs and 60 OPEN platform cells; source/variant/evidence/link consistency and whitespace checks passed."
+    }
+  ],
+  "formatting": "All authored JSON uses JSON.stringify(value, null, 2) plus LF, verified on readback. Markdown inspected for local links, LF and whitespace. No Markdown formatter/linter is declared in the inspected configuration; command lookup found no installed prettier or markdownlint-cli2. No dependency installed.",
+  "nativeChecks": "NOT RUN. Native patch application, native syntax/build tests, browser/interactive tests and visual checks are inapplicable or unavailable to this tracking-only read-only-source assignment. Native acceptance OPEN."
+}

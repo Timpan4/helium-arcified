@@ -1,0 +1,83 @@
+{
+  "issue": {
+    "key": "retirements",
+    "title": "Record historical feature and service replacement decisions",
+    "area": "research",
+    "build": "Give every retired or service-dependent Arc feature an explicit downstream disposition.",
+    "accept": [
+      "Cover Notes, Reader Mode beta, Paste & Go, Recent Tab indicator, Command Bar education, GitHub Previews, iCloud sync, Legacy Boost Builder, Ask on Page and Arc sunset/migration. Also cover People Cards and historical Favorite-site previews.",
+      "For each, record implement/replace/import/defer with the surviving workflow and evidence; separately record Dia Memory's conflicting status.",
+      "Keep mobile Arc Search features, Dia work connectors/decks and unavailable vendor services explicit scope decisions rather than silently claiming desktop parity.",
+      "The owner excluded iCloud and new cross-device sync. Keep local import/export and migration without an Arcified account; record that explicit disposition instead of planning a replacement sync backend."
+    ],
+    "blocked": [],
+    "sources": [
+      "arc-status",
+      "arc-history",
+      "arc-notes",
+      "dia"
+    ],
+    "sourceUrls": [
+      "https://resources.arc.net/hc/en-us/articles/44412972248471-Arc-Sunset-Key-Dates-and-What-to-Expect",
+      "https://start.arc.net/release-notes",
+      "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+      "https://resources.arc.net/hc/en-us/articles/19233788518039-Phasing-Out-Arc-Notes",
+      "https://www.diabrowser.com/changelog"
+    ],
+    "readiness": "Proposed work after native/reference prerequisites and explicit decisions in this issue.",
+    "phase": "Evidence, decisions and gates",
+    "kind": "research",
+    "disposition": "Historical/retired reference. Recommended replacement or decision, not current runtime parity.",
+    "referencePlatforms": "Arc feature evidence is macOS-heavy or macOS-only as recorded in the dossier. Windows parity is not assumed; Linux is a downstream design target.",
+    "referenceNote": "The linked reference documents/release histories describe this workflow family. Acceptance below specifies the intended improved Arcified behavior.",
+    "openQuestions": "Native integration, failure behavior and applicable platform results must be proven for this slice; unavailable checks stay open.",
+    "priority": "Before AI",
+    "number": 23,
+    "url": "https://github.com/Timpan4/helium-arcified/issues/23",
+    "primaryCommandId": 40798
+  },
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "authoritativeAssignmentPath": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+  "manifestPath": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+  "manifestEntry": {
+    "key": "retirements",
+    "url": "https://github.com/Timpan4/helium-arcified/issues/23",
+    "kind": "research",
+    "commandId": 40798,
+    "primaryTaskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-retirements-primary-v1",
+    "primaryThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-retirements-primary-v1",
+    "assignmentStatus": "running",
+    "actualSettingsVerified": true
+  },
+  "preparedSource": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+  "preparedSourceAccess": "READ_ONLY",
+  "rootOwns": "Shared native build tree, heavy tests, integrated patch registration, remote publication, PR state and final acceptance.",
+  "writablePacket": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/",
+  "nativeAcceptance": "OPEN",
+  "manifestUpdateDuringResearch": {
+    "effect": "Assignment/command unchanged; actual settings verified. Root added cross-area dependency records.",
+    "relevantContract": [
+      {
+        "contract": "Native session-durability service and binding",
+        "providerArea": "core",
+        "providerKey": "session-durability",
+        "consumers": [
+          "export",
+          "workspace-import",
+          "prototype-migration",
+          "schema-migrations"
+        ],
+        "status": "awaiting_source_backed_API"
+      },
+      {
+        "contract": "Supported Arc import format",
+        "providerArea": "research",
+        "providerKey": "arc-import-format",
+        "consumers": [
+          "arc-import"
+        ],
+        "status": "awaiting_evidence"
+      }
+    ]
+  }
+}

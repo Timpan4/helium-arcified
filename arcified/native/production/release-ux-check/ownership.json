@@ -1,0 +1,8 @@
+{
+  "issueKey": "release-ux-check",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/161",
+  "primaryCommandId": 40796,
+  "owner": "assigned primary",
+  "scope": "This packet only. Coordinator reconciles common source changes.",
+  "nativeAcceptance": "OPEN"
+}

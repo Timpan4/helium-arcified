@@ -1,0 +1,265 @@
+{
+  "license": "GPL-3.0-only",
+  "issueKey": "reference-windows-artifacts",
+  "scope": "Light local acquisition, static metadata, XML/JSON/Markdown and byte-identity checks only. No native acceptance.",
+  "commands": [
+    {
+      "command": "git branch --show-current",
+      "exitCode": 0,
+      "output": "feat/non-ai-research-production"
+    },
+    {
+      "command": "git rev-parse HEAD",
+      "exitCode": 0,
+      "output": "a4b6b480d3de07857ab6e939149254a8359e5449"
+    },
+    {
+      "command": "curl --fail --silent --show-error --location --output arcified/native/production/reference-windows-artifacts/ArcInstaller.exe https://releases.arc.net/windows/ArcInstaller.exe",
+      "exitCode": 0,
+      "result": "Small bootstrapper acquired without execution; size prechecked with HEAD."
+    },
+    {
+      "command": "curl --fail --silent --show-error --location --output arcified/native/production/reference-windows-artifacts/DiaInstaller.exe https://releases.diabrowser.com/windows/release/DiaInstaller.exe",
+      "exitCode": 0,
+      "result": "Small bootstrapper acquired without execution; size prechecked with HEAD."
+    },
+    {
+      "command": "curl --fail --silent --show-error --location --output arcified/native/production/reference-windows-artifacts/Arc.x64.appinstaller https://releases.arc.net/windows/Arc.appinstaller",
+      "exitCode": 0,
+      "result": "Original descriptor acquired."
+    },
+    {
+      "command": "curl --fail --silent --show-error --location --output arcified/native/production/reference-windows-artifacts/Arc.arm64.appinstaller https://releases.arc.net/windows/Arc.arm64.appinstaller",
+      "exitCode": 0,
+      "result": "Original descriptor acquired."
+    },
+    {
+      "command": "curl --fail --silent --show-error --location --output arcified/native/production/reference-windows-artifacts/Dia.x64.appinstaller https://releases.diabrowser.com/windows/release/Dia.x64.appinstaller",
+      "exitCode": 0,
+      "result": "Original descriptor acquired."
+    },
+    {
+      "command": "curl --fail --silent --show-error --location --output arcified/native/production/reference-windows-artifacts/Dia.arm64.appinstaller https://releases.diabrowser.com/windows/release/Dia.arm64.appinstaller",
+      "exitCode": 0,
+      "result": "Original descriptor acquired."
+    },
+    {
+      "command": "curl --fail --silent --show-error --location --output arcified/native/production/reference-windows-artifacts/arc-download.html --dump-header arcified/native/production/reference-windows-artifacts/arc-download.headers https://arc.net/download",
+      "exitCode": 0,
+      "result": "Official page downloaded and hashed. Required link read from returned prefix; fast_filesystem content response was truncated, so no complete HTML inspection claim. Raw HTTP headers excluded from retained packet."
+    },
+    {
+      "command": "curl --fail --silent --show-error --location --output arcified/native/production/reference-windows-artifacts/dia-windows.html --dump-header arcified/native/production/reference-windows-artifacts/dia-windows.headers https://www.diabrowser.com/windows",
+      "exitCode": 0,
+      "result": "Official page downloaded, hashed and completely read. Raw HTTP headers excluded from retained packet."
+    },
+    {
+      "command": "sha256sum --check source-bytes.sha256",
+      "cwd": "arcified/native/production/reference-windows-artifacts/",
+      "exitCode": 0,
+      "output": "ArcInstaller.exe: OK\nDiaInstaller.exe: OK\nArc.x64.appinstaller: OK\nArc.arm64.appinstaller: OK\nDia.x64.appinstaller: OK\nDia.arm64.appinstaller: OK\narc-download.html: OK\ndia-windows.html: OK\n",
+      "coverage": "Eight local source files only. Does not hash absent MSIX payloads or prove signatures."
+    },
+    {
+      "command": "xmllint --nonet --noout arcified/native/production/reference-windows-artifacts/Arc.x64.appinstaller arcified/native/production/reference-windows-artifacts/Arc.arm64.appinstaller arcified/native/production/reference-windows-artifacts/Dia.x64.appinstaller arcified/native/production/reference-windows-artifacts/Dia.arm64.appinstaller",
+      "exitCode": 0,
+      "result": "All four original XML descriptors well-formed; no external network access and no schema or signature validation."
+    },
+    {
+      "command": "file arcified/native/production/reference-windows-artifacts/ArcInstaller.exe arcified/native/production/reference-windows-artifacts/DiaInstaller.exe",
+      "exitCode": 0,
+      "result": "Both PE32 GUI i386 Mono/.NET, consistent with REA header identity. Managed architecture separately classified AnyCPU by REA."
+    },
+    {
+      "command": "strings --encoding=l arcified/native/production/reference-windows-artifacts/ArcInstaller.exe | rg 'https?://|appinstaller|\\\\.msix|windows/prod|FileVersion|ProductVersion'",
+      "exitCode": 0,
+      "coverage": "Static URL/literal leads only. No embedded content executed; no telemetry endpoint contacted."
+    },
+    {
+      "command": "strings --encoding=l arcified/native/production/reference-windows-artifacts/DiaInstaller.exe | rg 'https?://|appinstaller|\\\\.msix|windows/release|FileVersion|ProductVersion'",
+      "exitCode": 0,
+      "coverage": "Static URL/literal leads only. No embedded content executed; no telemetry endpoint contacted."
+    },
+    {
+      "command": "strings --encoding=l arcified/native/production/reference-windows-artifacts/ArcInstaller.exe | rg --after-context=1 'FileVersion|ProductVersion'",
+      "exitCode": 0,
+      "output": "FileVersion\n1.20.0.0\n--\nProductVersion\n1.20.0+9611f81d5ba4e9b80873b3982ef07464045e59ff\n"
+    },
+    {
+      "command": "strings --encoding=l arcified/native/production/reference-windows-artifacts/DiaInstaller.exe | rg --after-context=1 'FileVersion|ProductVersion'",
+      "exitCode": 0,
+      "output": "FileVersion\n1.30.0.0\n--\nProductVersion\n1.30.0+ecbda7c1f991d28b27e084a5a94f9fc9ddb46ae1\n"
+    },
+    {
+      "command": "command -v bun node prettier xmllint osslsigncode openssl",
+      "exitCode": 1,
+      "result": "bun, node, xmllint, openssl found. prettier and osslsigncode not found. No installation attempted."
+    },
+    {
+      "command": "git diff --no-index --check /dev/null arcified/native/production/reference-windows-artifacts/README.md",
+      "exitCode": 1,
+      "output": "",
+      "result": "New-file difference status with no whitespace diagnostics. Additional complete hosted-JS whitespace checks applied to authored files; this status is not reported as exit 0."
+    },
+    {
+      "command": "git status --short --untracked-files=all -- arcified/native/production/reference-windows-artifacts/",
+      "exitCode": 0,
+      "result": "Only packet paths listed for this scoped status. Does not audit other primaries' disjoint work; no staging/commit performed."
+    },
+    {
+      "command": "git check-ignore arcified/native/production/reference-windows-artifacts/ArcInstaller.exe arcified/native/production/reference-windows-artifacts/DiaInstaller.exe arcified/native/production/reference-windows-artifacts/arc-download.html arcified/native/production/reference-windows-artifacts/dia-windows.html",
+      "exitCode": 0,
+      "result": "All four original executable/HTML inputs are ignored; original files remain local."
+    },
+    {
+      "command": "git diff --check -- arcified/native/production/reference-windows-artifacts/",
+      "exitCode": 0,
+      "result": "No tracked whitespace diagnostics. New untracked authored files are covered by complete hosted-JS readback checks."
+    }
+  ],
+  "httpPackageChecks": [
+    {
+      "command": "curl --fail --silent --show-error --head --location https://releases.arc.net/windows/prod/1.129.0.288/Arc.x64.msix",
+      "exitCode": 0,
+      "observedHeaders": [
+        "HTTP/2 200 ",
+        "content-type: binary/octet-stream",
+        "content-length: 363558003",
+        "last-modified: Wed, 21 Oct 2026 21:06:35 GMT",
+        "etag: \"66a0bcd328c836f822ee85bab89b350a-44\""
+      ],
+      "reportedContentLength": 363558003,
+      "bodyRequested": false,
+      "url": "https://releases.arc.net/windows/prod/1.129.0.288/Arc.x64.msix",
+      "method": "HEAD",
+      "stdoutSelection": "HTTP status, Content-Length, Location, Last-Modified, Content-Type and ETag only; raw cookie headers omitted from saved evidence.",
+      "result": "PASS for route availability and reported size only.",
+      "executedCommand": "set -o pipefail\ncurl --fail --silent --show-error --head --location https://releases.arc.net/windows/prod/1.129.0.288/Arc.x64.msix | node -e 'process.stdin.setEncoding(\"utf8\"); let s=\"\"; process.stdin.on(\"data\", x=>s+=x); process.stdin.on(\"end\", ()=>process.stdout.write(s.split(/\\r?\\n/).filter(x=>/^(HTTP\\/|content-length:|location:|last-modified:|content-type:|etag:)/i.test(x)).join(\"\\n\")+\"\\n\"));'"
+    },
+    {
+      "command": "curl --fail --silent --show-error --head --location https://releases.arc.net/windows/prod/1.129.0.288/Arc.arm64.msix",
+      "exitCode": 0,
+      "observedHeaders": [
+        "HTTP/2 200 ",
+        "content-type: binary/octet-stream",
+        "content-length: 348172636",
+        "last-modified: Wed, 21 Oct 2026 21:05:16 GMT",
+        "etag: \"9a32f33220d1c48f2211128063f60d0b-42\""
+      ],
+      "reportedContentLength": 348172636,
+      "bodyRequested": false,
+      "url": "https://releases.arc.net/windows/prod/1.129.0.288/Arc.arm64.msix",
+      "method": "HEAD",
+      "stdoutSelection": "HTTP status, Content-Length, Location, Last-Modified, Content-Type and ETag only; raw cookie headers omitted from saved evidence.",
+      "result": "PASS for route availability and reported size only.",
+      "executedCommand": "set -o pipefail\ncurl --fail --silent --show-error --head --location https://releases.arc.net/windows/prod/1.129.0.288/Arc.arm64.msix | node -e 'process.stdin.setEncoding(\"utf8\"); let s=\"\"; process.stdin.on(\"data\", x=>s+=x); process.stdin.on(\"end\", ()=>process.stdout.write(s.split(/\\r?\\n/).filter(x=>/^(HTTP\\/|content-length:|location:|last-modified:|content-type:|etag:)/i.test(x)).join(\"\\n\")+\"\\n\"));'"
+    },
+    {
+      "command": "curl --fail --silent --show-error --head --location https://releases.diabrowser.com/windows/release/1.3.1.2/Dia.x64.msix",
+      "exitCode": 0,
+      "observedHeaders": [
+        "HTTP/2 200 ",
+        "content-type: application/msix",
+        "content-length: 894261660",
+        "last-modified: Fri, 23 Oct 2026 21:21:59 GMT"
+      ],
+      "reportedContentLength": 894261660,
+      "bodyRequested": false,
+      "url": "https://releases.diabrowser.com/windows/release/1.3.1.2/Dia.x64.msix",
+      "method": "HEAD",
+      "stdoutSelection": "HTTP status, Content-Length, Location, Last-Modified, Content-Type and ETag only; raw cookie headers omitted from saved evidence.",
+      "result": "PASS for route availability and reported size only.",
+      "executedCommand": "set -o pipefail\ncurl --fail --silent --show-error --head --location https://releases.diabrowser.com/windows/release/1.3.1.2/Dia.x64.msix | node -e 'process.stdin.setEncoding(\"utf8\"); let s=\"\"; process.stdin.on(\"data\", x=>s+=x); process.stdin.on(\"end\", ()=>process.stdout.write(s.split(/\\r?\\n/).filter(x=>/^(HTTP\\/|content-length:|location:|last-modified:|content-type:|etag:)/i.test(x)).join(\"\\n\")+\"\\n\"));'"
+    },
+    {
+      "command": "curl --fail --silent --show-error --head --location https://releases.diabrowser.com/windows/release/1.3.1.2/Dia.arm64.msix",
+      "exitCode": 0,
+      "observedHeaders": [
+        "HTTP/2 200 ",
+        "content-type: application/msix",
+        "content-length: 865976532",
+        "last-modified: Fri, 23 Oct 2026 22:33:44 GMT"
+      ],
+      "reportedContentLength": 865976532,
+      "bodyRequested": false,
+      "url": "https://releases.diabrowser.com/windows/release/1.3.1.2/Dia.arm64.msix",
+      "method": "HEAD",
+      "stdoutSelection": "HTTP status, Content-Length, Location, Last-Modified, Content-Type and ETag only; raw cookie headers omitted from saved evidence.",
+      "result": "PASS for route availability and reported size only.",
+      "executedCommand": "set -o pipefail\ncurl --fail --silent --show-error --head --location https://releases.diabrowser.com/windows/release/1.3.1.2/Dia.arm64.msix | node -e 'process.stdin.setEncoding(\"utf8\"); let s=\"\"; process.stdin.on(\"data\", x=>s+=x); process.stdin.on(\"end\", ()=>process.stdout.write(s.split(/\\r?\\n/).filter(x=>/^(HTTP\\/|content-length:|location:|last-modified:|content-type:|etag:)/i.test(x)).join(\"\\n\")+\"\\n\"));'"
+    }
+  ],
+  "reaCalls": [
+    {
+      "tool": "inspect_managed_artifact",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/ArcInstaller.exe",
+      "evidenceId": "ev_710f7267bb0cd7a0a615bc1821345586589758e7f0994dc1a05044b197bc0476",
+      "parentEvidenceId": "ev_3f024fd2705bd432f8ec3d7e11e39589feea7a0f62429c1a304b49b0e235cde5",
+      "result": "PASS within returned coverage and limitations",
+      "detail": "summary"
+    },
+    {
+      "tool": "inspect_managed_artifact",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/DiaInstaller.exe",
+      "evidenceId": "ev_ea254f31ef15cb74f299f3e8d14889d0fab29f3837029c45135a6da6d5dcc4ef",
+      "parentEvidenceId": "ev_4fe2f9ac382c30f5f020ac62d0cc8dcfb55942f18e856532254a51333eba9407",
+      "result": "PASS within returned coverage and limitations",
+      "detail": "summary"
+    },
+    {
+      "tool": "inspect_pe_resources",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/ArcInstaller.exe",
+      "evidenceId": "ev_b26257a1ff395a7ab546c12bdb6861ff524f49c8817732b53fca1a0cf41cf254",
+      "parentEvidenceId": null,
+      "result": "PASS within returned coverage and limitations",
+      "detail": null
+    },
+    {
+      "tool": "inspect_pe_resources",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/DiaInstaller.exe",
+      "evidenceId": "ev_eadfcf0efed68dae58198157d0d4efa91d63240886911c5cf3dba8cc46ecf38a",
+      "parentEvidenceId": null,
+      "result": "PASS within returned coverage and limitations",
+      "detail": null
+    }
+  ],
+  "hostedChecks": [
+    {
+      "operation": "fast_filesystem.fs_read_many, followed by JSON.parse(content) and JSON.stringify(parsed, null, 2) + '\\n' equality",
+      "result": "PASS for authority.json, acquisition.json and rea-evidence.json; final checks.json/result.json checked on readback"
+    },
+    {
+      "operation": "Complete authored text readback: trailing-space scan and final-newline assertion",
+      "result": "PASS for initial authored text; final files checked on readback"
+    },
+    {
+      "operation": "Join REA summary SHA-256, byte length, assembly version and MVID with acquisition.json bootstrapper rows",
+      "result": "PASS for both bootstrapper identities"
+    },
+    {
+      "operation": "Unique product/architecture tuples; every unacquired MSIX has acquired=false and sha256=null",
+      "result": "PASS for Arc x64, Arc ARM64, Dia x64, Dia ARM64"
+    },
+    {
+      "operation": "Resolve all relative README links using fast_filesystem.fs_stat_many",
+      "result": "PASS on final readback"
+    },
+    {
+      "operation": "Final fast_filesystem.fs_read_many checks.json/result.json; JSON parse/canonical-format/whitespace/nativeAcceptance assertions; required result fields and fs_stat_many of every evidencePath",
+      "result": "PASS; all evidence paths exist, all required fields present, nativeAcceptance OPEN."
+    }
+  ],
+  "formatting": {
+    "authoredJson": "Canonical JSON.stringify indentation and newline, checked against complete readback.",
+    "markdown": "Locally checked headings, table structure, trailing whitespace, final newline and relative links. No repository Markdown formatter/linter declared in inspected configuration; no formatter dependency added.",
+    "thirdPartyDescriptors": "Original bytes unchanged. XML syntax checked with xmllint."
+  },
+  "notRun": [
+    "Full MSIX acquisition/hash/inventory/extraction",
+    "Authenticode/MSIX signing, timestamp/revocation/trust validation",
+    "Windows installation or reference-app/runtime/visual/account checks",
+    "Native setup/preparation/build/test, benchmarks, remote CI",
+    "No prepared-source patch/test registration applies to this research-only leaf"
+  ],
+  "nativeAcceptance": "OPEN"
+}

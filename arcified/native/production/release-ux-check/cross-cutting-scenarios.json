@@ -1,0 +1,726 @@
+{
+  "issueKey": "release-ux-check",
+  "nativeAcceptance": "OPEN",
+  "purpose": "Test obligations and oracles, not execution or new product policy.",
+  "cases": [
+    {
+      "id": "native-host",
+      "issues": [
+        "spaces",
+        "profiles",
+        "window-ownership",
+        "blank-window",
+        "space-themes",
+        "favorites"
+      ],
+      "applies": "All surfaces that switch or present Space/Profile content.",
+      "steps": [
+        "Use separate synthetic regular Profiles with the same fixture origin and Spaces sharing a Profile.",
+        "Record the actual native top-level identity continuously while switching Profiles in one window, including hidden/unmapped browser windows.",
+        "Navigate, invoke chrome and Profile services, present empty attachments and empty contexts."
+      ],
+      "oracle": "Same native top-level survives without a backing/replacement browser window. Real BrowserContext, toolbar, command receiver and session owner match the presented Profile; shared-Profile services are shared and distinct-Profile storage is isolated. Empty contexts retain the host and disable page actions. Logical Model selection is insufficient.",
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        }
+      }
+    },
+    {
+      "id": "saved-page-handoff",
+      "issues": [
+        "tab-handoff",
+        "spaces",
+        "pins",
+        "favorites",
+        "window-ownership",
+        "profile-safety"
+      ],
+      "applies": "Selection of an already-live saved item, including aliases.",
+      "steps": [
+        "Give a saved live page synthetic form text, a document marker, history, scroll state and navigation distinct from its saved destination.",
+        "Select it from another attached host, including last-tab source and an initially different-Profile destination presentation.",
+        "Exercise stale destination, insertion cancellation/failure and source/destination closing using a later authorized native fixture."
+      ],
+      "oracle": "Retain actual TabModel/WebContents/controller/document identity, immutable Profile and PageId. Preserve source navigation/form/history/activity and local temporary tabs; prune old split references. Failure retains real ownership and exposes refusal, without fabricated rollback, duplicates, reload or source removal.",
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        }
+      }
+    },
+    {
+      "id": "outbound-link",
+      "issues": [
+        "pins",
+        "spaces",
+        "temporary-tabs",
+        "air-traffic",
+        "peek",
+        "profile-safety"
+      ],
+      "applies": "Approved saved-page outbound link route.",
+      "steps": [
+        "Follow a browser-classified outbound link from a saved live page after navigation and after handoff.",
+        "Exercise stale source/document/attachment, failed branch creation, unknown or same-site classifications, redirects, scripts and typed input."
+      ],
+      "oracle": "Only the approved native link route creates a fresh temporary in the source's current attachment and exact Profile after real success. Retain the saved original. Native security/opener rules and classifier remain authoritative. Unsupported routes remain unavailable; refusals do not invent a fallback policy.",
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        }
+      }
+    },
+    {
+      "id": "focus-command-targets",
+      "issues": [
+        "focus-routing-contract",
+        "command-bar",
+        "find",
+        "site-controls",
+        "security-surfaces",
+        "credentials-flow",
+        "split-actions",
+        "peek"
+      ],
+      "applies": "Every active page, split, Peek, chrome reveal, modal and fullscreen transition.",
+      "steps": [
+        "Keep workspace selection distinct from the active page surface.",
+        "Enter and leave each surface by keyboard and pointer, open/close modal and fullscreen surfaces, then close the active surface.",
+        "Invoke address/reload/find/zoom/security/credential commands and separately move/keep/archive commands; include queued callbacks during Space switches."
+      ],
+      "oracle": "Page commands address the actual active page and immutable Profile; organization commands address the selected workspace object. Visible and accessible focus cues agree. Pending dialogs/callbacks retain originating owner. Exact return-focus choices await issue #44 decisions; do not create them here.",
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        }
+      }
+    },
+    {
+      "id": "accessibility",
+      "issues": [
+        "accessibility",
+        "sidebar-layout",
+        "tab-layout-choice",
+        "folders",
+        "pins",
+        "favorites",
+        "motion",
+        "window-chrome"
+      ],
+      "applies": "Each rendered control, menu, list, dialog, pane and active-state indicator affected by a feature.",
+      "steps": [
+        "Inspect native AX roles/names/states/relations and traversal with the platform's declared assistive technology.",
+        "Exercise focus, selection, expand/collapse, changes, errors and handoff announcements using keyboard-only navigation.",
+        "Exercise system contrast, enlarged text and reduced motion; observe focus during asynchronous updates."
+      ],
+      "oracle": "Native assistive output describes current ownership/action/state, exposes errors and active focus, and reaches the control without pointer input. Pure sidebar AX projections do not establish native nodes/events. Record actual technology/version and unavailable combinations.",
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        }
+      }
+    },
+    {
+      "id": "keyboard",
+      "issues": [
+        "shortcut-settings",
+        "tab-order-navigation",
+        "tab-switcher",
+        "command-bar",
+        "split-actions",
+        "window-chrome"
+      ],
+      "applies": "Every affected interactive surface.",
+      "steps": [
+        "Invoke each feature through native shortcut/menu and pointer routes.",
+        "Traverse entry, command execution, cancellation and exit while a different workspace object remains selected.",
+        "Change the declared keyboard layout and exercise shortcut conflicts under the owning settings contract."
+      ],
+      "oracle": "Native routes converge on the same explicit owner, respect OS-reserved bindings and expose focus. No stale accelerator applies to another page/Profile. An absent binding remains open.",
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        }
+      }
+    },
+    {
+      "id": "ime-localization",
+      "issues": [
+        "ime-localization",
+        "command-bar",
+        "find",
+        "space-management",
+        "folders",
+        "notes",
+        "snippets"
+      ],
+      "applies": "Every editable command, name, find, note or snippet surface actually present.",
+      "steps": [
+        "Use the declared OS IME to begin, update, cancel and commit composition.",
+        "Exercise Enter/Escape/shortcuts during composition, selection edits and a surface/Space switch.",
+        "Exercise RTL direction, mixed script text and localized labels through the rendered/native surface."
+      ],
+      "oracle": "Composition input does not execute navigation or commands before the native composition contract permits. Text and selection survive supported edits, targeting stays correct and labels are accessible. Exact IME/locale/hardware support remains to be declared.",
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        }
+      }
+    },
+    {
+      "id": "touch-pointer",
+      "issues": [
+        "gesture-navigation",
+        "sidebar-layout",
+        "tab-layout-choice",
+        "multi-select",
+        "split-actions",
+        "region-capture"
+      ],
+      "applies": "Pointer, touch, trackpad, drag and resize interactions exposed by each feature.",
+      "steps": [
+        "Use declared touch/trackpad/pointer hardware for selection, reveal, scroll, drag, pane resize and gesture cancellation.",
+        "Exercise gestures while IME, modal UI or a protected live page owns input."
+      ],
+      "oracle": "The intended object receives the action, cancellation preserves state and gesture handling does not bypass protected-work or native navigation guards. Missing hardware is UNAVAILABLE, not a pass or a proven product exclusion.",
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        }
+      }
+    },
+    {
+      "id": "restart",
+      "issues": [
+        "session-durability",
+        "schema-migrations",
+        "split-persistence",
+        "space-management",
+        "settings",
+        "pins",
+        "folders",
+        "workspace-operation-journal"
+      ],
+      "applies": "Each durable feature store and its native-session join.",
+      "steps": [
+        "Record saved identities, order, selection, aliases, layout/settings and source schema under synthetic test data.",
+        "Restart the installed candidate through its real Profile/session path.",
+        "Compare durable state, native session joins and intended host grouping, including absent/unavailable Profile or skipped native restore record."
+      ],
+      "oracle": "Preserve canonical metadata/codec and native navigation-history authority, with no duplicated saved page or accidental Profile windows. Reconstructed state is distinct from uninterrupted renderer state. Temporary/private/guest restore policy remains open where not approved.",
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        }
+      }
+    },
+    {
+      "id": "interrupted-write",
+      "issues": [
+        "session-durability",
+        "schema-migrations",
+        "workspace-operation-journal",
+        "workspace-import",
+        "export",
+        "tab-handoff"
+      ],
+      "applies": "Mutation, import/migration, handoff or settings operations with persistent writes.",
+      "steps": [
+        "Use the later authorized native fault seam to interrupt actual write/stage/commit and restart.",
+        "Exercise corrupt/unsupported schema, stale admission and source/target failure while preserving fixture originals."
+      ],
+      "oracle": "Reject invalid/stale data before commit, preserve prior readable data/originals and expose recovery failure without partial success. Existing pure admission tests prove no actual disk durability. Do not select a new codec, source disposition or destructive recovery policy.",
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        }
+      }
+    },
+    {
+      "id": "protected-work",
+      "issues": [
+        "profile-safety",
+        "manual-cleanup",
+        "auto-archive",
+        "archive",
+        "bulk-close",
+        "undo-windows",
+        "window-ownership",
+        "pins"
+      ],
+      "applies": "Close, reset, cleanup, migration and other operations that could lose live work.",
+      "steps": [
+        "Use unsaved fixture forms, active capture/call/modal UI, protected and unknown activity.",
+        "Request each destructive action, cancel native before-unload and exercise renderer crash/Profile shutdown.",
+        "Inspect saved references, source page/owner and presented refusal."
+      ],
+      "oracle": "Preserve native before-unload/discard and shared lifecycle guards. Unknown/protected work does not become safe through a model result. No unapproved cleanup, confirmation override, source deletion or restoration promise is introduced. Decisions remain owned by #24 and affected issues.",
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        }
+      }
+    },
+    {
+      "id": "async-failure",
+      "issues": [
+        "spaces",
+        "tab-handoff",
+        "window-ownership",
+        "crashed-tab",
+        "profile-safety",
+        "peek",
+        "pip"
+      ],
+      "applies": "Every feature with asynchronous native creation, transfer, shutdown or callback completion.",
+      "steps": [
+        "Exercise native operation failure/cancellation, renderer loss, Profile shutdown, closing owners and stale completion after another selection.",
+        "Observe source/destination ownership and user-visible error after the failure."
+      ],
+      "oracle": "Do not publish success before native completion. Retain/reconcile authoritative objects and invalidate stale bindings; callbacks do not retarget through current selection. No fake host/store/service can close the native result.",
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        }
+      }
+    },
+    {
+      "id": "private-download-boundary",
+      "issues": [
+        "private-browsing",
+        "downloads",
+        "recent-files",
+        "library",
+        "library-file-removal",
+        "history-controls",
+        "capture",
+        "region-capture",
+        "share-quote"
+      ],
+      "applies": "Features exposing page, history, capture, clipboard or file content.",
+      "steps": [
+        "Exercise synthetic regular and private/guest contexts through the shared classifier and actual native operation boundary.",
+        "Use download states, explicit saved-file exceptions, missing files, cancellation and file/reference removal separately.",
+        "Inspect all resulting native lists, persistence and permitted outputs."
+      ],
+      "oracle": "Use canonical private/download classifiers and approved saved-file exceptions. No accidental cross-Profile/private listing or persistence; file deletion and reference removal remain distinct. Preserve originals and unresolved destructive choices.",
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        }
+      }
+    },
+    {
+      "id": "optional-disabled",
+      "issues": [
+        "boost-style",
+        "boost-zap",
+        "boost-code",
+        "easel",
+        "live-capture",
+        "notes",
+        "share-folders",
+        "live-folders",
+        "calendar",
+        "easel-drawing",
+        "shared-board",
+        "boost-sharing",
+        "board-export",
+        "hosted-sharing",
+        "snippets",
+        "local-ocr",
+        "board-sharing"
+      ],
+      "applies": "Every optional capability row identified in feature matrices.",
+      "steps": [
+        "Record the owner-approved scope or visible deferral before enabling any integration.",
+        "Verify core browsing with the feature unavailable and disabled, including restart and absence of accounts/providers.",
+        "Inspect menus/settings/onboarding so a deferred or unsupported capability has its explicit disposition."
+      ],
+      "oracle": "Core remains usable locally without AI, sync or required account; unavailable routes are visibly unavailable. Missing feature implementation never passes because a package installs. Recommended scope is not owner approval.",
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        }
+      }
+    },
+    {
+      "id": "optional-authorized-enabled",
+      "issues": [
+        "boost-style",
+        "boost-zap",
+        "boost-code",
+        "easel",
+        "live-capture",
+        "notes",
+        "share-folders",
+        "live-folders",
+        "calendar",
+        "easel-drawing",
+        "shared-board",
+        "boost-sharing",
+        "board-export",
+        "hosted-sharing",
+        "snippets",
+        "local-ocr",
+        "board-sharing"
+      ],
+      "applies": "An accepted optional feature, only after its native implementation and required service/account authorization exist.",
+      "steps": [
+        "Exercise the issue's enabled workflow with authorized synthetic/public data and approved provider scopes.",
+        "Disable or revoke it and exercise offline/stale/denied/failure states and restart.",
+        "Record what local data remains under the actual owning policy and prove cross-Profile separation."
+      ],
+      "oracle": "Enablement cannot broaden capabilities or silently discover accounts. Disabled/revoked state blocks new access, stale state is visible and local fallback remains available. No guessed polling, retention, provider or service policy. Unapproved enablement remains blocked.",
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        }
+      }
+    },
+    {
+      "id": "installed-candidate",
+      "issues": [
+        "release-linux",
+        "release-windows",
+        "release-macos",
+        "engine-updates"
+      ],
+      "applies": "Each declared installed release candidate on its own OS.",
+      "steps": [
+        "Obtain the release owner's package digest, source/patch/build/test provenance, OS/architecture support and installation record.",
+        "Run the per-feature native UX scenarios against that exact installed executable and optional-feature configuration.",
+        "Join each passing scenario to the release manifest; retain failures and unsupported combinations."
+      ],
+      "oracle": "Source prepared, component passed, package built, installed, UX tested and released are separate facts. Packaging cannot substitute for native functionality. Signing/trust prompts are retained and credentials are excluded from evidence.",
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "support": "UNDECLARED",
+          "limitation": "Runtime/visual execution not authorized; no installed candidate scenario artifact supplied."
+        }
+      }
+    }
+  ],
+  "requiredCoverage": [
+    "accessibility",
+    "touch",
+    "keyboard",
+    "IME",
+    "restart",
+    "failure",
+    "data-loss"
+  ],
+  "applicabilityRule": "For each affected native surface, join its issue criteria to every applicable cross-cutting case. Unclear applicability stays OPEN; only the owning issue/accepted scope can justify N/A.",
+  "runEvidenceFields": [
+    "scenarioId",
+    "issueKey",
+    "OS version",
+    "architecture",
+    "Linux display backend/compositor or native window system",
+    "hardware/input device",
+    "assistive technology and version",
+    "IME/locale/keyboard layout",
+    "candidate package/executable SHA-256",
+    "source revision",
+    "downstream patch hashes and order",
+    "registered native test target/filter and result when applicable",
+    "optional feature state and approved scope",
+    "steps",
+    "expected and observed results",
+    "native object/owner trace",
+    "visual/AX artifact identity",
+    "data before/after",
+    "failure/cancellation outcome",
+    "tester/run date",
+    "evidence SHA-256",
+    "unavailable reason"
+  ]
+}

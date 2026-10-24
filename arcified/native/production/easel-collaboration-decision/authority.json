@@ -1,0 +1,68 @@
+{
+  "issueKey": "easel-collaboration-decision",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/30",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "recordedAtUtc": "2026-10-23 22:29:28 UTC",
+  "authoritativeIssue": {
+    "key": "easel-collaboration-decision",
+    "title": "Decide whether live board collaboration belongs in scope",
+    "area": "research",
+    "build": "Record that local boards and shared snapshots do not implement historical live collaboration/presence.",
+    "accept": [
+      "Describe live presence/editable-shared-board workflow and separate it from snapshot sharing.",
+      "Recommend deferral until a concrete user need, service owner and access/retention model exist.",
+      "Record the owner's choice and migration/local-export fallback without implying snapshot parity."
+    ],
+    "blocked": [],
+    "sources": [
+      "arc-easels"
+    ],
+    "sourceUrls": [
+      "https://resources.arc.net/hc/en-us/articles/19231142050071-Easels-Capture-Create",
+      "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes"
+    ],
+    "kind": "decision",
+    "phase": "Evidence, decisions and gates",
+    "disposition": "Historical/retired reference. Recommended replacement or decision, not current runtime parity.",
+    "referencePlatforms": "Arc feature evidence is macOS-heavy or macOS-only as recorded in the dossier. Windows parity is not assumed; Linux is a downstream design target.",
+    "referenceNote": "The linked reference documents/release histories describe this workflow family. Acceptance below specifies the intended improved Arcified behavior.",
+    "openQuestions": "The fork owner records the named scope/security/service decision before implementation or external access.",
+    "readiness": "Publish as an owner decision, not an automatically accepted implementation.",
+    "priority": "Before AI",
+    "number": 30,
+    "url": "https://github.com/Timpan4/helium-arcified/issues/30",
+    "primaryCommandId": 40735
+  },
+  "rootControls": {
+    "manifestPath": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+    "lifecycleContractPath": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md",
+    "nativeIntegrationPath": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md",
+    "executionStatePath": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json",
+    "preparedSourceAccess": "read_only",
+    "nativeAcceptance": "OPEN",
+    "primaryCommandId": 40735
+  },
+  "ownerChoice": {
+    "status": "PENDING",
+    "choice": null,
+    "reason": "No collaboration-specific owner choice is recorded in the assigned issue object, lifecycle authority, root manifest or execution-state ownerDecisions.",
+    "existingLocalFirstAuthority": "No cross-device sync, mandatory browser account or AI dependency. No provider access is introduced.",
+    "rootOwnerDecisionsRead": [
+      "Saved Space tabs shared across windows; temporary tabs window-local.",
+      "Selecting a live saved page brings that same page here with state preserved.",
+      "Cross-Profile Space switching stays in the same actual native window, preserving isolation.",
+      "One Profile per Space; multiple Spaces may share a Profile. Sign-ins, site settings and Favorites are Profile-scoped. Themes are Space-scoped.",
+      "Outbound saved-page links open a temporary branch.",
+      "Tiny synthetic performance-fixture browser checks approved.",
+      "One-minute Counter-Strike cs2 checks; stop every other T3 thread when detected, resume only on explicit owner resume.",
+      "Owner explicitly resumed non-AI implementation at 2026-10-23 21:30 UTC; game guard disabled, interruption ledger preserved.",
+      "2026-10-23 21:33 UTC: all non-AI issues merged and working with good UX is the target; manage/settle/create threads as needed. Heavy CPU work authorized in root only.",
+      "Owner approved GitHub CLI workflow-scope refresh and Computer Use for its approval. CLI refresh is pending device authorization after native portal input failed.",
+      "Owner explicitly requested backlog-wide parallel threads at the earlier large scale for all remaining non-AI issues.11 isolated coordinators and131 GPT-6.1 High primaries started; root retains4 items and all heavy work."
+    ],
+    "rootOpenDecisionsRead": [
+      "Activity protection, automatic cleanup, destructive-action and populated cross-Profile migration policies remain open."
+    ]
+  },
+  "dependencies": []
+}

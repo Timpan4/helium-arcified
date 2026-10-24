@@ -1,0 +1,100 @@
+{
+  "status": "PASS_DOCUMENTARY_ONLY",
+  "license": "GPL-3.0-only",
+  "scope": "Documentary packet and read-only prepared-source identity only.",
+  "commands": [
+    {
+      "command": "sha256sum /home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json /home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json /home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md /home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md /home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json /home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser_window/public/browser_window_interface.h /home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/notifications/notification_display_service.h /home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/components/os_crypt/async/browser/os_crypt_async.h",
+      "exitCode": 0,
+      "outcome": "Sampled exact authority/native-source byte identities.",
+      "output": "cc8ec03443b18a749b486e484a56b86218d8f41653970dea94185f76c9685354  /home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json\ndaf98f1cf993c1a21686289a88489bf001266d7fff4d85089d30055584c8a7b0  /home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json\n244488864d15d093f7f80e1cc40f490a979454e2a8e74db438c7e51283518a1c  /home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md\ne5951ba265be3587cb1df8f2ab73ce6768071ac55b8d481240ed57819b39ab56  /home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md\ndae2aed7885b1f03f5f96a1285265a1189b8776a6472880c0f12c94de7f7ad02  /home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json\n97dc7e368b29bd43bb0ce24bcbc2b9795b842bbdeb68aa58a2cfc85e20024c4a  /home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser_window/public/browser_window_interface.h\nf66ee8520890c906d9e762a52881e30d0e58ab8aa809109fdfaae3edf69d5fb5  /home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/notifications/notification_display_service.h\nc6a2f30a9306a37febbf5a9646638d8976a49977db19258f5da9f5e70cb4121f  /home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/components/os_crypt/async/browser/os_crypt_async.h\n"
+    },
+    {
+      "command": "jq -e 'type == \"object\"' /home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/authority.json /home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/sources.json /home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/checks.json /home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/result.json",
+      "exitCode": 0,
+      "outcome": "PASS, every input is a JSON object.",
+      "output": "true\ntrue\ntrue\ntrue\n"
+    },
+    {
+      "command": "git diff --no-index --check /dev/null /home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/ownership.json",
+      "exitCode": 1,
+      "outcome": "No whitespace diagnostics. Exit 1 reports the nonempty /dev/null comparison; hosted validation also found no whitespace errors.",
+      "output": ""
+    },
+    {
+      "command": "git diff --no-index --check /dev/null /home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/authority.json",
+      "exitCode": 1,
+      "outcome": "No whitespace diagnostics. Exit 1 reports the nonempty /dev/null comparison; hosted validation also found no whitespace errors.",
+      "output": ""
+    },
+    {
+      "command": "git diff --no-index --check /dev/null /home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/sources.json",
+      "exitCode": 1,
+      "outcome": "No whitespace diagnostics. Exit 1 reports the nonempty /dev/null comparison; hosted validation also found no whitespace errors.",
+      "output": ""
+    },
+    {
+      "command": "git diff --no-index --check /dev/null /home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/decision.md",
+      "exitCode": 1,
+      "outcome": "No whitespace diagnostics. Exit 1 reports the nonempty /dev/null comparison; hosted validation also found no whitespace errors.",
+      "output": ""
+    },
+    {
+      "command": "git diff --no-index --check /dev/null /home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/verification.md",
+      "exitCode": 1,
+      "outcome": "No whitespace diagnostics. Exit 1 reports the nonempty /dev/null comparison; hosted validation also found no whitespace errors.",
+      "output": ""
+    },
+    {
+      "command": "git diff --no-index --check /dev/null /home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/checks.json",
+      "exitCode": 1,
+      "outcome": "No whitespace diagnostics. Exit 1 reports the nonempty /dev/null comparison; hosted validation also found no whitespace errors.",
+      "output": ""
+    },
+    {
+      "command": "git diff --no-index --check /dev/null /home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/result.json",
+      "exitCode": 1,
+      "outcome": "No whitespace diagnostics. Exit 1 reports the nonempty /dev/null comparison; hosted validation also found no whitespace errors.",
+      "output": ""
+    },
+    {
+      "command": "sha256sum /home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser_window/public/browser_window_interface.h /home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/notifications/notification_display_service.h /home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/components/os_crypt/async/browser/os_crypt_async.h",
+      "exitCode": 0,
+      "outcome": "PASS, all inspected prepared headers match the earlier base identities.",
+      "output": "97dc7e368b29bd43bb0ce24bcbc2b9795b842bbdeb68aa58a2cfc85e20024c4a  /home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser_window/public/browser_window_interface.h\nf66ee8520890c906d9e762a52881e30d0e58ab8aa809109fdfaae3edf69d5fb5  /home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/notifications/notification_display_service.h\nc6a2f30a9306a37febbf5a9646638d8976a49977db19258f5da9f5e70cb4121f  /home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/components/os_crypt/async/browser/os_crypt_async.h\n"
+    },
+    {
+      "command": "git rev-parse HEAD",
+      "exitCode": 0,
+      "outcome": "PASS, coordinator HEAD equals assigned baseline.",
+      "output": "a4b6b480d3de07857ab6e939149254a8359e5449\n"
+    }
+  ],
+  "hostedValidation": {
+    "inputTool": "fast_filesystem.fs_read_many",
+    "paths": [
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/ownership.json",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/authority.json",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/sources.json",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/decision.md",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/verification.md",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/checks.json",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/result.json"
+    ],
+    "command": "verifyPacket(files)",
+    "functionSource": "function verifyPacket(files) {\n  const byName = Object.fromEntries(files.map(f => [f.path.split(\"/\").pop(), f]));\n  const failures = [];\n  const require = (ok, message) => { if (!ok) failures.push(message); };\n  for (const [name, file] of Object.entries(byName)) {\n    require(!file.error && !file.truncated && typeof file.content === \"string\", name + \": complete read\");\n    if (typeof file.content !== \"string\") continue;\n    require(file.content.endsWith(\"\\n\"), name + \": final newline\");\n    require(!/[ \\t]+\\r?$/m.test(file.content), name + \": trailing whitespace\");\n    if (name.endsWith(\".json\")) {\n      const value = JSON.parse(file.content);\n      require(file.content === JSON.stringify(value, null, 2) + \"\\n\", name + \": canonical two-space JSON\");\n    }\n    if (name.endsWith(\".md\")) {\n      for (const match of file.content.matchAll(/\\]\\(([^)]+)\\)/g)) {\n        const target = match[1];\n        if (!/^[a-z]+:/.test(target)) require(!!byName[target.split(\"#\")[0]], name + \": local link \" + target);\n      }\n    }\n  }\n  const authority = JSON.parse(byName[\"authority.json\"].content);\n  const result = JSON.parse(byName[\"result.json\"].content);\n  const sources = JSON.parse(byName[\"sources.json\"].content);\n  require(authority.issue.key === \"integration-policy\" && authority.issue.number === 26, \"assigned issue identity\");\n  require(authority.issue.primaryCommandId === 40751, \"reserved command identity\");\n  require(result.baseline === authority.baseline, \"baseline identity\");\n  require(result.issueKey === authority.issue.key && result.issueUrl === authority.issue.url, \"result issue identity\");\n  require(result.nativeAcceptance === \"OPEN\" && authority.nativeAcceptance === \"OPEN\", \"native acceptance open\");\n  require(authority.ownerApproval.status === \"NOT_RECORDED_IN_READ_AUTHORITY\", \"no invented approval\");\n  require(result.dependencies.length === authority.issue.blocked.length, \"declared dependency parity\");\n  require(result.remainingCriteria.length === authority.issue.accept.length, \"every criterion retains explicit open state\");\n  require(Object.values(result.platformStates).every(x => x === \"OPEN_UNRUN\"), \"all target platforms unrun\");\n  require(result.evidencePaths.every(x => !!byName[x]), \"all evidence paths exist\");\n  require(sources.localFiles.every(x => /^[0-9a-f]{64}$/.test(x.sha256)), \"source identities are SHA-256\");\n  require(sources.localFiles.filter(x => x.role === \"read-only native source\").every(x => x.resultSha256 === x.sha256), \"native base/result equality\");\n  if (failures.length) throw new Error(failures.join(\"\\n\"));\n  return { status: \"PASS\", coverage: \"JSON syntax/format, final newlines, whitespace, local links, issue/baseline/command identity, all acceptance criteria, evidence paths, source identity format and OPEN native states\" };\n}",
+    "result": {
+      "status": "PASS",
+      "coverage": "JSON syntax/format, final newlines, whitespace, local links, issue/baseline/command identity, all acceptance criteria, evidence paths, source identity format and OPEN native states"
+    }
+  },
+  "preparedIdentityValidation": {
+    "status": "PASS",
+    "coverage": "Every inspected prepared native header has identical base/result SHA-256."
+  },
+  "limitations": [
+    "No app/runtime, account, native build/test, visual, benchmark or remote CI evidence.",
+    "No configured or installed Markdown formatter/linter was found; Markdown received focused whitespace and link validation. JSON was checked against canonical two-space JSON.stringify output.",
+    "All native acceptance remains OPEN. This validation is not an independent review."
+  ]
+}

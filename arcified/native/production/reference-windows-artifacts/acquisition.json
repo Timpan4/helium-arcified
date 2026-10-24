@@ -1,0 +1,253 @@
+{
+  "license": "GPL-3.0-only",
+  "issueKey": "reference-windows-artifacts",
+  "retrievedAtUtc": "2026-10-23",
+  "retrievalWindow": "2026-10-23T22:31:32Z through 2026-10-23T22:34:44Z",
+  "localCalendarDate": "2026-10-24 Europe/Stockholm",
+  "host": "Linux; no Windows test host or account accessed",
+  "bootstrapperRows": [
+    {
+      "product": "Arc",
+      "file": "ArcInstaller.exe",
+      "sourcePage": "https://arc.net/download",
+      "url": "https://releases.arc.net/windows/ArcInstaller.exe",
+      "bytes": 2002840,
+      "sha256": "971bc17eae07151311a9ef3fab3c9bb67cdbeb4702ceb6eb0285b4d0b9a10b16",
+      "assemblyVersion": "1.20.0.0",
+      "productVersionLiteral": "1.20.0+9611f81d5ba4e9b80873b3982ef07464045e59ff",
+      "moduleMvid": "38c24c15-0c13-4b1c-bbe2-aa1dc4e58514",
+      "packageType": "PE32 .NET Framework installer bootstrapper, not browser MSIX",
+      "peMachine": "0x014c (x86)",
+      "managedArchitecture": "anycpu",
+      "targetFramework": ".NETFramework,Version=v4.8.1",
+      "acquired": true,
+      "executed": false,
+      "sha256RecordedBeforeReaInspection": true,
+      "versionProvenance": "Assembly version from REA identity parsing; file/product literals from native strings. Versions were not known before the initial identity inspection and are not browser package versions.",
+      "reaManagedSummary": "ev_710f7267bb0cd7a0a615bc1821345586589758e7f0994dc1a05044b197bc0476",
+      "reaManagedParent": "ev_3f024fd2705bd432f8ec3d7e11e39589feea7a0f62429c1a304b49b0e235cde5",
+      "reaPeResources": "ev_b26257a1ff395a7ab546c12bdb6861ff524f49c8817732b53fca1a0cf41cf254",
+      "signatureStatus": "UNVERIFIED. Managed strong-name absence is not an Authenticode result.",
+      "publication": "Original local executable is ignored by this packet's .gitignore. Authored evidence is separately publishable."
+    },
+    {
+      "product": "Dia",
+      "file": "DiaInstaller.exe",
+      "sourcePage": "https://www.diabrowser.com/windows",
+      "url": "https://releases.diabrowser.com/windows/release/DiaInstaller.exe",
+      "bytes": 2011032,
+      "sha256": "b868db670fe0c179f63c991602d4e187824bc656af17bc6684bca35df3355e3d",
+      "assemblyVersion": "1.30.0.0",
+      "productVersionLiteral": "1.30.0+ecbda7c1f991d28b27e084a5a94f9fc9ddb46ae1",
+      "moduleMvid": "a8f30ca4-2472-4a7d-9820-0ffebaf3dd62",
+      "packageType": "PE32 .NET Framework installer bootstrapper, not browser MSIX",
+      "peMachine": "0x014c (x86)",
+      "managedArchitecture": "anycpu",
+      "targetFramework": ".NETFramework,Version=v4.8.1",
+      "acquired": true,
+      "executed": false,
+      "sha256RecordedBeforeReaInspection": true,
+      "versionProvenance": "Assembly version from REA identity parsing; file/product literals from native strings. Versions were not known before the initial identity inspection and are not browser package versions.",
+      "reaManagedSummary": "ev_ea254f31ef15cb74f299f3e8d14889d0fab29f3837029c45135a6da6d5dcc4ef",
+      "reaManagedParent": "ev_4fe2f9ac382c30f5f020ac62d0cc8dcfb55942f18e856532254a51333eba9407",
+      "reaPeResources": "ev_eadfcf0efed68dae58198157d0d4efa91d63240886911c5cf3dba8cc46ecf38a",
+      "signatureStatus": "UNVERIFIED. Managed strong-name absence is not an Authenticode result.",
+      "publication": "Original local executable is ignored by this packet's .gitignore. Authored evidence is separately publishable."
+    }
+  ],
+  "packages": [
+    {
+      "product": "Arc",
+      "architecture": "x64",
+      "version": "1.129.0.288",
+      "versionScope": "MainPackage version, no separately established browser build number",
+      "packageType": "MSIX",
+      "url": "https://releases.arc.net/windows/prod/1.129.0.288/Arc.x64.msix",
+      "packageName": "TheBrowserCompany.Arc",
+      "publisherClaim": "E=hello@thebrowser.company, CN=THE BROWSER COMPANY OF NEW YORK INC., O=THE BROWSER COMPANY OF NEW YORK INC., STREET=295 LAFAYETTE STREET, L=New York, S=New York, C=US, OID.1.3.6.1.4.1.311.60.2.1.2=Delaware, OID.1.3.6.1.4.1.311.60.2.1.3=US, SERIALNUMBER=7571542, OID.2.5.4.15=Private Organization",
+      "manifest": {
+        "file": "Arc.x64.appinstaller",
+        "url": "https://releases.arc.net/windows/Arc.appinstaller",
+        "sha256": "8c7e4d5556c502462add16bd90a61668200f21a8d137a38a75403980f1f78d89",
+        "bytes": 1170,
+        "originalLineEndings": "CRLF",
+        "checksumScope": "Descriptor only, not the MSIX"
+      },
+      "httpHead": {
+        "command": "curl --fail --silent --show-error --head --location https://releases.arc.net/windows/prod/1.129.0.288/Arc.x64.msix",
+        "exitCode": 0,
+        "observedHeaders": [
+          "HTTP/2 200 ",
+          "content-type: binary/octet-stream",
+          "content-length: 363558003",
+          "last-modified: Wed, 21 Oct 2026 21:06:35 GMT",
+          "etag: \"66a0bcd328c836f822ee85bab89b350a-44\""
+        ],
+        "reportedContentLength": 363558003,
+        "bodyRequested": false
+      },
+      "acquired": false,
+      "sha256": null,
+      "sha256Reason": "Full MSIX body was not downloaded. Descriptor has no package SHA-256. HEAD length/ETag is not a content hash.",
+      "signatureStatus": "UNVERIFIED",
+      "extractionStatus": "NOT_RUN",
+      "runtimeStatus": "NOT_RUN",
+      "dependencyDescriptor": "Microsoft.VCLibs.140.00.UWPDesktop 14.0.33728.0, same architecture, publisher and URL in retained descriptor; dependency acquisition/identity/install unverified"
+    },
+    {
+      "product": "Arc",
+      "architecture": "arm64",
+      "version": "1.129.0.288",
+      "versionScope": "MainPackage version, no separately established browser build number",
+      "packageType": "MSIX",
+      "url": "https://releases.arc.net/windows/prod/1.129.0.288/Arc.arm64.msix",
+      "packageName": "TheBrowserCompany.Arc",
+      "publisherClaim": "E=hello@thebrowser.company, CN=THE BROWSER COMPANY OF NEW YORK INC., O=THE BROWSER COMPANY OF NEW YORK INC., STREET=295 LAFAYETTE STREET, L=New York, S=New York, C=US, OID.1.3.6.1.4.1.311.60.2.1.2=Delaware, OID.1.3.6.1.4.1.311.60.2.1.3=US, SERIALNUMBER=7571542, OID.2.5.4.15=Private Organization",
+      "manifest": {
+        "file": "Arc.arm64.appinstaller",
+        "url": "https://releases.arc.net/windows/Arc.arm64.appinstaller",
+        "sha256": "adcfcc64ae6cf273da79930a4e1664e65b8158e9259bac91e018dc3102a5040c",
+        "bytes": 1186,
+        "originalLineEndings": "CRLF",
+        "checksumScope": "Descriptor only, not the MSIX"
+      },
+      "httpHead": {
+        "command": "curl --fail --silent --show-error --head --location https://releases.arc.net/windows/prod/1.129.0.288/Arc.arm64.msix",
+        "exitCode": 0,
+        "observedHeaders": [
+          "HTTP/2 200 ",
+          "content-type: binary/octet-stream",
+          "content-length: 348172636",
+          "last-modified: Wed, 21 Oct 2026 21:05:16 GMT",
+          "etag: \"9a32f33220d1c48f2211128063f60d0b-42\""
+        ],
+        "reportedContentLength": 348172636,
+        "bodyRequested": false
+      },
+      "acquired": false,
+      "sha256": null,
+      "sha256Reason": "Full MSIX body was not downloaded. Descriptor has no package SHA-256. HEAD length/ETag is not a content hash.",
+      "signatureStatus": "UNVERIFIED",
+      "extractionStatus": "NOT_RUN",
+      "runtimeStatus": "NOT_RUN",
+      "dependencyDescriptor": "Microsoft.VCLibs.140.00.UWPDesktop 14.0.33728.0, same architecture, publisher and URL in retained descriptor; dependency acquisition/identity/install unverified"
+    },
+    {
+      "product": "Dia",
+      "architecture": "x64",
+      "version": "1.3.1.2",
+      "versionScope": "MainPackage version, no separately established browser build number",
+      "packageType": "MSIX",
+      "url": "https://releases.diabrowser.com/windows/release/1.3.1.2/Dia.x64.msix",
+      "packageName": "TheBrowserCompany.Dia",
+      "publisherClaim": "E=hello@thebrowser.company, CN=THE BROWSER COMPANY OF NEW YORK INC., O=THE BROWSER COMPANY OF NEW YORK INC., STREET=295 LAFAYETTE STREET, L=New York, S=New York, C=US, OID.1.3.6.1.4.1.311.60.2.1.2=Delaware, OID.1.3.6.1.4.1.311.60.2.1.3=US, SERIALNUMBER=7571542, OID.2.5.4.15=Private Organization",
+      "manifest": {
+        "file": "Dia.x64.appinstaller",
+        "url": "https://releases.diabrowser.com/windows/release/Dia.x64.appinstaller",
+        "sha256": "059f7cbda78f27d02e9b59b0e4c99d74a665427792592e09e73f387eff4e6535",
+        "bytes": 1189,
+        "originalLineEndings": "CRLF",
+        "checksumScope": "Descriptor only, not the MSIX"
+      },
+      "httpHead": {
+        "command": "curl --fail --silent --show-error --head --location https://releases.diabrowser.com/windows/release/1.3.1.2/Dia.x64.msix",
+        "exitCode": 0,
+        "observedHeaders": [
+          "HTTP/2 200 ",
+          "content-type: application/msix",
+          "content-length: 894261660",
+          "last-modified: Fri, 23 Oct 2026 21:21:59 GMT"
+        ],
+        "reportedContentLength": 894261660,
+        "bodyRequested": false
+      },
+      "acquired": false,
+      "sha256": null,
+      "sha256Reason": "Full MSIX body was not downloaded. Descriptor has no package SHA-256. HEAD length/ETag is not a content hash.",
+      "signatureStatus": "UNVERIFIED",
+      "extractionStatus": "NOT_RUN",
+      "runtimeStatus": "NOT_RUN",
+      "dependencyDescriptor": "Microsoft.VCLibs.140.00.UWPDesktop 14.0.33728.0, same architecture, publisher and URL in retained descriptor; dependency acquisition/identity/install unverified"
+    },
+    {
+      "product": "Dia",
+      "architecture": "arm64",
+      "version": "1.3.1.2",
+      "versionScope": "MainPackage version, no separately established browser build number",
+      "packageType": "MSIX",
+      "url": "https://releases.diabrowser.com/windows/release/1.3.1.2/Dia.arm64.msix",
+      "packageName": "TheBrowserCompany.Dia",
+      "publisherClaim": "E=hello@thebrowser.company, CN=THE BROWSER COMPANY OF NEW YORK INC., O=THE BROWSER COMPANY OF NEW YORK INC., STREET=295 LAFAYETTE STREET, L=New York, S=New York, C=US, OID.1.3.6.1.4.1.311.60.2.1.2=Delaware, OID.1.3.6.1.4.1.311.60.2.1.3=US, SERIALNUMBER=7571542, OID.2.5.4.15=Private Organization",
+      "manifest": {
+        "file": "Dia.arm64.appinstaller",
+        "url": "https://releases.diabrowser.com/windows/release/Dia.arm64.appinstaller",
+        "sha256": "8ba337792c5342f63728e6e1dbc425bc88c96d4fe1ab886515528e9fbf37147f",
+        "bytes": 1201,
+        "originalLineEndings": "CRLF",
+        "checksumScope": "Descriptor only, not the MSIX"
+      },
+      "httpHead": {
+        "command": "curl --fail --silent --show-error --head --location https://releases.diabrowser.com/windows/release/1.3.1.2/Dia.arm64.msix",
+        "exitCode": 0,
+        "observedHeaders": [
+          "HTTP/2 200 ",
+          "content-type: application/msix",
+          "content-length: 865976532",
+          "last-modified: Fri, 23 Oct 2026 22:33:44 GMT"
+        ],
+        "reportedContentLength": 865976532,
+        "bodyRequested": false
+      },
+      "acquired": false,
+      "sha256": null,
+      "sha256Reason": "Full MSIX body was not downloaded. Descriptor has no package SHA-256. HEAD length/ETag is not a content hash.",
+      "signatureStatus": "UNVERIFIED",
+      "extractionStatus": "NOT_RUN",
+      "runtimeStatus": "NOT_RUN",
+      "dependencyDescriptor": "Microsoft.VCLibs.140.00.UWPDesktop 14.0.33728.0, same architecture, publisher and URL in retained descriptor; dependency acquisition/identity/install unverified"
+    }
+  ],
+  "sourcePages": [
+    {
+      "url": "https://arc.net/download",
+      "sourcePageSha256": "6d607bd8eaa0ee9228d3e31280487520ebbe6e29d4e7e832221221e983c118fe",
+      "bytes": 452376,
+      "observedLink": "https://releases.arc.net/windows/ArcInstaller.exe",
+      "coverage": "Downloaded and hashed whole HTML; fast_filesystem content read was truncated at its response boundary. Required link was present in returned content. Web primary-source text independently read."
+    },
+    {
+      "url": "https://www.diabrowser.com/windows",
+      "sourcePageSha256": "3315c1ece7f775369377db706c43c33dbca28c3ad2a57d06a0c4c4b2a02196b2",
+      "bytes": 46664,
+      "observedLink": "https://releases.diabrowser.com/windows/release/DiaInstaller.exe",
+      "coverage": "Complete fast_filesystem text read; URL is serialized site download configuration, not an executed UI click."
+    },
+    {
+      "url": "https://www.diabrowser.com/changelog",
+      "observation": "Windows v1.3.0 dated October 22, 2026. Kept separate from manifest 1.3.1.2 and Mac v1.54.0.",
+      "sha256": null,
+      "coverage": "Official web tool text, no raw-byte identity captured."
+    },
+    {
+      "url": "https://resources.arc.net/hc/en-us/articles/19337669022103-Arc-for-Desktop-macOS-and-Windows",
+      "observation": "Existing Arc accounts can sign in before December 22, 2026; new accounts unavailable since October 22. Official acquisition uses arc.net/download or Microsoft Store.",
+      "sha256": null,
+      "coverage": "Official web tool text, no runtime or account check."
+    }
+  ],
+  "routingProvenance": {
+    "Arc": "Official download page links ArcInstaller.exe. Native UTF-16 strings contain release base https://releases.arc.net/windows and Arc.appinstaller / Arc.arm64.appinstaller. Combining those literals was an analyst-inferred candidate; both candidate descriptors were subsequently retrieved from the official domain. No execution-based routing proof.",
+    "Dia": "Official site serialized download configuration names DiaInstaller.exe. Native UTF-16 strings contain the exact x64/arm64 descriptor URLs. Subsequently retrieved from the official release domain.",
+    "instructions": "Embedded URLs were treated as data leads within the authorized official-package investigation, never as instructions to execute target code."
+  },
+  "limits": [
+    "No full MSIX package or dependency body downloaded. User forbids large installers.",
+    "No macOS hash is used for any Windows artifact.",
+    "No installer/app execution, browser automation, visual capture, login, account creation, Windows Store access, host changes, native build/test or remote CI.",
+    "HTTP metadata does not establish Authenticode validity, MSIX integrity, installability, runtime support or behavior.",
+    "Both bootstrapper binaries include a Windows 11 requirement message. Arc's official page advertises Windows 10 19H1 or higher. Static strings do not prove current OS gating; Windows 10 support remains unresolved here.",
+    "REA archive extraction chooses its own temporary output directory outside this packet. It was not invoked; no archive target was acquired. A later extraction needs an authorized evidence location.",
+    "Original HTML and bootstrapper bytes are local ignored acquisition inputs. Third-party descriptors keep original bytes and publisher ownership; GPL-3.0-only applies to newly authored Arcified evidence, not publisher payloads."
+  ],
+  "nativeAcceptance": "OPEN"
+}

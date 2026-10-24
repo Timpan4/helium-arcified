@@ -1,0 +1,260 @@
+{
+  "issueKey": "release-ux-check",
+  "assignment": {
+    "key": "release-ux-check",
+    "title": "Verify complete desktop UX coverage on all target platforms",
+    "area": "research",
+    "build": "Run the feature matrix against installed native release candidates, including optional-feature states.",
+    "accept": [
+      "Map every accepted feature and source-family disposition to an issue and a native scenario result on Linux, Windows and macOS.",
+      "Exercise accessibility, touch/keyboard/IME, restart, failure and data-loss cases for affected surfaces and record unsupported hardware/OS combinations.",
+      "Keep unknown and unverified items open; report implemented, tested and released states separately and reuse unchanged passing evidence.",
+      "Use the accepted per-feature matrix and per-OS implementation/test/release states. Packaging success cannot substitute for absent functionality; optional/deferred items require a visible disposition."
+    ],
+    "blocked": [
+      "release-linux",
+      "release-windows",
+      "release-macos"
+    ],
+    "sources": [
+      "fork",
+      "artifact"
+    ],
+    "sourceUrls": [
+      "https://github.com/Timpan4/helium-arcified/tree/main/arcified",
+      "https://github.com/Timpan4/helium-arcified/blob/main/patches/series",
+      "https://releases.arc.net/release/Arc-1.170.0-89123.dmg",
+      "https://releases.diabrowser.com/release/Dia-latest.dmg"
+    ],
+    "readiness": "Proposed work after native/reference prerequisites and explicit decisions in this issue.",
+    "phase": "Evidence, decisions and gates",
+    "kind": "tracking",
+    "disposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+    "referencePlatforms": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+    "referenceNote": "REA 6.7.0 bundle/resource observations recorded in artifacts.md; no application execution or native-performance measurement.",
+    "openQuestions": "Native integration, failure behavior and applicable platform results must be proven for this slice; unavailable checks stay open.",
+    "priority": "Before AI",
+    "number": 161,
+    "url": "https://github.com/Timpan4/helium-arcified/issues/161",
+    "primaryCommandId": 40796
+  },
+  "rootManifest": {
+    "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+    "recordedAt": "2026-10-23 22:18:10 UTC",
+    "scope": {
+      "totalNonAi": 135,
+      "rootOwned": [
+        {
+          "key": "native-linux",
+          "number": 16,
+          "url": "https://github.com/Timpan4/helium-arcified/issues/16",
+          "commandId": 40763
+        },
+        {
+          "key": "library",
+          "number": 19,
+          "url": "https://github.com/Timpan4/helium-arcified/issues/19",
+          "commandId": 40701
+        },
+        {
+          "key": "perf-baseline",
+          "number": 20,
+          "url": "https://github.com/Timpan4/helium-arcified/issues/20",
+          "commandId": 40771
+        },
+        {
+          "key": "lifecycle-contract",
+          "number": 24,
+          "url": "https://github.com/Timpan4/helium-arcified/issues/24",
+          "commandId": 40754
+        }
+      ],
+      "delegated": 131,
+      "laterAiExcluded": 23,
+      "syncExcluded": 6
+    },
+    "execution": {
+      "primaryModel": "gpt-6.1-sol",
+      "reasoningEffort": "high",
+      "serviceTier": "default",
+      "heavyCpuOwnerThreadId": "6733348c-3696-4b31-834c-2bbca45e70d2",
+      "buildRoot": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+      "preparedTreeAccessForOtherThreads": "read_only",
+      "rootOwns": "Shared native build tree, heavy tests, integrated patch registration, remote publication, PR state and final acceptance.",
+      "nativeAcceptance": "OPEN",
+      "currentNativeCounts": {
+        "provenDone": 0,
+        "doneAwaitingRelease": 1,
+        "inProgress": 134,
+        "notStarted": 0
+      },
+      "assignmentSnapshot": {
+        "source": "Complete coordinator task inventories read with fast_filesystem; all returned assignments checked for provider/model/options and unique key coverage.",
+        "primaryCount": 131,
+        "running": 131,
+        "queued": 0,
+        "other": 0,
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    "existingFoundations": "51 independently reviewed local slices are integrated in baseline; their pure tests do not prove native UX."
+  },
+  "releasePrerequisites": [
+    {
+      "key": "release-linux",
+      "title": "Install a Linux Arcified package safely",
+      "area": "release",
+      "build": "Distribute a distinct Linux package with user-data-preserving installation and a verified install path.",
+      "accept": [
+        "Decide supported package/distribution format and fork-owned application identity before publishing.",
+        "Verify clean install, upgrade and uninstall data choices on supported Linux environments.",
+        "Report source provenance and native smoke checks; keep signing/release credentials out of artifacts."
+      ],
+      "blocked": [
+        "native-linux",
+        "session-durability",
+        "schema-migrations"
+      ],
+      "sources": [
+        "fork"
+      ],
+      "sourceUrls": [
+        "https://github.com/Timpan4/helium-arcified/tree/main/arcified",
+        "https://github.com/Timpan4/helium-arcified/blob/main/patches/series"
+      ],
+      "readiness": "Proposed work after native/reference prerequisites and explicit decisions in this issue.",
+      "phase": "Distribution",
+      "kind": "implementation",
+      "disposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "referencePlatforms": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "referenceNote": "The linked fork source is baseline evidence. This issue proposes native integration or a design contract; it does not claim reference-app execution.",
+      "openQuestions": "Native integration, failure behavior and applicable platform results must be proven for this slice; unavailable checks stay open.",
+      "priority": "Before AI",
+      "number": 131,
+      "url": "https://github.com/Timpan4/helium-arcified/issues/131",
+      "primaryCommandId": 40794
+    },
+    {
+      "key": "release-windows",
+      "title": "Install a signed Windows Arcified package",
+      "area": "release",
+      "build": "Provide a Windows installer with distinct identity and a verified install path.",
+      "accept": [
+        "Use authorized signing/release infrastructure and verify package signatures.",
+        "Test clean install, default-browser registration, upgrade and retained Profile data.",
+        "Keep rollback/downgrade behavior explicit and surface update/security failures without bypassing OS trust."
+      ],
+      "blocked": [
+        "native-windows",
+        "session-durability",
+        "schema-migrations"
+      ],
+      "sources": [
+        "fork"
+      ],
+      "sourceUrls": [
+        "https://github.com/Timpan4/helium-arcified/tree/main/arcified",
+        "https://github.com/Timpan4/helium-arcified/blob/main/patches/series"
+      ],
+      "readiness": "Proposed work after native/reference prerequisites and explicit decisions in this issue.",
+      "phase": "Distribution",
+      "kind": "implementation",
+      "disposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "referencePlatforms": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "referenceNote": "The linked fork source is baseline evidence. This issue proposes native integration or a design contract; it does not claim reference-app execution.",
+      "openQuestions": "Native integration, failure behavior and applicable platform results must be proven for this slice; unavailable checks stay open.",
+      "priority": "Before AI",
+      "number": 132,
+      "url": "https://github.com/Timpan4/helium-arcified/issues/132",
+      "primaryCommandId": 40797
+    },
+    {
+      "key": "release-macos",
+      "title": "Install a signed macOS Arcified app",
+      "area": "release",
+      "build": "Provide a correctly identified macOS application and verified install flow.",
+      "accept": [
+        "Use authorized signing/notarization infrastructure and verify the installed artifact and package signatures.",
+        "Test clean install, protocol/default-browser registration, upgrade while preserving user data.",
+        "Explain architecture/OS support and retain security prompts; do not treat a development app as a signed release."
+      ],
+      "blocked": [
+        "native-macos",
+        "session-durability",
+        "schema-migrations"
+      ],
+      "sources": [
+        "fork"
+      ],
+      "sourceUrls": [
+        "https://github.com/Timpan4/helium-arcified/tree/main/arcified",
+        "https://github.com/Timpan4/helium-arcified/blob/main/patches/series"
+      ],
+      "readiness": "Proposed work after native/reference prerequisites and explicit decisions in this issue.",
+      "phase": "Distribution",
+      "kind": "implementation",
+      "disposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "referencePlatforms": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "referenceNote": "The linked fork source is baseline evidence. This issue proposes native integration or a design contract; it does not claim reference-app execution.",
+      "openQuestions": "Native integration, failure behavior and applicable platform results must be proven for this slice; unavailable checks stay open.",
+      "priority": "Before AI",
+      "number": 133,
+      "url": "https://github.com/Timpan4/helium-arcified/issues/133",
+      "primaryCommandId": 40795
+    }
+  ],
+  "rootExecutionSnapshot": {
+    "nativeBuild": {
+      "ownerThreadId": "6733348c-3696-4b31-834c-2bbca45e70d2",
+      "workDir": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1",
+      "sessionId": 30092,
+      "status": "baseline_compiling",
+      "preparation": "PREPARED_NOT_BUILT",
+      "report": "native-linux-run-20261023.md"
+    },
+    "integrationChecks": {
+      "sourceIdentity": "At0cd599bc all51 component sources matched reviewed area commits. Admission followup f634070a and schema2 metadata followup b47468ae have clean independent reviews. Later production drafts require their own reviews and native proof.",
+      "commandsAndSiteTools": "Parent compiled actual combined tree and ran all three site-controls, DevTools and diagnostics fixture binaries under ASan/UBSan with -fno-sanitize-recover=undefined; all exited 0.",
+      "fullBrowserBuilds": "Pinned Linux preparation PASSED all17stages through GN; baseline chrome/chromedriver compilation running only in root. Native browser tests/launch and platform acceptance OPEN.",
+      "nativeAcceptance": "OPEN",
+      "captureRegion": "Parent compiled and ran actual combined picker/capture fixture under fail-fast ASan/UBSan. Exit0, no diagnostics.",
+      "sidebar": "Conformance-only actual multi-area scenarios independently reviewed clean and committed at 34c97b01. No production facade or native AX claim.",
+      "persistence": "b47468ae adds schema2 canonical Space metadata. Independent review clean; strict/sanitized3suites, formatting/tidy passed. Native binding/IO/installed restart/platform acceptance OPEN.",
+      "layout": "Actual layout/split/motion conformance scenarios reviewed clean in round 2. P3 endpoint assertions closed; strict/sanitized checks passed on exact reviewed inputs. Committed locally, native UI/visual/platform behavior OPEN.",
+      "nativeOwnership": "Source inventory corrections closed and committed 05ace22e. Production callback draft and real native fixture tests are unapplied/uncompiled; construction loss, reentrant shutdown and native acceptance OPEN."
+    }
+  },
+  "foundationReuse": [
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/reviews/lifecycle-review-round-3.md",
+      "disposition": "Read existing report; retained reported pure/source scope. No rerun, native test result or identity equivalence asserted."
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/features/context-persistence-composition.md",
+      "disposition": "Read existing report; retained reported pure/source scope. No rerun, native test result or identity equivalence asserted."
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/features/layout-split-composition.md",
+      "disposition": "Read existing report; retained reported pure/source scope. No rerun, native test result or identity equivalence asserted."
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/features/sidebar-composition.md",
+      "disposition": "Read existing report; retained reported pure/source scope. No rerun, native test result or identity equivalence asserted."
+    }
+  ],
+  "acceptedPolicies": [
+    "One actual Profile per Space; multiple Spaces may share a Profile.",
+    "Same actual native window through cross-Profile Space switches.",
+    "Existing live saved page handoff preserves exact native objects, PageId, Profile, history/navigation and protected work.",
+    "Window-local temporaries; shared saved identities.",
+    "Profile sign-ins/site settings/Favorites, Space themes.",
+    "Only browser-classified outbound saved-page links have approved temporary-branch routing."
+  ],
+  "unsettledPolicies": "Root lifecycle authority retains activity/cleanup/destructive actions, populated migration/source disposition, other routing, private/guest persistence and restore choices. This packet does not approve them.",
+  "limitations": [
+    "Root execution state is a dated snapshot, not a live process/build inspection.",
+    "No installed native release result attached on any platform.",
+    "Focus contract implementation/decision evidence was not available at the probed packet result.json/README.md paths; #44 remains open here.",
+    "No external docs, reference app, account, package download, native build/test, CI or browser/visual execution performed."
+  ]
+}

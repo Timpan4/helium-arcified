@@ -1,0 +1,8 @@
+{
+  "issueKey": "automation-contract",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/25",
+  "primaryCommandId": 40710,
+  "owner": "assigned primary",
+  "scope": "This packet only. Coordinator reconciles common source changes.",
+  "nativeAcceptance": "OPEN"
+}

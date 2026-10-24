@@ -1,0 +1,30 @@
+{
+  "key": "favorite-previews-decision",
+  "title": "Decide which historical Favorite site previews are useful",
+  "area": "research",
+  "build": "Inventory historical site-specific Favorite previews separately from AI link summaries, calendar countdowns and folder previews.",
+  "accept": [
+    "Use the December 16, 2021 reference and later notes to identify proposed integrations and their current uncertainty.",
+    "Recommend support/defer/replace per site, with explicit data/action scope, disable control and stale-state behavior.",
+    "The owner records accepted scope before any account integration is implemented; generic Live Folders do not imply coverage."
+  ],
+  "blocked": [],
+  "sources": [
+    "arc-history"
+  ],
+  "sourceUrls": [
+    "https://start.arc.net/release-notes",
+    "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes"
+  ],
+  "kind": "decision",
+  "phase": "Evidence, decisions and gates",
+  "disposition": "Historical/retired reference. Recommended replacement or decision, not current runtime parity.",
+  "referencePlatforms": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+  "referenceNote": "Arc historical notes, December 16, 2021 Favorite-site previews and People Cards.",
+  "openQuestions": "The fork owner records the named scope/security/service decision before implementation or external access.",
+  "readiness": "Publish as an owner decision, not an automatically accepted implementation.",
+  "priority": "Before AI",
+  "number": 28,
+  "url": "https://github.com/Timpan4/helium-arcified/issues/28",
+  "primaryCommandId": 40740
+}

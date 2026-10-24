@@ -1,0 +1,57 @@
+{
+  "retrievedDateUtc": "2026-10-23",
+  "localDate": "2026-10-24",
+  "timezone": "Europe/Stockholm",
+  "method": "web.run public primary-source open/find/search only; no browser interaction",
+  "sources": [
+    {
+      "id": "S1",
+      "url": "https://start.arc.net/release-notes",
+      "status": "retrieved",
+      "locator": "2021 > December 16, 2021; August 11, 2021",
+      "scope": "Historical macOS documentary reference; no runtime or current availability proof."
+    },
+    {
+      "id": "S2",
+      "url": "https://resources.arc.net/hc/en-us/articles/20498417809815-Arc-for-macOS-2022-Release-Notes",
+      "status": "retrieved",
+      "locator": "February 16; March 17; June 2; August 11; October 27; November 17, 2022",
+      "scope": "Historical macOS notes; provider authentication, API fields and supported domains unspecified."
+    },
+    {
+      "id": "S3",
+      "url": "https://resources.arc.net/hc/en-us/articles/20498377604887-Arc-for-macOS-2023-Release-Notes",
+      "status": "retrieved",
+      "locator": "March 30; May 25 (v0.105); August 17; October 12 and 19, 2023",
+      "scope": "Historical macOS notes; preview fixes do not establish present availability."
+    },
+    {
+      "id": "S4",
+      "url": "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+      "status": "retrieved",
+      "locator": "April 11 (v1.38.0); May 23 (v1.44.1); June 13 (v1.47.1); June 20 (v1.48.0), 2024",
+      "scope": "First-party release claims, including explicit GitHub Preview retirement. Current runtime remains unobserved."
+    },
+    {
+      "id": "U1",
+      "url": "https://resources.arc.net/hc/en-us/articles/22731612065815-Automatic-GitHub-Live-Folders",
+      "status": "unavailable",
+      "error": "(404) Not Found",
+      "scope": "Do not infer service availability or account scopes from this failed retrieval."
+    },
+    {
+      "id": "U2",
+      "url": "https://resources.arc.net/hc/en-us/articles/24158102740631-Live-Calendars",
+      "status": "unavailable",
+      "error": "(404) Not Found",
+      "scope": "Calendar release notes remain documentary evidence only."
+    },
+    {
+      "id": "U3",
+      "url": "https://resources.arc.net/hc/en-us/articles/20498463803799-Arc-for-macOS-2021-Release-Notes",
+      "status": "direct_open_unavailable_search_excerpt_available",
+      "error": "(400) Timeout fetching",
+      "scope": "Search returned the first-party December entry; S1 independently supplied the usable archive entry."
+    }
+  ]
+}

@@ -1,0 +1,391 @@
+{
+  "issueKey": "retirements",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/23",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "recordedOn": "2026-10-24",
+  "decisionSemantics": "implement/replace/import/defer are proposed downstream dispositions unless authority names an existing owner constraint. defer includes explicit owner exclusion and is not a promise of later implementation.",
+  "records": [
+    {
+      "key": "notes",
+      "feature": "Notes",
+      "disposition": "import",
+      "authority": "recommendation",
+      "survivingWorkflow": "Open legacy HTML exports locally, preserve originals, and route new documents only to an explicitly selected external destination. Do not rebuild the retired editor in this leaf.",
+      "migration": "ZIP/HTML format advertised, no fixture observed; lossless import and shared-note recovery remain unproven.",
+      "sources": [
+        "ARC-NOTES"
+      ],
+      "referencePlatforms": "macOS historical only",
+      "relatedIssues": [
+        "notes",
+        "arc-import-format",
+        "export"
+      ],
+      "arcifiedPlatforms": {
+        "linux": "OPEN_UNVERIFIED",
+        "windows": "OPEN_UNVERIFIED",
+        "macos": "OPEN_UNVERIFIED"
+      },
+      "implementedByThisPacket": false,
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "reader-mode",
+      "feature": "Reader Mode beta",
+      "disposition": "replace",
+      "authority": "recommendation",
+      "survivingWorkflow": "Investigate the prepared Chromium reading-mode ActionItems as a supported local reading route. Keep the ordinary page and accessible zoom/text controls available when unsupported.",
+      "migration": "No legacy data conversion. Do not claim all pages, PDFs or private pages can be distilled.",
+      "sources": [
+        "ARC-2021",
+        "ARC-MAC"
+      ],
+      "referencePlatforms": "macOS historical only",
+      "relatedIssues": [
+        "site-controls",
+        "compatibility"
+      ],
+      "arcifiedPlatforms": {
+        "linux": "OPEN_UNVERIFIED",
+        "windows": "OPEN_UNVERIFIED",
+        "macos": "OPEN_UNVERIFIED"
+      },
+      "implementedByThisPacket": false,
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "paste-go",
+      "feature": "Paste & Go",
+      "disposition": "replace",
+      "authority": "recommendation",
+      "survivingWorkflow": "Use explicit paste followed by navigation, or the existing native user-invoked Paste & Go path when supported. Do not add background clipboard scanning.",
+      "migration": "No persistent clipboard import. All navigation must retain the real page/Profile/window command target and native URL policy.",
+      "sources": [
+        "ARC-MAC"
+      ],
+      "referencePlatforms": "macOS retirement documented; Windows status unsettled",
+      "relatedIssues": [
+        "command-bar"
+      ],
+      "arcifiedPlatforms": {
+        "linux": "OPEN_UNVERIFIED",
+        "windows": "OPEN_UNVERIFIED",
+        "macos": "OPEN_UNVERIFIED"
+      },
+      "implementedByThisPacket": false,
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "recent-tab",
+      "feature": "Recent Tab indicator",
+      "disposition": "replace",
+      "authority": "recommendation",
+      "survivingWorkflow": "Use accessible active-tab status, ordered selection and recent-tab switching. Do not equate removal of the indicator with removal of the switcher.",
+      "migration": "No new tab lifecycle, history database or cleanup policy.",
+      "sources": [
+        "ARC-MAC"
+      ],
+      "referencePlatforms": "macOS removal documented; Windows status unsettled",
+      "relatedIssues": [
+        "tab-status",
+        "tab-switcher",
+        "tab-order-navigation"
+      ],
+      "arcifiedPlatforms": {
+        "linux": "OPEN_UNVERIFIED",
+        "windows": "OPEN_UNVERIFIED",
+        "macos": "OPEN_UNVERIFIED"
+      },
+      "implementedByThisPacket": false,
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "command-education",
+      "feature": "Command Bar education",
+      "disposition": "replace",
+      "authority": "recommendation",
+      "survivingWorkflow": "Offer discoverable action names, keyboard hints and local onboarding help. A retired education banner does not retire actions.",
+      "migration": "Legacy tutorial state is not a callable command. Disable unsupported actions until their real targets exist.",
+      "sources": [
+        "ARC-MAC"
+      ],
+      "referencePlatforms": "macOS retirement documented; Windows status unsettled",
+      "relatedIssues": [
+        "command-bar",
+        "onboarding"
+      ],
+      "arcifiedPlatforms": {
+        "linux": "OPEN_UNVERIFIED",
+        "windows": "OPEN_UNVERIFIED",
+        "macos": "OPEN_UNVERIFIED"
+      },
+      "implementedByThisPacket": false,
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "github-previews",
+      "feature": "GitHub Previews",
+      "disposition": "replace",
+      "authority": "recommendation_gated_on_provider_decision",
+      "survivingWorkflow": "Keep ordinary GitHub bookmarks/folders usable. An optional named GitHub Live Folder may replace service enrichment only under the separate integration decision.",
+      "migration": "Do not infer service tokens, PR data or approved scopes from an imported favorite. An unavailable provider stays unavailable.",
+      "sources": [
+        "ARC-MAC",
+        "ARC-WIN"
+      ],
+      "referencePlatforms": "macOS deprecation documented; Live Folder evidence on Windows does not prove old preview parity",
+      "relatedIssues": [
+        "live-folders",
+        "integration-policy"
+      ],
+      "arcifiedPlatforms": {
+        "linux": "OPEN_UNVERIFIED",
+        "windows": "OPEN_UNVERIFIED",
+        "macos": "OPEN_UNVERIFIED"
+      },
+      "implementedByThisPacket": false,
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "icloud-sync",
+      "feature": "iCloud sync",
+      "disposition": "defer",
+      "authority": "owner_excluded",
+      "survivingWorkflow": "Retain local Profiles, session recovery, portable import/export and migration without an Arcified account.",
+      "migration": "No iCloud or new cross-device backend. No enrollment, recovery, remote conflict handling or account requirement is introduced.",
+      "sources": [
+        "ARC-MAC"
+      ],
+      "referencePlatforms": "macOS historical iCloud transition; no Linux reference",
+      "relatedIssues": [
+        "export",
+        "workspace-import"
+      ],
+      "arcifiedPlatforms": {
+        "linux": "OPEN_UNVERIFIED",
+        "windows": "OPEN_UNVERIFIED",
+        "macos": "OPEN_UNVERIFIED"
+      },
+      "implementedByThisPacket": false,
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "legacy-boost",
+      "feature": "Legacy Boost Builder",
+      "disposition": "replace",
+      "authority": "recommendation",
+      "survivingWorkflow": "Prefer reversible declarative styling/zaps in the dedicated Boost work. Keep the original page reachable and provide disable/revert controls.",
+      "migration": "Legacy executable Boost compatibility is unproven. Preserve original input; never auto-enable imported JavaScript or infer origin/device approval.",
+      "sources": [
+        "ARC-MAC"
+      ],
+      "referencePlatforms": "macOS deprecation documented; Windows parity unsettled",
+      "relatedIssues": [
+        "boost-style",
+        "boost-zap",
+        "boost-code",
+        "boost-sharing"
+      ],
+      "arcifiedPlatforms": {
+        "linux": "OPEN_UNVERIFIED",
+        "windows": "OPEN_UNVERIFIED",
+        "macos": "OPEN_UNVERIFIED"
+      },
+      "implementedByThisPacket": false,
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "ask-page",
+      "feature": "Ask on Page",
+      "disposition": "defer",
+      "authority": "later_ai_recommendation",
+      "survivingWorkflow": "Use local find for this non-AI release. Any future page-question feature requires the separately approved assistant/provider/content-consent contract.",
+      "migration": "No page content sent to an AI provider. Existing service availability is not assumed.",
+      "sources": [
+        "ARC-MAC",
+        "ARC-WIN",
+        "ARC-MAX-UNAVAILABLE"
+      ],
+      "referencePlatforms": "macOS removal documented; Windows launch historical, current status unknown",
+      "relatedIssues": [
+        "find",
+        "ask-page",
+        "assistant-consent-contract"
+      ],
+      "arcifiedPlatforms": {
+        "linux": "OPEN_UNVERIFIED",
+        "windows": "OPEN_UNVERIFIED",
+        "macos": "OPEN_UNVERIFIED"
+      },
+      "implementedByThisPacket": false,
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "arc-sunset",
+      "feature": "Arc sunset/migration",
+      "disposition": "import",
+      "authority": "local_first_owner_constraint_with_mapping_unsettled",
+      "survivingWorkflow": "Support a local, previewable import/export workflow without an Arcified account. Preserve source data and report unmapped items; direct Dia import remains a separate reference workflow.",
+      "migration": "Do not copy Dia's Space-to-Profile mapping into Arcified. Map observed fields through the authoritative lifecycle/metadata codec only after fixture research.",
+      "sources": [
+        "ARC-SUNSET",
+        "ARC-TO-DIA"
+      ],
+      "referencePlatforms": "macOS and Windows documentary migration; Linux downstream design target",
+      "relatedIssues": [
+        "arc-import-format",
+        "arc-import",
+        "workspace-import",
+        "export",
+        "prototype-migration"
+      ],
+      "arcifiedPlatforms": {
+        "linux": "OPEN_UNVERIFIED",
+        "windows": "OPEN_UNVERIFIED",
+        "macos": "OPEN_UNVERIFIED"
+      },
+      "implementedByThisPacket": false,
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "people-cards",
+      "feature": "People Cards",
+      "disposition": "defer",
+      "authority": "recommendation",
+      "survivingWorkflow": "Use the site's own profile page and ordinary bookmarks. Leave automatic person enrichment unavailable.",
+      "migration": "No inferred identity provider, contact scraping, identity matching, data retention or remote account scope.",
+      "sources": [
+        "ARC-2021"
+      ],
+      "referencePlatforms": "macOS 2021 historical; later retirement/current availability not established",
+      "relatedIssues": [],
+      "arcifiedPlatforms": {
+        "linux": "OPEN_UNVERIFIED",
+        "windows": "OPEN_UNVERIFIED",
+        "macos": "OPEN_UNVERIFIED"
+      },
+      "implementedByThisPacket": false,
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "favorite-previews",
+      "feature": "Historical Favorite-site previews",
+      "disposition": "defer",
+      "authority": "recommendation_pending_dedicated_decision",
+      "survivingWorkflow": "Keep ordinary favorites for Notion, Figma and Linear. Defer recent-document discovery and common-action previews to the per-site scope decision.",
+      "migration": "No account discovery or authenticated preview refresh. Distinguish these from AI link summaries, folder previews and calendar countdowns.",
+      "sources": [
+        "ARC-2021"
+      ],
+      "referencePlatforms": "macOS 2021 historical; no Windows/Linux reference parity proven",
+      "relatedIssues": [
+        "favorite-previews-decision",
+        "integration-policy"
+      ],
+      "arcifiedPlatforms": {
+        "linux": "OPEN_UNVERIFIED",
+        "windows": "OPEN_UNVERIFIED",
+        "macos": "OPEN_UNVERIFIED"
+      },
+      "implementedByThisPacket": false,
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "dia-memory",
+      "feature": "Dia Memory conflicting status",
+      "disposition": "defer",
+      "authority": "recommendation_with_unresolved_vendor_conflict",
+      "survivingWorkflow": "Use ordinary local browsing/history controls. Do not collect personal summaries for this release.",
+      "migration": "Preserve both the dated retirement announcement and the inconsistent FAQ. Neither proves deletion or availability in an installed build.",
+      "sources": [
+        "DIA-CHANGELOG",
+        "DIA-SECURITY"
+      ],
+      "referencePlatforms": "macOS dated changelog plus undated FAQ; current installed state unknown",
+      "relatedIssues": [
+        "memory-decision"
+      ],
+      "arcifiedPlatforms": {
+        "linux": "OPEN_UNVERIFIED",
+        "windows": "OPEN_UNVERIFIED",
+        "macos": "OPEN_UNVERIFIED"
+      },
+      "implementedByThisPacket": false,
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "mobile-arc-search",
+      "feature": "Mobile Arc Search features",
+      "disposition": "defer",
+      "authority": "outside_desktop_deliverable",
+      "survivingWorkflow": "Keep mobile-only AI browsing, gestures and app behavior out of desktop parity claims. A user-provided export may enter the local import-format investigation.",
+      "migration": "No mobile account, sync path or mobile app implementation. Export link lists are not evidence of complete desktop sessions.",
+      "sources": [
+        "ARC-SUNSET",
+        "ARC-MAC"
+      ],
+      "referencePlatforms": "iOS/Android documentary status; neither is a desktop implementation",
+      "relatedIssues": [
+        "arc-import-format"
+      ],
+      "arcifiedPlatforms": {
+        "linux": "OPEN_UNVERIFIED",
+        "windows": "OPEN_UNVERIFIED",
+        "macos": "OPEN_UNVERIFIED"
+      },
+      "implementedByThisPacket": false,
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "dia-work",
+      "feature": "Dia work connectors/decks",
+      "disposition": "defer",
+      "authority": "outside_core_non_ai_objective_recommendation",
+      "survivingWorkflow": "Ordinary website navigation remains usable; authenticated connectors, generated decks/reports, Morning Brief and enterprise administration remain separate later product decisions.",
+      "migration": "No connector authentication, automatic tool use, scheduled report generation or vendor backend is introduced.",
+      "sources": [
+        "DIA-CHANGELOG",
+        "DIA-SECURITY"
+      ],
+      "referencePlatforms": "primarily macOS changelog; no generic desktop parity",
+      "relatedIssues": [
+        "skills",
+        "read-tools",
+        "write-tools"
+      ],
+      "arcifiedPlatforms": {
+        "linux": "OPEN_UNVERIFIED",
+        "windows": "OPEN_UNVERIFIED",
+        "macos": "OPEN_UNVERIFIED"
+      },
+      "implementedByThisPacket": false,
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "vendor-services",
+      "feature": "Unavailable vendor services",
+      "disposition": "defer",
+      "authority": "unavailable_without_approved_replacement",
+      "survivingWorkflow": "Use local files and ordinary links where available; show unsupported service routes as unavailable. Hosted shared content requires an independent service decision.",
+      "migration": "Do not promise recovery of missing hosted Notes/Easels, remote account data or expired links. No fake host/service/store or substitute sync backend.",
+      "sources": [
+        "ARC-SUNSET",
+        "ARC-NOTES",
+        "ARC-TO-DIA"
+      ],
+      "referencePlatforms": "Arc macOS/Windows shutdown is announced; service execution unobserved",
+      "relatedIssues": [
+        "hosted-sharing",
+        "easel-collaboration-decision",
+        "shared-board"
+      ],
+      "arcifiedPlatforms": {
+        "linux": "OPEN_UNVERIFIED",
+        "windows": "OPEN_UNVERIFIED",
+        "macos": "OPEN_UNVERIFIED"
+      },
+      "implementedByThisPacket": false,
+      "nativeAcceptance": "OPEN"
+    }
+  ]
+}

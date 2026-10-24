@@ -1,0 +1,264 @@
+{
+  "license": "GPL-3.0-only",
+  "issueKey": "runtime-reference",
+  "retrievedOn": "2026-10-24",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "localSources": [
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+      "sha256": "cc8ec03443b18a749b486e484a56b86218d8f41653970dea94185f76c9685354",
+      "verification": "sha256sum, 2026-10-24; documentary source bytes only"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+      "sha256": "aedebe1a338bb81f923b7b954be0f74fde994f836decc1e0a48e42b6ad5c2b93",
+      "verification": "sha256sum, 2026-10-24; documentary source bytes only",
+      "concurrencyNote": {
+        "initialSha256": "aedebe1a338bb81f923b7b954be0f74fde994f836decc1e0a48e42b6ad5c2b93",
+        "laterObservedSha256": "daf98f1cf993c1a21686289a88489bf001266d7fff4d85089d30055584c8a7b0",
+        "state": "ROOT_CONTROL_CHANGED_CONCURRENTLY",
+        "response": "Manifest adds verifiedPrimaryAssignment and shared dependencies, and replaces repeated per-primary model/options with actualSettingsVerified. Leaf assignment, scope, command allocations, ownership and prepared-tree access unchanged. The full changed manifest was reread using fast_filesystem. These are documentary snapshot hashes, not a live-file immutability claim."
+      }
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md",
+      "sha256": "244488864d15d093f7f80e1cc40f490a979454e2a8e74db438c7e51283518a1c",
+      "verification": "sha256sum, 2026-10-24; documentary source bytes only"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md",
+      "sha256": "e5951ba265be3587cb1df8f2ab73ce6768071ac55b8d481240ed57819b39ab56",
+      "verification": "sha256sum, 2026-10-24; documentary source bytes only"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json",
+      "sha256": "dae2aed7885b1f03f5f96a1285265a1189b8776a6472880c0f12c94de7f7ad02",
+      "verification": "sha256sum, 2026-10-24; documentary source bytes only"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/artifacts.md",
+      "sha256": "733db8ca63d1668e786c1574872e1adf74bcd69addd012e58fe714381eee1470",
+      "verification": "sha256sum, 2026-10-24; documentary source bytes only"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/arc-ux.md",
+      "sha256": "a7583446b4e350a712836b63cf65271542f27d797bfdbe0d3402a4e5d4b515d7",
+      "verification": "sha256sum, 2026-10-24; documentary source bytes only"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/features/peek.md",
+      "sha256": "a0b3ae7c935f70526445b568ff869acad5e00bae451ad49f10b903eec5c2670e",
+      "verification": "sha256sum, 2026-10-24; documentary source bytes only"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/features/pins.md",
+      "sha256": "1375fe3c0efa3e707f71ea8e58dbca51c490ef02bacdbef2c752df4c645c96b9",
+      "verification": "sha256sum, 2026-10-24; documentary source bytes only"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/organization-folder-preview.md",
+      "sha256": "17b69367120fb86a742599cd3e487329fde9a1b0afbf73ba0c8502301bcf1f65",
+      "verification": "sha256sum, 2026-10-24; documentary source bytes only"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/media-picture-in-picture.md",
+      "sha256": "3d674ff9e2f7964007a03660779898b968fe274da17704822fcd3d816e37040b",
+      "verification": "sha256sum, 2026-10-24; documentary source bytes only"
+    }
+  ],
+  "recordedArtifacts": [
+    {
+      "id": "arc-macos",
+      "platform": "macOS",
+      "product": "Arc",
+      "version": "1.170.0",
+      "build": "89123",
+      "type": "DMG",
+      "url": "https://releases.arc.net/release/Arc-1.170.0-89123.dmg",
+      "sha256": "5cf6d057e8944f847dac83d89b4d30d7a49c8974d02d29b35d2cf5afce9e36c1",
+      "sizeBytes": 458434157,
+      "executableArchitectures": [
+        "x86_64",
+        "arm64"
+      ],
+      "evidenceClass": "RECORDED_STATIC_INSPECTION",
+      "provenance": "artifacts.md, acquired 2026-10-23; not downloaded, rehashed, signature-verified or executed in this task",
+      "menuSha256": "c05560f6665c062b78dd326c4ce56307154010f981a45f4959671fb460ab1963",
+      "menuEvidenceId": "ev_cfff947c28d386fd3ea781438da8f9bf06f232c17b7f9431381cf4bf35d6306f"
+    },
+    {
+      "id": "dia-macos",
+      "platform": "macOS",
+      "product": "Dia",
+      "version": "1.54.2",
+      "build": "89247",
+      "type": "DMG",
+      "url": "https://releases.diabrowser.com/release/Dia-latest.dmg",
+      "versionedRoute": "https://releases.diabrowser.com/release/Dia-1.54.2-89247.dmg",
+      "sha256": "7f0cb70555190ee1d36563b09a4ed5d8146e2eeaa4b3430bcb38bbce7e6ad913",
+      "sizeBytes": 861800582,
+      "executableArchitectures": [
+        "arm64"
+      ],
+      "evidenceClass": "RECORDED_STATIC_INSPECTION",
+      "provenance": "artifacts.md, acquired latest-route 2026-10-23; versioned-route HEAD was size/availability only. No rehash/signature verification/execution here.",
+      "interfaceEvidenceId": "ev_44bd1b36489984ff70c53536c98091ed1a324bed4893267cb8ccd129c299127d",
+      "limitation": "Recovered compiled interfaces cover Sparkle updater dialogs, not product UI."
+    }
+  ],
+  "platforms": [
+    {
+      "id": "arc-macos",
+      "product": "Arc",
+      "os": "macOS",
+      "artifact": "arc-macos",
+      "runtimeState": "NOT_RUN",
+      "host": "NOT_ALLOCATED",
+      "account": "NO_AUTHORIZED_TEST_ACCOUNT_SUPPLIED"
+    },
+    {
+      "id": "dia-macos",
+      "product": "Dia",
+      "os": "macOS",
+      "artifact": "dia-macos",
+      "runtimeState": "NOT_RUN",
+      "host": "NOT_ALLOCATED",
+      "account": "NO_AUTHORIZED_TEST_ACCOUNT_SUPPLIED"
+    },
+    {
+      "id": "arc-windows",
+      "product": "Arc",
+      "os": "Windows",
+      "artifact": null,
+      "runtimeState": "BLOCKED_PACKAGE_AND_RUNTIME",
+      "dependency": "reference-windows-artifacts",
+      "host": "NOT_ALLOCATED",
+      "account": "NO_AUTHORIZED_TEST_ACCOUNT_SUPPLIED"
+    },
+    {
+      "id": "dia-windows",
+      "product": "Dia",
+      "os": "Windows",
+      "artifact": null,
+      "runtimeState": "BLOCKED_PACKAGE_AND_RUNTIME",
+      "dependency": "reference-windows-artifacts",
+      "host": "NOT_ALLOCATED",
+      "account": "NO_AUTHORIZED_TEST_ACCOUNT_SUPPLIED"
+    },
+    {
+      "id": "linux",
+      "product": null,
+      "os": "Linux",
+      "artifact": null,
+      "runtimeState": "NO_OFFICIAL_REFERENCE_PRODUCT",
+      "basis": "Authoritative issue acceptance criterion 1. Downstream Linux native verification remains OPEN."
+    }
+  ],
+  "primarySources": [
+    {
+      "id": "arc-sunset",
+      "url": "https://arc.net/",
+      "title": "A farewell to Arc",
+      "retrievedOn": "2026-10-24",
+      "access": "LIVE_PAGE",
+      "sections": [
+        "Timeline",
+        "Questions: When will I no longer be able to use Arc?"
+      ],
+      "facts": [
+        "New Arc accounts unavailable from 2026-10-22; existing accounts unaffected by that signup change.",
+        "Publisher says Arc macOS and Windows stop working on 2026-12-22 and account sign-in ends."
+      ],
+      "limits": "Publisher statement, not an observed login or shutdown. Do not create accounts or bypass sunset/login restrictions."
+    },
+    {
+      "id": "assigned-sunset-url",
+      "url": "https://resources.arc.net/hc/en-us/articles/44412972248471-Arc-Sunset-Key-Dates-and-What-to-Expect",
+      "retrievedOn": "2026-10-24",
+      "access": "FETCH_UNAVAILABLE",
+      "result": "URL is not accessible via web tool",
+      "replacementEvidence": "arc-sunset",
+      "limits": "No body retrieved. The publisher home page supplies the dates actually used."
+    },
+    {
+      "id": "dia-changelog",
+      "url": "https://www.diabrowser.com/changelog",
+      "title": "Dia Browser | Product Updates",
+      "retrievedOn": "2026-10-24",
+      "access": "LIVE_PAGE",
+      "sections": [
+        "2026-10-22 Mac v1.54.0",
+        "2026-10-22 Windows v1.3.0",
+        "2026-10-15 Mac v1.53.0",
+        "2026-10-15 Windows v1.2.0"
+      ],
+      "facts": [
+        "Mac v1.53.0 lists sidebar/split transition fixes.",
+        "Windows v1.2.0 lists a Back to Pinned URL control.",
+        "Windows v1.3.0 lists Focus Mode with hover reveal and split support.",
+        "Mac v1.54.0 and Windows v1.3.0 list external-app-dialog keyboard support."
+      ],
+      "limits": "Release-note labels are documentary claims, not package identities or runtime observations. Recorded Dia macOS DMG is 1.54.2, not 1.54.0. Windows build/architecture/hash remain unknown here."
+    },
+    {
+      "id": "arc-pins",
+      "url": "https://resources.arc.net/hc/en-us/articles/19231060187159-Pinned-Tabs-Tabs-you-want-to-stick-around",
+      "title": "Pinned Tabs: Tabs you want to stick around",
+      "retrievedOn": "2026-10-24",
+      "access": "SEARCH_CACHE_ONLY_DIRECT_404",
+      "cacheAgeAsReported": "5 months",
+      "facts": [
+        "Article applies to macOS and Windows and describes Space-scoped pinned tabs.",
+        "It describes links leaving a pinned site opening Peek."
+      ],
+      "limits": "No exact same-site classifier, redirect policy, focus rule or present runtime support established."
+    },
+    {
+      "id": "arc-folders",
+      "url": "https://resources.arc.net/hc/en-us/articles/19228419623447-Folders-Stash-Similar-Tabs-Together",
+      "title": "Folders: Stash Similar Tabs Together",
+      "retrievedOn": "2026-10-24",
+      "access": "SEARCH_CACHE_ONLY_DIRECT_404",
+      "cacheAgeAsReported": "5 months",
+      "facts": [
+        "Article covers folders on macOS and Windows.",
+        "The hover/search/scroll preview and active child under a closed folder are explicitly described for macOS."
+      ],
+      "limits": "The general article platform heading does not extend the macOS preview section to Windows."
+    },
+    {
+      "id": "arc-multitasking",
+      "url": "https://start.arc.net/master-multitasking",
+      "title": "Master your multitasking",
+      "retrievedOn": "2026-10-24",
+      "access": "LIVE_PAGE",
+      "facts": [
+        "Documents split creation by sidebar drag or command bar.",
+        "Documents sidebar Mini Player and video PiP when leaving a playing tab."
+      ],
+      "limits": "Uses Mac shortcuts. Does not prove Windows parity, focus recovery, exact live object preservation or supported package behavior."
+    },
+    {
+      "id": "arc-peek-legacy",
+      "url": "https://resources.arc.net/hc/en-us/articles/19335302900887-Peek-Preview-Sites-From-Pinned-Tabs",
+      "retrievedOn": "2026-10-24",
+      "access": "HISTORICAL_LOCAL_DOSSIER_REFERENCE",
+      "limits": "arc-ux.md labels URL retired. No current dedicated Peek page body retrieved in this task. A missing page is not proof the feature was retired."
+    }
+  ],
+  "externalBodyByteIdentity": "NOT_CAPTURED. Entries retain exact URLs, retrieval dates, access limits and paraphrased relevant facts; they are not archived page bytes.",
+  "historicalArtifactLocations": {
+    "paths": [
+      "/tmp/arc-dia-ux.rZ9n65/",
+      "/tmp/rea-extracted-f07865ad-474c-4e2f-a255-f2307819f2ed/"
+    ],
+    "state": "UNVERIFIABLE_WITH_FAST_FILESYSTEM",
+    "reason": "fs_stat_many refused paths outside allowed roots. This is not proof files are absent. No alternate access was attempted."
+  },
+  "dependencySnapshot": {
+    "observedOn": "2026-10-24",
+    "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/result.json",
+    "state": "NOT_PRESENT_AT_CHECK",
+    "limits": "Concurrent primary work may subsequently deliver it. Coordinator must reconcile by exact package identity."
+  }
+}

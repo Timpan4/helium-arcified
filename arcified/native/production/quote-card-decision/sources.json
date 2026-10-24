@@ -1,0 +1,84 @@
+{
+  "retrievalDate": "2026-10-23 UTC",
+  "method": "First-party documentary browsing only. No browser UI, account access, application execution or installers.",
+  "sources": [
+    {
+      "id": "A1",
+      "url": "https://resources.arc.net/hc/en-us/articles/20498377604887-Arc-for-macOS-2023-Release-Notes",
+      "publisher": "The Browser Company, Arc Help Center",
+      "retrievedAt": "2026-10-23 UTC",
+      "access": "direct web open",
+      "sections": [
+        "November 30, 2023, V1.19.1",
+        "December 14, 2023, V1.21.0"
+      ],
+      "finding": "Selected webpage text exposed Share Quote in URL bar and context menu. The action created and copied a custom page hyperlink with a quote image. A later note fixes quotes containing @.",
+      "limits": "Historical macOS documentation only. Clipboard MIME, image delivery/hosting, current availability and recipient behavior were not executed."
+    },
+    {
+      "id": "A2",
+      "url": "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+      "publisher": "The Browser Company, Arc Help Center",
+      "retrievedAt": "2026-10-23 UTC",
+      "access": "direct web open and find",
+      "sections": [
+        "January 11, 2024, V1.25.1",
+        "January 25, 2024, V1.27.2"
+      ],
+      "finding": "The URL-bar Share Quote button gained a disable setting under Arc > Settings > Advanced. Notes list automatic suppression on Gmail, Slack, Notion and YouTube, then Confluence.",
+      "limits": "The notes describe the URL-bar button, not proof that all Share Quote commands are disabled. No exact present-day site policy or Windows support inferred."
+    },
+    {
+      "id": "A3",
+      "url": "https://resources.arc.net/hc/en-us/articles/19228534606743-Share-Spaces-Folders-Splits-with-Anyone",
+      "publisher": "The Browser Company, Arc Help Center",
+      "retrievedAt": "2026-10-23 UTC",
+      "access": "direct open returned 404; first-party URL content recovered from web search index, crawled six months earlier according to search result",
+      "sections": [
+        "Share Quote",
+        "Important Notes about Shared Links"
+      ],
+      "finding": "Indexed text describes Share Quote as hyperlink plus quote image. Separately, Space/Folder/Split links are snapshots, require recipients' own site access and were described as not self-deletable.",
+      "limits": "Stale indexed evidence. Snapshot deletion/authentication statements are about collection links and must not be attributed to quote links. No current service availability verified."
+    },
+    {
+      "id": "A4",
+      "url": "https://start.arc.net/release-notes",
+      "publisher": "The Browser Company",
+      "retrievedAt": "2026-10-23 UTC",
+      "access": "direct web open and find",
+      "sections": [
+        "Archive"
+      ],
+      "finding": "The archive directs readers to the Arc Resource Center for full release notes. A Share Quote text search returned no match.",
+      "limits": "Absence of a text match is not retirement evidence; A1 supplies the explicit 2023 entry."
+    },
+    {
+      "id": "W1",
+      "url": "https://wicg.github.io/scroll-to-text-fragment/",
+      "publisher": "WICG",
+      "retrievedAt": "2026-10-23 UTC",
+      "access": "direct web open and find",
+      "sections": [
+        "URL Fragment Text Directives",
+        "3.5 Security and Privacy",
+        "3.5.4 Restricting the Text Fragment"
+      ],
+      "finding": "Text directives identify a passage in a page. Security restrictions include user involvement, frame/MIME restrictions and browsing-context isolation; matching/scrolling can have privacy side effects.",
+      "limits": "Living draft, not an Arc feature specification or runtime interoperability result."
+    },
+    {
+      "id": "W2",
+      "url": "https://web.dev/articles/text-fragments",
+      "publisher": "Google web.dev, Thomas Steiner",
+      "retrievedAt": "2026-10-23 UTC",
+      "access": "direct web open and find",
+      "sections": [
+        "Security",
+        "Privacy"
+      ],
+      "finding": "Text-fragment URLs can emphasize a passage. The article describes main-frame, navigation and isolation restrictions and privacy risks from observable scrolling. Sites can opt out through Document Policy.",
+      "limits": "Documentation does not prove this fork's installed UI, cross-browser behavior or card previews. Prepared source is the local implementation authority."
+    }
+  ]
+}

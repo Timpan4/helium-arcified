@@ -1,0 +1,175 @@
+{
+  "issueKey": "automation-contract",
+  "recordedDate": "2026-10-24",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "preparedSource": {
+    "root": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+    "version": "155.0.8059.79",
+    "gitIdentity": "Unavailable: prepared source is not a Git repository; git rev-parse HEAD exited 128. Exact inspected file SHA-256 values below identify bytes, not a clean upstream commit or complete tree.",
+    "mode": "strictly_read_only",
+    "files": [
+      {
+        "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/VERSION",
+        "baseSha256": "6364ce04bcd72b472e54baac73c17372bfde3447a7c76a6ac6b54131da83ad1e",
+        "resultSha256": "6364ce04bcd72b472e54baac73c17372bfde3447a7c76a6ac6b54131da83ad1e",
+        "status": "read_only_unmodified"
+      },
+      {
+        "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/extensions/api/tabs/tabs_api.cc",
+        "baseSha256": "f89bd75602b6aaf996ab6840dca3c3f170f3df21e94d35132169474269e90975",
+        "resultSha256": "f89bd75602b6aaf996ab6840dca3c3f170f3df21e94d35132169474269e90975",
+        "status": "read_only_unmodified"
+      },
+      {
+        "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/extensions/api/messaging/launch_context.cc",
+        "baseSha256": "14736390a9539ca8745977a9efad247adddac52df06211d5b9152fe404487387",
+        "resultSha256": "14736390a9539ca8745977a9efad247adddac52df06211d5b9152fe404487387",
+        "status": "read_only_unmodified"
+      },
+      {
+        "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/extensions/api/messaging/launch_context_posix.cc",
+        "baseSha256": "0a33ea36a088467cffad6092577719606a86cab27092bd5d984e11d95de27f7f",
+        "resultSha256": "0a33ea36a088467cffad6092577719606a86cab27092bd5d984e11d95de27f7f",
+        "status": "read_only_unmodified"
+      },
+      {
+        "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/extensions/api/messaging/launch_context_win.cc",
+        "baseSha256": "8a43d375f2f71b2eb20576e4b3b73d8e2e58cab2c6d46438a57aa1238e5962e5",
+        "resultSha256": "8a43d375f2f71b2eb20576e4b3b73d8e2e58cab2c6d46438a57aa1238e5962e5",
+        "status": "read_only_unmodified"
+      },
+      {
+        "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/extensions/api/messaging/native_message_process_host.cc",
+        "baseSha256": "6b15fe1376055ad425dc4072743161c2e0671477dc6ff5018585a0dbc17937e2",
+        "resultSha256": "6b15fe1376055ad425dc4072743161c2e0671477dc6ff5018585a0dbc17937e2",
+        "status": "read_only_unmodified"
+      },
+      {
+        "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/common/chrome_paths.cc",
+        "baseSha256": "deceabcf7e9f3f75e376d13037542e95095b7eadd383bff623a64a3295cd51df",
+        "resultSha256": "deceabcf7e9f3f75e376d13037542e95095b7eadd383bff623a64a3295cd51df",
+        "status": "read_only_unmodified"
+      },
+      {
+        "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/cocoa/applescript/browsercrapplication+applescript.mm",
+        "baseSha256": "a3daf864838cc2ac6288f52cc1df4a0eda61c2f2b9fc251e5088fc1ab7472b0b",
+        "resultSha256": "a3daf864838cc2ac6288f52cc1df4a0eda61c2f2b9fc251e5088fc1ab7472b0b",
+        "status": "read_only_unmodified"
+      },
+      {
+        "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/cocoa/applescript/window_applescript.mm",
+        "baseSha256": "cdca74a333eacfd24ccec179a1b12fc1aeb3ac28aca5bbcdc742b7e299c78ecf",
+        "resultSha256": "cdca74a333eacfd24ccec179a1b12fc1aeb3ac28aca5bbcdc742b7e299c78ecf",
+        "status": "read_only_unmodified"
+      },
+      {
+        "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/cocoa/applescript/tab_applescript.mm",
+        "baseSha256": "61d84d794fa77244ed1faa151233267bb656ec271e291dee9418255cfc7649c9",
+        "resultSha256": "61d84d794fa77244ed1faa151233267bb656ec271e291dee9418255cfc7649c9",
+        "status": "read_only_unmodified"
+      },
+      {
+        "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/cocoa/applescript/scripting.sdef",
+        "baseSha256": "cd0453c2e166a0b664f8ea1d1ac04b53a54eed14835569b6104a7823dbb950f2",
+        "resultSha256": "cd0453c2e166a0b664f8ea1d1ac04b53a54eed14835569b6104a7823dbb950f2",
+        "status": "read_only_unmodified"
+      },
+      {
+        "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/extensions/api/messaging/native_messaging_apitest_desktop.cc",
+        "baseSha256": "8c2580ede2ad6f958e674b15d4d0678f34573f4de0a42de4d1bf0921e8a22018",
+        "resultSha256": "8c2580ede2ad6f958e674b15d4d0678f34573f4de0a42de4d1bf0921e8a22018",
+        "status": "read_only_unmodified"
+      }
+    ]
+  },
+  "nativePatch": {
+    "status": "inapplicable_decision_leaf",
+    "path": null,
+    "reason": "Owner scope/transport decision required before implementation; no production code or test registration is changed."
+  },
+  "assignmentSource": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+  "authoritativeIssue": {
+    "key": "automation-contract",
+    "title": "Choose the browser automation surface and authorization model",
+    "area": "research",
+    "build": "Record supported platform automation entry points and a narrow safe command contract before enabling automation.",
+    "accept": [
+      "Choose a first command such as listing tabs and document transport, identity and permission requirements per OS.",
+      "Keep page JavaScript, private content and mutations separately authorized; do not expose a general privileged execution endpoint.",
+      "The fork owner records approved scope or deferral in this issue; document unsupported OS routes honestly."
+    ],
+    "blocked": [],
+    "sources": [
+      "artifact",
+      "arc-developer"
+    ],
+    "sourceUrls": [
+      "https://releases.arc.net/release/Arc-1.170.0-89123.dmg",
+      "https://releases.diabrowser.com/release/Dia-latest.dmg",
+      "https://resources.arc.net/hc/en-us/articles/20468488031511-Developer-Mode-Instant-Dev-Tools",
+      "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes"
+    ],
+    "phase": "Evidence, decisions and gates",
+    "readiness": "Publish as an owner decision, not an automatically accepted implementation.",
+    "kind": "decision",
+    "disposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+    "referencePlatforms": "Arc feature evidence is macOS-heavy or macOS-only as recorded in the dossier. Windows parity is not assumed; Linux is a downstream design target.",
+    "referenceNote": "REA 6.7.0 bundle/resource observations recorded in artifacts.md; no application execution or native-performance measurement.",
+    "openQuestions": "The fork owner records the named scope/security/service decision before implementation or external access.",
+    "priority": "Before AI",
+    "number": 25,
+    "url": "https://github.com/Timpan4/helium-arcified/issues/25",
+    "primaryCommandId": 40710
+  },
+  "externalSources": [
+    {
+      "id": "chrome-native-messaging",
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging",
+      "retrievedDate": "2026-10-24",
+      "status": "retrieved",
+      "limitation": "Chrome documentation; installed Helium/Arcified registration, policy, packaging and helper identity remain unverified."
+    },
+    {
+      "id": "chrome-tabs",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/tabs",
+      "retrievedDate": "2026-10-24",
+      "status": "retrieved",
+      "limitation": "API documentation is not mixed-Profile native acceptance."
+    },
+    {
+      "id": "chrome-debugging",
+      "url": "https://developer.chrome.com/blog/remote-debugging-port",
+      "retrievedDate": "2026-10-24",
+      "status": "retrieved",
+      "limitation": "Chrome 136 security change documented; fork behavior not tested."
+    },
+    {
+      "id": "apple-events",
+      "url": "https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.security.automation.apple-events",
+      "retrievedDate": "2026-10-24",
+      "status": "indexed_primary_summary_only",
+      "limitation": "Search returned entitlement definition; direct page required JavaScript and Markdown click failed. No runtime entitlement or TCC validation."
+    },
+    {
+      "id": "arc-developer",
+      "url": "https://resources.arc.net/hc/en-us/articles/20468488031511-Developer-Mode-Instant-Dev-Tools",
+      "retrievedDate": "2026-10-24",
+      "status": "404",
+      "limitation": "Cannot substantiate current automation support from this route."
+    },
+    {
+      "id": "arc-release-notes",
+      "url": "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+      "retrievedDate": "2026-10-24",
+      "status": "retrieved",
+      "limitation": "Find for AppleScript returned no matching text; no automation parity inferred."
+    }
+  ],
+  "priorEvidence": {
+    "path": "arcified/docs/research/arc-dia/artifacts.md",
+    "status": "read_reused_not_reexecuted",
+    "arcDmgSha256": "5cf6d057e8944f847dac83d89b4d30d7a49c8974d02d29b35d2cf5afce9e36c1",
+    "diaDmgSha256": "7f0cb70555190ee1d36563b09a4ed5d8146e2eeaa4b3430bcb38bbce7e6ad913",
+    "limitation": "Prior static Arc.sdef presence is a research lead. Dictionary bytes and reference runtime were not independently inspected here."
+  }
+}

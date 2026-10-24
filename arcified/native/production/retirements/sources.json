@@ -1,0 +1,128 @@
+{
+  "retrievedOn": "2026-10-24",
+  "method": "Primary publisher pages retrieved through web.run, parsed text only. No browser execution, accounts or installers. No raw HTTP byte hashes are claimed.",
+  "sources": [
+    {
+      "id": "ARC-2021",
+      "title": "Arc for macOS, 2021 release notes",
+      "url": "https://resources.arc.net/hc/en-us/articles/20498463803799-Arc-for-macOS-2021-Release-Notes",
+      "status": "retrieved",
+      "locators": [
+        "December 16, 2021, Favorite previews and People Cards",
+        "October 27, 2021, Reader Mode beta and June 6, 2024 disable annotation"
+      ],
+      "limitations": "Historical macOS documentary evidence. Does not establish present service availability or Windows behavior."
+    },
+    {
+      "id": "ARC-HISTORY",
+      "title": "Arc on Mac release-note archive",
+      "url": "https://start.arc.net/release-notes",
+      "status": "retrieved",
+      "locators": [
+        "December 16, 2021",
+        "October 27, 2021"
+      ],
+      "limitations": "Historical rollup; corroborates ARC-2021. Not current product parity."
+    },
+    {
+      "id": "ARC-MAC",
+      "title": "Arc for macOS, 2024 to 2026 release notes",
+      "url": "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+      "status": "retrieved",
+      "locators": [
+        "February 29, 2024, v1.32.0",
+        "March 28, 2024, v1.36.0",
+        "May 23, 2024, v1.44.1",
+        "June 6, 2024, v1.46.0",
+        "June 20, 2024, v1.48.0",
+        "September 26, 2024, v1.61.2",
+        "October 10, 2024, v1.63.1",
+        "August 28, 2025, v1.110.0"
+      ],
+      "limitations": "macOS only. Vendor removal rationale is not an independently assessed Chromium deprecation claim."
+    },
+    {
+      "id": "ARC-NOTES",
+      "title": "Phasing Out Arc Notes",
+      "url": "https://resources.arc.net/hc/en-us/articles/19233788518039-Phasing-Out-Arc-Notes",
+      "retrievedVia": "https://resources.arc.net/hc/en-us/articles/19233788518039",
+      "status": "retrieved_after_route_correction",
+      "locators": [
+        "Phase 1, March 14, 2024",
+        "Phase 2, April 4, 2024",
+        "Phase 3, April 18, 2024",
+        "How does exporting work?",
+        "Change Your Default Notes App"
+      ],
+      "limitations": "Initial slug URL returned 404 through web tool. Article-ID URL subsequently retrieved the page and redirected to the canonical slug. ZIP/HTML is documented but no exported files inspected."
+    },
+    {
+      "id": "ARC-WIN",
+      "title": "Arc for Windows, 2023 to 2026 release notes",
+      "url": "https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2026-Release-Notes",
+      "status": "retrieved",
+      "locators": [
+        "July 11, 2024, v1.10.0",
+        "July 18, 2024, v1.11.3"
+      ],
+      "limitations": "Historical Ask on Page launch/fix does not establish current post-removal Windows status."
+    },
+    {
+      "id": "ARC-SUNSET",
+      "title": "Arc Sunset: Key Dates and What to Expect",
+      "url": "https://resources.arc.net/hc/en-us/articles/44412972248471-Arc-Sunset-Key-Dates-and-What-to-Expect",
+      "retrievedVia": "https://resources.arc.net/hc/en-us/articles/44412972248471",
+      "status": "retrieved_after_route_correction",
+      "locators": [
+        "Key dates for the Arc sunset",
+        "What happens to Arc for macOS and Windows on December 22?",
+        "What happens to Arc Search for iOS?",
+        "What happens to Arc Search for Android?"
+      ],
+      "limitations": "Publisher announcement of future events as of retrieval date, not observed shutdown. Initial full-slug open failed; following the release-note link to the article ID succeeded."
+    },
+    {
+      "id": "ARC-TO-DIA",
+      "title": "Move from Arc to Dia",
+      "url": "https://resources.arc.net/hc/en-us/articles/44413129117591-Move-from-Arc-to-Dia",
+      "retrievedVia": "https://resources.arc.net/hc/en-us/articles/44413129117591",
+      "status": "retrieved_after_route_correction",
+      "locators": [
+        "How do I move from Arc to Dia?",
+        "What comes over from Arc?",
+        "What doesn't come over from Arc?",
+        "Does importing change anything in Arc?"
+      ],
+      "limitations": "Direct installed-browser import claims for Dia. No portable Arc schema or Arcified converter demonstrated. Initial full-slug open failed; linked article ID succeeded."
+    },
+    {
+      "id": "DIA-CHANGELOG",
+      "title": "Dia Product Updates",
+      "url": "https://www.diabrowser.com/changelog",
+      "status": "retrieved",
+      "locators": [
+        "September 24, 2026, Mac v1.50.0, Retiring Memory",
+        "September 10, 2026, Mac v1.48.0, Microsoft Tools in Chat",
+        "December 4, 2025, Mac v1.8.0, Create docs without breaking flow"
+      ],
+      "limitations": "Vendor claims, not executed product behavior or proof of data deletion."
+    },
+    {
+      "id": "DIA-SECURITY",
+      "title": "Dia Security FAQ",
+      "url": "https://www.diabrowser.com/security",
+      "status": "retrieved",
+      "locators": [
+        "FAQ, Where does my data live?"
+      ],
+      "limitations": "Undated page still describes Memory after the dated retirement announcement. The contradiction cannot be settled by these documents."
+    },
+    {
+      "id": "ARC-MAX-UNAVAILABLE",
+      "title": "Arc Max feature help route",
+      "url": "https://resources.arc.net/hc/en-us/articles/19335160678679-Arc-Max-Boost-Your-Browsing-with-AI",
+      "status": "unavailable",
+      "limitations": "Both canonical slug and article-ID route returned 404. No current Windows Ask on Page support inferred from this absence."
+    }
+  ]
+}

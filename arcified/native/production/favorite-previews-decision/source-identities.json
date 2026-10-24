@@ -1,0 +1,47 @@
+{
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "algorithm": "SHA-256",
+  "kind": "input_byte_identities_not_native_acceptance",
+  "inputs": [
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+      "sha256": "cc8ec03443b18a749b486e484a56b86218d8f41653970dea94185f76c9685354"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+      "sha256": "daf98f1cf993c1a21686289a88489bf001266d7fff4d85089d30055584c8a7b0"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md",
+      "sha256": "244488864d15d093f7f80e1cc40f490a979454e2a8e74db438c7e51283518a1c"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md",
+      "sha256": "e5951ba265be3587cb1df8f2ab73ce6768071ac55b8d481240ed57819b39ab56"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json",
+      "sha256": "dae2aed7885b1f03f5f96a1285265a1189b8776a6472880c0f12c94de7f7ad02"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/features/favorites/favorites.h",
+      "sha256": "ed270926ea1712f13b7122392e1dd6c8f3bb8cb7803c7ffbcb933065250a9ba9"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/features/organization/folder_preview.h",
+      "sha256": "61dba0565da7527b34cd5989efaeabba92d4970f9963eff1791b73def88970cd"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/features/favorites.md",
+      "sha256": "9063e7c67fca0f49e8e9732102a2631ab987b225a84a8c8c6c52181b191e01b7"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/organization-folder-preview.md",
+      "sha256": "17b69367120fb86a742599cd3e487329fde9a1b0afbf73ba0c8502301bcf1f65"
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/VERSION",
+      "sha256": "6364ce04bcd72b472e54baac73c17372bfde3447a7c76a6ac6b54131da83ad1e"
+    }
+  ]
+}

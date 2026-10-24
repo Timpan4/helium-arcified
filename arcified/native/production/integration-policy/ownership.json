@@ -1,0 +1,8 @@
+{
+  "issueKey": "integration-policy",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/26",
+  "primaryCommandId": 40751,
+  "owner": "assigned primary",
+  "scope": "This packet only. Coordinator reconciles common source changes.",
+  "nativeAcceptance": "OPEN"
+}

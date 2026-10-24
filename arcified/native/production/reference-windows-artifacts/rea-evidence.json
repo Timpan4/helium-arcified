@@ -1,0 +1,2238 @@
+{
+  "license": "GPL-3.0-only",
+  "serverIdentity": {
+    "package": {
+      "name": "rea-agents",
+      "version": "6.7.0",
+      "root_path": "/home/timpan4/.bun/install/cache/.bunx-1000/rea-agents@6.7.0/node_modules/rea-agents",
+      "build_commit": null
+    },
+    "server": {
+      "name": "rea",
+      "version": "6.7.0",
+      "started_at": "2026-10-23T22:29:09.188Z",
+      "command_path": "/home/timpan4/.bun/install/cache/.bunx-1000/rea-agents@6.7.0/node_modules/.bin/rea-agents"
+    },
+    "sdk": {
+      "server": "2.3.1",
+      "client_test": "2.3.1",
+      "core": "2.3.1"
+    },
+    "negotiated_protocol_version": "2025-06-18",
+    "client": {
+      "name": "codex-mcp-client",
+      "version": "0.164.0"
+    },
+    "skill": {
+      "name": "reverse-engineer-anything",
+      "expected_version": "42"
+    },
+    "catalog": {
+      "counts": {
+        "cli_commands": 153,
+        "mcp_tools": 207,
+        "mcp_prompts": 6
+      },
+      "digests": {
+        "tools_sha256": "af39310c9591bb981893ec0d2188b1bcf6e9cc8ba3ac513d5bbefc8ddcb85639",
+        "prompts_sha256": "7152916ab48bd2a9677a5ad9cdbde0a51dc53c113934952ad096e93f5f18aa7e",
+        "combined_sha256": "96d8f6e6ea1b1ba13557216624a3461c738729d53c79b4b0100d1f3a3a32441c"
+      }
+    },
+    "protocol_features": {
+      "progress": true,
+      "cancellation": true,
+      "elicitation": false
+    },
+    "alignment": {
+      "state": "unknown",
+      "reasons": [],
+      "remediation": "Supply expected package, catalog, or registration identity to compare the live server."
+    }
+  },
+  "host": "Linux",
+  "activeTargetOpenedByThisTask": false,
+  "records": [
+    {
+      "evidence_id": "ev_710f7267bb0cd7a0a615bc1821345586589758e7f0994dc1a05044b197bc0476",
+      "subject": {
+        "name": "ArcInstaller.exe",
+        "digest": {
+          "sha256": "971bc17eae07151311a9ef3fab3c9bb67cdbeb4702ceb6eb0285b4d0b9a10b16"
+        },
+        "local_path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/ArcInstaller.exe",
+        "format": "pe",
+        "architecture": "x86"
+      },
+      "provider": {
+        "id": "rea-analysis-view",
+        "name": "REA analysis view projection",
+        "version": "1"
+      },
+      "analysis_profile": null,
+      "predicate_type": "rea.analysis-view",
+      "operation": "inspect_analysis_view",
+      "parameters": {
+        "parent_evidence_id": "ev_3f024fd2705bd432f8ec3d7e11e39589feea7a0f62429c1a304b49b0e235cde5",
+        "view": {
+          "kind": "summary"
+        }
+      },
+      "raw_result": null,
+      "normalized_result": {
+        "kind": "summary",
+        "view": {
+          "kind": "summary"
+        },
+        "parent_evidence_id": "ev_3f024fd2705bd432f8ec3d7e11e39589feea7a0f62429c1a304b49b0e235cde5",
+        "parent_operation": "inspect_managed_artifact",
+        "parent_digest": "3f024fd2705bd432f8ec3d7e11e39589feea7a0f62429c1a304b49b0e235cde5",
+        "view_digest": "46c2f2bb9ddd553a3c1adf65c0bb3d751bda4244746ea1de8263b34da486437c",
+        "artifact": {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/ArcInstaller.exe",
+          "sha256": "971bc17eae07151311a9ef3fab3c9bb67cdbeb4702ceb6eb0285b4d0b9a10b16"
+        },
+        "coverage": {
+          "status": "complete-within-view",
+          "examined": 802,
+          "total": 802,
+          "next_offset": null,
+          "exhausted": true
+        },
+        "limitations": [
+          "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+        ],
+        "unknowns": [
+          "Collection counts and pages cover producer-returned rows; metadata completeness remains the original metadata status and coverage, not an absence claim about unreturned rows.",
+          "Metadata tokens are build-local coordinates bound to the recorded artifact SHA-256 and module MVID; this view does not load or execute the assembly."
+        ],
+        "summary": {
+          "artifact": {
+            "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/ArcInstaller.exe",
+            "sha256": "971bc17eae07151311a9ef3fab3c9bb67cdbeb4702ceb6eb0285b4d0b9a10b16",
+            "byte_length": 2002840,
+            "format": "pe"
+          },
+          "pe": {
+            "machine": 332,
+            "machine_hex": "0x014c",
+            "architecture": "x86",
+            "optional_header": "pe32",
+            "section_count": 3,
+            "characteristics": 290,
+            "cli": {
+              "header_offset": 520,
+              "header_size": 72,
+              "runtime_version": "2.5",
+              "flags": 1,
+              "flag_names": [
+                "il-only"
+              ],
+              "entry_point": {
+                "kind": "metadata-token",
+                "value": "0x06000188"
+              },
+              "metadata_rva": 1866432,
+              "metadata_size": 85896,
+              "resources_rva": 43904,
+              "resources_size": 1822528,
+              "strong_name_rva": 0,
+              "strong_name_size": 0,
+              "managed_native_header_rva": 0,
+              "managed_native_header_size": 0,
+              "ready_to_run_signature": false
+            }
+          },
+          "classification": {
+            "status": "managed",
+            "container": "pe",
+            "runtime_family": "dotnet-framework",
+            "implementation": "cil",
+            "managed_architecture": "anycpu",
+            "evidence": [
+              {
+                "code": "cli-header-observed",
+                "detail": "A file-backed PE CLI header and metadata root were admitted.",
+                "file_offset": 520
+              },
+              {
+                "code": "target-framework-observed",
+                "detail": "An assembly-level TargetFrameworkAttribute names .NET Framework.",
+                "file_offset": 1882612
+              },
+              {
+                "code": "managed-architecture-derived",
+                "detail": "Managed architecture anycpu is derived from PE machine and CLI flags.",
+                "file_offset": 536
+              }
+            ]
+          },
+          "metadata": {
+            "status": "complete",
+            "version": "v4.0.30319",
+            "stream_names": [
+              "#Blob",
+              "#GUID",
+              "#Strings",
+              "#US",
+              "#~"
+            ],
+            "table_row_counts": {
+              "Module": 1,
+              "TypeRef": 406,
+              "TypeDef": 137,
+              "Field": 489,
+              "MethodDef": 547,
+              "Param": 423,
+              "InterfaceImpl": 54,
+              "MemberRef": 846,
+              "Constant": 137,
+              "CustomAttribute": 745,
+              "FieldMarshal": 18,
+              "DeclSecurity": 1,
+              "ClassLayout": 1,
+              "StandAloneSig": 146,
+              "EventMap": 2,
+              "Event": 4,
+              "PropertyMap": 24,
+              "Property": 60,
+              "MethodSemantics": 98,
+              "MethodImpl": 82,
+              "ModuleRef": 3,
+              "TypeSpec": 127,
+              "ImplMap": 12,
+              "Assembly": 1,
+              "AssemblyRef": 28,
+              "ManifestResource": 29,
+              "NestedClass": 60,
+              "GenericParam": 12,
+              "MethodSpec": 120,
+              "GenericParamConstraint": 4
+            }
+          },
+          "module": {
+            "name": "ArcInstaller.exe",
+            "generation": 0,
+            "mvid": "38c24c15-0c13-4b1c-bbe2-aa1dc4e58514",
+            "enc_id": null,
+            "enc_base_id": null,
+            "token": "0x00000001",
+            "row_offset": 1859004
+          },
+          "assembly": {
+            "name": "ArcInstaller",
+            "version": "1.20.0.0",
+            "culture": null,
+            "flags": 0,
+            "hash_algorithm": 32772,
+            "public_key": {
+              "kind": "none",
+              "byte_length": 0,
+              "sha256": null,
+              "token": null
+            },
+            "token": "0x20000001",
+            "row_offset": 1889384
+          },
+          "target_frameworks": [
+            ".NETFramework,Version=v4.8.1"
+          ],
+          "coverage": {
+            "state": "complete",
+            "issues": []
+          },
+          "limitations": [
+            "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+          ],
+          "reported_counts": {
+            "references": 28,
+            "resources": 29,
+            "attributes": 745
+          },
+          "identity_scope": {
+            "token_identity": "build-local",
+            "requires_artifact_sha256": "971bc17eae07151311a9ef3fab3c9bb67cdbeb4702ceb6eb0285b4d0b9a10b16",
+            "requires_mvid": "38c24c15-0c13-4b1c-bbe2-aa1dc4e58514"
+          }
+        }
+      },
+      "confidence": "derived",
+      "authority": "shipped-artifact",
+      "environment": null,
+      "limitations": [
+        "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+      ],
+      "relationship_coverage": null,
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/ArcInstaller.exe"
+        }
+      ],
+      "evidence_links": [
+        "ev_3f024fd2705bd432f8ec3d7e11e39589feea7a0f62429c1a304b49b0e235cde5"
+      ]
+    },
+    {
+      "evidence_id": "ev_ea254f31ef15cb74f299f3e8d14889d0fab29f3837029c45135a6da6d5dcc4ef",
+      "subject": {
+        "name": "DiaInstaller.exe",
+        "digest": {
+          "sha256": "b868db670fe0c179f63c991602d4e187824bc656af17bc6684bca35df3355e3d"
+        },
+        "local_path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/DiaInstaller.exe",
+        "format": "pe",
+        "architecture": "x86"
+      },
+      "provider": {
+        "id": "rea-analysis-view",
+        "name": "REA analysis view projection",
+        "version": "1"
+      },
+      "analysis_profile": null,
+      "predicate_type": "rea.analysis-view",
+      "operation": "inspect_analysis_view",
+      "parameters": {
+        "parent_evidence_id": "ev_4fe2f9ac382c30f5f020ac62d0cc8dcfb55942f18e856532254a51333eba9407",
+        "view": {
+          "kind": "summary"
+        }
+      },
+      "raw_result": null,
+      "normalized_result": {
+        "kind": "summary",
+        "view": {
+          "kind": "summary"
+        },
+        "parent_evidence_id": "ev_4fe2f9ac382c30f5f020ac62d0cc8dcfb55942f18e856532254a51333eba9407",
+        "parent_operation": "inspect_managed_artifact",
+        "parent_digest": "4fe2f9ac382c30f5f020ac62d0cc8dcfb55942f18e856532254a51333eba9407",
+        "view_digest": "2d7a49698c836f4bd15b796766ffd0e3cff6168de47f20a4c896b661785e731e",
+        "artifact": {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/DiaInstaller.exe",
+          "sha256": "b868db670fe0c179f63c991602d4e187824bc656af17bc6684bca35df3355e3d"
+        },
+        "coverage": {
+          "status": "complete-within-view",
+          "examined": 797,
+          "total": 797,
+          "next_offset": null,
+          "exhausted": true
+        },
+        "limitations": [
+          "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+        ],
+        "unknowns": [
+          "Collection counts and pages cover producer-returned rows; metadata completeness remains the original metadata status and coverage, not an absence claim about unreturned rows.",
+          "Metadata tokens are build-local coordinates bound to the recorded artifact SHA-256 and module MVID; this view does not load or execute the assembly."
+        ],
+        "summary": {
+          "artifact": {
+            "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/DiaInstaller.exe",
+            "sha256": "b868db670fe0c179f63c991602d4e187824bc656af17bc6684bca35df3355e3d",
+            "byte_length": 2011032,
+            "format": "pe"
+          },
+          "pe": {
+            "machine": 332,
+            "machine_hex": "0x014c",
+            "architecture": "x86",
+            "optional_header": "pe32",
+            "section_count": 3,
+            "characteristics": 290,
+            "cli": {
+              "header_offset": 520,
+              "header_size": 72,
+              "runtime_version": "2.5",
+              "flags": 1,
+              "flag_names": [
+                "il-only"
+              ],
+              "entry_point": {
+                "kind": "metadata-token",
+                "value": "0x06000187"
+              },
+              "metadata_rva": 1804652,
+              "metadata_size": 85340,
+              "resources_rva": 43420,
+              "resources_size": 1761232,
+              "strong_name_rva": 0,
+              "strong_name_size": 0,
+              "managed_native_header_rva": 0,
+              "managed_native_header_size": 0,
+              "ready_to_run_signature": false
+            }
+          },
+          "classification": {
+            "status": "managed",
+            "container": "pe",
+            "runtime_family": "dotnet-framework",
+            "implementation": "cil",
+            "managed_architecture": "anycpu",
+            "evidence": [
+              {
+                "code": "cli-header-observed",
+                "detail": "A file-backed PE CLI header and metadata root were admitted.",
+                "file_offset": 520
+              },
+              {
+                "code": "target-framework-observed",
+                "detail": "An assembly-level TargetFrameworkAttribute names .NET Framework.",
+                "file_offset": 1820598
+              },
+              {
+                "code": "managed-architecture-derived",
+                "detail": "Managed architecture anycpu is derived from PE machine and CLI flags.",
+                "file_offset": 536
+              }
+            ]
+          },
+          "metadata": {
+            "status": "complete",
+            "version": "v4.0.30319",
+            "stream_names": [
+              "#Blob",
+              "#GUID",
+              "#Strings",
+              "#US",
+              "#~"
+            ],
+            "table_row_counts": {
+              "Module": 1,
+              "TypeRef": 394,
+              "TypeDef": 135,
+              "Field": 491,
+              "MethodDef": 540,
+              "Param": 422,
+              "InterfaceImpl": 54,
+              "MemberRef": 832,
+              "Constant": 144,
+              "CustomAttribute": 740,
+              "FieldMarshal": 18,
+              "DeclSecurity": 1,
+              "ClassLayout": 1,
+              "StandAloneSig": 150,
+              "EventMap": 2,
+              "Event": 4,
+              "PropertyMap": 25,
+              "Property": 55,
+              "MethodSemantics": 93,
+              "MethodImpl": 82,
+              "ModuleRef": 3,
+              "TypeSpec": 125,
+              "ImplMap": 12,
+              "Assembly": 1,
+              "AssemblyRef": 27,
+              "ManifestResource": 30,
+              "NestedClass": 59,
+              "GenericParam": 12,
+              "MethodSpec": 120,
+              "GenericParamConstraint": 4
+            }
+          },
+          "module": {
+            "name": "DiaInstaller.exe",
+            "generation": 0,
+            "mvid": "a8f30ca4-2472-4a7d-9820-0ffebaf3dd62",
+            "enc_id": null,
+            "enc_base_id": null,
+            "token": "0x00000001",
+            "row_offset": 1797224
+          },
+          "assembly": {
+            "name": "DiaInstaller",
+            "version": "1.30.0.0",
+            "culture": null,
+            "flags": 0,
+            "hash_algorithm": 32772,
+            "public_key": {
+              "kind": "none",
+              "byte_length": 0,
+              "sha256": null,
+              "token": null
+            },
+            "token": "0x20000001",
+            "row_offset": 1827288
+          },
+          "target_frameworks": [
+            ".NETFramework,Version=v4.8.1"
+          ],
+          "coverage": {
+            "state": "complete",
+            "issues": []
+          },
+          "limitations": [
+            "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+          ],
+          "reported_counts": {
+            "references": 27,
+            "resources": 30,
+            "attributes": 740
+          },
+          "identity_scope": {
+            "token_identity": "build-local",
+            "requires_artifact_sha256": "b868db670fe0c179f63c991602d4e187824bc656af17bc6684bca35df3355e3d",
+            "requires_mvid": "a8f30ca4-2472-4a7d-9820-0ffebaf3dd62"
+          }
+        }
+      },
+      "confidence": "derived",
+      "authority": "shipped-artifact",
+      "environment": null,
+      "limitations": [
+        "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+      ],
+      "relationship_coverage": null,
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/DiaInstaller.exe"
+        }
+      ],
+      "evidence_links": [
+        "ev_4fe2f9ac382c30f5f020ac62d0cc8dcfb55942f18e856532254a51333eba9407"
+      ]
+    },
+    {
+      "evidence_id": "ev_b26257a1ff395a7ab546c12bdb6861ff524f49c8817732b53fca1a0cf41cf254",
+      "subject": {
+        "name": "ArcInstaller.exe",
+        "digest": {
+          "sha256": "971bc17eae07151311a9ef3fab3c9bb67cdbeb4702ceb6eb0285b4d0b9a10b16"
+        },
+        "local_path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/ArcInstaller.exe",
+        "format": "pe",
+        "architecture": "x86"
+      },
+      "provider": {
+        "id": "rea-pe-resources",
+        "name": "REA PE resource parser",
+        "version": "1"
+      },
+      "analysis_profile": null,
+      "predicate_type": "rea.analysis",
+      "operation": "inspect_pe_resources",
+      "parameters": {
+        "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/ArcInstaller.exe",
+        "max_file_bytes": 67108864,
+        "max_entries": 16384
+      },
+      "raw_result": null,
+      "normalized_result": {
+        "artifact": {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/ArcInstaller.exe",
+          "sha256": "971bc17eae07151311a9ef3fab3c9bb67cdbeb4702ceb6eb0285b4d0b9a10b16",
+          "bytes": 2002840
+        },
+        "format": "pe32",
+        "machine": 332,
+        "directory": {
+          "rva": 1957888,
+          "location": {
+            "offset": 1945088,
+            "bytes": 44552
+          },
+          "data_directory_location": {
+            "offset": 264,
+            "bytes": 8
+          }
+        },
+        "directories": [
+          {
+            "location": {
+              "offset": 1945088,
+              "bytes": 48
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 4
+          },
+          {
+            "location": {
+              "offset": 1945136,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1945160,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1945184,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1945208,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1945232,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1945256,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1945280,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1945304,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          }
+        ],
+        "resources": [
+          {
+            "index": 0,
+            "type": {
+              "kind": "id",
+              "id": 3
+            },
+            "name": {
+              "kind": "id",
+              "id": 1
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1945104,
+                "bytes": 8
+              },
+              {
+                "offset": 1945152,
+                "bytes": 8
+              },
+              {
+                "offset": 1945176,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1945328,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1958144,
+              "location": {
+                "offset": 1945344,
+                "bytes": 41122
+              },
+              "sha256": "ac4cd738d4230cbe6d357a50ceeceea29567bbe183938ee9df84a1bb849f3835"
+            }
+          },
+          {
+            "index": 1,
+            "type": {
+              "kind": "id",
+              "id": 14
+            },
+            "name": {
+              "kind": "id",
+              "id": 32512
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1945112,
+                "bytes": 8
+              },
+              {
+                "offset": 1945200,
+                "bytes": 8
+              },
+              {
+                "offset": 1945224,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1986468,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1999284,
+              "location": {
+                "offset": 1986484,
+                "bytes": 20
+              },
+              "sha256": "2ca40d4a47cadec8384569995d7429de75cefc0c368b2e2ff2d6ff3b2dd21b5f"
+            }
+          },
+          {
+            "index": 2,
+            "type": {
+              "kind": "id",
+              "id": 16
+            },
+            "name": {
+              "kind": "id",
+              "id": 1
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1945120,
+                "bytes": 8
+              },
+              {
+                "offset": 1945248,
+                "bytes": 8
+              },
+              {
+                "offset": 1945272,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1986504,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1999320,
+              "location": {
+                "offset": 1986520,
+                "bytes": 834
+              },
+              "sha256": "7f25197f1dd69da6da5a7eb0e5e6953e8eea7b5501098f72bd26b0e61a4f979d"
+            }
+          },
+          {
+            "index": 3,
+            "type": {
+              "kind": "id",
+              "id": 24
+            },
+            "name": {
+              "kind": "id",
+              "id": 1
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1945128,
+                "bytes": 8
+              },
+              {
+                "offset": 1945296,
+                "bytes": 8
+              },
+              {
+                "offset": 1945320,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1987356,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 2000172,
+              "location": {
+                "offset": 1987372,
+                "bytes": 2264
+              },
+              "sha256": "fc2327d28da25b295b554b3f001364d1077d67fe411d0f504f5ea450b15457a8"
+            }
+          }
+        ],
+        "icon_groups": [
+          {
+            "resource_index": 1,
+            "images": [
+              {
+                "location": {
+                  "offset": 1986490,
+                  "bytes": 14
+                },
+                "width": 0,
+                "height": 0,
+                "color_count": 0,
+                "reserved": 0,
+                "planes": 1,
+                "bit_count": 32,
+                "declared_bytes": 41122,
+                "resource_id": 1,
+                "candidate_resource_indices": [
+                  0
+                ],
+                "same_language_resource_index": 0,
+                "size_matches": true
+              }
+            ]
+          }
+        ],
+        "coverage": {
+          "status": "complete",
+          "examined_entries": 12,
+          "resources": 4
+        },
+        "limitations": [
+          "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+          "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+          "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+        ]
+      },
+      "confidence": "observed",
+      "authority": "shipped-artifact",
+      "environment": null,
+      "limitations": [
+        "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+        "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+        "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+      ],
+      "relationship_coverage": null,
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/ArcInstaller.exe"
+        }
+      ],
+      "evidence_links": []
+    },
+    {
+      "evidence_id": "ev_eadfcf0efed68dae58198157d0d4efa91d63240886911c5cf3dba8cc46ecf38a",
+      "subject": {
+        "name": "DiaInstaller.exe",
+        "digest": {
+          "sha256": "b868db670fe0c179f63c991602d4e187824bc656af17bc6684bca35df3355e3d"
+        },
+        "local_path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/DiaInstaller.exe",
+        "format": "pe",
+        "architecture": "x86"
+      },
+      "provider": {
+        "id": "rea-pe-resources",
+        "name": "REA PE resource parser",
+        "version": "1"
+      },
+      "analysis_profile": null,
+      "predicate_type": "rea.analysis",
+      "operation": "inspect_pe_resources",
+      "parameters": {
+        "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/DiaInstaller.exe",
+        "max_file_bytes": 67108864,
+        "max_entries": 16384
+      },
+      "raw_result": null,
+      "normalized_result": {
+        "artifact": {
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/DiaInstaller.exe",
+          "sha256": "b868db670fe0c179f63c991602d4e187824bc656af17bc6684bca35df3355e3d",
+          "bytes": 2011032
+        },
+        "format": "pe32",
+        "machine": 332,
+        "directory": {
+          "rva": 1892352,
+          "location": {
+            "offset": 1882624,
+            "bytes": 115492
+          },
+          "data_directory_location": {
+            "offset": 264,
+            "bytes": 8
+          }
+        },
+        "directories": [
+          {
+            "location": {
+              "offset": 1882624,
+              "bytes": 48
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 4
+          },
+          {
+            "location": {
+              "offset": 1882672,
+              "bytes": 128
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 14
+          },
+          {
+            "location": {
+              "offset": 1882800,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1882824,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1882848,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1882872,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1882896,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1882920,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1882944,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1882968,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1882992,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1883016,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1883040,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1883064,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1883088,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1883112,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1883136,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1883160,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1883184,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1883208,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1883232,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          },
+          {
+            "location": {
+              "offset": 1883256,
+              "bytes": 24
+            },
+            "characteristics": 0,
+            "timestamp": 0,
+            "major_version": 0,
+            "minor_version": 0,
+            "named_entries": 0,
+            "id_entries": 1
+          }
+        ],
+        "resources": [
+          {
+            "index": 0,
+            "type": {
+              "kind": "id",
+              "id": 3
+            },
+            "name": {
+              "kind": "id",
+              "id": 1
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882640,
+                "bytes": 8
+              },
+              {
+                "offset": 1882688,
+                "bytes": 8
+              },
+              {
+                "offset": 1882816,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1883280,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1893024,
+              "location": {
+                "offset": 1883296,
+                "bytes": 595
+              },
+              "sha256": "d98f0018f25bfe56b86f9b3d554884ea61b85134eaa3fc75d494ea7bf2355335"
+            }
+          },
+          {
+            "index": 1,
+            "type": {
+              "kind": "id",
+              "id": 3
+            },
+            "name": {
+              "kind": "id",
+              "id": 2
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882640,
+                "bytes": 8
+              },
+              {
+                "offset": 1882696,
+                "bytes": 8
+              },
+              {
+                "offset": 1882840,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1883892,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1893636,
+              "location": {
+                "offset": 1883908,
+                "bytes": 805
+              },
+              "sha256": "9f15239a41f91ed5421c50d8e92daf2e069750de1658a7a2260a1f9a1cee1f72"
+            }
+          },
+          {
+            "index": 2,
+            "type": {
+              "kind": "id",
+              "id": 3
+            },
+            "name": {
+              "kind": "id",
+              "id": 3
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882640,
+                "bytes": 8
+              },
+              {
+                "offset": 1882704,
+                "bytes": 8
+              },
+              {
+                "offset": 1882864,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1884716,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1894460,
+              "location": {
+                "offset": 1884732,
+                "bytes": 1091
+              },
+              "sha256": "cdd91138348cc424ff60b280ab9f96ef79ea77f9ab632804f488c756311ad14d"
+            }
+          },
+          {
+            "index": 3,
+            "type": {
+              "kind": "id",
+              "id": 3
+            },
+            "name": {
+              "kind": "id",
+              "id": 4
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882640,
+                "bytes": 8
+              },
+              {
+                "offset": 1882712,
+                "bytes": 8
+              },
+              {
+                "offset": 1882888,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1885824,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1895568,
+              "location": {
+                "offset": 1885840,
+                "bytes": 1502
+              },
+              "sha256": "47afc45531fc226010a61e734890e814f12bab7d07cd63b92d589112b9bbec12"
+            }
+          },
+          {
+            "index": 4,
+            "type": {
+              "kind": "id",
+              "id": 3
+            },
+            "name": {
+              "kind": "id",
+              "id": 5
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882640,
+                "bytes": 8
+              },
+              {
+                "offset": 1882720,
+                "bytes": 8
+              },
+              {
+                "offset": 1882912,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1887344,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1897088,
+              "location": {
+                "offset": 1887360,
+                "bytes": 1683
+              },
+              "sha256": "51bd3d17a394c5044c7c2809e25287930b58bd540b9bc0a1b31b3c1428c225d7"
+            }
+          },
+          {
+            "index": 5,
+            "type": {
+              "kind": "id",
+              "id": 3
+            },
+            "name": {
+              "kind": "id",
+              "id": 6
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882640,
+                "bytes": 8
+              },
+              {
+                "offset": 1882728,
+                "bytes": 8
+              },
+              {
+                "offset": 1882936,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1889044,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1898788,
+              "location": {
+                "offset": 1889060,
+                "bytes": 2020
+              },
+              "sha256": "0768c694e8bf3c32ecb09e12dd5537a849388c3ddbd1692447afae69a5148cad"
+            }
+          },
+          {
+            "index": 6,
+            "type": {
+              "kind": "id",
+              "id": 3
+            },
+            "name": {
+              "kind": "id",
+              "id": 7
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882640,
+                "bytes": 8
+              },
+              {
+                "offset": 1882736,
+                "bytes": 8
+              },
+              {
+                "offset": 1882960,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1891080,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1900824,
+              "location": {
+                "offset": 1891096,
+                "bytes": 2402
+              },
+              "sha256": "c891e1b5f86ee655494bb7372a70f54638786df3998d80f839bac626f83cf06b"
+            }
+          },
+          {
+            "index": 7,
+            "type": {
+              "kind": "id",
+              "id": 3
+            },
+            "name": {
+              "kind": "id",
+              "id": 8
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882640,
+                "bytes": 8
+              },
+              {
+                "offset": 1882744,
+                "bytes": 8
+              },
+              {
+                "offset": 1882984,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1893500,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1903244,
+              "location": {
+                "offset": 1893516,
+                "bytes": 3250
+              },
+              "sha256": "c4f455077d5de082627f3aade93d5b21f4a240faa873f70f1548cdebb197a9a6"
+            }
+          },
+          {
+            "index": 8,
+            "type": {
+              "kind": "id",
+              "id": 3
+            },
+            "name": {
+              "kind": "id",
+              "id": 9
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882640,
+                "bytes": 8
+              },
+              {
+                "offset": 1882752,
+                "bytes": 8
+              },
+              {
+                "offset": 1883008,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1896768,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1906512,
+              "location": {
+                "offset": 1896784,
+                "bytes": 4736
+              },
+              "sha256": "705b80ab86f233c0cfed0b626e44f233e8bd1037f885316328e77dd2f8482108"
+            }
+          },
+          {
+            "index": 9,
+            "type": {
+              "kind": "id",
+              "id": 3
+            },
+            "name": {
+              "kind": "id",
+              "id": 10
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882640,
+                "bytes": 8
+              },
+              {
+                "offset": 1882760,
+                "bytes": 8
+              },
+              {
+                "offset": 1883032,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1901520,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1911264,
+              "location": {
+                "offset": 1901536,
+                "bytes": 5376
+              },
+              "sha256": "bbdef4ef7c53fae3231837f548a7b6d0d138ca8a2b811c51d693c24d18225c22"
+            }
+          },
+          {
+            "index": 10,
+            "type": {
+              "kind": "id",
+              "id": 3
+            },
+            "name": {
+              "kind": "id",
+              "id": 11
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882640,
+                "bytes": 8
+              },
+              {
+                "offset": 1882768,
+                "bytes": 8
+              },
+              {
+                "offset": 1883056,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1906912,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1916656,
+              "location": {
+                "offset": 1906928,
+                "bytes": 6667
+              },
+              "sha256": "ee51bc04ede6570218927a68bb8cb66f05feddf9ddb72709595ec6c012bb9479"
+            }
+          },
+          {
+            "index": 11,
+            "type": {
+              "kind": "id",
+              "id": 3
+            },
+            "name": {
+              "kind": "id",
+              "id": 12
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882640,
+                "bytes": 8
+              },
+              {
+                "offset": 1882776,
+                "bytes": 8
+              },
+              {
+                "offset": 1883080,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1913596,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1923340,
+              "location": {
+                "offset": 1913612,
+                "bytes": 7958
+              },
+              "sha256": "7f63b9d368ccf24f3dc03c151c04a7a6db3c43b7b50e93c03d8766ae4a004fa8"
+            }
+          },
+          {
+            "index": 12,
+            "type": {
+              "kind": "id",
+              "id": 3
+            },
+            "name": {
+              "kind": "id",
+              "id": 13
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882640,
+                "bytes": 8
+              },
+              {
+                "offset": 1882784,
+                "bytes": 8
+              },
+              {
+                "offset": 1883104,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1921572,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1931316,
+              "location": {
+                "offset": 1921588,
+                "bytes": 11010
+              },
+              "sha256": "83fadeecc1b4cc30e7c3cbac664175e96fa94cdd18fe2126945743900bf9255a"
+            }
+          },
+          {
+            "index": 13,
+            "type": {
+              "kind": "id",
+              "id": 3
+            },
+            "name": {
+              "kind": "id",
+              "id": 14
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882640,
+                "bytes": 8
+              },
+              {
+                "offset": 1882792,
+                "bytes": 8
+              },
+              {
+                "offset": 1883128,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1932600,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 1942344,
+              "location": {
+                "offset": 1932616,
+                "bytes": 62142
+              },
+              "sha256": "de586a4e1c57e6a66b1be9f72986ac16099f508d635d698a59b78d50a9212885"
+            }
+          },
+          {
+            "index": 14,
+            "type": {
+              "kind": "id",
+              "id": 14
+            },
+            "name": {
+              "kind": "id",
+              "id": 32512
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882648,
+                "bytes": 8
+              },
+              {
+                "offset": 1883152,
+                "bytes": 8
+              },
+              {
+                "offset": 1883176,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1994760,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 2004504,
+              "location": {
+                "offset": 1994776,
+                "bytes": 202
+              },
+              "sha256": "3d776aec9d7fe1c83e7c0fde07c94777edbdef83dd28f93520068ad716db6bc5"
+            }
+          },
+          {
+            "index": 15,
+            "type": {
+              "kind": "id",
+              "id": 16
+            },
+            "name": {
+              "kind": "id",
+              "id": 1
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882656,
+                "bytes": 8
+              },
+              {
+                "offset": 1883200,
+                "bytes": 8
+              },
+              {
+                "offset": 1883224,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1994980,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 2004724,
+              "location": {
+                "offset": 1994996,
+                "bytes": 834
+              },
+              "sha256": "2ece61823f856b4f19cb41496acd60e00f3b7990b066a1fb6829e654ee7359ce"
+            }
+          },
+          {
+            "index": 16,
+            "type": {
+              "kind": "id",
+              "id": 24
+            },
+            "name": {
+              "kind": "id",
+              "id": 1
+            },
+            "language": {
+              "kind": "id",
+              "id": 0
+            },
+            "entry_locations": [
+              {
+                "offset": 1882664,
+                "bytes": 8
+              },
+              {
+                "offset": 1883248,
+                "bytes": 8
+              },
+              {
+                "offset": 1883272,
+                "bytes": 8
+              }
+            ],
+            "data_entry_location": {
+              "offset": 1995832,
+              "bytes": 16
+            },
+            "code_page": 0,
+            "reserved": 0,
+            "payload": {
+              "rva": 2005576,
+              "location": {
+                "offset": 1995848,
+                "bytes": 2264
+              },
+              "sha256": "fc2327d28da25b295b554b3f001364d1077d67fe411d0f504f5ea450b15457a8"
+            }
+          }
+        ],
+        "icon_groups": [
+          {
+            "resource_index": 14,
+            "images": [
+              {
+                "location": {
+                  "offset": 1994782,
+                  "bytes": 14
+                },
+                "width": 16,
+                "height": 16,
+                "color_count": 0,
+                "reserved": 0,
+                "planes": 0,
+                "bit_count": 32,
+                "declared_bytes": 595,
+                "resource_id": 1,
+                "candidate_resource_indices": [
+                  0
+                ],
+                "same_language_resource_index": 0,
+                "size_matches": true
+              },
+              {
+                "location": {
+                  "offset": 1994796,
+                  "bytes": 14
+                },
+                "width": 20,
+                "height": 20,
+                "color_count": 0,
+                "reserved": 0,
+                "planes": 0,
+                "bit_count": 32,
+                "declared_bytes": 805,
+                "resource_id": 2,
+                "candidate_resource_indices": [
+                  1
+                ],
+                "same_language_resource_index": 1,
+                "size_matches": true
+              },
+              {
+                "location": {
+                  "offset": 1994810,
+                  "bytes": 14
+                },
+                "width": 24,
+                "height": 24,
+                "color_count": 0,
+                "reserved": 0,
+                "planes": 0,
+                "bit_count": 32,
+                "declared_bytes": 1091,
+                "resource_id": 3,
+                "candidate_resource_indices": [
+                  2
+                ],
+                "same_language_resource_index": 2,
+                "size_matches": true
+              },
+              {
+                "location": {
+                  "offset": 1994824,
+                  "bytes": 14
+                },
+                "width": 30,
+                "height": 30,
+                "color_count": 0,
+                "reserved": 0,
+                "planes": 0,
+                "bit_count": 32,
+                "declared_bytes": 1502,
+                "resource_id": 4,
+                "candidate_resource_indices": [
+                  3
+                ],
+                "same_language_resource_index": 3,
+                "size_matches": true
+              },
+              {
+                "location": {
+                  "offset": 1994838,
+                  "bytes": 14
+                },
+                "width": 32,
+                "height": 32,
+                "color_count": 0,
+                "reserved": 0,
+                "planes": 0,
+                "bit_count": 32,
+                "declared_bytes": 1683,
+                "resource_id": 5,
+                "candidate_resource_indices": [
+                  4
+                ],
+                "same_language_resource_index": 4,
+                "size_matches": true
+              },
+              {
+                "location": {
+                  "offset": 1994852,
+                  "bytes": 14
+                },
+                "width": 36,
+                "height": 36,
+                "color_count": 0,
+                "reserved": 0,
+                "planes": 0,
+                "bit_count": 32,
+                "declared_bytes": 2020,
+                "resource_id": 6,
+                "candidate_resource_indices": [
+                  5
+                ],
+                "same_language_resource_index": 5,
+                "size_matches": true
+              },
+              {
+                "location": {
+                  "offset": 1994866,
+                  "bytes": 14
+                },
+                "width": 40,
+                "height": 40,
+                "color_count": 0,
+                "reserved": 0,
+                "planes": 0,
+                "bit_count": 32,
+                "declared_bytes": 2402,
+                "resource_id": 7,
+                "candidate_resource_indices": [
+                  6
+                ],
+                "same_language_resource_index": 6,
+                "size_matches": true
+              },
+              {
+                "location": {
+                  "offset": 1994880,
+                  "bytes": 14
+                },
+                "width": 48,
+                "height": 48,
+                "color_count": 0,
+                "reserved": 0,
+                "planes": 0,
+                "bit_count": 32,
+                "declared_bytes": 3250,
+                "resource_id": 8,
+                "candidate_resource_indices": [
+                  7
+                ],
+                "same_language_resource_index": 7,
+                "size_matches": true
+              },
+              {
+                "location": {
+                  "offset": 1994894,
+                  "bytes": 14
+                },
+                "width": 60,
+                "height": 60,
+                "color_count": 0,
+                "reserved": 0,
+                "planes": 0,
+                "bit_count": 32,
+                "declared_bytes": 4736,
+                "resource_id": 9,
+                "candidate_resource_indices": [
+                  8
+                ],
+                "same_language_resource_index": 8,
+                "size_matches": true
+              },
+              {
+                "location": {
+                  "offset": 1994908,
+                  "bytes": 14
+                },
+                "width": 64,
+                "height": 64,
+                "color_count": 0,
+                "reserved": 0,
+                "planes": 0,
+                "bit_count": 32,
+                "declared_bytes": 5376,
+                "resource_id": 10,
+                "candidate_resource_indices": [
+                  9
+                ],
+                "same_language_resource_index": 9,
+                "size_matches": true
+              },
+              {
+                "location": {
+                  "offset": 1994922,
+                  "bytes": 14
+                },
+                "width": 72,
+                "height": 72,
+                "color_count": 0,
+                "reserved": 0,
+                "planes": 0,
+                "bit_count": 32,
+                "declared_bytes": 6667,
+                "resource_id": 11,
+                "candidate_resource_indices": [
+                  10
+                ],
+                "same_language_resource_index": 10,
+                "size_matches": true
+              },
+              {
+                "location": {
+                  "offset": 1994936,
+                  "bytes": 14
+                },
+                "width": 80,
+                "height": 80,
+                "color_count": 0,
+                "reserved": 0,
+                "planes": 0,
+                "bit_count": 32,
+                "declared_bytes": 7958,
+                "resource_id": 12,
+                "candidate_resource_indices": [
+                  11
+                ],
+                "same_language_resource_index": 11,
+                "size_matches": true
+              },
+              {
+                "location": {
+                  "offset": 1994950,
+                  "bytes": 14
+                },
+                "width": 96,
+                "height": 96,
+                "color_count": 0,
+                "reserved": 0,
+                "planes": 0,
+                "bit_count": 32,
+                "declared_bytes": 11010,
+                "resource_id": 13,
+                "candidate_resource_indices": [
+                  12
+                ],
+                "same_language_resource_index": 12,
+                "size_matches": true
+              },
+              {
+                "location": {
+                  "offset": 1994964,
+                  "bytes": 14
+                },
+                "width": 0,
+                "height": 0,
+                "color_count": 0,
+                "reserved": 0,
+                "planes": 0,
+                "bit_count": 32,
+                "declared_bytes": 62142,
+                "resource_id": 14,
+                "candidate_resource_indices": [
+                  13
+                ],
+                "same_language_resource_index": 13,
+                "size_matches": true
+              }
+            ]
+          }
+        ],
+        "coverage": {
+          "status": "complete",
+          "examined_entries": 38,
+          "resources": 17
+        },
+        "limitations": [
+          "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+          "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+          "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+        ]
+      },
+      "confidence": "observed",
+      "authority": "shipped-artifact",
+      "environment": null,
+      "limitations": [
+        "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+        "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+        "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+      ],
+      "relationship_coverage": null,
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/DiaInstaller.exe"
+        }
+      ],
+      "evidence_links": []
+    }
+  ],
+  "coverage": "Complete inline returned REA PE-resource records and managed summary records. Managed parent records remain retained by REA; summaries are not the complete parent collection bodies.",
+  "archiveRoute": {
+    "state": "NOT_RUN",
+    "route": "open_binary({path: acquired MSIX}); inspect_artifact({detail:'summary'}). Record root identity/limitations. Use extract_artifact only when its temporary destination is authorized; inspect explicit contained PE paths with inspect_pe_resources or inspect_managed_artifact when applicable.",
+    "reason": "Large MSIX payloads not acquired; bootstrapper PE is not the browser package archive."
+  },
+  "signatures": {
+    "state": "UNVERIFIED",
+    "reason": "Advertised inspect_signature operates on Mach-O/macOS, not Windows Authenticode. osslsigncode was not found. No Windows trust-chain, timestamp, revocation or MSIX deployment verification ran."
+  },
+  "runtime": {
+    "state": "NOT_RUN",
+    "reason": "No supported authorized Windows host/account supplied; execution and browser/visual work prohibited in this task."
+  },
+  "nativeAcceptance": "OPEN"
+}

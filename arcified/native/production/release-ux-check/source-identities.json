@@ -1,0 +1,173 @@
+{
+  "issueKey": "release-ux-check",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "recordedOn": "2026-10-24",
+  "command": "sha256sum '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-source-references.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-linux-run-20261023.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-checks.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/backlog.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/coverage-matrix.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/publication/receipts.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/artifacts.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/release/assignment.json' '/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/patches/series' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/VERSION' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser.h' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser_window/public/browser_window_interface.h' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/app/chrome_command_ids.h' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/actions/chrome_action_id.h'",
+  "exitCode": 0,
+  "identities": [
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+      "sha256": "cc8ec03443b18a749b486e484a56b86218d8f41653970dea94185f76c9685354",
+      "role": "authority-or-baseline"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+      "sha256": "4f9c0d697e2c391ab190f42367d9b87f359578d4dfe8f70a49cd05b2cca3fe64",
+      "role": "authority-or-baseline"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md",
+      "sha256": "244488864d15d093f7f80e1cc40f490a979454e2a8e74db438c7e51283518a1c",
+      "role": "authority-or-baseline"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md",
+      "sha256": "e5951ba265be3587cb1df8f2ab73ce6768071ac55b8d481240ed57819b39ab56",
+      "role": "authority-or-baseline"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json",
+      "sha256": "dae2aed7885b1f03f5f96a1285265a1189b8776a6472880c0f12c94de7f7ad02",
+      "role": "authority-or-baseline"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-source-references.md",
+      "sha256": "40d17e5d3646e544909558badb0f64fe473826f2f25883cb87d66758199fcbde",
+      "role": "authority-or-baseline"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-linux-run-20261023.md",
+      "sha256": "174d7eb9ef9ccbe6a904411577219fc08285c226a749ffae2406dba5eb02df63",
+      "role": "authority-or-baseline"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-checks.md",
+      "sha256": "1dbeaaf1dfaa4fc48131a06b67ea043df8cd8658716db78372721530a811a3df",
+      "role": "authority-or-baseline"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/backlog.json",
+      "sha256": "dca52fba42f5b95d00a972fc7c44c0cfba55f6675c7f5edf84220f420b29b99c",
+      "role": "authority-or-baseline"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/coverage-matrix.md",
+      "sha256": "dc8b89bd5bd5dc343cb5f2478b8de3b2c393a7c72b65729e7f572fba4fd7d264",
+      "role": "authority-or-baseline"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/publication/receipts.json",
+      "sha256": "0e73d3f907553201e740bb5b00e6ea30a95e07b99c437b3400c1ef1cb7af11fd",
+      "role": "authority-or-baseline"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/artifacts.md",
+      "sha256": "733db8ca63d1668e786c1574872e1adf74bcd69addd012e58fe714381eee1470",
+      "role": "authority-or-baseline"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/release/assignment.json",
+      "sha256": "bb1c1827ae0ed40d40009544344309f5f9a3afe5293ab44acead3cfb18ccb355",
+      "role": "authority-or-baseline"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/patches/series",
+      "sha256": "3a47e3bad192c541bcdfa645485f28babad8602c19b8986cc74f962e311ef9b8",
+      "role": "authority-or-baseline"
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/VERSION",
+      "sha256": "6364ce04bcd72b472e54baac73c17372bfde3447a7c76a6ac6b54131da83ad1e",
+      "role": "prepared-source-read-only"
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser.h",
+      "sha256": "3edd13e0b535790efb3254f1e2be505450c26fb8dae4c4dfab57c15d25ceb8e4",
+      "role": "prepared-source-read-only"
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser_window/public/browser_window_interface.h",
+      "sha256": "97dc7e368b29bd43bb0ce24bcbc2b9795b842bbdeb68aa58a2cfc85e20024c4a",
+      "role": "prepared-source-read-only"
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/app/chrome_command_ids.h",
+      "sha256": "32a11e71ad246adacd5b55a781c1ceacb4150f9ff559f15b6cb8cb8d9ce1ca76",
+      "role": "prepared-source-read-only"
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/actions/chrome_action_id.h",
+      "sha256": "469263c17362cad3578ab7e2b9fa538883c35d3655a873e42c6494011b9bf0b4",
+      "role": "prepared-source-read-only"
+    }
+  ],
+  "preparedSource": {
+    "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+    "version": "155.0.8059.79",
+    "mode": "STRICTLY_READ_ONLY",
+    "modifiedFiles": [],
+    "baseResultPairs": [],
+    "productionPatch": null,
+    "nativeTestRegistration": null,
+    "reason": "Tracking-only evidence leaf. No product change, prepared result bytes, patch or native registered test is appropriate. Installed release/native acceptance remains OPEN; scenario definitions are not registered or executed browser tests."
+  },
+  "observations": [
+    {
+      "path": "chrome/browser/ui/browser_window/public/browser_window_interface.h",
+      "lines": "83-97",
+      "fact": "Desktop browser window Profile is non-null, immutable and shared by all contained tabs in the prepared interface. Same-window multi-Profile work still requires production ownership proof."
+    },
+    {
+      "path": "chrome/browser/ui/browser.h",
+      "lines": "269-273",
+      "fact": "Browser holds a const Profile pointer and a Profile keepalive."
+    },
+    {
+      "path": "chrome/app/chrome_command_ids.h",
+      "lines": "26-36",
+      "fact": "New legacy commands require declarative ActionItem mapping. No command added by this tracking packet."
+    }
+  ],
+  "commandAllocation": {
+    "reservedPrimary": 40796,
+    "libraryReserved": 40701,
+    "legacyCommandsAdded": [],
+    "actionItemsAdded": [],
+    "messagePrefix": "IDS_ARCIFIED_RELEASE_UX_CHECK",
+    "messageIdsAdded": []
+  },
+  "recheck": {
+    "command": "sha256sum '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-source-references.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-linux-run-20261023.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-checks.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/backlog.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/coverage-matrix.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/publication/receipts.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/artifacts.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/release/assignment.json' '/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/patches/series' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/VERSION' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser.h' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser_window/public/browser_window_interface.h' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/app/chrome_command_ids.h' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/actions/chrome_action_id.h'",
+    "exitCode": 0,
+    "unchanged": [
+      "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+      "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md",
+      "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md",
+      "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json",
+      "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-source-references.md",
+      "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-linux-run-20261023.md",
+      "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-checks.md",
+      "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/backlog.json",
+      "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/coverage-matrix.md",
+      "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/publication/receipts.json",
+      "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/artifacts.md",
+      "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/release/assignment.json",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/patches/series",
+      "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/VERSION",
+      "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser.h",
+      "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser_window/public/browser_window_interface.h",
+      "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/app/chrome_command_ids.h",
+      "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/actions/chrome_action_id.h"
+    ],
+    "controlDrift": [
+      {
+        "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+        "initialSha256": "4f9c0d697e2c391ab190f42367d9b87f359578d4dfe8f70a49cd05b2cca3fe64",
+        "recheckSha256": "daf98f1cf993c1a21686289a88489bf001266d7fff4d85089d30055584c8a7b0",
+        "resolution": "Reread complete root control via fast_filesystem. Same 135 active issue keys/URLs, baseline, scope and command allocations. Retain initial snapshot and both hash observations; runtime remains OPEN."
+      }
+    ],
+    "preparedSourceHashesUnchanged": true,
+    "limitation": "Root controls are concurrently maintained snapshots. This is no assertion that another coordinator will not change them later."
+  }
+}

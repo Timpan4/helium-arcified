@@ -1,0 +1,120 @@
+{
+  "issueKey": "retirements",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/23",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "disposition": "RESEARCH_DELIVERED_RECOMMENDATIONS_PENDING_COORDINATOR_AND_OWNER",
+  "evidencePaths": [
+    "report.md",
+    "assignment-snapshot.json",
+    "dispositions.json",
+    "sources.json",
+    "source-identities.sha256",
+    "native-source-identities.json",
+    "verification-scenarios.json",
+    "packet-check.js",
+    "checks.md",
+    "checks.json",
+    "result.json"
+  ],
+  "changes": [
+    "Documented every requested retired/service-dependent feature with implement/replace/import/defer vocabulary; this packet uses import, replace and defer recommendations.",
+    "Recorded the settled owner exclusion of iCloud and new cross-device sync, with account-free local import/export/migration.",
+    "Separated historical macOS/Windows evidence, Linux design targets, Dia Memory conflict, mobile Arc Search, Dia work connectors/decks and unavailable vendor services.",
+    "Recorded prepared Chromium source leads, full-file byte identities, required native scenarios and unexecuted per-platform states.",
+    "No native code, patch, test registration, shared control, source model/codec, staging, commit or remote write."
+  ],
+  "checks": [
+    {
+      "id": "baseline",
+      "status": "PASS",
+      "evidence": "checks.md",
+      "coverage": "Current HEAD and branch match assigned baseline/worktree."
+    },
+    {
+      "id": "packet-lint",
+      "status": "PASS",
+      "evidence": "checks.json",
+      "coverage": "Formatting, complete feature/scenario inventory, source references, honest native states and local links."
+    },
+    {
+      "id": "source-identities",
+      "status": "PASS_AFTER_INSPECTED_MANIFEST_UPDATE",
+      "evidence": "source-identities.sha256",
+      "coverage": "Prepared source, root authorities and reused foundation bytes."
+    },
+    {
+      "id": "git-diff-check",
+      "status": "PASS_LIMITED",
+      "evidence": "checks.md",
+      "coverage": "Tracked diff only; untracked packet is covered separately."
+    },
+    {
+      "id": "native-runtime",
+      "status": "NOT_RUN",
+      "evidence": "verification-scenarios.json",
+      "coverage": "All Linux/Windows/macOS native and visual workflows remain OPEN."
+    }
+  ],
+  "ownerQuestions": [
+    {
+      "id": "retirements-local",
+      "question": "Accept Notes import/view/export without a new editor, a Chromium reading-route investigation, explicit paste/navigation, active/recent navigation, discoverable local command help, and reversible declarative Boost styling?",
+      "recommendation": "Accept the package with explicit unsupported states.",
+      "tradeoff": "Narrower legacy parity; import formats and native routes still require proof."
+    },
+    {
+      "id": "retirements-services",
+      "question": "Defer People Cards and historical Notion/Figma/Linear previews, leaving GitHub Live Folders and any Favorite integration to issues 26 and 28's named-provider decisions?",
+      "recommendation": "Defer enrichment and retain ordinary bookmarks/folders.",
+      "tradeoff": "No automatic recent-document/person enrichment until concrete data/action scope is approved."
+    },
+    {
+      "id": "retirements-excluded-families",
+      "question": "Keep Ask on Page and Dia Memory in later AI scope, and mobile Arc Search and Dia work connectors/decks outside this desktop non-AI deliverable?",
+      "recommendation": "Keep these explicit deferrals and scope exclusions.",
+      "tradeoff": "Local find/history/site navigation remain; no AI, mobile or enterprise-work parity claim."
+    }
+  ],
+  "dependencies": [],
+  "integrationRequests": [
+    {
+      "target": "research coordinator/root",
+      "request": "Consolidate the proposed disposition package and owner questions into the root decision ledger after independent review. This packet cannot approve root scope or edit shared controls."
+    },
+    {
+      "target": "notes, arc-import-format, arc-import, workspace-import, export",
+      "request": "Obtain authorized inert exports with provenance; prove actual supported mappings through the existing codec and local account-free workflow. Do not infer a converter from Dia's installed-browser import."
+    },
+    {
+      "target": "site-controls, compatibility, command-bar, tab-status, tab-switcher, tab-order-navigation, onboarding",
+      "request": "Investigate existing native reading/paste actions and prove the surviving workflows with actual targets, registered native tests and installed-platform observations. Reading-mode source presence is not a completion claim."
+    },
+    {
+      "target": "boost-style, boost-zap, boost-code, boost-sharing",
+      "request": "Keep reversible styling and any legacy executable import behind the dedicated capability/migration decisions. Do not inherit script enablement."
+    },
+    {
+      "target": "integration-policy #26, favorite-previews-decision #28, live-folders",
+      "request": "Own per-provider scopes and any Favorite-site proposal. This packet recommends deferral/fallback without inventing provider, polling, retention or authentication policy."
+    },
+    {
+      "target": "focus-routing-contract #44 and root lifecycle owners",
+      "request": "Retain real command context and the shared same-window multi-Profile/live saved-page gates. This packet does not supply another focus or ownership contract."
+    },
+    {
+      "target": "release-ux-check and runtime-reference",
+      "request": "Attach Linux/Windows/macOS native results only after separately authorized execution; preserve current documentary/runtime distinctions."
+    }
+  ],
+  "remainingCriteria": [
+    "Coordinator/fork owner accepts or revises recommended dispositions; settled sync/account-free constraints are not reopened.",
+    "Independent review of this packet remains coordinator-owned.",
+    "Authorized export fixtures and exact format/version/data coverage remain unavailable for actual migration acceptance.",
+    "Related leaf implementations and meaningful registered native tests remain unproven by this packet.",
+    "Installed Linux, Windows and macOS workflows, accessibility, failure/cancellation, same-window multi-Profile and live saved-page handoff remain OPEN.",
+    "Actual current Windows Ask on Page state and Dia Memory availability/deletion remain unsettled; no reference runtime access authorized."
+  ],
+  "nativePatch": null,
+  "registeredNativeTestChanges": [],
+  "nativeAcceptance": "OPEN"
+}

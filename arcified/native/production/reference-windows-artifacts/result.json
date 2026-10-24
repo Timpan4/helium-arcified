@@ -1,0 +1,91 @@
+{
+  "license": "GPL-3.0-only",
+  "issueKey": "reference-windows-artifacts",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/31",
+  "disposition": "RESEARCH_PARTIAL. Official Windows descriptors and small installer bootstrapper evidence delivered. Complete browser-package acquisition and native acceptance remain OPEN.",
+  "evidencePaths": [
+    "arcified/native/production/reference-windows-artifacts/README.md",
+    "arcified/native/production/reference-windows-artifacts/acquisition.json",
+    "arcified/native/production/reference-windows-artifacts/authority.json",
+    "arcified/native/production/reference-windows-artifacts/rea-evidence.json",
+    "arcified/native/production/reference-windows-artifacts/checks.json",
+    "arcified/native/production/reference-windows-artifacts/source-bytes.sha256",
+    "arcified/native/production/reference-windows-artifacts/Arc.x64.appinstaller",
+    "arcified/native/production/reference-windows-artifacts/Arc.arm64.appinstaller",
+    "arcified/native/production/reference-windows-artifacts/Dia.x64.appinstaller",
+    "arcified/native/production/reference-windows-artifacts/Dia.arm64.appinstaller"
+  ],
+  "changes": [
+    "Added official acquisition identities for both browsers and both declared Windows architectures, with exact descriptor versions and URLs.",
+    "Retained original descriptor bytes, hashed local small bootstrappers and recorded REA managed/PE-resource evidence.",
+    "Separated signatures, extraction and runtime limitations; recorded all reference interaction states as NOT_RUN.",
+    "Added local-only exclusions for original bootstrapper and HTML acquisition inputs.",
+    "No production patch, message, command/ActionItem, codec/Model/classifier or native test change; no prepared-source base/result applies."
+  ],
+  "checks": [
+    "Eight retained acquisition-input byte identities pass sha256sum --check.",
+    "Four descriptors pass xmllint --nonet --noout.",
+    "Both bootstrapper managed identities match REA SHA-256, size, assembly version and MVID.",
+    "All four official MSIX URLs return HTTP 200 to HEAD only.",
+    "Canonical JSON, packet text whitespace and README relative-link checks pass; exact calls and limits in checks.json."
+  ],
+  "ownerQuestions": [
+    {
+      "question": "Which supported Windows test host and architecture will be used, and may the coordinator acquire its matching official full MSIX package and declared dependencies?",
+      "recommendation": "Match the designated Windows test host first. Retain the other architecture as OPEN until scoped.",
+      "tradeoff": "Both architectures expand static package coverage but require additional large downloads. This task prohibits those downloads.",
+      "route": "Coordinator consolidates for root/owner; not asked directly."
+    },
+    {
+      "question": "Is an existing Arc account authorized and available for reference scenarios before the published sunset, or should Arc runtime remain unavailable?",
+      "recommendation": "Keep Arc documentary/static-only if no authorized existing account is available.",
+      "tradeoff": "The publisher no longer allows new accounts. Dia observations cannot establish Arc runtime behavior.",
+      "route": "Coordinator consolidates for root/owner; no credentials requested."
+    }
+  ],
+  "dependencies": [],
+  "integrationRequests": [
+    {
+      "target": "research coordinator/root",
+      "request": "Preserve four exact package tuples and null MSIX hashes; arrange separately authorized full package/dependency acquisition and an allowed extraction evidence location."
+    },
+    {
+      "target": "runtime-reference",
+      "request": "Consume pinned acquisition evidence, then require actual host/OS, signature, installation, account authorization and scenario observations. Keep Windows 10 support unresolved until checked."
+    },
+    {
+      "target": "coordinator publication",
+      "request": "Review authored evidence and original descriptors. .exe and .html originals remain local ignored inputs, not product payloads."
+    },
+    {
+      "target": "native acceptance owner",
+      "request": "Do not infer same-window multi-Profile or same-live-page handoff completion from any acquisition/static result."
+    }
+  ],
+  "remainingCriteria": [
+    {
+      "criterion": "Record official acquisition URL, exact version/build, package type, architecture and SHA-256 before inspection.",
+      "state": "OPEN",
+      "reason": "Browser MSIX URL/type/version/architecture established, but full payloads and SHA-256 absent under task restriction. Descriptor hashes and bootstrapper versions/hashes are explicitly separate; bootstrapper versions were learned during identity inspection."
+    },
+    {
+      "criterion": "Use REA supported archive/PE/resource routes and state signatures, extraction and runtime limitations separately.",
+      "state": "PARTIAL",
+      "reason": "REA managed/PE-resource identity inspection completed on both small bootstrappers. Archive input absent; no extraction, Windows signature verification or runtime result."
+    },
+    {
+      "criterion": "Do not reuse macOS hashes as Windows evidence or run installers without a supported authorized test environment.",
+      "state": "SATISFIED_WITHIN_THIS_PACKET",
+      "reason": "Windows acquisitions have independent hashes. No installer or app ran. Runtime scope and absent host/account evidence remain open."
+    }
+  ],
+  "nativePatch": {
+    "status": "INAPPLICABLE",
+    "reason": "Research-only package acquisition does not justify production native code or test registration.",
+    "preparedSourceBaseFiles": [],
+    "preparedSourceResultFiles": [],
+    "productionPatch": null,
+    "registeredNativeTests": []
+  },
+  "nativeAcceptance": "OPEN"
+}
