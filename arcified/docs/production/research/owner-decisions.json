@@ -1,0 +1,638 @@
+{
+  "area": "research",
+  "status": "TWELVE_INDEPENDENTLY_REVIEWED_DOCUMENTARY_PROPOSALS_OWNER_PENDING",
+  "rootThreadId": "6733348c-3696-4b31-834c-2bbca45e70d2",
+  "nativeAcceptance": "OPEN",
+  "scope": {
+    "assignedLeaves": 12,
+    "primaryPacketsAvailable": 12,
+    "remainingPrimary": null,
+    "reviewedCleanPackets": 12,
+    "reviewPending": null,
+    "issuesProvenDone": 0
+  },
+  "settledConstraints": [
+    "The 23 later AI leaves and 6 excluded sync leaves are outside this work.",
+    "No cross-device sync or Arcified account replacement is planned.",
+    "Spaces keep immutable Profile security ownership; same-window multi-Profile and same-live-page handoff native gates remain OPEN.",
+    "No source deletion, cleanup, destructive import or populated cross-Profile migration policy is approved by these proposals."
+  ],
+  "coordination": [
+    {
+      "keys": [
+        "integration-policy",
+        "favorite-previews-decision",
+        "retirements"
+      ],
+      "action": "Consolidate provider/account scope before asking owner. Retirements service proposals do not approve integrations."
+    },
+    {
+      "keys": [
+        "easel-collaboration-decision",
+        "quote-card-decision"
+      ],
+      "action": "Keep live collaboration, hosted snapshots and hosted quote previews separate. Local files and snapshots do not imply service/parity approval."
+    },
+    {
+      "keys": [
+        "arc-import-format",
+        "retirements"
+      ],
+      "action": "Root/data supply any existing authorized inert export corpus/provenance before requesting more from owner. No exact grammar/build support exists yet."
+    },
+    {
+      "keys": [
+        "runtime-reference",
+        "reference-windows-artifacts",
+        "compatibility",
+        "release-ux-check"
+      ],
+      "action": "Root/release/platform owners identify existing authorized hosts, accounts, RC artifacts and support definitions. Do not interpret missing evidence as unsupported hardware or a successful test."
+    },
+    {
+      "keys": [
+        "retirements"
+      ],
+      "action": "Reconcile proposed Notes import/view/export-only disposition with owning notes implementation leaf before treating it as an owner decision."
+    },
+    {
+      "keys": [
+        "compatibility",
+        "focus-routing-contract"
+      ],
+      "action": "Consolidate unattributed OS-link and missing-initiator return routing; no last-active Profile fallback is approved."
+    }
+  ],
+  "issues": [
+    {
+      "key": "compatibility",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/59",
+      "packet": "arcified/native/production/compatibility/result.json",
+      "disposition": "TRACKING_RESEARCH_READY_FOR_INDEPENDENT_REVIEW_NATIVE_ACCEPTANCE_OPEN",
+      "reviewState": "CLEAN_BOUNDED_DOCUMENTARY_REVIEW",
+      "ownerQuestions": [
+        {
+          "id": "Q1",
+          "question": "Which exact RC ID and per-OS installed artifact identities should issue #59 evaluate?",
+          "recommendation": "Wait for root's integrated native candidates and record the identity fields in compatibility-matrix.json before any PASS.",
+          "tradeoff": "Keeps source research usable now; native compatibility remains OPEN until actual artifacts and supported hosts are supplied.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "id": "Q2",
+          "question": "When an incoming OS link has no originating page, or a notification/PiP initiator no longer exists, which surviving host/Space should receive it?",
+          "recommendation": "Consolidate with focus-routing-contract #44. Preserve exact originating/registered Profile where known; keep unattributed or missing-initiator routes unavailable until the owner selects behavior.",
+          "tradeoff": "Avoids a guessed last-active Profile policy; fallback UX remains unsettled. This packet does not decide cleanup, close or source disposition.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "id": "Q3",
+          "question": "Which optional Cast receiver routes and lawful Widevine test configuration, if any, belong in the declared RC compatibility claim?",
+          "recommendation": "Record unsupported/unavailable combinations explicitly. Keep Widevine optional, distribute no proprietary CDM, and authorize test media/hardware separately before runtime work.",
+          "tradeoff": "Claims remain limited to observed configurations; protected streaming and receiver coverage cannot be inferred from compilation.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        }
+      ],
+      "remainingCriteria": [
+        {
+          "criterion": 1,
+          "state": "OPEN",
+          "remaining": "Installed native install/launch/uninstall, extension popup, autofill/passkey and print/download results and required variants on each declared OS artifact."
+        },
+        {
+          "criterion": 2,
+          "state": "OPEN",
+          "remaining": "Native notification, inbound/outbound protocol, supported casting and video/document PiP return targeting, plus Q2 and approved same-host/handoff gates."
+        },
+        {
+          "criterion": 3,
+          "state": "OPEN",
+          "remaining": "Per-OS observed limitations, effective optional component states and package-level proof of no proprietary CDM bundling or suppressed security prompts."
+        }
+      ],
+      "reviewPath": "arcified/docs/production/research/compatibility-review-round-1.md",
+      "reviewedCommit": "67bc932296b818548bd3e70a114d71252239faa6"
+    },
+    {
+      "key": "easel-collaboration-decision",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/30",
+      "packet": "arcified/native/production/easel-collaboration-decision/result.json",
+      "disposition": "RESEARCH_DELIVERED_OWNER_CHOICE_PENDING_RECOMMEND_DEFER",
+      "reviewState": "CLEAN_BOUNDED_DOCUMENTARY_REVIEW",
+      "ownerQuestions": [
+        {
+          "id": "collaboration-scope",
+          "question": "Do you approve deferring live board editing and presence, while retaining local boards/export and treating any hosted snapshot sharing as a separate decision?",
+          "recommendedChoice": "Defer live editing and presence.",
+          "tradeoff": "No live teamwork; avoids an unowned remote data service.",
+          "status": "PENDING",
+          "route": "Coordinator consolidation to root; do not repeatedly ask owner.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "id": "collaboration-service-if-needed",
+          "question": "If deferral is rejected, which concrete multi-user board task requires live editing or presence, who owns the service, and what access, exposed-data, retention, revocation and service-exit model do you approve?",
+          "recommendedChoice": "Supply these decisions before authorizing implementation.",
+          "tradeoff": "Live collaboration stays unavailable until ownership and policy are settled.",
+          "status": "CONDITIONAL_PENDING",
+          "route": "Coordinator consolidation to root.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        }
+      ],
+      "remainingCriteria": [
+        "Record the owner's actual collaboration choice through coordinator/root consolidation.",
+        "If live collaboration is accepted, settle the concrete user need, service ownership and access/retention model before implementation.",
+        "Native and reference runtime behaviors remain unverified on Linux, Windows and macOS; local board/export/snapshot production verification remains with their owning leaves."
+      ],
+      "reviewPath": "arcified/docs/production/research/easel-collaboration-decision-review-round-1.md",
+      "reviewedCommit": "67bc932296b818548bd3e70a114d71252239faa6"
+    },
+    {
+      "key": "runtime-reference",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/42",
+      "packet": "arcified/native/production/runtime-reference/result.json",
+      "disposition": "RESEARCH_PACKET_DELIVERED_RUNTIME_BLOCKED",
+      "reviewState": "CLEAN_BOUNDED_DOCUMENTARY_REVIEW",
+      "ownerQuestions": [
+        {
+          "question": "Which supported macOS and Windows test hosts and existing authorized Arc test account/Profiles can the coordinator allocate for the recorded-artifact captures?",
+          "recommendation": "Use existing dedicated test Profiles/accounts and fixture pages.",
+          "tradeoff": "Allows reference captures without personal browsing data, but requires actual host/account allocation; publisher says fresh Arc accounts closed on 2026-10-22.",
+          "asked": false,
+          "route": "Coordinator consolidation only",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "question": "If an Arc scenario is inaccessible because of login or sunset, should its acceptance explicitly retain historical-only reference evidence and an OPEN downstream verification gate?",
+          "recommendation": "Record historical-only reference evidence, precise inaccessible cause and remaining native gate.",
+          "tradeoff": "Honest reference coverage remains incomplete and cannot settle runtime behavior.",
+          "asked": false,
+          "route": "Coordinator consolidation only",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        }
+      ],
+      "remainingCriteria": [
+        {
+          "criterion": 1,
+          "text": "Use the recorded macOS artifacts for macOS and separately identified Windows packages for Windows, with authorized test accounts/Profiles. Linux has no official reference product.",
+          "state": "OPEN",
+          "reason": "macOS identity is recorded static evidence only; Windows identities and supported host/account allocation unavailable."
+        },
+        {
+          "criterion": 2,
+          "text": "Cover Peek/pin URL rules, tab handoff, folder preview, split transitions, sidebar reveal, media return and native dialogs with screenshots/recordings and scenario notes.",
+          "state": "OPEN",
+          "reason": "All required scenario families inventoried but all runtime product/platform rows unexecuted; no captures."
+        },
+        {
+          "criterion": 3,
+          "text": "Separate platform differences, retired actions and inaccessible login-dependent features; update affected acceptance criteria instead of claiming generic parity.",
+          "state": "OPEN",
+          "reason": "Documentary platform/retirement/access distinctions recorded; runtime reconciliation and coordinator acceptance edits remain outstanding."
+        }
+      ],
+      "reviewPath": "arcified/docs/production/research/runtime-reference-review-round-1.md",
+      "reviewedCommit": "67bc932296b818548bd3e70a114d71252239faa6"
+    },
+    {
+      "key": "retirements",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/23",
+      "packet": "arcified/native/production/retirements/result.json",
+      "disposition": "RESEARCH_DELIVERED_RECOMMENDATIONS_PENDING_COORDINATOR_AND_OWNER",
+      "reviewState": "CLEAN_BOUNDED_DOCUMENTARY_REVIEW",
+      "ownerQuestions": [
+        {
+          "id": "retirements-local",
+          "question": "Accept Notes import/view/export without a new editor, a Chromium reading-route investigation, explicit paste/navigation, active/recent navigation, discoverable local command help, and reversible declarative Boost styling?",
+          "recommendation": "Accept the package with explicit unsupported states.",
+          "tradeoff": "Narrower legacy parity; import formats and native routes still require proof.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "id": "retirements-services",
+          "question": "Defer People Cards and historical Notion/Figma/Linear previews, leaving GitHub Live Folders and any Favorite integration to issues 26 and 28's named-provider decisions?",
+          "recommendation": "Defer enrichment and retain ordinary bookmarks/folders.",
+          "tradeoff": "No automatic recent-document/person enrichment until concrete data/action scope is approved.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "id": "retirements-excluded-families",
+          "question": "Keep Ask on Page and Dia Memory in later AI scope, and mobile Arc Search and Dia work connectors/decks outside this desktop non-AI deliverable?",
+          "recommendation": "Keep these explicit deferrals and scope exclusions.",
+          "tradeoff": "Local find/history/site navigation remain; no AI, mobile or enterprise-work parity claim.",
+          "coordinatorDisposition": "ALREADY_SETTLED_BY_REQUESTED_SCOPE_DO_NOT_REASK",
+          "ownerAnswer": null
+        }
+      ],
+      "remainingCriteria": [
+        "Coordinator/fork owner accepts or revises recommended dispositions; settled sync/account-free constraints are not reopened.",
+        "Independent review of this packet remains coordinator-owned.",
+        "Authorized export fixtures and exact format/version/data coverage remain unavailable for actual migration acceptance.",
+        "Related leaf implementations and meaningful registered native tests remain unproven by this packet.",
+        "Installed Linux, Windows and macOS workflows, accessibility, failure/cancellation, same-window multi-Profile and live saved-page handoff remain OPEN.",
+        "Actual current Windows Ask on Page state and Dia Memory availability/deletion remain unsettled; no reference runtime access authorized."
+      ],
+      "reviewPath": "arcified/docs/production/research/retirements-review-round-1.md",
+      "reviewedCommit": "67bc932296b818548bd3e70a114d71252239faa6"
+    },
+    {
+      "key": "release-ux-check",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/161",
+      "packet": "arcified/native/production/release-ux-check/result.json",
+      "disposition": "TRACKING_EVIDENCE_PREPARED_NATIVE_EXECUTION_BLOCKED",
+      "reviewState": "CLEAN_BOUNDED_DOCUMENTARY_REVIEW",
+      "ownerQuestions": [
+        {
+          "question": "Which OS versions, architectures, Linux display/compositor environments, assistive technologies, IMEs and touch/input devices define the first release support matrix?",
+          "recommendation": "Record an explicit owner-approved support matrix; keep unavailable combinations OPEN with reasons.",
+          "tradeoff": "Makes release support explicit without guessing exclusions or treating absent hardware as a successful test.",
+          "route": "Research coordinator consolidates with release/root; do not ask the owner again from this leaf.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "question": "Which optional-feature candidates are accepted for the first release, and which are visibly deferred in their owning issues?",
+          "recommendation": "Keep local core usable without services; require disabled and authorized-enabled/failure evidence for accepted optional features.",
+          "tradeoff": "Deferred features remain visible rather than receiving an unverified parity claim.",
+          "route": "Research coordinator consolidates owning-issue decisions at root.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        }
+      ],
+      "remainingCriteria": [
+        {
+          "criterion": "Map every accepted feature and source-family disposition to an issue and a native scenario result on Linux, Windows and macOS.",
+          "state": "OPEN",
+          "reason": "Documentary mapping/scenario coverage is prepared; installed-candidate per-platform execution, accepted support/optional dispositions and native evidence remain unavailable."
+        },
+        {
+          "criterion": "Exercise accessibility, touch/keyboard/IME, restart, failure and data-loss cases for affected surfaces and record unsupported hardware/OS combinations.",
+          "state": "OPEN",
+          "reason": "Documentary mapping/scenario coverage is prepared; installed-candidate per-platform execution, accepted support/optional dispositions and native evidence remain unavailable."
+        },
+        {
+          "criterion": "Keep unknown and unverified items open; report implemented, tested and released states separately and reuse unchanged passing evidence.",
+          "state": "OPEN",
+          "reason": "Documentary mapping/scenario coverage is prepared; installed-candidate per-platform execution, accepted support/optional dispositions and native evidence remain unavailable."
+        },
+        {
+          "criterion": "Use the accepted per-feature matrix and per-OS implementation/test/release states. Packaging success cannot substitute for absent functionality; optional/deferred items require a visible disposition.",
+          "state": "OPEN",
+          "reason": "Documentary mapping/scenario coverage is prepared; installed-candidate per-platform execution, accepted support/optional dispositions and native evidence remain unavailable."
+        }
+      ],
+      "reviewPath": "arcified/docs/production/research/release-ux-check-review-round-1.md",
+      "reviewedCommit": "67bc932296b818548bd3e70a114d71252239faa6"
+    },
+    {
+      "key": "automation-contract",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/25",
+      "packet": "arcified/native/production/automation-contract/result.json",
+      "disposition": "RESEARCH_COMPLETE_OWNER_DECISION_PENDING",
+      "reviewState": "CLEAN_BOUNDED_DOCUMENTARY_REVIEW",
+      "ownerQuestions": [
+        {
+          "question": "Approve the proposed opt-in tabs.list pilot, returning only opaque live tab handles in one explicitly granted normal window/Profile over a browser-initiated native-messaging port, with titles/URLs, private/guest access, page content, JavaScript, mutations and external listeners excluded, or defer automation entirely?",
+          "recommendation": "Approve design scope only, with all adapters unavailable until native gates pass.",
+          "status": "OPEN",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "question": "May the pilot trust an explicitly selected, reviewed local native helper running as the OS user, or must we defer until a stronger caller/binary-attestation design is selected?",
+          "recommendation": "Require a concrete reviewed helper identity and package-resolution plan before enabling the pilot.",
+          "status": "OPEN",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "question": "Approve connection-lifetime grants only for the first pilot, with no remembered grant or external-controller reconnect, or require a separately designed persistent grant?",
+          "recommendation": "Connection lifetime only; no invented storage, expiry, retention or reconnect policy.",
+          "status": "OPEN",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        }
+      ],
+      "remainingCriteria": [
+        "Owner records approved scope or explicit deferral in issue 25.",
+        "Owner accepts a concrete helper trust boundary and grant lifetime, or defers automation.",
+        "Any approved transport and identity requirements must be finalized against actual Arcified packaging and policy on each supported OS.",
+        "Linux, Windows and macOS native permission/error/privacy/ownership evidence remains open, including same-window multi-Profile and live saved-page handoff."
+      ],
+      "reviewPath": "arcified/docs/production/research/automation-contract-review-round-1.md",
+      "reviewedCommit": "67bc932296b818548bd3e70a114d71252239faa6"
+    },
+    {
+      "key": "integration-policy",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/26",
+      "packet": "arcified/native/production/integration-policy/result.json",
+      "disposition": "DECISION_PACKET_READY_OWNER_DECISION_PENDING",
+      "reviewState": "CLEAN_BOUNDED_DOCUMENTARY_REVIEW",
+      "ownerQuestions": [
+        {
+          "question": "Approve deferring all real GitHub and calendar connections for the initial native release?",
+          "recommendation": "Defer; retain ordinary folders/bookmarks.",
+          "tradeoff": "No live PR or meeting data, avoiding unapproved account/service dependencies.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "question": "If proceeding, approve only GitHub.com selected-repository PR read access and Google primary-calendar owned-event read access plus openid, with other named routes deferred?",
+          "recommendation": "Use only the named narrow candidates.",
+          "tradeoff": "No team/account-wide inbox, shared-calendar, Enterprise/custom-host, Outlook or iCloud support.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "question": "Approve Profile-bound session-only credentials/data, manual refresh and native notifications off initially?",
+          "recommendation": "Use that first implementation scope; decide persistence, background updates and notifications separately.",
+          "tradeoff": "Reconnect after session end; no automatic refresh or reminders.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "question": "Who owns GitHub App and Google desktop-client registrations, consent review and support?",
+          "recommendation": "Fork owner controls registrations; do not introduce an app credential broker.",
+          "tradeoff": "Registration and provider consent prerequisites must be completed before runtime validation.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        }
+      ],
+      "remainingCriteria": [
+        "Criterion 1: proposed provider/domain/scope and data policies need owner approval or deferral; actual native support is unverified.",
+        "Criterion 2: proposed stale/offline/notification behavior needs owner acceptance and actual per-platform native evidence.",
+        "Criterion 3: actual owner approval/deferral has not been recorded by this task in issue 26."
+      ],
+      "reviewPath": "arcified/docs/production/research/integration-policy-review-round-1.md",
+      "reviewedCommit": "67bc932296b818548bd3e70a114d71252239faa6"
+    },
+    {
+      "key": "quote-card-decision",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/29",
+      "packet": "arcified/native/production/quote-card-decision/result.json",
+      "disposition": "decision_ready_owner_pending",
+      "reviewState": "CLEAN_BOUNDED_DOCUMENTARY_REVIEW",
+      "ownerQuestions": [
+        {
+          "id": "local_scope",
+          "question": "Accept the optional local PNG card, Chromium-generated text-fragment link and attributed-text fallback with exact-output preview, a Profile-scoped disable route and initially disabled state, or defer new card/fragment UI and retain only the issue 95 portable fallback?",
+          "recommendation": "Accept the local scope, subject to native implementation and per-platform acceptance.",
+          "tradeoff": "Requires UI, accessibility, privacy and native output verification; avoids a hosted service.",
+          "state": "PENDING",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "id": "hosted_scope",
+          "question": "Accept deferring hosted quote-preview URLs and automatic recipient link images?",
+          "recommendation": "Defer hosted previews.",
+          "tradeoff": "Local image and companion URL remain useful, but automatic social preview parity is unavailable without a separately chosen service contract.",
+          "state": "PENDING",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        }
+      ],
+      "remainingCriteria": [
+        "Owner acceptance or deferral has not been recorded. Assigned acceptance criterion 3 remains open.",
+        "Proposed card/fragment UI, settings, privacy preview and portable fallback have not been implemented or tested natively.",
+        "Historical clipboard/image delivery, current Arc service availability and Windows reference behavior remain unverified.",
+        "All listed Linux, Windows and macOS native scenarios, including actual clipboard/DLP/save, accessibility, privacy and exact-context routing, remain OPEN.",
+        "Root same-window multi-Profile and live saved-page handoff gates remain OPEN."
+      ],
+      "reviewPath": "arcified/docs/production/research/quote-card-decision-review-round-1.md",
+      "reviewedCommit": "67bc932296b818548bd3e70a114d71252239faa6"
+    },
+    {
+      "key": "favorite-previews-decision",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/28",
+      "packet": "arcified/native/production/favorite-previews-decision/result.json",
+      "disposition": "decision_evidence_ready_owner_acceptance_pending",
+      "reviewState": "CLEAN_BOUNDED_DOCUMENTARY_REVIEW",
+      "ownerQuestions": [
+        {
+          "question": "Accept deferring Notion, Figma, Linear, Confluence, Gmail and Outlook Mail account previews, and replacing retired GitHub hover previews only through separately accepted Live Folders? Recommended yes; ordinary Favorites remain the navigation route.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "question": "If any deferred preview is required, which named provider/domain/tenant and read fields are accepted, and is navigation-only sufficient? Recommend choosing an explicit row and keeping writes excluded.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "question": "For each selected site, accept Profile/account ownership, provider/account disable and stale/unknown presentation, then settle authentication, credential storage, retention, revocation, refresh policy and private-context availability through integration-policy before implementation? Recommended yes.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        }
+      ],
+      "remainingCriteria": [
+        {
+          "criterion": "The owner records accepted scope before any account integration is implemented; generic Live Folders do not imply coverage.",
+          "state": "OPEN_OWNER_DECISION",
+          "needed": "Coordinator records the actual owner answer; no owner approval is inferred."
+        },
+        {
+          "criterion": "Any subsequently accepted native behavior",
+          "state": "OPEN_NATIVE_ACCEPTANCE",
+          "needed": "Real patch and owning GN tests, same-window multi-Profile and saved-page handoff gates, installed platform/interaction/failure evidence. Current decision scope needs no fake patch or test."
+        }
+      ],
+      "reviewPath": "arcified/docs/production/research/favorite-previews-decision-review-round-1.md",
+      "reviewedCommit": "67bc932296b818548bd3e70a114d71252239faa6"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/31",
+      "packet": "arcified/native/production/reference-windows-artifacts/result.json",
+      "disposition": "RESEARCH_PARTIAL. Official Windows descriptors and small installer bootstrapper evidence delivered. Complete browser-package acquisition and native acceptance remain OPEN.",
+      "reviewState": "CLEAN_BOUNDED_DOCUMENTARY_REVIEW",
+      "ownerQuestions": [
+        {
+          "question": "Which supported Windows test host and architecture will be used, and may the coordinator acquire its matching official full MSIX package and declared dependencies?",
+          "recommendation": "Match the designated Windows test host first. Retain the other architecture as OPEN until scoped.",
+          "tradeoff": "Both architectures expand static package coverage but require additional large downloads. This task prohibits those downloads.",
+          "route": "Coordinator consolidates for root/owner; not asked directly.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "question": "Is an existing Arc account authorized and available for reference scenarios before the published sunset, or should Arc runtime remain unavailable?",
+          "recommendation": "Keep Arc documentary/static-only if no authorized existing account is available.",
+          "tradeoff": "The publisher no longer allows new accounts. Dia observations cannot establish Arc runtime behavior.",
+          "route": "Coordinator consolidates for root/owner; no credentials requested.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        }
+      ],
+      "remainingCriteria": [
+        {
+          "criterion": "Record official acquisition URL, exact version/build, package type, architecture and SHA-256 before inspection.",
+          "state": "OPEN",
+          "reason": "Browser MSIX URL/type/version/architecture established, but full payloads and SHA-256 absent under task restriction. Descriptor hashes and bootstrapper versions/hashes are explicitly separate; bootstrapper versions were learned during identity inspection."
+        },
+        {
+          "criterion": "Use REA supported archive/PE/resource routes and state signatures, extraction and runtime limitations separately.",
+          "state": "PARTIAL",
+          "reason": "REA managed/PE-resource identity inspection completed on both small bootstrappers. Archive input absent; no extraction, Windows signature verification or runtime result."
+        },
+        {
+          "criterion": "Do not reuse macOS hashes as Windows evidence or run installers without a supported authorized test environment.",
+          "state": "SATISFIED_WITHIN_THIS_PACKET",
+          "reason": "Windows acquisitions have independent hashes. No installer or app ran. Runtime scope and absent host/account evidence remain open."
+        }
+      ],
+      "reviewPath": "arcified/docs/production/research/reference-windows-artifacts-review-round-1.md",
+      "reviewedCommit": "67bc932296b818548bd3e70a114d71252239faa6"
+    },
+    {
+      "key": "arc-import-format",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/27",
+      "packet": "arcified/native/production/arc-import-format/result.json",
+      "disposition": "RESEARCH_PACKET_DELIVERED_EXPORT_CORPUS_AND_OWNER_DECISIONS_OPEN",
+      "reviewState": "CLEAN_BOUNDED_DOCUMENTARY_REVIEW",
+      "ownerQuestions": [
+        {
+          "question": "Which Arc OS/builds and export routes should the first supported corpus cover, and can you provide owner-authorized inert exports with their provenance?",
+          "recommendation": "Acquire built-in desktop Export Data originals containing synthetic browsing data for intended source platforms/builds; inspect clipboard/mobile exports separately.",
+          "status": "OPEN",
+          "routeTo": "research coordinator",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "question": "After fixture inspection, approve a preview of proven link/Space organization with explicit Profile mapping and visible unsupported fields, or defer conversion until richer evidence exists?",
+          "recommendation": "Review the narrower preview after fixture discovery. Do not infer missing Profile ownership, flatten folders, restore unproven sessions/splits, or copy credentials.",
+          "status": "OPEN",
+          "routeTo": "research coordinator",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        }
+      ],
+      "remainingCriteria": [
+        {
+          "criterion": "Retain actual export provenance and inert fixtures",
+          "state": "OPEN",
+          "reason": "No owner-authorized export bytes available."
+        },
+        {
+          "criterion": "Enumerate observed Spaces/Favorites/Profile/split/session fields and versions",
+          "state": "OPEN",
+          "reason": "Documentary coverage inventoried; byte-level field schema and supported version/build evidence unavailable."
+        },
+        {
+          "criterion": "Owner-reviewed unsupported-data and mapping/preview contract",
+          "state": "AWAITING_OWNER_REVIEW",
+          "reason": "Source-preserving proposal delivered; no decision invented."
+        },
+        {
+          "criterion": "Native import acceptance",
+          "state": "OPEN",
+          "reason": "Research leaf provides no converter, prepared-source patch, native test registration, build or runtime proof."
+        }
+      ],
+      "reviewPath": "arcified/docs/production/research/arc-import-format-review-round-1.md",
+      "reviewedCommit": "67bc932296b818548bd3e70a114d71252239faa6"
+    },
+    {
+      "key": "focus-routing-contract",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/44",
+      "packet": "arcified/native/production/focus-routing-contract/result.json",
+      "disposition": "DECISION_EVIDENCE_READY_OWNER_REVIEW_REQUIRED",
+      "reviewState": "CLEAN_BOUNDED_DOCUMENTARY_REVIEW",
+      "ownerQuestions": [
+        {
+          "id": "Q1",
+          "question": "When pointer or keyboard focus enters a split pane, should workspace selection stay on the explicitly selected object until an explicit workspace selection, or also select that pane's workspace object?",
+          "recommendation": "Keep workspace selection independent and visibly label both active page and selected object.",
+          "tradeoff": "Stable organization targets avoid silently moving/archiving another object, but users need clear distinct cues.",
+          "status": "UNRESOLVED",
+          "authority": "Coordinator consolidates with owner; this packet records no approval.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "id": "Q2",
+          "question": "For target choice only, should generic Close request dismissal of the active Peek, otherwise close the active pane/page, or require explicit surface close controls?",
+          "recommendation": "Route generic Close to the active surface's close/dismiss intent, keeping Archive a separate selected-object command.",
+          "tradeoff": "Consistent surface targeting is convenient; explicit controls reduce ambiguity. Any actual hide/close, protected-work handling and undo still require root lifecycle policy and native completion.",
+          "status": "UNRESOLVED",
+          "authority": "Do not settle destructive/lifetime policy in this leaf.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "id": "Q3",
+          "question": "After a permitted dismissal or close invalidates focus, should return prefer an eligible live Peek parent, then a surviving visible sibling, then an accessible empty host, or wait in the empty host for explicit selection?",
+          "recommendation": "Use eligible parent, then visible sibling, then empty host. Do not reopen, clone, or activate a hidden/background page as fallback.",
+          "tradeoff": "Automatic return preserves continuity but requires visible, live, permitted targets and native focus acknowledgement. If several siblings qualify, ordering remains with the split/tab-order owner.",
+          "status": "UNRESOLVED",
+          "authority": "Focus fallback only; no preview-retention or deletion policy is implied.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "id": "Q4",
+          "question": "Should the first production scope expose a separately labeled Reload selected action for explicit multi-selection, or leave bulk reload unavailable while ordinary Reload remains active-page-only?",
+          "recommendation": "Leave bulk reload unavailable in this scope and retain active-page-only default. A future explicit bulk command needs its own review.",
+          "tradeoff": "This matches issue 44 but differs from Chromium's current multi-selection ReloadInternal behavior. Preserving bulk convenience requires a distinct action rather than implicit default fan-out.",
+          "status": "UNRESOLVED",
+          "authority": "Acceptance already requires ordinary reload to target the active surface; that requirement is not reopened.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "id": "Q5",
+          "source": "compatibility #59 Q2",
+          "question": "When an incoming OS link has no originating page, or a notification/PiP initiator no longer exists, which surviving host/Space should receive it?",
+          "recommendation": "Keep these routes unavailable until owner settlement. For a known exact originating/registered Profile, recommend an explicit destination choice restricted to a host context and Space with that same real Profile, after native liveness/attachment validation. Do not automatically select a last-active host/Space or create one.",
+          "tradeoff": "Avoids silently targeting an unrelated context. An explicit same-Profile destination choice adds interaction and still needs root's native ownership proof; no destination policy or approval exists yet.",
+          "status": "UNRESOLVED",
+          "authority": "Consolidates compatibility Q2. Exact known Profile is preserved, not selected from last-active state. Local focus-return Q3 does not authorize external event routing.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        },
+        {
+          "id": "Q6",
+          "source": "compatibility #59 Q2, unattributed variant",
+          "question": "If an incoming OS link has no resolvable exact originating or registered Profile, should an explicit Profile-and-Space chooser be supported, or should the route remain unavailable?",
+          "recommendation": "Keep the route unavailable pending an owner-approved attribution/selection workflow. Never infer a Profile from last-active state, workspace selection, URL/title or an unrelated native dialog parent.",
+          "tradeoff": "Avoids invented attribution and credential-context changes; unattributed OS-link UX remains incomplete until the owner chooses scope and native validation is implemented.",
+          "status": "UNRESOLVED",
+          "authority": "No chooser, default Profile, provider rule, host creation or owner approval is implemented or inferred here.",
+          "coordinatorDisposition": "AWAITING_ROOT_CONSOLIDATION_AND_ACTUAL_OWNER_ANSWER",
+          "ownerAnswer": null
+        }
+      ],
+      "remainingCriteria": [
+        {
+          "criterion": "Active-surface versus selected-object routing",
+          "evidence": "Specified and synthetically fixtured; actual production binding/native command behavior OPEN."
+        },
+        {
+          "criterion": "Split, Peek, chrome, modal, fullscreen and close entry/exit with cues",
+          "evidence": "Specified/proposed and covered by synthetic table; Q1-Q3, native focus success and visual/accessibility observations OPEN."
+        },
+        {
+          "criterion": "Synthetic scenario tables and owner settlement across platform presentation",
+          "evidence": "Table and fixtures delivered; Q1-Q6 UNRESOLVED, coordinator review/owner recording and Linux/Windows/macOS execution OPEN."
+        },
+        {
+          "criterion": "External activation and missing-initiator targeting",
+          "evidence": "Proposed Profile-preserving target constraints and synthetic variants recorded. Q5/Q6, exact native route implementation and Linux/Windows/macOS native evidence OPEN. Compatibility D1 remains source-risk only."
+        }
+      ],
+      "reviewPath": "arcified/docs/production/research/focus-routing-contract-review-round-1.md",
+      "reviewedCommit": "6826304dc00ec86707af893799d73231efef0f8b"
+    }
+  ],
+  "nextAction": "Root consolidates these reviewed proposals and existing approvals. Preserve null owner answers. AI/sync scope is already settled and must not be reasked. No source disposition or native completion is approved by this document."
+}

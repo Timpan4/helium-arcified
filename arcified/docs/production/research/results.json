@@ -1,0 +1,90 @@
+{
+  "area": "research",
+  "status": "TWELVE_REVIEWED_PACKETS_LOCALLY_COMMITTED_ROOT_INTEGRATION_AND_NATIVE_GATES_OPEN",
+  "rootThreadId": "6733348c-3696-4b31-834c-2bbca45e70d2",
+  "worktree": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production",
+  "branch": "feat/non-ai-research-production",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "localCommits": [
+    {
+      "sha": "67bc932296b818548bd3e70a114d71252239faa6",
+      "scope": "Eleven independently reviewed research/decision/tracking packets and their round 1 reviews.",
+      "nativeFeatureCompletion": false
+    },
+    {
+      "sha": "6826304dc00ec86707af893799d73231efef0f8b",
+      "scope": "Focus routing decision packet and clean independent round 1 review.",
+      "nativeFeatureCompletion": false
+    }
+  ],
+  "counts": {
+    "assigned": 12,
+    "primaryPacketsDelivered": 12,
+    "reviewedClean": 12,
+    "reviewPending": 0,
+    "nativeProvenDone": 0,
+    "doneAwaitingRelease": 0,
+    "inProgress": 12,
+    "notStarted": 0
+  },
+  "nativeAcceptance": "OPEN",
+  "scope": "Research, decision and tracking evidence. No production native patch or native success is claimed.",
+  "authority": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+  "briefArchive": "briefs/",
+  "reviewedIdentities": "reviewed-input-identities.json",
+  "ownerDecisions": "owner-decisions.json",
+  "integrationRequests": [
+    {
+      "target": "root",
+      "request": "Integrate the local reviewed research evidence when appropriate. No quilt registration or command/resource changes are requested."
+    },
+    {
+      "target": "data/arc-import",
+      "request": "Reviewed settled boundary sent directly. Empty exact format/build support, no actual export corpus. Unknown routes unavailable; preserve source and unresolved import/destructive policies."
+    },
+    {
+      "target": "runtime-reference",
+      "request": "Windows descriptor/bootstrapper dependency evidence is now available in the reviewed Windows packet. Full MSIX hashes/signatures/extraction and supported host/account runtime remain OPEN."
+    },
+    {
+      "target": "root and commands/window-ownership",
+      "request": "Consume reviewed focus proposal. Ordinary active-page-only Reload requires actual integration rather than Chromium's existing implicit multi-selection path. Q1-Q6 remain unresolved."
+    },
+    {
+      "target": "root and downloads/window-chrome",
+      "request": "Route compatibility D1 source-risk candidate for actual dialog-parent/context/native regression evidence. No reproduced leak or runtime defect is claimed."
+    },
+    {
+      "target": "root/extras",
+      "request": "Reconcile recommended Notes retirement import/view/export-only disposition with the Notes implementation requirements before asking an already-settled question."
+    }
+  ],
+  "checks": {
+    "reviewedInputIdentity": {
+      "files": 120,
+      "matched": 120,
+      "mismatches": 0,
+      "committedPacketFiles": 116,
+      "localIgnoredAcquisitionInputs": 4,
+      "artifact": "reviewed-input-identities.json"
+    },
+    "focusSyntax": "PASS",
+    "focusArtifactAudit": "PASS: 31 synthetic focus rows and 8 external-route rows; no native routing executed.",
+    "stagedDiffWhitespace": {
+      "status": "PASS",
+      "command": "git -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol diff --cached --check",
+      "note": "Original vendor XML descriptors retain exact CRLF bytes. No actual spaces/tabs at line ends. No persistent Git config changed."
+    },
+    "nativeFeatureChecks": "NOT_RUN_ROOT_ONLY"
+  },
+  "remainingGates": [
+    "Root integration/publication of local evidence commits and actual owner settlement. Research review is not issue or release completion.",
+    "Actual owner answers and accepted optional-feature/provider/import/focus dispositions.",
+    "Authorized inert export corpus and exact grammar/build evidence.",
+    "Full Windows browser packages, signatures, supported reference hosts/accounts and runtime observations.",
+    "Per-OS installed RC/compatibility/UX matrix observations and visible optional/deferred states.",
+    "Native feature compilation, registered production tests, same-window multi-Profile isolation, same-live-page handoff and actual visual/accessibility acceptance, owned by root."
+  ],
+  "remotePublication": "NOT_PERFORMED",
+  "coordinatorConsolidationReview": "See coordinator-consolidation-review-round-1.md for the independent result; status.json records task state."
+}
