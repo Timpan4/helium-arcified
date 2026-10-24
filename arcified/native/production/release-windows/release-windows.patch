@@ -1,0 +1,148 @@
+diff --git a/chrome/installer/util/helper.cc b/chrome/installer/util/helper.cc
+index 93773189..7fe4af24 100644
+--- a/chrome/installer/util/helper.cc
++++ b/chrome/installer/util/helper.cc
+@@ -120,10 +120,23 @@ base::FilePath GetCurrentInstallPathFromRegistry(bool system_install) {
+     return {};
+   }
+ 
++  // Arcified downstream changes: SPDX-License-Identifier: GPL-3.0-only.
++  // Check the registered layout before using its ancestor as an install target.
++  // This validates metadata, not the executable's signature or publisher.
++  const base::FilePath installer_dir = setup_path.DirName();
++  const base::FilePath version_dir = installer_dir.DirName();
++  if (!base::FilePath::CompareEqualIgnoreCase(setup_path.BaseName().value(),
++                                              installer::kSetupExe) ||
++      !base::FilePath::CompareEqualIgnoreCase(installer_dir.BaseName().value(),
++                                              installer::kInstallerDir) ||
++      !base::Version(version_dir.BaseName().MaybeAsASCII()).IsValid()) {
++    return {};
++  }
++
+   // The path to setup.exe has the format
+   // [InstallPath]/[version]/Installer/setup.exe. In order to get the
+   // [InstallPath], the full path must be pruned of the last 3 components.
+-  const base::FilePath install_path = setup_path.DirName().DirName().DirName();
++  const base::FilePath install_path = version_dir.DirName();
+ 
+   // The install path must not be at the root of the volume and must exist.
+   if (install_path == install_path.DirName() ||
+diff --git a/chrome/installer/util/helper.h b/chrome/installer/util/helper.h
+index e3783b8e..364fff8a 100644
+--- a/chrome/installer/util/helper.h
++++ b/chrome/installer/util/helper.h
+@@ -17,15 +17,21 @@ namespace installer {
+ 
+ class InitialPreferences;
+ 
++// Arcified downstream changes: SPDX-License-Identifier: GPL-3.0-only.
++
+ // Returns the install directory for an existing per-user or per-machine
+ // install; or an empty path if Chrome is not installed at the given level. In
+ // particular: if Chrome is installed at the level specified by `system_install`
+ // (as indicated by the presence of a valid version value), the install path
+ // derived from the value in the Windows registry at
+ // [HKLM|HKCU]\Software\Google\Update\ClientState\{appguid}\UninstallString is
+-// returned if it is absolute and exists. Otherwise, the path
+-// ([%ProgramFiles%|%LOCALAPPDATA%]\[Company\]Product\Application) is returned,
+-// provided that the expanded variable yields an absolute path that exists.
++// returned only if the setup path is absolute, has no parent references, has
++// the layout <install directory>\<valid version>\Installer\setup.exe (with
++// case-insensitive file/directory names), and the install directory exists and
++// is not a volume root. Otherwise returns an empty path. ProductState may
++// recover a missing UninstallString from an existing standard-location version
++// directory. This is a metadata/layout check, not signature or publisher
++// verification.
+ base::FilePath GetInstalledDirectory(bool system_install);
+ 
+ // Returns the default install directory for either a per-user or a per-machine
+diff --git a/chrome/installer/util/helper_unittest.cc b/chrome/installer/util/helper_unittest.cc
+index 74f52926..45bad5a1 100644
+--- a/chrome/installer/util/helper_unittest.cc
++++ b/chrome/installer/util/helper_unittest.cc
+@@ -116,6 +116,55 @@ TEST_P(GetInstalledDirectoryTest, RegistryValueSet) {
+   EXPECT_EQ(GetInstalledDirectory(is_system_level()), install_path);
+ }
+ 
++// Arcified downstream changes: SPDX-License-Identifier: GPL-3.0-only.
++TEST_P(GetInstalledDirectoryTest, RejectsMalformedRegisteredSetupLayout) {
++  const base::FilePath install_path = random_path().Append(L"Existing install");
++  ASSERT_TRUE(base::CreateDirectory(install_path));
++  base::win::RegKey client_key(GetClientsRegKey());
++  ASSERT_EQ(client_key.WriteValue(google_update::kRegVersionField, L"1.0.0.0"),
++            ERROR_SUCCESS);
++  base::win::RegKey client_state_key(GetClientStateRegKey());
++
++  const wchar_t* const invalid_suffixes[] = {
++      L"1.0.0.0\\Installer\\other.exe",
++      L"1.0.0.0\\Other\\setup.exe",
++      L"not-a-version\\Installer\\setup.exe",
++      L"1.0.invalid.0\\Installer\\setup.exe",
++      L"Installer\\setup.exe",
++      L"1.0.0.0\\setup.exe",
++      L"setup.exe",
++  };
++  for (const wchar_t* suffix : invalid_suffixes) {
++    const base::FilePath setup_path = install_path.Append(suffix);
++    SCOPED_TRACE(setup_path.AsUTF8Unsafe());
++    ASSERT_EQ(client_state_key.WriteValue(kUninstallStringField,
++                                          setup_path.value().c_str()),
++              ERROR_SUCCESS);
++
++    EXPECT_TRUE(GetInstalledDirectory(is_system_level()).empty());
++    EXPECT_TRUE(base::DirectoryExists(install_path));
++  }
++}
++
++TEST_P(GetInstalledDirectoryTest, AcceptsCaseAndRegisteredVersionSkew) {
++  const base::FilePath install_path = random_path().Append(L"Existing install");
++  ASSERT_TRUE(base::CreateDirectory(install_path));
++  base::win::RegKey client_key(GetClientsRegKey());
++  ASSERT_EQ(client_key.WriteValue(google_update::kRegVersionField, L"1.0.0.0"),
++            ERROR_SUCCESS);
++  base::win::RegKey client_state_key(GetClientStateRegKey());
++  ASSERT_EQ(client_state_key.WriteValue(
++                kUninstallStringField,
++                install_path.Append(L"2.0.0.0\\iNsTaLlEr\\SeTuP.ExE")
++                    .value()
++                    .c_str()),
++            ERROR_SUCCESS);
++
++  // A valid registered layout need not match the Clients version. Interrupted
++  // updates and repair must not require the versioned setup file to exist here.
++  EXPECT_EQ(GetInstalledDirectory(is_system_level()), install_path);
++}
++
+ TEST_P(GetInstalledDirectoryTest, NoDirectory) {
+   base::win::RegKey client_state_key(GetClientStateRegKey());
+   ASSERT_EQ(client_state_key.WriteValue(
+@@ -437,6 +486,29 @@ TEST_P(GetChromeInstallPathWithPrefsTest, RegistryValueSet) {
+             install_path);
+ }
+ 
++// Arcified downstream changes: SPDX-License-Identifier: GPL-3.0-only.
++TEST_P(GetChromeInstallPathWithPrefsTest,
++       MalformedRegistrationUsesNormalTarget) {
++  const base::FilePath install_path =
++      random_path().Append(L"Unrelated directory");
++  ASSERT_TRUE(base::CreateDirectory(install_path));
++  base::win::RegKey client_key(GetClientsRegKey());
++  ASSERT_EQ(client_key.WriteValue(google_update::kRegVersionField, L"1.0.0.0"),
++            ERROR_SUCCESS);
++  base::win::RegKey client_state_key(GetClientStateRegKey());
++  ASSERT_EQ(client_state_key.WriteValue(
++                kUninstallStringField,
++                install_path.Append(L"1.0.0.0\\Installer\\other.exe")
++                    .value()
++                    .c_str()),
++            ERROR_SUCCESS);
++
++  EXPECT_EQ(GetChromeInstallPathWithPrefs(is_system_level(),
++                                          InitialPreferences(prefs_json())),
++            GetExpectedPathForSetup(is_system_level(), target_dir()));
++  EXPECT_TRUE(base::DirectoryExists(install_path));
++}
++
+ TEST_P(GetChromeInstallPathWithPrefsTest, RegistryValueSetWrongScope) {
+   base::win::RegKey client_state_key(GetClientStateRegKey());
+   ASSERT_EQ(client_state_key.WriteValue(

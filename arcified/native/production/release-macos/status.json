@@ -1,0 +1,71 @@
+{
+  "issue": 133,
+  "key": "release-macos",
+  "status": "UNBLOCKED_NATIVE_SIGNATURE_SOURCE_PACKET_READY",
+  "nativeAcceptance": "OPEN",
+  "releaseAcceptance": "OPEN",
+  "acceptanceCriteria": {
+    "authorizedSigningNotarizationInstalledAndPackageSignatures": "OPEN",
+    "cleanInstallRegistrationUpgradeDataPreservation": "OPEN",
+    "architectureOsSupportSecurityPromptsReleaseClassification": "OPEN"
+  },
+  "implemented": [
+    "Read-only native static app-signature verifier using CoreFoundation and Security.framework",
+    "Standalone audit CLI requiring explicit identity and approved signing-requirement file",
+    "GN registration for native negative tests and a separate owner-artifact test target"
+  ],
+  "checks": [
+    {
+      "name": "C++ formatter and style lint",
+      "result": "PASS",
+      "tool": "clang-format 23.1.3, prepared .clang-format, dry-run Werror"
+    },
+    {
+      "name": "GN syntax and format",
+      "result": "PASS",
+      "tool": "prepared buildtools/linux64/gn format and dry-run",
+      "limit": "No GN generation or dependency resolution"
+    },
+    {
+      "name": "Sparse captured-base patch application and whitespace check",
+      "result": "PASS",
+      "tool": "git apply --check --whitespace=error --directory=arcified/native/production/release-macos/base"
+    },
+    {
+      "name": "Source identities",
+      "result": "CAPTURED",
+      "evidence": "source-identities.json"
+    },
+    {
+      "name": "macOS compile, native tests and UI",
+      "result": "NOT_RUN",
+      "reason": "No native SDK/runtime/build/test authorization in this task"
+    }
+  ],
+  "blockedBy": [
+    "native-macos",
+    "session-durability",
+    "schema-migrations"
+  ],
+  "decisionsNeeded": [
+    "Fork-owned application/helper identity, data/keychain migration boundary and display names",
+    "Authorized signing/notarization ownership and exact signing requirement, including release class and entitlements",
+    "Package format, installation location/flow and architecture/OS support matrix",
+    "Any cleanup, rollback/downgrade and retained-data disposition policy"
+  ],
+  "preserved": [
+    "Prepared source read-only",
+    "Lifecycle Model, metadata/codec, command targets and private/download classifiers",
+    "Library40701 and assigned-but-unused release-macos40795",
+    "OPEN same-window multi-Profile switching and saved-page handoff"
+  ],
+  "integrationRequests": [
+    "Coordinator reconcile BUILD.gn and apply patch to a source tree matching the recorded base",
+    "Coordinator obtain independent review",
+    "Root schedule authorized macOS build/native tests and retain actual installed-artifact results after owner decisions"
+  ],
+  "writeScope": "arcified/native/production/release-macos/",
+  "sharedLedgersChanged": false,
+  "quiltRegistered": false,
+  "committed": false
+}

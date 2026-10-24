@@ -1,0 +1,88 @@
+{
+  "license": "GPL-3.0-only",
+  "issue": "https://github.com/Timpan4/helium-arcified/issues/131",
+  "key": "release-linux",
+  "status": "native_regression_packet_prepared_acceptance_open",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "chromiumVersion": "155.0.8059.79",
+  "preparedSource": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+  "preparedSourceAccess": "read-only",
+  "productionChange": "Linux-only browser_tests source registration and real Profile startup/restart tests. No installer or runtime product behavior change.",
+  "files": [
+    {
+      "path": "chrome/test/BUILD.gn",
+      "baseSha256": "38933520829a78288766cd702e665076f62e4ac720c82ca816d342a59a874099",
+      "resultSha256": "f5ccaeca16b8e47c313f07af197ff71432573067a36644f8f6c60fe0bc5e4dde"
+    },
+    {
+      "path": "chrome/browser/arcified/release_linux_browsertest.cc",
+      "baseSha256": null,
+      "resultSha256": "5befb1f0f8161b560a21e5a4f64fd976f01333e2bdeacb8755f1f4b09316813f"
+    }
+  ],
+  "inspectedSourceSha256": {
+    "chrome/common/chrome_paths_linux.cc": "5b10069f4a64a1820c069b7015b6b69f58f2c015e66006635a75be1c2b6153a7",
+    "chrome/common/chrome_paths_unittest.cc": "868b5f1dc4b56a1fb90ad56513e50d5b2b4d7f543d8da27452a95d4ae3e4ef50",
+    "chrome/installer/linux/common/chromium-browser.info": "1a5b6d7ddc615c1fb0dc2f4edb23674228cc66820bff6d36472d43ccf597a054",
+    "chrome/app/chrome_main_delegate.cc": "f13565a4dcd65bc04bcc52955fa904b9daadbc2b3be090c124cb6a316f1851e4",
+    "chrome/test/base/in_process_browser_test.cc": "757cbf8f53fac25a91f5e10806e4771a87bd3a66cb8d9bb7dfb25fb9ff3fa33a",
+    "chrome/test/base/test_launcher_utils.cc": "b3d6b3ab6d07e1a719cda7f6a7c8e65d83ddc73c1e84f0d87917ff472f8754b0"
+  },
+  "authoritySnapshotSha256": {
+    "production/release/assignment.json": "bb1c1827ae0ed40d40009544344309f5f9a3afe5293ab44acead3cfb18ccb355",
+    "non-ai-production-workstreams.json": "aedebe1a338bb81f923b7b954be0f74fde994f836decc1e0a48e42b6ad5c2b93",
+    "lifecycle-contract.md": "244488864d15d093f7f80e1cc40f490a979454e2a8e74db438c7e51283518a1c",
+    "native-space-integration.md": "e5951ba265be3587cb1df8f2ab73ce6768071ac55b8d481240ed57819b39ab56",
+    "execution-state.json": "4912023bc5b95f58abc42f04572db59d5e9edcc9cd09b835fbc18206170e380c"
+  },
+  "nativeTests": {
+    "target": "//chrome/test:browser_tests",
+    "platformCondition": "is_linux",
+    "filter": "ArcifiedReleaseLinuxBrowserTest.*",
+    "names": [
+      "UsesExplicitUserDataDirectory",
+      "PRE_RetainsProfileDataAfterRestart",
+      "RetainsProfileDataAfterRestart"
+    ],
+    "execution": "NOT_RUN_ROOT_ONLY",
+    "claimsIfPassed": [
+      "Real Profile created beneath the explicitly requested test user-data directory.",
+      "Same-binary PRE_ restart retains real Profile preferences, location and test-owned files."
+    ],
+    "notCovered": [
+      "package install",
+      "upgrade to another binary",
+      "uninstall or purge",
+      "default application identity",
+      "session/workspace durability",
+      "schema migration",
+      "same-window multi-Profile",
+      "saved-page handoff"
+    ]
+  },
+  "commandMapping": {
+    "primaryCommandId": 40794,
+    "addedLegacyCommands": [],
+    "addedActionItems": [],
+    "reason": "Test-only packet has no user-facing action. Library 40701 remains untouched."
+  },
+  "acceptance": {
+    "identityAndFormat": "OPEN_OWNER_DECISION",
+    "cleanInstallUpgradeUninstall": "OPEN_NOT_EXECUTED",
+    "sourceProvenance": "RECORDED_FILE_SHA256_ONLY",
+    "nativeSmoke": "OPEN_NOT_BUILT_OR_RUN",
+    "credentialExclusion": "NO_CREDENTIALS_OR_RELEASE_ARTIFACTS_CREATED_ARTIFACT_AUDIT_OPEN",
+    "independentReview": "OPEN_COORDINATOR_OWNED"
+  },
+  "blockedBy": [
+    "native-linux",
+    "session-durability",
+    "schema-migrations"
+  ],
+  "ownerDecisionsNeeded": [
+    "Supported Linux package/distribution format, architectures and environments.",
+    "Fork-owned package/application/desktop identity, installation path and default user-data namespace; explicit treatment of pre-existing Helium data.",
+    "Uninstall and purge data choices, cleanup and rollback/downgrade policy.",
+    "Release/signing infrastructure ownership before publication. No provider, identity or channel selected."
+  ]
+}

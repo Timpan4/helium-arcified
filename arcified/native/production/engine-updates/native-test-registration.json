@@ -1,0 +1,37 @@
+{
+  "license": "GPL-3.0-only",
+  "status": "SOURCE_REGISTERED_IN_PACKET_NOT_BUILT",
+  "source": "result/chrome/browser/profiles/arcified_engine_update_browsertest.cc",
+  "registration": "result/chrome/browser/profiles/BUILD.gn",
+  "nativeTarget": "//chrome/browser/profiles:browser_tests",
+  "runnerTarget": "//chrome/test:browser_tests",
+  "existingRunnerRegistration": {
+    "path": "chrome/test/BUILD.gn",
+    "line": 1891,
+    "sha256": "38933520829a78288766cd702e665076f62e4ac720c82ca816d342a59a874099"
+  },
+  "filter": "ArcifiedEngineUpdateBrowserTest.*",
+  "tests": [
+    {
+      "name": "ArcifiedEngineUpdateBrowserTest.DeclaredEngineRevision",
+      "provesWhenRun": "Compiled browser engine version matches the declared Chromium revision, using native version_info."
+    },
+    {
+      "name": "ArcifiedEngineUpdateBrowserTest.NavigationRetainsLivePageAndProfile",
+      "provesWhenRun": "Real browser navigation commits the second test URL while retaining the same WebContents and BrowserContext."
+    },
+    {
+      "name": "ArcifiedEngineUpdateBrowserTest.RegularAndPrivateCookiesStayIsolated",
+      "provesWhenRun": "Actual regular/private Profile cookie stores do not expose each other's value; private-window close leaves the regular cookie intact."
+    }
+  ],
+  "unavailableCoverage": [
+    "Arcified same-window multi-Profile",
+    "Arcified saved-page handoff",
+    "Arcified metadata/codec or command integration",
+    "Arcified private/download classifiers",
+    "Installed artifact upgrade, failure, restart and restore",
+    "All native compilation and execution on Linux, Windows and macOS"
+  ],
+  "mocks": "No fake native host, Profile, service or store. InProcessBrowserTest creates real browser Profiles, WebContents and native network-backed cookie services. The embedded HTTP server serves public test pages."
+}

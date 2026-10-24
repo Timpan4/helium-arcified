@@ -1,0 +1,188 @@
+{
+  "issue": 165,
+  "key": "update-linux",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "preparedSource": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+  "engineVersion": "155.0.8059.79",
+  "status": "policy_independent_native_source_packet_only",
+  "nativeAcceptance": "OPEN",
+  "files": [
+    {
+      "path": "chrome/app/arcified_update_linux_strings.grdp",
+      "baseSha256": null,
+      "resultSha256": "e29d5abb39c8085650eb77a52fa6a01fdbb99887edc543a3c1302f23c1b2a437"
+    },
+    {
+      "path": "chrome/app/generated_resources.grd",
+      "baseSha256": "bb7090106bf2e0912d97dfe0435dd901de3cab8ac5b4565d48ae46a2f631a020",
+      "resultSha256": "fec1bd127be6af7233fc2c754acd13ba3bb727b5cd18ccd6a4dc9b905750e005"
+    },
+    {
+      "path": "chrome/browser/resources/settings/about_page/about_page.ts",
+      "baseSha256": "10ce9b8be3b7d31138c1dc56936bbf829a78738c86bb78fc3edcaad79036870c",
+      "resultSha256": "971f4c01efe4ca3760db1ecaf26ad0cd5aa0a6bf67e46742346357ba4f0ba7b8"
+    },
+    {
+      "path": "chrome/browser/ui/webui/help/BUILD.gn",
+      "baseSha256": "34515ae3307aa138e17ce433b2eb1383ccd7d69617f81a99cce621cc69af278e",
+      "resultSha256": "6ded5e8dbdb645d9cc2e9e783029dbd12ccd61dab61d8e23f22100042441b52a"
+    },
+    {
+      "path": "chrome/browser/ui/webui/help/version_updater_arcified_linux.cc",
+      "baseSha256": null,
+      "resultSha256": "d1e5ab23db2f02de515a3f2d63948784b5e2d3c5f51042776f7b5e9874208e7c"
+    },
+    {
+      "path": "chrome/browser/ui/webui/settings/BUILD.gn",
+      "baseSha256": "f6b26cbffd42cef403132ccde1ce54145ac5dd0a0a2897af7f833c4dd898287e",
+      "resultSha256": "093537660f29bb12b40c52164f17261cea812c44cce1c254056984dc4bc66609"
+    },
+    {
+      "path": "chrome/browser/ui/webui/settings/arcified_update_linux_browsertest.cc",
+      "baseSha256": null,
+      "resultSha256": "3325cf528933982f1864d7f7c5d03a906fa7f57b58f3fbf6ac7d72ec251e0b4e"
+    },
+    {
+      "path": "chrome/app/generated_resources.grd.gritdeps",
+      "baseSha256": "bcb6af069d4a518e4e5fa5b9b002929a2bb6ef7870a2c063f1a494736d69f967",
+      "resultSha256": "bec6ed94e6952ace39f768fc07195b614466eed219060c3660b55bf4651565fa"
+    }
+  ],
+  "patchSha256": "7f958bd40c02ffa4a51c3d9a6b94443aa1605574d5e2834697925c1e16286fad",
+  "supportingSourceSha256": {
+    "chrome/browser/ui/webui/help/version_updater_basic.cc": "ea232dcbd003a75205f3e4e816bc49aa1483ac4953740e85547521d05792117d",
+    "chrome/browser/upgrade_detector/get_installed_version_linux.cc": "ece65bdeaaacf84a70d25aec1a7b256e4796bc972524782e1badd70fbe8a616f",
+    "chrome/browser/upgrade_detector/installed_version_poller.cc": "3b5b99baed5a70c9f091635f1d3841ce4eae3a9d79ff37b56d5a9a0998f56891"
+  },
+  "controls": [
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/release/assignment.json",
+      "sha256": "bb1c1827ae0ed40d40009544344309f5f9a3afe5293ab44acead3cfb18ccb355"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+      "sha256": "aedebe1a338bb81f923b7b954be0f74fde994f836decc1e0a48e42b6ad5c2b93"
+    }
+  ],
+  "commands": {
+    "assignedPrimaryCommandId": 40827,
+    "assignedCommandUsed": false,
+    "reusedActionItem": "kActionAbout",
+    "existingLegacyCommand": "IDC_ABOUT",
+    "mapping": "chrome/browser/ui/actions/chrome_action_id.h: E(kActionAbout, IDC_ABOUT)",
+    "invocation": "chrome/browser/ui/browser_actions.cc: kActionAbout invokes chrome::ShowAboutChrome(bwi)",
+    "library40701": "unchanged"
+  },
+  "nativeTests": {
+    "source": "chrome/browser/ui/webui/settings/arcified_update_linux_browsertest.cc",
+    "target": "//chrome/browser/ui/webui/settings:browser_tests",
+    "parentTarget": "//chrome/test:browser_tests",
+    "filter": "ArcifiedUpdateLinuxBrowserTest.*",
+    "cases": [
+      "UnavailableWithAndWithoutWebContents",
+      "InstalledVersionSignalDoesNotAuthenticateAnUpdate",
+      "AboutPageExplainsUnavailableAfterReentry"
+    ],
+    "compiled": false,
+    "executed": false
+  },
+  "checks": [
+    {
+      "name": "clang_format_cpp_prepared_style",
+      "result": "PASS",
+      "tool": "clang-format 23.1.3",
+      "style": "preparedSource/.clang-format"
+    },
+    {
+      "name": "clang_format_changed_typescript_lines",
+      "result": "PASS",
+      "lines": "233:243",
+      "style": "preparedSource/.clang-format"
+    },
+    {
+      "name": "gn_format",
+      "result": "PASS",
+      "tool": "GN 2562 (cfcd774b98f3)",
+      "files": [
+        "chrome/browser/ui/webui/help/BUILD.gn",
+        "chrome/browser/ui/webui/settings/BUILD.gn"
+      ]
+    },
+    {
+      "name": "xml_well_formedness_nonet",
+      "result": "PASS",
+      "tool": "xmllint --noout --nonet"
+    },
+    {
+      "name": "typescript_syntax",
+      "result": "PASS",
+      "tool": "prepared TypeScript 6.0.2 transpileModule",
+      "diagnostics": 0,
+      "scope": "No module resolution, type checking or WebUI build"
+    },
+    {
+      "name": "diff_whitespace",
+      "result": "PASS",
+      "command": "git diff --no-index --check -- base result",
+      "exitCode": 1,
+      "detail": "Exit 1 denotes source differences; no whitespace diagnostics"
+    },
+    {
+      "name": "sparse_apply",
+      "result": "PASS",
+      "command": "patch --batch --fuzz=0 -p1 --directory=verified < production.patch"
+    },
+    {
+      "name": "complete_result_reconstruction",
+      "result": "PASS",
+      "command": "diff -r verified result",
+      "exitCode": 0
+    },
+    {
+      "name": "git_apply_check",
+      "result": "PASS",
+      "command": "git apply --check --directory=arcified/native/production/update-linux/base arcified/native/production/update-linux/production.patch",
+      "exitCode": 0
+    },
+    {
+      "name": "base_identity_matches_prepared_source",
+      "result": "PASS",
+      "detail": "All four copied base SHA-256 identities match the prepared source"
+    }
+  ],
+  "notRun": [
+    "GN generation/dependency validation",
+    "GRIT generation/resource-ID allocation",
+    "C++ compilation and native tests",
+    "WebUI type checking/build",
+    "native visual interaction",
+    "installed update authentication and tamper/downgrade rejection",
+    "interruption/restart/rollback data retention",
+    "Windows and macOS SDK/runtime/signing/installer acceptance"
+  ],
+  "acceptance": [
+    {
+      "criterion": "Owner approves channel/service ownership and signing/key infrastructure before publication",
+      "status": "OPEN",
+      "detail": "No approval in supplied controls. No provider, key, identity, package format or publication selected."
+    },
+    {
+      "criterion": "Installed-to-updated artifact identity/signatures; tampered metadata and incompatible downgrades rejected",
+      "status": "OPEN",
+      "detail": "No application updater is available. Disabled native callback is prepared, not artifact authentication or downgrade validation."
+    },
+    {
+      "criterion": "Interrupted/failed update, restart and approved rollback retain Profile/workspace data",
+      "status": "OPEN",
+      "detail": "release-linux and session-durability remain dependencies. No installer, rollback, profile cleanup or data disposition implemented."
+    }
+  ],
+  "reviewResponse": {
+    "round": 1,
+    "acceptedFindings": [
+      "Private ScopedDisableForTesting constructor corrected using MakeScopedDisableForTesting",
+      "New GRIT part registered in generated_resources.grd.gritdeps"
+    ],
+    "nativeChecks": "NOT_RUN; source checks only"
+  }
+}

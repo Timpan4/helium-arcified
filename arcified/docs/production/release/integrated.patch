@@ -1,0 +1,1551 @@
+diff --git a/chrome/app/arcified_update_linux_strings.grdp b/chrome/app/arcified_update_linux_strings.grdp
+new file mode 100644
+index 00000000..f93de8b6
+--- /dev/null
++++ b/chrome/app/arcified_update_linux_strings.grdp
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!-- SPDX-License-Identifier: GPL-3.0-only -->
++<grit-part>
++  <message name="IDS_ARCIFIED_UPDATE_LINUX_UNAVAILABLE" desc="About page explanation when this Linux build has no authenticated Arcified application updater. It does not describe component or extension updates.">
++    Authenticated Arcified updates are not available in this build.
++  </message>
++</grit-part>
+diff --git a/chrome/app/generated_resources.grd b/chrome/app/generated_resources.grd
+index 18f57d7e..3e9d0d8f 100644
+--- a/chrome/app/generated_resources.grd
++++ b/chrome/app/generated_resources.grd
+@@ -268,6 +268,15 @@
+   <release seq="1">
+     <!-- IMPORTANT: .grdp files must be in the same directory as this file -->
+     <messages fallback_to_english="true">
++      <if expr="is_win">
++        <message name="IDS_ARCIFIED_UPDATE_WINDOWS_UNAVAILABLE" desc="Shown in About when this Windows build has no authenticated Arcified update channel.">
++          Automatic updates are unavailable in this Arcified build. No update was downloaded or installed.
++        </message>
++      </if>
++      <if expr="is_linux">
++        <part file="arcified_update_linux_strings.grdp" />
++      </if>
++
+       <!-- Access Code Cast specific strings -->
+       <part file="access_code_cast_strings.grdp" />
+ 
+@@ -11844,6 +11853,9 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Google
+ 
+       <!-- Automatic updates -->
+       <if expr="is_macosx">
++        <message name="IDS_ARCIFIED_UPDATE_MACOS_UNAVAILABLE" desc="Status shown on the About page while authenticated Arcified updates for macOS are unavailable.">
++          Arcified updates for macOS are unavailable in this build.
++        </message>
+         <message name="IDS_PROMOTE_INFOBAR_TEXT" desc="The text to show in the automatic update setup infobar.  Mac-only.">
+           <ph name="PRODUCT_NAME">$1<ex>Helium</ex></ph> may not be able to keep itself updated
+         </message>
+@@ -20261,4 +20273,4 @@ Please help our engineers fix this problem. Tell us what happened right before y
+     </message>
+   </messages>
+ </release>
+-</grit>
+\ No newline at end of file
++</grit>
+diff --git a/chrome/app/generated_resources.grd.gritdeps b/chrome/app/generated_resources.grd.gritdeps
+index df1923b7..3fc2fbba 100644
+--- a/chrome/app/generated_resources.grd.gritdeps
++++ b/chrome/app/generated_resources.grd.gritdeps
+@@ -3,6 +3,7 @@
+ chrome/app/access_code_cast_strings.grdp
+ chrome/app/actor_strings.grdp
+ chrome/app/app_management_strings.grdp
++chrome/app/arcified_update_linux_strings.grdp
+ chrome/app/bookmarks_strings.grdp
+ chrome/app/certificate_manager.grdp
+ chrome/app/chromeos_shared_strings.grdp
+diff --git a/chrome/browser/arcified/release_linux_browsertest.cc b/chrome/browser/arcified/release_linux_browsertest.cc
+new file mode 100644
+index 00000000..602bcb91
+--- /dev/null
++++ b/chrome/browser/arcified/release_linux_browsertest.cc
+@@ -0,0 +1,95 @@
++// Copyright 2026 The Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include <string>
++
++#include "base/command_line.h"
++#include "base/files/file_path.h"
++#include "base/files/file_util.h"
++#include "base/path_service.h"
++#include "base/run_loop.h"
++#include "base/threading/thread_restrictions.h"
++#include "chrome/browser/profiles/profile.h"
++#include "chrome/common/chrome_paths.h"
++#include "chrome/common/chrome_switches.h"
++#include "chrome/common/pref_names.h"
++#include "chrome/test/base/in_process_browser_test.h"
++#include "components/prefs/pref_service.h"
++#include "content/public/test/browser_test.h"
++
++namespace {
++
++// These checks exercise a real regular Profile and its preference store. The
++// launcher supplies an isolated --user-data-dir and retains it across PRE_
++// stages. A passing run proves startup/restart behavior for that binary only;
++// it does not exercise an installer, a different version or uninstall.
++class ArcifiedReleaseLinuxBrowserTest : public InProcessBrowserTest {
++ protected:
++  void CheckExplicitUserDataDirectory() {
++    const base::FilePath requested =
++        base::CommandLine::ForCurrentProcess()->GetSwitchValuePath(
++            switches::kUserDataDir);
++    ASSERT_TRUE(requested.IsAbsolute());
++    base::FilePath actual;
++    ASSERT_TRUE(base::PathService::Get(chrome::DIR_USER_DATA, &actual));
++    EXPECT_EQ(requested.StripTrailingSeparators(),
++              actual.StripTrailingSeparators());
++    ASSERT_TRUE(GetProfile());
++    EXPECT_FALSE(GetProfile()->IsOffTheRecord());
++    EXPECT_TRUE(actual.IsParent(GetProfile()->GetPath()));
++  }
++};
++
++IN_PROC_BROWSER_TEST_F(ArcifiedReleaseLinuxBrowserTest,
++                       UsesExplicitUserDataDirectory) {
++  ASSERT_NO_FATAL_FAILURE(CheckExplicitUserDataDirectory());
++}
++
++IN_PROC_BROWSER_TEST_F(ArcifiedReleaseLinuxBrowserTest,
++                       PRE_RetainsProfileDataAfterRestart) {
++  ASSERT_NO_FATAL_FAILURE(CheckExplicitUserDataDirectory());
++  base::ScopedAllowBlockingForTesting allow_blocking;
++  base::FilePath user_data_dir;
++  ASSERT_TRUE(base::PathService::Get(chrome::DIR_USER_DATA, &user_data_dir));
++
++  // Record the real Profile location rather than assuming an upstream or a
++  // future fork-owned directory name. Only test-owned data is written.
++  ASSERT_TRUE(base::WriteFile(
++      user_data_dir.AppendASCII("arcified-release-linux-profile-path"),
++      GetProfile()->GetPath().value()));
++  ASSERT_TRUE(base::WriteFile(
++      GetProfile()->GetPath().AppendASCII("arcified-release-linux-sentinel"),
++      "test-owned data retained across a native browser restart\n"));
++
++  PrefService* profile_prefs = GetProfile()->GetPrefs();
++  profile_prefs->SetString(prefs::kHomePage,
++                           "https://arcified-release-linux.invalid/");
++  profile_prefs->SetBoolean(prefs::kShowHomeButton, true);
++  base::RunLoop committed;
++  profile_prefs->CommitPendingWrite(committed.QuitClosure());
++  committed.Run();
++}
++
++IN_PROC_BROWSER_TEST_F(ArcifiedReleaseLinuxBrowserTest,
++                       RetainsProfileDataAfterRestart) {
++  ASSERT_NO_FATAL_FAILURE(CheckExplicitUserDataDirectory());
++  base::ScopedAllowBlockingForTesting allow_blocking;
++  base::FilePath user_data_dir;
++  ASSERT_TRUE(base::PathService::Get(chrome::DIR_USER_DATA, &user_data_dir));
++  std::string recorded_profile_path;
++  ASSERT_TRUE(base::ReadFileToString(
++      user_data_dir.AppendASCII("arcified-release-linux-profile-path"),
++      &recorded_profile_path));
++  EXPECT_EQ(GetProfile()->GetPath().value(), recorded_profile_path);
++  std::string sentinel;
++  ASSERT_TRUE(base::ReadFileToString(
++      GetProfile()->GetPath().AppendASCII("arcified-release-linux-sentinel"),
++      &sentinel));
++  EXPECT_EQ("test-owned data retained across a native browser restart\n",
++            sentinel);
++  EXPECT_EQ("https://arcified-release-linux.invalid/",
++            GetProfile()->GetPrefs()->GetString(prefs::kHomePage));
++  EXPECT_TRUE(GetProfile()->GetPrefs()->GetBoolean(prefs::kShowHomeButton));
++}
++
++}  // namespace
+diff --git a/chrome/browser/profiles/BUILD.gn b/chrome/browser/profiles/BUILD.gn
+index f548ae0c..22d93c30 100644
+--- a/chrome/browser/profiles/BUILD.gn
++++ b/chrome/browser/profiles/BUILD.gn
+@@ -1217,6 +1217,7 @@ if (!is_android) {
+     defines = [ "HAS_OUT_OF_PROC_TEST_RUNNER" ]
+ 
+     sources = [
++      "arcified_engine_update_browsertest.cc",
+       "host_zoom_map_browsertest.cc",
+       "incognito_profile_containment_browsertest.cc",
+       "profile_activity_metrics_recorder_browsertest.cc",
+@@ -1230,6 +1231,7 @@ if (!is_android) {
+       ":profile_manager",
+       ":profile_util",
+       "//base",
++      "//base/version_info",
+       "//chrome/browser/devtools",
+       "//chrome/browser/devtools:test_support",
+       "//chrome/browser/policy:test_support",
+@@ -1248,9 +1250,12 @@ if (!is_android) {
+       "//components/spellcheck/common",
+       "//components/universal_optout:features",
+       "//components/user_manager",
++      "//content/public/browser",
+       "//content/test:test_support",
++      "//net:test_support",
+       "//testing/gmock",
+       "//testing/gtest",
++      "//url",
+     ]
+ 
+     if (!is_chromeos) {
+diff --git a/chrome/browser/profiles/arcified_engine_update_browsertest.cc b/chrome/browser/profiles/arcified_engine_update_browsertest.cc
+new file mode 100644
+index 00000000..603b88cf
+--- /dev/null
++++ b/chrome/browser/profiles/arcified_engine_update_browsertest.cc
+@@ -0,0 +1,70 @@
++// SPDX-License-Identifier: GPL-3.0-only
++// Copyright 2026 The Helium Arcified Authors
++
++#include "base/version_info/version_info.h"
++#include "chrome/browser/profiles/profile.h"
++#include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
++#include "chrome/browser/ui/tabs/tab_strip_model.h"
++#include "chrome/test/base/in_process_browser_test.h"
++#include "chrome/test/base/ui_test_utils.h"
++#include "content/public/browser/web_contents.h"
++#include "content/public/test/browser_test.h"
++#include "content/public/test/browser_test_utils.h"
++#include "net/test/embedded_test_server/embedded_test_server.h"
++#include "testing/gtest/include/gtest/gtest.h"
++#include "url/gurl.h"
++
++// These exercise Chromium bindings required by Arcified. They do not implement
++// or prove same-window multi-Profile selection or saved-page handoff.
++class ArcifiedEngineUpdateBrowserTest : public InProcessBrowserTest {};
++
++IN_PROC_BROWSER_TEST_F(ArcifiedEngineUpdateBrowserTest,
++                       DeclaredEngineRevision) {
++  // Refresh deliberately with the declared update record and its source hashes.
++  EXPECT_EQ("155.0.8059.79", version_info::GetVersionNumber());
++}
++
++IN_PROC_BROWSER_TEST_F(ArcifiedEngineUpdateBrowserTest,
++                       NavigationRetainsLivePageAndProfile) {
++  ASSERT_TRUE(embedded_test_server()->Start());
++  Profile* const profile = browser()->GetProfile();
++  content::WebContents* const page =
++      browser()->GetTabStripModel()->GetActiveWebContents();
++  ASSERT_NE(nullptr, page);
++  ASSERT_EQ(profile, page->GetBrowserContext());
++
++  const GURL first = embedded_test_server()->GetURL("/title1.html");
++  const GURL second = embedded_test_server()->GetURL("/title2.html");
++  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), first));
++  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), second));
++  EXPECT_EQ(page, browser()->GetTabStripModel()->GetActiveWebContents());
++  EXPECT_EQ(profile, page->GetBrowserContext());
++  EXPECT_EQ(second, page->GetLastCommittedURL());
++}
++
++IN_PROC_BROWSER_TEST_F(ArcifiedEngineUpdateBrowserTest,
++                       RegularAndPrivateCookiesStayIsolated) {
++  ASSERT_TRUE(embedded_test_server()->Start());
++  Profile* const regular = browser()->GetProfile();
++  const GURL url = embedded_test_server()->GetURL("/title1.html");
++  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url));
++  ASSERT_TRUE(content::SetCookie(regular, url, "arcified_engine=regular"));
++
++  BrowserWindowInterface* const private_browser =
++      CreateIncognitoBrowser(regular);
++  ASSERT_NE(nullptr, private_browser);
++  Profile* const private_profile = private_browser->GetProfile();
++  ASSERT_NE(regular, private_profile);
++  ASSERT_TRUE(private_profile->IsOffTheRecord());
++  ASSERT_TRUE(ui_test_utils::NavigateToURL(private_browser, url));
++  EXPECT_EQ("", content::GetCookies(private_profile, url));
++  ASSERT_TRUE(
++      content::SetCookie(private_profile, url, "arcified_engine=private"));
++  EXPECT_EQ("arcified_engine=private",
++            content::GetCookies(private_profile, url));
++  EXPECT_EQ("arcified_engine=regular", content::GetCookies(regular, url));
++
++  // Closing the real private browser must leave the regular store unchanged.
++  CloseBrowserSynchronously(private_browser);
++  EXPECT_EQ("arcified_engine=regular", content::GetCookies(regular, url));
++}
+diff --git a/chrome/browser/resources/settings/about_page/about_page.ts b/chrome/browser/resources/settings/about_page/about_page.ts
+index 6306dc2e..241b3944 100644
+--- a/chrome/browser/resources/settings/about_page/about_page.ts
++++ b/chrome/browser/resources/settings/about_page/about_page.ts
+@@ -231,12 +231,25 @@ export class SettingsAboutPageElement extends SettingsAboutPageElementBase
+ 
+   // <if expr="not is_chromeos">
+   private updateShowUpdateStatus_() {
++    // <if expr="is_linux">
++    // A disabled authenticated updater still needs to explain its availability.
++    if (this.checkStatus_(UpdateStatus.DISABLED) &&
++        this.currentUpdateStatusEvent_!.message) {
++      this.showUpdateStatus_ = true;
++      return;
++    }
++    // </if>
+     if (this.obsoleteSystemInfo_.endOfLine) {
+       this.showUpdateStatus_ = false;
+       return;
+     }
+     this.showUpdateStatus_ =
+         this.currentUpdateStatusEvent_!.status !== UpdateStatus.DISABLED;
++    // <if expr="is_win">
++    // An unavailable updater can explain why without claiming a failed check
++    // or enabling the relaunch action.
++    this.showUpdateStatus_ ||= !!this.currentUpdateStatusEvent_!.message;
++    // </if>
+   }
+ 
+   protected shouldShowLearnMoreLink_(): boolean {
+diff --git a/chrome/browser/ui/webui/help/BUILD.gn b/chrome/browser/ui/webui/help/BUILD.gn
+index 17d8d3e2..91a9e3bd 100644
+--- a/chrome/browser/ui/webui/help/BUILD.gn
++++ b/chrome/browser/ui/webui/help/BUILD.gn
+@@ -2,8 +2,20 @@
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+ 
++import("//chrome/browser/buildflags.gni")
+ import("//chrome/common/features.gni")
+ 
++if (is_mac) {
++  # No macOS update service or signing infrastructure is approved for Arcified.
++  # Do not inherit either Chromium's updater or the platform Sparkle service.
++  assert(!enable_updater,
++         "Arcified macOS updates require owner approval in issue #167.")
++  if (defined(enable_sparkle)) {
++    assert(!enable_sparkle,
++           "Arcified macOS updates require owner approval in issue #167.")
++  }
++}
++
+ source_set("help") {
+   public = [ "version_updater.h" ]
+   public_deps = [ "//base" ]
+@@ -36,16 +48,11 @@ source_set("help") {
+   }
+ 
+   if (is_mac) {
+-    sources = [ "version_updater_mac.mm" ]
++    sources = [ "version_updater_arcified_mac.cc" ]
+     deps += [
+-      "//base:i18n",
+-      "//chrome/app:branded_strings",
+       "//chrome/app:generated_resources_grit",
+-      "//chrome/browser/updater",
+-      "//chrome/updater:browser_sources",
+       "//ui/base",
+     ]
+-    frameworks = [ "Foundation.framework" ]
+   }
+ 
+   if (is_win) {
+@@ -62,12 +69,68 @@ source_set("help") {
+         "//ui/gfx",
+       ]
+     } else {
+-      sources = [ "version_updater_basic.cc" ]
++      sources = [ "arcified_version_updater_win.cc" ]
++      deps += [
++        "//chrome/app:generated_resources_grit",
++        "//ui/base",
++      ]
+     }
+   }
+ 
+   if (is_linux) {
+-    sources = [ "version_updater_basic.cc" ]
++    sources = [ "version_updater_arcified_linux.cc" ]
++    deps += [
++      "//chrome/app:generated_resources_grit",
++      "//ui/base",
++    ]
++  }
++}
++
++if (is_mac) {
++  source_set("browser_tests") {
++    testonly = true
++    defines = [ "HAS_OUT_OF_PROC_TEST_RUNNER" ]
++    sources = [ "version_updater_arcified_mac_browsertest.cc" ]
++    deps = [
++      ":help",
++      "//base",
++      "//base/test:test_support",
++      "//chrome/browser/profiles:profile",
++      "//chrome/browser/ui",
++      "//chrome/browser/ui/tabs:tab_strip",
++      "//chrome/common",
++      "//chrome/test:test_support_ui",
++      "//components/prefs",
++      "//content/public/browser",
++      "//content/test:test_support",
++      "//testing/gtest",
++    ]
++  }
++}
++
++if (is_win && !is_chrome_branded) {
++  source_set("arcified_windows_unit_tests") {
++    testonly = true
++    sources = [ "arcified_version_updater_win_unittest.cc" ]
++    deps = [
++      ":help",
++      "//base/test:test_support",
++      "//testing/gtest",
++    ]
++  }
++
++  source_set("arcified_windows_browser_tests") {
++    testonly = true
++    defines = [ "HAS_OUT_OF_PROC_TEST_RUNNER" ]
++    sources = [ "arcified_version_updater_win_browsertest.cc" ]
++    deps = [
++      "//chrome/app:generated_resources_grit",
++      "//chrome/browser/ui",
++      "//chrome/test:test_support",
++      "//content/test:test_support",
++      "//ui/base",
++      "//url",
++    ]
+   }
+ }
+ 
+diff --git a/chrome/browser/ui/webui/help/arcified_version_updater_win.cc b/chrome/browser/ui/webui/help/arcified_version_updater_win.cc
+new file mode 100644
+index 00000000..7e8dd344
+--- /dev/null
++++ b/chrome/browser/ui/webui/help/arcified_version_updater_win.cc
+@@ -0,0 +1,32 @@
++// Copyright 2026 The Helium Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include "chrome/browser/ui/webui/help/version_updater.h"
++
++#include <memory>
++#include <string>
++
++#include "chrome/grit/generated_resources.h"
++#include "ui/base/l10n/l10n_util.h"
++
++namespace {
++
++// The unbranded Windows build has no approved authenticated update transport.
++// Keep the native About-page entry point available without interpreting an
++// installed-version notification as proof of an authenticated Arcified update.
++// This class does not fetch, stage, install, roll back, or request a restart.
++class ArcifiedVersionUpdaterWin final : public VersionUpdater {
++ public:
++  void CheckForUpdate(StatusCallback callback, PromoteCallback) override {
++    callback.Run(
++        DISABLED, 0, false, false, std::string(), 0,
++        l10n_util::GetStringUTF16(IDS_ARCIFIED_UPDATE_WINDOWS_UNAVAILABLE));
++    // The callback can destroy this updater. Do not access members afterward.
++  }
++};
++
++}  // namespace
++
++std::unique_ptr<VersionUpdater> VersionUpdater::Create(content::WebContents*) {
++  return std::make_unique<ArcifiedVersionUpdaterWin>();
++}
+diff --git a/chrome/browser/ui/webui/help/arcified_version_updater_win_browsertest.cc b/chrome/browser/ui/webui/help/arcified_version_updater_win_browsertest.cc
+new file mode 100644
+index 00000000..bf3022e4
+--- /dev/null
++++ b/chrome/browser/ui/webui/help/arcified_version_updater_win_browsertest.cc
+@@ -0,0 +1,48 @@
++// Copyright 2026 The Helium Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include "chrome/browser/ui/browser.h"
++#include "chrome/browser/ui/tabs/tab_strip_model.h"
++#include "chrome/grit/generated_resources.h"
++#include "chrome/test/base/in_process_browser_test.h"
++#include "chrome/test/base/ui_test_utils.h"
++#include "content/public/test/browser_test.h"
++#include "content/public/test/browser_test_utils.h"
++#include "ui/base/l10n/l10n_util.h"
++#include "url/gurl.h"
++
++namespace {
++
++using ArcifiedUpdateWindowsBrowserTest = InProcessBrowserTest;
++
++// Exercise the actual Settings WebUI -> AboutHandler -> VersionUpdater factory
++// -> WebUI event binding. No update service or VersionUpdater is substituted.
++IN_PROC_BROWSER_TEST_F(ArcifiedUpdateWindowsBrowserTest,
++                       AboutReportsUnavailableThroughNativeBinding) {
++  ASSERT_TRUE(
++      ui_test_utils::NavigateToURL(browser(), GURL("chrome://settings/help")));
++  auto* contents = browser()->tab_strip_model()->GetActiveWebContents();
++  EXPECT_EQ(l10n_util::GetStringUTF8(IDS_ARCIFIED_UPDATE_WINDOWS_UNAVAILABLE),
++            content::EvalJs(contents, R"JS(
++              (async () => {
++                const {addWebUiListener, removeWebUiListener} =
++                    await import('chrome://resources/js/cr.js');
++                return new Promise(resolve => {
++                  const listener = addWebUiListener(
++                      'update-status-changed', event => {
++                        removeWebUiListener(listener);
++                        resolve(event.status === 'disabled' &&
++                                        event.progress === 0 &&
++                                        !event.rollback && !event.powerwash &&
++                                        event.version === '' &&
++                                        event.size === '0' ?
++                                    event.message :
++                                    'Unexpected update status');
++                      });
++                  chrome.send('refreshUpdateStatus');
++                });
++              })()
++            )JS"));
++}
++
++}  // namespace
+diff --git a/chrome/browser/ui/webui/help/arcified_version_updater_win_unittest.cc b/chrome/browser/ui/webui/help/arcified_version_updater_win_unittest.cc
+new file mode 100644
+index 00000000..f5975a6d
+--- /dev/null
++++ b/chrome/browser/ui/webui/help/arcified_version_updater_win_unittest.cc
+@@ -0,0 +1,68 @@
++// Copyright 2026 The Helium Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include "chrome/browser/ui/webui/help/version_updater.h"
++
++#include <cstdint>
++#include <string>
++
++#include "base/test/bind.h"
++#include "testing/gtest/include/gtest/gtest.h"
++
++namespace {
++
++TEST(ArcifiedVersionUpdaterWinTest, ReportsUnavailableWithoutOfferingMutation) {
++  auto updater = VersionUpdater::Create(nullptr);
++  int replies = 0;
++  bool promoted = false;
++  updater->CheckForUpdate(
++      base::BindLambdaForTesting(
++          [&](VersionUpdater::Status status, int progress, bool rollback,
++              bool powerwash, const std::string& version, int64_t size,
++              const std::u16string& message) {
++            ++replies;
++            EXPECT_EQ(VersionUpdater::DISABLED, status);
++            EXPECT_EQ(0, progress);
++            EXPECT_FALSE(rollback);
++            EXPECT_FALSE(powerwash);
++            EXPECT_TRUE(version.empty());
++            EXPECT_EQ(0, size);
++            EXPECT_FALSE(message.empty());
++          }),
++      base::BindLambdaForTesting(
++          [&](VersionUpdater::PromotionState) { promoted = true; }));
++  EXPECT_EQ(1, replies);
++  EXPECT_FALSE(promoted);
++}
++
++TEST(ArcifiedVersionUpdaterWinTest, CallbackCanDestroyUpdater) {
++  auto updater = VersionUpdater::Create(nullptr);
++  bool replied = false;
++  updater->CheckForUpdate(
++      base::BindLambdaForTesting([&](VersionUpdater::Status status, int, bool,
++                                     bool, const std::string&, int64_t,
++                                     const std::u16string&) {
++        EXPECT_EQ(VersionUpdater::DISABLED, status);
++        replied = true;
++        updater.reset();
++      }),
++      {});
++  EXPECT_TRUE(replied);
++  EXPECT_FALSE(updater);
++}
++
++TEST(ArcifiedVersionUpdaterWinTest, RepeatedRequestsStayUnavailable) {
++  auto updater = VersionUpdater::Create(nullptr);
++  int replies = 0;
++  auto callback = base::BindLambdaForTesting(
++      [&](VersionUpdater::Status status, int, bool, bool, const std::string&,
++          int64_t, const std::u16string&) {
++        EXPECT_EQ(VersionUpdater::DISABLED, status);
++        ++replies;
++      });
++  updater->CheckForUpdate(callback, {});
++  updater->CheckForUpdate(callback, {});
++  EXPECT_EQ(2, replies);
++}
++
++}  // namespace
+diff --git a/chrome/browser/ui/webui/help/version_updater_arcified_linux.cc b/chrome/browser/ui/webui/help/version_updater_arcified_linux.cc
+new file mode 100644
+index 00000000..717a61d6
+--- /dev/null
++++ b/chrome/browser/ui/webui/help/version_updater_arcified_linux.cc
+@@ -0,0 +1,29 @@
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include <memory>
++#include <string>
++
++#include "chrome/browser/ui/webui/help/version_updater.h"
++#include "chrome/grit/generated_resources.h"
++#include "ui/base/l10n/l10n_util.h"
++
++namespace {
++
++// No authenticated application-update channel is configured for this build.
++// Installed-version polling is a separate external-install notification. Its
++// result cannot establish the replacement artifact's identity or signature.
++class VersionUpdaterArcifiedLinux final : public VersionUpdater {
++ public:
++  void CheckForUpdate(StatusCallback callback, PromoteCallback) override {
++    callback.Run(
++        DISABLED, 0, false, false, std::string(), 0,
++        l10n_util::GetStringUTF16(IDS_ARCIFIED_UPDATE_LINUX_UNAVAILABLE));
++  }
++};
++
++}  // namespace
++
++std::unique_ptr<VersionUpdater> VersionUpdater::Create(
++    content::WebContents* web_contents) {
++  return std::make_unique<VersionUpdaterArcifiedLinux>();
++}
+diff --git a/chrome/browser/ui/webui/help/version_updater_arcified_mac.cc b/chrome/browser/ui/webui/help/version_updater_arcified_mac.cc
+new file mode 100644
+index 00000000..0dfd981f
+--- /dev/null
++++ b/chrome/browser/ui/webui/help/version_updater_arcified_mac.cc
+@@ -0,0 +1,39 @@
++// Copyright 2026 The Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include <memory>
++#include <string>
++
++#include "chrome/browser/ui/webui/help/version_updater.h"
++#include "chrome/grit/generated_resources.h"
++#include "ui/base/l10n/l10n_util.h"
++
++namespace {
++
++// Native About-page binding until issue #167 has an approved update service.
++// No updater, installation, relaunch, or Profile service is invoked here.
++class ArcifiedMacVersionUpdater : public VersionUpdater {
++ public:
++  void CheckForUpdate(StatusCallback status_callback,
++                      PromoteCallback promote_callback) override {
++    const std::u16string message =
++        l10n_util::GetStringUTF16(IDS_ARCIFIED_UPDATE_MACOS_UNAVAILABLE);
++    // Either callback may destroy this updater. Everything needed below is
++    // owned by this call, with no subsequent access to the instance.
++    if (promote_callback) {
++      promote_callback.Run(PROMOTE_HIDDEN);
++    }
++    // DISABLED is hidden by the About page. Report the failed check explicitly
++    // without claiming the installed version is current or ready to relaunch.
++    status_callback.Run(FAILED, 0, false, false, std::string(), 0, message);
++  }
++
++  void PromoteUpdater() override {}
++};
++
++}  // namespace
++
++std::unique_ptr<VersionUpdater> VersionUpdater::Create(
++    content::WebContents* /*web_contents*/) {
++  return std::make_unique<ArcifiedMacVersionUpdater>();
++}
+diff --git a/chrome/browser/ui/webui/help/version_updater_arcified_mac_browsertest.cc b/chrome/browser/ui/webui/help/version_updater_arcified_mac_browsertest.cc
+new file mode 100644
+index 00000000..1929634c
+--- /dev/null
++++ b/chrome/browser/ui/webui/help/version_updater_arcified_mac_browsertest.cc
+@@ -0,0 +1,95 @@
++// Copyright 2026 The Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include <cstdint>
++#include <string>
++
++#include "base/run_loop.h"
++#include "base/test/bind.h"
++#include "chrome/browser/profiles/profile.h"
++#include "chrome/browser/ui/browser.h"
++#include "chrome/browser/ui/tabs/tab_strip_model.h"
++#include "chrome/browser/ui/webui/help/version_updater.h"
++#include "chrome/common/pref_names.h"
++#include "chrome/test/base/in_process_browser_test.h"
++#include "components/prefs/pref_service.h"
++#include "content/public/browser/web_contents.h"
++#include "content/public/test/browser_test.h"
++#include "testing/gtest/include/gtest/gtest.h"
++
++using ArcifiedMacUpdateBrowserTest = InProcessBrowserTest;
++
++IN_PROC_BROWSER_TEST_F(ArcifiedMacUpdateBrowserTest,
++                       UnavailableCheckRetainsProfileAndLivePage) {
++  Profile* const profile = browser()->GetProfile();
++  content::WebContents* const page =
++      browser()->tab_strip_model()->GetActiveWebContents();
++  ASSERT_TRUE(page);
++  const auto page_url = page->GetLastCommittedURL();
++  const int tab_count = browser()->tab_strip_model()->count();
++  const std::string homepage = "https://update-macos.invalid/retained";
++  profile->GetPrefs()->SetString(prefs::kHomePage, homepage);
++
++  auto updater = VersionUpdater::Create(page);
++  ASSERT_TRUE(updater);
++  int status_calls = 0;
++  int promotion_calls = 0;
++  auto status = base::BindLambdaForTesting(
++      [&](VersionUpdater::Status value, int progress, bool rollback,
++          bool powerwash, const std::string& version, int64_t size,
++          const std::u16string& message) {
++        ++status_calls;
++        EXPECT_EQ(value, VersionUpdater::FAILED);
++        EXPECT_EQ(progress, 0);
++        EXPECT_FALSE(rollback);
++        EXPECT_FALSE(powerwash);
++        EXPECT_TRUE(version.empty());
++        EXPECT_EQ(size, 0);
++        EXPECT_FALSE(message.empty());
++      });
++  auto promotion =
++      base::BindLambdaForTesting([&](VersionUpdater::PromotionState value) {
++        ++promotion_calls;
++        EXPECT_EQ(value, VersionUpdater::PROMOTE_HIDDEN);
++      });
++
++  updater->CheckForUpdate(status, promotion);
++  base::RunLoop().RunUntilIdle();
++  EXPECT_EQ(status_calls, 1);
++  EXPECT_EQ(promotion_calls, 1);
++  // A direct promotion request and another check cannot enable installation or
++  // turn an unavailable result into "up to date" or "relaunch".
++  updater->PromoteUpdater();
++  updater->CheckForUpdate(status, promotion);
++  base::RunLoop().RunUntilIdle();
++  EXPECT_EQ(status_calls, 2);
++  EXPECT_EQ(promotion_calls, 2);
++  EXPECT_EQ(profile->GetPrefs()->GetString(prefs::kHomePage), homepage);
++  EXPECT_EQ(browser()->GetProfile(), profile);
++  EXPECT_EQ(page->GetBrowserContext(), profile);
++  EXPECT_EQ(browser()->tab_strip_model()->GetActiveWebContents(), page);
++  EXPECT_EQ(browser()->tab_strip_model()->count(), tab_count);
++  EXPECT_EQ(page->GetLastCommittedURL(), page_url);
++}
++
++IN_PROC_BROWSER_TEST_F(ArcifiedMacUpdateBrowserTest,
++                       PromotionCallbackCanDestroyUpdater) {
++  auto updater = VersionUpdater::Create(
++      browser()->tab_strip_model()->GetActiveWebContents());
++  ASSERT_TRUE(updater);
++  int status_calls = 0;
++  updater->CheckForUpdate(
++      base::BindLambdaForTesting([&](VersionUpdater::Status status, int, bool,
++                                     bool, const std::string&, int64_t,
++                                     const std::u16string&) {
++        ++status_calls;
++        EXPECT_EQ(status, VersionUpdater::FAILED);
++      }),
++      base::BindLambdaForTesting([&](VersionUpdater::PromotionState state) {
++        EXPECT_EQ(state, VersionUpdater::PROMOTE_HIDDEN);
++        updater.reset();
++      }));
++  base::RunLoop().RunUntilIdle();
++  EXPECT_FALSE(updater);
++  EXPECT_EQ(status_calls, 1);
++}
+diff --git a/chrome/browser/ui/webui/settings/BUILD.gn b/chrome/browser/ui/webui/settings/BUILD.gn
+index 2756796a..70e1f90e 100644
+--- a/chrome/browser/ui/webui/settings/BUILD.gn
++++ b/chrome/browser/ui/webui/settings/BUILD.gn
+@@ -369,9 +369,9 @@ source_set("impl") {
+ 
+   if (is_mac) {
+     sources += [
++      "brave_full_disk_access_confirm_dialog_delegate_mac.mm",
+       "mac_system_settings_handler.cc",
+       "settings_utils_mac.mm",
+-      "brave_full_disk_access_confirm_dialog_delegate_mac.mm",
+     ]
+   }
+ 
+@@ -455,6 +455,9 @@ source_set("browser_tests") {
+     "settings_secure_dns_handler_browsertest.cc",
+     "settings_ui_browsertest.cc",
+   ]
++  if (is_linux) {
++    sources += [ "arcified_update_linux_browsertest.cc" ]
++  }
+   deps = [
+     ":impl",
+     ":settings",
+@@ -510,6 +513,14 @@ source_set("browser_tests") {
+     "//url",
+   ]
+ 
++  if (is_linux) {
++    deps += [
++      "//chrome/app:generated_resources_grit",
++      "//chrome/browser/ui/webui/help",
++      "//chrome/browser/upgrade_detector",
++    ]
++  }
++
+   if (use_ozone) {
+     deps += [ "//ui/ozone" ]
+   }
+diff --git a/chrome/browser/ui/webui/settings/arcified_update_linux_browsertest.cc b/chrome/browser/ui/webui/settings/arcified_update_linux_browsertest.cc
+new file mode 100644
+index 00000000..1b53bb59
+--- /dev/null
++++ b/chrome/browser/ui/webui/settings/arcified_update_linux_browsertest.cc
+@@ -0,0 +1,129 @@
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include <memory>
++#include <optional>
++#include <string>
++
++#include "base/test/bind.h"
++#include "base/version.h"
++#include "chrome/browser/browser_process.h"
++#include "chrome/browser/ui/browser.h"
++#include "chrome/browser/ui/tabs/tab_strip_model.h"
++#include "chrome/browser/ui/webui/help/version_updater.h"
++#include "chrome/browser/upgrade_detector/build_state.h"
++#include "chrome/browser/upgrade_detector/installed_version_poller.h"
++#include "chrome/grit/generated_resources.h"
++#include "chrome/test/base/in_process_browser_test.h"
++#include "chrome/test/base/ui_test_utils.h"
++#include "content/public/test/browser_test.h"
++#include "content/public/test/browser_test_utils.h"
++#include "ui/base/l10n/l10n_util.h"
++#include "url/gurl.h"
++
++namespace {
++
++class ArcifiedUpdateLinuxBrowserTest : public InProcessBrowserTest {
++ protected:
++  void ExpectUnavailable(content::WebContents* web_contents) {
++    auto updater = VersionUpdater::Create(web_contents);
++    bool received = false;
++    updater->CheckForUpdate(
++        base::BindLambdaForTesting(
++            [&](VersionUpdater::Status status, int progress, bool rollback,
++                bool powerwash, const std::string& version, int64_t size,
++                const std::u16string& message) {
++              EXPECT_FALSE(received);
++              received = true;
++              EXPECT_EQ(VersionUpdater::DISABLED, status);
++              EXPECT_EQ(0, progress);
++              EXPECT_FALSE(rollback);
++              EXPECT_FALSE(powerwash);
++              EXPECT_TRUE(version.empty());
++              EXPECT_EQ(0, size);
++              EXPECT_EQ(l10n_util::GetStringUTF16(
++                            IDS_ARCIFIED_UPDATE_LINUX_UNAVAILABLE),
++                        message);
++            }),
++        VersionUpdater::PromoteCallback());
++    EXPECT_TRUE(received);
++  }
++
++  void ExpectVisibleUnavailable() {
++    ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(),
++                                             GURL("chrome://settings/help")));
++    auto* web_contents = browser()->tab_strip_model()->GetActiveWebContents();
++    // Follow the real settings route and its native AboutHandler callback.
++    // Yield while Lit attaches/renders. EvalJs uses the browser-test harness's
++    // timeout; there is no separate polling interval or time limit here.
++    EXPECT_EQ(l10n_util::GetStringUTF8(IDS_ARCIFIED_UPDATE_LINUX_UNAVAILABLE),
++              content::EvalJs(web_contents, R"JS(
++          (async () => {
++            function findAbout(root) {
++              const about = root.querySelector('settings-about-page');
++              if (about) return about;
++              for (const element of root.querySelectorAll('*')) {
++                if (element.shadowRoot) {
++                  const found = findAbout(element.shadowRoot);
++                  if (found) return found;
++                }
++              }
++              return null;
++            }
++            while (true) {
++              const about = findAbout(document);
++              const status = about?.shadowRoot?.querySelector(
++                  '#updateStatusMessage');
++              if (status?.checkVisibility() && status.textContent.trim()) {
++                const relaunch = about.shadowRoot.querySelector('#relaunch');
++                if (relaunch?.checkVisibility()) {
++                  throw new Error('Unavailable updater offered relaunch');
++                }
++                return status.textContent.trim();
++              }
++              await new Promise(requestAnimationFrame);
++            }
++          })()
++        )JS"));
++  }
++
++ private:
++  // Keep the real BuildState and detector, but do not poll the host executable
++  // while the test delivers installed-version notifications to that service.
++  InstalledVersionPoller::ScopedDisableForTesting disable_installed_polling_ =
++      InstalledVersionPoller::MakeScopedDisableForTesting();
++};
++
++IN_PROC_BROWSER_TEST_F(ArcifiedUpdateLinuxBrowserTest,
++                       UnavailableWithAndWithoutWebContents) {
++  ExpectUnavailable(browser()->tab_strip_model()->GetActiveWebContents());
++  ExpectUnavailable(nullptr);
++}
++
++IN_PROC_BROWSER_TEST_F(ArcifiedUpdateLinuxBrowserTest,
++                       InstalledVersionSignalDoesNotAuthenticateAnUpdate) {
++  auto* state = g_browser_process->GetBuildState();
++  state->SetUpdate(BuildState::UpdateType::kNormalUpdate,
++                   base::Version("156.0.0.0"), std::nullopt);
++  ExpectUnavailable(browser()->tab_strip_model()->GetActiveWebContents());
++
++  state->SetUpdate(BuildState::UpdateType::kEnterpriseRollback,
++                   base::Version("154.0.0.0"), std::nullopt);
++  ExpectUnavailable(browser()->tab_strip_model()->GetActiveWebContents());
++
++  // The native poller also signals a normal update for an unreadable version.
++  state->SetUpdate(BuildState::UpdateType::kNormalUpdate, base::Version(),
++                   std::nullopt);
++  ExpectUnavailable(browser()->tab_strip_model()->GetActiveWebContents());
++  state->SetUpdate(BuildState::UpdateType::kNone, base::Version(),
++                   std::nullopt);
++}
++
++IN_PROC_BROWSER_TEST_F(ArcifiedUpdateLinuxBrowserTest,
++                       AboutPageExplainsUnavailableAfterReentry) {
++  ExpectVisibleUnavailable();
++  ASSERT_TRUE(
++      ui_test_utils::NavigateToURL(browser(), GURL("chrome://version")));
++  ExpectVisibleUnavailable();
++}
++
++}  // namespace
+diff --git a/chrome/installer/mac/BUILD.gn b/chrome/installer/mac/BUILD.gn
+index 17dc6104..88bd08bc 100644
+--- a/chrome/installer/mac/BUILD.gn
++++ b/chrome/installer/mac/BUILD.gn
+@@ -227,3 +227,51 @@ source_set("install_test_util") {
+     "//testing/gtest",
+   ]
+ }
++
++# Arcified's read-only signature mechanism. Distribution policy is supplied at
++# invocation; these targets do not sign, notarize, package or install anything.
++if (is_mac) {
++  source_set("arcified_signature_verifier") {
++    sources = [
++      "arcified_signature_verifier.cc",
++      "arcified_signature_verifier.h",
++    ]
++    deps = [ "//base" ]
++    frameworks = [
++      "CoreFoundation.framework",
++      "Security.framework",
++    ]
++  }
++
++  executable("arcified_signature_audit") {
++    sources = [ "arcified_signature_audit_main.cc" ]
++    deps = [
++      ":arcified_signature_verifier",
++      "//base",
++    ]
++  }
++
++  test("arcified_signature_verifier_tests") {
++    sources = [ "arcified_signature_verifier_unittest.cc" ]
++    deps = [
++      ":arcified_signature_verifier",
++      "//base",
++      "//base/test:run_all_unittests",
++      "//base/test:test_support",
++      "//testing/gtest",
++    ]
++  }
++
++  # Requires an owner-supplied immutable signed artifact and approved policy.
++  # Kept separate so ordinary negative tests cannot imply release acceptance.
++  test("arcified_signature_artifact_tests") {
++    sources = [ "arcified_signature_artifact_test.cc" ]
++    deps = [
++      ":arcified_signature_verifier",
++      "//base",
++      "//base/test:run_all_unittests",
++      "//base/test:test_support",
++      "//testing/gtest",
++    ]
++  }
++}
+diff --git a/chrome/installer/mac/arcified_signature_artifact_test.cc b/chrome/installer/mac/arcified_signature_artifact_test.cc
+new file mode 100644
+index 00000000..db761b17
+--- /dev/null
++++ b/chrome/installer/mac/arcified_signature_artifact_test.cc
+@@ -0,0 +1,37 @@
++// Copyright 2026 The Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include <string>
++
++#include "base/command_line.h"
++#include "base/files/file_util.h"
++#include "chrome/installer/mac/arcified_signature_verifier.h"
++#include "testing/gtest/include/gtest/gtest.h"
++
++namespace arcified::release_macos {
++namespace {
++
++// Separate opt-in target. No fixture is signed, installed or invented here.
++// Absence of the owner's immutable signed app/policy fails this target.
++TEST(ArcifiedSignatureArtifactTest, ApprovedAppMatchesOnlyApprovedRequirement) {
++  const auto& command = *base::CommandLine::ForCurrentProcess();
++  const auto bundle = command.GetSwitchValuePath("app-bundle");
++  const auto requirement_file =
++      command.GetSwitchValuePath("signing-requirement-file");
++  const std::string identifier = command.GetSwitchValueASCII("bundle-id");
++  ASSERT_TRUE(bundle.IsAbsolute());
++  ASSERT_TRUE(requirement_file.IsAbsolute());
++  ASSERT_FALSE(identifier.empty());
++  std::string requirement;
++  ASSERT_TRUE(base::ReadFileToString(requirement_file, &requirement));
++  const auto accepted = VerifyAppSignature(bundle, identifier, requirement);
++  ASSERT_TRUE(accepted.has_value()) << "OSStatus=" << accepted.error().status;
++
++  const auto rejected = VerifyAppSignature(bundle, identifier, "false");
++  ASSERT_FALSE(rejected.has_value());
++  EXPECT_EQ(SignatureFailure::kSignatureRejected, rejected.error().failure);
++  EXPECT_EQ(errSecCSReqFailed, rejected.error().status);
++}
++
++}  // namespace
++}  // namespace arcified::release_macos
+diff --git a/chrome/installer/mac/arcified_signature_audit_main.cc b/chrome/installer/mac/arcified_signature_audit_main.cc
+new file mode 100644
+index 00000000..1b5ed2fe
+--- /dev/null
++++ b/chrome/installer/mac/arcified_signature_audit_main.cc
+@@ -0,0 +1,62 @@
++// Copyright 2026 The Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include <cstdio>
++#include <string>
++
++#include "base/command_line.h"
++#include "base/files/file_util.h"
++#include "chrome/installer/mac/arcified_signature_verifier.h"
++
++namespace {
++
++const char* FailureName(arcified::release_macos::SignatureFailure failure) {
++  using arcified::release_macos::SignatureFailure;
++  switch (failure) {
++    case SignatureFailure::kInvalidInput:
++      return "invalid-input";
++    case SignatureFailure::kInvalidRequirement:
++      return "invalid-requirement";
++    case SignatureFailure::kNotApplicationBundle:
++      return "not-application-bundle";
++    case SignatureFailure::kBundleIdentifierMismatch:
++      return "bundle-identifier-mismatch";
++    case SignatureFailure::kCannotReadCode:
++      return "cannot-read-code";
++    case SignatureFailure::kSignatureRejected:
++      return "signature-rejected";
++  }
++}
++
++}  // namespace
++
++int main(int argc, char** argv) {
++  base::CommandLine::Init(argc, argv);
++  const auto& command = *base::CommandLine::ForCurrentProcess();
++  const auto requirement_file =
++      command.GetSwitchValuePath("signing-requirement-file");
++  std::string requirement;
++  if (!command.GetArgs().empty() || !requirement_file.IsAbsolute() ||
++      !base::ReadFileToString(requirement_file, &requirement)) {
++    std::fputs(
++        "Usage: arcified_signature_audit --app-bundle=/absolute/app.app "
++        "--bundle-id=APPROVED_ID "
++        "--signing-requirement-file=/absolute/approved-requirement.txt\n",
++        stderr);
++    return 1;
++  }
++  const auto result = arcified::release_macos::VerifyAppSignature(
++      command.GetSwitchValuePath("app-bundle"),
++      command.GetSwitchValueASCII("bundle-id"), requirement);
++  if (!result.has_value()) {
++    std::fprintf(stderr, "Signature check failed: %s, OSStatus=%d\n",
++                 FailureName(result.error().failure),
++                 static_cast<int>(result.error().status));
++    return 1;
++  }
++  std::puts(
++      "Local static signature requirement satisfied. "
++      "Release/install acceptance remains OPEN. "
++      "Notarization and current revocation were not checked.");
++  return 0;
++}
+diff --git a/chrome/installer/mac/arcified_signature_verifier.cc b/chrome/installer/mac/arcified_signature_verifier.cc
+new file mode 100644
+index 00000000..843fd0aa
+--- /dev/null
++++ b/chrome/installer/mac/arcified_signature_verifier.cc
+@@ -0,0 +1,95 @@
++// Copyright 2026 The Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include "chrome/installer/mac/arcified_signature_verifier.h"
++
++#include <CoreFoundation/CoreFoundation.h>
++
++#include "base/apple/foundation_util.h"
++#include "base/apple/scoped_cftyperef.h"
++#include "base/files/file_util.h"
++#include "base/strings/strcat.h"
++#include "base/strings/string_util.h"
++#include "base/strings/sys_string_conversions.h"
++
++namespace arcified::release_macos {
++
++base::expected<void, SignatureError> VerifyAppSignature(
++    const base::FilePath& app_bundle,
++    std::string_view expected_bundle_identifier,
++    std::string_view approved_signing_requirement) {
++  // Apple's bundle identifier alphabet also prevents requirement injection.
++  if (!app_bundle.IsAbsolute() || app_bundle.ReferencesParent() ||
++      app_bundle.value().find('\0') != std::string::npos ||
++      expected_bundle_identifier.empty() ||
++      !base::ContainsOnlyChars(expected_bundle_identifier,
++                               "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
++                               "abcdefghijklmnopqrstuvwxyz0123456789.-") ||
++      base::TrimWhitespaceASCII(approved_signing_requirement, base::TRIM_ALL)
++          .empty() ||
++      !base::IsStringUTF8(approved_signing_requirement) ||
++      approved_signing_requirement.find('\0') != std::string_view::npos) {
++    return base::unexpected(
++        SignatureError{SignatureFailure::kInvalidInput, errSecParam});
++  }
++
++  // 'anchor trusted' prevents ad hoc signatures, including non-host slices,
++  // from satisfying even a permissive supplied requirement. Parentheses keep
++  // an owner's 'or' clauses from bypassing the identifier/trust constraints.
++  const std::string requirement_text = base::StrCat(
++      {"(", approved_signing_requirement,
++       ") and anchor trusted and identifier \"", expected_bundle_identifier,
++       "\" and info[CFBundleIdentifier] = \"", expected_bundle_identifier,
++       "\""});
++  auto requirement_string = base::SysUTF8ToCFStringRef(requirement_text);
++  base::apple::ScopedCFTypeRef<SecRequirementRef> requirement;
++  OSStatus status = SecRequirementCreateWithString(
++      requirement_string.get(), kSecCSDefaultFlags,
++      requirement.InitializeInto());
++  if (status != errSecSuccess) {
++    return base::unexpected(
++        SignatureError{SignatureFailure::kInvalidRequirement, status});
++  }
++
++  auto bundle_url = base::apple::FilePathToCFURL(app_bundle);
++  base::apple::ScopedCFTypeRef<CFBundleRef> bundle(
++      CFBundleCreate(kCFAllocatorDefault, bundle_url.get()));
++  CFStringRef package_type =
++      bundle ? base::apple::CFCast<CFStringRef>(
++                   CFBundleGetValueForInfoDictionaryKey(
++                       bundle.get(), CFSTR("CFBundlePackageType")))
++             : nullptr;
++  if (!base::DirectoryExists(app_bundle) || !package_type ||
++      !CFEqual(package_type, CFSTR("APPL"))) {
++    return base::unexpected(
++        SignatureError{SignatureFailure::kNotApplicationBundle, errSecParam});
++  }
++  CFStringRef identifier =
++      base::apple::CFCast<CFStringRef>(CFBundleGetValueForInfoDictionaryKey(
++          bundle.get(), kCFBundleIdentifierKey));
++  if (!identifier ||
++      base::SysCFStringRefToUTF8(identifier) != expected_bundle_identifier) {
++    return base::unexpected(SignatureError{
++        SignatureFailure::kBundleIdentifierMismatch, errSecCSReqFailed});
++  }
++
++  base::apple::ScopedCFTypeRef<SecStaticCodeRef> code;
++  status = SecStaticCodeCreateWithPath(bundle_url.get(), kSecCSDefaultFlags,
++                                       code.InitializeInto());
++  if (status != errSecSuccess) {
++    return base::unexpected(
++        SignatureError{SignatureFailure::kCannotReadCode, status});
++  }
++  status = SecStaticCodeCheckValidity(
++      code.get(),
++      kSecCSCheckAllArchitectures | kSecCSCheckNestedCode |
++          kSecCSStrictValidate | kSecCSNoNetworkAccess,
++      requirement.get());
++  if (status != errSecSuccess) {
++    return base::unexpected(
++        SignatureError{SignatureFailure::kSignatureRejected, status});
++  }
++  return base::ok();
++}
++
++}  // namespace arcified::release_macos
+diff --git a/chrome/installer/mac/arcified_signature_verifier.h b/chrome/installer/mac/arcified_signature_verifier.h
+new file mode 100644
+index 00000000..096a7b9e
+--- /dev/null
++++ b/chrome/installer/mac/arcified_signature_verifier.h
+@@ -0,0 +1,53 @@
++// Copyright 2026 The Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#ifndef CHROME_INSTALLER_MAC_ARCIFIED_SIGNATURE_VERIFIER_H_
++#define CHROME_INSTALLER_MAC_ARCIFIED_SIGNATURE_VERIFIER_H_
++
++#include <Security/Security.h>
++
++#include <string_view>
++
++#include "base/files/file_path.h"
++#include "base/types/expected.h"
++
++namespace arcified::release_macos {
++
++enum class SignatureFailure {
++  kInvalidInput,
++  kInvalidRequirement,
++  kNotApplicationBundle,
++  kBundleIdentifierMismatch,
++  kCannotReadCode,
++  kSignatureRejected,
++};
++
++struct SignatureError {
++  SignatureFailure failure;
++  OSStatus status;
++};
++
++// Read-only, synchronous signature check for a quiescent app bundle. Run
++// outside the browser UI thread. The caller must prevent concurrent
++// modification and recheck after installation; the result does not authorize
++// later changed bytes.
++//
++// Both policy arguments are mandatory, owner-approved inputs, never values read
++// from the artifact itself. The signing requirement must constrain the approved
++// signer/certificate and distribution class. This helper additionally binds the
++// signing and Info.plist identifiers and requires a trusted certificate chain
++// on every architecture. It does not approve any signer or distribution class.
++//
++// No network access is requested. Success proves only local static signature
++// validation against that requirement, including nested code and resources.
++// Notarization, fresh revocation, Gatekeeper, installer/package trust,
++// supported architecture/OS, registration and retained user data need separate
++// evidence.
++base::expected<void, SignatureError> VerifyAppSignature(
++    const base::FilePath& app_bundle,
++    std::string_view expected_bundle_identifier,
++    std::string_view approved_signing_requirement);
++
++}  // namespace arcified::release_macos
++
++#endif  // CHROME_INSTALLER_MAC_ARCIFIED_SIGNATURE_VERIFIER_H_
+diff --git a/chrome/installer/mac/arcified_signature_verifier_unittest.cc b/chrome/installer/mac/arcified_signature_verifier_unittest.cc
+new file mode 100644
+index 00000000..9c7de172
+--- /dev/null
++++ b/chrome/installer/mac/arcified_signature_verifier_unittest.cc
+@@ -0,0 +1,88 @@
++// Copyright 2026 The Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include "chrome/installer/mac/arcified_signature_verifier.h"
++
++#include <string>
++
++#include "base/files/file_util.h"
++#include "base/files/scoped_temp_dir.h"
++#include "testing/gtest/include/gtest/gtest.h"
++
++namespace arcified::release_macos {
++namespace {
++
++constexpr char kBundleId[] = "test.arcified.signature";
++
++class ArcifiedSignatureVerifierTest : public testing::Test {
++ protected:
++  void SetUp() override {
++    ASSERT_TRUE(directory_.CreateUniqueTempDir());
++    bundle_ = directory_.GetPath().Append("Unsigned.app");
++    ASSERT_TRUE(base::CreateDirectory(bundle_.Append("Contents/MacOS")));
++    ASSERT_TRUE(base::WriteFile(
++        bundle_.Append("Contents/Info.plist"),
++        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
++        "<plist version=\"1.0\"><dict>"
++        "<key>CFBundleIdentifier</key><string>test.arcified.signature</string>"
++        "<key>CFBundlePackageType</key><string>APPL</string>"
++        "<key>CFBundleExecutable</key><string>unsigned</string>"
++        "</dict></plist>"));
++    ASSERT_TRUE(base::WriteFile(bundle_.Append("Contents/MacOS/unsigned"),
++                                "#!/bin/sh\nexit 0\n"));
++    ASSERT_TRUE(base::SetPosixFilePermissions(
++        bundle_.Append("Contents/MacOS/unsigned"), 0755));
++  }
++
++  base::ScopedTempDir directory_;
++  base::FilePath bundle_;
++};
++
++TEST_F(ArcifiedSignatureVerifierTest, RejectsMissingPolicyAndRelativePaths) {
++  for (const auto& result :
++       {VerifyAppSignature(bundle_, "", "true"),
++        VerifyAppSignature(bundle_, kBundleId, " \n"),
++        VerifyAppSignature(base::FilePath("Unsigned.app"), kBundleId, "true"),
++        VerifyAppSignature(bundle_, "test\" or true", "true"),
++        VerifyAppSignature(bundle_, kBundleId, std::string("\xff", 1)),
++        VerifyAppSignature(bundle_, kBundleId, std::string("true\0", 5))}) {
++    ASSERT_FALSE(result.has_value());
++    EXPECT_EQ(SignatureFailure::kInvalidInput, result.error().failure);
++  }
++}
++
++TEST_F(ArcifiedSignatureVerifierTest, RejectsMalformedNativeRequirement) {
++  const auto result = VerifyAppSignature(bundle_, kBundleId, "(");
++  ASSERT_FALSE(result.has_value());
++  EXPECT_EQ(SignatureFailure::kInvalidRequirement, result.error().failure);
++  EXPECT_NE(errSecSuccess, result.error().status);
++}
++
++TEST_F(ArcifiedSignatureVerifierTest, RejectsNonApplicationDirectory) {
++  const auto result =
++      VerifyAppSignature(directory_.GetPath(), kBundleId, "true");
++  ASSERT_FALSE(result.has_value());
++  EXPECT_EQ(SignatureFailure::kNotApplicationBundle, result.error().failure);
++}
++
++TEST_F(ArcifiedSignatureVerifierTest, RejectsUnexpectedBundleIdentifier) {
++  const auto result =
++      VerifyAppSignature(bundle_, "test.arcified.other", "true");
++  ASSERT_FALSE(result.has_value());
++  EXPECT_EQ(SignatureFailure::kBundleIdentifierMismatch,
++            result.error().failure);
++}
++
++TEST_F(ArcifiedSignatureVerifierTest, UnsignedAppCannotPassPermissivePolicy) {
++  const auto result = VerifyAppSignature(bundle_, kBundleId, "true");
++  ASSERT_FALSE(result.has_value());
++  EXPECT_EQ(SignatureFailure::kSignatureRejected, result.error().failure);
++  EXPECT_EQ(errSecCSUnsigned, result.error().status);
++  std::string executable;
++  ASSERT_TRUE(base::ReadFileToString(bundle_.Append("Contents/MacOS/unsigned"),
++                                     &executable));
++  EXPECT_EQ("#!/bin/sh\nexit 0\n", executable);
++}
++
++}  // namespace
++}  // namespace arcified::release_macos
+diff --git a/chrome/installer/util/helper.cc b/chrome/installer/util/helper.cc
+index 93773189..7fe4af24 100644
+--- a/chrome/installer/util/helper.cc
++++ b/chrome/installer/util/helper.cc
+@@ -120,10 +120,23 @@ base::FilePath GetCurrentInstallPathFromRegistry(bool system_install) {
+     return {};
+   }
+ 
++  // Arcified downstream changes: SPDX-License-Identifier: GPL-3.0-only.
++  // Check the registered layout before using its ancestor as an install target.
++  // This validates metadata, not the executable's signature or publisher.
++  const base::FilePath installer_dir = setup_path.DirName();
++  const base::FilePath version_dir = installer_dir.DirName();
++  if (!base::FilePath::CompareEqualIgnoreCase(setup_path.BaseName().value(),
++                                              installer::kSetupExe) ||
++      !base::FilePath::CompareEqualIgnoreCase(installer_dir.BaseName().value(),
++                                              installer::kInstallerDir) ||
++      !base::Version(version_dir.BaseName().MaybeAsASCII()).IsValid()) {
++    return {};
++  }
++
+   // The path to setup.exe has the format
+   // [InstallPath]/[version]/Installer/setup.exe. In order to get the
+   // [InstallPath], the full path must be pruned of the last 3 components.
+-  const base::FilePath install_path = setup_path.DirName().DirName().DirName();
++  const base::FilePath install_path = version_dir.DirName();
+ 
+   // The install path must not be at the root of the volume and must exist.
+   if (install_path == install_path.DirName() ||
+diff --git a/chrome/installer/util/helper.h b/chrome/installer/util/helper.h
+index e3783b8e..364fff8a 100644
+--- a/chrome/installer/util/helper.h
++++ b/chrome/installer/util/helper.h
+@@ -17,15 +17,21 @@ namespace installer {
+ 
+ class InitialPreferences;
+ 
++// Arcified downstream changes: SPDX-License-Identifier: GPL-3.0-only.
++
+ // Returns the install directory for an existing per-user or per-machine
+ // install; or an empty path if Chrome is not installed at the given level. In
+ // particular: if Chrome is installed at the level specified by `system_install`
+ // (as indicated by the presence of a valid version value), the install path
+ // derived from the value in the Windows registry at
+ // [HKLM|HKCU]\Software\Google\Update\ClientState\{appguid}\UninstallString is
+-// returned if it is absolute and exists. Otherwise, the path
+-// ([%ProgramFiles%|%LOCALAPPDATA%]\[Company\]Product\Application) is returned,
+-// provided that the expanded variable yields an absolute path that exists.
++// returned only if the setup path is absolute, has no parent references, has
++// the layout <install directory>\<valid version>\Installer\setup.exe (with
++// case-insensitive file/directory names), and the install directory exists and
++// is not a volume root. Otherwise returns an empty path. ProductState may
++// recover a missing UninstallString from an existing standard-location version
++// directory. This is a metadata/layout check, not signature or publisher
++// verification.
+ base::FilePath GetInstalledDirectory(bool system_install);
+ 
+ // Returns the default install directory for either a per-user or a per-machine
+diff --git a/chrome/installer/util/helper_unittest.cc b/chrome/installer/util/helper_unittest.cc
+index 74f52926..45bad5a1 100644
+--- a/chrome/installer/util/helper_unittest.cc
++++ b/chrome/installer/util/helper_unittest.cc
+@@ -116,6 +116,55 @@ TEST_P(GetInstalledDirectoryTest, RegistryValueSet) {
+   EXPECT_EQ(GetInstalledDirectory(is_system_level()), install_path);
+ }
+ 
++// Arcified downstream changes: SPDX-License-Identifier: GPL-3.0-only.
++TEST_P(GetInstalledDirectoryTest, RejectsMalformedRegisteredSetupLayout) {
++  const base::FilePath install_path = random_path().Append(L"Existing install");
++  ASSERT_TRUE(base::CreateDirectory(install_path));
++  base::win::RegKey client_key(GetClientsRegKey());
++  ASSERT_EQ(client_key.WriteValue(google_update::kRegVersionField, L"1.0.0.0"),
++            ERROR_SUCCESS);
++  base::win::RegKey client_state_key(GetClientStateRegKey());
++
++  const wchar_t* const invalid_suffixes[] = {
++      L"1.0.0.0\\Installer\\other.exe",
++      L"1.0.0.0\\Other\\setup.exe",
++      L"not-a-version\\Installer\\setup.exe",
++      L"1.0.invalid.0\\Installer\\setup.exe",
++      L"Installer\\setup.exe",
++      L"1.0.0.0\\setup.exe",
++      L"setup.exe",
++  };
++  for (const wchar_t* suffix : invalid_suffixes) {
++    const base::FilePath setup_path = install_path.Append(suffix);
++    SCOPED_TRACE(setup_path.AsUTF8Unsafe());
++    ASSERT_EQ(client_state_key.WriteValue(kUninstallStringField,
++                                          setup_path.value().c_str()),
++              ERROR_SUCCESS);
++
++    EXPECT_TRUE(GetInstalledDirectory(is_system_level()).empty());
++    EXPECT_TRUE(base::DirectoryExists(install_path));
++  }
++}
++
++TEST_P(GetInstalledDirectoryTest, AcceptsCaseAndRegisteredVersionSkew) {
++  const base::FilePath install_path = random_path().Append(L"Existing install");
++  ASSERT_TRUE(base::CreateDirectory(install_path));
++  base::win::RegKey client_key(GetClientsRegKey());
++  ASSERT_EQ(client_key.WriteValue(google_update::kRegVersionField, L"1.0.0.0"),
++            ERROR_SUCCESS);
++  base::win::RegKey client_state_key(GetClientStateRegKey());
++  ASSERT_EQ(client_state_key.WriteValue(
++                kUninstallStringField,
++                install_path.Append(L"2.0.0.0\\iNsTaLlEr\\SeTuP.ExE")
++                    .value()
++                    .c_str()),
++            ERROR_SUCCESS);
++
++  // A valid registered layout need not match the Clients version. Interrupted
++  // updates and repair must not require the versioned setup file to exist here.
++  EXPECT_EQ(GetInstalledDirectory(is_system_level()), install_path);
++}
++
+ TEST_P(GetInstalledDirectoryTest, NoDirectory) {
+   base::win::RegKey client_state_key(GetClientStateRegKey());
+   ASSERT_EQ(client_state_key.WriteValue(
+@@ -437,6 +486,29 @@ TEST_P(GetChromeInstallPathWithPrefsTest, RegistryValueSet) {
+             install_path);
+ }
+ 
++// Arcified downstream changes: SPDX-License-Identifier: GPL-3.0-only.
++TEST_P(GetChromeInstallPathWithPrefsTest,
++       MalformedRegistrationUsesNormalTarget) {
++  const base::FilePath install_path =
++      random_path().Append(L"Unrelated directory");
++  ASSERT_TRUE(base::CreateDirectory(install_path));
++  base::win::RegKey client_key(GetClientsRegKey());
++  ASSERT_EQ(client_key.WriteValue(google_update::kRegVersionField, L"1.0.0.0"),
++            ERROR_SUCCESS);
++  base::win::RegKey client_state_key(GetClientStateRegKey());
++  ASSERT_EQ(client_state_key.WriteValue(
++                kUninstallStringField,
++                install_path.Append(L"1.0.0.0\\Installer\\other.exe")
++                    .value()
++                    .c_str()),
++            ERROR_SUCCESS);
++
++  EXPECT_EQ(GetChromeInstallPathWithPrefs(is_system_level(),
++                                          InitialPreferences(prefs_json())),
++            GetExpectedPathForSetup(is_system_level(), target_dir()));
++  EXPECT_TRUE(base::DirectoryExists(install_path));
++}
++
+ TEST_P(GetChromeInstallPathWithPrefsTest, RegistryValueSetWrongScope) {
+   base::win::RegKey client_state_key(GetClientStateRegKey());
+   ASSERT_EQ(client_state_key.WriteValue(
+diff --git a/chrome/test/BUILD.gn b/chrome/test/BUILD.gn
+index 9f31e904..b771ca44 100644
+--- a/chrome/test/BUILD.gn
++++ b/chrome/test/BUILD.gn
+@@ -2586,6 +2586,7 @@ if (!is_android) {
+     if (is_mac) {
+       deps += [
+         "//chrome/browser/ui:browser_commands_mac",
++        "//chrome/browser/ui/webui/help:browser_tests",
+         "//chrome/updater:browser_sources",
+       ]
+     }
+@@ -3052,6 +3053,10 @@ if (!is_android) {
+     ]
+ 
+     if (is_win) {
++      if (!is_chrome_branded) {
++        deps +=
++            [ "//chrome/browser/ui/webui/help:arcified_windows_browser_tests" ]
++      }
+       sources += [
+         "../browser/ui/views/device_id/pen_id_browsertest_win.cc",
+         "../browser/ui/views/tab_search_bubble_ui_browsertest.cc",
+@@ -4231,6 +4236,7 @@ if (!is_android) {
+       deps += [ "//chrome/browser/ui/views:first_run_dialog" ]
+     }
+     if (is_linux) {
++      sources += [ "../browser/arcified/release_linux_browsertest.cc" ]
+       sources += [ "../browser/ui/views/eula_dialog_linux_browsertest.cc" ]
+       deps += [ "//chrome/browser/ui/views:eula_dialog_linux" ]
+     }
+@@ -6498,6 +6504,9 @@ test("unit_tests") {
+ 
+     if (is_win) {
+       deps += [ "//chrome/browser/default_browser/win:unit_tests" ]
++      if (!is_chrome_branded) {
++        deps += [ "//chrome/browser/ui/webui/help:arcified_windows_unit_tests" ]
++      }
+     }
+   }
+ 
+
+ 
+

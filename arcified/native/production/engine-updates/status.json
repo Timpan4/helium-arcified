@@ -1,0 +1,60 @@
+{
+  "license": "GPL-3.0-only",
+  "issue": 41,
+  "key": "engine-updates",
+  "status": "UNBLOCKED_PACKET_IMPLEMENTED_NATIVE_ACCEPTANCE_OPEN",
+  "completed": [
+    "Read-only pin and ordered patch/input audit",
+    "Exact prepared-source base/result files and production patch",
+    "Native browser regression source registration",
+    "Current primary-source security snapshot with explicit unavailable reads",
+    "Update procedure, record template and historical preparation provenance",
+    "Light local checks recorded in checks.json"
+  ],
+  "acceptance": [
+    {
+      "criterion": "Track the pinned engine source and known security changes using current authoritative release information.",
+      "status": "PARTIAL",
+      "evidence": [
+        "audit-155.0.8059.79.json",
+        "source-identities.json",
+        "security-review.json",
+        "historical-preparation.json"
+      ],
+      "remaining": "Complete inaccessible pin-specific advisory/upstream revision attestation, refresh at update execution and assess security fix applicability/backports."
+    },
+    {
+      "criterion": "Execute the procedure for one declared engine revision/update, recording patch conflicts, refresh steps and focused native results on all target OSes.",
+      "status": "OPEN",
+      "evidence": [
+        "PROCEDURE.md",
+        "native-test-registration.json",
+        "update-record-template.json"
+      ],
+      "remaining": "Declare and execute old-to-new target update under coordinator ownership. Historical preparation is not an executed update. Native results on Linux, Windows and macOS are not available."
+    },
+    {
+      "criterion": "Publish patch conflicts and release provenance; do not substitute extension CI for native browser verification.",
+      "status": "OPEN",
+      "evidence": [
+        "historical-preparation.json",
+        "source-identities.json"
+      ],
+      "remaining": "Coordinator publishes the reviewed completed update record with actual conflicts/refreshes and release provenance through an authorized publication path."
+    }
+  ],
+  "integrationRequests": [
+    "Reconcile BUILD.gn additions and integrate production.patch into writable prepared source; preserve other packets.",
+    "Register reconciled patch in the existing downstream quilt order, owned by coordinator.",
+    "Supply existing scoped YAPF/Pylint environment and rerun the exact focused commands from checks.json; installation was not authorized in this packet.",
+    "Build and run the registered ArcifiedEngineUpdateBrowserTest.* native filter on each target platform, then the affected real Arcified integration and installed interaction checks.",
+    "Refresh security review, declare next source revision and execute full strict patch replay plus conflict/refresh record.",
+    "Keep same-window multi-Profile, saved-page handoff, all platform SDK/runtime/signing/installer gates and release publication OPEN until their actual evidence exists."
+  ],
+  "reservedCommandId": 40737,
+  "legacyCommandAdded": false,
+  "libraryCommand40701": "UNCHANGED",
+  "sourceIdentityWarning": "Prepared historical report uses fork 05ace22efb8564d0294b8efa1b3f3651b76cef07 with working changes, not assignment baseline a4b6b480d3de07857ab6e939149254a8359e5449.",
+  "ownerPolicyChoicesMade": [],
+  "subdelegation": false
+}

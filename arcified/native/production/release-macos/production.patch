@@ -1,0 +1,427 @@
+Description: Add Arcified read-only macOS static signature verification
+ Issue: https://github.com/Timpan4/helium-arcified/issues/133
+ This mechanism accepts explicit owner-approved identity/requirement inputs.
+ It does not select signing infrastructure or prove notarization/installation.
+ Prepared against Chromium 155.0.8059.79 downstream source; see source-identities.json.
+
+diff --git a/chrome/installer/mac/BUILD.gn b/chrome/installer/mac/BUILD.gn
+index 17dc6104..88bd08bc 100644
+--- a/chrome/installer/mac/BUILD.gn
++++ b/chrome/installer/mac/BUILD.gn
+@@ -227,3 +227,51 @@ source_set("install_test_util") {
+     "//testing/gtest",
+   ]
+ }
++
++# Arcified's read-only signature mechanism. Distribution policy is supplied at
++# invocation; these targets do not sign, notarize, package or install anything.
++if (is_mac) {
++  source_set("arcified_signature_verifier") {
++    sources = [
++      "arcified_signature_verifier.cc",
++      "arcified_signature_verifier.h",
++    ]
++    deps = [ "//base" ]
++    frameworks = [
++      "CoreFoundation.framework",
++      "Security.framework",
++    ]
++  }
++
++  executable("arcified_signature_audit") {
++    sources = [ "arcified_signature_audit_main.cc" ]
++    deps = [
++      ":arcified_signature_verifier",
++      "//base",
++    ]
++  }
++
++  test("arcified_signature_verifier_tests") {
++    sources = [ "arcified_signature_verifier_unittest.cc" ]
++    deps = [
++      ":arcified_signature_verifier",
++      "//base",
++      "//base/test:run_all_unittests",
++      "//base/test:test_support",
++      "//testing/gtest",
++    ]
++  }
++
++  # Requires an owner-supplied immutable signed artifact and approved policy.
++  # Kept separate so ordinary negative tests cannot imply release acceptance.
++  test("arcified_signature_artifact_tests") {
++    sources = [ "arcified_signature_artifact_test.cc" ]
++    deps = [
++      ":arcified_signature_verifier",
++      "//base",
++      "//base/test:run_all_unittests",
++      "//base/test:test_support",
++      "//testing/gtest",
++    ]
++  }
++}
+diff --git a/chrome/installer/mac/arcified_signature_artifact_test.cc b/chrome/installer/mac/arcified_signature_artifact_test.cc
+new file mode 100644
+index 00000000..db761b17
+--- /dev/null
++++ b/chrome/installer/mac/arcified_signature_artifact_test.cc
+@@ -0,0 +1,37 @@
++// Copyright 2026 The Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include <string>
++
++#include "base/command_line.h"
++#include "base/files/file_util.h"
++#include "chrome/installer/mac/arcified_signature_verifier.h"
++#include "testing/gtest/include/gtest/gtest.h"
++
++namespace arcified::release_macos {
++namespace {
++
++// Separate opt-in target. No fixture is signed, installed or invented here.
++// Absence of the owner's immutable signed app/policy fails this target.
++TEST(ArcifiedSignatureArtifactTest, ApprovedAppMatchesOnlyApprovedRequirement) {
++  const auto& command = *base::CommandLine::ForCurrentProcess();
++  const auto bundle = command.GetSwitchValuePath("app-bundle");
++  const auto requirement_file =
++      command.GetSwitchValuePath("signing-requirement-file");
++  const std::string identifier = command.GetSwitchValueASCII("bundle-id");
++  ASSERT_TRUE(bundle.IsAbsolute());
++  ASSERT_TRUE(requirement_file.IsAbsolute());
++  ASSERT_FALSE(identifier.empty());
++  std::string requirement;
++  ASSERT_TRUE(base::ReadFileToString(requirement_file, &requirement));
++  const auto accepted = VerifyAppSignature(bundle, identifier, requirement);
++  ASSERT_TRUE(accepted.has_value()) << "OSStatus=" << accepted.error().status;
++
++  const auto rejected = VerifyAppSignature(bundle, identifier, "false");
++  ASSERT_FALSE(rejected.has_value());
++  EXPECT_EQ(SignatureFailure::kSignatureRejected, rejected.error().failure);
++  EXPECT_EQ(errSecCSReqFailed, rejected.error().status);
++}
++
++}  // namespace
++}  // namespace arcified::release_macos
+diff --git a/chrome/installer/mac/arcified_signature_audit_main.cc b/chrome/installer/mac/arcified_signature_audit_main.cc
+new file mode 100644
+index 00000000..1b5ed2fe
+--- /dev/null
++++ b/chrome/installer/mac/arcified_signature_audit_main.cc
+@@ -0,0 +1,62 @@
++// Copyright 2026 The Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include <cstdio>
++#include <string>
++
++#include "base/command_line.h"
++#include "base/files/file_util.h"
++#include "chrome/installer/mac/arcified_signature_verifier.h"
++
++namespace {
++
++const char* FailureName(arcified::release_macos::SignatureFailure failure) {
++  using arcified::release_macos::SignatureFailure;
++  switch (failure) {
++    case SignatureFailure::kInvalidInput:
++      return "invalid-input";
++    case SignatureFailure::kInvalidRequirement:
++      return "invalid-requirement";
++    case SignatureFailure::kNotApplicationBundle:
++      return "not-application-bundle";
++    case SignatureFailure::kBundleIdentifierMismatch:
++      return "bundle-identifier-mismatch";
++    case SignatureFailure::kCannotReadCode:
++      return "cannot-read-code";
++    case SignatureFailure::kSignatureRejected:
++      return "signature-rejected";
++  }
++}
++
++}  // namespace
++
++int main(int argc, char** argv) {
++  base::CommandLine::Init(argc, argv);
++  const auto& command = *base::CommandLine::ForCurrentProcess();
++  const auto requirement_file =
++      command.GetSwitchValuePath("signing-requirement-file");
++  std::string requirement;
++  if (!command.GetArgs().empty() || !requirement_file.IsAbsolute() ||
++      !base::ReadFileToString(requirement_file, &requirement)) {
++    std::fputs(
++        "Usage: arcified_signature_audit --app-bundle=/absolute/app.app "
++        "--bundle-id=APPROVED_ID "
++        "--signing-requirement-file=/absolute/approved-requirement.txt\n",
++        stderr);
++    return 1;
++  }
++  const auto result = arcified::release_macos::VerifyAppSignature(
++      command.GetSwitchValuePath("app-bundle"),
++      command.GetSwitchValueASCII("bundle-id"), requirement);
++  if (!result.has_value()) {
++    std::fprintf(stderr, "Signature check failed: %s, OSStatus=%d\n",
++                 FailureName(result.error().failure),
++                 static_cast<int>(result.error().status));
++    return 1;
++  }
++  std::puts(
++      "Local static signature requirement satisfied. "
++      "Release/install acceptance remains OPEN. "
++      "Notarization and current revocation were not checked.");
++  return 0;
++}
+diff --git a/chrome/installer/mac/arcified_signature_verifier.cc b/chrome/installer/mac/arcified_signature_verifier.cc
+new file mode 100644
+index 00000000..843fd0aa
+--- /dev/null
++++ b/chrome/installer/mac/arcified_signature_verifier.cc
+@@ -0,0 +1,95 @@
++// Copyright 2026 The Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include "chrome/installer/mac/arcified_signature_verifier.h"
++
++#include <CoreFoundation/CoreFoundation.h>
++
++#include "base/apple/foundation_util.h"
++#include "base/apple/scoped_cftyperef.h"
++#include "base/files/file_util.h"
++#include "base/strings/strcat.h"
++#include "base/strings/string_util.h"
++#include "base/strings/sys_string_conversions.h"
++
++namespace arcified::release_macos {
++
++base::expected<void, SignatureError> VerifyAppSignature(
++    const base::FilePath& app_bundle,
++    std::string_view expected_bundle_identifier,
++    std::string_view approved_signing_requirement) {
++  // Apple's bundle identifier alphabet also prevents requirement injection.
++  if (!app_bundle.IsAbsolute() || app_bundle.ReferencesParent() ||
++      app_bundle.value().find('\0') != std::string::npos ||
++      expected_bundle_identifier.empty() ||
++      !base::ContainsOnlyChars(expected_bundle_identifier,
++                               "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
++                               "abcdefghijklmnopqrstuvwxyz0123456789.-") ||
++      base::TrimWhitespaceASCII(approved_signing_requirement, base::TRIM_ALL)
++          .empty() ||
++      !base::IsStringUTF8(approved_signing_requirement) ||
++      approved_signing_requirement.find('\0') != std::string_view::npos) {
++    return base::unexpected(
++        SignatureError{SignatureFailure::kInvalidInput, errSecParam});
++  }
++
++  // 'anchor trusted' prevents ad hoc signatures, including non-host slices,
++  // from satisfying even a permissive supplied requirement. Parentheses keep
++  // an owner's 'or' clauses from bypassing the identifier/trust constraints.
++  const std::string requirement_text = base::StrCat(
++      {"(", approved_signing_requirement,
++       ") and anchor trusted and identifier \"", expected_bundle_identifier,
++       "\" and info[CFBundleIdentifier] = \"", expected_bundle_identifier,
++       "\""});
++  auto requirement_string = base::SysUTF8ToCFStringRef(requirement_text);
++  base::apple::ScopedCFTypeRef<SecRequirementRef> requirement;
++  OSStatus status = SecRequirementCreateWithString(
++      requirement_string.get(), kSecCSDefaultFlags,
++      requirement.InitializeInto());
++  if (status != errSecSuccess) {
++    return base::unexpected(
++        SignatureError{SignatureFailure::kInvalidRequirement, status});
++  }
++
++  auto bundle_url = base::apple::FilePathToCFURL(app_bundle);
++  base::apple::ScopedCFTypeRef<CFBundleRef> bundle(
++      CFBundleCreate(kCFAllocatorDefault, bundle_url.get()));
++  CFStringRef package_type =
++      bundle ? base::apple::CFCast<CFStringRef>(
++                   CFBundleGetValueForInfoDictionaryKey(
++                       bundle.get(), CFSTR("CFBundlePackageType")))
++             : nullptr;
++  if (!base::DirectoryExists(app_bundle) || !package_type ||
++      !CFEqual(package_type, CFSTR("APPL"))) {
++    return base::unexpected(
++        SignatureError{SignatureFailure::kNotApplicationBundle, errSecParam});
++  }
++  CFStringRef identifier =
++      base::apple::CFCast<CFStringRef>(CFBundleGetValueForInfoDictionaryKey(
++          bundle.get(), kCFBundleIdentifierKey));
++  if (!identifier ||
++      base::SysCFStringRefToUTF8(identifier) != expected_bundle_identifier) {
++    return base::unexpected(SignatureError{
++        SignatureFailure::kBundleIdentifierMismatch, errSecCSReqFailed});
++  }
++
++  base::apple::ScopedCFTypeRef<SecStaticCodeRef> code;
++  status = SecStaticCodeCreateWithPath(bundle_url.get(), kSecCSDefaultFlags,
++                                       code.InitializeInto());
++  if (status != errSecSuccess) {
++    return base::unexpected(
++        SignatureError{SignatureFailure::kCannotReadCode, status});
++  }
++  status = SecStaticCodeCheckValidity(
++      code.get(),
++      kSecCSCheckAllArchitectures | kSecCSCheckNestedCode |
++          kSecCSStrictValidate | kSecCSNoNetworkAccess,
++      requirement.get());
++  if (status != errSecSuccess) {
++    return base::unexpected(
++        SignatureError{SignatureFailure::kSignatureRejected, status});
++  }
++  return base::ok();
++}
++
++}  // namespace arcified::release_macos
+diff --git a/chrome/installer/mac/arcified_signature_verifier.h b/chrome/installer/mac/arcified_signature_verifier.h
+new file mode 100644
+index 00000000..096a7b9e
+--- /dev/null
++++ b/chrome/installer/mac/arcified_signature_verifier.h
+@@ -0,0 +1,53 @@
++// Copyright 2026 The Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#ifndef CHROME_INSTALLER_MAC_ARCIFIED_SIGNATURE_VERIFIER_H_
++#define CHROME_INSTALLER_MAC_ARCIFIED_SIGNATURE_VERIFIER_H_
++
++#include <Security/Security.h>
++
++#include <string_view>
++
++#include "base/files/file_path.h"
++#include "base/types/expected.h"
++
++namespace arcified::release_macos {
++
++enum class SignatureFailure {
++  kInvalidInput,
++  kInvalidRequirement,
++  kNotApplicationBundle,
++  kBundleIdentifierMismatch,
++  kCannotReadCode,
++  kSignatureRejected,
++};
++
++struct SignatureError {
++  SignatureFailure failure;
++  OSStatus status;
++};
++
++// Read-only, synchronous signature check for a quiescent app bundle. Run
++// outside the browser UI thread. The caller must prevent concurrent
++// modification and recheck after installation; the result does not authorize
++// later changed bytes.
++//
++// Both policy arguments are mandatory, owner-approved inputs, never values read
++// from the artifact itself. The signing requirement must constrain the approved
++// signer/certificate and distribution class. This helper additionally binds the
++// signing and Info.plist identifiers and requires a trusted certificate chain
++// on every architecture. It does not approve any signer or distribution class.
++//
++// No network access is requested. Success proves only local static signature
++// validation against that requirement, including nested code and resources.
++// Notarization, fresh revocation, Gatekeeper, installer/package trust,
++// supported architecture/OS, registration and retained user data need separate
++// evidence.
++base::expected<void, SignatureError> VerifyAppSignature(
++    const base::FilePath& app_bundle,
++    std::string_view expected_bundle_identifier,
++    std::string_view approved_signing_requirement);
++
++}  // namespace arcified::release_macos
++
++#endif  // CHROME_INSTALLER_MAC_ARCIFIED_SIGNATURE_VERIFIER_H_
+diff --git a/chrome/installer/mac/arcified_signature_verifier_unittest.cc b/chrome/installer/mac/arcified_signature_verifier_unittest.cc
+new file mode 100644
+index 00000000..9c7de172
+--- /dev/null
++++ b/chrome/installer/mac/arcified_signature_verifier_unittest.cc
+@@ -0,0 +1,88 @@
++// Copyright 2026 The Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include "chrome/installer/mac/arcified_signature_verifier.h"
++
++#include <string>
++
++#include "base/files/file_util.h"
++#include "base/files/scoped_temp_dir.h"
++#include "testing/gtest/include/gtest/gtest.h"
++
++namespace arcified::release_macos {
++namespace {
++
++constexpr char kBundleId[] = "test.arcified.signature";
++
++class ArcifiedSignatureVerifierTest : public testing::Test {
++ protected:
++  void SetUp() override {
++    ASSERT_TRUE(directory_.CreateUniqueTempDir());
++    bundle_ = directory_.GetPath().Append("Unsigned.app");
++    ASSERT_TRUE(base::CreateDirectory(bundle_.Append("Contents/MacOS")));
++    ASSERT_TRUE(base::WriteFile(
++        bundle_.Append("Contents/Info.plist"),
++        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
++        "<plist version=\"1.0\"><dict>"
++        "<key>CFBundleIdentifier</key><string>test.arcified.signature</string>"
++        "<key>CFBundlePackageType</key><string>APPL</string>"
++        "<key>CFBundleExecutable</key><string>unsigned</string>"
++        "</dict></plist>"));
++    ASSERT_TRUE(base::WriteFile(bundle_.Append("Contents/MacOS/unsigned"),
++                                "#!/bin/sh\nexit 0\n"));
++    ASSERT_TRUE(base::SetPosixFilePermissions(
++        bundle_.Append("Contents/MacOS/unsigned"), 0755));
++  }
++
++  base::ScopedTempDir directory_;
++  base::FilePath bundle_;
++};
++
++TEST_F(ArcifiedSignatureVerifierTest, RejectsMissingPolicyAndRelativePaths) {
++  for (const auto& result :
++       {VerifyAppSignature(bundle_, "", "true"),
++        VerifyAppSignature(bundle_, kBundleId, " \n"),
++        VerifyAppSignature(base::FilePath("Unsigned.app"), kBundleId, "true"),
++        VerifyAppSignature(bundle_, "test\" or true", "true"),
++        VerifyAppSignature(bundle_, kBundleId, std::string("\xff", 1)),
++        VerifyAppSignature(bundle_, kBundleId, std::string("true\0", 5))}) {
++    ASSERT_FALSE(result.has_value());
++    EXPECT_EQ(SignatureFailure::kInvalidInput, result.error().failure);
++  }
++}
++
++TEST_F(ArcifiedSignatureVerifierTest, RejectsMalformedNativeRequirement) {
++  const auto result = VerifyAppSignature(bundle_, kBundleId, "(");
++  ASSERT_FALSE(result.has_value());
++  EXPECT_EQ(SignatureFailure::kInvalidRequirement, result.error().failure);
++  EXPECT_NE(errSecSuccess, result.error().status);
++}
++
++TEST_F(ArcifiedSignatureVerifierTest, RejectsNonApplicationDirectory) {
++  const auto result =
++      VerifyAppSignature(directory_.GetPath(), kBundleId, "true");
++  ASSERT_FALSE(result.has_value());
++  EXPECT_EQ(SignatureFailure::kNotApplicationBundle, result.error().failure);
++}
++
++TEST_F(ArcifiedSignatureVerifierTest, RejectsUnexpectedBundleIdentifier) {
++  const auto result =
++      VerifyAppSignature(bundle_, "test.arcified.other", "true");
++  ASSERT_FALSE(result.has_value());
++  EXPECT_EQ(SignatureFailure::kBundleIdentifierMismatch,
++            result.error().failure);
++}
++
++TEST_F(ArcifiedSignatureVerifierTest, UnsignedAppCannotPassPermissivePolicy) {
++  const auto result = VerifyAppSignature(bundle_, kBundleId, "true");
++  ASSERT_FALSE(result.has_value());
++  EXPECT_EQ(SignatureFailure::kSignatureRejected, result.error().failure);
++  EXPECT_EQ(errSecCSUnsigned, result.error().status);
++  std::string executable;
++  ASSERT_TRUE(base::ReadFileToString(bundle_.Append("Contents/MacOS/unsigned"),
++                                     &executable));
++  EXPECT_EQ("#!/bin/sh\nexit 0\n", executable);
++}
++
++}  // namespace
++}  // namespace arcified::release_macos

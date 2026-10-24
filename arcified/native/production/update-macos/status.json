@@ -1,0 +1,67 @@
+{
+  "license": "GPL-3.0-only",
+  "key": "update-macos",
+  "issue": "https://github.com/Timpan4/helium-arcified/issues/167",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "preparedSource": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+  "chromiumVersion": "155.0.8059.79",
+  "status": "native_unavailable_path_packet_ready_for_coordinator_review",
+  "productionIntegrated": false,
+  "nativeAcceptance": "OPEN",
+  "patch": "production.patch",
+  "sourceIdentities": "sources.sha256",
+  "implementedScope": [
+    "Bind native macOS VersionUpdater::Create to an explicit unavailable About-page result",
+    "Reject Chromium updater and any imported Sparkle enablement at the macOS help GN boundary",
+    "Hide promotion and return no version, progress, rollback, wipe or ready-to-relaunch result",
+    "Register real InProcessBrowserTest sources for the binding, Profile preference/live-page retention, repeated checks and callback destruction"
+  ],
+  "commandRouting": {
+    "allocatedPrimaryCommandId": 40828,
+    "allocatedPrimaryUsed": false,
+    "existingCommand": "IDC_ABOUT",
+    "existingCommandId": 40018,
+    "existingActionMapping": "E(kActionAbout, IDC_ABOUT)",
+    "mappingSource": "chrome/browser/ui/actions/chrome_action_id.h:163",
+    "libraryCommandId": 40701,
+    "changes": "No command IDs or mappings changed"
+  },
+  "nativeTests": {
+    "status": "AUTHORED_REGISTERED_NOT_RUN",
+    "source": "chrome/browser/ui/webui/help/version_updater_arcified_mac_browsertest.cc",
+    "sourceSet": "//chrome/browser/ui/webui/help:browser_tests",
+    "runner": "//chrome/test:browser_tests",
+    "filter": "ArcifiedMacUpdateBrowserTest.*",
+    "cases": [
+      "UnavailableCheckRetainsProfileAndLivePage",
+      "PromotionCallbackCanDestroyUpdater"
+    ],
+    "limits": "No installed-artifact, signature, updater interruption, restart, rollback, durable workspace or macOS UI execution evidence"
+  },
+  "checks": [
+    {"name": "SHA-256 manifest verification", "result": "PASS", "exitCode": 0},
+    {"name": "base snapshots equal read-only prepared source", "result": "PASS", "exitCode": 0},
+    {"name": "clang-format Chromium style dry run", "result": "PASS", "exitCode": 0},
+    {"name": "pinned GN format dry run for both changed BUILD.gn files", "result": "PASS", "exitCode": 0},
+    {"name": "xmllint generated_resources.grd", "result": "PASS", "exitCode": 0},
+    {"name": "git apply --check --whitespace=error-all on exact sparse base", "result": "PASS", "exitCode": 0},
+    {"name": "GNU patch --batch --fuzz=0 reconstruction followed by diff -r against result", "result": "PASS", "exitCode": 0},
+    {"name": "native GN generation, SDK compile, browser tests and visual interaction", "result": "NOT_RUN"}
+  ],
+  "integrationRequests": [
+    "Coordinator reconcile shared help/BUILD.gn, generated_resources.grd and chrome/test/BUILD.gn with sibling packets",
+    "Refresh this downstream delta after the complete pinned macOS platform series, retaining its order; platform Sparkle help/BUILD.gn hunk overlaps",
+    "Keep both updater guards outside the platform is_mac && !enable_sparkle conditional",
+    "Obtain independent review before integrated source acceptance"
+  ],
+  "acceptance": [
+    {"criterion": "Owner approves service/channel ownership and signing/key infrastructure before publication", "status": "OPEN", "needed": "Explicit fork-owner choice of service/channel, application identity and authorized signing/key infrastructure; no publication performed"},
+    {"criterion": "Verify installed-to-updated identity/signatures and reject tampered metadata/incompatible downgrade", "status": "OPEN", "needed": "Approved release-macos artifacts, trust roots, metadata authentication and compatibility/downgrade policy, then actual macOS negative tests"},
+    {"criterion": "Exercise interrupted/failed update, restart and approved rollback while retaining Profile/workspace data", "status": "OPEN", "needed": "Session-durability integration, approved installer/package and rollback/data policy, plus native macOS update and restart evidence"}
+  ],
+  "preservedOpenRequirements": [
+    "same-window multi-Profile native ownership",
+    "saved-page live handoff",
+    "macOS SDK/runtime/signing/installer acceptance"
+  ]
+}

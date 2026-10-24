@@ -1,0 +1,49 @@
+{
+  "license": "GPL-3.0-only",
+  "retrievedOn": "2026-10-24",
+  "pinnedChromium": "155.0.8059.79",
+  "pinnedHeliumPrepared": "0.19.2.1",
+  "disposition": "SECURITY_REVIEW_OPEN",
+  "pinIsLatestObservedStable": false,
+  "sources": [
+    {
+      "url": "https://chromereleases.googleblog.com/2026/10/chrome-for-android-update_01360129943.html?hl=nl",
+      "publishedOn": "2026-10-13",
+      "scope": "Google's Android release notice explicitly identifies corresponding desktop versions: Linux 155.0.8059.79, Windows/macOS 155.0.8059.79/.80. This is version corroboration, not native fork verification."
+    },
+    {
+      "url": "https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_02018666648.html",
+      "publishedOn": "2026-10-20",
+      "scope": "Google announces stable 156.0.8078.47 for Linux and 156.0.8078.47/.48 for Windows/macOS, with 353 security fixes. Examples include Critical CVE-2026-113341 in Skia and Critical CVE-2026-113279 in Accessibility. Assess all fixes at the linked notice and its issue list; these examples are not exhaustive."
+    },
+    {
+      "url": "https://chromereleases.googleblog.com/2026/10/early-stable-update-for-desktop_02123641300.html?amp=1",
+      "publishedOn": "2026-10-22",
+      "scope": "Google separately announces early stable 157.0.8103.15/.16 for a limited Windows rollout, with Mac forthcoming. This does not establish an all-platform target."
+    },
+    {
+      "url": "https://www.diabrowser.com/security",
+      "scope": "Dia documents prioritizing Chromium upgrades and critical fixes. Its schedule is reference product policy, not an Arcified service commitment."
+    },
+    {
+      "url": "https://www.diabrowser.com/security/bulletins",
+      "scope": "Security design and incident disclosures are reference context. They do not attest which Chromium fixes are present in Arcified."
+    }
+  ],
+  "unavailablePrimaryReads": [
+    {
+      "url": "https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_01668083673.html",
+      "result": "Web tool could not access the October 13 desktop notice, including its mobile variant. Exact pinned desktop advisory enumeration remains OPEN."
+    },
+    {
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/tags/155.0.8059.79/chrome/VERSION",
+      "result": "Web tool could not access the tag file. Prepared local VERSION is hashed separately; upstream tag/commit attestation remains OPEN."
+    }
+  ],
+  "remaining": [
+    "Refresh desktop stable and security notices when selecting and executing the update; this snapshot expires as evidence of current release state.",
+    "Resolve the complete pinned advisory and later-fix list, including restricted details when available, and assess downstream feature reachability/backports without assuming absence or presence.",
+    "Declare the target revision per supported OS and bind each target to verified source archive and upstream revision evidence.",
+    "No engine change, vulnerability-fix validation, native execution, signing or publication was performed."
+  ]
+}

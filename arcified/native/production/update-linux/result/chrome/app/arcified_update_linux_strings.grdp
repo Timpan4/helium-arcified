@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: GPL-3.0-only -->
+<grit-part>
+  <message name="IDS_ARCIFIED_UPDATE_LINUX_UNAVAILABLE" desc="About page explanation when this Linux build has no authenticated Arcified application updater. It does not describe component or extension updates.">
+    Authenticated Arcified updates are not available in this build.
+  </message>
+</grit-part>

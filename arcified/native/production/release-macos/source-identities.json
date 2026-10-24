@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "issue": 133,
+  "key": "release-macos",
+  "repositoryBaseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "engine": "155.0.8059.79",
+  "preparedSource": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+  "preparedSourceAccess": "READ-ONLY",
+  "licenseNewFiles": "GPL-3.0-only",
+  "files": [
+    {
+      "path": "chrome/installer/mac/BUILD.gn",
+      "operation": "modify",
+      "basePath": "base/chrome/installer/mac/BUILD.gn",
+      "baseSha256": "343c88f19e9a57c9687b253fdf0655cfb4210d5db2be53ca7b5560d7ec30e935",
+      "resultPath": "result/chrome/installer/mac/BUILD.gn",
+      "resultSha256": "157c3e50acfdf4a9c55f0f6c2f9169db1ae6413dff0895753aa74fad2a1c6232"
+    },
+    {
+      "path": "chrome/installer/mac/arcified_signature_verifier.h",
+      "operation": "add",
+      "basePath": null,
+      "baseSha256": null,
+      "resultPath": "result/chrome/installer/mac/arcified_signature_verifier.h",
+      "resultSha256": "8850671ab0fc2375d1ec7bce96ac2f8747eb4d0547abb6076ade9581892ca5e8"
+    },
+    {
+      "path": "chrome/installer/mac/arcified_signature_verifier.cc",
+      "operation": "add",
+      "basePath": null,
+      "baseSha256": null,
+      "resultPath": "result/chrome/installer/mac/arcified_signature_verifier.cc",
+      "resultSha256": "bcf6e5c6e260cddd65dbc3605839ba8f33e4a9239ce6ad07149b24335d5854ec"
+    },
+    {
+      "path": "chrome/installer/mac/arcified_signature_audit_main.cc",
+      "operation": "add",
+      "basePath": null,
+      "baseSha256": null,
+      "resultPath": "result/chrome/installer/mac/arcified_signature_audit_main.cc",
+      "resultSha256": "323f7ade372fb2bea571663f5c6b4c4303afb5c7dbaaae72aaedc6a691b0adcc"
+    },
+    {
+      "path": "chrome/installer/mac/arcified_signature_verifier_unittest.cc",
+      "operation": "add",
+      "basePath": null,
+      "baseSha256": null,
+      "resultPath": "result/chrome/installer/mac/arcified_signature_verifier_unittest.cc",
+      "resultSha256": "c724338935a80428cdd7445cf611b23f3882ad7a4b0d79467766536d8f7692dd"
+    },
+    {
+      "path": "chrome/installer/mac/arcified_signature_artifact_test.cc",
+      "operation": "add",
+      "basePath": null,
+      "baseSha256": null,
+      "resultPath": "result/chrome/installer/mac/arcified_signature_artifact_test.cc",
+      "resultSha256": "4a96968570ea72f092cbaf2e5bbe082050ccb20b7bcca662378e3550f920672d"
+    }
+  ],
+  "inspectedInputs": [
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/installer/mac/BUILD.gn",
+      "sha256": "343c88f19e9a57c9687b253fdf0655cfb4210d5db2be53ca7b5560d7ec30e935"
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/app/theme/chromium/BRANDING",
+      "sha256": "d6d15e4d89789121446212243f99b1ad6c9f72a77b15610fdc7a1cc4b58e841e"
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/VERSION",
+      "sha256": "6364ce04bcd72b472e54baac73c17372bfde3447a7c76a6ac6b54131da83ad1e"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/release/assignment.json",
+      "sha256": "bb1c1827ae0ed40d40009544344309f5f9a3afe5293ab44acead3cfb18ccb355"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+      "sha256": "aedebe1a338bb81f923b7b954be0f74fde994f836decc1e0a48e42b6ad5c2b93"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md",
+      "sha256": "244488864d15d093f7f80e1cc40f490a979454e2a8e74db438c7e51283518a1c"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md",
+      "sha256": "e5951ba265be3587cb1df8f2ab73ce6768071ac55b8d481240ed57819b39ab56"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json",
+      "sha256": "4912023bc5b95f58abc42f04572db59d5e9edcc9cd09b835fbc18206170e380c"
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/build/config/mac/mac_sdk.gni",
+      "sha256": "c8d20392804889087b6737bd1ffc10fdc1845e2a7d9a4218856ef248771bc8e9"
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/app/app-Info.plist",
+      "sha256": "b9086affccae0673758bbf886e836ad637e4bc9b37849498498a06f69c8edba5"
+    }
+  ],
+  "patch": "production.patch",
+  "tests": [
+    {
+      "target": "//chrome/installer/mac:arcified_signature_verifier_tests",
+      "source": "chrome/installer/mac/arcified_signature_verifier_unittest.cc",
+      "status": "REGISTERED_SOURCE_NOT_BUILT_OR_RUN",
+      "coverage": "Native requirement parsing, missing/malformed policy, invalid path, non-app directory, wrong bundle ID and unsigned app rejection; reads fixture bytes back to check preservation."
+    },
+    {
+      "target": "//chrome/installer/mac:arcified_signature_artifact_tests",
+      "source": "chrome/installer/mac/arcified_signature_artifact_test.cc",
+      "status": "REGISTERED_SOURCE_REQUIRES_OWNER_ARTIFACT_NOT_BUILT_OR_RUN",
+      "coverage": "Real owner-supplied signed app satisfies approved policy, and the same bytes reject a false requirement. Missing fixture or policy fails, never skips."
+    }
+  ],
+  "legacyCommand": {
+    "assigned": 40795,
+    "used": false,
+    "reason": "Standalone verification executable. No browser command or ActionItem is introduced; Library40701 and existing actions are unchanged."
+  },
+  "nativeAcceptance": "OPEN",
+  "patchSha256": "3e32be40f4962f40edf4c83128b1e4999da34a10976db06e489ddb125606c8da"
+}
