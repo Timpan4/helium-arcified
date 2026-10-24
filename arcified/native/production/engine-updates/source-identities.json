@@ -1,0 +1,38 @@
+{
+  "license": "GPL-3.0-only",
+  "assignmentBaseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "preparedSource": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+  "preparedSourceFiles": {
+    "chrome/VERSION": "6364ce04bcd72b472e54baac73c17372bfde3447a7c76a6ac6b54131da83ad1e",
+    "DEPS": "0de821c77defd871dfad6c35deedd27a58e39fb26f9f89be798df8f703288881",
+    "chrome/browser/profiles/BUILD.gn": "5e42da6ceefd3bcaf2a418d43bb3c5372c8e1d9d8ecbdf84d081127f5b56d15c",
+    "chrome/test/BUILD.gn": "38933520829a78288766cd702e665076f62e4ac720c82ca816d342a59a874099"
+  },
+  "packetFilesSha256": {
+    "base/chrome/browser/profiles/BUILD.gn": "5e42da6ceefd3bcaf2a418d43bb3c5372c8e1d9d8ecbdf84d081127f5b56d15c",
+    "result/chrome/browser/profiles/BUILD.gn": "a1f297e94119d02edcef1041c799ee845f415c15e582b8539fac432d364554e6",
+    "result/chrome/browser/profiles/arcified_engine_update_browsertest.cc": "0ec5e90fdbd38faea9ba681be52bacaccce00dd3a0faae0c69e9bb213f360556",
+    "production.patch": "9e667d47ab73fe2a921863b06f087430ebd2bf8aa1b8b79e9e940ab160612198",
+    "audit.py": "b8fd640298968702c464dd39edb36b250c9dc2267d7425fb42300dce352b4892",
+    "test_audit.py": "477433d00c31d9ab63f347a585bbff0e1dd3da6b642fbfacf2dde0c27fe79570",
+    "audit-155.0.8059.79.json": "42a9d2327ec49e539a667b1e4cbf971c5155f68ebfd891657f2e9f03cc772777"
+  },
+  "historicalEvidenceSha256": {
+    "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/preparation.json": "65273bd34c421ebda14437d1f6c8b7f5f9ad013dbb4117f2ff9637f6ba9c8f29",
+    "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/patches.log": "e73fe4f2d43718757e08eaf33637ec774449fba193d542b8ea9a0663573b8217",
+    "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/out/Default/args.gn": "ac7f2384727cdf4e4b8ecc70f9ac2300f5284a25363f43e4d656273c177130e1"
+  },
+  "nativePatchFiles": [
+    {
+      "path": "chrome/browser/profiles/BUILD.gn",
+      "base": "base/chrome/browser/profiles/BUILD.gn",
+      "result": "result/chrome/browser/profiles/BUILD.gn"
+    },
+    {
+      "path": "chrome/browser/profiles/arcified_engine_update_browsertest.cc",
+      "base": null,
+      "result": "result/chrome/browser/profiles/arcified_engine_update_browsertest.cc"
+    }
+  ],
+  "scope": "SHA-256 values identify selected bytes read locally. Historical source archive checksums are publisher claims in historical-preparation.json, not archive rehashes or signing attestations. The shared source is read-only and may be changed by its coordinator."
+}

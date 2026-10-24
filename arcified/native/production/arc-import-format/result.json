@@ -1,0 +1,127 @@
+{
+  "issueKey": "arc-import-format",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/27",
+  "disposition": "RESEARCH_PACKET_DELIVERED_EXPORT_CORPUS_AND_OWNER_DECISIONS_OPEN",
+  "evidencePaths": [
+    "arcified/native/production/arc-import-format/report.md",
+    "arcified/native/production/arc-import-format/sources.json",
+    "arcified/native/production/arc-import-format/fixtures.json",
+    "arcified/native/production/arc-import-format/checks.md",
+    "arcified/native/production/arc-import-format/result.json"
+  ],
+  "changes": [
+    "Recorded full assigned issue object, authoritative local source hashes and first-party export/migration/sunset article identities.",
+    "Separated documented desktop Markdown link export from Dia installed-browser import.",
+    "Inventoried requested field families with byte-level observations explicitly unavailable and supported format/build lists empty.",
+    "Proposed source-preserving provenance intake, explicit Profile/Space mapping, unsupported-field preview and coordinated integration gates.",
+    "No native source, patch, test registration, command/resource registration or shared control changed."
+  ],
+  "checks": [
+    {
+      "check": "First-party public Help Center article API retrieval",
+      "outcome": "PASS",
+      "coverage": "Articles 44413129117591, 44412972248471 and 25583851606039 parsed; exact response identities retained. Export body hash repeated. Documentary evidence only."
+    },
+    {
+      "check": "jq syntax and scope assertions",
+      "outcome": "PASS",
+      "coverage": "Fixtures have no originals or supported builds/versions; byte observations false; result keeps native acceptance OPEN and no patch; sources reference assigned issue and primary articles."
+    },
+    {
+      "check": "sha256sum local authority and inspected foundation sources",
+      "outcome": "PASS",
+      "coverage": "Exact identities recorded in sources.json. These are inspection-time snapshots, not native execution evidence."
+    },
+    {
+      "check": "git diff --check -- arcified/native/production/arc-import-format",
+      "outcome": "PASS_WITH_LIMIT",
+      "coverage": "Tracked diff whitespace only. Packet files are untracked; separate full-text packet lint covers new files."
+    },
+    {
+      "check": "Hosted JavaScript packet lint and evidence consistency through fast_filesystem fs_read_many",
+      "outcome": "PASS",
+      "coverage": "All six packet files, including unchanged ownership.json: canonical JSON, LF/final newline, trailing whitespace/conflict markers, Markdown links, result evidence paths, source identity inventory and OPEN acceptance assertions."
+    }
+  ],
+  "ownerQuestions": [
+    {
+      "question": "Which Arc OS/builds and export routes should the first supported corpus cover, and can you provide owner-authorized inert exports with their provenance?",
+      "recommendation": "Acquire built-in desktop Export Data originals containing synthetic browsing data for intended source platforms/builds; inspect clipboard/mobile exports separately.",
+      "status": "OPEN",
+      "routeTo": "research coordinator"
+    },
+    {
+      "question": "After fixture inspection, approve a preview of proven link/Space organization with explicit Profile mapping and visible unsupported fields, or defer conversion until richer evidence exists?",
+      "recommendation": "Review the narrower preview after fixture discovery. Do not infer missing Profile ownership, flatten folders, restore unproven sessions/splits, or copy credentials.",
+      "status": "OPEN",
+      "routeTo": "research coordinator"
+    }
+  ],
+  "dependencies": [
+    {
+      "key": "owner-authorized-export-corpus",
+      "declaredIssueDependency": false,
+      "status": "OPEN",
+      "reason": "No original Arc export supplied; exact grammar, field structure and supported app/build coverage cannot be established."
+    },
+    {
+      "key": "owner-preview-contract-decision",
+      "declaredIssueDependency": false,
+      "status": "OPEN",
+      "reason": "Mapping proposal awaits coordinator consolidation and owner review."
+    }
+  ],
+  "integrationRequests": [
+    {
+      "target": "research coordinator",
+      "request": "Acquire/provenance inert owner exports and consolidate listed decisions. Keep issue 27 and native acceptance open."
+    },
+    {
+      "target": "data/arc-import",
+      "request": "Keep converter route unavailable and supported formats empty until real fixtures prove exact grammar. Do not use Dia direct-import claims as portable schema."
+    },
+    {
+      "target": "data and core coordinators",
+      "request": "Compose verified mapping with existing metadata/codec, organization, native session-durability, private/download classifiers and lifecycle Model. No competing implementation in this packet."
+    },
+    {
+      "target": "future implementation owner",
+      "request": "After source and decision gates, register real parser/native tests, verify source unchanged, failure/cancellation, repeated imports, restart, and each supported platform. Preserve same-window multi-Profile and live saved-page handoff gates."
+    }
+  ],
+  "remainingCriteria": [
+    {
+      "criterion": "Retain actual export provenance and inert fixtures",
+      "state": "OPEN",
+      "reason": "No owner-authorized export bytes available."
+    },
+    {
+      "criterion": "Enumerate observed Spaces/Favorites/Profile/split/session fields and versions",
+      "state": "OPEN",
+      "reason": "Documentary coverage inventoried; byte-level field schema and supported version/build evidence unavailable."
+    },
+    {
+      "criterion": "Owner-reviewed unsupported-data and mapping/preview contract",
+      "state": "AWAITING_OWNER_REVIEW",
+      "reason": "Source-preserving proposal delivered; no decision invented."
+    },
+    {
+      "criterion": "Native import acceptance",
+      "state": "OPEN",
+      "reason": "Research leaf provides no converter, prepared-source patch, native test registration, build or runtime proof."
+    }
+  ],
+  "nativeAcceptance": "OPEN",
+  "platforms": {
+    "linux": "OPEN",
+    "windows": "OPEN",
+    "macos": "OPEN"
+  },
+  "implementationEvidence": {
+    "preparedSourceBaseFiles": [],
+    "preparedSourceResultFiles": [],
+    "productionPatch": null,
+    "registeredNativeTests": [],
+    "inapplicableReason": "Research-only assignment with missing source-export corpus and unapproved preview contract. No native implementation is justified."
+  }
+}

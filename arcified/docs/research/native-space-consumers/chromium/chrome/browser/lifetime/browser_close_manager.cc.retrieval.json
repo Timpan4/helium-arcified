@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/lifetime/browser_close_manager.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/lifetime/browser_close_manager.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:02:19.901Z",
+  "kind": "file",
+  "bytes": 8829,
+  "sha256": "46d57eb1783670b185eb234354a17ea968a916b11914c88e2c16f02f6a46a473",
+  "gitBlob": "78aa67714c02471e7167c3d7514b357386e3e3fb",
+  "lines": 248,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/navigator/browser_navigator.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/navigator/browser_navigator.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:23.668Z",
+  "kind": "file",
+  "bytes": 49581,
+  "sha256": "6025ae3922527afcf60bb0c56276f8cdbf53fd62eb14713b9b0395d33d6aef50",
+  "gitBlob": "5029e2640598dfffb79ec88703f4a9fc13d0f4db",
+  "lines": 1134,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

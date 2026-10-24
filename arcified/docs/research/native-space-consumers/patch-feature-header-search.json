@@ -1,0 +1,43 @@
+{
+  "pattern": "^--- a/.*(browser_window_features|browser_manager_service|browser_collection|embedder_browser_window_features|theme_profile_key)",
+  "elapsed_ms": 2,
+  "searched_files": 347,
+  "matched_lines": 4,
+  "truncated": false,
+  "matches": [
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/patches/helium/ui/layout/core.patch",
+      "line": 454,
+      "column": 0,
+      "text": "--- a/chrome/browser/ui/browser_window/public/browser_window_features.h",
+      "before": [],
+      "after": []
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/patches/helium/ui/layout/core.patch",
+      "line": 473,
+      "column": 0,
+      "text": "--- a/chrome/browser/ui/browser_window/internal/browser_window_features.cc",
+      "before": [],
+      "after": []
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/patches/helium/ui/tab-search-in-toolbar.patch",
+      "line": 205,
+      "column": 0,
+      "text": "--- a/chrome/browser/ui/browser_window/public/browser_window_features.h",
+      "before": [],
+      "after": []
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/patches/helium/ui/tab-search-in-toolbar.patch",
+      "line": 224,
+      "column": 0,
+      "text": "--- a/chrome/browser/ui/browser_window/internal/browser_window_features.cc",
+      "before": [],
+      "after": []
+    }
+  ],
+  "next_cursor": null,
+  "errors": []
+}

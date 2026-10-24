@@ -1,0 +1,233 @@
+{
+  "id": "d1871b21d95e752feda1c2c4a3965d33fb85b23c",
+  "entries": [
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4ff064d4bc997e9928c83ef251ab7ea88d3dfe33",
+      "name": "BUILD.gn"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7ca1334b9d55c6a82a78aa8ca11e845108b72d18",
+      "name": "OWNERS"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a8a3c2c03bdb4336949529a73a2c7f55c6dd2466",
+      "name": "exclusive_access_bubble.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "155547f66b57fd4c2bf7b62d026867cb40530a99",
+      "name": "exclusive_access_bubble.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9ddcd8a995b43c604a263d8e1ce99e19862d8ba7",
+      "name": "exclusive_access_bubble_hide_callback.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ee343fadeb64c49adedea103389a98b4a524d428",
+      "name": "exclusive_access_bubble_type.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7f91bad3912114963a5dc3f8c00611fab2b5f939",
+      "name": "exclusive_access_bubble_type.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "400eae72897bfe9ac6e4b34432ca695c40a3e6da",
+      "name": "exclusive_access_bubble_type_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2fa4cd561b13bf21f7edd00abb74cac089cd66cc",
+      "name": "exclusive_access_bubble_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e1ad5c2682342e9e2b9828985e16c7bf4b81e606",
+      "name": "exclusive_access_context.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dd1eff6a88b1060c27b55862f87064a3ba99068e",
+      "name": "exclusive_access_controller_base.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "49addb9ad22e0762e86c97e1fcd77ce916029be1",
+      "name": "exclusive_access_controller_base.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b925b516a95f436f71b9dbf478938271e55af019",
+      "name": "exclusive_access_manager.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "03c1ff341c4a8aa60348e55a94d6df076709b4af",
+      "name": "exclusive_access_manager.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0cb1d5d28f70e56929d83f0fb1a01ae43b8ef96b",
+      "name": "exclusive_access_manager_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6cb612f2e3f8c8265f08a3bf2eac8282d694613f",
+      "name": "exclusive_access_permission_manager.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "86f4d3592c0548678f98e84395d2e31b2c082a41",
+      "name": "exclusive_access_permission_manager.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7974a2e88d3d663e071c02d56804f664059ee4b0",
+      "name": "exclusive_access_permission_manager_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f53ed2553d177473867a1747340260b4530b2aff",
+      "name": "exclusive_access_test.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8bb8d677d8be69f42a59ceaaec11e592dd82cbe5",
+      "name": "exclusive_access_test.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1e0d6650245c12c2320a7cbc5157d8e24bc45b76",
+      "name": "fullscreen_controller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "35b8dac847f55042ed84c60e112184d9a30c5f40",
+      "name": "fullscreen_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c17b7484fb3c5d183b69dfcf12d7c779742c02b6",
+      "name": "fullscreen_controller_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "00dc22de3221a35edc32765bf756317d75d07740",
+      "name": "fullscreen_controller_interactive_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "befa8006f2e2d3c3c720914d827ddcdf5d508e5b",
+      "name": "fullscreen_controller_state_interactive_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8588d76aed73c5ace38466c05d2f154a50112124",
+      "name": "fullscreen_controller_state_test.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c998780d3b96cf7e8ac80bb4de76d6df8a171e07",
+      "name": "fullscreen_controller_state_test.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ab9db2edff3a5b260007219e8eae625d45c60739",
+      "name": "fullscreen_controller_state_tests.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6cc52544c442f26d047e256f9ed9eea26d383291",
+      "name": "fullscreen_controller_state_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1f95afe3a01cb4b3ff93c3e9d807dabbc258a67e",
+      "name": "fullscreen_interactive_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ec093e29aab312e18815c02d0d5ddea3c5281163",
+      "name": "fullscreen_tab_params.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7a0a986043c79530f9cbf03d6bb6c70de89613e3",
+      "name": "fullscreen_within_tab_helper.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "041b6b13c2dd3a65fbaecfe80b9b801baa4f8dc3",
+      "name": "fullscreen_within_tab_helper.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ffd672db95c94beb7ab236c763e1b3e4402901fd",
+      "name": "keyboard_lock_controller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "391bed44cc16e6c49f9d65c56901833eb6142311",
+      "name": "keyboard_lock_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4d2687fdd28d4059e6caf516cfc9161af592eb19",
+      "name": "pointer_lock_controller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d1a027cde4594ab1f54632597e2d34d848c993a9",
+      "name": "pointer_lock_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "83b82f9aad1c16a24da826c0ea4f41aaa28d934a",
+      "name": "pointer_lock_controller_browsertest.cc"
+    }
+  ]
+}

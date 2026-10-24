@@ -1,0 +1,157 @@
+{
+  "issueKey": "release-ux-check",
+  "nativeAcceptance": "OPEN",
+  "scope": "Only light source hashing, read-only Git state and packet JSON/coverage/reference/whitespace validation. No native test, browser, benchmark, build or CI execution.",
+  "commands": [
+    {
+      "command": "git status --short && git branch --show-current",
+      "cwd": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production",
+      "exitCode": 0,
+      "outcome": "At entry, only untracked docs/production and native/production packet trees; branch feat/non-ai-research-production. Shared primaries may change disjoint packets."
+    },
+    {
+      "command": "node --version",
+      "cwd": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production",
+      "exitCode": 0,
+      "outcome": "v24.22.1. No dependency added or runtime version selected."
+    },
+    {
+      "command": "sha256sum '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-source-references.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-linux-run-20261023.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-checks.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/backlog.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/coverage-matrix.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/publication/receipts.json' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/artifacts.md' '/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/release/assignment.json' '/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/patches/series' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/VERSION' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser.h' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser_window/public/browser_window_interface.h' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/app/chrome_command_ids.h' '/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/actions/chrome_action_id.h'",
+      "cwd": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production",
+      "runs": [
+        {
+          "exitCode": 0,
+          "outcome": "Initial SHA-256 of all 19 authority/baseline/prepared files. Exact digests in source-identities.json."
+        },
+        {
+          "exitCode": 0,
+          "outcome": "18 identities unchanged; root non-ai-production-workstreams.json changed concurrently. Complete reread reconciled unchanged active issue keys/URLs, baseline, scope and command allocations. Both hashes retained."
+        }
+      ]
+    },
+    {
+      "command": "git status --short -- arcified/native/production/release-ux-check && git diff --quiet -- patches/series && git branch --show-current",
+      "cwd": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production",
+      "exitCode": 0,
+      "output": "?? arcified/native/production/release-ux-check/\nfeat/non-ai-research-production\n",
+      "outcome": "Packet untracked as expected, no tracked patches/series diff, original branch retained. No staging, commit or git write performed."
+    }
+  ],
+  "hostedChecks": [
+    {
+      "mechanism": "functions.exec with Promise.allSettled(fast_filesystem.fs_read_file(...))",
+      "inputs": "Every written packet path, full UTF-8 content, no truncated/error/binary response accepted.",
+      "assertions": [
+        "Persisted content equals generated content exactly.",
+        "Every JSON file parses and equals JSON.stringify(parsed, null, 2) + '\\n'.",
+        "No CR, tab, trailing spaces or extra blank EOF; exactly one terminating newline."
+      ],
+      "result": "PASS",
+      "evidence": {
+        "filesReread": 19,
+        "canonicalJson": 18,
+        "sourceBytesMatchGenerated": true,
+        "whitespace": "PASS",
+        "truncatedResponses": 0
+      }
+    },
+    {
+      "mechanism": "functions.exec JavaScript JSON.parse and exhaustive set/reference assertions over fast_filesystem contents.",
+      "inputs": "matrix-index.json, all matrix/*.json, source-family-coverage.json, cross-cutting-scenarios.json, authoritative full backlog/receipts/manifest/assignment.",
+      "assertions": [
+        "All 164 unique backlog keys and published issue URLs present.",
+        "Every criterion retained verbatim, every criterion ID unique, all three platform result slots explicit.",
+        "All 135 active non-AI keys equal root-owned plus delegated manifest keys.",
+        "Priority, kind, disposition, source families and dependency arrays match source records.",
+        "All 43 source-family keys/URLs and linked issue membership match the source catalog.",
+        "All 23 workflow-family and 19 historical-disposition rows preserve original text and keys.",
+        "Every family criterion reference and optional-state cross-case reference resolves.",
+        "All native scenario results are NOT_RUN, contain no runtime evidence and record no PASS.",
+        "Per-platform implementation/test/release states remain separate.",
+        "Assigned full issue object matches authority-snapshot.json."
+      ],
+      "result": "PASS",
+      "evidence": {
+        "result": "PASS",
+        "issueRows": 164,
+        "activeManifestKeys": 135,
+        "acceptanceScenarios": 558,
+        "platformScenarioSlots": 1674,
+        "openNativeSlots": 1296,
+        "laterPrioritySlots": 252,
+        "ownerExcludedSlots": 54,
+        "otherDeclaredOsSlots": 72,
+        "workflowFamilies": 23,
+        "sourceFamilies": 43,
+        "historicalDispositionRows": 19,
+        "crossCuttingCases": 16,
+        "nativePasses": 0
+      }
+    },
+    {
+      "mechanism": "fast_filesystem.fs_stat_many",
+      "inputs": [
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-source-references.md",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-linux-run-20261023.md",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-checks.md",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/backlog.json",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/coverage-matrix.md",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/publication/receipts.json",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/artifacts.md",
+        "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/release/assignment.json",
+        "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/patches/series",
+        "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/VERSION",
+        "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser.h",
+        "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser_window/public/browser_window_interface.h",
+        "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/app/chrome_command_ids.h",
+        "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/actions/chrome_action_id.h"
+      ],
+      "result": "PASS",
+      "outcome": "All 19 recorded source identity paths exist."
+    },
+    {
+      "mechanism": "fast_filesystem.fs_rg plus root directory listing and native-space-integration.md formatting policy.",
+      "inputs": {
+        "pattern": "prettier|markdownlint|biome|dprint",
+        "scope": "repository JSON/TOML/dot configuration files"
+      },
+      "result": "NO_CONFIGURED_FORMATTER_OR_LINTER_FOUND",
+      "outcome": "No repository Markdown/JSON formatter/linter was identified. Used canonical JSON plus focused structure, reference and whitespace lint; no tool was installed."
+    }
+  ],
+  "validationRepairs": [
+    {
+      "attempt": "Initial hosted reread validator used TextEncoder for byte sizes.",
+      "outcome": "Host ReferenceError: TextEncoder is not defined. No read/check result accepted from that attempt.",
+      "resolution": "Used full fast_filesystem reads with explicit content allowance, checked error/truncated flags and compared exact persisted text. Corrected check passed."
+    },
+    {
+      "attempt": "Source-hash recheck initially asserted complete equality with initial hash output.",
+      "outcome": "Detected root control manifest drift; assertion stopped before declaring identity success.",
+      "resolution": "Inspected changed path, reread full root control and reconciled unchanged authoritative membership/scope/allocation. Prepared source and other identities unchanged; both hash observations recorded."
+    }
+  ],
+  "unrun": [
+    "Native release install/launch and every installed scenario on Linux, Windows and macOS.",
+    "Native registered test execution, setup/preparation/build, heavy checks/benchmarks and remote CI.",
+    "Browser/visual/accessibility/input execution and reference-app observation.",
+    "Enabled account/service/provider tests and release/signing/publication."
+  ],
+  "formatting": "All newly written JSON uses two-space canonical formatting. Markdown uses ordinary headings, paragraphs and numbered actions; focused whitespace/link/reference lint applies.",
+  "limitations": "These checks prove packet integrity and source/mapping coverage only. They do not prove functionality, supported hardware/OS, native test registration, package installation or release.",
+  "finalClosure": {
+    "writtenFiles": 21,
+    "canonicalJsonFiles": 20,
+    "allEvidencePathsResolve": true,
+    "localReadmeLinks": 10,
+    "nativeAcceptance": "OPEN",
+    "result": "PASS",
+    "mechanism": "Full fast_filesystem reread of all written files; exact content, JSON parse/canonical format and whitespace assertions; result required-field/open-criteria assertions; every result evidencePath and all README local links resolved.",
+    "outcome": "All checks passed after documentation of root control drift. No native acceptance claim."
+  }
+}

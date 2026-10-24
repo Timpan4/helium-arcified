@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/sessions/session_restore.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/sessions/session_restore.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:39.085Z",
+  "kind": "file",
+  "bytes": 69025,
+  "sha256": "0b8b242404149758853f41485f1b39775ff44c5e33fb0f4daa39aaf3de17ed39",
+  "gitBlob": "684340e2ae22a97ffcbb010bc31c9f7c9433492e",
+  "lines": 1749,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

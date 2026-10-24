@@ -1,0 +1,107 @@
+{
+  "license": "GPL-3.0-only",
+  "issue": 41,
+  "status": "OPEN",
+  "oldRevision": null,
+  "newRevision": null,
+  "securityReview": {
+    "retrievedOn": null,
+    "primaryUrls": [],
+    "fixAssessment": null,
+    "unresolved": null
+  },
+  "source": {
+    "upstreamCommit": null,
+    "archiveUrl": null,
+    "archivePublisherManifestSha256": null,
+    "archiveVerifiedSha256": null,
+    "forkCommit": null,
+    "forkWorkingInputIdentity": null,
+    "platformInputIdentities": null
+  },
+  "strictReplay": {
+    "status": "NOT_RUN",
+    "command": null,
+    "log": null,
+    "sha256": null
+  },
+  "conflicts": {
+    "status": "NOT_RUN",
+    "records": null,
+    "recordFields": [
+      "patchPath",
+      "beforeSha256",
+      "sourceRevision",
+      "fileAndHunk",
+      "strictDiagnostic",
+      "upstreamChange",
+      "resolution",
+      "afterSha256",
+      "nativeRegressionEvidence"
+    ]
+  },
+  "platforms": {
+    "linux": {
+      "status": "OPEN",
+      "revision": null,
+      "toolchain": null,
+      "gnArgumentsSha256": null,
+      "binarySha256": null,
+      "buildLog": null,
+      "tests": {
+        "filter": "ArcifiedEngineUpdateBrowserTest.*",
+        "command": null,
+        "exitStatus": null,
+        "log": null,
+        "additionalNativeFilters": null
+      },
+      "installedInteractionEvidence": null,
+      "missingBehavior": [
+        "same-window multi-Profile",
+        "saved-page handoff"
+      ]
+    },
+    "windows": {
+      "status": "OPEN",
+      "revision": null,
+      "toolchain": null,
+      "gnArgumentsSha256": null,
+      "binarySha256": null,
+      "buildLog": null,
+      "tests": {
+        "filter": "ArcifiedEngineUpdateBrowserTest.*",
+        "command": null,
+        "exitStatus": null,
+        "log": null,
+        "additionalNativeFilters": null
+      },
+      "installedInteractionEvidence": null,
+      "missingBehavior": [
+        "same-window multi-Profile",
+        "saved-page handoff"
+      ]
+    },
+    "macos": {
+      "status": "OPEN",
+      "revision": null,
+      "toolchain": null,
+      "gnArgumentsSha256": null,
+      "binarySha256": null,
+      "buildLog": null,
+      "tests": {
+        "filter": "ArcifiedEngineUpdateBrowserTest.*",
+        "command": null,
+        "exitStatus": null,
+        "log": null,
+        "additionalNativeFilters": null
+      },
+      "installedInteractionEvidence": null,
+      "missingBehavior": [
+        "same-window multi-Profile",
+        "saved-page handoff"
+      ]
+    }
+  },
+  "independentReview": null,
+  "publication": null
+}

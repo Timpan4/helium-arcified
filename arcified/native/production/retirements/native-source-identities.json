@@ -1,0 +1,42 @@
+{
+  "preparedSource": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/",
+  "chromiumVersion": "155.0.8059.79",
+  "access": "READ_ONLY",
+  "observedOn": "2026-10-24",
+  "files": [
+    {
+      "path": "chrome/VERSION",
+      "baseSha256": "6364ce04bcd72b472e54baac73c17372bfde3447a7c76a6ac6b54131da83ad1e",
+      "resultSha256": "6364ce04bcd72b472e54baac73c17372bfde3447a7c76a6ac6b54131da83ad1e",
+      "modified": false
+    },
+    {
+      "path": "chrome/app/chrome_command_ids.h",
+      "baseSha256": "32a11e71ad246adacd5b55a781c1ceacb4150f9ff559f15b6cb8cb8d9ce1ca76",
+      "resultSha256": "32a11e71ad246adacd5b55a781c1ceacb4150f9ff559f15b6cb8cb8d9ce1ca76",
+      "modified": false
+    },
+    {
+      "path": "chrome/browser/ui/actions/chrome_action_id.h",
+      "baseSha256": "469263c17362cad3578ab7e2b9fa538883c35d3655a873e42c6494011b9bf0b4",
+      "resultSha256": "469263c17362cad3578ab7e2b9fa538883c35d3655a873e42c6494011b9bf0b4",
+      "modified": false
+    },
+    {
+      "path": "chrome/browser/ui/browser_actions.cc",
+      "baseSha256": "00f9904851297a887c026a5a5fab038037cc25705cf8f70c66c13699520705a8",
+      "resultSha256": "00f9904851297a887c026a5a5fab038037cc25705cf8f70c66c13699520705a8",
+      "modified": false
+    },
+    {
+      "path": "chrome/browser/ui/read_anything/read_anything_entry_point_controller.cc",
+      "baseSha256": "6cd87ab533cf18e31ecbcb70183df0586d8f24f284b600f88b1f6f5a6b1bc7eb",
+      "resultSha256": "6cd87ab533cf18e31ecbcb70183df0586d8f24f284b600f88b1f6f5a6b1bc7eb",
+      "modified": false
+    }
+  ],
+  "patch": null,
+  "registeredNativeTestChanges": [],
+  "reason": "Research/decision artifact only; no native code changes. Equal result/base identifies unchanged observed files, not a compiled result or completed native workflow.",
+  "nativeAcceptance": "OPEN"
+}

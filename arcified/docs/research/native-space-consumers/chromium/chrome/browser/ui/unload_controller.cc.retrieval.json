@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/unload_controller.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/unload_controller.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:39.064Z",
+  "kind": "file",
+  "bytes": 38495,
+  "sha256": "2afd5c020c2a45b6193251ea17ba164ac6cd0665325acf2ae0e37136c2428978",
+  "gitBlob": "201af07cf7cbe30e3032783cee1f6f7f9bfbc432",
+  "lines": 993,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

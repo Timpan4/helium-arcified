@@ -1,0 +1,144 @@
+{
+  "issueKey": "automation-contract",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/25",
+  "disposition": "RESEARCH_COMPLETE_OWNER_DECISION_PENDING",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "evidencePaths": [
+    "arcified/native/production/automation-contract/decision.md",
+    "arcified/native/production/automation-contract/sources.json",
+    "arcified/native/production/automation-contract/prepared-source.sha256",
+    "arcified/native/production/automation-contract/verification.md",
+    "arcified/native/production/automation-contract/result.json"
+  ],
+  "changes": [
+    "Recorded full assigned issue, exact source-byte identities and primary-source retrieval limitations.",
+    "Proposed opt-in tabs.list over browser-initiated native messaging with opaque handles, one granted normal window/Profile, and separate content/private/script/mutation authorization.",
+    "Documented Linux, Windows and macOS mechanisms, unverified packaging and currently unavailable Arcified adapters.",
+    "Recorded owner questions, native acceptance scenarios and coordinator integration requests. No code, patch, test registration, shared control, git staging or remote change."
+  ],
+  "checks": [
+    {
+      "check": "Prepared source identity",
+      "command": "sha256sum --check arcified/native/production/automation-contract/prepared-source.sha256",
+      "outcome": "PASS",
+      "exitCode": 0,
+      "coverage": "All 12 listed prepared-source files matched their recorded full-file SHA-256. No whole-tree cleanliness or upstream commit claim."
+    },
+    {
+      "check": "Source JSON semantics",
+      "command": "jq -e '(.issueKey == \"automation-contract\") and (.authoritativeIssue.number == 25) and (.authoritativeIssue.primaryCommandId == 40710) and (.preparedSource.files | all(.[]; .baseSha256 == .resultSha256 and .status == \"read_only_unmodified\"))' arcified/native/production/automation-contract/sources.json",
+      "outcome": "PASS",
+      "exitCode": 0,
+      "coverage": "Assigned identity and per-file base/result equality."
+    },
+    {
+      "check": "Packet whitespace and formatting",
+      "command": "git diff --no-index --check /dev/null <packet-file> for decision.md, sources.json, prepared-source.sha256, verification.md and result.json",
+      "outcome": "PASS",
+      "exitCode": 1,
+      "coverage": "All five new files produced empty whitespace diagnostics. Exit 1 is expected for added-file differences. An initial EOF warning was corrected. Fast-filesystem contents also passed exact JSON.stringify(value, null, 2) + newline comparison, LF/EOF/trailing-whitespace checks, and relative-link target checks."
+    },
+    {
+      "check": "Prepared Git metadata",
+      "command": "git -C /home/timpan4/.t3/builds/arcified-linux-155-native-v1/src rev-parse HEAD",
+      "outcome": "UNAVAILABLE",
+      "exitCode": 128,
+      "coverage": "Not a Git repository. Exact file-byte identities used instead."
+    },
+    {
+      "check": "Native build, runtime, visual and reference app checks",
+      "command": null,
+      "outcome": "NOT_RUN",
+      "coverage": "Outside this leaf's authorization. No native patch or test registration required for unapproved decision work."
+    },
+    {
+      "check": "Result syntax and acceptance schema",
+      "command": "jq -e '(.issueKey == \"automation-contract\") and (.issueUrl == \"https://github.com/Timpan4/helium-arcified/issues/25\") and (.nativeAcceptance == \"OPEN\") and (has(\"disposition\") and has(\"evidencePaths\") and has(\"changes\") and has(\"checks\") and has(\"ownerQuestions\") and has(\"dependencies\") and has(\"integrationRequests\") and has(\"remainingCriteria\")) and (.ownerQuestions | all(.[]; .status == \"OPEN\")) and (.platformStates | all(.[]; .nativeAcceptance == \"OPEN\" and .adapterAvailability == \"UNAVAILABLE\"))' arcified/native/production/automation-contract/result.json",
+      "outcome": "PASS",
+      "exitCode": 0,
+      "coverage": "All requested result fields present, owner questions open, and all platform adapters unavailable/native acceptance OPEN."
+    }
+  ],
+  "ownerQuestions": [
+    {
+      "question": "Approve the proposed opt-in tabs.list pilot, returning only opaque live tab handles in one explicitly granted normal window/Profile over a browser-initiated native-messaging port, with titles/URLs, private/guest access, page content, JavaScript, mutations and external listeners excluded, or defer automation entirely?",
+      "recommendation": "Approve design scope only, with all adapters unavailable until native gates pass.",
+      "status": "OPEN"
+    },
+    {
+      "question": "May the pilot trust an explicitly selected, reviewed local native helper running as the OS user, or must we defer until a stronger caller/binary-attestation design is selected?",
+      "recommendation": "Require a concrete reviewed helper identity and package-resolution plan before enabling the pilot.",
+      "status": "OPEN"
+    },
+    {
+      "question": "Approve connection-lifetime grants only for the first pilot, with no remembered grant or external-controller reconnect, or require a separately designed persistent grant?",
+      "recommendation": "Connection lifetime only; no invented storage, expiry, retention or reconnect policy.",
+      "status": "OPEN"
+    }
+  ],
+  "dependencies": [],
+  "integrationRequests": [
+    {
+      "target": "research coordinator and root",
+      "request": "Consolidate the exact scope, helper trust and grant-lifetime questions and record the owner's approval or explicit deferral in issue 25. Do not mark approved from this packet."
+    },
+    {
+      "target": "automation implementation issue 130",
+      "request": "Consume the recorded decision before implementation. Keep adapters unavailable pending real helper identity, package resolution, permission UI and per-OS end-to-end evidence. No existing component test is native completion."
+    },
+    {
+      "target": "native ownership/lifecycle integration",
+      "request": "Audit TabsQueryFunction::MatchesWindow and Cocoa scripting enumeration against the final same-window multi-Profile architecture and live saved-page handoff. Use existing page/Profile/command/private authorities; no substitute Model or page registry."
+    },
+    {
+      "target": "platform packaging and security",
+      "request": "Verify actual native-host manifest lookup, Chrome fallback resolution, executable identity, extension origin, policy and installation behavior per OS before enabling an adapter."
+    },
+    {
+      "target": "focus-routing-contract",
+      "request": "Keep focus operations excluded. Any future approved focus/mutation command must consume that contract rather than selecting the last active Browser."
+    }
+  ],
+  "remainingCriteria": [
+    "Owner records approved scope or explicit deferral in issue 25.",
+    "Owner accepts a concrete helper trust boundary and grant lifetime, or defers automation.",
+    "Any approved transport and identity requirements must be finalized against actual Arcified packaging and policy on each supported OS.",
+    "Linux, Windows and macOS native permission/error/privacy/ownership evidence remains open, including same-window multi-Profile and live saved-page handoff."
+  ],
+  "nativePatch": {
+    "status": "INAPPLICABLE_DECISION_LEAF",
+    "path": null
+  },
+  "nativeTestRegistration": {
+    "status": "INAPPLICABLE_NO_IMPLEMENTATION",
+    "changes": [],
+    "reason": "No approved scope or production adapter exists in this packet; native scenario requirements are recorded without fake tests."
+  },
+  "platformStates": {
+    "linux": {
+      "mechanismEvidence": "SOURCE_PRESENT",
+      "implementation": "NOT_IMPLEMENTED_BY_THIS_LEAF",
+      "adapterAvailability": "UNAVAILABLE",
+      "nativeExecution": "NOT_RUN",
+      "released": "UNVERIFIED",
+      "nativeAcceptance": "OPEN"
+    },
+    "windows": {
+      "mechanismEvidence": "SOURCE_PRESENT",
+      "implementation": "NOT_IMPLEMENTED_BY_THIS_LEAF",
+      "adapterAvailability": "UNAVAILABLE",
+      "nativeExecution": "NOT_RUN",
+      "released": "UNVERIFIED",
+      "nativeAcceptance": "OPEN"
+    },
+    "macos": {
+      "mechanismEvidence": "SOURCE_PRESENT",
+      "implementation": "NOT_IMPLEMENTED_BY_THIS_LEAF",
+      "adapterAvailability": "UNAVAILABLE",
+      "nativeExecution": "NOT_RUN",
+      "released": "UNVERIFIED",
+      "nativeAcceptance": "OPEN"
+    }
+  },
+  "nativeAcceptance": "OPEN"
+}

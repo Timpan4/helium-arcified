@@ -1,0 +1,227 @@
+{
+  "recordedAt": "2026-10-23T22:32:14Z",
+  "localDate": "2026-10-24 Europe/Stockholm",
+  "preparedVersion": "155.0.8059.79",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "files": [
+    {
+      "kind": "authority",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+      "sha256": "cc8ec03443b18a749b486e484a56b86218d8f41653970dea94185f76c9685354",
+      "result": "Read-only evidence input."
+    },
+    {
+      "kind": "authority",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+      "sha256": "daf98f1cf993c1a21686289a88489bf001266d7fff4d85089d30055584c8a7b0",
+      "result": "Read-only evidence input."
+    },
+    {
+      "kind": "authority",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md",
+      "sha256": "244488864d15d093f7f80e1cc40f490a979454e2a8e74db438c7e51283518a1c",
+      "result": "Read-only evidence input."
+    },
+    {
+      "kind": "authority",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md",
+      "sha256": "e5951ba265be3587cb1df8f2ab73ce6768071ac55b8d481240ed57819b39ab56",
+      "result": "Read-only evidence input."
+    },
+    {
+      "kind": "authority",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json",
+      "sha256": "dae2aed7885b1f03f5f96a1285265a1189b8776a6472880c0f12c94de7f7ad02",
+      "result": "Read-only evidence input."
+    },
+    {
+      "kind": "prepared-source",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/VERSION",
+      "sha256": "6364ce04bcd72b472e54baac73c17372bfde3447a7c76a6ac6b54131da83ad1e",
+      "result": "Unchanged. No result variant or patch produced."
+    },
+    {
+      "kind": "prepared-source",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser_window/public/browser_window_interface.h",
+      "sha256": "97dc7e368b29bd43bb0ce24bcbc2b9795b842bbdeb68aa58a2cfc85e20024c4a",
+      "result": "Unchanged. No result variant or patch produced."
+    },
+    {
+      "kind": "prepared-source",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser_commands.cc",
+      "sha256": "f131662deaa6cfc38337882a7787e78f14cd38b3638a2fc9a7e95471477c0b7d",
+      "result": "Unchanged. No result variant or patch produced."
+    },
+    {
+      "kind": "prepared-source",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/browser_command_controller.cc",
+      "sha256": "33724413abb5454831a5e7a8524070776896a77f3b098ba6ec8f98361ef41d69",
+      "result": "Unchanged. No result variant or patch produced."
+    },
+    {
+      "kind": "prepared-source",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/views/frame/browser_view.cc",
+      "sha256": "f06433adf8281d0a2fba36f33bbe704624a3b2c28e347729d718523d75648d89",
+      "result": "Unchanged. No result variant or patch produced."
+    },
+    {
+      "kind": "prepared-source",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/views/frame/multi_contents_view.h",
+      "sha256": "89df3f73910167d5c794ad3297a40a4d66bac83569db9825b7b1465b88672d4d",
+      "result": "Unchanged. No result variant or patch produced."
+    },
+    {
+      "kind": "prepared-source",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/views/frame/multi_contents_view.cc",
+      "sha256": "4b25aeed63841d923b79b4499162913b264e5ed3fe737d05d5d4fb1082b81bb7",
+      "result": "Unchanged. No result variant or patch produced."
+    },
+    {
+      "kind": "prepared-source",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/focus/browser_focus_controller_views.cc",
+      "sha256": "0f66f911c5021b98be1b62cd230a55efa56a1c9467d9b80220d126d646a5a283",
+      "result": "Unchanged. No result variant or patch produced."
+    },
+    {
+      "kind": "prepared-source",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/find_bar/find_bar_controller.cc",
+      "sha256": "9946fd70e73ded2d48f6f218c8d580aef79648c932319cb70e22b273ff68e9f6",
+      "result": "Unchanged. No result variant or patch produced."
+    },
+    {
+      "kind": "foundation",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/features/commands/command_target.h",
+      "sha256": "bd91e93b07d9b1497170256bb316981d6e9258781ccf2331228c2d62356067fe",
+      "result": "Read-only evidence input."
+    },
+    {
+      "kind": "foundation",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/features/commands/command_target.cc",
+      "sha256": "89f452dcd4d1a60b20ffa80f6f13d88465dd07b6388092af99f406efabeaf87a",
+      "result": "Read-only evidence input."
+    },
+    {
+      "kind": "foundation",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/features/commands/command_target_test.cc",
+      "sha256": "2c576b1a1bef1232f91715e49d36e1562312bc357679b2e5273b980572131f7f",
+      "result": "Read-only evidence input."
+    },
+    {
+      "kind": "foundation",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/features/peek.md",
+      "sha256": "a0b3ae7c935f70526445b568ff869acad5e00bae451ad49f10b903eec5c2670e",
+      "result": "Read-only evidence input."
+    },
+    {
+      "kind": "foundation",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/features/focus-mode.md",
+      "sha256": "65a912896bf5ddbe2fffc6c13b9b8772ca1c7f31dbb38d3370249750ccf141e7",
+      "result": "Read-only evidence input."
+    },
+    {
+      "kind": "foundation",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/features/layout-split-composition.md",
+      "sha256": "ac9c2b6d90ccb385f80abeb4bd8caa59088b317b922f263ddc3a6726680d86a4",
+      "result": "Read-only evidence input."
+    }
+  ],
+  "references": [
+    {
+      "id": "N1",
+      "file": "chrome/browser/ui/browser_window/public/browser_window_interface.h",
+      "lines": "83-96",
+      "fact": "Desktop window Profile never changes; contained tabs share its Profile/BrowserContext."
+    },
+    {
+      "id": "N2",
+      "file": "chrome/browser/ui/browser_commands.cc",
+      "lines": "742-807",
+      "fact": "ReloadInternal resolves active tab, distinguishes split selection from multiple UI tab selection, can reload multiple explicitly selected tabs, checks tab browser ownership, then uses native navigation controller/DevTools."
+    },
+    {
+      "id": "N3",
+      "file": "chrome/browser/ui/browser_commands.cc",
+      "lines": "2342-2359; 2537-2542; 2650-2663",
+      "fact": "Page password UI takes active WebContents; find uses Browser features FindBarController; zoom takes active WebContents; address focus goes through BrowserWindow."
+    },
+    {
+      "id": "N4",
+      "file": "chrome/browser/ui/views/frame/browser_view.cc",
+      "lines": "1659-1661; 3001-3042",
+      "fact": "BrowserView active WebContents comes from its Browser tab strip; location-bar focus checks platform activity/visibility and reveals Helium Zen chrome before focusing."
+    },
+    {
+      "id": "N5",
+      "file": "chrome/browser/ui/views/frame/multi_contents_view.cc",
+      "lines": "333-375; 503-512",
+      "fact": "Swap reorders children for focus order. SetActiveIndex requires visible contents, updates primary WebContents flags and borders/overlay. Inactive split focus notifies delegate only while widget is visible."
+    },
+    {
+      "id": "N6",
+      "file": "chrome/browser/ui/focus/browser_focus_controller_views.cc",
+      "lines": "33-60; 66-149",
+      "fact": "Focus controller captures Profile; focuses active contents and can enter native accessible bubbles. macOS bubble activation differs."
+    },
+    {
+      "id": "N7",
+      "file": "chrome/browser/ui/find_bar/find_bar_controller.cc",
+      "lines": "208-220",
+      "fact": "HandleActiveTabChanged changes observed WebContents and restores saved focus where applicable."
+    },
+    {
+      "id": "N8",
+      "file": "chrome/browser/ui/browser_command_controller.cc",
+      "lines": "698-700; 1106-1108; 1550-1558",
+      "fact": "Native legacy dispatch calls Reload/Find; web-app app-info obtains active WebContents for ShowPageInfoDialog. This is one inspected security entry point, not an exhaustive security caller audit."
+    }
+  ],
+  "external": [
+    {
+      "id": "E1",
+      "url": "https://start.arc.net/master-multitasking",
+      "section": "Split View",
+      "finding": "Arc documents split presentation inside one window and creating splits with drag or command bar.",
+      "limitation": "Documentary description. Does not specify all routing, accessibility or close semantics."
+    },
+    {
+      "id": "E2",
+      "url": "https://yetanotherbrowser.com/manual/split-view",
+      "section": "Split; Size and separate",
+      "finding": "YAB documents last-clicked pane as target for address, reload, find and zoom, plus pane separation. It also describes copying some kept/pinned pages into splits.",
+      "limitation": "macOS/WebKit documentation only. Do not copy the page-cloning behavior, pane capacity or sizing into Arcified; lifecycle references and live identity govern here."
+    },
+    {
+      "id": "E3",
+      "url": "https://yetanotherbrowser.com/manual/peek",
+      "section": "Peek; From a pinned tab",
+      "finding": "YAB describes an overlay tied to its tab, dismissal, return to underlying page, and tab/split promotion.",
+      "limitation": "Documentary macOS behavior. No Arcified lifetime, creation, safe close, copy or navigation policy is approved by this source."
+    },
+    {
+      "id": "E4",
+      "url": "https://yetanotherbrowser.com/changelog/0.36",
+      "section": "Fixed / Find in Peek",
+      "finding": "October 23, 2026 notes say find, next-find and Escape act on Peek's page.",
+      "limitation": "Vendor bug-fix claim. Not executed or evidence for platform parity."
+    },
+    {
+      "id": "E5",
+      "url": "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+      "section": "January 11, 2024, V1.25.1",
+      "finding": "Arc documents Peek-to-split promotion.",
+      "limitation": "Historical documentary macOS support; no runtime or complete focus contract."
+    },
+    {
+      "id": "E6",
+      "url": "https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2026-Release-Notes",
+      "section": "February 22, 2024, v0.10.1",
+      "finding": "Arc documents Peek expansion, split promotion and dismissal controls on Windows.",
+      "limitation": "Historical documentary Windows support; does not establish Linux behavior or native Arcified completion."
+    }
+  ],
+  "retrievalLimits": [
+    "No reference app or browser UI executed.",
+    "An initial guessed changelog path /changelog/0-36 was inaccessible; followed the actual changelog link to /changelog/0.36.",
+    "Page text was inspected through web tools. No downloaded installer, binary artifact or authenticated source."
+  ]
+}

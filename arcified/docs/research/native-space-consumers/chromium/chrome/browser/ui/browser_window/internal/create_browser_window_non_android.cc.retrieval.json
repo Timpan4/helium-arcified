@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/browser_window/internal/create_browser_window_non_android.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/browser_window/internal/create_browser_window_non_android.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:02.405Z",
+  "kind": "file",
+  "bytes": 6326,
+  "sha256": "1250b3780382548d83a39a9d135074983d84bb88771b85ec8ab9416b509e6cf0",
+  "gitBlob": "3b394efe9f13108a1e259f693b0385dbacaa8492",
+  "lines": 186,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

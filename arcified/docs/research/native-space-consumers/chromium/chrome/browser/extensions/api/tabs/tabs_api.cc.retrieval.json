@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/extensions/api/tabs/tabs_api.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/extensions/api/tabs/tabs_api.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:23.762Z",
+  "kind": "file",
+  "bytes": 165269,
+  "sha256": "360221b3f9d3e129b47736bd3ff483458eb329f246b461d8c71ed9f745043053",
+  "gitBlob": "0892d1b23ea62ab466d946a787bf6b7197cc4239",
+  "lines": 4401,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

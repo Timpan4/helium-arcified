@@ -1,0 +1,713 @@
+{
+  "id": "a99601a5f37a9a19c46672454a95b5a0adaaebb1",
+  "entries": [
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7602c5901e82ca1cdedf1a588fb7e68bda172779",
+      "name": "BUILD.gn"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8efc8e855a882aa7dca072ba5166c6384553b7e9",
+      "name": "COMMON_METADATA"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "49d375e8dda1621905359b8e8130749894bd0795",
+      "name": "DIR_METADATA"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "89aa8c10919e1788550b25adfafd1a29094e4340",
+      "name": "OWNERS"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e883cc4beae21faf4e574325b345b180e187a762",
+      "name": "accelerator_priority.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "153d137d206ce093a1844b1e2dab085552ea8c0b",
+      "name": "app_launch_params.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "31e11c11226cbde46a3da0cc81f2f2c17c330e6d",
+      "name": "app_launch_params.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b408f2b8f1e50a21d732ac62e3bb287b69e9458b",
+      "name": "application_launch.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c41e29130a4725bdbe1ff2602f6984802d2a99f4",
+      "name": "application_launch.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dd2631612f7e9d6028d70fd79eb759c1680bae55",
+      "name": "application_launch_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3c4de6458da5b1bc9d39b40a7ef4bf7ca2dd9cb6",
+      "name": "confirm_protocol_handler_dialog.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ac644c3d8b3f2bed9442d50f97856e303166204b",
+      "name": "confirm_protocol_handler_dialog.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "72d5ac9c123599f0dc13fad29cd98c0b774712eb",
+      "name": "controlled_home_dialog.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dfa7aa43de4c4b1eb5dab788b1bef370c51fcab6",
+      "name": "controlled_home_dialog.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "db143b14556feb574a4889693ae5e4ebae36a9be",
+      "name": "controlled_home_dialog_controller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "16e0d4cf27e24429b07391fb2f0fc0d31d30a9b3",
+      "name": "controlled_home_dialog_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8d56aa98a12525c3d23a964f3f18ea67982bfb5c",
+      "name": "controlled_home_dialog_controller_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e37ce5edc0154b745f5d34168f6e231b67331ed0",
+      "name": "controlled_home_dialog_controller_interface.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2d3ca849ad5a6ebf5a944b62537c8d4a60d0cdbf",
+      "name": "controlled_home_dialog_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "175ea8df2b6be1a688f9d1a6bb558f96e4cf391f",
+      "name": "download_danger_dialog.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1ae6427291dde1ab90d8524ab47c59ee593614f4",
+      "name": "download_danger_dialog.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1aaa13c8df0daaa57e2fcbfb7b3cdb3796cd9770",
+      "name": "download_danger_dialog_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8d334d3fdcfc25d2155924a7d4fbc002df8824b1",
+      "name": "download_open_dialog.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4e0cc82d1919f7d574e2c482bb281084247a1dce",
+      "name": "download_open_dialog.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1fdfae50416eb48ed3339ed6322e053e1e84f335",
+      "name": "extension_action_delegate.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4fef7e3a095064a0c0c35a9335c9d265858f8b6e",
+      "name": "extension_action_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2b02bbea45cbc587a298c7d38b292dff5ec369af",
+      "name": "extension_action_test_helper.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cf96364650618fc71e62567f2f4d08552cee84f5",
+      "name": "extension_action_view_model.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3466adbad7f8728d629d3954ba87302672507fd4",
+      "name": "extension_action_view_model.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ad68bf228ae7fe631cf63be45ec25b9ba12950d8",
+      "name": "extension_action_view_model_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ab7005ffcdd3efb0e1eb283b329cb80f830b94c2",
+      "name": "extension_dialog_utils.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c6e66edd58ed90d5a407d56765897ef04b04cc00",
+      "name": "extension_dialog_utils_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c05fd2bb229be320371d535f5b73465b491e89ec",
+      "name": "extension_dialog_utils_views.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4134275dcbc5304fac670e1fa06f1b4e2ca39107",
+      "name": "extension_enable_flow.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "386e4541ab38f64dcf8d1e8551d94d84907dd8d7",
+      "name": "extension_enable_flow.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "54c1621c9637ac3b248d95fabfa70b46d244085e",
+      "name": "extension_enable_flow_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "57305e796c9138cfe233aa0398eef437c47fdf1e",
+      "name": "extension_enable_flow_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "00e2b0bceef6562455abbb519abcf3bcad2b359d",
+      "name": "extension_enable_flow_test_delegate.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cb7c7e1d5318dac9bf98f0d0577128a73d6016d2",
+      "name": "extension_enable_flow_test_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "99becb75daf61afd26fb2559aa41ef30a4e88758",
+      "name": "extension_image_util_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "93398a48e4d8512c74eed7f4e4d99b84d5878480",
+      "name": "extension_install_ask_parent_dialog.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "aa8a9e7cf2a80db3c4fc0e509fe4e568bf3d49ad",
+      "name": "extension_install_ask_parent_dialog.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f35a3e5aaa89706ad6afdcabfd9445b04c4e30af",
+      "name": "extension_install_blocked_dialog.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "add20ab4eb1021888b120fc27b3d3fbb27174e7b",
+      "name": "extension_install_blocked_dialog.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cab962362e8d181e48c9d5c46df7f5285be582af",
+      "name": "extension_install_blocked_dialog_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "34503718618496e69826d82966db928b65c2d97a",
+      "name": "extension_install_friction_dialog.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "257a98a81ef94ed0c3669f128da43a4f98fb328e",
+      "name": "extension_install_friction_dialog.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fa19c24c74e585ae257de5d9c65adb26a00e993b",
+      "name": "extension_install_ui.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bb2c26a83efe5084f9aed879d6172072064fe09d",
+      "name": "extension_install_ui.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c4ef3f49b0c2fa4f66fec65e766de5e439c53029",
+      "name": "extension_install_ui_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2a09170dd5c660ed72141dbb1c10ea5c12b2c3bc",
+      "name": "extension_install_ui_android.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c9e2a59c3e0dd03fbf9a6bf9eb1f5d63f1ee4a14",
+      "name": "extension_install_ui_desktop.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ada0bfff2279db940f7272636b14831eaf162690",
+      "name": "extension_install_ui_desktop.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9a42ce16e47ec29a5beeb9c5d3306b4529837486",
+      "name": "extension_installed_watcher.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "83042942187bf24aea1b7a529bf667d28bd1e2b1",
+      "name": "extension_installed_watcher.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d9ebe258f3e617e49f00a889e273b6e7118607b2",
+      "name": "extension_installed_watcher_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "feedc5e37a66bc76b1ab5f00e7c5caa67c7268df",
+      "name": "extension_multiple_uninstall_dialog.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "78939baf3ba3d53fab115e73331e40a556468a7a",
+      "name": "extension_multiple_uninstall_dialog.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e6348b936bd7251636042e6c4c87d9750d3342b6",
+      "name": "extension_multiple_uninstall_dialog_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "de502fe707728b95bbd0ee99f97f07d37554e81a",
+      "name": "extension_popup_types.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bc61086dd2c4bdb0a72a868f7251b564b7c4abe3",
+      "name": "extension_post_install_dialog.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fc9659429d691bc7b57c9e70d1a05bceae06ac26",
+      "name": "extension_post_install_dialog.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2851a4c4f03ba8926cafe83f5c2463c2ea92df12",
+      "name": "extension_post_install_dialog_model.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d53f1c613a98ef517b1e2e20938e5dcb3221cbea",
+      "name": "extension_post_install_dialog_model.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "120a7e3cf64e7d78d36d10f4ba25972919f45448",
+      "name": "extension_post_install_dialog_model_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "05c9a14a545500a242b5c1a7d8e15a6b75501ee9",
+      "name": "extension_settings_overridden_dialog.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e375667f525af6d7ecf17a12636131ab86cf87bc",
+      "name": "extension_settings_overridden_dialog.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7f640736955dfd2ffee757482ff20018a4c98302",
+      "name": "extension_settings_overridden_dialog_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4c6f8b7eb439ae601a6332313a9c09be6f780422",
+      "name": "extension_side_panel_coordinator.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "43759ab3612242bc3f0503de8e72e4a88cda5261",
+      "name": "extension_side_panel_coordinator.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bde7c20963ce849fc58db27722cccca8c0e2a2d5",
+      "name": "extension_side_panel_coordinator_views.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "716ff76e2edcce4c52a5d875c92aac9f9f9fefd7",
+      "name": "extension_side_panel_manager.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b5caf0405d338a2081d456440d9725343bcc96ed",
+      "name": "extension_side_panel_manager.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cd3d8914c50670d59ef3fba3722e80e6c0f7febb",
+      "name": "extension_side_panel_test_utils.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "aaeb4c24d8353813739b2012e1b719ad7f26fb5e",
+      "name": "extension_side_panel_utils.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7e9cf5118b5355b138a8d7716721c02279da1dd2",
+      "name": "extension_side_panel_utils.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9bc109815092ea77bb4266a9ca5f28d7973a272f",
+      "name": "extension_uninstall_dialog_impl.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f5e4c8ef47dc12791cc681418e2287c2b64a27c2",
+      "name": "extension_uninstall_dialog_impl_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "89a5415f87f4e247b359a6a53251c7bafd4e9e0f",
+      "name": "extensions_container.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c6e6901be80a128d9e272bb1accee7097e8542e7",
+      "name": "extensions_container.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5de0ad6e04cc3f51090577a5d0de2e12f08b15d2",
+      "name": "extensions_menu_handler.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "29268b78bd913e3b0bd6d9672dd378bba620cfc7",
+      "name": "extensions_menu_view_model.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8f052e6d5fae68142f589f7542b79da1a7d3a0dc",
+      "name": "extensions_menu_view_model.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "015254be1c68933d13b9b46b5b663bc3e12574f8",
+      "name": "extensions_menu_view_model_browsertest.cc"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "3b36b616da2842e630ce38584afdc5b2133d7f15",
+      "name": "extensions_overrides"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0997e680ae63e514763cb084bf394f77a1b1a816",
+      "name": "extensions_toolbar_view_model.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0a2a0cb7921f47d4c672d4d4c90d02ca4503c3d3",
+      "name": "extensions_toolbar_view_model.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c6d6f1e05d294590f42a54fc876579b7ca009107",
+      "name": "extensions_toolbar_view_model_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "52aad86bfb02c8dfd01b64ee6dfb8c68facea5a3",
+      "name": "hosted_app_browser_controller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "71b160022d8f9e9c5aadf25b41246482ab467d33",
+      "name": "hosted_app_browser_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1a9b5e8e59fe5e3f92319fbd4ab34c10a3a2ad7e",
+      "name": "hosted_app_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e5bb67c0b4553ee5dc50ea564379dc6dd974da91",
+      "name": "icon_with_badge_image_source.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e9cb1be92f1f08c376c4b94ca9b98569319587a8",
+      "name": "icon_with_badge_image_source.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "378633830b73e38daeaba70e9d43c656ffb0e93d",
+      "name": "installation_error_infobar_delegate.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f5edbce957f58a3ba7a82c7254bc564e9eac7509",
+      "name": "installation_error_infobar_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "13ae8b3a42068c17b942e8979e2cb3f960730e25",
+      "name": "notifications_custom_bindings_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f7d3b3a2f932e473c64b35df3632443cb5be7e81",
+      "name": "reload_page_dialog_controller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dc41513a1fbc45b0d50a1067e920ab604ee59258",
+      "name": "reload_page_dialog_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f4b7a9dabefd978cb2d0e998f32446cae04fd6ae",
+      "name": "reload_page_dialog_controller_android_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "434e62822cb728adb04ed4fa6cf8bb4efd675740",
+      "name": "reload_page_dialog_controller_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7cbe6dbb721d4028dd165b71002c4ea7e5323272",
+      "name": "settings_api_bubble_helpers.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ddc27144ae23541b1ea57d0ea20cf8ac10457d46",
+      "name": "settings_api_bubble_helpers.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1c5aa8f30bc11a79f70676d98fd86dde7a9eb5da",
+      "name": "settings_api_bubble_helpers_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1dc25eedf0d4d19e4c766cafb0fb437c58c2ccb0",
+      "name": "settings_overridden_dialog.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "63387fcbbf50393bc7e7fec9f88f14d7d337840f",
+      "name": "settings_overridden_dialog.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "266396777c2e2636b2d435955443a527e93c3e80",
+      "name": "settings_overridden_dialog_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ebbc0f045e784096cbc70870742f9394650e1068",
+      "name": "settings_overridden_dialog_controller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d865afbbfadc72cf816ed5ce7fda0ad6e41af126",
+      "name": "settings_overridden_dialog_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "692802ca2c3d89d524fafd18ec5f9552a247b786",
+      "name": "settings_overridden_dialog_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c8620544c75b5e8c877e4e76cde4a70c7d1cf295",
+      "name": "settings_overridden_dialog_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "59a08a4e0ec57771c631408eebaec98aee6562bd",
+      "name": "settings_overridden_params_providers.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9f6ba19ba34bc439c5e7754383ae431174704669",
+      "name": "settings_overridden_params_providers.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "130eb03e37ade8cb023447981fc34b1fdd351ba0",
+      "name": "settings_overridden_params_providers_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f2bc0e27f45431dd13786018ff631143eb599278",
+      "name": "settings_overridden_params_providers_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b0192ed7d9137128c40cb626881705ceb5fe3e2c",
+      "name": "upload_extension_to_account_dialog.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a20c9001c11a5fbbe6a7f9d146209748421a95e6",
+      "name": "upload_extension_to_account_dialog.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "55cf75a1af610ab591f505968ecd7e5c3eb13228",
+      "name": "upload_extension_to_account_dialog_browsertest.cc"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "fcb6de9d70803188068dbb8c2c8a407165ec0848",
+      "name": "web_file_handlers"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "issueKey": "integration-policy",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/26",
+  "disposition": "DECISION_PACKET_READY_OWNER_DECISION_PENDING",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "evidencePaths": [
+    "authority.json",
+    "sources.json",
+    "decision.md",
+    "verification.md",
+    "checks.json",
+    "result.json"
+  ],
+  "changes": [
+    "Recorded the complete assigned issue object and relevant root authority.",
+    "Researched primary provider documents with retrieval failures and documentary/runtime limits.",
+    "Proposed named GitHub.com and Google Calendar read-only candidates, Profile ownership, session storage, refresh/revocation, stale/offline and notification privacy behavior.",
+    "Prepared coordinator questions and future per-platform acceptance scenarios without approving or enabling integrations."
+  ],
+  "checks": [
+    {
+      "check": "Canonical JSON syntax and formatting",
+      "status": "PASS",
+      "evidence": "checks.json"
+    },
+    {
+      "check": "Packet whitespace, final newlines and local Markdown links",
+      "status": "PASS",
+      "evidence": "checks.json"
+    },
+    {
+      "check": "Authoritative issue/baseline/command and all assigned acceptance criteria represented",
+      "status": "PASS_DOCUMENTARY_ONLY",
+      "evidence": "checks.json"
+    },
+    {
+      "check": "Prepared native header base/result SHA-256 equality",
+      "status": "PASS_READ_ONLY",
+      "evidence": "sources.json; checks.json"
+    },
+    {
+      "check": "Installed Linux/Windows/macOS behavior, OAuth, storage and native notifications",
+      "status": "OPEN_UNRUN",
+      "evidence": "verification.md"
+    }
+  ],
+  "ownerQuestions": [
+    {
+      "question": "Approve deferring all real GitHub and calendar connections for the initial native release?",
+      "recommendation": "Defer; retain ordinary folders/bookmarks.",
+      "tradeoff": "No live PR or meeting data, avoiding unapproved account/service dependencies."
+    },
+    {
+      "question": "If proceeding, approve only GitHub.com selected-repository PR read access and Google primary-calendar owned-event read access plus openid, with other named routes deferred?",
+      "recommendation": "Use only the named narrow candidates.",
+      "tradeoff": "No team/account-wide inbox, shared-calendar, Enterprise/custom-host, Outlook or iCloud support."
+    },
+    {
+      "question": "Approve Profile-bound session-only credentials/data, manual refresh and native notifications off initially?",
+      "recommendation": "Use that first implementation scope; decide persistence, background updates and notifications separately.",
+      "tradeoff": "Reconnect after session end; no automatic refresh or reminders."
+    },
+    {
+      "question": "Who owns GitHub App and Google desktop-client registrations, consent review and support?",
+      "recommendation": "Fork owner controls registrations; do not introduce an app credential broker.",
+      "tradeoff": "Registration and provider consent prerequisites must be completed before runtime validation."
+    }
+  ],
+  "dependencies": [],
+  "decisionPrerequisites": [
+    "Owner approval or explicit deferral recorded in issue 26 by coordinator/root.",
+    "Approved registration ownership and provider permission inventory before enabling access."
+  ],
+  "integrationRequests": [
+    "Coordinator consolidates questions and obtains fresh independent review; root records actual owner decision.",
+    "Live Folder/calendar leaves consume provider approval before implementing service access.",
+    "Native ownership/focus-routing leaves prove exact Profile/host targets, same-window multi-Profile and live saved-page handoff.",
+    "Reuse existing private/download classifiers and root Model/metadata/codec; do not create competing stores or ownership authority.",
+    "If implementation is approved, coordinator owns production patch assembly, ActionItem mapping, IDS_ARCIFIED_INTEGRATION_POLICY strings, GN test registration and native runtime evidence."
+  ],
+  "remainingCriteria": [
+    "Criterion 1: proposed provider/domain/scope and data policies need owner approval or deferral; actual native support is unverified.",
+    "Criterion 2: proposed stale/offline/notification behavior needs owner acceptance and actual per-platform native evidence.",
+    "Criterion 3: actual owner approval/deferral has not been recorded by this task in issue 26."
+  ],
+  "nativePatch": {
+    "status": "INAPPLICABLE_DECISION_LEAF",
+    "reason": "No approved implementation scope; no production code, native test registration, localization or commands changed."
+  },
+  "platformStates": {
+    "linux": "OPEN_UNRUN",
+    "windows": "OPEN_UNRUN",
+    "macos": "OPEN_UNRUN"
+  },
+  "nativeAcceptance": "OPEN"
+}

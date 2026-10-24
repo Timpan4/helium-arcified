@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/app_controller_mac.mm",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/app_controller_mac.mm?format=TEXT",
+  "retrievedAt": "2026-10-23T15:02:19.176Z",
+  "kind": "file",
+  "bytes": 110500,
+  "sha256": "02d7fa9e7c21f64ae9e4066e4120689b653553ebc314a38231a86eaf0acb6746",
+  "gitBlob": "cb1b5aa8bed4a339b54da48375393af1e52fd938",
+  "lines": 2855,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

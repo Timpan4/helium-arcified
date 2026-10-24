@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/browser_commands.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/browser_commands.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:23.630Z",
+  "kind": "file",
+  "bytes": 119287,
+  "sha256": "ed7796d9654aac0bb444f9aeb5a37c5f60f41e920ce5a3ef0b9e168b42d6441e",
+  "gitBlob": "19b58e11263f194a50736c6b6fe8a681eab93f5b",
+  "lines": 3066,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

@@ -1,0 +1,1692 @@
+{
+  "status": "51_reviewed_local_slices_integrated_native_acceptance_open",
+  "parentThreadId": "6733348c-3696-4b31-834c-2bbca45e70d2",
+  "baseline": "c9748ec8e6d64524c1de9d943dd6f2cfacb319fe",
+  "additionalKeys": 51,
+  "areas": [
+    {
+      "area": "tabs",
+      "branch": "feat/tabs-workstream",
+      "keys": [
+        "temporary-tabs",
+        "pins",
+        "favorites"
+      ],
+      "issues": [
+        {
+          "key": "temporary-tabs",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/49",
+          "title": "Open and close temporary tabs within a Space"
+        },
+        {
+          "key": "pins",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/67",
+          "title": "Pin a tab with a durable home URL and reset action"
+        },
+        {
+          "key": "favorites",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/106",
+          "title": "Keep Profile Favorites available across Spaces"
+        }
+      ],
+      "threadId": "mcp:087e06d6-7397-442f-aa44-0d521b8f705a",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-tabs-workstream",
+      "status": "reviewed_local_components_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "temporary-tabs",
+          "taskId": "node:delegated-task:command%3Amcp%3A611f45f2-f005-4d36-aafc-38310d9e04e6%3Adelegate-task%3Atabs-temporary-tabs-primary-20261023-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "pins",
+          "taskId": "node:delegated-task:command%3Amcp%3A611f45f2-f005-4d36-aafc-38310d9e04e6%3Adelegate-task%3Atabs-pins-primary-20261023-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "favorites",
+          "taskId": "node:delegated-task:command%3Amcp%3A611f45f2-f005-4d36-aafc-38310d9e04e6%3Adelegate-task%3Atabs-favorites-primary-20261023-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "5bf00173d40d9e4f5e2e4e56d2b72d9048a35863",
+            "integrated": "1db96109"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    {
+      "area": "organization",
+      "branch": "feat/organization-workstream",
+      "keys": [
+        "folders",
+        "folder-preview",
+        "multi-select"
+      ],
+      "issues": [
+        {
+          "key": "folders",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/107",
+          "title": "Organize pinned tabs into nested sidebar folders"
+        },
+        {
+          "key": "folder-preview",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/158",
+          "title": "Find a tab inside a collapsed folder"
+        },
+        {
+          "key": "multi-select",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/68",
+          "title": "Select and move several sidebar tabs"
+        }
+      ],
+      "threadId": "mcp:09a422d8-5f11-4ffc-868b-1f651c2b6690",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-organization-workstream",
+      "status": "reviewed_local_components_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "folders",
+          "taskId": "node:delegated-task:command%3Amcp%3Aaf93d686-be0b-4ce9-8cfa-5e68501cec4f%3Adelegate-task%3Aorganization-folders-primary-20261023",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "folder-preview",
+          "taskId": "node:delegated-task:command%3Amcp%3Aaf93d686-be0b-4ce9-8cfa-5e68501cec4f%3Adelegate-task%3Aorganization-folder-preview-primary-20261023",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "multi-select",
+          "taskId": "node:delegated-task:command%3Amcp%3Aaf93d686-be0b-4ce9-8cfa-5e68501cec4f%3Adelegate-task%3Aorganization-multi-select-primary-20261023",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "b908b9e9d8a83822ab60fd8a8b661cad25c77622",
+            "integrated": "a0b579d9"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    {
+      "area": "workspace",
+      "branch": "feat/workspace-workstream",
+      "keys": [
+        "space-management",
+        "workspace-organizer",
+        "window-ownership"
+      ],
+      "issues": [
+        {
+          "key": "space-management",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/64",
+          "title": "Rename, reorder and remove a Space with recovery"
+        },
+        {
+          "key": "workspace-organizer",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/147",
+          "title": "Inspect and repair workspace ownership in one organizer"
+        },
+        {
+          "key": "window-ownership",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/72",
+          "title": "Move tabs and Spaces between native windows"
+        }
+      ],
+      "threadId": "mcp:dff658dd-1e55-4c88-a8be-52e0060beccf",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-workspace-workstream",
+      "status": "reviewed_local_components_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "space-management",
+          "taskId": "node:delegated-task:command%3Amcp%3Ac540d38d-26cb-4517-9117-90ab00969738%3Adelegate-task%3Aworkspace-space-management-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "workspace-organizer",
+          "taskId": "node:delegated-task:command%3Amcp%3Ac540d38d-26cb-4517-9117-90ab00969738%3Adelegate-task%3Aworkspace-workspace-organizer-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "window-ownership",
+          "taskId": "node:delegated-task:command%3Amcp%3Ac540d38d-26cb-4517-9117-90ab00969738%3Adelegate-task%3Aworkspace-window-ownership-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "95502332077666e45fb39bab05ca0bfbdf1632f4",
+            "integrated": "40052868"
+          },
+          {
+            "source": "4bea343d1f4b50d2f498567800ba27fa0d3a6231",
+            "integrated": "1ffa51af"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    {
+      "area": "profiles",
+      "branch": "feat/profiles-workstream",
+      "keys": [
+        "profiles",
+        "profile-safety",
+        "private-browsing"
+      ],
+      "issues": [
+        {
+          "key": "profiles",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/48",
+          "title": "Attach Spaces to isolated browser Profiles"
+        },
+        {
+          "key": "profile-safety",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/103",
+          "title": "Reassign or delete a Profile without relabeling authenticated pages"
+        },
+        {
+          "key": "private-browsing",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/98",
+          "title": "Keep private windows out of workspace persistence and AI"
+        }
+      ],
+      "threadId": "mcp:21d7ebe2-965d-4d7f-b4f3-3dca19c97599",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-profiles-workstream",
+      "status": "reviewed_local_components_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "profiles",
+          "taskId": "node:delegated-task:command%3Amcp%3A58528686-9d16-4f5c-b2ad-7f9b4a69dc10%3Adelegate-task%3Aprofiles-workstream-primary-profiles-20261023-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "profile-safety",
+          "taskId": "node:delegated-task:command%3Amcp%3A58528686-9d16-4f5c-b2ad-7f9b4a69dc10%3Adelegate-task%3Aprofiles-workstream-primary-profile-safety-20261023-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "private-browsing",
+          "taskId": "node:delegated-task:command%3Amcp%3A58528686-9d16-4f5c-b2ad-7f9b4a69dc10%3Adelegate-task%3Aprofiles-workstream-primary-private-browsing-20261023-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "94695e08b76b0ee0907ca9dab64e684de98c0f62",
+            "integrated": "99022f6d"
+          },
+          {
+            "source": "cd5ef3034ede62bdbfb80462687adee78886ea22",
+            "integrated": "949e12d5"
+          },
+          {
+            "source": "17d27544309d404b137ac699e5d2acd2acb573f5",
+            "integrated": "2fe4b0b6"
+          },
+          {
+            "source": "fc6734afeb1b0f41f86a16f2fff07c2aa11f4b34",
+            "integrated": "88705f86"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    {
+      "area": "durability",
+      "branch": "feat/durability-workstream",
+      "keys": [
+        "session-durability",
+        "schema-migrations",
+        "undo-windows"
+      ],
+      "issues": [
+        {
+          "key": "session-durability",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/50",
+          "title": "Recover the native workspace after an interrupted write"
+        },
+        {
+          "key": "schema-migrations",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/99",
+          "title": "Upgrade stored workspace schemas without losing the original"
+        },
+        {
+          "key": "undo-windows",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/70",
+          "title": "Reopen a closed window with its workspace"
+        }
+      ],
+      "threadId": "mcp:2e55284e-3f1f-4675-b463-730c26d78321",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-durability-workstream",
+      "status": "reviewed_local_components_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "session-durability",
+          "taskId": "node:delegated-task:command%3Amcp%3Acebfe883-2446-46e1-a2dc-7633001cec65%3Adelegate-task%3Adurability-session-durability-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "schema-migrations",
+          "taskId": "node:delegated-task:command%3Amcp%3Acebfe883-2446-46e1-a2dc-7633001cec65%3Adelegate-task%3Adurability-schema-migrations-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "undo-windows",
+          "taskId": "node:delegated-task:command%3Amcp%3Acebfe883-2446-46e1-a2dc-7633001cec65%3Adelegate-task%3Adurability-undo-windows-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "faa5f8a9c9b2be1a4af04eb41149383750de93e4",
+            "integrated": "d69a246b"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    {
+      "area": "portability",
+      "branch": "feat/portability-workstream",
+      "keys": [
+        "export",
+        "workspace-import",
+        "prototype-migration"
+      ],
+      "issues": [
+        {
+          "key": "export",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/73",
+          "title": "Export portable Arcified workspace data"
+        },
+        {
+          "key": "workspace-import",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/136",
+          "title": "Preview and merge a portable Arcified workspace import"
+        },
+        {
+          "key": "prototype-migration",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/76",
+          "title": "Migrate Arcified Lab snapshots into native Spaces"
+        }
+      ],
+      "threadId": "mcp:479fbda1-3a40-467e-974d-530eba9b2b19",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-portability-workstream",
+      "status": "reviewed_local_components_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "export",
+          "taskId": "node:delegated-task:command%3Amcp%3Abbd47251-8a3b-4733-a985-4c7196ad668e%3Adelegate-task%3Aportability-export-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "workspace-import",
+          "taskId": "node:delegated-task:command%3Amcp%3Abbd47251-8a3b-4733-a985-4c7196ad668e%3Adelegate-task%3Aportability-workspace-import-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "prototype-migration",
+          "taskId": "node:delegated-task:command%3Amcp%3Abbd47251-8a3b-4733-a985-4c7196ad668e%3Adelegate-task%3Aportability-prototype-migration-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "d35fbb92f2a62af91e971616d7acbb792f9457ca",
+            "integrated": "3769fc91"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    {
+      "area": "commands",
+      "branch": "feat/commands-workstream",
+      "keys": [
+        "command-bar",
+        "command-ranking",
+        "site-search"
+      ],
+      "issues": [
+        {
+          "key": "command-bar",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/77",
+          "title": "Navigate and run browser actions from one command bar"
+        },
+        {
+          "key": "command-ranking",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/109",
+          "title": "Find open and pinned tabs across Spaces"
+        },
+        {
+          "key": "site-search",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/110",
+          "title": "Use configurable site-search shortcuts in the command bar"
+        }
+      ],
+      "threadId": "mcp:789c2e5d-e313-424d-9632-88eeebcca9a9",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-commands-workstream",
+      "status": "reviewed_local_components_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "command-bar",
+          "taskId": "node:delegated-task:command%3Amcp%3Ac8e2a2c9-e40f-4ec0-b89d-3a61f8f8dcac%3Adelegate-task%3Acommands-primary-command-bar-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "command-ranking",
+          "taskId": "node:delegated-task:command%3Amcp%3Ac8e2a2c9-e40f-4ec0-b89d-3a61f8f8dcac%3Adelegate-task%3Acommands-primary-command-ranking-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "site-search",
+          "taskId": "node:delegated-task:command%3Amcp%3Ac8e2a2c9-e40f-4ec0-b89d-3a61f8f8dcac%3Adelegate-task%3Acommands-primary-site-search-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "a2cd18c07807399874b9c38702c36671b9ae8326",
+            "integrated": "1d279014"
+          },
+          {
+            "source": "4f5805dadfaab72188db1ddae36d1c76a68c4609",
+            "integrated": "83fd4629"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    {
+      "area": "navigation",
+      "branch": "feat/navigation-workstream",
+      "keys": [
+        "tab-switcher",
+        "tab-order-navigation",
+        "find"
+      ],
+      "issues": [
+        {
+          "key": "tab-switcher",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/78",
+          "title": "Switch recent tabs with a keyboard preview"
+        },
+        {
+          "key": "tab-order-navigation",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/100",
+          "title": "Navigate tabs and Spaces in sidebar order"
+        },
+        {
+          "key": "find",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/33",
+          "title": "Find page text without breaking selection or focus"
+        }
+      ],
+      "threadId": "mcp:585bbe99-dbb0-4250-821a-4128dfc86d96",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-navigation-workstream",
+      "status": "reviewed_local_components_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "tab-switcher",
+          "taskId": "node:delegated-task:command%3Amcp%3A0fd6fee9-5dcb-4aaf-b98a-f8730c060fd2%3Adelegate-task%3Anavigation-tab-switcher-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "tab-order-navigation",
+          "taskId": "node:delegated-task:command%3Amcp%3A0fd6fee9-5dcb-4aaf-b98a-f8730c060fd2%3Adelegate-task%3Anavigation-tab-order-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "find",
+          "taskId": "node:delegated-task:command%3Amcp%3A0fd6fee9-5dcb-4aaf-b98a-f8730c060fd2%3Adelegate-task%3Anavigation-find-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "5f154076e5f14cffa220602bbfe115b6040e1788",
+            "integrated": "be8418be"
+          },
+          {
+            "source": "cb96921948acdd0ba5920918d4be212528274b05",
+            "integrated": "7b2177be"
+          },
+          {
+            "source": "6b5e16de853898c8957ef9099ff30df00492fed6",
+            "integrated": "2280a3fa"
+          },
+          {
+            "source": "afdc3d5f018ccf95ac2a7eb3c23fdb386e4be40c",
+            "integrated": "f70d984d"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    {
+      "area": "transients",
+      "branch": "feat/transients-workstream",
+      "keys": [
+        "peek",
+        "little-arc",
+        "air-traffic"
+      ],
+      "issues": [
+        {
+          "key": "peek",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/79",
+          "title": "Preview a link in Peek and promote or dismiss it"
+        },
+        {
+          "key": "little-arc",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/111",
+          "title": "Open external links in a lightweight browser window"
+        },
+        {
+          "key": "air-traffic",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/80",
+          "title": "Route external links to the intended Space or Profile"
+        }
+      ],
+      "threadId": "mcp:145b2d72-e3d4-43d9-b6e8-5b91cc83ab05",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-transients-workstream",
+      "status": "reviewed_local_components_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "peek",
+          "taskId": "node:delegated-task:command%3Amcp%3A1cd1016a-71bc-43db-862e-2ae7c1ce570f%3Adelegate-task%3Atransients-peek-primary-20261023-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "little-arc",
+          "taskId": "node:delegated-task:command%3Amcp%3A1cd1016a-71bc-43db-862e-2ae7c1ce570f%3Adelegate-task%3Atransients-little-arc-primary-20261023-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "air-traffic",
+          "taskId": "node:delegated-task:command%3Amcp%3A1cd1016a-71bc-43db-862e-2ae7c1ce570f%3Adelegate-task%3Atransients-air-traffic-primary-20261023-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "9328e0a74607254a9f28fe7c4373014c1fef4e2c",
+            "integrated": "7d27b04d"
+          },
+          {
+            "source": "a4d33249dce55e430ec55d43e210eff62040776e",
+            "integrated": "a54d6b7c"
+          },
+          {
+            "source": "82e1f82a08892969be463cdcbe437bd6249be26f",
+            "integrated": "83649956"
+          },
+          {
+            "source": "e0e41e5a7a1e3fe24395a087ef9b2e332b45654b",
+            "integrated": "31a96388"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    {
+      "area": "splits",
+      "branch": "feat/splits-workstream",
+      "keys": [
+        "split-horizontal",
+        "split-vertical",
+        "split-persistence"
+      ],
+      "issues": [
+        {
+          "key": "split-horizontal",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/81",
+          "title": "Browse two tabs side by side with independent navigation"
+        },
+        {
+          "key": "split-vertical",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/112",
+          "title": "Switch split panes between horizontal and vertical orientation"
+        },
+        {
+          "key": "split-persistence",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/169",
+          "title": "Restore a saved split's layout and active pane"
+        }
+      ],
+      "threadId": "mcp:34db67d9-f29c-411b-979e-6ed66a07f26b",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-splits-workstream",
+      "status": "reviewed_local_slices_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "split-horizontal",
+          "taskId": "node:delegated-task:command%3Amcp%3A40b0fcf0-9ec2-48cf-8de1-cd9004ca059e%3Adelegate-task%3Asplits-split-horizontal-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_slice_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "split-vertical",
+          "taskId": "node:delegated-task:command%3Amcp%3A40b0fcf0-9ec2-48cf-8de1-cd9004ca059e%3Adelegate-task%3Asplits-split-vertical-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_slice_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "split-persistence",
+          "taskId": "node:delegated-task:command%3Amcp%3A40b0fcf0-9ec2-48cf-8de1-cd9004ca059e%3Adelegate-task%3Asplits-split-persistence-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_slice_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "eba06b390b7a2f135fd63596e3a21a9999ec0131",
+            "integrated": "be2ec40e"
+          }
+        ],
+        "sourceBytes": "Matched final reviewed area source via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    {
+      "area": "layout",
+      "branch": "feat/layout-workstream",
+      "keys": [
+        "sidebar-layout",
+        "tab-layout-choice",
+        "focus-mode"
+      ],
+      "issues": [
+        {
+          "key": "sidebar-layout",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/51",
+          "title": "Resize, hide and reveal the sidebar without moving focus"
+        },
+        {
+          "key": "tab-layout-choice",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/104",
+          "title": "Present the same tabs in sidebar or top-row layouts"
+        },
+        {
+          "key": "focus-mode",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/82",
+          "title": "Enter a distraction-free layout with controls on demand"
+        }
+      ],
+      "threadId": "mcp:7db91a56-ed4a-411d-ba5b-0aaddb0a1955",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-layout-workstream",
+      "status": "reviewed_local_components_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "sidebar-layout",
+          "taskId": "node:delegated-task:command%3Amcp%3A37b7582d-d88d-4f65-bb15-2d75d26e60df%3Adelegate-task%3Alayout-sidebar-layout-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "tab-layout-choice",
+          "taskId": "node:delegated-task:command%3Amcp%3A37b7582d-d88d-4f65-bb15-2d75d26e60df%3Adelegate-task%3Alayout-tab-layout-choice-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "focus-mode",
+          "taskId": "node:delegated-task:command%3Amcp%3A37b7582d-d88d-4f65-bb15-2d75d26e60df%3Adelegate-task%3Alayout-focus-mode-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "127bf18939ebcfb21b8bc9351d35946d19d2c7ac",
+            "integrated": "cab92944"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    {
+      "area": "appearance",
+      "branch": "feat/appearance-workstream",
+      "keys": [
+        "space-themes",
+        "motion",
+        "shortcut-settings"
+      ],
+      "issues": [
+        {
+          "key": "space-themes",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/52",
+          "title": "Customize each Space's color, name and icon"
+        },
+        {
+          "key": "motion",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/83",
+          "title": "Respect motion and sound preferences in sidebar transitions"
+        },
+        {
+          "key": "shortcut-settings",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/34",
+          "title": "Discover and customize browser keyboard shortcuts"
+        }
+      ],
+      "threadId": "mcp:c80846e0-bd66-49a4-a9c5-c6d84bfa8c40",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-appearance-workstream",
+      "status": "reviewed_local_slices_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "space-themes",
+          "taskId": "node:delegated-task:command%3Amcp%3A61ace16c-e235-4508-9b0c-b56fadb689cd%3Adelegate-task%3Aappearance-space-themes-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_slice_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "motion",
+          "taskId": "node:delegated-task:command%3Amcp%3A61ace16c-e235-4508-9b0c-b56fadb689cd%3Adelegate-task%3Aappearance-motion-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_slice_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "shortcut-settings",
+          "taskId": "node:delegated-task:command%3Amcp%3A61ace16c-e235-4508-9b0c-b56fadb689cd%3Adelegate-task%3Aappearance-shortcut-settings-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_slice_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "e2057bd12cddbf51a3341db02a087bc1831fbba3",
+            "integrated": "97a5c013"
+          },
+          {
+            "source": "827256606ebe4b087188f1687c354c711bc1ea02",
+            "integrated": "56c28f75"
+          },
+          {
+            "source": "cc43738b011a25935f4aafab10eea8f88b0f56ec",
+            "integrated": "7c546119"
+          },
+          {
+            "source": "6f0e940bd86d1f14094725c054dff9deaa2dbbe1",
+            "integrated": "e53603e4"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    {
+      "area": "library",
+      "branch": "feat/library-workstream",
+      "keys": [
+        "library",
+        "downloads",
+        "history-controls"
+      ],
+      "issues": [
+        {
+          "key": "library",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/19",
+          "title": "Open a unified Library for saved browsing material"
+        },
+        {
+          "key": "downloads",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/36",
+          "title": "Manage downloads with clear progress and recovery"
+        },
+        {
+          "key": "history-controls",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/102",
+          "title": "Browse and clear local history separately from Archive"
+        }
+      ],
+      "threadId": "mcp:fc95390f-0e9a-4e5e-8940-c0e5690f7d16",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-library-workstream",
+      "status": "reviewed_local_components_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "library",
+          "taskId": "node:delegated-task:command%3Amcp%3A89e7a136-ea25-4ab7-8271-38cb2e98c7e6%3Adelegate-task%3Alibrary-primary-library-20261023-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "downloads",
+          "taskId": "node:delegated-task:command%3Amcp%3A89e7a136-ea25-4ab7-8271-38cb2e98c7e6%3Adelegate-task%3Alibrary-primary-downloads-20261023-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "history-controls",
+          "taskId": "node:delegated-task:command%3Amcp%3A89e7a136-ea25-4ab7-8271-38cb2e98c7e6%3Adelegate-task%3Alibrary-primary-history-controls-20261023-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "bb5cf37e9133b7cad59b0221c882b18308bb8fbe",
+            "integrated": "a126f605"
+          },
+          {
+            "source": "6f2f3d63720924e38fef7258eb2a875f70e644e7",
+            "integrated": "a726a2b4"
+          },
+          {
+            "source": "1fe514c7e481b5fc7b717f8841f400248948d2e7",
+            "integrated": "081ba95e"
+          },
+          {
+            "source": "dc2308c2d819d63839f2dbda8bdeeea3ba304fbd",
+            "integrated": "ec2834ef"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    {
+      "area": "capture",
+      "branch": "feat/capture-workstream",
+      "keys": [
+        "capture",
+        "region-capture",
+        "recent-files"
+      ],
+      "issues": [
+        {
+          "key": "capture",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/37",
+          "title": "Capture a full page and reuse it from Library"
+        },
+        {
+          "key": "region-capture",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/60",
+          "title": "Capture a selected region with a cancellable picker"
+        },
+        {
+          "key": "recent-files",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/53",
+          "title": "Drag recent downloads and captures from the sidebar"
+        }
+      ],
+      "threadId": "mcp:77b4a091-1bbd-40db-a7cf-57a02cdf0d3e",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-capture-workstream",
+      "status": "reviewed_local_slices_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "capture",
+          "taskId": "node:delegated-task:command%3Amcp%3A953350b1-de32-4537-9219-af420dfd10b6%3Adelegate-task%3Acapture-workstream-primary-capture-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_slice_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "region-capture",
+          "taskId": "node:delegated-task:command%3Amcp%3A953350b1-de32-4537-9219-af420dfd10b6%3Adelegate-task%3Acapture-workstream-primary-region-capture-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_slice_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "recent-files",
+          "taskId": "node:delegated-task:command%3Amcp%3A953350b1-de32-4537-9219-af420dfd10b6%3Adelegate-task%3Acapture-workstream-primary-recent-files-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_slice_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "a37736958f1d7bd74a097f4f70422532bfcfc1dd",
+            "integrated": "1d75a0d2"
+          },
+          {
+            "source": "cb24dbce56c1a9294d8d6920485d8d47a57d6d15",
+            "integrated": "2e9b939d"
+          },
+          {
+            "source": "2eea466e77957e7b2044240856a929c53623ed7b",
+            "integrated": "9ae6d7f0"
+          },
+          {
+            "source": "04051d9cc2fca0ba5a52a201832a14d3ccc0b6a1",
+            "integrated": "0cd599bc"
+          }
+        ],
+        "sourceBytes": "Matched final reviewed area feature sources via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    {
+      "area": "media",
+      "branch": "feat/media-workstream",
+      "keys": [
+        "pip",
+        "media-controls",
+        "tab-status"
+      ],
+      "issues": [
+        {
+          "key": "pip",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/114",
+          "title": "Keep video available in picture in picture"
+        },
+        {
+          "key": "media-controls",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/115",
+          "title": "Control background audio from the browser shell"
+        },
+        {
+          "key": "tab-status",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/71",
+          "title": "Show tab loading, audio, capture and attention state"
+        }
+      ],
+      "threadId": "mcp:67104e7f-06f8-4791-baa8-c62117d9b463",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-media-workstream",
+      "status": "reviewed_local_components_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "pip",
+          "taskId": "node:delegated-task:command%3Amcp%3A63cc0849-4662-4404-814c-b7e931d3fa91%3Adelegate-task%3Amedia-pip-primary-20261023-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "media-controls",
+          "taskId": "node:delegated-task:command%3Amcp%3A63cc0849-4662-4404-814c-b7e931d3fa91%3Adelegate-task%3Amedia-media-controls-primary-20261023-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "tab-status",
+          "taskId": "node:delegated-task:command%3Amcp%3A63cc0849-4662-4404-814c-b7e931d3fa91%3Adelegate-task%3Amedia-tab-status-primary-20261023-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "0637ee6cb37039ba6ccaf1f7cdee097bbbef1352",
+            "integrated": "2f9c0494"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    {
+      "area": "site-tools",
+      "branch": "feat/site-tools-workstream",
+      "keys": [
+        "site-controls",
+        "developer-mode",
+        "browser-diagnostics"
+      ],
+      "issues": [
+        {
+          "key": "site-controls",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/38",
+          "title": "Reach site permissions and extensions from compact chrome"
+        },
+        {
+          "key": "developer-mode",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/39",
+          "title": "Inspect the active page and keep developer controls discoverable"
+        },
+        {
+          "key": "browser-diagnostics",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/142",
+          "title": "Open native task manager and performance recording"
+        }
+      ],
+      "threadId": "mcp:3929680e-69d2-476b-ab24-251509e618fa",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-site-tools-workstream",
+      "status": "reviewed_local_components_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "site-controls",
+          "taskId": "node:delegated-task:command%3Amcp%3Ae1b606aa-1f63-4c26-942a-878e2a3afd9a%3Adelegate-task%3Asite-tools-site-controls-primary-c9748ec8",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "developer-mode",
+          "taskId": "node:delegated-task:command%3Amcp%3Ae1b606aa-1f63-4c26-942a-878e2a3afd9a%3Adelegate-task%3Asite-tools-developer-mode-primary-c9748ec8",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "browser-diagnostics",
+          "taskId": "node:delegated-task:command%3Amcp%3Ae1b606aa-1f63-4c26-942a-878e2a3afd9a%3Adelegate-task%3Asite-tools-browser-diagnostics-primary-c9748ec8",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "11423743b492611e13274926d08d6a70d9fe5b2f",
+            "integrated": "f3ea6de4"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    },
+    {
+      "area": "accessibility",
+      "branch": "feat/accessibility-workstream",
+      "keys": [
+        "accessibility",
+        "ime-localization",
+        "window-chrome"
+      ],
+      "issues": [
+        {
+          "key": "accessibility",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/149",
+          "title": "Operate Spaces and the sidebar with assistive technology"
+        },
+        {
+          "key": "ime-localization",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/113",
+          "title": "Edit browser chrome reliably with IME and bidirectional text"
+        },
+        {
+          "key": "window-chrome",
+          "url": "https://github.com/Timpan4/helium-arcified/issues/35",
+          "title": "Respect native caption controls, displays and window states"
+        }
+      ],
+      "threadId": "mcp:316a7ad0-e14e-4b98-82ff-f673ef9feb54",
+      "modelSelection": {
+        "instanceId": "codex",
+        "model": "gpt-6.1-sol",
+        "options": [
+          {
+            "id": "reasoningEffort",
+            "value": "high"
+          },
+          {
+            "id": "serviceTier",
+            "value": "default"
+          }
+        ]
+      },
+      "worktreePath": "/home/timpan4/.t3/worktrees/helium-arcified/feat-accessibility-workstream",
+      "status": "reviewed_local_components_integrated_native_open",
+      "primaryAssignments": [
+        {
+          "key": "accessibility",
+          "taskId": "node:delegated-task:command%3Amcp%3A70b6c1d7-692b-4195-bb48-e2459f9941cc%3Adelegate-task%3Aaccessibility-stream-accessibility-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "ime-localization",
+          "taskId": "node:delegated-task:command%3Amcp%3A70b6c1d7-692b-4195-bb48-e2459f9941cc%3Adelegate-task%3Aaccessibility-stream-ime-localization-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        },
+        {
+          "key": "window-chrome",
+          "taskId": "node:delegated-task:command%3Amcp%3A70b6c1d7-692b-4195-bb48-e2459f9941cc%3Adelegate-task%3Aaccessibility-stream-window-chrome-primary-v1",
+          "model": "gpt-6.1-sol",
+          "providerInstanceId": "codex",
+          "options": {
+            "reasoningEffort": "high",
+            "serviceTier": "default"
+          },
+          "stage": "reviewed_local_component_integrated_native_acceptance_open",
+          "verification": "Actual delegate assignment verified by area coordinator and receipt delivered to parent.",
+          "nativeAcceptance": "OPEN"
+        }
+      ],
+      "integration": {
+        "commits": [
+          {
+            "source": "5da4a82d743cd94ab02c6b18158b79d5adecf76b",
+            "integrated": "d3ecf874"
+          }
+        ],
+        "sourceBytes": "Integrated feature sources matched reviewed area branch/commit via git diff --exit-code.",
+        "nativeAcceptance": "OPEN"
+      }
+    }
+  ],
+  "integrationCounts": {
+    "expandedItems": 51,
+    "reviewedLocalComponentsIntegrated": 51,
+    "remainingLocalComponentsToIntegrate": 0,
+    "nativeIssuesAccepted": 0
+  }
+}

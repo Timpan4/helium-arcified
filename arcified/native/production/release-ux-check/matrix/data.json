@@ -1,0 +1,1120 @@
+{
+  "issueKey": "release-ux-check",
+  "area": "data",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "nativeAcceptance": "OPEN",
+  "featureRows": [
+    {
+      "issueKey": "export",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/73",
+      "title": "Export portable Arcified workspace data",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork",
+        "arc-import"
+      ],
+      "dependencies": [
+        "session-durability"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "export/criterion/1",
+          "criterion": "Export supported names, order, URLs and workspace metadata to a documented versioned format.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "export/criterion/2",
+          "criterion": "Validate the generated file and record excluded secrets, extensions and unsupported renderer state.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "export/criterion/3",
+          "criterion": "A failed/canceled export leaves the live workspace and any existing destination file unchanged.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "arc-import",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/74",
+      "title": "Import Arc Spaces, folders and custom tab names",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-import",
+        "dia",
+        "yab-import"
+      ],
+      "dependencies": [
+        "session-durability",
+        "profiles",
+        "arc-import-format"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "YAB sources describe macOS/WebKit. Arc/Dia documentation contributes only where explicitly cited. Linux and Windows are independent downstream targets.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "arc-import/criterion/1",
+          "criterion": "Convert only export versions/fields proven by arc-import-format, preserving supported names/order and reporting unsupported source data instead of fabricating it.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "arc-import/criterion/2",
+          "criterion": "Preview the mapping and unresolved entries; cancellation or a malformed export leaves existing data unchanged.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "arc-import/criterion/3",
+          "criterion": "Preserve the original export, report unmappable data, and verify restart and a round-trip Arcified export.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "arc-import/criterion/4",
+          "criterion": "Treat imported archives, HTML, URLs, CSS and attachments as untrusted and inert. Enforce path/origin containment, no automatic scripts/remote fetches and transactional failure recovery.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "arc-import/criterion/5",
+          "criterion": "Offer category/open-tab choices, progress and additive/idempotent re-import. Preserve source data and report OS credential prompts and unsupported extension/session state.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "arc-import/criterion/6",
+          "criterion": "Stage a local preview manifest with source provenance, import tabs asleep until selected and distinguish genuinely new/conflicting records on repeat import. Never periodically reread another browser's credential store implicitly.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "browser-import",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/75",
+      "title": "Import browser bookmarks, history and selected settings",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-import",
+        "dia",
+        "yab-import"
+      ],
+      "dependencies": [
+        "profiles"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "YAB sources describe macOS/WebKit. Arc/Dia documentation contributes only where explicitly cited. Linux and Windows are independent downstream targets.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "browser-import/criterion/1",
+          "criterion": "Preview source Profile and categories; browser/OS credential-store access requires normal user consent and supports denial.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "browser-import/criterion/2",
+          "criterion": "Preserve bookmark hierarchy and avoid silent replacement; explain unsupported password/extension transfer.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "browser-import/criterion/3",
+          "criterion": "First-run and later imports are cancellable and recover from a locked source without corrupting either Profile.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "browser-import/criterion/4",
+          "criterion": "Offer category/open-tab choices, progress and additive/idempotent re-import. Preserve source data and report OS credential prompts and unsupported extension/session state.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "browser-import/criterion/5",
+          "criterion": "Stage a local preview manifest with source provenance, import tabs asleep until selected and distinguish genuinely new/conflicting records on repeat import. Never periodically reread another browser's credential store implicitly.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "prototype-migration",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/76",
+      "title": "Migrate Arcified Lab snapshots into native Spaces",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork"
+      ],
+      "dependencies": [
+        "session-durability"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "prototype-migration/criterion/1",
+          "criterion": "Map names, URL order and available timestamps while explaining that snapshots contain no live sessions.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "prototype-migration/criterion/2",
+          "criterion": "Keep original extension storage and export intact until the user verifies the import.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "prototype-migration/criterion/3",
+          "criterion": "Cover malformed values, duplicate names, unavailable extension data and repeat import without silent replacement.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "prototype-migration/criterion/4",
+          "criterion": "Treat imported archives, HTML, URLs, CSS and attachments as untrusted and inert. Enforce path/origin containment, no automatic scripts/remote fetches and transactional failure recovery.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "private-browsing",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/98",
+      "title": "Keep private windows out of workspace persistence and AI",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-profiles",
+        "fork"
+      ],
+      "dependencies": [
+        "profiles",
+        "lifecycle-contract"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "private-browsing/criterion/1",
+          "criterion": "Clearly distinguish private windows and prevent their tabs, captures, history and workspace edits from entering ordinary persistence, exports or optional remote capabilities.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "private-browsing/criterion/2",
+          "criterion": "Define supported organization actions without silently converting a private page into a persistent pin or public share.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "private-browsing/criterion/3",
+          "criterion": "Apply the isolation policy to Archive, AI history/context, integration caches and diagnostics. Deliberately saved downloads/files/clipboard/exports may persist and must not be promised erased at session end.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "workspace-import",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/136",
+      "title": "Preview and merge a portable Arcified workspace import",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork"
+      ],
+      "dependencies": [
+        "export"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "workspace-import/criterion/1",
+          "criterion": "Validate a copy before mutation and preview destination, duplicate and conflict behavior.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "workspace-import/criterion/2",
+          "criterion": "Preserve original files and existing workspace on failure/cancellation.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "workspace-import/criterion/3",
+          "criterion": "Round-trip an exported fixture, including malformed/unknown-version/interrupted cases, and report unmappable data.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "workspace-import/criterion/4",
+          "criterion": "Treat imported archives, HTML, URLs, CSS and attachments as untrusted and inert. Enforce path/origin containment, no automatic scripts/remote fetches and transactional failure recovery.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "workspace-import/criterion/5",
+          "criterion": "Stage a local preview manifest with source provenance, import tabs asleep until selected and distinguish genuinely new/conflicting records on repeat import. Never periodically reread another browser's credential store implicitly.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "schema-migrations",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/99",
+      "title": "Upgrade stored workspace schemas without losing the original",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork"
+      ],
+      "dependencies": [
+        "session-durability"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "schema-migrations/criterion/1",
+          "criterion": "Use fixtures for each supported upgrade, corrupt data, interrupted migration and unknown future versions.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "schema-migrations/criterion/2",
+          "criterion": "Preserve the last valid original and expose recovery instead of overwriting data on failed migration.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "schema-migrations/criterion/3",
+          "criterion": "Document rollback/downgrade compatibility and verify a native upgrade preserves names, ordering and current selection.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "data-flow-controls",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/171",
+      "title": "Explain and control every browser data destination",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "yab-privacy",
+        "dia-security",
+        "fork"
+      ],
+      "dependencies": [
+        "settings"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "YAB sources describe macOS/WebKit. Arc/Dia documentation contributes only where explicitly cited. Linux and Windows are independent downstream targets.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "data-flow-controls/criterion/1",
+          "criterion": "Display the destination and included fields for each enabled flow, with separate consent/revocation/deletion semantics.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "data-flow-controls/criterion/2",
+          "criterion": "Capture network/payload evidence using synthetic data and verify disabled optional flows remain inactive.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "data-flow-controls/criterion/3",
+          "criterion": "Keep update/security traffic distinct from browsing/AI content and handle missing secure storage without silent unsafe fallback.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "data-flow-controls/criterion/4",
+          "criterion": "Deliver local storage, update, telemetry/crash-report and ordinary integration controls independently of AI implementation. Any later AI controls must integrate the approved assistant-consent-contract before enabling AI data access.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

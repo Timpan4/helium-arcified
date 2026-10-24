@@ -1,0 +1,1016 @@
+{
+  "issueKey": "release-ux-check",
+  "area": "appearance",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "nativeAcceptance": "OPEN",
+  "featureRows": [
+    {
+      "issueKey": "sidebar-layout",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/51",
+      "title": "Resize, hide and reveal the sidebar without moving focus",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-sidebar",
+        "dia"
+      ],
+      "dependencies": [
+        "spaces"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "sidebar-layout/criterion/1",
+          "criterion": "Hidden/revealed transitions preserve page scroll and selected tab, including splits and fullscreen.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "sidebar-layout/criterion/2",
+          "criterion": "Keyboard access can reveal and leave the sidebar without relying on hover.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "sidebar-layout/criterion/3",
+          "criterion": "Resize hit targets, touch/pointer behavior and active-tab location remain usable on small and scaled displays.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "focus-mode",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/82",
+      "title": "Enter a distraction-free layout with controls on demand",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-sidebar",
+        "dia"
+      ],
+      "dependencies": [
+        "sidebar-layout"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "focus-mode/criterion/1",
+          "criterion": "Enter/exit via keyboard and menu with clear focus restoration and an accessible exit.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "focus-mode/criterion/2",
+          "criterion": "Reveal necessary controls on intentional pointer/keyboard use without page jumps.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "focus-mode/criterion/3",
+          "criterion": "Support split view, fullscreen, dialogs and multiple monitors without trapping the user.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "space-themes",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/52",
+      "title": "Customize each Space's color, name and icon",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-themes"
+      ],
+      "dependencies": [
+        "spaces"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "space-themes/criterion/1",
+          "criterion": "Edit colors, name, icon and light/dark behavior with a preview and revert.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "space-themes/criterion/2",
+          "criterion": "Text, selected states, window controls and web content boundaries remain legible in custom themes and forced contrast.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "space-themes/criterion/3",
+          "criterion": "Preserve appearance across restart and respect OS dark-mode changes without copying proprietary assets.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "space-themes/criterion/4",
+          "criterion": "Use platform-native materials where supported and a legible opaque fallback; never require a macOS-only material.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "space-themes/criterion/5",
+          "criterion": "Document support or a simpler deliberate replacement for intensity/grain controls and custom folder icons, using original assets.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "motion",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/83",
+      "title": "Respect motion and sound preferences in sidebar transitions",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-themes",
+        "dia"
+      ],
+      "dependencies": [
+        "sidebar-layout"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "motion/criterion/1",
+          "criterion": "Sidebar hide/reveal and Space switches keep stable content anchoring and accept input during animation. Peek and split tickets own their own interrupted-transition checks.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "motion/criterion/2",
+          "criterion": "Honor reduced motion and interrupted/reversed transitions without stale final state.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "motion/criterion/3",
+          "criterion": "Record native visual checks and frame traces on Linux, Windows and macOS; choose durations from design validation rather than invented policy.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "motion/criterion/4",
+          "criterion": "Expose a disable option for app-generated sounds/haptics and keep loading/privacy feedback understandable without them.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "shortcut-settings",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/34",
+      "title": "Discover and customize browser keyboard shortcuts",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-shortcuts",
+        "dia"
+      ],
+      "dependencies": [
+        "native-linux",
+        "native-windows",
+        "native-macos"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "shortcut-settings/criterion/1",
+          "criterion": "Search actions, record/reset a binding and explain collisions with browser, webpage and OS commands.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "shortcut-settings/criterion/2",
+          "criterion": "Display correct platform modifiers and keep an accessible route to every core action.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "shortcut-settings/criterion/3",
+          "criterion": "Bindings survive restart and work in dialogs, split panes and text fields with documented precedence.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "settings",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/129",
+      "title": "Find and reset settings without losing browsing data",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-shortcuts",
+        "dia"
+      ],
+      "dependencies": [
+        "profiles",
+        "command-bar"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "settings/criterion/1",
+          "criterion": "Expose Profile-specific versus browser/device-specific scope, including search engine, download location, archive, previews and AI.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "settings/criterion/2",
+          "criterion": "Search, change, reset and restart preserve intended values and do not erase unrelated data.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "settings/criterion/3",
+          "criterion": "Keyboard, screen-reader, error and unavailable-platform states work consistently across OSes.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "onboarding",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/97",
+      "title": "Set up a usable local browser without a cloud account",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-import",
+        "arc-status"
+      ],
+      "dependencies": [
+        "spaces",
+        "profiles"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "onboarding/criterion/1",
+          "criterion": "Reach ordinary browsing without signing into Arc, Dia, an Arcified account or an AI service.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "onboarding/criterion/2",
+          "criterion": "Offer optional import/default-browser/AI setup through their completed flows; skipping them reaches usable local browsing and leaves a later entry point.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "onboarding/criterion/3",
+          "criterion": "Show the native Space/pin/temporary-tab model through a short interactive task and preserve progress safely.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "tab-layout-choice",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/104",
+      "title": "Present the same tabs in sidebar or top-row layouts",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "yab-layout",
+        "arc-sidebar"
+      ],
+      "dependencies": [
+        "sidebar-layout",
+        "window-chrome"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "YAB sources describe macOS/WebKit. Arc/Dia documentation contributes only where explicitly cited. Linux and Windows are independent downstream targets.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "tab-layout-choice/criterion/1",
+          "criterion": "Switch layout, sidebar side and density while preserving tab identity, order, selection, navigation and Profile state.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "tab-layout-choice/criterion/2",
+          "criterion": "Persist the preference and keep focused controls/window captions usable at small and mixed-scale sizes.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "tab-layout-choice/criterion/3",
+          "criterion": "Expose the same keyboard/accessibility actions in either layout; narrow-screen fallback is predictable.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "tab-layout-choice/criterion/4",
+          "criterion": "Treat platform materials/modifiers as adapters to one semantic model; exports preserve workspace meaning across layouts and operating systems.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

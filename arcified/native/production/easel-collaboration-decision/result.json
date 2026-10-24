@@ -1,0 +1,138 @@
+{
+  "issueKey": "easel-collaboration-decision",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/30",
+  "disposition": "RESEARCH_DELIVERED_OWNER_CHOICE_PENDING_RECOMMEND_DEFER",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "evidencePaths": [
+    "arcified/native/production/easel-collaboration-decision/decision.md",
+    "arcified/native/production/easel-collaboration-decision/authority.json",
+    "arcified/native/production/easel-collaboration-decision/sources.json",
+    "arcified/native/production/easel-collaboration-decision/source-identities.sha256",
+    "arcified/native/production/easel-collaboration-decision/checks.md"
+  ],
+  "changes": [
+    "Documented historical presence and permissioned shared-board editing separately from local boards, file export and read-only snapshots.",
+    "Recommended deferral pending a concrete need, accountable service owner, and approved access/retention model.",
+    "Recorded owner choice as PENDING, preserved local-export/migration fallback limits and kept unsupported routes unavailable.",
+    "Created only decision/evidence files in the exclusive packet; no native source, patches/series, shared controls, commands or credentials changed."
+  ],
+  "checks": [
+    {
+      "check": "Baseline and branch",
+      "status": "PASS",
+      "command": "git status --short; git rev-parse HEAD; git branch --show-current",
+      "scope": "Confirmed assigned baseline and branch, no git mutation."
+    },
+    {
+      "check": "Source-byte identity",
+      "status": "PASS",
+      "command": "sha256sum -c arcified/native/production/easel-collaboration-decision/source-identities.sha256",
+      "exitCode": 0,
+      "scope": "All 14 recorded root/foundation source files matched."
+    },
+    {
+      "check": "Markdown whitespace",
+      "status": "NO_DIAGNOSTICS",
+      "command": "git diff --no-index --check /dev/null arcified/native/production/easel-collaboration-decision/decision.md",
+      "exitCode": 1,
+      "scope": "Exit 1 indicates a new-file difference; no whitespace diagnostics."
+    },
+    {
+      "check": "Packet JSON syntax and formatting",
+      "status": "PASS",
+      "method": "fast_filesystem.fs_read_many plus hosted JavaScript JSON.parse, canonical two-space JSON and text whitespace checks",
+      "scope": "All packet JSON; all authored text files; exact authoritative issue copy and required result fields."
+    },
+    {
+      "check": "Decision Markdown local links",
+      "status": "PASS",
+      "method": "Hosted JavaScript link normalization and fast_filesystem.fs_stat_many",
+      "scope": "Every local link target in decision.md exists after authoring."
+    },
+    {
+      "check": "Declared Markdown formatter/linter",
+      "status": "UNAVAILABLE",
+      "command": "command -v node bun prettier markdownlint-cli2",
+      "exitCode": 1,
+      "scope": "Node/Bun found; Markdown tools not installed or declared. No installation."
+    },
+    {
+      "check": "Native patch/test registration",
+      "status": "NOT_APPLICABLE",
+      "scope": "Decision-only leaf; no code or native integration route introduced."
+    },
+    {
+      "check": "Linux, Windows and macOS native/runtime/visual tests",
+      "status": "NOT_RUN",
+      "scope": "Not authorized for this leaf. Native acceptance OPEN."
+    }
+  ],
+  "ownerQuestions": [
+    {
+      "id": "collaboration-scope",
+      "question": "Do you approve deferring live board editing and presence, while retaining local boards/export and treating any hosted snapshot sharing as a separate decision?",
+      "recommendedChoice": "Defer live editing and presence.",
+      "tradeoff": "No live teamwork; avoids an unowned remote data service.",
+      "status": "PENDING",
+      "route": "Coordinator consolidation to root; do not repeatedly ask owner."
+    },
+    {
+      "id": "collaboration-service-if-needed",
+      "question": "If deferral is rejected, which concrete multi-user board task requires live editing or presence, who owns the service, and what access, exposed-data, retention, revocation and service-exit model do you approve?",
+      "recommendedChoice": "Supply these decisions before authorizing implementation.",
+      "tradeoff": "Live collaboration stays unavailable until ownership and policy are settled.",
+      "status": "CONDITIONAL_PENDING",
+      "route": "Coordinator consolidation to root."
+    }
+  ],
+  "dependencies": [],
+  "integrationRequests": [
+    {
+      "target": "Research coordinator and root",
+      "request": "Consolidate owner questions, retain PENDING state until an actual response, and reconcile the decision into root/issue authority through an authorized workflow.",
+      "blocking": "Owner-choice acceptance criterion."
+    },
+    {
+      "target": "easel, board-export, board-sharing, shared-board coordinators",
+      "request": "Keep local editing/export and hosted snapshot work separate from live presence/editing. Preserve originals and unsupported export fields; do not imply snapshot parity or service approval.",
+      "blocking": false
+    },
+    {
+      "target": "Root verification owner",
+      "request": "Keep same-window multi-Profile and live saved-page handoff production gates OPEN; reuse pure-foundation evidence only for its actual scope.",
+      "blocking": "Native acceptance, not the documentary distinction."
+    }
+  ],
+  "acceptanceCriteria": [
+    {
+      "criterion": "Describe live presence/editable-shared-board workflow and separate it from snapshot sharing.",
+      "status": "DOCUMENTARY_EVIDENCE_DELIVERED",
+      "evidence": "arcified/native/production/easel-collaboration-decision/decision.md",
+      "limits": "Historical release notes and cached help; no reference/runtime execution."
+    },
+    {
+      "criterion": "Recommend deferral until a concrete user need, service owner and access/retention model exist.",
+      "status": "RECOMMENDATION_DELIVERED",
+      "evidence": "arcified/native/production/easel-collaboration-decision/decision.md"
+    },
+    {
+      "criterion": "Record the owner's choice and migration/local-export fallback without implying snapshot parity.",
+      "status": "PARTIAL_OWNER_CHOICE_PENDING",
+      "evidence": "arcified/native/production/easel-collaboration-decision/decision.md",
+      "limits": "Fallback and limits documented; no specific owner choice found or invented."
+    }
+  ],
+  "remainingCriteria": [
+    "Record the owner's actual collaboration choice through coordinator/root consolidation.",
+    "If live collaboration is accepted, settle the concrete user need, service ownership and access/retention model before implementation.",
+    "Native and reference runtime behaviors remain unverified on Linux, Windows and macOS; local board/export/snapshot production verification remains with their owning leaves."
+  ],
+  "nativeAcceptance": "OPEN",
+  "nativeArtifacts": {
+    "preparedSourceBaseFiles": [],
+    "preparedSourceResultFiles": [],
+    "productionPatch": null,
+    "registeredNativeTestChanges": [],
+    "reason": "Not applicable to a decision-only packet. No implementation is justified before owner scope/service decisions."
+  }
+}

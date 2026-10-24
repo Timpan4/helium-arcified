@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/views/permissions/chooser_bubble_ui.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/permissions/chooser_bubble_ui.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:02:19.319Z",
+  "kind": "file",
+  "bytes": 14757,
+  "sha256": "13078bdde2d76624509b745e986ce7c3acff4b507ead98f97bfb92d1adabf03c",
+  "gitBlob": "31ff36d2552acda446c7e178b6850eeac4780ccb",
+  "lines": 386,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

@@ -1,0 +1,847 @@
+{
+  "scope": "All twelve independently reviewed research packets. Exact bytes from original T3 review requests; four vendor acquisition inputs remain local and ignored.",
+  "expected": [
+    {
+      "key": "compatibility",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/README.md",
+      "sha256": "c16f710c90f7d1689b3da286c8cf59ca0855fb8e1049f7ece6641829b72fcc50",
+      "relativePath": "arcified/native/production/compatibility/README.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "compatibility",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/checks.json",
+      "sha256": "4e0dbfbfc33125175ddf6630cb664144003e7c4bb51205ca46e2e229d32ac370",
+      "relativePath": "arcified/native/production/compatibility/checks.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "compatibility",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/compatibility-matrix.json",
+      "sha256": "3d5e9df226bae8dcf0d6ffc78d879744d33cde3840a71f0e761b3fa480bb6e86",
+      "relativePath": "arcified/native/production/compatibility/compatibility-matrix.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "compatibility",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/defects.json",
+      "sha256": "f43c6f82e90a2e9ea55d21a63db95e17bc9b80d5065ca0c5a46973cbc8337390",
+      "relativePath": "arcified/native/production/compatibility/defects.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "compatibility",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/issue-object.json",
+      "sha256": "f24c024fc5cd63950aa6f422168bfc8b5060e38ff096e776812c55dfc5a9d277",
+      "relativePath": "arcified/native/production/compatibility/issue-object.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "compatibility",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/ownership.json",
+      "sha256": "7af44b77ccca73671a30b092f7fe4fb78ee3d8ac78da2c1640c75e4fc4f89dd3",
+      "relativePath": "arcified/native/production/compatibility/ownership.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "compatibility",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/prepared-source.sha256",
+      "sha256": "70d8e9ee6c264541aac412f75bfe51f2a1322c35e79fa1517681cbd8ede9866d",
+      "relativePath": "arcified/native/production/compatibility/prepared-source.sha256",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "compatibility",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/result.json",
+      "sha256": "ccc6ddc189019f56fd14a05eea93ac9f1b282c848e32a89a1bd236434f0f0203",
+      "relativePath": "arcified/native/production/compatibility/result.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "compatibility",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/source-identities.json",
+      "sha256": "86a152d6defc938d28216214be936eb388c6535bb4f3ead8409c2a74a39e5b74",
+      "relativePath": "arcified/native/production/compatibility/source-identities.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "easel-collaboration-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/easel-collaboration-decision/authority.json",
+      "sha256": "ddd42f2c40302d2c02b75c2c4bb34beb8224731e90f917be98097f88c84524d3",
+      "relativePath": "arcified/native/production/easel-collaboration-decision/authority.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "easel-collaboration-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/easel-collaboration-decision/checks.md",
+      "sha256": "586231e52f8bea808c93bb2ac23144868eb29810a16c8f2a70269dde286a1ac6",
+      "relativePath": "arcified/native/production/easel-collaboration-decision/checks.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "easel-collaboration-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/easel-collaboration-decision/decision.md",
+      "sha256": "a9c70f52758938c8ec9855676e907f6260043c4c2a3238f44da6d6c55dd1ad5e",
+      "relativePath": "arcified/native/production/easel-collaboration-decision/decision.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "easel-collaboration-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/easel-collaboration-decision/ownership.json",
+      "sha256": "821056f0d031689ca0d9f78447e594f7283f6b408d5f8aa7f13e73e120b4af84",
+      "relativePath": "arcified/native/production/easel-collaboration-decision/ownership.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "easel-collaboration-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/easel-collaboration-decision/result.json",
+      "sha256": "8ee7bb945cbdebf0c722a076e029d0c8de870ce6ce9ecb2c9d0343569cf4b6b3",
+      "relativePath": "arcified/native/production/easel-collaboration-decision/result.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "easel-collaboration-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/easel-collaboration-decision/source-identities.sha256",
+      "sha256": "ed0df710af86e5123552bbc17a6667eab3e7e76ee90429e94da1238d13c69296",
+      "relativePath": "arcified/native/production/easel-collaboration-decision/source-identities.sha256",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "easel-collaboration-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/easel-collaboration-decision/sources.json",
+      "sha256": "793e82542a74dfa7b8bde7422acb3880a21dbb0368aa4d8bbbbb8538a77e0d04",
+      "relativePath": "arcified/native/production/easel-collaboration-decision/sources.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "arc-import-format",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/arc-import-format/checks.md",
+      "sha256": "b11fc280ff0379b2914321ebddfeda7f747bb9afb6e2a019a340b9e52c787414",
+      "relativePath": "arcified/native/production/arc-import-format/checks.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "arc-import-format",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/arc-import-format/fixtures.json",
+      "sha256": "d355134998f62d542c00399d54aa0cc10557c14d09e9f06bc629bd4891c0b978",
+      "relativePath": "arcified/native/production/arc-import-format/fixtures.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "arc-import-format",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/arc-import-format/ownership.json",
+      "sha256": "1ecf09a7910ae279f4340e497aeb2c2f5b0580015352b3ace054efb834b595db",
+      "relativePath": "arcified/native/production/arc-import-format/ownership.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "arc-import-format",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/arc-import-format/report.md",
+      "sha256": "22b69f0edf84ee3ccb9b40a957c35e9df0e3a22ea98a17603d72ceaecf6cc39a",
+      "relativePath": "arcified/native/production/arc-import-format/report.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "arc-import-format",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/arc-import-format/result.json",
+      "sha256": "0228250b0b81a67e8de34b0b61ddb301c5a0061573ab964c36b4eae02d2321f9",
+      "relativePath": "arcified/native/production/arc-import-format/result.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "arc-import-format",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/arc-import-format/sources.json",
+      "sha256": "e7fede9eabba4f11c1b29449b8329f2462c761dd8600c01a74dc5a5bd61a9bc5",
+      "relativePath": "arcified/native/production/arc-import-format/sources.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "runtime-reference",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/runtime-reference/ownership.json",
+      "sha256": "5add3e7aef1a5be8063939ecc3b1f18b442e9f494c8cfcca7feffe11ca9317ee",
+      "relativePath": "arcified/native/production/runtime-reference/ownership.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "runtime-reference",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/runtime-reference/authoritative-issue.json",
+      "sha256": "7a5fbdcb8fad46806155c1d9878d23d4877f42ad8b6fb1c6b642602211a9e69a",
+      "relativePath": "arcified/native/production/runtime-reference/authoritative-issue.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "runtime-reference",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/runtime-reference/sources.json",
+      "sha256": "83daf61cd9ae7e26c24ab237b29eb9f825df6cc19baef3e54ea30a7317784ee8",
+      "relativePath": "arcified/native/production/runtime-reference/sources.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "runtime-reference",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/runtime-reference/scenarios.json",
+      "sha256": "3483669c398358d993dd7a58d85b812507998d50a97b57764b5b3503ff104c19",
+      "relativePath": "arcified/native/production/runtime-reference/scenarios.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "runtime-reference",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/runtime-reference/README.md",
+      "sha256": "20f97844ddd2e64627a81d12a69fc49cfcdd8777eeb2bb0417f827fb848a1b6d",
+      "relativePath": "arcified/native/production/runtime-reference/README.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "runtime-reference",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/runtime-reference/verify.jq",
+      "sha256": "b58319457e5f0296b6b9413582d48d42fa4a9e6fddb66f16911568468c1858fd",
+      "relativePath": "arcified/native/production/runtime-reference/verify.jq",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "runtime-reference",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/runtime-reference/result.json",
+      "sha256": "8902b00a5be89c6908baf3042c1cfdcfce8c046637e4047ca590f2f68b500b4d",
+      "relativePath": "arcified/native/production/runtime-reference/result.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "runtime-reference",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/runtime-reference/checks.json",
+      "sha256": "512c28a9ce4ab1b855319e2aa4ec3ec2cbd9f53339d08930e88741500615ba17",
+      "relativePath": "arcified/native/production/runtime-reference/checks.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "retirements",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/ownership.json",
+      "sha256": "c8a251627bca7282549fb9a6d1885971a5add39391f392b18c32079f08cf9193",
+      "relativePath": "arcified/native/production/retirements/ownership.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "retirements",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/assignment-snapshot.json",
+      "sha256": "04d3baaf0ed51a2b7585b853da35e6422e5dffb7147c8276026f850b8ec1496d",
+      "relativePath": "arcified/native/production/retirements/assignment-snapshot.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "retirements",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/sources.json",
+      "sha256": "5d16b6b5d9302e672b4484be7ca804939fb8382debe3b54fb1f545908818fcb4",
+      "relativePath": "arcified/native/production/retirements/sources.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "retirements",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/dispositions.json",
+      "sha256": "83c80fbd88fd3f70a31082ded2cd2fd10c41246601fc2bcaad43bc2c50f020bf",
+      "relativePath": "arcified/native/production/retirements/dispositions.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "retirements",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/report.md",
+      "sha256": "32f477860463e3ae3c5d71345e3ccea6d4e768be3bd1536356682b6dd4b944a7",
+      "relativePath": "arcified/native/production/retirements/report.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "retirements",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/native-source-identities.json",
+      "sha256": "506b5d3785c244cdec1a6fb0a8a6135fa53083c774e6fcfa95b7bf0709a4b19d",
+      "relativePath": "arcified/native/production/retirements/native-source-identities.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "retirements",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/source-identities.sha256",
+      "sha256": "fd3414673386fc43e8688394eae9ba5e766f187f436325915570ccacc4b6ba88",
+      "relativePath": "arcified/native/production/retirements/source-identities.sha256",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "retirements",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/verification-scenarios.json",
+      "sha256": "afd342007df841004f62ffe39579a5dde0a20fd5944cff0aad2fc936c2851344",
+      "relativePath": "arcified/native/production/retirements/verification-scenarios.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "retirements",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/result.json",
+      "sha256": "c39d4b06e2973312e3ededd7aba7b74a9ac95db8e1b6c418850cf51815cc5a60",
+      "relativePath": "arcified/native/production/retirements/result.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "retirements",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/packet-check.js",
+      "sha256": "bf57e35855de2e92f98b1418f8eb97865d35a75141e55d6f493245e10f083f7e",
+      "relativePath": "arcified/native/production/retirements/packet-check.js",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "retirements",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/checks.md",
+      "sha256": "34c115fc2b1bb3fb0e8e71b11880349731ceb0bd233ad9a0b9774fb849f7e898",
+      "relativePath": "arcified/native/production/retirements/checks.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "retirements",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/checks.json",
+      "sha256": "168b222d839a0a56bebb6ad5056e7bb8c6229557258de1da1cf6661302fd2fb1",
+      "relativePath": "arcified/native/production/retirements/checks.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/ownership.json",
+      "sha256": "7f7bb8956a7c171b14f787a6f601c5761db21722586d762fcce99ef0d87542f7",
+      "relativePath": "arcified/native/production/release-ux-check/ownership.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/cross-cutting-scenarios.json",
+      "sha256": "c19799897d552774a8571897c09631d48e6190f0d83a9f810d752fc79fc7b4a5",
+      "relativePath": "arcified/native/production/release-ux-check/cross-cutting-scenarios.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/matrix/platform.json",
+      "sha256": "f7d3c8277288365f89edde190017e8c2e42dbd293e6cf3cf37d90680211015d9",
+      "relativePath": "arcified/native/production/release-ux-check/matrix/platform.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/matrix/core.json",
+      "sha256": "478fb9fd096393b667c90d79bf7f9a3ec921f021b9bda728fcc05f1ca37c9911",
+      "relativePath": "arcified/native/production/release-ux-check/matrix/core.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/matrix/data.json",
+      "sha256": "c983fc4ebcce5515187a6536e562f80c27e43b3f9924689d2a7ccfb1139795e2",
+      "relativePath": "arcified/native/production/release-ux-check/matrix/data.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/matrix/navigation.json",
+      "sha256": "e36a7aff64763261da24bf88cea2269c17ddf9255347ef51221e251c49aa8eca",
+      "relativePath": "arcified/native/production/release-ux-check/matrix/navigation.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/matrix/appearance.json",
+      "sha256": "d25653ecf39809d0cb99414bcb6ae61fef5f208bf373e6c86f9711f65159b1a0",
+      "relativePath": "arcified/native/production/release-ux-check/matrix/appearance.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/matrix/library.json",
+      "sha256": "0c54da019b0dea1edfbcf6feceb0be788146b329c177aad83bf90dd5d54ff6e3",
+      "relativePath": "arcified/native/production/release-ux-check/matrix/library.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/matrix/media.json",
+      "sha256": "957b5dc3addf6bbe6ed6dce890f74aae4c2728839cbac6b1d21cd8e9cdc87a59",
+      "relativePath": "arcified/native/production/release-ux-check/matrix/media.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/matrix/extras.json",
+      "sha256": "08323e6c88530162c058c925978cbe5598fa5968c5d636c98544d5261d81aad8",
+      "relativePath": "arcified/native/production/release-ux-check/matrix/extras.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/matrix/assistant.json",
+      "sha256": "06e7e06ce7bb1b37551ed03d80c86e1319773721d681e434eaee95c1ed0e1deb",
+      "relativePath": "arcified/native/production/release-ux-check/matrix/assistant.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/matrix/performance.json",
+      "sha256": "9e93f238ac45e56938e9fb551eb3fd55b8ee1e1b071e3ca06e065fbce5b294ff",
+      "relativePath": "arcified/native/production/release-ux-check/matrix/performance.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/matrix/sync.json",
+      "sha256": "a902a794004c40be4eaca392fa6cae4f017dc3f50b0fd4cb91c2dd1e14d4ed76",
+      "relativePath": "arcified/native/production/release-ux-check/matrix/sync.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/matrix/research.json",
+      "sha256": "673e944685035560af1d1108adf974736ea5692f33b9cbc09968550c82995264",
+      "relativePath": "arcified/native/production/release-ux-check/matrix/research.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/matrix/release.json",
+      "sha256": "793973b693cfe10b8ea0d0b7edc3f8d222626b72aba5a88f62cb9cfcfeee8b4b",
+      "relativePath": "arcified/native/production/release-ux-check/matrix/release.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/source-family-coverage.json",
+      "sha256": "89a91e2fe30ef337b4a85c13dd5462a82f74abb55fd9c679625424c79c887380",
+      "relativePath": "arcified/native/production/release-ux-check/source-family-coverage.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/matrix-index.json",
+      "sha256": "7b7cd5a5cbfeddd158bad11e71d1c06e4dd96a1835cadc03a7d63bb7eb8e517d",
+      "relativePath": "arcified/native/production/release-ux-check/matrix-index.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/source-identities.json",
+      "sha256": "aa3b1b8e4cdad91c5936045a68d0b4e85340d77d7aba7e9271a6b7215a384213",
+      "relativePath": "arcified/native/production/release-ux-check/source-identities.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/authority-snapshot.json",
+      "sha256": "9c4e956d475d602cb48daed1c70578880210494c3b8c80738c35aee5c70b0a85",
+      "relativePath": "arcified/native/production/release-ux-check/authority-snapshot.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/README.md",
+      "sha256": "6bd97db41b2bd2864bc1507ac1e66c6e995d4333f73717a36e934582fd9b336a",
+      "relativePath": "arcified/native/production/release-ux-check/README.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/checks.json",
+      "sha256": "68c4a0c878c1b4a292bc3c9b30c167a5e2fb21200010f5229ad6511ab4605f1b",
+      "relativePath": "arcified/native/production/release-ux-check/checks.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "release-ux-check",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/release-ux-check/result.json",
+      "sha256": "ed929bb72060527c06b104b573a3eda615daacd40b32f5ac92d2f35d1b66990d",
+      "relativePath": "arcified/native/production/release-ux-check/result.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "automation-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/automation-contract/ownership.json",
+      "sha256": "9619fc64aa7fffbc86f0ad8c95c2cc491610c1b138f0b5d353dc5b06ab09256b",
+      "relativePath": "arcified/native/production/automation-contract/ownership.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "automation-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/automation-contract/decision.md",
+      "sha256": "b90ad4c83c38c396c296d27664e84a04cd4fa2c5879c12f684fb21a7ecb756b3",
+      "relativePath": "arcified/native/production/automation-contract/decision.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "automation-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/automation-contract/sources.json",
+      "sha256": "bc50e42987fb5b37c77d9e6bc7afd4358916dfb07a79a530522c7fe0bc961efd",
+      "relativePath": "arcified/native/production/automation-contract/sources.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "automation-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/automation-contract/prepared-source.sha256",
+      "sha256": "570e939a7f980e018e2440ded8f56f39d6e8c92aa8e102ca416b795b7f855a60",
+      "relativePath": "arcified/native/production/automation-contract/prepared-source.sha256",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "automation-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/automation-contract/verification.md",
+      "sha256": "cac6f1648c45ceabbffe39f6983718cbdee0d122b7d873c303b044f60844677b",
+      "relativePath": "arcified/native/production/automation-contract/verification.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "automation-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/automation-contract/result.json",
+      "sha256": "c58ce8dd41b18de4e3adef581d675d4fbe8217036866f8fff132d3cf40b896f3",
+      "relativePath": "arcified/native/production/automation-contract/result.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "integration-policy",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/ownership.json",
+      "sha256": "7848029e1f40916f833385e2f8aff59b0efbd8479547653406ac0ae6854657ed",
+      "relativePath": "arcified/native/production/integration-policy/ownership.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "integration-policy",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/authority.json",
+      "sha256": "a95ae95dd7bb810eb431d2a4d9275e95913b2f52349128eff2f79e21755d7ef5",
+      "relativePath": "arcified/native/production/integration-policy/authority.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "integration-policy",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/sources.json",
+      "sha256": "2e1feaa0453cce5cc7694f80b5d848d458b52d789ab39f7f9c6bd897c165921b",
+      "relativePath": "arcified/native/production/integration-policy/sources.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "integration-policy",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/decision.md",
+      "sha256": "d41d886b70581611161a1d8e503078d9c4833e2d4cc3c90c5bdf63d1758a7f9b",
+      "relativePath": "arcified/native/production/integration-policy/decision.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "integration-policy",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/verification.md",
+      "sha256": "df2e0a453d91d6fe1199b669c47e651aea849202428d98b155e4bf0f7dd646c3",
+      "relativePath": "arcified/native/production/integration-policy/verification.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "integration-policy",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/result.json",
+      "sha256": "16fce05efaa0d206b7e1e258be9384aba6476832fc2bd6d5911eb2d6f7a406d1",
+      "relativePath": "arcified/native/production/integration-policy/result.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "integration-policy",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/integration-policy/checks.json",
+      "sha256": "de07c97e84de68dbd21298a5fabab5c116b7b2d6e213178eeaaf882e897b8544",
+      "relativePath": "arcified/native/production/integration-policy/checks.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "quote-card-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/quote-card-decision/ownership.json",
+      "sha256": "6718488aa38ed5534be2e06019abb6c97dc770bddfb825608c0470b6c3e75ab0",
+      "relativePath": "arcified/native/production/quote-card-decision/ownership.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "quote-card-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/quote-card-decision/authoritative-issue.json",
+      "sha256": "12fa93cfbead4591d1c20d286d28cff63f3e20ff930e8da128a0d2aac3108b92",
+      "relativePath": "arcified/native/production/quote-card-decision/authoritative-issue.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "quote-card-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/quote-card-decision/sources.json",
+      "sha256": "d3cce7aee3aacdd402eda7d23890bf6715cd0554188bf387aaa2c37a78c2ef5e",
+      "relativePath": "arcified/native/production/quote-card-decision/sources.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "quote-card-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/quote-card-decision/source-identities.json",
+      "sha256": "6a2c34ccbabf2f77e5e5fdc5814b7cf5cd3596796242cf304e0076ca0e6443ec",
+      "relativePath": "arcified/native/production/quote-card-decision/source-identities.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "quote-card-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/quote-card-decision/decision.md",
+      "sha256": "8591f4a0e4880ec93e0855a5d7f3f232e628aadab031fca388060fcbcd397fc5",
+      "relativePath": "arcified/native/production/quote-card-decision/decision.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "quote-card-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/quote-card-decision/result.json",
+      "sha256": "57b2800ec19f9e866dfdc2a12f854db2f02371e3e9522cd6f1d1caf84ea09221",
+      "relativePath": "arcified/native/production/quote-card-decision/result.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "quote-card-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/quote-card-decision/verification.md",
+      "sha256": "4e03a5aeccb90f9e360ada2de80b39047adb0d215992f9e03f834842fdc3e0e3",
+      "relativePath": "arcified/native/production/quote-card-decision/verification.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "favorite-previews-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/favorite-previews-decision/ownership.json",
+      "sha256": "a7254824c8be29000a0749d3d339919a498bd7020fa180c6e3b3bbf4406b2ffd",
+      "relativePath": "arcified/native/production/favorite-previews-decision/ownership.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "favorite-previews-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/favorite-previews-decision/assignment.snapshot.json",
+      "sha256": "cd39b7c38bab166935d6298455e92ac65a4d028cf029534a5671910b22872ce4",
+      "relativePath": "arcified/native/production/favorite-previews-decision/assignment.snapshot.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "favorite-previews-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/favorite-previews-decision/source-identities.json",
+      "sha256": "514b84c1c8ae1e25369f75f78b99d74450a0f62f5698c366567f88b3a3ef891f",
+      "relativePath": "arcified/native/production/favorite-previews-decision/source-identities.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "favorite-previews-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/favorite-previews-decision/inputs.sha256",
+      "sha256": "88df40dbb5ab7320e843cc04ac15ecdfbcf8b24ee1d85127c9ac82f1934f5a46",
+      "relativePath": "arcified/native/production/favorite-previews-decision/inputs.sha256",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "favorite-previews-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/favorite-previews-decision/sources.json",
+      "sha256": "26bdda95775f64599502364fd93641a2783eba7a80c4dcb4bbb8d18fb5777934",
+      "relativePath": "arcified/native/production/favorite-previews-decision/sources.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "favorite-previews-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/favorite-previews-decision/decision.md",
+      "sha256": "d3975b021fd1c81fbcdaccf6808b0a7336ad09c86e833f1ea70315fe1a446ea9",
+      "relativePath": "arcified/native/production/favorite-previews-decision/decision.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "favorite-previews-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/favorite-previews-decision/checks.md",
+      "sha256": "81320d6c84b731f321e51db91455fef3f3b832bd1afe0a7de916ce88a2c05526",
+      "relativePath": "arcified/native/production/favorite-previews-decision/checks.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "favorite-previews-decision",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/favorite-previews-decision/result.json",
+      "sha256": "b816249e9b7f9262a0ae4a0c9d74587d70ce3b98e7d904f4342108bce133d848",
+      "relativePath": "arcified/native/production/favorite-previews-decision/result.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/ownership.json",
+      "sha256": "3ae4200aa4385bf89155e3de70ed3580af9f3ab580d4c94e1103ce632b7b65cf",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/ownership.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/arc-download.html",
+      "sha256": "6d607bd8eaa0ee9228d3e31280487520ebbe6e29d4e7e832221221e983c118fe",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/arc-download.html",
+      "storage": "LOCAL_IGNORED_ACQUISITION_INPUT"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/dia-windows.html",
+      "sha256": "3315c1ece7f775369377db706c43c33dbca28c3ad2a57d06a0c4c4b2a02196b2",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/dia-windows.html",
+      "storage": "LOCAL_IGNORED_ACQUISITION_INPUT"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/ArcInstaller.exe",
+      "sha256": "971bc17eae07151311a9ef3fab3c9bb67cdbeb4702ceb6eb0285b4d0b9a10b16",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/ArcInstaller.exe",
+      "storage": "LOCAL_IGNORED_ACQUISITION_INPUT"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/DiaInstaller.exe",
+      "sha256": "b868db670fe0c179f63c991602d4e187824bc656af17bc6684bca35df3355e3d",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/DiaInstaller.exe",
+      "storage": "LOCAL_IGNORED_ACQUISITION_INPUT"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/Arc.x64.appinstaller",
+      "sha256": "8c7e4d5556c502462add16bd90a61668200f21a8d137a38a75403980f1f78d89",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/Arc.x64.appinstaller",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/Arc.arm64.appinstaller",
+      "sha256": "adcfcc64ae6cf273da79930a4e1664e65b8158e9259bac91e018dc3102a5040c",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/Arc.arm64.appinstaller",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/Dia.x64.appinstaller",
+      "sha256": "059f7cbda78f27d02e9b59b0e4c99d74a665427792592e09e73f387eff4e6535",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/Dia.x64.appinstaller",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/Dia.arm64.appinstaller",
+      "sha256": "8ba337792c5342f63728e6e1dbc425bc88c96d4fe1ab886515528e9fbf37147f",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/Dia.arm64.appinstaller",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/authority.json",
+      "sha256": "79909756dc54e08bcd29a519e0cc2d88c80d24560294c79804dde9c7a8dd3e24",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/authority.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/acquisition.json",
+      "sha256": "09aff5eb357bb1d329c74c982f9aaac99de09420edf9e48e703285e63d3ccebb",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/acquisition.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/rea-evidence.json",
+      "sha256": "5d8864ef2a1611f8924d162709aac1d4e8be34d00aec9eda2875189b736d0510",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/rea-evidence.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/.gitignore",
+      "sha256": "4e05c427169329d6e076cf8dfd268ea5ceb644cc20bb79e071cb5cce7ec31e0a",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/.gitignore",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/README.md",
+      "sha256": "e6d2482cdb213d55ecc0cd88327687fdc44338876a14f6b00fd133e711d12d8c",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/README.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/source-bytes.sha256",
+      "sha256": "cddec9d90eee2daab88bc8b62d50ef674db1f75fceef3bc85c31e1b88ee5a51f",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/source-bytes.sha256",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/checks.json",
+      "sha256": "a0f91a4f630c1c7eb1ba38680912018209494ec977ed521df1804e3231a365ea",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/checks.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/reference-windows-artifacts/result.json",
+      "sha256": "0fb5fa41e39cae88fdda52d739f82a9edbdd65566cda7fbc09439244a0256ce8",
+      "relativePath": "arcified/native/production/reference-windows-artifacts/result.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "focus-routing-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/focus-routing-contract/ownership.json",
+      "sha256": "33d98514a95d6011006a2df17e67978e46817f11a030461b42a3cb8ed5d59d31",
+      "relativePath": "arcified/native/production/focus-routing-contract/ownership.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "focus-routing-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/focus-routing-contract/authority.json",
+      "sha256": "8a5658555706f093541f3947fb586baf9b7de607fbb6e893e4deaa46162e3886",
+      "relativePath": "arcified/native/production/focus-routing-contract/authority.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "focus-routing-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/focus-routing-contract/sources.json",
+      "sha256": "47afd19bc97e309fec72f07dae577cf30cb09f050419f0b2557fb67fa7ae7ab2",
+      "relativePath": "arcified/native/production/focus-routing-contract/sources.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "focus-routing-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/focus-routing-contract/identities.sha256",
+      "sha256": "0f319de075c4f9914443ae4720f6f26ea9a4a973ebe21f93cdebb1b442bf4df3",
+      "relativePath": "arcified/native/production/focus-routing-contract/identities.sha256",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "focus-routing-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/focus-routing-contract/routing-fixtures.json",
+      "sha256": "5226cc6e0aa012a14041ef2dd4d4b23a6cc4f8cdff1d7a0c9e6ac1127f5970f1",
+      "relativePath": "arcified/native/production/focus-routing-contract/routing-fixtures.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "focus-routing-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/focus-routing-contract/decision.md",
+      "sha256": "ce3ce49000bf1cc031b02a66fe71a80b7169aefc10f490ba0fd1a85e633946a8",
+      "relativePath": "arcified/native/production/focus-routing-contract/decision.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "focus-routing-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/focus-routing-contract/verify-packet.mjs",
+      "sha256": "c8e9cd067ce42019c06f9f5cc796320aa1514adcff12da492f346ae251ac7e42",
+      "relativePath": "arcified/native/production/focus-routing-contract/verify-packet.mjs",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "focus-routing-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/focus-routing-contract/result.json",
+      "sha256": "14280bc80fd0e762a0a49fe3558207745b3434a4d9dd17fa14f32da24bd0dbec",
+      "relativePath": "arcified/native/production/focus-routing-contract/result.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "focus-routing-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/focus-routing-contract/checks.md",
+      "sha256": "4ae4ab1510d657d0eb2a6417d7af4660da7be44d5f64e8fa9ba54f7597b9e006",
+      "relativePath": "arcified/native/production/focus-routing-contract/checks.md",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "focus-routing-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/focus-routing-contract/compatibility-consolidation.json",
+      "sha256": "3d7d6706a9c21c6cdb400f6cc1d095eae858778053b7703b1c1562cab2f3ea3a",
+      "relativePath": "arcified/native/production/focus-routing-contract/compatibility-consolidation.json",
+      "storage": "COMMITTED_PACKET_FILE"
+    },
+    {
+      "key": "focus-routing-contract",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/focus-routing-contract/compatibility-inputs.sha256",
+      "sha256": "8190e07975d015cad3f5b9ebbf1b62df561a8ede05cbf3c039a76af7a9a63047",
+      "relativePath": "arcified/native/production/focus-routing-contract/compatibility-inputs.sha256",
+      "storage": "COMMITTED_PACKET_FILE"
+    }
+  ],
+  "matched": 120,
+  "mismatches": []
+}

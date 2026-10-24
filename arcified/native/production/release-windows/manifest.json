@@ -1,0 +1,125 @@
+{
+  "license": "GPL-3.0-only",
+  "issue": {
+    "key": "release-windows",
+    "number": 132,
+    "url": "https://github.com/Timpan4/helium-arcified/issues/132",
+    "primaryCommandId": 40797
+  },
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "status": "native_source_packet_ready_for_coordinator_review",
+  "nativeAcceptance": "OPEN",
+  "acceptedIssueCriteria": 0,
+  "totalIssueCriteria": 3,
+  "preparedSource": {
+    "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+    "access": "read_only",
+    "chromiumVersion": "155.0.8059.79",
+    "heliumVersion": "0.19.2.1"
+  },
+  "implementation": "Validate the documented version/Installer/setup.exe registration layout before deriving a Windows install target. Preserve existing fallback semantics, case-insensitive names and registry/setup version skew.",
+  "patch": {
+    "path": "release-windows.patch",
+    "sha256": "9541372be1f2b6d7309c9ffc5a81ef6ff1c177568e56ca8ad7d3b4d8708cd1f0",
+    "registeredInSeries": false
+  },
+  "sourceFiles": [
+    {
+      "path": "chrome/installer/util/helper.cc",
+      "baseSha256": "0b780a6da731723090d7570147b7a391335622f7bec095659777c98f07445309",
+      "resultSha256": "a3176bc8daeddb71d6cdcaecf1059bacb759021f90a1dab129c17b021f4259b5"
+    },
+    {
+      "path": "chrome/installer/util/helper.h",
+      "baseSha256": "4b6d074765edecc89717d994d073651800d7f80095558f8421468fda19004452",
+      "resultSha256": "8d60a2d5e772da4e003934981f7c077141090dbab8b1e5a81ed52fd6dc52fb49"
+    },
+    {
+      "path": "chrome/installer/util/helper_unittest.cc",
+      "baseSha256": "81364c7cfa2fc0cb3d223bfc97a33a6481c2549a04fe66042f94991c33ed7d4a",
+      "resultSha256": "b2d2cb4c1c85c0074dd433840eb68c12ef897f46467befd243127a9354a4dd50"
+    }
+  ],
+  "testRegistration": {
+    "source": "chrome/installer/util/helper_unittest.cc",
+    "target": "//chrome/installer/util:installer_util_unittests",
+    "condition": "is_win",
+    "evidence": "evidence/installer-util.BUILD.gn",
+    "evidenceSha256": "277e936f8636e3fa86ff1fed3fb979604dc775473c63537add5a9938495c62e6",
+    "registrationChangeRequired": false,
+    "addedTests": [
+      "GetInstalledDirectoryTest.RejectsMalformedRegisteredSetupLayout",
+      "GetInstalledDirectoryTest.AcceptsCaseAndRegisteredVersionSkew",
+      "GetChromeInstallPathWithPrefsTest.MalformedRegistrationUsesNormalTarget"
+    ],
+    "bindings": "Existing native ProductState, base::win::RegKey, RegistryOverrideManager and real temporary directories. No fake host, service, store or Model::OpenItem.",
+    "execution": "NOT_RUN",
+    "filter": "*GetInstalledDirectoryTest*:*GetChromeInstallPathWithPrefsTest*"
+  },
+  "controls": [
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/release/assignment.json",
+      "sha256": "bb1c1827ae0ed40d40009544344309f5f9a3afe5293ab44acead3cfb18ccb355"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+      "sha256": "aedebe1a338bb81f923b7b954be0f74fde994f836decc1e0a48e42b6ad5c2b93"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md",
+      "sha256": "244488864d15d093f7f80e1cc40f490a979454e2a8e74db438c7e51283518a1c"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md",
+      "sha256": "e5951ba265be3587cb1df8f2ab73ce6768071ac55b8d481240ed57819b39ab56"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json",
+      "sha256": "dae2aed7885b1f03f5f96a1285265a1189b8776a6472880c0f12c94de7f7ad02"
+    }
+  ],
+  "acceptance": [
+    {
+      "criterion": "Use authorized signing/release infrastructure and verify package signatures.",
+      "status": "OPEN",
+      "required": "Owner-approved signing/release ownership and expected signer identity, approved package format/scope, actual artifact and installed-binary OS trust verification."
+    },
+    {
+      "criterion": "Test clean install, default-browser registration, upgrade and retained Profile data.",
+      "status": "OPEN",
+      "required": "Native Windows prerequisite and approved distinct identity, real Windows clean install/default-browser/upgrade tests and retained Profile/workspace evidence after schema/durability prerequisites."
+    },
+    {
+      "criterion": "Keep rollback/downgrade behavior explicit and surface update/security failures without bypassing OS trust.",
+      "status": "OPEN",
+      "required": "Owner rollback/downgrade and data disposition decisions, schema compatibility contract and real failure/restart/security UX checks."
+    }
+  ],
+  "openPrerequisites": [
+    "native-windows",
+    "session-durability",
+    "schema-migrations",
+    "same-window multi-Profile proof",
+    "saved-page handoff proof"
+  ],
+  "ownerDecisionsNeeded": [
+    "Supported Windows package format and per-user/per-machine installation scope.",
+    "Fork-owned Windows application identity and registration namespace, including applicable product paths, ProgIDs, AppUserModelID, protocols and service/COM identifiers.",
+    "Authorized release/signing infrastructure and expected publisher/signing identity with credential custody.",
+    "Rollback/downgrade compatibility and retained-data disposition, including uninstall/cleanup choices."
+  ],
+  "unchangedContracts": [
+    "lifecycle Model",
+    "metadata/codec",
+    "command targets",
+    "private/download classifiers",
+    "Library 40701"
+  ],
+  "commands": {
+    "legacyAdded": false,
+    "actionItemAdded": false,
+    "note": "Installer utility work needs no new browser command. Reserved 40797 is unused; no ActionItem mapping or IDS strings are introduced."
+  },
+  "checkResults": "CHECKS.md",
+  "integrationInstructions": "README.md"
+}

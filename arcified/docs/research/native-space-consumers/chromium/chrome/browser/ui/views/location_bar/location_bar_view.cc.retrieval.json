@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/views/location_bar/location_bar_view.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/location_bar/location_bar_view.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:23.762Z",
+  "kind": "file",
+  "bytes": 96270,
+  "sha256": "96da75b7361a6424fb39f8fbd909fb03e6a9cd7089925a766e7339b91173a461",
+  "gitBlob": "9251f8590b1ad0ee0db49d3e013d946162ca02a8",
+  "lines": 2423,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

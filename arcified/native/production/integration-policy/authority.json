@@ -1,0 +1,76 @@
+{
+  "issueKey": "integration-policy",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/26",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "assignmentSource": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+  "issue": {
+    "key": "integration-policy",
+    "title": "Choose account scopes for live folder and calendar integrations",
+    "area": "research",
+    "build": "Record owner-approved providers, authentication and data access for optional GitHub and calendar workflows.",
+    "accept": [
+      "Name supported providers/domains and scopes, account/Profile ownership, storage, revocation and refresh policy.",
+      "Define stale/offline states and native notification privacy without inventing polling intervals or quotas.",
+      "Record owner approval or deferral in this issue before connecting real accounts or services."
+    ],
+    "blocked": [],
+    "sources": [
+      "arc-live",
+      "arc-calendar"
+    ],
+    "sourceUrls": [
+      "https://resources.arc.net/hc/en-us/articles/22731612065815-Automatic-GitHub-Live-Folders",
+      "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+      "https://resources.arc.net/hc/en-us/articles/24158102740631-Live-Calendars"
+    ],
+    "phase": "Evidence, decisions and gates",
+    "readiness": "Publish as an owner decision, not an automatically accepted implementation.",
+    "kind": "decision",
+    "disposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+    "referencePlatforms": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+    "referenceNote": "The linked reference documents/release histories describe this workflow family. Acceptance below specifies the intended improved Arcified behavior.",
+    "openQuestions": "The fork owner records the named scope/security/service decision before implementation or external access.",
+    "priority": "Before AI",
+    "number": 26,
+    "url": "https://github.com/Timpan4/helium-arcified/issues/26",
+    "primaryCommandId": 40751
+  },
+  "manifestSource": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+  "manifestIssue": {
+    "key": "integration-policy",
+    "url": "https://github.com/Timpan4/helium-arcified/issues/26",
+    "kind": "decision",
+    "commandId": 40751,
+    "primaryTaskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-integration-policy-primary-v1",
+    "primaryThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-integration-policy-primary-v1",
+    "assignmentStatus": "running",
+    "actualSettingsVerified": true
+  },
+  "authoritySummary": {
+    "foundation": "Existing reviewed pure components do not prove native UX.",
+    "profile": "Each Space chooses one Profile; multiple Spaces may share a Profile. Sign-ins, site settings and Favorites are Profile-scoped.",
+    "nativeGates": [
+      "Same-window multi-Profile switching",
+      "Live saved-page handoff preserving actual Profile and live state"
+    ],
+    "policyOpen": [
+      "Activity and cleanup",
+      "Destructive actions",
+      "Populated cross-Profile migration and source disposition",
+      "Optional provider approval"
+    ],
+    "build": "Prepared Chromium tree is read-only. Root owns active baseline compilation and native acceptance.",
+    "command": "40751 is reserved for integration-policy. No command is implemented by this packet. Library remains 40701.",
+    "relatedAreaLeaf": "focus-routing-contract is a separate primary's packet, not written here."
+  },
+  "ownerApproval": {
+    "status": "NOT_RECORDED_IN_READ_AUTHORITY",
+    "issueCommentsFetched": false,
+    "note": "No approval is inferred from assignment, documentary Arc behavior or recommended options. Coordinator must obtain and record an issue decision."
+  },
+  "nativePatch": {
+    "status": "INAPPLICABLE_DECISION_LEAF",
+    "reason": "Provider scope, storage, notification and approval choices remain open. This packet does not enable provider code or native commands."
+  },
+  "nativeAcceptance": "OPEN"
+}

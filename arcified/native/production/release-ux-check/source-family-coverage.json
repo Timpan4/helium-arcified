@@ -1,0 +1,4853 @@
+{
+  "issueKey": "release-ux-check",
+  "nativeAcceptance": "OPEN",
+  "source": "coverage-matrix.md and backlog.json at identities recorded in source-identities.json",
+  "externalRetrieval": "No new external retrieval. Source URLs are retained from the root's 2026-10-23 research; current remote contents and reference app runtime were not revalidated.",
+  "sourceFamilies": [
+    {
+      "key": "fork",
+      "urls": [
+        "https://github.com/Timpan4/helium-arcified/tree/main/arcified",
+        "https://github.com/Timpan4/helium-arcified/blob/main/patches/series"
+      ],
+      "issueKeys": [
+        "native-linux",
+        "native-windows",
+        "native-macos",
+        "spaces",
+        "session-durability",
+        "export",
+        "prototype-migration",
+        "accessibility",
+        "ime-localization",
+        "window-chrome",
+        "site-controls",
+        "local-assistant",
+        "context-selector",
+        "remote-provider",
+        "streaming",
+        "citations",
+        "page-reading",
+        "skills",
+        "read-tools",
+        "write-tools",
+        "ai-boundary",
+        "chat-history",
+        "memory-decision",
+        "perf-baseline",
+        "perf-activation",
+        "perf-startup",
+        "perf-discard",
+        "perf-profiles",
+        "bfcache",
+        "perf-hidden",
+        "perf-layout",
+        "perf-leaks",
+        "perf-energy",
+        "perf-ai",
+        "crashed-tab",
+        "private-browsing",
+        "compatibility",
+        "release-linux",
+        "release-windows",
+        "release-macos",
+        "engine-updates",
+        "release-ux-check",
+        "workspace-import",
+        "extension-workflow",
+        "web-apps",
+        "credentials-flow",
+        "print-flow",
+        "update-linux",
+        "update-windows",
+        "update-macos",
+        "assistant-consent-contract",
+        "schema-migrations",
+        "security-surfaces",
+        "data-flow-controls",
+        "perf-measure-linux",
+        "perf-measure-windows",
+        "perf-measure-macos"
+      ],
+      "scenarioIds": [
+        "native-linux/criterion/1",
+        "native-linux/criterion/2",
+        "native-linux/criterion/3",
+        "native-windows/criterion/1",
+        "native-windows/criterion/2",
+        "native-windows/criterion/3",
+        "native-macos/criterion/1",
+        "native-macos/criterion/2",
+        "native-macos/criterion/3",
+        "spaces/criterion/1",
+        "spaces/criterion/2",
+        "spaces/criterion/3",
+        "session-durability/criterion/1",
+        "session-durability/criterion/2",
+        "session-durability/criterion/3",
+        "export/criterion/1",
+        "export/criterion/2",
+        "export/criterion/3",
+        "prototype-migration/criterion/1",
+        "prototype-migration/criterion/2",
+        "prototype-migration/criterion/3",
+        "prototype-migration/criterion/4",
+        "accessibility/criterion/1",
+        "accessibility/criterion/2",
+        "accessibility/criterion/3",
+        "ime-localization/criterion/1",
+        "ime-localization/criterion/2",
+        "ime-localization/criterion/3",
+        "window-chrome/criterion/1",
+        "window-chrome/criterion/2",
+        "window-chrome/criterion/3",
+        "site-controls/criterion/1",
+        "site-controls/criterion/2",
+        "site-controls/criterion/3",
+        "local-assistant/criterion/1",
+        "local-assistant/criterion/2",
+        "local-assistant/criterion/3",
+        "local-assistant/criterion/4",
+        "context-selector/criterion/1",
+        "context-selector/criterion/2",
+        "context-selector/criterion/3",
+        "remote-provider/criterion/1",
+        "remote-provider/criterion/2",
+        "remote-provider/criterion/3",
+        "remote-provider/criterion/4",
+        "remote-provider/criterion/5",
+        "streaming/criterion/1",
+        "streaming/criterion/2",
+        "streaming/criterion/3",
+        "citations/criterion/1",
+        "citations/criterion/2",
+        "citations/criterion/3",
+        "page-reading/criterion/1",
+        "page-reading/criterion/2",
+        "page-reading/criterion/3",
+        "page-reading/criterion/4",
+        "skills/criterion/1",
+        "skills/criterion/2",
+        "skills/criterion/3",
+        "skills/criterion/4",
+        "read-tools/criterion/1",
+        "read-tools/criterion/2",
+        "read-tools/criterion/3",
+        "read-tools/criterion/4",
+        "write-tools/criterion/1",
+        "write-tools/criterion/2",
+        "write-tools/criterion/3",
+        "write-tools/criterion/4",
+        "write-tools/criterion/5",
+        "ai-boundary/criterion/1",
+        "ai-boundary/criterion/2",
+        "ai-boundary/criterion/3",
+        "ai-boundary/criterion/4",
+        "chat-history/criterion/1",
+        "chat-history/criterion/2",
+        "chat-history/criterion/3",
+        "memory-decision/criterion/1",
+        "memory-decision/criterion/2",
+        "memory-decision/criterion/3",
+        "perf-baseline/criterion/1",
+        "perf-baseline/criterion/2",
+        "perf-baseline/criterion/3",
+        "perf-activation/criterion/1",
+        "perf-activation/criterion/2",
+        "perf-activation/criterion/3",
+        "perf-activation/criterion/4",
+        "perf-startup/criterion/1",
+        "perf-startup/criterion/2",
+        "perf-startup/criterion/3",
+        "perf-startup/criterion/4",
+        "perf-discard/criterion/1",
+        "perf-discard/criterion/2",
+        "perf-discard/criterion/3",
+        "perf-profiles/criterion/1",
+        "perf-profiles/criterion/2",
+        "perf-profiles/criterion/3",
+        "perf-profiles/criterion/4",
+        "perf-profiles/criterion/5",
+        "bfcache/criterion/1",
+        "bfcache/criterion/2",
+        "bfcache/criterion/3",
+        "perf-hidden/criterion/1",
+        "perf-hidden/criterion/2",
+        "perf-hidden/criterion/3",
+        "perf-hidden/criterion/4",
+        "perf-hidden/criterion/5",
+        "perf-layout/criterion/1",
+        "perf-layout/criterion/2",
+        "perf-layout/criterion/3",
+        "perf-layout/criterion/4",
+        "perf-layout/criterion/5",
+        "perf-leaks/criterion/1",
+        "perf-leaks/criterion/2",
+        "perf-leaks/criterion/3",
+        "perf-energy/criterion/1",
+        "perf-energy/criterion/2",
+        "perf-energy/criterion/3",
+        "perf-ai/criterion/1",
+        "perf-ai/criterion/2",
+        "perf-ai/criterion/3",
+        "crashed-tab/criterion/1",
+        "crashed-tab/criterion/2",
+        "crashed-tab/criterion/3",
+        "private-browsing/criterion/1",
+        "private-browsing/criterion/2",
+        "private-browsing/criterion/3",
+        "compatibility/criterion/1",
+        "compatibility/criterion/2",
+        "compatibility/criterion/3",
+        "release-linux/criterion/1",
+        "release-linux/criterion/2",
+        "release-linux/criterion/3",
+        "release-windows/criterion/1",
+        "release-windows/criterion/2",
+        "release-windows/criterion/3",
+        "release-macos/criterion/1",
+        "release-macos/criterion/2",
+        "release-macos/criterion/3",
+        "engine-updates/criterion/1",
+        "engine-updates/criterion/2",
+        "engine-updates/criterion/3",
+        "release-ux-check/criterion/1",
+        "release-ux-check/criterion/2",
+        "release-ux-check/criterion/3",
+        "release-ux-check/criterion/4",
+        "workspace-import/criterion/1",
+        "workspace-import/criterion/2",
+        "workspace-import/criterion/3",
+        "workspace-import/criterion/4",
+        "workspace-import/criterion/5",
+        "extension-workflow/criterion/1",
+        "extension-workflow/criterion/2",
+        "extension-workflow/criterion/3",
+        "web-apps/criterion/1",
+        "web-apps/criterion/2",
+        "web-apps/criterion/3",
+        "credentials-flow/criterion/1",
+        "credentials-flow/criterion/2",
+        "credentials-flow/criterion/3",
+        "print-flow/criterion/1",
+        "print-flow/criterion/2",
+        "print-flow/criterion/3",
+        "update-linux/criterion/1",
+        "update-linux/criterion/2",
+        "update-linux/criterion/3",
+        "update-windows/criterion/1",
+        "update-windows/criterion/2",
+        "update-windows/criterion/3",
+        "update-macos/criterion/1",
+        "update-macos/criterion/2",
+        "update-macos/criterion/3",
+        "assistant-consent-contract/criterion/1",
+        "assistant-consent-contract/criterion/2",
+        "assistant-consent-contract/criterion/3",
+        "assistant-consent-contract/criterion/4",
+        "schema-migrations/criterion/1",
+        "schema-migrations/criterion/2",
+        "schema-migrations/criterion/3",
+        "security-surfaces/criterion/1",
+        "security-surfaces/criterion/2",
+        "security-surfaces/criterion/3",
+        "data-flow-controls/criterion/1",
+        "data-flow-controls/criterion/2",
+        "data-flow-controls/criterion/3",
+        "data-flow-controls/criterion/4",
+        "perf-measure-linux/criterion/1",
+        "perf-measure-linux/criterion/2",
+        "perf-measure-linux/criterion/3",
+        "perf-measure-windows/criterion/1",
+        "perf-measure-windows/criterion/2",
+        "perf-measure-windows/criterion/3",
+        "perf-measure-macos/criterion/1",
+        "perf-measure-macos/criterion/2",
+        "perf-measure-macos/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+        "https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2026-Release-Notes"
+      ],
+      "issueKeys": [],
+      "scenarioIds": [],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-history",
+      "urls": [
+        "https://start.arc.net/release-notes",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "retirements",
+        "favorite-previews-decision",
+        "gesture-navigation",
+        "quote-card-decision",
+        "reference-windows-artifacts"
+      ],
+      "scenarioIds": [
+        "retirements/criterion/1",
+        "retirements/criterion/2",
+        "retirements/criterion/3",
+        "retirements/criterion/4",
+        "favorite-previews-decision/criterion/1",
+        "favorite-previews-decision/criterion/2",
+        "favorite-previews-decision/criterion/3",
+        "gesture-navigation/criterion/1",
+        "gesture-navigation/criterion/2",
+        "gesture-navigation/criterion/3",
+        "quote-card-decision/criterion/1",
+        "quote-card-decision/criterion/2",
+        "quote-card-decision/criterion/3",
+        "reference-windows-artifacts/criterion/1",
+        "reference-windows-artifacts/criterion/2",
+        "reference-windows-artifacts/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-spaces",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/19228064149143-Spaces-Distinct-Browsing-Areas",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "spaces",
+        "space-management"
+      ],
+      "scenarioIds": [
+        "spaces/criterion/1",
+        "spaces/criterion/2",
+        "spaces/criterion/3",
+        "space-management/criterion/1",
+        "space-management/criterion/2",
+        "space-management/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-profiles",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/19227964556183-Profiles-Separate-Work-Personal-Browsing"
+      ],
+      "issueKeys": [
+        "profiles",
+        "private-browsing",
+        "lifecycle-contract",
+        "profile-safety",
+        "workspace-organizer"
+      ],
+      "scenarioIds": [
+        "profiles/criterion/1",
+        "profiles/criterion/2",
+        "profiles/criterion/3",
+        "private-browsing/criterion/1",
+        "private-browsing/criterion/2",
+        "private-browsing/criterion/3",
+        "lifecycle-contract/criterion/1",
+        "lifecycle-contract/criterion/2",
+        "lifecycle-contract/criterion/3",
+        "lifecycle-contract/criterion/4",
+        "lifecycle-contract/criterion/5",
+        "profile-safety/criterion/1",
+        "profile-safety/criterion/2",
+        "profile-safety/criterion/3",
+        "workspace-organizer/criterion/1",
+        "workspace-organizer/criterion/2",
+        "workspace-organizer/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-tabs",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/19231060187159-Pinned-Tabs-Tabs-you-want-to-stick-around",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+        "https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "temporary-tabs",
+        "pins",
+        "multi-select",
+        "tab-status",
+        "lifecycle-contract",
+        "pin-section-controls",
+        "bulk-close",
+        "manual-cleanup"
+      ],
+      "scenarioIds": [
+        "temporary-tabs/criterion/1",
+        "temporary-tabs/criterion/2",
+        "temporary-tabs/criterion/3",
+        "pins/criterion/1",
+        "pins/criterion/2",
+        "pins/criterion/3",
+        "pins/criterion/4",
+        "multi-select/criterion/1",
+        "multi-select/criterion/2",
+        "multi-select/criterion/3",
+        "tab-status/criterion/1",
+        "tab-status/criterion/2",
+        "tab-status/criterion/3",
+        "lifecycle-contract/criterion/1",
+        "lifecycle-contract/criterion/2",
+        "lifecycle-contract/criterion/3",
+        "lifecycle-contract/criterion/4",
+        "lifecycle-contract/criterion/5",
+        "pin-section-controls/criterion/1",
+        "pin-section-controls/criterion/2",
+        "pin-section-controls/criterion/3",
+        "bulk-close/criterion/1",
+        "bulk-close/criterion/2",
+        "bulk-close/criterion/3",
+        "manual-cleanup/criterion/1",
+        "manual-cleanup/criterion/2",
+        "manual-cleanup/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-favorites",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/19230755904151-Favorites-Top-Tabs-Across-Every-Space"
+      ],
+      "issueKeys": [
+        "favorites"
+      ],
+      "scenarioIds": [
+        "favorites/criterion/1",
+        "favorites/criterion/2",
+        "favorites/criterion/3",
+        "favorites/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-folders",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/19228419623447-Folders-Stash-Similar-Tabs-Together",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "folders",
+        "folder-preview"
+      ],
+      "scenarioIds": [
+        "folders/criterion/1",
+        "folders/criterion/2",
+        "folders/criterion/3",
+        "folders/criterion/4",
+        "folder-preview/criterion/1",
+        "folder-preview/criterion/2",
+        "folder-preview/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-archive",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/19228855311127-Auto-Archive-Clean-as-you-go",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "archive",
+        "auto-archive",
+        "workspace-operation-journal"
+      ],
+      "scenarioIds": [
+        "archive/criterion/1",
+        "archive/criterion/2",
+        "archive/criterion/3",
+        "auto-archive/criterion/1",
+        "auto-archive/criterion/2",
+        "auto-archive/criterion/3",
+        "auto-archive/criterion/4",
+        "auto-archive/criterion/5",
+        "workspace-operation-journal/criterion/1",
+        "workspace-operation-journal/criterion/2",
+        "workspace-operation-journal/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-import",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/19335089616791-Import-Bookmarks-Logins-History-Extensions-from-Your-Previous-Browser",
+        "https://resources.arc.net/hc/en-us/articles/44413129117591-Move-from-Arc-to-Dia"
+      ],
+      "issueKeys": [
+        "export",
+        "arc-import",
+        "browser-import",
+        "onboarding",
+        "arc-import-format"
+      ],
+      "scenarioIds": [
+        "export/criterion/1",
+        "export/criterion/2",
+        "export/criterion/3",
+        "arc-import/criterion/1",
+        "arc-import/criterion/2",
+        "arc-import/criterion/3",
+        "arc-import/criterion/4",
+        "arc-import/criterion/5",
+        "arc-import/criterion/6",
+        "browser-import/criterion/1",
+        "browser-import/criterion/2",
+        "browser-import/criterion/3",
+        "browser-import/criterion/4",
+        "browser-import/criterion/5",
+        "onboarding/criterion/1",
+        "onboarding/criterion/2",
+        "onboarding/criterion/3",
+        "arc-import-format/criterion/1",
+        "arc-import-format/criterion/2",
+        "arc-import-format/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-command",
+      "urls": [
+        "https://start.arc.net/command-bar-actions",
+        "https://resources.arc.net/hc/en-us/articles/20855018192791-Site-Search-Directly-Search-any-Website",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+        "https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "command-bar",
+        "command-ranking",
+        "site-search",
+        "tab-switcher",
+        "find",
+        "saved-search",
+        "tab-order-navigation",
+        "history-controls"
+      ],
+      "scenarioIds": [
+        "command-bar/criterion/1",
+        "command-bar/criterion/2",
+        "command-bar/criterion/3",
+        "command-bar/criterion/4",
+        "command-bar/criterion/5",
+        "command-ranking/criterion/1",
+        "command-ranking/criterion/2",
+        "command-ranking/criterion/3",
+        "command-ranking/criterion/4",
+        "site-search/criterion/1",
+        "site-search/criterion/2",
+        "site-search/criterion/3",
+        "tab-switcher/criterion/1",
+        "tab-switcher/criterion/2",
+        "tab-switcher/criterion/3",
+        "find/criterion/1",
+        "find/criterion/2",
+        "find/criterion/3",
+        "saved-search/criterion/1",
+        "saved-search/criterion/2",
+        "saved-search/criterion/3",
+        "tab-order-navigation/criterion/1",
+        "tab-order-navigation/criterion/2",
+        "tab-order-navigation/criterion/3",
+        "history-controls/criterion/1",
+        "history-controls/criterion/2",
+        "history-controls/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-peek",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+        "https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "peek",
+        "peek-split-promotion",
+        "focus-routing-contract"
+      ],
+      "scenarioIds": [
+        "peek/criterion/1",
+        "peek/criterion/2",
+        "peek/criterion/3",
+        "peek/criterion/4",
+        "peek-split-promotion/criterion/1",
+        "peek-split-promotion/criterion/2",
+        "peek-split-promotion/criterion/3",
+        "focus-routing-contract/criterion/1",
+        "focus-routing-contract/criterion/2",
+        "focus-routing-contract/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-little",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+        "https://resources.arc.net/hc/en-us/articles/22932014625431-Air-Traffic-Control-Automate-Your-Link-Routing"
+      ],
+      "issueKeys": [
+        "little-arc"
+      ],
+      "scenarioIds": [
+        "little-arc/criterion/1",
+        "little-arc/criterion/2",
+        "little-arc/criterion/3",
+        "little-arc/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-routing",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/22932014625431-Air-Traffic-Control-Automate-Your-Link-Routing",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "air-traffic"
+      ],
+      "scenarioIds": [
+        "air-traffic/criterion/1",
+        "air-traffic/criterion/2",
+        "air-traffic/criterion/3",
+        "air-traffic/criterion/4",
+        "air-traffic/criterion/5"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-sidebar",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+        "https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "sidebar-layout",
+        "focus-mode",
+        "site-controls",
+        "extension-workflow",
+        "tab-layout-choice"
+      ],
+      "scenarioIds": [
+        "sidebar-layout/criterion/1",
+        "sidebar-layout/criterion/2",
+        "sidebar-layout/criterion/3",
+        "focus-mode/criterion/1",
+        "focus-mode/criterion/2",
+        "focus-mode/criterion/3",
+        "site-controls/criterion/1",
+        "site-controls/criterion/2",
+        "site-controls/criterion/3",
+        "extension-workflow/criterion/1",
+        "extension-workflow/criterion/2",
+        "extension-workflow/criterion/3",
+        "tab-layout-choice/criterion/1",
+        "tab-layout-choice/criterion/2",
+        "tab-layout-choice/criterion/3",
+        "tab-layout-choice/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-splits",
+      "urls": [
+        "https://start.arc.net/master-multitasking",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+        "https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "split-horizontal",
+        "split-vertical",
+        "bulk-split",
+        "split-persistence",
+        "split-actions",
+        "peek-split-promotion",
+        "focus-routing-contract"
+      ],
+      "scenarioIds": [
+        "split-horizontal/criterion/1",
+        "split-horizontal/criterion/2",
+        "split-horizontal/criterion/3",
+        "split-horizontal/criterion/4",
+        "split-vertical/criterion/1",
+        "split-vertical/criterion/2",
+        "split-vertical/criterion/3",
+        "bulk-split/criterion/1",
+        "bulk-split/criterion/2",
+        "bulk-split/criterion/3",
+        "split-persistence/criterion/1",
+        "split-persistence/criterion/2",
+        "split-persistence/criterion/3",
+        "split-actions/criterion/1",
+        "split-actions/criterion/2",
+        "split-actions/criterion/3",
+        "peek-split-promotion/criterion/1",
+        "peek-split-promotion/criterion/2",
+        "peek-split-promotion/criterion/3",
+        "focus-routing-contract/criterion/1",
+        "focus-routing-contract/criterion/2",
+        "focus-routing-contract/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-themes",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+        "https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "space-themes",
+        "motion"
+      ],
+      "scenarioIds": [
+        "space-themes/criterion/1",
+        "space-themes/criterion/2",
+        "space-themes/criterion/3",
+        "space-themes/criterion/4",
+        "space-themes/criterion/5",
+        "motion/criterion/1",
+        "motion/criterion/2",
+        "motion/criterion/3",
+        "motion/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-shortcuts",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/20595231349911-Keyboard-Shortcuts",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+        "https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "shortcut-settings",
+        "accessibility",
+        "settings",
+        "tab-order-navigation"
+      ],
+      "scenarioIds": [
+        "shortcut-settings/criterion/1",
+        "shortcut-settings/criterion/2",
+        "shortcut-settings/criterion/3",
+        "accessibility/criterion/1",
+        "accessibility/criterion/2",
+        "accessibility/criterion/3",
+        "settings/criterion/1",
+        "settings/criterion/2",
+        "settings/criterion/3",
+        "tab-order-navigation/criterion/1",
+        "tab-order-navigation/criterion/2",
+        "tab-order-navigation/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-windows",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+        "https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "window-ownership",
+        "tab-handoff",
+        "lifecycle-contract",
+        "blank-window",
+        "gesture-navigation"
+      ],
+      "scenarioIds": [
+        "window-ownership/criterion/1",
+        "window-ownership/criterion/2",
+        "window-ownership/criterion/3",
+        "tab-handoff/criterion/1",
+        "tab-handoff/criterion/2",
+        "tab-handoff/criterion/3",
+        "lifecycle-contract/criterion/1",
+        "lifecycle-contract/criterion/2",
+        "lifecycle-contract/criterion/3",
+        "lifecycle-contract/criterion/4",
+        "lifecycle-contract/criterion/5",
+        "blank-window/criterion/1",
+        "blank-window/criterion/2",
+        "blank-window/criterion/3",
+        "gesture-navigation/criterion/1",
+        "gesture-navigation/criterion/2",
+        "gesture-navigation/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-library",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/19230634389911-Library-A-home-for-your-downloads-archived-tabs-easels-and-more",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "library",
+        "downloads",
+        "recent-files",
+        "library-file-removal",
+        "history-controls"
+      ],
+      "scenarioIds": [
+        "library/criterion/1",
+        "library/criterion/2",
+        "library/criterion/3",
+        "library/criterion/4",
+        "downloads/criterion/1",
+        "downloads/criterion/2",
+        "downloads/criterion/3",
+        "downloads/criterion/4",
+        "recent-files/criterion/1",
+        "recent-files/criterion/2",
+        "recent-files/criterion/3",
+        "recent-files/criterion/4",
+        "library-file-removal/criterion/1",
+        "library-file-removal/criterion/2",
+        "library-file-removal/criterion/3",
+        "history-controls/criterion/1",
+        "history-controls/criterion/2",
+        "history-controls/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-capture",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/25481392111895-How-To-Take-Full-Page-Screen-Captures-in-Arc",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "capture",
+        "region-capture"
+      ],
+      "scenarioIds": [
+        "capture/criterion/1",
+        "capture/criterion/2",
+        "capture/criterion/3",
+        "capture/criterion/4",
+        "region-capture/criterion/1",
+        "region-capture/criterion/2",
+        "region-capture/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-media",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+        "https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "pip",
+        "media-controls",
+        "automatic-pip",
+        "call-controls"
+      ],
+      "scenarioIds": [
+        "pip/criterion/1",
+        "pip/criterion/2",
+        "pip/criterion/3",
+        "media-controls/criterion/1",
+        "media-controls/criterion/2",
+        "media-controls/criterion/3",
+        "automatic-pip/criterion/1",
+        "automatic-pip/criterion/2",
+        "automatic-pip/criterion/3",
+        "call-controls/criterion/1",
+        "call-controls/criterion/2",
+        "call-controls/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-developer",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/20468488031511-Developer-Mode-Instant-Dev-Tools",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "developer-mode",
+        "automation",
+        "automation-contract",
+        "browser-diagnostics"
+      ],
+      "scenarioIds": [
+        "developer-mode/criterion/1",
+        "developer-mode/criterion/2",
+        "developer-mode/criterion/3",
+        "developer-mode/criterion/4",
+        "developer-mode/criterion/5",
+        "automation/criterion/1",
+        "automation/criterion/2",
+        "automation/criterion/3",
+        "automation-contract/criterion/1",
+        "automation-contract/criterion/2",
+        "automation-contract/criterion/3",
+        "browser-diagnostics/criterion/1",
+        "browser-diagnostics/criterion/2",
+        "browser-diagnostics/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-boosts",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+        "https://resources.arc.net/hc/en-us/articles/20498377604887-Arc-for-macOS-2023-Release-Notes"
+      ],
+      "issueKeys": [
+        "boost-style",
+        "boost-zap",
+        "boost-code",
+        "boost-sharing"
+      ],
+      "scenarioIds": [
+        "boost-style/criterion/1",
+        "boost-style/criterion/2",
+        "boost-style/criterion/3",
+        "boost-zap/criterion/1",
+        "boost-zap/criterion/2",
+        "boost-zap/criterion/3",
+        "boost-code/criterion/1",
+        "boost-code/criterion/2",
+        "boost-code/criterion/3",
+        "boost-code/criterion/4",
+        "boost-sharing/criterion/1",
+        "boost-sharing/criterion/2",
+        "boost-sharing/criterion/3",
+        "boost-sharing/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-easels",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/19231142050071-Easels-Capture-Create",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "easel",
+        "live-capture",
+        "easel-drawing",
+        "shared-board",
+        "board-export",
+        "hosted-sharing",
+        "easel-collaboration-decision",
+        "board-sharing"
+      ],
+      "scenarioIds": [
+        "easel/criterion/1",
+        "easel/criterion/2",
+        "easel/criterion/3",
+        "easel/criterion/4",
+        "live-capture/criterion/1",
+        "live-capture/criterion/2",
+        "live-capture/criterion/3",
+        "live-capture/criterion/4",
+        "easel-drawing/criterion/1",
+        "easel-drawing/criterion/2",
+        "easel-drawing/criterion/3",
+        "easel-drawing/criterion/4",
+        "shared-board/criterion/1",
+        "shared-board/criterion/2",
+        "shared-board/criterion/3",
+        "board-export/criterion/1",
+        "board-export/criterion/2",
+        "board-export/criterion/3",
+        "hosted-sharing/criterion/1",
+        "hosted-sharing/criterion/2",
+        "hosted-sharing/criterion/3",
+        "easel-collaboration-decision/criterion/1",
+        "easel-collaboration-decision/criterion/2",
+        "easel-collaboration-decision/criterion/3",
+        "board-sharing/criterion/1",
+        "board-sharing/criterion/2",
+        "board-sharing/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-notes",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/19233788518039-Phasing-Out-Arc-Notes",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "notes",
+        "retirements"
+      ],
+      "scenarioIds": [
+        "notes/criterion/1",
+        "notes/criterion/2",
+        "notes/criterion/3",
+        "notes/criterion/4",
+        "retirements/criterion/1",
+        "retirements/criterion/2",
+        "retirements/criterion/3",
+        "retirements/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-sharing",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/19228534606743-Share-Spaces-Folders-Splits-with-Anyone",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "share-folders",
+        "share-quote",
+        "shared-board",
+        "hosted-sharing",
+        "quote-card-decision",
+        "board-sharing"
+      ],
+      "scenarioIds": [
+        "share-folders/criterion/1",
+        "share-folders/criterion/2",
+        "share-folders/criterion/3",
+        "share-quote/criterion/1",
+        "share-quote/criterion/2",
+        "share-quote/criterion/3",
+        "shared-board/criterion/1",
+        "shared-board/criterion/2",
+        "shared-board/criterion/3",
+        "hosted-sharing/criterion/1",
+        "hosted-sharing/criterion/2",
+        "hosted-sharing/criterion/3",
+        "quote-card-decision/criterion/1",
+        "quote-card-decision/criterion/2",
+        "quote-card-decision/criterion/3",
+        "board-sharing/criterion/1",
+        "board-sharing/criterion/2",
+        "board-sharing/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-live",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/22731612065815-Automatic-GitHub-Live-Folders",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "live-folders",
+        "integration-policy"
+      ],
+      "scenarioIds": [
+        "live-folders/criterion/1",
+        "live-folders/criterion/2",
+        "live-folders/criterion/3",
+        "integration-policy/criterion/1",
+        "integration-policy/criterion/2",
+        "integration-policy/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-calendar",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/24158102740631-Live-Calendars",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "calendar",
+        "integration-policy"
+      ],
+      "scenarioIds": [
+        "calendar/criterion/1",
+        "calendar/criterion/2",
+        "calendar/criterion/3",
+        "integration-policy/criterion/1",
+        "integration-policy/criterion/2",
+        "integration-policy/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-max",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/19335160678679-Arc-Max-Boost-Your-Browsing-with-AI",
+        "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+        "https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2026-Release-Notes"
+      ],
+      "issueKeys": [
+        "ask-page",
+        "link-summaries",
+        "tidy-titles",
+        "tidy-downloads",
+        "tidy-tabs",
+        "chat-command",
+        "instant-links"
+      ],
+      "scenarioIds": [
+        "ask-page/criterion/1",
+        "ask-page/criterion/2",
+        "ask-page/criterion/3",
+        "link-summaries/criterion/1",
+        "link-summaries/criterion/2",
+        "link-summaries/criterion/3",
+        "link-summaries/criterion/4",
+        "link-summaries/criterion/5",
+        "tidy-titles/criterion/1",
+        "tidy-titles/criterion/2",
+        "tidy-titles/criterion/3",
+        "tidy-downloads/criterion/1",
+        "tidy-downloads/criterion/2",
+        "tidy-downloads/criterion/3",
+        "tidy-tabs/criterion/1",
+        "tidy-tabs/criterion/2",
+        "tidy-tabs/criterion/3",
+        "chat-command/criterion/1",
+        "chat-command/criterion/2",
+        "chat-command/criterion/3",
+        "instant-links/criterion/1",
+        "instant-links/criterion/2",
+        "instant-links/criterion/3",
+        "instant-links/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-sync",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/20272860828823-Arc-Sync",
+        "https://resources.arc.net/hc/en-us/articles/22370005382167-Recovery-Cards"
+      ],
+      "issueKeys": [
+        "sync-contract",
+        "sync-enroll",
+        "sync-conflicts",
+        "sync-recovery",
+        "sync-roundtrip",
+        "sync-revoke"
+      ],
+      "scenarioIds": [
+        "sync-contract/criterion/1",
+        "sync-contract/criterion/2",
+        "sync-contract/criterion/3",
+        "sync-enroll/criterion/1",
+        "sync-enroll/criterion/2",
+        "sync-enroll/criterion/3",
+        "sync-conflicts/criterion/1",
+        "sync-conflicts/criterion/2",
+        "sync-conflicts/criterion/3",
+        "sync-recovery/criterion/1",
+        "sync-recovery/criterion/2",
+        "sync-recovery/criterion/3",
+        "sync-roundtrip/criterion/1",
+        "sync-roundtrip/criterion/2",
+        "sync-roundtrip/criterion/3",
+        "sync-revoke/criterion/1",
+        "sync-revoke/criterion/2",
+        "sync-revoke/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "arc-status",
+      "urls": [
+        "https://resources.arc.net/hc/en-us/articles/44412972248471-Arc-Sunset-Key-Dates-and-What-to-Expect"
+      ],
+      "issueKeys": [
+        "onboarding",
+        "runtime-reference",
+        "retirements",
+        "arc-import-format"
+      ],
+      "scenarioIds": [
+        "onboarding/criterion/1",
+        "onboarding/criterion/2",
+        "onboarding/criterion/3",
+        "runtime-reference/criterion/1",
+        "runtime-reference/criterion/2",
+        "runtime-reference/criterion/3",
+        "retirements/criterion/1",
+        "retirements/criterion/2",
+        "retirements/criterion/3",
+        "retirements/criterion/4",
+        "arc-import-format/criterion/1",
+        "arc-import-format/criterion/2",
+        "arc-import-format/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "dia",
+      "urls": [
+        "https://www.diabrowser.com/changelog"
+      ],
+      "issueKeys": [
+        "profiles",
+        "session-durability",
+        "undo-windows",
+        "tab-status",
+        "arc-import",
+        "browser-import",
+        "command-bar",
+        "command-ranking",
+        "site-search",
+        "tab-switcher",
+        "find",
+        "sidebar-layout",
+        "split-horizontal",
+        "split-vertical",
+        "focus-mode",
+        "motion",
+        "shortcut-settings",
+        "window-chrome",
+        "downloads",
+        "pip",
+        "developer-mode",
+        "local-assistant",
+        "context-selector",
+        "remote-provider",
+        "streaming",
+        "citations",
+        "page-reading",
+        "ask-page",
+        "tidy-titles",
+        "tidy-tabs",
+        "chat-command",
+        "skills",
+        "read-tools",
+        "write-tools",
+        "ai-boundary",
+        "chat-history",
+        "memory-decision",
+        "perf-baseline",
+        "perf-activation",
+        "perf-startup",
+        "perf-discard",
+        "perf-profiles",
+        "bfcache",
+        "perf-hidden",
+        "perf-layout",
+        "perf-leaks",
+        "perf-energy",
+        "perf-ai",
+        "crashed-tab",
+        "settings",
+        "compatibility",
+        "runtime-reference",
+        "retirements",
+        "reference-windows-artifacts",
+        "split-persistence",
+        "perf-measure-linux",
+        "perf-measure-windows",
+        "perf-measure-macos"
+      ],
+      "scenarioIds": [
+        "profiles/criterion/1",
+        "profiles/criterion/2",
+        "profiles/criterion/3",
+        "session-durability/criterion/1",
+        "session-durability/criterion/2",
+        "session-durability/criterion/3",
+        "undo-windows/criterion/1",
+        "undo-windows/criterion/2",
+        "undo-windows/criterion/3",
+        "undo-windows/criterion/4",
+        "tab-status/criterion/1",
+        "tab-status/criterion/2",
+        "tab-status/criterion/3",
+        "arc-import/criterion/1",
+        "arc-import/criterion/2",
+        "arc-import/criterion/3",
+        "arc-import/criterion/4",
+        "arc-import/criterion/5",
+        "arc-import/criterion/6",
+        "browser-import/criterion/1",
+        "browser-import/criterion/2",
+        "browser-import/criterion/3",
+        "browser-import/criterion/4",
+        "browser-import/criterion/5",
+        "command-bar/criterion/1",
+        "command-bar/criterion/2",
+        "command-bar/criterion/3",
+        "command-bar/criterion/4",
+        "command-bar/criterion/5",
+        "command-ranking/criterion/1",
+        "command-ranking/criterion/2",
+        "command-ranking/criterion/3",
+        "command-ranking/criterion/4",
+        "site-search/criterion/1",
+        "site-search/criterion/2",
+        "site-search/criterion/3",
+        "tab-switcher/criterion/1",
+        "tab-switcher/criterion/2",
+        "tab-switcher/criterion/3",
+        "find/criterion/1",
+        "find/criterion/2",
+        "find/criterion/3",
+        "sidebar-layout/criterion/1",
+        "sidebar-layout/criterion/2",
+        "sidebar-layout/criterion/3",
+        "split-horizontal/criterion/1",
+        "split-horizontal/criterion/2",
+        "split-horizontal/criterion/3",
+        "split-horizontal/criterion/4",
+        "split-vertical/criterion/1",
+        "split-vertical/criterion/2",
+        "split-vertical/criterion/3",
+        "focus-mode/criterion/1",
+        "focus-mode/criterion/2",
+        "focus-mode/criterion/3",
+        "motion/criterion/1",
+        "motion/criterion/2",
+        "motion/criterion/3",
+        "motion/criterion/4",
+        "shortcut-settings/criterion/1",
+        "shortcut-settings/criterion/2",
+        "shortcut-settings/criterion/3",
+        "window-chrome/criterion/1",
+        "window-chrome/criterion/2",
+        "window-chrome/criterion/3",
+        "downloads/criterion/1",
+        "downloads/criterion/2",
+        "downloads/criterion/3",
+        "downloads/criterion/4",
+        "pip/criterion/1",
+        "pip/criterion/2",
+        "pip/criterion/3",
+        "developer-mode/criterion/1",
+        "developer-mode/criterion/2",
+        "developer-mode/criterion/3",
+        "developer-mode/criterion/4",
+        "developer-mode/criterion/5",
+        "local-assistant/criterion/1",
+        "local-assistant/criterion/2",
+        "local-assistant/criterion/3",
+        "local-assistant/criterion/4",
+        "context-selector/criterion/1",
+        "context-selector/criterion/2",
+        "context-selector/criterion/3",
+        "remote-provider/criterion/1",
+        "remote-provider/criterion/2",
+        "remote-provider/criterion/3",
+        "remote-provider/criterion/4",
+        "remote-provider/criterion/5",
+        "streaming/criterion/1",
+        "streaming/criterion/2",
+        "streaming/criterion/3",
+        "citations/criterion/1",
+        "citations/criterion/2",
+        "citations/criterion/3",
+        "page-reading/criterion/1",
+        "page-reading/criterion/2",
+        "page-reading/criterion/3",
+        "page-reading/criterion/4",
+        "ask-page/criterion/1",
+        "ask-page/criterion/2",
+        "ask-page/criterion/3",
+        "tidy-titles/criterion/1",
+        "tidy-titles/criterion/2",
+        "tidy-titles/criterion/3",
+        "tidy-tabs/criterion/1",
+        "tidy-tabs/criterion/2",
+        "tidy-tabs/criterion/3",
+        "chat-command/criterion/1",
+        "chat-command/criterion/2",
+        "chat-command/criterion/3",
+        "skills/criterion/1",
+        "skills/criterion/2",
+        "skills/criterion/3",
+        "skills/criterion/4",
+        "read-tools/criterion/1",
+        "read-tools/criterion/2",
+        "read-tools/criterion/3",
+        "read-tools/criterion/4",
+        "write-tools/criterion/1",
+        "write-tools/criterion/2",
+        "write-tools/criterion/3",
+        "write-tools/criterion/4",
+        "write-tools/criterion/5",
+        "ai-boundary/criterion/1",
+        "ai-boundary/criterion/2",
+        "ai-boundary/criterion/3",
+        "ai-boundary/criterion/4",
+        "chat-history/criterion/1",
+        "chat-history/criterion/2",
+        "chat-history/criterion/3",
+        "memory-decision/criterion/1",
+        "memory-decision/criterion/2",
+        "memory-decision/criterion/3",
+        "perf-baseline/criterion/1",
+        "perf-baseline/criterion/2",
+        "perf-baseline/criterion/3",
+        "perf-activation/criterion/1",
+        "perf-activation/criterion/2",
+        "perf-activation/criterion/3",
+        "perf-activation/criterion/4",
+        "perf-startup/criterion/1",
+        "perf-startup/criterion/2",
+        "perf-startup/criterion/3",
+        "perf-startup/criterion/4",
+        "perf-discard/criterion/1",
+        "perf-discard/criterion/2",
+        "perf-discard/criterion/3",
+        "perf-profiles/criterion/1",
+        "perf-profiles/criterion/2",
+        "perf-profiles/criterion/3",
+        "perf-profiles/criterion/4",
+        "perf-profiles/criterion/5",
+        "bfcache/criterion/1",
+        "bfcache/criterion/2",
+        "bfcache/criterion/3",
+        "perf-hidden/criterion/1",
+        "perf-hidden/criterion/2",
+        "perf-hidden/criterion/3",
+        "perf-hidden/criterion/4",
+        "perf-hidden/criterion/5",
+        "perf-layout/criterion/1",
+        "perf-layout/criterion/2",
+        "perf-layout/criterion/3",
+        "perf-layout/criterion/4",
+        "perf-layout/criterion/5",
+        "perf-leaks/criterion/1",
+        "perf-leaks/criterion/2",
+        "perf-leaks/criterion/3",
+        "perf-energy/criterion/1",
+        "perf-energy/criterion/2",
+        "perf-energy/criterion/3",
+        "perf-ai/criterion/1",
+        "perf-ai/criterion/2",
+        "perf-ai/criterion/3",
+        "crashed-tab/criterion/1",
+        "crashed-tab/criterion/2",
+        "crashed-tab/criterion/3",
+        "settings/criterion/1",
+        "settings/criterion/2",
+        "settings/criterion/3",
+        "compatibility/criterion/1",
+        "compatibility/criterion/2",
+        "compatibility/criterion/3",
+        "runtime-reference/criterion/1",
+        "runtime-reference/criterion/2",
+        "runtime-reference/criterion/3",
+        "retirements/criterion/1",
+        "retirements/criterion/2",
+        "retirements/criterion/3",
+        "retirements/criterion/4",
+        "reference-windows-artifacts/criterion/1",
+        "reference-windows-artifacts/criterion/2",
+        "reference-windows-artifacts/criterion/3",
+        "split-persistence/criterion/1",
+        "split-persistence/criterion/2",
+        "split-persistence/criterion/3",
+        "perf-measure-linux/criterion/1",
+        "perf-measure-linux/criterion/2",
+        "perf-measure-linux/criterion/3",
+        "perf-measure-windows/criterion/1",
+        "perf-measure-windows/criterion/2",
+        "perf-measure-windows/criterion/3",
+        "perf-measure-macos/criterion/1",
+        "perf-measure-macos/criterion/2",
+        "perf-measure-macos/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "dia-security",
+      "urls": [
+        "https://www.diabrowser.com/security",
+        "https://www.diabrowser.com/security/bulletins"
+      ],
+      "issueKeys": [
+        "sync-contract",
+        "sync-enroll",
+        "engine-updates",
+        "sync-roundtrip",
+        "sync-revoke",
+        "update-linux",
+        "update-windows",
+        "update-macos",
+        "assistant-consent-contract",
+        "security-surfaces",
+        "agent-workspace",
+        "agent-takeover",
+        "data-flow-controls"
+      ],
+      "scenarioIds": [
+        "sync-contract/criterion/1",
+        "sync-contract/criterion/2",
+        "sync-contract/criterion/3",
+        "sync-enroll/criterion/1",
+        "sync-enroll/criterion/2",
+        "sync-enroll/criterion/3",
+        "engine-updates/criterion/1",
+        "engine-updates/criterion/2",
+        "engine-updates/criterion/3",
+        "sync-roundtrip/criterion/1",
+        "sync-roundtrip/criterion/2",
+        "sync-roundtrip/criterion/3",
+        "sync-revoke/criterion/1",
+        "sync-revoke/criterion/2",
+        "sync-revoke/criterion/3",
+        "update-linux/criterion/1",
+        "update-linux/criterion/2",
+        "update-linux/criterion/3",
+        "update-windows/criterion/1",
+        "update-windows/criterion/2",
+        "update-windows/criterion/3",
+        "update-macos/criterion/1",
+        "update-macos/criterion/2",
+        "update-macos/criterion/3",
+        "assistant-consent-contract/criterion/1",
+        "assistant-consent-contract/criterion/2",
+        "assistant-consent-contract/criterion/3",
+        "assistant-consent-contract/criterion/4",
+        "security-surfaces/criterion/1",
+        "security-surfaces/criterion/2",
+        "security-surfaces/criterion/3",
+        "agent-workspace/criterion/1",
+        "agent-workspace/criterion/2",
+        "agent-workspace/criterion/3",
+        "agent-workspace/criterion/4",
+        "agent-takeover/criterion/1",
+        "agent-takeover/criterion/2",
+        "agent-takeover/criterion/3",
+        "agent-takeover/criterion/4",
+        "data-flow-controls/criterion/1",
+        "data-flow-controls/criterion/2",
+        "data-flow-controls/criterion/3",
+        "data-flow-controls/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "artifact",
+      "urls": [
+        "https://releases.arc.net/release/Arc-1.170.0-89123.dmg",
+        "https://releases.diabrowser.com/release/Dia-latest.dmg"
+      ],
+      "issueKeys": [
+        "share-quote",
+        "automation",
+        "compatibility",
+        "runtime-reference",
+        "release-ux-check",
+        "lifecycle-contract",
+        "pin-section-controls",
+        "print-flow",
+        "automation-contract",
+        "blank-window",
+        "manual-cleanup",
+        "browser-diagnostics",
+        "reference-windows-artifacts",
+        "split-actions",
+        "perf-measure-linux",
+        "perf-measure-windows",
+        "perf-measure-macos"
+      ],
+      "scenarioIds": [
+        "share-quote/criterion/1",
+        "share-quote/criterion/2",
+        "share-quote/criterion/3",
+        "automation/criterion/1",
+        "automation/criterion/2",
+        "automation/criterion/3",
+        "compatibility/criterion/1",
+        "compatibility/criterion/2",
+        "compatibility/criterion/3",
+        "runtime-reference/criterion/1",
+        "runtime-reference/criterion/2",
+        "runtime-reference/criterion/3",
+        "release-ux-check/criterion/1",
+        "release-ux-check/criterion/2",
+        "release-ux-check/criterion/3",
+        "release-ux-check/criterion/4",
+        "lifecycle-contract/criterion/1",
+        "lifecycle-contract/criterion/2",
+        "lifecycle-contract/criterion/3",
+        "lifecycle-contract/criterion/4",
+        "lifecycle-contract/criterion/5",
+        "pin-section-controls/criterion/1",
+        "pin-section-controls/criterion/2",
+        "pin-section-controls/criterion/3",
+        "print-flow/criterion/1",
+        "print-flow/criterion/2",
+        "print-flow/criterion/3",
+        "automation-contract/criterion/1",
+        "automation-contract/criterion/2",
+        "automation-contract/criterion/3",
+        "blank-window/criterion/1",
+        "blank-window/criterion/2",
+        "blank-window/criterion/3",
+        "manual-cleanup/criterion/1",
+        "manual-cleanup/criterion/2",
+        "manual-cleanup/criterion/3",
+        "browser-diagnostics/criterion/1",
+        "browser-diagnostics/criterion/2",
+        "browser-diagnostics/criterion/3",
+        "reference-windows-artifacts/criterion/1",
+        "reference-windows-artifacts/criterion/2",
+        "reference-windows-artifacts/criterion/3",
+        "split-actions/criterion/1",
+        "split-actions/criterion/2",
+        "split-actions/criterion/3",
+        "perf-measure-linux/criterion/1",
+        "perf-measure-linux/criterion/2",
+        "perf-measure-linux/criterion/3",
+        "perf-measure-windows/criterion/1",
+        "perf-measure-windows/criterion/2",
+        "perf-measure-windows/criterion/3",
+        "perf-measure-macos/criterion/1",
+        "perf-measure-macos/criterion/2",
+        "perf-measure-macos/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "yab",
+      "urls": [
+        "https://yetanotherbrowser.com/manual",
+        "https://yetanotherbrowser.com/changelog"
+      ],
+      "issueKeys": [
+        "local-ocr",
+        "call-controls",
+        "workspace-operation-journal",
+        "focus-routing-contract"
+      ],
+      "scenarioIds": [
+        "local-ocr/criterion/1",
+        "local-ocr/criterion/2",
+        "local-ocr/criterion/3",
+        "call-controls/criterion/1",
+        "call-controls/criterion/2",
+        "call-controls/criterion/3",
+        "workspace-operation-journal/criterion/1",
+        "workspace-operation-journal/criterion/2",
+        "workspace-operation-journal/criterion/3",
+        "focus-routing-contract/criterion/1",
+        "focus-routing-contract/criterion/2",
+        "focus-routing-contract/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "yab-layout",
+      "urls": [
+        "https://yetanotherbrowser.com/manual/sidebar"
+      ],
+      "issueKeys": [
+        "tab-layout-choice",
+        "workspace-organizer"
+      ],
+      "scenarioIds": [
+        "tab-layout-choice/criterion/1",
+        "tab-layout-choice/criterion/2",
+        "tab-layout-choice/criterion/3",
+        "tab-layout-choice/criterion/4",
+        "workspace-organizer/criterion/1",
+        "workspace-organizer/criterion/2",
+        "workspace-organizer/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "yab-field",
+      "urls": [
+        "https://yetanotherbrowser.com/manual/the-field"
+      ],
+      "issueKeys": [
+        "command-bar"
+      ],
+      "scenarioIds": [
+        "command-bar/criterion/1",
+        "command-bar/criterion/2",
+        "command-bar/criterion/3",
+        "command-bar/criterion/4",
+        "command-bar/criterion/5"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "yab-import",
+      "urls": [
+        "https://yetanotherbrowser.com/manual/bring-in"
+      ],
+      "issueKeys": [
+        "arc-import",
+        "browser-import"
+      ],
+      "scenarioIds": [
+        "arc-import/criterion/1",
+        "arc-import/criterion/2",
+        "arc-import/criterion/3",
+        "arc-import/criterion/4",
+        "arc-import/criterion/5",
+        "arc-import/criterion/6",
+        "browser-import/criterion/1",
+        "browser-import/criterion/2",
+        "browser-import/criterion/3",
+        "browser-import/criterion/4",
+        "browser-import/criterion/5"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "yab-dev",
+      "urls": [
+        "https://yetanotherbrowser.com/manual/developer-mode"
+      ],
+      "issueKeys": [
+        "developer-mode",
+        "layout-inspection"
+      ],
+      "scenarioIds": [
+        "developer-mode/criterion/1",
+        "developer-mode/criterion/2",
+        "developer-mode/criterion/3",
+        "developer-mode/criterion/4",
+        "developer-mode/criterion/5",
+        "layout-inspection/criterion/1",
+        "layout-inspection/criterion/2",
+        "layout-inspection/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "yab-snippets",
+      "urls": [
+        "https://yetanotherbrowser.com/manual/mail-snippets"
+      ],
+      "issueKeys": [
+        "snippets"
+      ],
+      "scenarioIds": [
+        "snippets/criterion/1",
+        "snippets/criterion/2",
+        "snippets/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "yab-agent",
+      "urls": [
+        "https://yetanotherbrowser.com/manual/agent-tabs",
+        "https://yetanotherbrowser.com/manual/mcp",
+        "https://yetanotherbrowser.com/privacy"
+      ],
+      "issueKeys": [
+        "agent-workspace",
+        "agent-takeover"
+      ],
+      "scenarioIds": [
+        "agent-workspace/criterion/1",
+        "agent-workspace/criterion/2",
+        "agent-workspace/criterion/3",
+        "agent-workspace/criterion/4",
+        "agent-takeover/criterion/1",
+        "agent-takeover/criterion/2",
+        "agent-takeover/criterion/3",
+        "agent-takeover/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "key": "yab-privacy",
+      "urls": [
+        "https://yetanotherbrowser.com/privacy"
+      ],
+      "issueKeys": [
+        "local-ocr",
+        "data-flow-controls"
+      ],
+      "scenarioIds": [
+        "local-ocr/criterion/1",
+        "local-ocr/criterion/2",
+        "local-ocr/criterion/3",
+        "data-flow-controls/criterion/1",
+        "data-flow-controls/criterion/2",
+        "data-flow-controls/criterion/3",
+        "data-flow-controls/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": []
+        }
+      }
+    }
+  ],
+  "workflowFamilies": [
+    {
+      "family": "Native build foundations",
+      "issueKeys": [
+        "native-linux",
+        "native-windows",
+        "native-macos"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/16",
+        "https://github.com/Timpan4/helium-arcified/issues/17",
+        "https://github.com/Timpan4/helium-arcified/issues/18"
+      ],
+      "scenarioIds": [
+        "native-linux/criterion/1",
+        "native-linux/criterion/2",
+        "native-linux/criterion/3",
+        "native-windows/criterion/1",
+        "native-windows/criterion/2",
+        "native-windows/criterion/3",
+        "native-macos/criterion/1",
+        "native-macos/criterion/2",
+        "native-macos/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Identity, Spaces and ownership",
+      "issueKeys": [
+        "lifecycle-contract",
+        "spaces",
+        "profiles",
+        "space-management",
+        "profile-safety",
+        "workspace-organizer"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/24",
+        "https://github.com/Timpan4/helium-arcified/issues/32",
+        "https://github.com/Timpan4/helium-arcified/issues/48",
+        "https://github.com/Timpan4/helium-arcified/issues/64",
+        "https://github.com/Timpan4/helium-arcified/issues/103",
+        "https://github.com/Timpan4/helium-arcified/issues/147"
+      ],
+      "scenarioIds": [
+        "lifecycle-contract/criterion/1",
+        "lifecycle-contract/criterion/2",
+        "lifecycle-contract/criterion/3",
+        "lifecycle-contract/criterion/4",
+        "lifecycle-contract/criterion/5",
+        "spaces/criterion/1",
+        "spaces/criterion/2",
+        "spaces/criterion/3",
+        "profiles/criterion/1",
+        "profiles/criterion/2",
+        "profiles/criterion/3",
+        "space-management/criterion/1",
+        "space-management/criterion/2",
+        "space-management/criterion/3",
+        "profile-safety/criterion/1",
+        "profile-safety/criterion/2",
+        "profile-safety/criterion/3",
+        "workspace-organizer/criterion/1",
+        "workspace-organizer/criterion/2",
+        "workspace-organizer/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Persistent/temporary lifecycle",
+      "issueKeys": [
+        "temporary-tabs",
+        "pins",
+        "pin-section-controls",
+        "favorites",
+        "folders",
+        "folder-preview",
+        "tab-status"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/49",
+        "https://github.com/Timpan4/helium-arcified/issues/67",
+        "https://github.com/Timpan4/helium-arcified/issues/134",
+        "https://github.com/Timpan4/helium-arcified/issues/106",
+        "https://github.com/Timpan4/helium-arcified/issues/107",
+        "https://github.com/Timpan4/helium-arcified/issues/158",
+        "https://github.com/Timpan4/helium-arcified/issues/71"
+      ],
+      "scenarioIds": [
+        "temporary-tabs/criterion/1",
+        "temporary-tabs/criterion/2",
+        "temporary-tabs/criterion/3",
+        "pins/criterion/1",
+        "pins/criterion/2",
+        "pins/criterion/3",
+        "pins/criterion/4",
+        "pin-section-controls/criterion/1",
+        "pin-section-controls/criterion/2",
+        "pin-section-controls/criterion/3",
+        "favorites/criterion/1",
+        "favorites/criterion/2",
+        "favorites/criterion/3",
+        "favorites/criterion/4",
+        "folders/criterion/1",
+        "folders/criterion/2",
+        "folders/criterion/3",
+        "folders/criterion/4",
+        "folder-preview/criterion/1",
+        "folder-preview/criterion/2",
+        "folder-preview/criterion/3",
+        "tab-status/criterion/1",
+        "tab-status/criterion/2",
+        "tab-status/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Organization and reversal",
+      "issueKeys": [
+        "multi-select",
+        "bulk-close",
+        "manual-cleanup",
+        "archive",
+        "auto-archive",
+        "workspace-operation-journal"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/68",
+        "https://github.com/Timpan4/helium-arcified/issues/135",
+        "https://github.com/Timpan4/helium-arcified/issues/141",
+        "https://github.com/Timpan4/helium-arcified/issues/69",
+        "https://github.com/Timpan4/helium-arcified/issues/108",
+        "https://github.com/Timpan4/helium-arcified/issues/148"
+      ],
+      "scenarioIds": [
+        "multi-select/criterion/1",
+        "multi-select/criterion/2",
+        "multi-select/criterion/3",
+        "bulk-close/criterion/1",
+        "bulk-close/criterion/2",
+        "bulk-close/criterion/3",
+        "manual-cleanup/criterion/1",
+        "manual-cleanup/criterion/2",
+        "manual-cleanup/criterion/3",
+        "archive/criterion/1",
+        "archive/criterion/2",
+        "archive/criterion/3",
+        "auto-archive/criterion/1",
+        "auto-archive/criterion/2",
+        "auto-archive/criterion/3",
+        "auto-archive/criterion/4",
+        "auto-archive/criterion/5",
+        "workspace-operation-journal/criterion/1",
+        "workspace-operation-journal/criterion/2",
+        "workspace-operation-journal/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Windows and sessions",
+      "issueKeys": [
+        "window-ownership",
+        "tab-handoff",
+        "blank-window",
+        "undo-windows",
+        "session-durability",
+        "schema-migrations"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/72",
+        "https://github.com/Timpan4/helium-arcified/issues/159",
+        "https://github.com/Timpan4/helium-arcified/issues/140",
+        "https://github.com/Timpan4/helium-arcified/issues/70",
+        "https://github.com/Timpan4/helium-arcified/issues/50",
+        "https://github.com/Timpan4/helium-arcified/issues/99"
+      ],
+      "scenarioIds": [
+        "window-ownership/criterion/1",
+        "window-ownership/criterion/2",
+        "window-ownership/criterion/3",
+        "tab-handoff/criterion/1",
+        "tab-handoff/criterion/2",
+        "tab-handoff/criterion/3",
+        "blank-window/criterion/1",
+        "blank-window/criterion/2",
+        "blank-window/criterion/3",
+        "undo-windows/criterion/1",
+        "undo-windows/criterion/2",
+        "undo-windows/criterion/3",
+        "undo-windows/criterion/4",
+        "session-durability/criterion/1",
+        "session-durability/criterion/2",
+        "session-durability/criterion/3",
+        "schema-migrations/criterion/1",
+        "schema-migrations/criterion/2",
+        "schema-migrations/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Command/navigation/find",
+      "issueKeys": [
+        "command-bar",
+        "command-ranking",
+        "saved-search",
+        "site-search",
+        "tab-switcher",
+        "tab-order-navigation",
+        "find"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/77",
+        "https://github.com/Timpan4/helium-arcified/issues/109",
+        "https://github.com/Timpan4/helium-arcified/issues/163",
+        "https://github.com/Timpan4/helium-arcified/issues/110",
+        "https://github.com/Timpan4/helium-arcified/issues/78",
+        "https://github.com/Timpan4/helium-arcified/issues/100",
+        "https://github.com/Timpan4/helium-arcified/issues/33"
+      ],
+      "scenarioIds": [
+        "command-bar/criterion/1",
+        "command-bar/criterion/2",
+        "command-bar/criterion/3",
+        "command-bar/criterion/4",
+        "command-bar/criterion/5",
+        "command-ranking/criterion/1",
+        "command-ranking/criterion/2",
+        "command-ranking/criterion/3",
+        "command-ranking/criterion/4",
+        "saved-search/criterion/1",
+        "saved-search/criterion/2",
+        "saved-search/criterion/3",
+        "site-search/criterion/1",
+        "site-search/criterion/2",
+        "site-search/criterion/3",
+        "tab-switcher/criterion/1",
+        "tab-switcher/criterion/2",
+        "tab-switcher/criterion/3",
+        "tab-order-navigation/criterion/1",
+        "tab-order-navigation/criterion/2",
+        "tab-order-navigation/criterion/3",
+        "find/criterion/1",
+        "find/criterion/2",
+        "find/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Peek and lightweight browsing",
+      "issueKeys": [
+        "peek",
+        "peek-split-promotion",
+        "little-arc",
+        "air-traffic"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/79",
+        "https://github.com/Timpan4/helium-arcified/issues/144",
+        "https://github.com/Timpan4/helium-arcified/issues/111",
+        "https://github.com/Timpan4/helium-arcified/issues/80"
+      ],
+      "scenarioIds": [
+        "peek/criterion/1",
+        "peek/criterion/2",
+        "peek/criterion/3",
+        "peek/criterion/4",
+        "peek-split-promotion/criterion/1",
+        "peek-split-promotion/criterion/2",
+        "peek-split-promotion/criterion/3",
+        "little-arc/criterion/1",
+        "little-arc/criterion/2",
+        "little-arc/criterion/3",
+        "little-arc/criterion/4",
+        "air-traffic/criterion/1",
+        "air-traffic/criterion/2",
+        "air-traffic/criterion/3",
+        "air-traffic/criterion/4",
+        "air-traffic/criterion/5"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Splits and focus",
+      "issueKeys": [
+        "split-horizontal",
+        "split-vertical",
+        "split-persistence",
+        "split-actions",
+        "bulk-split",
+        "focus-routing-contract",
+        "focus-mode"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/81",
+        "https://github.com/Timpan4/helium-arcified/issues/112",
+        "https://github.com/Timpan4/helium-arcified/issues/169",
+        "https://github.com/Timpan4/helium-arcified/issues/177",
+        "https://github.com/Timpan4/helium-arcified/issues/162",
+        "https://github.com/Timpan4/helium-arcified/issues/44",
+        "https://github.com/Timpan4/helium-arcified/issues/82"
+      ],
+      "scenarioIds": [
+        "split-horizontal/criterion/1",
+        "split-horizontal/criterion/2",
+        "split-horizontal/criterion/3",
+        "split-horizontal/criterion/4",
+        "split-vertical/criterion/1",
+        "split-vertical/criterion/2",
+        "split-vertical/criterion/3",
+        "split-persistence/criterion/1",
+        "split-persistence/criterion/2",
+        "split-persistence/criterion/3",
+        "split-actions/criterion/1",
+        "split-actions/criterion/2",
+        "split-actions/criterion/3",
+        "bulk-split/criterion/1",
+        "bulk-split/criterion/2",
+        "bulk-split/criterion/3",
+        "focus-routing-contract/criterion/1",
+        "focus-routing-contract/criterion/2",
+        "focus-routing-contract/criterion/3",
+        "focus-mode/criterion/1",
+        "focus-mode/criterion/2",
+        "focus-mode/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Presentation and native input",
+      "issueKeys": [
+        "sidebar-layout",
+        "tab-layout-choice",
+        "space-themes",
+        "motion",
+        "shortcut-settings",
+        "accessibility",
+        "ime-localization",
+        "gesture-navigation",
+        "window-chrome"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/51",
+        "https://github.com/Timpan4/helium-arcified/issues/104",
+        "https://github.com/Timpan4/helium-arcified/issues/52",
+        "https://github.com/Timpan4/helium-arcified/issues/83",
+        "https://github.com/Timpan4/helium-arcified/issues/34",
+        "https://github.com/Timpan4/helium-arcified/issues/149",
+        "https://github.com/Timpan4/helium-arcified/issues/113",
+        "https://github.com/Timpan4/helium-arcified/issues/101",
+        "https://github.com/Timpan4/helium-arcified/issues/35"
+      ],
+      "scenarioIds": [
+        "sidebar-layout/criterion/1",
+        "sidebar-layout/criterion/2",
+        "sidebar-layout/criterion/3",
+        "tab-layout-choice/criterion/1",
+        "tab-layout-choice/criterion/2",
+        "tab-layout-choice/criterion/3",
+        "tab-layout-choice/criterion/4",
+        "space-themes/criterion/1",
+        "space-themes/criterion/2",
+        "space-themes/criterion/3",
+        "space-themes/criterion/4",
+        "space-themes/criterion/5",
+        "motion/criterion/1",
+        "motion/criterion/2",
+        "motion/criterion/3",
+        "motion/criterion/4",
+        "shortcut-settings/criterion/1",
+        "shortcut-settings/criterion/2",
+        "shortcut-settings/criterion/3",
+        "accessibility/criterion/1",
+        "accessibility/criterion/2",
+        "accessibility/criterion/3",
+        "ime-localization/criterion/1",
+        "ime-localization/criterion/2",
+        "ime-localization/criterion/3",
+        "gesture-navigation/criterion/1",
+        "gesture-navigation/criterion/2",
+        "gesture-navigation/criterion/3",
+        "window-chrome/criterion/1",
+        "window-chrome/criterion/2",
+        "window-chrome/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Library, files and history",
+      "issueKeys": [
+        "library",
+        "downloads",
+        "recent-files",
+        "library-file-removal",
+        "history-controls",
+        "capture",
+        "region-capture"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/19",
+        "https://github.com/Timpan4/helium-arcified/issues/36",
+        "https://github.com/Timpan4/helium-arcified/issues/53",
+        "https://github.com/Timpan4/helium-arcified/issues/63",
+        "https://github.com/Timpan4/helium-arcified/issues/102",
+        "https://github.com/Timpan4/helium-arcified/issues/37",
+        "https://github.com/Timpan4/helium-arcified/issues/60"
+      ],
+      "scenarioIds": [
+        "library/criterion/1",
+        "library/criterion/2",
+        "library/criterion/3",
+        "library/criterion/4",
+        "downloads/criterion/1",
+        "downloads/criterion/2",
+        "downloads/criterion/3",
+        "downloads/criterion/4",
+        "recent-files/criterion/1",
+        "recent-files/criterion/2",
+        "recent-files/criterion/3",
+        "recent-files/criterion/4",
+        "library-file-removal/criterion/1",
+        "library-file-removal/criterion/2",
+        "library-file-removal/criterion/3",
+        "history-controls/criterion/1",
+        "history-controls/criterion/2",
+        "history-controls/criterion/3",
+        "capture/criterion/1",
+        "capture/criterion/2",
+        "capture/criterion/3",
+        "capture/criterion/4",
+        "region-capture/criterion/1",
+        "region-capture/criterion/2",
+        "region-capture/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Media and calls",
+      "issueKeys": [
+        "pip",
+        "automatic-pip",
+        "media-controls",
+        "call-controls",
+        "calendar"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/114",
+        "https://github.com/Timpan4/helium-arcified/issues/168",
+        "https://github.com/Timpan4/helium-arcified/issues/115",
+        "https://github.com/Timpan4/helium-arcified/issues/170",
+        "https://github.com/Timpan4/helium-arcified/issues/160"
+      ],
+      "scenarioIds": [
+        "pip/criterion/1",
+        "pip/criterion/2",
+        "pip/criterion/3",
+        "automatic-pip/criterion/1",
+        "automatic-pip/criterion/2",
+        "automatic-pip/criterion/3",
+        "media-controls/criterion/1",
+        "media-controls/criterion/2",
+        "media-controls/criterion/3",
+        "call-controls/criterion/1",
+        "call-controls/criterion/2",
+        "call-controls/criterion/3",
+        "calendar/criterion/1",
+        "calendar/criterion/2",
+        "calendar/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Browser and developer integration",
+      "issueKeys": [
+        "site-controls",
+        "security-surfaces",
+        "developer-mode",
+        "browser-diagnostics",
+        "layout-inspection",
+        "extension-workflow",
+        "web-apps",
+        "credentials-flow",
+        "print-flow",
+        "compatibility"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/38",
+        "https://github.com/Timpan4/helium-arcified/issues/143",
+        "https://github.com/Timpan4/helium-arcified/issues/39",
+        "https://github.com/Timpan4/helium-arcified/issues/142",
+        "https://github.com/Timpan4/helium-arcified/issues/65",
+        "https://github.com/Timpan4/helium-arcified/issues/61",
+        "https://github.com/Timpan4/helium-arcified/issues/62",
+        "https://github.com/Timpan4/helium-arcified/issues/137",
+        "https://github.com/Timpan4/helium-arcified/issues/138",
+        "https://github.com/Timpan4/helium-arcified/issues/59"
+      ],
+      "scenarioIds": [
+        "site-controls/criterion/1",
+        "site-controls/criterion/2",
+        "site-controls/criterion/3",
+        "security-surfaces/criterion/1",
+        "security-surfaces/criterion/2",
+        "security-surfaces/criterion/3",
+        "developer-mode/criterion/1",
+        "developer-mode/criterion/2",
+        "developer-mode/criterion/3",
+        "developer-mode/criterion/4",
+        "developer-mode/criterion/5",
+        "browser-diagnostics/criterion/1",
+        "browser-diagnostics/criterion/2",
+        "browser-diagnostics/criterion/3",
+        "layout-inspection/criterion/1",
+        "layout-inspection/criterion/2",
+        "layout-inspection/criterion/3",
+        "extension-workflow/criterion/1",
+        "extension-workflow/criterion/2",
+        "extension-workflow/criterion/3",
+        "web-apps/criterion/1",
+        "web-apps/criterion/2",
+        "web-apps/criterion/3",
+        "credentials-flow/criterion/1",
+        "credentials-flow/criterion/2",
+        "credentials-flow/criterion/3",
+        "print-flow/criterion/1",
+        "print-flow/criterion/2",
+        "print-flow/criterion/3",
+        "compatibility/criterion/1",
+        "compatibility/criterion/2",
+        "compatibility/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Creation and customization",
+      "issueKeys": [
+        "boost-style",
+        "boost-zap",
+        "boost-code",
+        "boost-sharing",
+        "easel",
+        "easel-drawing",
+        "board-export",
+        "live-capture",
+        "notes",
+        "snippets",
+        "local-ocr"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/54",
+        "https://github.com/Timpan4/helium-arcified/issues/84",
+        "https://github.com/Timpan4/helium-arcified/issues/85",
+        "https://github.com/Timpan4/helium-arcified/issues/96",
+        "https://github.com/Timpan4/helium-arcified/issues/86",
+        "https://github.com/Timpan4/helium-arcified/issues/128",
+        "https://github.com/Timpan4/helium-arcified/issues/164",
+        "https://github.com/Timpan4/helium-arcified/issues/116",
+        "https://github.com/Timpan4/helium-arcified/issues/87",
+        "https://github.com/Timpan4/helium-arcified/issues/145",
+        "https://github.com/Timpan4/helium-arcified/issues/146"
+      ],
+      "scenarioIds": [
+        "boost-style/criterion/1",
+        "boost-style/criterion/2",
+        "boost-style/criterion/3",
+        "boost-zap/criterion/1",
+        "boost-zap/criterion/2",
+        "boost-zap/criterion/3",
+        "boost-code/criterion/1",
+        "boost-code/criterion/2",
+        "boost-code/criterion/3",
+        "boost-code/criterion/4",
+        "boost-sharing/criterion/1",
+        "boost-sharing/criterion/2",
+        "boost-sharing/criterion/3",
+        "boost-sharing/criterion/4",
+        "easel/criterion/1",
+        "easel/criterion/2",
+        "easel/criterion/3",
+        "easel/criterion/4",
+        "easel-drawing/criterion/1",
+        "easel-drawing/criterion/2",
+        "easel-drawing/criterion/3",
+        "easel-drawing/criterion/4",
+        "board-export/criterion/1",
+        "board-export/criterion/2",
+        "board-export/criterion/3",
+        "live-capture/criterion/1",
+        "live-capture/criterion/2",
+        "live-capture/criterion/3",
+        "live-capture/criterion/4",
+        "notes/criterion/1",
+        "notes/criterion/2",
+        "notes/criterion/3",
+        "notes/criterion/4",
+        "snippets/criterion/1",
+        "snippets/criterion/2",
+        "snippets/criterion/3",
+        "local-ocr/criterion/1",
+        "local-ocr/criterion/2",
+        "local-ocr/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Portable/shared content",
+      "issueKeys": [
+        "export",
+        "workspace-import",
+        "arc-import-format",
+        "arc-import",
+        "browser-import",
+        "prototype-migration",
+        "share-folders",
+        "share-quote",
+        "shared-board",
+        "hosted-sharing",
+        "board-sharing"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/73",
+        "https://github.com/Timpan4/helium-arcified/issues/136",
+        "https://github.com/Timpan4/helium-arcified/issues/27",
+        "https://github.com/Timpan4/helium-arcified/issues/74",
+        "https://github.com/Timpan4/helium-arcified/issues/75",
+        "https://github.com/Timpan4/helium-arcified/issues/76",
+        "https://github.com/Timpan4/helium-arcified/issues/172",
+        "https://github.com/Timpan4/helium-arcified/issues/95",
+        "https://github.com/Timpan4/helium-arcified/issues/22",
+        "https://github.com/Timpan4/helium-arcified/issues/179",
+        "https://github.com/Timpan4/helium-arcified/issues/178"
+      ],
+      "scenarioIds": [
+        "export/criterion/1",
+        "export/criterion/2",
+        "export/criterion/3",
+        "workspace-import/criterion/1",
+        "workspace-import/criterion/2",
+        "workspace-import/criterion/3",
+        "workspace-import/criterion/4",
+        "workspace-import/criterion/5",
+        "arc-import-format/criterion/1",
+        "arc-import-format/criterion/2",
+        "arc-import-format/criterion/3",
+        "arc-import/criterion/1",
+        "arc-import/criterion/2",
+        "arc-import/criterion/3",
+        "arc-import/criterion/4",
+        "arc-import/criterion/5",
+        "arc-import/criterion/6",
+        "browser-import/criterion/1",
+        "browser-import/criterion/2",
+        "browser-import/criterion/3",
+        "browser-import/criterion/4",
+        "browser-import/criterion/5",
+        "prototype-migration/criterion/1",
+        "prototype-migration/criterion/2",
+        "prototype-migration/criterion/3",
+        "prototype-migration/criterion/4",
+        "share-folders/criterion/1",
+        "share-folders/criterion/2",
+        "share-folders/criterion/3",
+        "share-quote/criterion/1",
+        "share-quote/criterion/2",
+        "share-quote/criterion/3",
+        "shared-board/criterion/1",
+        "shared-board/criterion/2",
+        "shared-board/criterion/3",
+        "hosted-sharing/criterion/1",
+        "hosted-sharing/criterion/2",
+        "hosted-sharing/criterion/3",
+        "board-sharing/criterion/1",
+        "board-sharing/criterion/2",
+        "board-sharing/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Assistant and context",
+      "issueKeys": [
+        "assistant-consent-contract",
+        "local-assistant",
+        "context-selector",
+        "remote-provider",
+        "page-reading",
+        "streaming",
+        "citations",
+        "ask-page",
+        "chat-command"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/43",
+        "https://github.com/Timpan4/helium-arcified/issues/55",
+        "https://github.com/Timpan4/helium-arcified/issues/88",
+        "https://github.com/Timpan4/helium-arcified/issues/117",
+        "https://github.com/Timpan4/helium-arcified/issues/119",
+        "https://github.com/Timpan4/helium-arcified/issues/89",
+        "https://github.com/Timpan4/helium-arcified/issues/118",
+        "https://github.com/Timpan4/helium-arcified/issues/151",
+        "https://github.com/Timpan4/helium-arcified/issues/122"
+      ],
+      "scenarioIds": [
+        "assistant-consent-contract/criterion/1",
+        "assistant-consent-contract/criterion/2",
+        "assistant-consent-contract/criterion/3",
+        "assistant-consent-contract/criterion/4",
+        "local-assistant/criterion/1",
+        "local-assistant/criterion/2",
+        "local-assistant/criterion/3",
+        "local-assistant/criterion/4",
+        "context-selector/criterion/1",
+        "context-selector/criterion/2",
+        "context-selector/criterion/3",
+        "remote-provider/criterion/1",
+        "remote-provider/criterion/2",
+        "remote-provider/criterion/3",
+        "remote-provider/criterion/4",
+        "remote-provider/criterion/5",
+        "page-reading/criterion/1",
+        "page-reading/criterion/2",
+        "page-reading/criterion/3",
+        "page-reading/criterion/4",
+        "streaming/criterion/1",
+        "streaming/criterion/2",
+        "streaming/criterion/3",
+        "citations/criterion/1",
+        "citations/criterion/2",
+        "citations/criterion/3",
+        "ask-page/criterion/1",
+        "ask-page/criterion/2",
+        "ask-page/criterion/3",
+        "chat-command/criterion/1",
+        "chat-command/criterion/2",
+        "chat-command/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Optional Max workflows",
+      "issueKeys": [
+        "link-summaries",
+        "tidy-titles",
+        "tidy-downloads",
+        "tidy-tabs",
+        "instant-links"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/152",
+        "https://github.com/Timpan4/helium-arcified/issues/120",
+        "https://github.com/Timpan4/helium-arcified/issues/121",
+        "https://github.com/Timpan4/helium-arcified/issues/153",
+        "https://github.com/Timpan4/helium-arcified/issues/175"
+      ],
+      "scenarioIds": [
+        "link-summaries/criterion/1",
+        "link-summaries/criterion/2",
+        "link-summaries/criterion/3",
+        "link-summaries/criterion/4",
+        "link-summaries/criterion/5",
+        "tidy-titles/criterion/1",
+        "tidy-titles/criterion/2",
+        "tidy-titles/criterion/3",
+        "tidy-downloads/criterion/1",
+        "tidy-downloads/criterion/2",
+        "tidy-downloads/criterion/3",
+        "tidy-tabs/criterion/1",
+        "tidy-tabs/criterion/2",
+        "tidy-tabs/criterion/3",
+        "instant-links/criterion/1",
+        "instant-links/criterion/2",
+        "instant-links/criterion/3",
+        "instant-links/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Optional advanced assistance",
+      "issueKeys": [
+        "skills",
+        "read-tools",
+        "write-tools",
+        "ai-boundary",
+        "chat-history",
+        "memory-decision",
+        "automation-contract",
+        "automation",
+        "agent-workspace",
+        "agent-takeover"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/56",
+        "https://github.com/Timpan4/helium-arcified/issues/57",
+        "https://github.com/Timpan4/helium-arcified/issues/58",
+        "https://github.com/Timpan4/helium-arcified/issues/154",
+        "https://github.com/Timpan4/helium-arcified/issues/155",
+        "https://github.com/Timpan4/helium-arcified/issues/173",
+        "https://github.com/Timpan4/helium-arcified/issues/25",
+        "https://github.com/Timpan4/helium-arcified/issues/130",
+        "https://github.com/Timpan4/helium-arcified/issues/66",
+        "https://github.com/Timpan4/helium-arcified/issues/105"
+      ],
+      "scenarioIds": [
+        "skills/criterion/1",
+        "skills/criterion/2",
+        "skills/criterion/3",
+        "skills/criterion/4",
+        "read-tools/criterion/1",
+        "read-tools/criterion/2",
+        "read-tools/criterion/3",
+        "read-tools/criterion/4",
+        "write-tools/criterion/1",
+        "write-tools/criterion/2",
+        "write-tools/criterion/3",
+        "write-tools/criterion/4",
+        "write-tools/criterion/5",
+        "ai-boundary/criterion/1",
+        "ai-boundary/criterion/2",
+        "ai-boundary/criterion/3",
+        "ai-boundary/criterion/4",
+        "chat-history/criterion/1",
+        "chat-history/criterion/2",
+        "chat-history/criterion/3",
+        "memory-decision/criterion/1",
+        "memory-decision/criterion/2",
+        "memory-decision/criterion/3",
+        "automation-contract/criterion/1",
+        "automation-contract/criterion/2",
+        "automation-contract/criterion/3",
+        "automation/criterion/1",
+        "automation/criterion/2",
+        "automation/criterion/3",
+        "agent-workspace/criterion/1",
+        "agent-workspace/criterion/2",
+        "agent-workspace/criterion/3",
+        "agent-workspace/criterion/4",
+        "agent-takeover/criterion/1",
+        "agent-takeover/criterion/2",
+        "agent-takeover/criterion/3",
+        "agent-takeover/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Privacy and integrations",
+      "issueKeys": [
+        "private-browsing",
+        "data-flow-controls",
+        "integration-policy",
+        "live-folders",
+        "favorite-previews-decision"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/98",
+        "https://github.com/Timpan4/helium-arcified/issues/171",
+        "https://github.com/Timpan4/helium-arcified/issues/26",
+        "https://github.com/Timpan4/helium-arcified/issues/150",
+        "https://github.com/Timpan4/helium-arcified/issues/28"
+      ],
+      "scenarioIds": [
+        "private-browsing/criterion/1",
+        "private-browsing/criterion/2",
+        "private-browsing/criterion/3",
+        "data-flow-controls/criterion/1",
+        "data-flow-controls/criterion/2",
+        "data-flow-controls/criterion/3",
+        "data-flow-controls/criterion/4",
+        "integration-policy/criterion/1",
+        "integration-policy/criterion/2",
+        "integration-policy/criterion/3",
+        "live-folders/criterion/1",
+        "live-folders/criterion/2",
+        "live-folders/criterion/3",
+        "favorite-previews-decision/criterion/1",
+        "favorite-previews-decision/criterion/2",
+        "favorite-previews-decision/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Measured native performance",
+      "issueKeys": [
+        "perf-baseline",
+        "perf-measure-linux",
+        "perf-measure-windows",
+        "perf-measure-macos",
+        "perf-activation",
+        "perf-startup",
+        "perf-discard",
+        "perf-profiles",
+        "bfcache",
+        "perf-hidden",
+        "perf-layout",
+        "perf-leaks",
+        "perf-energy",
+        "perf-ai",
+        "crashed-tab"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/20",
+        "https://github.com/Timpan4/helium-arcified/issues/45",
+        "https://github.com/Timpan4/helium-arcified/issues/46",
+        "https://github.com/Timpan4/helium-arcified/issues/47",
+        "https://github.com/Timpan4/helium-arcified/issues/90",
+        "https://github.com/Timpan4/helium-arcified/issues/91",
+        "https://github.com/Timpan4/helium-arcified/issues/123",
+        "https://github.com/Timpan4/helium-arcified/issues/92",
+        "https://github.com/Timpan4/helium-arcified/issues/124",
+        "https://github.com/Timpan4/helium-arcified/issues/93",
+        "https://github.com/Timpan4/helium-arcified/issues/125",
+        "https://github.com/Timpan4/helium-arcified/issues/126",
+        "https://github.com/Timpan4/helium-arcified/issues/40",
+        "https://github.com/Timpan4/helium-arcified/issues/127",
+        "https://github.com/Timpan4/helium-arcified/issues/94"
+      ],
+      "scenarioIds": [
+        "perf-baseline/criterion/1",
+        "perf-baseline/criterion/2",
+        "perf-baseline/criterion/3",
+        "perf-measure-linux/criterion/1",
+        "perf-measure-linux/criterion/2",
+        "perf-measure-linux/criterion/3",
+        "perf-measure-windows/criterion/1",
+        "perf-measure-windows/criterion/2",
+        "perf-measure-windows/criterion/3",
+        "perf-measure-macos/criterion/1",
+        "perf-measure-macos/criterion/2",
+        "perf-measure-macos/criterion/3",
+        "perf-activation/criterion/1",
+        "perf-activation/criterion/2",
+        "perf-activation/criterion/3",
+        "perf-activation/criterion/4",
+        "perf-startup/criterion/1",
+        "perf-startup/criterion/2",
+        "perf-startup/criterion/3",
+        "perf-startup/criterion/4",
+        "perf-discard/criterion/1",
+        "perf-discard/criterion/2",
+        "perf-discard/criterion/3",
+        "perf-profiles/criterion/1",
+        "perf-profiles/criterion/2",
+        "perf-profiles/criterion/3",
+        "perf-profiles/criterion/4",
+        "perf-profiles/criterion/5",
+        "bfcache/criterion/1",
+        "bfcache/criterion/2",
+        "bfcache/criterion/3",
+        "perf-hidden/criterion/1",
+        "perf-hidden/criterion/2",
+        "perf-hidden/criterion/3",
+        "perf-hidden/criterion/4",
+        "perf-hidden/criterion/5",
+        "perf-layout/criterion/1",
+        "perf-layout/criterion/2",
+        "perf-layout/criterion/3",
+        "perf-layout/criterion/4",
+        "perf-layout/criterion/5",
+        "perf-leaks/criterion/1",
+        "perf-leaks/criterion/2",
+        "perf-leaks/criterion/3",
+        "perf-energy/criterion/1",
+        "perf-energy/criterion/2",
+        "perf-energy/criterion/3",
+        "perf-ai/criterion/1",
+        "perf-ai/criterion/2",
+        "perf-ai/criterion/3",
+        "crashed-tab/criterion/1",
+        "crashed-tab/criterion/2",
+        "crashed-tab/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Cross-device sync, excluded",
+      "issueKeys": [
+        "sync-contract",
+        "sync-roundtrip",
+        "sync-enroll",
+        "sync-conflicts",
+        "sync-recovery",
+        "sync-revoke"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/21",
+        "https://github.com/Timpan4/helium-arcified/issues/139",
+        "https://github.com/Timpan4/helium-arcified/issues/156",
+        "https://github.com/Timpan4/helium-arcified/issues/157",
+        "https://github.com/Timpan4/helium-arcified/issues/174",
+        "https://github.com/Timpan4/helium-arcified/issues/176"
+      ],
+      "scenarioIds": [
+        "sync-contract/criterion/1",
+        "sync-contract/criterion/2",
+        "sync-contract/criterion/3",
+        "sync-roundtrip/criterion/1",
+        "sync-roundtrip/criterion/2",
+        "sync-roundtrip/criterion/3",
+        "sync-enroll/criterion/1",
+        "sync-enroll/criterion/2",
+        "sync-enroll/criterion/3",
+        "sync-conflicts/criterion/1",
+        "sync-conflicts/criterion/2",
+        "sync-conflicts/criterion/3",
+        "sync-recovery/criterion/1",
+        "sync-recovery/criterion/2",
+        "sync-recovery/criterion/3",
+        "sync-revoke/criterion/1",
+        "sync-revoke/criterion/2",
+        "sync-revoke/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Distribution and maintenance",
+      "issueKeys": [
+        "release-linux",
+        "release-windows",
+        "release-macos",
+        "update-linux",
+        "update-windows",
+        "update-macos",
+        "engine-updates"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/131",
+        "https://github.com/Timpan4/helium-arcified/issues/132",
+        "https://github.com/Timpan4/helium-arcified/issues/133",
+        "https://github.com/Timpan4/helium-arcified/issues/165",
+        "https://github.com/Timpan4/helium-arcified/issues/166",
+        "https://github.com/Timpan4/helium-arcified/issues/167",
+        "https://github.com/Timpan4/helium-arcified/issues/41"
+      ],
+      "scenarioIds": [
+        "release-linux/criterion/1",
+        "release-linux/criterion/2",
+        "release-linux/criterion/3",
+        "release-windows/criterion/1",
+        "release-windows/criterion/2",
+        "release-windows/criterion/3",
+        "release-macos/criterion/1",
+        "release-macos/criterion/2",
+        "release-macos/criterion/3",
+        "update-linux/criterion/1",
+        "update-linux/criterion/2",
+        "update-linux/criterion/3",
+        "update-windows/criterion/1",
+        "update-windows/criterion/2",
+        "update-windows/criterion/3",
+        "update-macos/criterion/1",
+        "update-macos/criterion/2",
+        "update-macos/criterion/3",
+        "engine-updates/criterion/1",
+        "engine-updates/criterion/2",
+        "engine-updates/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Reference/evidence/release gates",
+      "issueKeys": [
+        "reference-windows-artifacts",
+        "runtime-reference",
+        "retirements",
+        "quote-card-decision",
+        "easel-collaboration-decision",
+        "release-ux-check"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/31",
+        "https://github.com/Timpan4/helium-arcified/issues/42",
+        "https://github.com/Timpan4/helium-arcified/issues/23",
+        "https://github.com/Timpan4/helium-arcified/issues/29",
+        "https://github.com/Timpan4/helium-arcified/issues/30",
+        "https://github.com/Timpan4/helium-arcified/issues/161"
+      ],
+      "scenarioIds": [
+        "reference-windows-artifacts/criterion/1",
+        "reference-windows-artifacts/criterion/2",
+        "reference-windows-artifacts/criterion/3",
+        "runtime-reference/criterion/1",
+        "runtime-reference/criterion/2",
+        "runtime-reference/criterion/3",
+        "retirements/criterion/1",
+        "retirements/criterion/2",
+        "retirements/criterion/3",
+        "retirements/criterion/4",
+        "quote-card-decision/criterion/1",
+        "quote-card-decision/criterion/2",
+        "quote-card-decision/criterion/3",
+        "easel-collaboration-decision/criterion/1",
+        "easel-collaboration-decision/criterion/2",
+        "easel-collaboration-decision/criterion/3",
+        "release-ux-check/criterion/1",
+        "release-ux-check/criterion/2",
+        "release-ux-check/criterion/3",
+        "release-ux-check/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Local-first onboarding/settings",
+      "issueKeys": [
+        "onboarding",
+        "settings"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/97",
+        "https://github.com/Timpan4/helium-arcified/issues/129"
+      ],
+      "scenarioIds": [
+        "onboarding/criterion/1",
+        "onboarding/criterion/2",
+        "onboarding/criterion/3",
+        "settings/criterion/1",
+        "settings/criterion/2",
+        "settings/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    }
+  ],
+  "historicalAndOptionalDispositions": [
+    {
+      "family": "Arc Notes",
+      "recordedRecommendation": "Compatibility import/view/export and external-document routing. A new native editor is outside core scope.",
+      "issueKeys": [
+        "notes"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/87"
+      ],
+      "scenarioIds": [
+        "notes/criterion/1",
+        "notes/criterion/2",
+        "notes/criterion/3",
+        "notes/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Reader Mode beta",
+      "recordedRecommendation": "Retain a useful native/extension reading path; explicitly decide unsupported cases.",
+      "issueKeys": [
+        "site-controls",
+        "compatibility",
+        "retirements"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/38",
+        "https://github.com/Timpan4/helium-arcified/issues/59",
+        "https://github.com/Timpan4/helium-arcified/issues/23"
+      ],
+      "scenarioIds": [
+        "site-controls/criterion/1",
+        "site-controls/criterion/2",
+        "site-controls/criterion/3",
+        "compatibility/criterion/1",
+        "compatibility/criterion/2",
+        "compatibility/criterion/3",
+        "retirements/criterion/1",
+        "retirements/criterion/2",
+        "retirements/criterion/3",
+        "retirements/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Paste & Go",
+      "recordedRecommendation": "Keep explicit paste/navigation; avoid passive clipboard scanning.",
+      "issueKeys": [
+        "command-bar",
+        "retirements"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/77",
+        "https://github.com/Timpan4/helium-arcified/issues/23"
+      ],
+      "scenarioIds": [
+        "command-bar/criterion/1",
+        "command-bar/criterion/2",
+        "command-bar/criterion/3",
+        "command-bar/criterion/4",
+        "command-bar/criterion/5",
+        "retirements/criterion/1",
+        "retirements/criterion/2",
+        "retirements/criterion/3",
+        "retirements/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Recent Tab indicator",
+      "recordedRecommendation": "Replace with accessible active/recent navigation and ordered selection.",
+      "issueKeys": [
+        "tab-status",
+        "tab-switcher",
+        "tab-order-navigation"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/71",
+        "https://github.com/Timpan4/helium-arcified/issues/78",
+        "https://github.com/Timpan4/helium-arcified/issues/100"
+      ],
+      "scenarioIds": [
+        "tab-status/criterion/1",
+        "tab-status/criterion/2",
+        "tab-status/criterion/3",
+        "tab-switcher/criterion/1",
+        "tab-switcher/criterion/2",
+        "tab-switcher/criterion/3",
+        "tab-order-navigation/criterion/1",
+        "tab-order-navigation/criterion/2",
+        "tab-order-navigation/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Command Bar education",
+      "recordedRecommendation": "Replace old tutorials with discoverable verbs, provenance and local onboarding.",
+      "issueKeys": [
+        "command-bar",
+        "onboarding"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/77",
+        "https://github.com/Timpan4/helium-arcified/issues/97"
+      ],
+      "scenarioIds": [
+        "command-bar/criterion/1",
+        "command-bar/criterion/2",
+        "command-bar/criterion/3",
+        "command-bar/criterion/4",
+        "command-bar/criterion/5",
+        "onboarding/criterion/1",
+        "onboarding/criterion/2",
+        "onboarding/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "GitHub Previews",
+      "recordedRecommendation": "Use an opt-in Live Folder; other Favorite previews need a separate value/scope decision.",
+      "issueKeys": [
+        "live-folders",
+        "favorite-previews-decision"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/150",
+        "https://github.com/Timpan4/helium-arcified/issues/28"
+      ],
+      "scenarioIds": [
+        "live-folders/criterion/1",
+        "live-folders/criterion/2",
+        "live-folders/criterion/3",
+        "favorite-previews-decision/criterion/1",
+        "favorite-previews-decision/criterion/2",
+        "favorite-previews-decision/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "People Cards",
+      "recordedRecommendation": "Recommend deferring service-dependent enrichment; preserve the historical row.",
+      "issueKeys": [
+        "retirements"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/23"
+      ],
+      "scenarioIds": [
+        "retirements/criterion/1",
+        "retirements/criterion/2",
+        "retirements/criterion/3",
+        "retirements/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Legacy Boost Builder",
+      "recordedRecommendation": "Replace with reversible declarative styling. Scripts require a separate reviewed per-device/origin capability.",
+      "issueKeys": [
+        "boost-style",
+        "boost-zap",
+        "boost-code",
+        "boost-sharing"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/54",
+        "https://github.com/Timpan4/helium-arcified/issues/84",
+        "https://github.com/Timpan4/helium-arcified/issues/85",
+        "https://github.com/Timpan4/helium-arcified/issues/96"
+      ],
+      "scenarioIds": [
+        "boost-style/criterion/1",
+        "boost-style/criterion/2",
+        "boost-style/criterion/3",
+        "boost-zap/criterion/1",
+        "boost-zap/criterion/2",
+        "boost-zap/criterion/3",
+        "boost-code/criterion/1",
+        "boost-code/criterion/2",
+        "boost-code/criterion/3",
+        "boost-code/criterion/4",
+        "boost-sharing/criterion/1",
+        "boost-sharing/criterion/2",
+        "boost-sharing/criterion/3",
+        "boost-sharing/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "iCloud sync",
+      "recordedRecommendation": "Excluded by owner. Keep local export/import and migration without a replacement sync backend or Arcified account.",
+      "issueKeys": [
+        "export",
+        "sync-contract"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/73",
+        "https://github.com/Timpan4/helium-arcified/issues/21"
+      ],
+      "scenarioIds": [
+        "export/criterion/1",
+        "export/criterion/2",
+        "export/criterion/3",
+        "sync-contract/criterion/1",
+        "sync-contract/criterion/2",
+        "sync-contract/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Ask on Page",
+      "recordedRecommendation": "Optional deliberate revival, separate from ordinary local find. Current Windows status remains uncertain.",
+      "issueKeys": [
+        "ask-page",
+        "find",
+        "retirements"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/151",
+        "https://github.com/Timpan4/helium-arcified/issues/33",
+        "https://github.com/Timpan4/helium-arcified/issues/23"
+      ],
+      "scenarioIds": [
+        "ask-page/criterion/1",
+        "ask-page/criterion/2",
+        "ask-page/criterion/3",
+        "find/criterion/1",
+        "find/criterion/2",
+        "find/criterion/3",
+        "retirements/criterion/1",
+        "retirements/criterion/2",
+        "retirements/criterion/3",
+        "retirements/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Arc accounts and hosted services",
+      "recordedRecommendation": "Local-first core with portable migration, and independent revocable sharing decisions.",
+      "issueKeys": [
+        "onboarding",
+        "arc-import",
+        "shared-board"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/97",
+        "https://github.com/Timpan4/helium-arcified/issues/74",
+        "https://github.com/Timpan4/helium-arcified/issues/22"
+      ],
+      "scenarioIds": [
+        "onboarding/criterion/1",
+        "onboarding/criterion/2",
+        "onboarding/criterion/3",
+        "arc-import/criterion/1",
+        "arc-import/criterion/2",
+        "arc-import/criterion/3",
+        "arc-import/criterion/4",
+        "arc-import/criterion/5",
+        "arc-import/criterion/6",
+        "shared-board/criterion/1",
+        "shared-board/criterion/2",
+        "shared-board/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Easels and Live Captures",
+      "recordedRecommendation": "Optional local authoring, drawing, export and scoped refresh. Collaboration is a separate decision.",
+      "issueKeys": [
+        "easel",
+        "easel-drawing",
+        "board-export",
+        "live-capture",
+        "easel-collaboration-decision"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/86",
+        "https://github.com/Timpan4/helium-arcified/issues/128",
+        "https://github.com/Timpan4/helium-arcified/issues/164",
+        "https://github.com/Timpan4/helium-arcified/issues/116",
+        "https://github.com/Timpan4/helium-arcified/issues/30"
+      ],
+      "scenarioIds": [
+        "easel/criterion/1",
+        "easel/criterion/2",
+        "easel/criterion/3",
+        "easel/criterion/4",
+        "easel-drawing/criterion/1",
+        "easel-drawing/criterion/2",
+        "easel-drawing/criterion/3",
+        "easel-drawing/criterion/4",
+        "board-export/criterion/1",
+        "board-export/criterion/2",
+        "board-export/criterion/3",
+        "live-capture/criterion/1",
+        "live-capture/criterion/2",
+        "live-capture/criterion/3",
+        "live-capture/criterion/4",
+        "easel-collaboration-decision/criterion/1",
+        "easel-collaboration-decision/criterion/2",
+        "easel-collaboration-decision/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Share Quote",
+      "recordedRecommendation": "Plain/Markdown/attributed clipboard formats are supported proposals; quote-card/text-fragment behavior has its own decision.",
+      "issueKeys": [
+        "share-quote",
+        "quote-card-decision"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/95",
+        "https://github.com/Timpan4/helium-arcified/issues/29"
+      ],
+      "scenarioIds": [
+        "share-quote/criterion/1",
+        "share-quote/criterion/2",
+        "share-quote/criterion/3",
+        "quote-card-decision/criterion/1",
+        "quote-card-decision/criterion/2",
+        "quote-card-decision/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Original live integrations",
+      "recordedRecommendation": "Opt-in named providers with ordinary bookmark/folder fallback; no silent account discovery.",
+      "issueKeys": [
+        "calendar",
+        "live-folders",
+        "integration-policy"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/160",
+        "https://github.com/Timpan4/helium-arcified/issues/150",
+        "https://github.com/Timpan4/helium-arcified/issues/26"
+      ],
+      "scenarioIds": [
+        "calendar/criterion/1",
+        "calendar/criterion/2",
+        "calendar/criterion/3",
+        "live-folders/criterion/1",
+        "live-folders/criterion/2",
+        "live-folders/criterion/3",
+        "integration-policy/criterion/1",
+        "integration-policy/criterion/2",
+        "integration-policy/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Dia Memory",
+      "recordedRecommendation": "Recommend deferral of personal collection; retain conflicting documentation and inspect/delete requirements for any future opt-in.",
+      "issueKeys": [
+        "memory-decision"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/173"
+      ],
+      "scenarioIds": [
+        "memory-decision/criterion/1",
+        "memory-decision/criterion/2",
+        "memory-decision/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Dia work connectors, decks, reports, Morning Brief and enterprise administration",
+      "recordedRecommendation": "Outside the core Arc/performance objective. Generic prompt/tool workflows remain candidates requiring a concrete need.",
+      "issueKeys": [
+        "skills",
+        "read-tools",
+        "write-tools",
+        "retirements"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/56",
+        "https://github.com/Timpan4/helium-arcified/issues/57",
+        "https://github.com/Timpan4/helium-arcified/issues/58",
+        "https://github.com/Timpan4/helium-arcified/issues/23"
+      ],
+      "scenarioIds": [
+        "skills/criterion/1",
+        "skills/criterion/2",
+        "skills/criterion/3",
+        "skills/criterion/4",
+        "read-tools/criterion/1",
+        "read-tools/criterion/2",
+        "read-tools/criterion/3",
+        "read-tools/criterion/4",
+        "write-tools/criterion/1",
+        "write-tools/criterion/2",
+        "write-tools/criterion/3",
+        "write-tools/criterion/4",
+        "write-tools/criterion/5",
+        "retirements/criterion/1",
+        "retirements/criterion/2",
+        "retirements/criterion/3",
+        "retirements/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "Mobile Arc Search",
+      "recordedRecommendation": "Outside this desktop deliverable; no implied mobile-only implementation obligation.",
+      "issueKeys": [
+        "retirements"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/23"
+      ],
+      "scenarioIds": [
+        "retirements/criterion/1",
+        "retirements/criterion/2",
+        "retirements/criterion/3",
+        "retirements/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "YAB engine and platform mechanisms",
+      "recordedRecommendation": "Borrow portable interactions. Do not switch the engine or assume WebKit size/performance, Live Text, Touch ID or macOS keychain behavior transfers.",
+      "issueKeys": [
+        "tab-layout-choice",
+        "local-ocr",
+        "perf-baseline"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/104",
+        "https://github.com/Timpan4/helium-arcified/issues/146",
+        "https://github.com/Timpan4/helium-arcified/issues/20"
+      ],
+      "scenarioIds": [
+        "tab-layout-choice/criterion/1",
+        "tab-layout-choice/criterion/2",
+        "tab-layout-choice/criterion/3",
+        "tab-layout-choice/criterion/4",
+        "local-ocr/criterion/1",
+        "local-ocr/criterion/2",
+        "local-ocr/criterion/3",
+        "perf-baseline/criterion/1",
+        "perf-baseline/criterion/2",
+        "perf-baseline/criterion/3"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    },
+    {
+      "family": "YAB agent workspace and takeover",
+      "recordedRecommendation": "Optional, gated by browser-owned consent, supported provider/auth and automation decisions. No copied caps, schedules or idle timers.",
+      "issueKeys": [
+        "agent-workspace",
+        "agent-takeover"
+      ],
+      "issueUrls": [
+        "https://github.com/Timpan4/helium-arcified/issues/66",
+        "https://github.com/Timpan4/helium-arcified/issues/105"
+      ],
+      "scenarioIds": [
+        "agent-workspace/criterion/1",
+        "agent-workspace/criterion/2",
+        "agent-workspace/criterion/3",
+        "agent-workspace/criterion/4",
+        "agent-takeover/criterion/1",
+        "agent-takeover/criterion/2",
+        "agent-takeover/criterion/3",
+        "agent-takeover/criterion/4"
+      ],
+      "results": {
+        "Linux": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "Windows": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        },
+        "macOS": {
+          "status": "OPEN",
+          "execution": "NOT_RUN",
+          "evidence": [],
+          "note": "Disposition coverage only. Review linked per-feature platform states, including excluded/later/optional scope; no aggregate native pass."
+        }
+      }
+    }
+  ],
+  "dispositionRule": "Historical recommendations remain recommendations. iCloud/cross-device sync exclusion is owner-approved; local export/import remains active. Later AI items are deferred by priority. Every other optional/retired service decision requires its owning issue disposition before enabled runtime testing."
+}

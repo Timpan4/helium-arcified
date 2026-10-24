@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/exclusive_access/exclusive_access_manager.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/exclusive_access/exclusive_access_manager.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:23.793Z",
+  "kind": "file",
+  "bytes": 10116,
+  "sha256": "a07b322dde5ee085aff79d90775dc8b31c2752bb2670eabd15a4e6fce75fd609",
+  "gitBlob": "b925b516a95f436f71b9dbf478938271e55af019",
+  "lines": 288,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

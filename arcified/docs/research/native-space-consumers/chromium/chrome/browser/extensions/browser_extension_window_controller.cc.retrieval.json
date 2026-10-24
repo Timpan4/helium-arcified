@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/extensions/browser_extension_window_controller.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/extensions/browser_extension_window_controller.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:23.619Z",
+  "kind": "file",
+  "bytes": 12890,
+  "sha256": "e832081fba9c4e59a8a7bdd61077065439b2760a25e8d2eb3d78de57a652fd48",
+  "gitBlob": "b48c0452f31bf4e0456aa27af252a58ec10264f8",
+  "lines": 336,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

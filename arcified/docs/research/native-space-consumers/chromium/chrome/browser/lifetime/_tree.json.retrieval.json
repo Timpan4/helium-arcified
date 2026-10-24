@@ -1,0 +1,10 @@
+{
+  "path": "chrome/browser/lifetime/",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/lifetime/?format=JSON",
+  "retrievedAt": "2026-10-23T15:01:23.557Z",
+  "kind": "tree",
+  "bytes": 8035,
+  "sha256": "a01805236a358d733bc3099b31d99cb35a9628f0f608a0f2174001cd76b1ec06",
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

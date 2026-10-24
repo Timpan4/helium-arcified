@@ -1,0 +1,8 @@
+{
+  "issueKey": "runtime-reference",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/42",
+  "primaryCommandId": 40799,
+  "owner": "assigned primary",
+  "scope": "This packet only. Coordinator reconciles common source changes.",
+  "nativeAcceptance": "OPEN"
+}

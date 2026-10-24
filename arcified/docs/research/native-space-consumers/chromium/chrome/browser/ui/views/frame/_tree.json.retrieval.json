@@ -1,0 +1,10 @@
+{
+  "path": "chrome/browser/ui/views/frame/",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/frame/?format=JSON",
+  "retrievedAt": "2026-10-23T15:00:02.361Z",
+  "kind": "tree",
+  "bytes": 34827,
+  "sha256": "ce97dd0fb377de56ffe581ad8c157064f5a46a0df4e9ad54ae16095ac0a03ef0",
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

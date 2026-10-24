@@ -1,0 +1,283 @@
+diff --git a/chrome/app/generated_resources.grd b/chrome/app/generated_resources.grd
+index 18f57d7e..f9d77b3c 100644
+--- a/chrome/app/generated_resources.grd
++++ b/chrome/app/generated_resources.grd
+@@ -268,6 +268,11 @@
+   <release seq="1">
+     <!-- IMPORTANT: .grdp files must be in the same directory as this file -->
+     <messages fallback_to_english="true">
++      <if expr="is_win">
++        <message name="IDS_ARCIFIED_UPDATE_WINDOWS_UNAVAILABLE" desc="Shown in About when this Windows build has no authenticated Arcified update channel.">
++          Automatic updates are unavailable in this Arcified build. No update was downloaded or installed.
++        </message>
++      </if>
+       <!-- Access Code Cast specific strings -->
+       <part file="access_code_cast_strings.grdp" />
+ 
+@@ -20261,4 +20266,4 @@ Please help our engineers fix this problem. Tell us what happened right before y
+     </message>
+   </messages>
+ </release>
+-</grit>
+\ No newline at end of file
++</grit>
+diff --git a/chrome/browser/resources/settings/about_page/about_page.ts b/chrome/browser/resources/settings/about_page/about_page.ts
+index 6306dc2e..36d1b94a 100644
+--- a/chrome/browser/resources/settings/about_page/about_page.ts
++++ b/chrome/browser/resources/settings/about_page/about_page.ts
+@@ -237,6 +237,11 @@ export class SettingsAboutPageElement extends SettingsAboutPageElementBase
+     }
+     this.showUpdateStatus_ =
+         this.currentUpdateStatusEvent_!.status !== UpdateStatus.DISABLED;
++    // <if expr="is_win">
++    // An unavailable updater can explain why without claiming a failed check
++    // or enabling the relaunch action.
++    this.showUpdateStatus_ ||= !!this.currentUpdateStatusEvent_!.message;
++    // </if>
+   }
+ 
+   protected shouldShowLearnMoreLink_(): boolean {
+diff --git a/chrome/browser/ui/webui/help/BUILD.gn b/chrome/browser/ui/webui/help/BUILD.gn
+index 17d8d3e2..6750b8eb 100644
+--- a/chrome/browser/ui/webui/help/BUILD.gn
++++ b/chrome/browser/ui/webui/help/BUILD.gn
+@@ -62,7 +62,11 @@ source_set("help") {
+         "//ui/gfx",
+       ]
+     } else {
+-      sources = [ "version_updater_basic.cc" ]
++      sources = [ "arcified_version_updater_win.cc" ]
++      deps += [
++        "//chrome/app:generated_resources_grit",
++        "//ui/base",
++      ]
+     }
+   }
+ 
+@@ -71,6 +75,32 @@ source_set("help") {
+   }
+ }
+ 
++if (is_win && !is_chrome_branded) {
++  source_set("arcified_windows_unit_tests") {
++    testonly = true
++    sources = [ "arcified_version_updater_win_unittest.cc" ]
++    deps = [
++      ":help",
++      "//base/test:test_support",
++      "//testing/gtest",
++    ]
++  }
++
++  source_set("arcified_windows_browser_tests") {
++    testonly = true
++    defines = [ "HAS_OUT_OF_PROC_TEST_RUNNER" ]
++    sources = [ "arcified_version_updater_win_browsertest.cc" ]
++    deps = [
++      "//chrome/app:generated_resources_grit",
++      "//chrome/browser/ui",
++      "//chrome/test:test_support",
++      "//content/test:test_support",
++      "//ui/base",
++      "//url",
++    ]
++  }
++}
++
+ if (!is_android) {
+   source_set("test_support") {
+     testonly = true
+diff --git a/chrome/browser/ui/webui/help/arcified_version_updater_win.cc b/chrome/browser/ui/webui/help/arcified_version_updater_win.cc
+new file mode 100644
+index 00000000..7e8dd344
+--- /dev/null
++++ b/chrome/browser/ui/webui/help/arcified_version_updater_win.cc
+@@ -0,0 +1,32 @@
++// Copyright 2026 The Helium Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include "chrome/browser/ui/webui/help/version_updater.h"
++
++#include <memory>
++#include <string>
++
++#include "chrome/grit/generated_resources.h"
++#include "ui/base/l10n/l10n_util.h"
++
++namespace {
++
++// The unbranded Windows build has no approved authenticated update transport.
++// Keep the native About-page entry point available without interpreting an
++// installed-version notification as proof of an authenticated Arcified update.
++// This class does not fetch, stage, install, roll back, or request a restart.
++class ArcifiedVersionUpdaterWin final : public VersionUpdater {
++ public:
++  void CheckForUpdate(StatusCallback callback, PromoteCallback) override {
++    callback.Run(
++        DISABLED, 0, false, false, std::string(), 0,
++        l10n_util::GetStringUTF16(IDS_ARCIFIED_UPDATE_WINDOWS_UNAVAILABLE));
++    // The callback can destroy this updater. Do not access members afterward.
++  }
++};
++
++}  // namespace
++
++std::unique_ptr<VersionUpdater> VersionUpdater::Create(content::WebContents*) {
++  return std::make_unique<ArcifiedVersionUpdaterWin>();
++}
+diff --git a/chrome/browser/ui/webui/help/arcified_version_updater_win_browsertest.cc b/chrome/browser/ui/webui/help/arcified_version_updater_win_browsertest.cc
+new file mode 100644
+index 00000000..bf3022e4
+--- /dev/null
++++ b/chrome/browser/ui/webui/help/arcified_version_updater_win_browsertest.cc
+@@ -0,0 +1,48 @@
++// Copyright 2026 The Helium Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include "chrome/browser/ui/browser.h"
++#include "chrome/browser/ui/tabs/tab_strip_model.h"
++#include "chrome/grit/generated_resources.h"
++#include "chrome/test/base/in_process_browser_test.h"
++#include "chrome/test/base/ui_test_utils.h"
++#include "content/public/test/browser_test.h"
++#include "content/public/test/browser_test_utils.h"
++#include "ui/base/l10n/l10n_util.h"
++#include "url/gurl.h"
++
++namespace {
++
++using ArcifiedUpdateWindowsBrowserTest = InProcessBrowserTest;
++
++// Exercise the actual Settings WebUI -> AboutHandler -> VersionUpdater factory
++// -> WebUI event binding. No update service or VersionUpdater is substituted.
++IN_PROC_BROWSER_TEST_F(ArcifiedUpdateWindowsBrowserTest,
++                       AboutReportsUnavailableThroughNativeBinding) {
++  ASSERT_TRUE(
++      ui_test_utils::NavigateToURL(browser(), GURL("chrome://settings/help")));
++  auto* contents = browser()->tab_strip_model()->GetActiveWebContents();
++  EXPECT_EQ(l10n_util::GetStringUTF8(IDS_ARCIFIED_UPDATE_WINDOWS_UNAVAILABLE),
++            content::EvalJs(contents, R"JS(
++              (async () => {
++                const {addWebUiListener, removeWebUiListener} =
++                    await import('chrome://resources/js/cr.js');
++                return new Promise(resolve => {
++                  const listener = addWebUiListener(
++                      'update-status-changed', event => {
++                        removeWebUiListener(listener);
++                        resolve(event.status === 'disabled' &&
++                                        event.progress === 0 &&
++                                        !event.rollback && !event.powerwash &&
++                                        event.version === '' &&
++                                        event.size === '0' ?
++                                    event.message :
++                                    'Unexpected update status');
++                      });
++                  chrome.send('refreshUpdateStatus');
++                });
++              })()
++            )JS"));
++}
++
++}  // namespace
+diff --git a/chrome/browser/ui/webui/help/arcified_version_updater_win_unittest.cc b/chrome/browser/ui/webui/help/arcified_version_updater_win_unittest.cc
+new file mode 100644
+index 00000000..f5975a6d
+--- /dev/null
++++ b/chrome/browser/ui/webui/help/arcified_version_updater_win_unittest.cc
+@@ -0,0 +1,68 @@
++// Copyright 2026 The Helium Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include "chrome/browser/ui/webui/help/version_updater.h"
++
++#include <cstdint>
++#include <string>
++
++#include "base/test/bind.h"
++#include "testing/gtest/include/gtest/gtest.h"
++
++namespace {
++
++TEST(ArcifiedVersionUpdaterWinTest, ReportsUnavailableWithoutOfferingMutation) {
++  auto updater = VersionUpdater::Create(nullptr);
++  int replies = 0;
++  bool promoted = false;
++  updater->CheckForUpdate(
++      base::BindLambdaForTesting(
++          [&](VersionUpdater::Status status, int progress, bool rollback,
++              bool powerwash, const std::string& version, int64_t size,
++              const std::u16string& message) {
++            ++replies;
++            EXPECT_EQ(VersionUpdater::DISABLED, status);
++            EXPECT_EQ(0, progress);
++            EXPECT_FALSE(rollback);
++            EXPECT_FALSE(powerwash);
++            EXPECT_TRUE(version.empty());
++            EXPECT_EQ(0, size);
++            EXPECT_FALSE(message.empty());
++          }),
++      base::BindLambdaForTesting(
++          [&](VersionUpdater::PromotionState) { promoted = true; }));
++  EXPECT_EQ(1, replies);
++  EXPECT_FALSE(promoted);
++}
++
++TEST(ArcifiedVersionUpdaterWinTest, CallbackCanDestroyUpdater) {
++  auto updater = VersionUpdater::Create(nullptr);
++  bool replied = false;
++  updater->CheckForUpdate(
++      base::BindLambdaForTesting([&](VersionUpdater::Status status, int, bool,
++                                     bool, const std::string&, int64_t,
++                                     const std::u16string&) {
++        EXPECT_EQ(VersionUpdater::DISABLED, status);
++        replied = true;
++        updater.reset();
++      }),
++      {});
++  EXPECT_TRUE(replied);
++  EXPECT_FALSE(updater);
++}
++
++TEST(ArcifiedVersionUpdaterWinTest, RepeatedRequestsStayUnavailable) {
++  auto updater = VersionUpdater::Create(nullptr);
++  int replies = 0;
++  auto callback = base::BindLambdaForTesting(
++      [&](VersionUpdater::Status status, int, bool, bool, const std::string&,
++          int64_t, const std::u16string&) {
++        EXPECT_EQ(VersionUpdater::DISABLED, status);
++        ++replies;
++      });
++  updater->CheckForUpdate(callback, {});
++  updater->CheckForUpdate(callback, {});
++  EXPECT_EQ(2, replies);
++}
++
++}  // namespace
+diff --git a/chrome/test/BUILD.gn b/chrome/test/BUILD.gn
+index 9f31e904..7d9640c4 100644
+--- a/chrome/test/BUILD.gn
++++ b/chrome/test/BUILD.gn
+@@ -3052,6 +3052,10 @@ if (!is_android) {
+     ]
+ 
+     if (is_win) {
++      if (!is_chrome_branded) {
++        deps +=
++            [ "//chrome/browser/ui/webui/help:arcified_windows_browser_tests" ]
++      }
+       sources += [
+         "../browser/ui/views/device_id/pen_id_browsertest_win.cc",
+         "../browser/ui/views/tab_search_bubble_ui_browsertest.cc",
+@@ -6498,6 +6502,9 @@ test("unit_tests") {
+ 
+     if (is_win) {
+       deps += [ "//chrome/browser/default_browser/win:unit_tests" ]
++      if (!is_chrome_branded) {
++        deps += [ "//chrome/browser/ui/webui/help:arcified_windows_unit_tests" ]
++      }
+     }
+   }
+ 
+
+ 
+

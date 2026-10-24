@@ -1,0 +1,781 @@
+{
+  "license": "GPL-3.0-only",
+  "issueKey": "compatibility",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/59",
+  "nativeAcceptance": "OPEN",
+  "recordedAt": "2026-10-24",
+  "releaseCandidate": {
+    "state": "UNDECLARED",
+    "id": null,
+    "forkCommit": "a4b6b480d3de07857ab6e939149254a8359e5449",
+    "chromiumVersion": "155.0.8059.79",
+    "preparedSource": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+    "rootRecordedBuildState": "baseline_compiling; PREPARED_NOT_BUILT",
+    "artifacts": {
+      "linux": null,
+      "windows": null,
+      "macos": null
+    },
+    "warning": "A source baseline and an active root build are not installed release candidates."
+  },
+  "platforms": [
+    "linux",
+    "windows",
+    "macos"
+  ],
+  "requiredCandidateIdentity": [
+    "RC ID",
+    "fork commit and complete integrated patch-series identity",
+    "Chromium and Helium versions",
+    "per-OS package SHA-256, architecture, signing/notarization state and install route",
+    "effective GN args identity with secrets excluded",
+    "OS release and Linux display backend when applicable",
+    "native binary identity and runtime fixture versions",
+    "feature flags, optional components and authorized hardware/service availability"
+  ],
+  "variantDefinitions": {
+    "baseline": "Ordinary native launch under Profile A with distinct test fixtures. Pointer and keyboard entry and accessible focus observations.",
+    "competing-profile": "Another native window and another Profile exist and are active most recently. Same-host A/B Space switching is a separate required gate, not simulated by separate windows.",
+    "pending-context-change": "Start action on A, switch to B before completion, then cancel or complete. Include requester document/host closure where the fixture supports it; absence of a safe route stays OPEN.",
+    "approved-handoff": "After the production saved-page handoff is proven, repeat with the same live page transferred to its actual destination host. Never use Model::OpenItem as the handoff.",
+    "private-where-supported": "Record supported OTR/regular behavior using the existing private/download classifiers. A route unavailable in private mode is explicitly unavailable with evidence, never silently omitted."
+  },
+  "requiredObservationFields": [
+    "scenario and variant",
+    "RC and package identity",
+    "OS/build/architecture/backend",
+    "fixture identity and prerequisites",
+    "requesting PageId/document, exact Profile/OTR state, Space and native host",
+    "selected workspace object separately from active page surface",
+    "actual recipient page/Profile/native host and accessible focus",
+    "prompt, cancel, failure and stale-completion outcome",
+    "test command or authorized native steps and result",
+    "redacted screenshots/logs or native test output",
+    "defect reference if failed",
+    "unsupported reason and authority if unavailable"
+  ],
+  "stateRules": {
+    "OPEN": "Unexecuted or missing required target/variant/identity; cannot close acceptance.",
+    "PASS": "Observed native result on the exact declared RC with required evidence and variants.",
+    "FAIL": "Observed mismatch, with separately filed defect and reproducer.",
+    "UNAVAILABLE": "Evidence identifies a platform/build/hardware/permission absence. This is not a pass or an approved waiver."
+  },
+  "scenarios": [
+    {
+      "id": "web-app-install",
+      "acceptanceCriterion": 1,
+      "owner": "web-apps",
+      "exercise": "Install an owner-authorized local test PWA through native install UI. Accept and cancel in separate runs.",
+      "expected": "Installation is Profile-scoped; prompt identifies the intended app and requesting page. Cancellation creates no reported installation.",
+      "sourceIds": [
+        "S02"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "web-app-launch",
+      "acceptanceCriterion": 1,
+      "owner": "web-apps",
+      "exercise": "Launch the installed app from browser UI and its OS entry, with another Profile/window most recently active.",
+      "expected": "App ID and immutable Profile match the installation; the native app window and focused document match the launch request. Record create/reuse behavior without inventing its policy.",
+      "sourceIds": [
+        "S02"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "web-app-uninstall",
+      "acceptanceCriterion": 1,
+      "owner": "web-apps",
+      "exercise": "Cancel, then confirm uninstall for the test app through native UI. Observe the browser and OS entry afterward.",
+      "expected": "Only the explicitly targeted Profile/app installation changes. Preserve user data unless the authorized dialog choice says otherwise; record OS integration removal and any surviving installation in the other Profile.",
+      "sourceIds": [
+        "S02"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "extension-popup",
+      "acceptanceCriterion": 1,
+      "owner": "extension-workflow",
+      "exercise": "Open and dismiss a permitted test extension action by pointer and keyboard; overlap with a security dialog and switch context while pending.",
+      "expected": "Popup uses the authorized extension Profile and current page; security dialog protection remains; return focus targets the originating surviving surface. Never enumerate another Profile's tabs.",
+      "sourceIds": [
+        "S03"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change",
+        "private-where-supported"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "autofill-address",
+      "acceptanceCriterion": 1,
+      "owner": "credentials-flow",
+      "exercise": "Request address suggestions and fill a test form, including an iframe and context switch while suggestions are visible; cancel once.",
+      "expected": "Suggestions and fill stay bound to the requesting frame/document/Profile; stale UI cannot fill the newly selected page. Record field focus and accessible popup state.",
+      "sourceIds": [
+        "S04"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change",
+        "approved-handoff",
+        "private-where-supported"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "password-autofill",
+      "acceptanceCriterion": 1,
+      "owner": "credentials-flow",
+      "exercise": "Save and fill a synthetic login through native credential UI using distinct test credentials per Profile; cancel once.",
+      "expected": "Save/fill and any reauthentication apply to the requesting document and exact Profile; another Profile's secrets are not offered or written. Preserve origin and security UI.",
+      "sourceIds": [
+        "S05"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change",
+        "approved-handoff",
+        "private-where-supported"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "passkey",
+      "acceptanceCriterion": 1,
+      "owner": "credentials-flow",
+      "exercise": "Create and use a test passkey with the available authorized authenticator; record transport/provider and OS prompts. Cancel and change context while pending.",
+      "expected": "Request remains tied to its RenderFrameHost, relying party and Profile. User verification and OS prompts remain. A missing authenticator/provider is recorded as unavailable, not successful authentication.",
+      "sourceIds": [
+        "S05"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change",
+        "approved-handoff",
+        "private-where-supported"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "print-preview",
+      "acceptanceCriterion": 1,
+      "owner": "print-flow",
+      "exercise": "Open native browser print preview from the active page, including a split pane; switch context and cancel.",
+      "expected": "Preview content, initiating WebContents and dialog owner agree; cancellation restores the appropriate surviving surface without printing another Profile's document.",
+      "sourceIds": [
+        "S06"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change",
+        "approved-handoff"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "system-print-dialog",
+      "acceptanceCriterion": 1,
+      "owner": "print-flow",
+      "exercise": "Open the OS print dialog from preview, inspect destination/options, and cancel. A physical print requires separate authorized test output.",
+      "expected": "Native dialog is parented to the requesting host/context and retains document/Profile targeting after focus changes. Record printer/backend unavailable states separately.",
+      "sourceIds": [
+        "S06"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change",
+        "approved-handoff"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "download-page",
+      "acceptanceCriterion": 1,
+      "owner": "downloads",
+      "exercise": "Download an inert fixture with Save As; cancel once and accept into an authorized test destination once. Switch context while the picker is open.",
+      "expected": "Picker parent and completion belong to the initiating DownloadItem/WebContents/Profile. Private classification and download security checks remain authoritative; no duplicate Library record.",
+      "sourceIds": [
+        "S07"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change",
+        "approved-handoff",
+        "private-where-supported"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "download-extension",
+      "acceptanceCriterion": 1,
+      "owner": "downloads",
+      "exercise": "Use a permitted test extension download without an associated WebContents while another Profile is last active; cancel and complete separate requests.",
+      "expected": "Download remains in its owning Profile; modal placement and return focus must not silently follow an unrelated Profile. Record candidate D1 evidence independently.",
+      "sourceIds": [
+        "S07"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change",
+        "private-where-supported"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "notification-document",
+      "acceptanceCriterion": 2,
+      "owner": "site-controls",
+      "exercise": "Click a granted document notification while another window/Profile is active, then repeat after the source document is gone; test revocation.",
+      "expected": "Live click/fallback stays in its originating Profile and respects permission. Record actual destination host/page and whether the document handler ran; never treat a fallback new tab as restoration of the old document.",
+      "sourceIds": [
+        "S08"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change",
+        "private-where-supported"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "notification-worker",
+      "acceptanceCriterion": 2,
+      "owner": "site-controls",
+      "exercise": "Click a service-worker notification body and an available action, with the origin open, closed and permission revoked.",
+      "expected": "Event dispatch uses the originating Profile and permission state. Record the worker's focus/open behavior and actual native target; stale callbacks cannot retarget to the selected Profile.",
+      "sourceIds": [
+        "S09"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change",
+        "private-where-supported"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "protocol-outbound",
+      "acceptanceCriterion": 2,
+      "owner": "security-surfaces",
+      "exercise": "Invoke an allowed test external protocol from a page; inspect and cancel the security prompt, then accept only with an authorized harmless handler.",
+      "expected": "Origin, initiator document and dialog parent remain accurate after a context switch. Blocking/missing handler stays unavailable. Never bypass the external protocol confirmation path.",
+      "sourceIds": [
+        "S10"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "protocol-inbound",
+      "acceptanceCriterion": 2,
+      "owner": "web-apps",
+      "exercise": "With an authorized test handler registration, launch a registered PWA protocol/OS link while another Profile is active; include a browser-closed start when available.",
+      "expected": "Recorded registered handler/app/Profile receives the link. For an unattributed generic OS link, target selection requires the focus-routing owner decision; do not assume last-active or create an invented Profile policy.",
+      "sourceIds": [
+        "S02"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "casting",
+      "acceptanceCriterion": 2,
+      "owner": "media-controls",
+      "exercise": "Inspect Cast availability and, only on an authorized supported receiver/network, select a test source and receiver; cancel, start and stop.",
+      "expected": "Chooser, origin, selected tab/screen and Profile match the request. Native permission prompts remain. Record compiled/runtime availability, discovery, permissions and receiver result separately.",
+      "sourceIds": [
+        "S11"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "pip-video-return",
+      "acceptanceCriterion": 2,
+      "owner": "pip",
+      "exercise": "Enter video PiP, switch window/Space/Profile and use Return to tab; repeat after an approved saved-page handoff and source closure when supported.",
+      "expected": "Return identifies the actual initiating page and its current owning host with immutable Profile. Preserve live document/media state; a missing initiator cannot select an unrelated page.",
+      "sourceIds": [
+        "S12"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change",
+        "approved-handoff"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "pip-document-return",
+      "acceptanceCriterion": 2,
+      "owner": "pip",
+      "exercise": "Open document PiP from an authorized fixture, switch context and use the return action; include initiator close and any approved handoff route.",
+      "expected": "Return and focus use the initiating document, actual owner and immutable Profile. Record unsupported document PiP separately from video PiP; closing an initiator must not redirect into another Profile.",
+      "sourceIds": [
+        "S12"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change",
+        "approved-handoff"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "widevine-absent",
+      "acceptanceCriterion": 3,
+      "owner": "compatibility",
+      "exercise": "On a declared build without a CDM, inspect encrypted-media availability and attempt an authorized inert DRM test route if provided.",
+      "expected": "Record no-CDM/unsupported playback honestly, including key-system and codec errors. Browser stays usable; no proprietary CDM is bundled and no prompt is suppressed.",
+      "sourceIds": [
+        "S13"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    },
+    {
+      "id": "widevine-optional",
+      "acceptanceCriterion": 3,
+      "owner": "compatibility",
+      "exercise": "Only when the owner separately supplies a lawful supported optional CDM route and authorized test media, record CDM/version/architecture and run that route.",
+      "expected": "Record key-system access, license exchange, decoding and playback separately. Build enablement alone is insufficient; no copied vendor binary, credential or service assumption.",
+      "sourceIds": [
+        "S13"
+      ],
+      "variants": [
+        "baseline",
+        "competing-profile",
+        "pending-context-change"
+      ],
+      "results": {
+        "linux": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "windows": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        },
+        "macos": {
+          "state": "OPEN",
+          "reason": "No installed declared release candidate or authorized native runtime observation supplied to this packet.",
+          "evidence": [],
+          "defects": []
+        }
+      }
+    }
+  ]
+}

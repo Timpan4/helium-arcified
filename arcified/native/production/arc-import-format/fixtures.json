@@ -1,0 +1,137 @@
+{
+  "issueKey": "arc-import-format",
+  "status": "AWAITING_OWNER_AUTHORIZED_EXPORTS",
+  "nativeAcceptance": "OPEN",
+  "originals": [],
+  "inertDerivatives": [],
+  "supportedArcBuilds": [],
+  "supportedExportVersions": [],
+  "supportedExportGrammars": [],
+  "inspectionScope": [
+    "Initial exclusive packet contained ownership.json only.",
+    "Scoped fast_filesystem filename listing of this coordinator checkout found no Arc Data Export or StorableSidebar file. Existing export Markdown files are issue documentation.",
+    "Existing prototype_migration/fixtures/snapshots.json was read. It is the extension AppState fixture, not Arc exporter output, and is excluded from this corpus.",
+    "No search outside authorized repository evidence was made for personal browser data."
+  ],
+  "requiredProvenanceForEachOriginal": [
+    "Owner authorization reference and permitted local inspection/retention scope",
+    "Exact Arc version/build, operating system/version, and export route",
+    "Export date and locale if known; unknown values remain unknown",
+    "Original byte length and SHA-256 before inspection",
+    "Owner-controlled original location, recorded without exposing sensitive paths or URLs",
+    "Whether this is built-in desktop export, folder clipboard Markdown, mobile open-tab export, or installed-browser data"
+  ],
+  "derivativeRequirements": [
+    "Owner supplies an inert original produced using synthetic browsing data, or separately authorizes a derived fixture.",
+    "Keep the original unchanged. Give each derivative its own SHA-256 and an explicit source-original association.",
+    "Document every redaction/substitution separately. Redaction may alter parsing and is not evidence that original production bytes parse identically.",
+    "Do not execute exported HTML/scripts, follow links, fetch favicons or infer Profile identities from names/domains.",
+    "Keep sensitive data out of checked-in reports and logs; coordinator settles retention before a personal export is copied into shared source."
+  ],
+  "fieldCoverage": [
+    {
+      "family": "Spaces",
+      "documented": "One section per Space in built-in desktop export.",
+      "byteObserved": false,
+      "unsettled": [
+        "Heading grammar",
+        "IDs",
+        "Names and escaping",
+        "Order",
+        "Empty Spaces",
+        "Color/theme"
+      ]
+    },
+    {
+      "family": "Favorites",
+      "documented": "Favorites listed as links within the desktop export description.",
+      "byteObserved": false,
+      "unsettled": [
+        "Category markers",
+        "Source Profile ownership",
+        "Repeated Favorites across Spaces",
+        "Custom label preservation"
+      ]
+    },
+    {
+      "family": "Pinned tabs",
+      "documented": "Pinned tabs listed as links.",
+      "byteObserved": false,
+      "unsettled": [
+        "Category markers",
+        "Saved destination versus current navigation",
+        "Custom names",
+        "Duplicate entries"
+      ]
+    },
+    {
+      "family": "Folders",
+      "documented": "Folders included in the desktop link-list description.",
+      "byteObserved": false,
+      "unsettled": [
+        "Nesting grammar",
+        "Folder identity",
+        "Order",
+        "Empty folders",
+        "Folder titles"
+      ]
+    },
+    {
+      "family": "Other sidebar tabs",
+      "documented": "Listed as links.",
+      "byteObserved": false,
+      "unsettled": [
+        "Temporary versus saved classification",
+        "Open/closed state",
+        "Window association"
+      ]
+    },
+    {
+      "family": "Profiles",
+      "documented": "No portable Profile structure specified in inspected export article. Dia direct-import sharing is a separate route.",
+      "byteObserved": false,
+      "unsettled": [
+        "Security/storage identity",
+        "Space-to-Profile associations",
+        "Shared Favorites"
+      ]
+    },
+    {
+      "family": "Splits",
+      "documented": "No portable split fields specified in inspected export article.",
+      "byteObserved": false,
+      "unsettled": [
+        "Membership",
+        "Orientation",
+        "Ratio",
+        "Focus",
+        "Pane order"
+      ]
+    },
+    {
+      "family": "Sessions",
+      "documented": "No portable session fields specified in inspected export article.",
+      "byteObserved": false,
+      "unsettled": [
+        "Window/page identity",
+        "Selection",
+        "History",
+        "Scroll/forms",
+        "Restoration state"
+      ]
+    },
+    {
+      "family": "Format/version/limits",
+      "documented": "Filename Arc Data Export.md and link-list workflow. No version grammar or numeric parser/resource bound published in inspected article.",
+      "byteObserved": false,
+      "unsettled": [
+        "Encoding",
+        "Markdown dialect",
+        "Schema/version marker",
+        "App version coverage",
+        "Escaping",
+        "Resource bounds"
+      ]
+    }
+  ]
+}

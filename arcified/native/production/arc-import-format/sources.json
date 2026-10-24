@@ -1,0 +1,147 @@
+{
+  "issueKey": "arc-import-format",
+  "recordedDateUtc": "2026-10-23",
+  "recordedDateEuropeStockholm": "2026-10-24",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "issueAuthority": {
+    "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+    "object": {
+      "key": "arc-import-format",
+      "title": "Discover what supported Arc exports actually contain",
+      "area": "research",
+      "build": "Inspect owner-authorized Arc exports and document versions, supported fields and limits before promising a converter.",
+      "accept": [
+        "Retain export provenance and inert fixtures; distinguish portable exports from Dia's direct installed-browser import.",
+        "Enumerate observed Spaces/Favorites/Profile/split/session fields without inventing absent structures.",
+        "Record unsupported data and a proposed mapping/preview contract for owner review; keep originals unchanged."
+      ],
+      "blocked": [],
+      "sources": [
+        "arc-import",
+        "arc-status"
+      ],
+      "sourceUrls": [
+        "https://resources.arc.net/hc/en-us/articles/19335089616791-Import-Bookmarks-Logins-History-Extensions-from-Your-Previous-Browser",
+        "https://resources.arc.net/hc/en-us/articles/44413129117591-Move-from-Arc-to-Dia",
+        "https://resources.arc.net/hc/en-us/articles/44412972248471-Arc-Sunset-Key-Dates-and-What-to-Expect"
+      ],
+      "kind": "research",
+      "phase": "Evidence, decisions and gates",
+      "disposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "referencePlatforms": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "referenceNote": "The linked reference documents/release histories describe this workflow family. Acceptance below specifies the intended improved Arcified behavior.",
+      "openQuestions": "Native integration, failure behavior and applicable platform results must be proven for this slice; unavailable checks stay open.",
+      "readiness": "Proposed work after native/reference prerequisites and explicit decisions in this issue.",
+      "priority": "Before AI",
+      "number": 27,
+      "url": "https://github.com/Timpan4/helium-arcified/issues/27",
+      "primaryCommandId": 40705
+    }
+  },
+  "externalSources": [
+    {
+      "sourceId": "arc-to-dia",
+      "title": "Move from Arc to Dia",
+      "articleUrl": "https://resources.arc.net/hc/en-us/articles/44413129117591-Move-from-Arc-to-Dia",
+      "retrievalUrl": "https://resources.arc.net/api/v2/help_center/en-us/articles/44413129117591.json",
+      "retrievedDateUtc": "2026-10-23",
+      "updatedAt": "2026-10-22T15:26:17Z",
+      "responseBytes": 7126,
+      "responseSha256": "e15781a2317f1ce753905eb10fa563c2d59dbaa5d2ba1cbb1cd375bebf39558f",
+      "evidenceKind": "First-party public Help Center JSON, read over HTTPS. No account or app execution.",
+      "retention": "Identity and paraphrased findings retained; full copyrighted article body not copied into packet."
+    },
+    {
+      "sourceId": "arc-sunset",
+      "title": "Arc Sunset: Key Dates and What to Expect",
+      "articleUrl": "https://resources.arc.net/hc/en-us/articles/44412972248471-Arc-Sunset-Key-Dates-and-What-to-Expect",
+      "retrievalUrl": "https://resources.arc.net/api/v2/help_center/en-us/articles/44412972248471.json",
+      "retrievedDateUtc": "2026-10-23",
+      "updatedAt": "2026-10-22T15:26:16Z",
+      "responseBytes": 9322,
+      "responseSha256": "013f2406065d42cf5206b95abb09444542453fe9e9813f2af2a7a5ec73c3c8c2",
+      "evidenceKind": "First-party public Help Center JSON, read over HTTPS. No account or app execution.",
+      "retention": "Identity and paraphrased findings retained; full copyrighted article body not copied into packet."
+    },
+    {
+      "sourceId": "arc-export",
+      "title": "How Do I Export My Data from Arc?",
+      "articleUrl": "https://resources.arc.net/hc/en-us/articles/25583851606039-How-Do-I-Export-My-Data-from-Arc",
+      "retrievalUrl": "https://resources.arc.net/api/v2/help_center/en-us/articles/25583851606039.json",
+      "retrievedDateUtc": "2026-10-23",
+      "updatedAt": "2026-10-22T15:26:20Z",
+      "responseBytes": 5236,
+      "responseSha256": "0e68eac81a71f078c529ecec871c0da5980e03072cbc92f8a5fd5faadc770239",
+      "bodySha256": "ee474965451c44d9d3b961a3dafe7f8d075d4ed796966bc1cf51e93eecbad666",
+      "bodyBytes": 4229,
+      "evidenceKind": "First-party public Help Center JSON, read over HTTPS. Body identity repeated successfully.",
+      "retention": "Identity and paraphrased findings retained; no exported user data or full article body retained."
+    }
+  ],
+  "localSources": [
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+      "sha256": "cc8ec03443b18a749b486e484a56b86218d8f41653970dea94185f76c9685354"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+      "sha256": "daf98f1cf993c1a21686289a88489bf001266d7fff4d85089d30055584c8a7b0"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md",
+      "sha256": "244488864d15d093f7f80e1cc40f490a979454e2a8e74db438c7e51283518a1c"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md",
+      "sha256": "e5951ba265be3587cb1df8f2ab73ce6768071ac55b8d481240ed57819b39ab56"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json",
+      "sha256": "dae2aed7885b1f03f5f96a1285265a1189b8776a6472880c0f12c94de7f7ad02"
+    },
+    {
+      "path": "arcified/native/features/workspace_import/planner.h",
+      "sha256": "7d05dd09b0c654f52743adbac58a1bb44b16828d0a6ea9311cade398c08c09ac"
+    },
+    {
+      "path": "arcified/native/features/prototype_migration/converter.h",
+      "sha256": "f940e503ecbfe2cb3c3d005482dc87679e2c55f11a00aeb731e1237bd9eda05f"
+    },
+    {
+      "path": "arcified/native/features/prototype_migration/fixtures/snapshots.json",
+      "sha256": "e846be1dc6a14b4f52894aaa9aa12c044c8c1ac42b2786debb61b3176b18ae1e"
+    },
+    {
+      "path": "arcified/docs/research/arc-dia/artifacts.md",
+      "sha256": "733db8ca63d1668e786c1574872e1adf74bcd69addd012e58fe714381eee1470"
+    },
+    {
+      "path": "arcified/docs/research/arc-dia/publication/arc-import-format.md",
+      "sha256": "4bc70ac687298c9f1f9a011c852d72bb9be964c0c9bf08e7685afc38e213d105"
+    },
+    {
+      "path": "arcified/docs/research/arc-dia/publication/arc-import.md",
+      "sha256": "96a3fce089458816b7bcac38f8581edbdf459b2f268b256481673242d0b70948"
+    },
+    {
+      "path": "arcified/native/features/portability/format.h",
+      "sha256": "f9038604dfa904e42bbebeac823cd3a085a4fbb7bd6697f2afeeb9e1e6c242f7"
+    }
+  ],
+  "retrievalLimitations": [
+    "Original assignment inbound-import article 19335089616791 returned HTTP 404 from both page and public article API. Its title concerns import into Arc and does not establish an Arc export.",
+    "Migration and sunset HTML page fetches were inaccessible in web tooling; migration page HEAD returned HTTP 403 with Cloudflare challenge. The documented public Help Center article API returned successful JSON responses without authentication.",
+    "Search results from third-party sites were used only as discovery leads. Their format or feature claims were not accepted as primary evidence.",
+    "No browser, reference app, owner account, installed browser data, large installer, native build, benchmark or remote CI was used.",
+    "Documentation revision timestamps identify article revisions, not exporting Arc app builds or a versioned export grammar."
+  ],
+  "nativeSourceIdentity": {
+    "preparedSourceRoot": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+    "readOnly": true,
+    "baseFiles": [],
+    "resultFiles": [],
+    "productionPatch": null,
+    "registeredNativeTests": [],
+    "reason": "Research-only leaf. No export corpus or approved converter contract exists; changing native source or test registration would manufacture implementation evidence. No prepared-source bytes were read or changed."
+  }
+}

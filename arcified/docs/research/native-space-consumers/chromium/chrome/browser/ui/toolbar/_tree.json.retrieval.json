@@ -1,0 +1,10 @@
+{
+  "path": "chrome/browser/ui/toolbar/",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/toolbar/?format=JSON",
+  "retrievedAt": "2026-10-23T15:00:39.427Z",
+  "kind": "tree",
+  "bytes": 5685,
+  "sha256": "39b65c111d5e9e415728946bf974438b65043aa85789ea34d0b71d46ead4dca0",
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

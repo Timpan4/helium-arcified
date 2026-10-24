@@ -1,0 +1,287 @@
+diff --git a/chrome/app/arcified_update_linux_strings.grdp b/chrome/app/arcified_update_linux_strings.grdp
+new file mode 100644
+index 00000000..f93de8b6
+--- /dev/null
++++ b/chrome/app/arcified_update_linux_strings.grdp
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!-- SPDX-License-Identifier: GPL-3.0-only -->
++<grit-part>
++  <message name="IDS_ARCIFIED_UPDATE_LINUX_UNAVAILABLE" desc="About page explanation when this Linux build has no authenticated Arcified application updater. It does not describe component or extension updates.">
++    Authenticated Arcified updates are not available in this build.
++  </message>
++</grit-part>
+diff --git a/chrome/app/generated_resources.grd b/chrome/app/generated_resources.grd
+index 18f57d7e..d755be47 100644
+--- a/chrome/app/generated_resources.grd
++++ b/chrome/app/generated_resources.grd
+@@ -268,6 +268,10 @@
+   <release seq="1">
+     <!-- IMPORTANT: .grdp files must be in the same directory as this file -->
+     <messages fallback_to_english="true">
++      <if expr="is_linux">
++        <part file="arcified_update_linux_strings.grdp" />
++      </if>
++
+       <!-- Access Code Cast specific strings -->
+       <part file="access_code_cast_strings.grdp" />
+ 
+diff --git a/chrome/app/generated_resources.grd.gritdeps b/chrome/app/generated_resources.grd.gritdeps
+index df1923b7..3fc2fbba 100644
+--- a/chrome/app/generated_resources.grd.gritdeps
++++ b/chrome/app/generated_resources.grd.gritdeps
+@@ -3,6 +3,7 @@
+ chrome/app/access_code_cast_strings.grdp
+ chrome/app/actor_strings.grdp
+ chrome/app/app_management_strings.grdp
++chrome/app/arcified_update_linux_strings.grdp
+ chrome/app/bookmarks_strings.grdp
+ chrome/app/certificate_manager.grdp
+ chrome/app/chromeos_shared_strings.grdp
+diff --git a/chrome/browser/resources/settings/about_page/about_page.ts b/chrome/browser/resources/settings/about_page/about_page.ts
+index 6306dc2e..30bca9f1 100644
+--- a/chrome/browser/resources/settings/about_page/about_page.ts
++++ b/chrome/browser/resources/settings/about_page/about_page.ts
+@@ -231,6 +231,14 @@ export class SettingsAboutPageElement extends SettingsAboutPageElementBase
+ 
+   // <if expr="not is_chromeos">
+   private updateShowUpdateStatus_() {
++    // <if expr="is_linux">
++    // A disabled authenticated updater still needs to explain its availability.
++    if (this.checkStatus_(UpdateStatus.DISABLED) &&
++        this.currentUpdateStatusEvent_!.message) {
++      this.showUpdateStatus_ = true;
++      return;
++    }
++    // </if>
+     if (this.obsoleteSystemInfo_.endOfLine) {
+       this.showUpdateStatus_ = false;
+       return;
+diff --git a/chrome/browser/ui/webui/help/BUILD.gn b/chrome/browser/ui/webui/help/BUILD.gn
+index 17d8d3e2..f010ec4a 100644
+--- a/chrome/browser/ui/webui/help/BUILD.gn
++++ b/chrome/browser/ui/webui/help/BUILD.gn
+@@ -67,7 +67,11 @@ source_set("help") {
+   }
+ 
+   if (is_linux) {
+-    sources = [ "version_updater_basic.cc" ]
++    sources = [ "version_updater_arcified_linux.cc" ]
++    deps += [
++      "//chrome/app:generated_resources_grit",
++      "//ui/base",
++    ]
+   }
+ }
+ 
+diff --git a/chrome/browser/ui/webui/help/version_updater_arcified_linux.cc b/chrome/browser/ui/webui/help/version_updater_arcified_linux.cc
+new file mode 100644
+index 00000000..717a61d6
+--- /dev/null
++++ b/chrome/browser/ui/webui/help/version_updater_arcified_linux.cc
+@@ -0,0 +1,29 @@
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include <memory>
++#include <string>
++
++#include "chrome/browser/ui/webui/help/version_updater.h"
++#include "chrome/grit/generated_resources.h"
++#include "ui/base/l10n/l10n_util.h"
++
++namespace {
++
++// No authenticated application-update channel is configured for this build.
++// Installed-version polling is a separate external-install notification. Its
++// result cannot establish the replacement artifact's identity or signature.
++class VersionUpdaterArcifiedLinux final : public VersionUpdater {
++ public:
++  void CheckForUpdate(StatusCallback callback, PromoteCallback) override {
++    callback.Run(
++        DISABLED, 0, false, false, std::string(), 0,
++        l10n_util::GetStringUTF16(IDS_ARCIFIED_UPDATE_LINUX_UNAVAILABLE));
++  }
++};
++
++}  // namespace
++
++std::unique_ptr<VersionUpdater> VersionUpdater::Create(
++    content::WebContents* web_contents) {
++  return std::make_unique<VersionUpdaterArcifiedLinux>();
++}
+diff --git a/chrome/browser/ui/webui/settings/BUILD.gn b/chrome/browser/ui/webui/settings/BUILD.gn
+index 2756796a..70e1f90e 100644
+--- a/chrome/browser/ui/webui/settings/BUILD.gn
++++ b/chrome/browser/ui/webui/settings/BUILD.gn
+@@ -369,9 +369,9 @@ source_set("impl") {
+ 
+   if (is_mac) {
+     sources += [
++      "brave_full_disk_access_confirm_dialog_delegate_mac.mm",
+       "mac_system_settings_handler.cc",
+       "settings_utils_mac.mm",
+-      "brave_full_disk_access_confirm_dialog_delegate_mac.mm",
+     ]
+   }
+ 
+@@ -455,6 +455,9 @@ source_set("browser_tests") {
+     "settings_secure_dns_handler_browsertest.cc",
+     "settings_ui_browsertest.cc",
+   ]
++  if (is_linux) {
++    sources += [ "arcified_update_linux_browsertest.cc" ]
++  }
+   deps = [
+     ":impl",
+     ":settings",
+@@ -510,6 +513,14 @@ source_set("browser_tests") {
+     "//url",
+   ]
+ 
++  if (is_linux) {
++    deps += [
++      "//chrome/app:generated_resources_grit",
++      "//chrome/browser/ui/webui/help",
++      "//chrome/browser/upgrade_detector",
++    ]
++  }
++
+   if (use_ozone) {
+     deps += [ "//ui/ozone" ]
+   }
+diff --git a/chrome/browser/ui/webui/settings/arcified_update_linux_browsertest.cc b/chrome/browser/ui/webui/settings/arcified_update_linux_browsertest.cc
+new file mode 100644
+index 00000000..1b53bb59
+--- /dev/null
++++ b/chrome/browser/ui/webui/settings/arcified_update_linux_browsertest.cc
+@@ -0,0 +1,129 @@
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include <memory>
++#include <optional>
++#include <string>
++
++#include "base/test/bind.h"
++#include "base/version.h"
++#include "chrome/browser/browser_process.h"
++#include "chrome/browser/ui/browser.h"
++#include "chrome/browser/ui/tabs/tab_strip_model.h"
++#include "chrome/browser/ui/webui/help/version_updater.h"
++#include "chrome/browser/upgrade_detector/build_state.h"
++#include "chrome/browser/upgrade_detector/installed_version_poller.h"
++#include "chrome/grit/generated_resources.h"
++#include "chrome/test/base/in_process_browser_test.h"
++#include "chrome/test/base/ui_test_utils.h"
++#include "content/public/test/browser_test.h"
++#include "content/public/test/browser_test_utils.h"
++#include "ui/base/l10n/l10n_util.h"
++#include "url/gurl.h"
++
++namespace {
++
++class ArcifiedUpdateLinuxBrowserTest : public InProcessBrowserTest {
++ protected:
++  void ExpectUnavailable(content::WebContents* web_contents) {
++    auto updater = VersionUpdater::Create(web_contents);
++    bool received = false;
++    updater->CheckForUpdate(
++        base::BindLambdaForTesting(
++            [&](VersionUpdater::Status status, int progress, bool rollback,
++                bool powerwash, const std::string& version, int64_t size,
++                const std::u16string& message) {
++              EXPECT_FALSE(received);
++              received = true;
++              EXPECT_EQ(VersionUpdater::DISABLED, status);
++              EXPECT_EQ(0, progress);
++              EXPECT_FALSE(rollback);
++              EXPECT_FALSE(powerwash);
++              EXPECT_TRUE(version.empty());
++              EXPECT_EQ(0, size);
++              EXPECT_EQ(l10n_util::GetStringUTF16(
++                            IDS_ARCIFIED_UPDATE_LINUX_UNAVAILABLE),
++                        message);
++            }),
++        VersionUpdater::PromoteCallback());
++    EXPECT_TRUE(received);
++  }
++
++  void ExpectVisibleUnavailable() {
++    ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(),
++                                             GURL("chrome://settings/help")));
++    auto* web_contents = browser()->tab_strip_model()->GetActiveWebContents();
++    // Follow the real settings route and its native AboutHandler callback.
++    // Yield while Lit attaches/renders. EvalJs uses the browser-test harness's
++    // timeout; there is no separate polling interval or time limit here.
++    EXPECT_EQ(l10n_util::GetStringUTF8(IDS_ARCIFIED_UPDATE_LINUX_UNAVAILABLE),
++              content::EvalJs(web_contents, R"JS(
++          (async () => {
++            function findAbout(root) {
++              const about = root.querySelector('settings-about-page');
++              if (about) return about;
++              for (const element of root.querySelectorAll('*')) {
++                if (element.shadowRoot) {
++                  const found = findAbout(element.shadowRoot);
++                  if (found) return found;
++                }
++              }
++              return null;
++            }
++            while (true) {
++              const about = findAbout(document);
++              const status = about?.shadowRoot?.querySelector(
++                  '#updateStatusMessage');
++              if (status?.checkVisibility() && status.textContent.trim()) {
++                const relaunch = about.shadowRoot.querySelector('#relaunch');
++                if (relaunch?.checkVisibility()) {
++                  throw new Error('Unavailable updater offered relaunch');
++                }
++                return status.textContent.trim();
++              }
++              await new Promise(requestAnimationFrame);
++            }
++          })()
++        )JS"));
++  }
++
++ private:
++  // Keep the real BuildState and detector, but do not poll the host executable
++  // while the test delivers installed-version notifications to that service.
++  InstalledVersionPoller::ScopedDisableForTesting disable_installed_polling_ =
++      InstalledVersionPoller::MakeScopedDisableForTesting();
++};
++
++IN_PROC_BROWSER_TEST_F(ArcifiedUpdateLinuxBrowserTest,
++                       UnavailableWithAndWithoutWebContents) {
++  ExpectUnavailable(browser()->tab_strip_model()->GetActiveWebContents());
++  ExpectUnavailable(nullptr);
++}
++
++IN_PROC_BROWSER_TEST_F(ArcifiedUpdateLinuxBrowserTest,
++                       InstalledVersionSignalDoesNotAuthenticateAnUpdate) {
++  auto* state = g_browser_process->GetBuildState();
++  state->SetUpdate(BuildState::UpdateType::kNormalUpdate,
++                   base::Version("156.0.0.0"), std::nullopt);
++  ExpectUnavailable(browser()->tab_strip_model()->GetActiveWebContents());
++
++  state->SetUpdate(BuildState::UpdateType::kEnterpriseRollback,
++                   base::Version("154.0.0.0"), std::nullopt);
++  ExpectUnavailable(browser()->tab_strip_model()->GetActiveWebContents());
++
++  // The native poller also signals a normal update for an unreadable version.
++  state->SetUpdate(BuildState::UpdateType::kNormalUpdate, base::Version(),
++                   std::nullopt);
++  ExpectUnavailable(browser()->tab_strip_model()->GetActiveWebContents());
++  state->SetUpdate(BuildState::UpdateType::kNone, base::Version(),
++                   std::nullopt);
++}
++
++IN_PROC_BROWSER_TEST_F(ArcifiedUpdateLinuxBrowserTest,
++                       AboutPageExplainsUnavailableAfterReentry) {
++  ExpectVisibleUnavailable();
++  ASSERT_TRUE(
++      ui_test_utils::NavigateToURL(browser(), GURL("chrome://version")));
++  ExpectVisibleUnavailable();
++}
++
++}  // namespace
+

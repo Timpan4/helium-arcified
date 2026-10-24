@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/browser_web_contents_delegate/browser_web_contents_delegate.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/browser_web_contents_delegate/browser_web_contents_delegate.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:23.785Z",
+  "kind": "file",
+  "bytes": 60590,
+  "sha256": "9fd4aa8d21c3e0581c313e3db7dc0f07be90a25ad52c965a870164985cc61355",
+  "gitBlob": "d3fa7eea6db807d9a9b3467da4f468c555468b26",
+  "lines": 1508,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

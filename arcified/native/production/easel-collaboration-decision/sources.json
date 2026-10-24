@@ -1,0 +1,96 @@
+{
+  "issueKey": "easel-collaboration-decision",
+  "retrievedAtUtc": "2026-10-23 22:29:28 UTC",
+  "localSources": [
+    {
+      "sha256": "cc8ec03443b18a749b486e484a56b86218d8f41653970dea94185f76c9685354",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json"
+    },
+    {
+      "sha256": "daf98f1cf993c1a21686289a88489bf001266d7fff4d85089d30055584c8a7b0",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json"
+    },
+    {
+      "sha256": "244488864d15d093f7f80e1cc40f490a979454e2a8e74db438c7e51283518a1c",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md"
+    },
+    {
+      "sha256": "e5951ba265be3587cb1df8f2ab73ce6768071ac55b8d481240ed57819b39ab56",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md"
+    },
+    {
+      "sha256": "dae2aed7885b1f03f5f96a1285265a1189b8776a6472880c0f12c94de7f7ad02",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json"
+    },
+    {
+      "sha256": "eb01d945d298f2492f218f929914b99bd39d7d16d96f02eba798b69bc83d121c",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/publication/easel-collaboration-decision.md"
+    },
+    {
+      "sha256": "f2379db0c4158190d98f9aecdbaf77ac0779fd0777e96bdc9f967cb0b7eac20d",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/publication/easel.md"
+    },
+    {
+      "sha256": "2cdd6d10b5c5dc82384feb8189d43076082bc1028f0d34e367b1366ffad1e75b",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/publication/board-sharing.md"
+    },
+    {
+      "sha256": "7e11f64d15300ef5afdeb77570960308c4982c7359ded6d938fd118a36c172d6",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/publication/board-export.md"
+    },
+    {
+      "sha256": "af50435b345d9a2783b633e1042b36f915c5ab568f4ff8fcc57fac194d1190b2",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/publication/shared-board.md"
+    },
+    {
+      "sha256": "dc8b89bd5bd5dc343cb5f2478b8de3b2c393a7c72b65729e7f572fba4fd7d264",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/coverage-matrix.md"
+    },
+    {
+      "sha256": "733db8ca63d1668e786c1574872e1adf74bcd69addd012e58fe714381eee1470",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/artifacts.md"
+    },
+    {
+      "sha256": "a7583446b4e350a712836b63cf65271542f27d797bfdbe0d3402a4e5d4b515d7",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/arc-ux.md"
+    },
+    {
+      "sha256": "9c85a1bc82296697a7456c7887c53ec5452ed445a3c87be30cdaa440db026903",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/fork-baseline.md"
+    }
+  ],
+  "externalSources": [
+    {
+      "id": "ARC-EASELS",
+      "url": "https://resources.arc.net/hc/en-us/articles/19231142050071-Easels-Capture-Create",
+      "kind": "first_party_help_search_index",
+      "retrieval": "Direct web open returned HTTP 404. Web search returned a five-month-old cached first-party article on the same URL.",
+      "supports": "Historical macOS board authoring, browser viewing, Share action and PNG export. Search text states Windows and iOS cannot create/edit Easels.",
+      "limits": "Cached text is not current service availability, authentication, permission UI, protocol or runtime evidence. No screenshot or app execution."
+    },
+    {
+      "id": "ARC-MAC-RELEASES",
+      "url": "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+      "kind": "first_party_release_notes",
+      "retrieval": "web open/find succeeded; live response contained dated release entries.",
+      "supports": "March 14, 2024, v1.34.0 records missing presence cursors being fixed. February 8, 2024, v1.29.0 records re-sharing edit permission after removal being fixed.",
+      "limits": "Historical documentary evidence only. Does not establish current service operation, exact invitation flow, consistency algorithm, retention, revocation timing or Windows editing."
+    },
+    {
+      "id": "ARC-SUNSET-UNAVAILABLE",
+      "url": "https://resources.arc.net/hc/en-us/articles/44412972248471-Arc-Sunset-Key-Dates-and-What-to-Expect",
+      "kind": "first_party_help_unavailable",
+      "retrieval": "web open reported URL not accessible via this tool.",
+      "supports": null,
+      "limits": "No new sunset date, service-lifetime or export-availability claim is derived from this failed retrieval."
+    }
+  ],
+  "nativeSources": {
+    "preparedTree": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+    "baseFiles": [],
+    "resultFiles": [],
+    "patch": null,
+    "testRegistrationChanges": [],
+    "applicability": "Not applicable to this decision-only packet. No native source, service, route, command or test implementation is proposed. Prepared tree was not modified or used for execution."
+  }
+}

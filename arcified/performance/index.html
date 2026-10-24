@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arcified synthetic workload choices</title>
+  <link rel="stylesheet" href="/style.css">
+  <main>
+    <h1>Synthetic workload choices</h1>
+    <p>Choose each value, then save the resulting URL in your session manifest.
+      This creates a page, not a native browser benchmark. No accounts or public sites are contacted.</p>
+    <form action="/workload.html" method="get">
+      <label>Tab identity and search title <input name="id" required></label>
+      <label>Document rows <input name="rows" type="number" min="0" step="1" required></label>
+      <label>Text repetitions per row <input name="textRepeats" type="number" min="0" step="1" required></label>
+      <label>Rows per construction batch <input name="batchRows" type="number" min="1" step="1" required></label>
+      <label>Sequential local requests <input name="requests" type="number" min="0" step="1" required></label>
+      <label>ASCII bytes per response <input name="responseBytes" type="number" min="0" step="1" required></label>
+      <button>Create workload page</button>
+    </form>
+    <p>Zero rows or requests explicitly disables that work. A batch must contain a row to make progress.
+      No value is a product limit or performance target. Use synthetic text only.</p>
+  </main>
+</html>

@@ -1,0 +1,12 @@
+{
+  "path": "ui/views/controls/webview/webview.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/ui/views/controls/webview/webview.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:23.647Z",
+  "kind": "file",
+  "bytes": 28446,
+  "sha256": "131e3bddab3bfc62e3ac478be7a8fd913151965c75842dd67659f9b302185e0c",
+  "gitBlob": "41afec12a8b37454b6e4606aeb3f1121c9f195f2",
+  "lines": 844,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

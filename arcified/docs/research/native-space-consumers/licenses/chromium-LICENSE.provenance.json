@@ -1,0 +1,10 @@
+{
+  "sourceUrl": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/LICENSE?format=TEXT",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "capturedOn": "2026-10-23",
+  "transport": "Read-only curl GET; Gitiles TEXT response base64-decoded.",
+  "decodedBytes": 1536,
+  "gitBlob": "2249a28657f86c645f8978b75babc1bd52aca318",
+  "sha256": "368cca1106be99d39ecd32a38d8305585d802a475effb66380b91ffc9bcf709b",
+  "scope": "Supplemental upstream license preservation, outside the original 75 production-source capture manifest."
+}

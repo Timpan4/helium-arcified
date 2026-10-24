@@ -1,0 +1,87 @@
+{
+  "recorded": "2026-10-23",
+  "head": "31a96388efa7e84faee34060e8e3c1c10dbf3781",
+  "hashKind": "Git blob hash of working-tree bytes, git hash-object without -w",
+  "inputs": [
+    {
+      "path": "chromium_version.txt",
+      "gitBlob": "996c74be2298c4cf327e255730ce3e803c03eee3"
+    },
+    {
+      "path": "flags.gn",
+      "gitBlob": "fdd08e11291ac4f3ec320b169fd12ab373b3440d"
+    },
+    {
+      "path": "patches/series",
+      "gitBlob": "f7903be382e572e1b3f851eb7716b9ac52141bc6"
+    },
+    {
+      "path": "patches/helium/ui/layout/core.patch",
+      "gitBlob": "2777ff0cb85f73674c53e5226b8952fa893f4c74"
+    },
+    {
+      "path": "patches/helium/ui/tab-search-in-toolbar.patch",
+      "gitBlob": "0547d5d5c3266c3fca7368f558d108f3e90824f9"
+    },
+    {
+      "path": "patches/helium/ui/custom-keyboard-shortcuts-wiring.patch",
+      "gitBlob": "69754829331fd7f8b296d93b6153575f72c9a2aa"
+    },
+    {
+      "path": "patches/helium/core/custom-keyboard-shortcuts.patch",
+      "gitBlob": "65b9d7b7f94858720b2311958fcdbd3ab086deeb"
+    },
+    {
+      "path": "patches/helium/ui/layout/shortcuts.patch",
+      "gitBlob": "05f5008191975aa39b30e7c542ba1cee496796e4"
+    },
+    {
+      "path": "patches/helium/ui/layout/vertical.patch",
+      "gitBlob": "1528f5a8372597b0098fdb980e97c716c140c3ad"
+    },
+    {
+      "path": "patches/helium/ui/split-view.patch",
+      "gitBlob": "ca7a9b897d9e60f300513a7b814d9a42eb1f6547"
+    },
+    {
+      "path": "patches/helium/ui/multi-contents-view.patch",
+      "gitBlob": "4344862b83a6f0ba8e0324d57434667398380f90"
+    },
+    {
+      "path": "patches/helium/core/lazy-session-restore.patch",
+      "gitBlob": "89612fcea9a9bd4b06cfa0a1c74d046dbe07f7e1"
+    },
+    {
+      "path": "patches/helium/core/tab-cycling-mru.patch",
+      "gitBlob": "74d874fde4fa904a54c802adf534d45c4d7585ad"
+    },
+    {
+      "path": "patches/brave/tab-cycling-mru-impl.patch",
+      "gitBlob": "724fe13a66020ab5c5a7340534a1d2675d8e31ae"
+    },
+    {
+      "path": "patches/ungoogled-chromium/add-flag-to-close-window-with-last-tab.patch",
+      "gitBlob": "540f209a102a732b44a8486f8848e20a082aa136"
+    },
+    {
+      "path": "patches/helium/ui/native-frame-materials.patch",
+      "gitBlob": "c3c87563fb9daaf062ab8463d0c54ee71a7bd194"
+    },
+    {
+      "path": "arcified/docs/native-space-integration.md",
+      "gitBlob": "ca11287dd85038ff3704aa5679321b1f42a09c61"
+    },
+    {
+      "path": "arcified/docs/native-space-source-references.md",
+      "gitBlob": "906dc8ff761453192896949651f77e54fe7bcf4e"
+    },
+    {
+      "path": "arcified/docs/reviews/native-space-design-response.md",
+      "gitBlob": "6d4280f2a2b518cc2b95e94ddd4ea183232273a4"
+    },
+    {
+      "path": "arcified/docs/reviews/lifecycle-review-round-3.md",
+      "gitBlob": "a13d75e340cc4499f253afdf7a4bd5a766cdfb7b"
+    }
+  ]
+}

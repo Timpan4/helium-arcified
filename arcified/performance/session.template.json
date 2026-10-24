@@ -1,0 +1,40 @@
+{
+  "schema": "arcified-session-v1",
+  "note": "Fill every null before use. This is a recording template, not an executable session importer.",
+  "sessionId": null,
+  "fixtureCommitAndDiffHash": null,
+  "origin": null,
+  "serverCachePolicy": null,
+  "windowsInOrder": [
+    {
+      "windowId": null,
+      "boundsAndDisplay": null,
+      "layoutAndSidebarState": null,
+      "activeTabId": null,
+      "tabsInOrder": [
+        {
+          "id": null,
+          "rows": null,
+          "textRepeats": null,
+          "batchRows": null,
+          "requests": null,
+          "responseBytes": null,
+          "exactUrl": null,
+          "groupOrPin": null,
+          "initialSyntheticFormText": null,
+          "initialScrollPosition": null,
+          "initialLifecycleState": null
+        }
+      ]
+    }
+  ],
+  "actionsInOrder": [],
+  "commandQueriesAndExpectedResults": [],
+  "scrollDeviceDirectionDistanceAndPace": null,
+  "ownerChoices": {
+    "sessionSizesAndRationale": null,
+    "repetitionAndOrderingPlan": null,
+    "observationWindowsAndSamplingCadence": null,
+    "stopConditionsAndQuiescenceDefinition": null
+  }
+}

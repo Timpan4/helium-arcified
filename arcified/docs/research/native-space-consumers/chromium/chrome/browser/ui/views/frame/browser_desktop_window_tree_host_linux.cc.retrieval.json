@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/views/frame/browser_desktop_window_tree_host_linux.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/frame/browser_desktop_window_tree_host_linux.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:39.389Z",
+  "kind": "file",
+  "bytes": 12686,
+  "sha256": "215282f092beb5b419924463f1f400636afa2102fccc1cdbce335d0512066d3f",
+  "gitBlob": "32e5c1a27f7b00bff7f9259713708da237d337b0",
+  "lines": 347,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

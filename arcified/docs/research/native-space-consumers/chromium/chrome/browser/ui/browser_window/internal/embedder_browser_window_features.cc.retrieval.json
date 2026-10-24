@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/browser_window/internal/embedder_browser_window_features.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/browser_window/internal/embedder_browser_window_features.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:39.355Z",
+  "kind": "file",
+  "bytes": 1292,
+  "sha256": "78e0e78297a4e975cc12f2deb7a0985eef87074acdf9b467908b200ad71f6647",
+  "gitBlob": "a2c0889f7003c1f1b70c76beb1e6b481d8ac649e",
+  "lines": 39,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

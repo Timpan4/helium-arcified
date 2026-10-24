@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/browser_window/internal/profile_browser_collection.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/browser_window/internal/profile_browser_collection.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:05.941Z",
+  "kind": "file",
+  "bytes": 3202,
+  "sha256": "8b870e884a92991e671abcdfdc5b5b05686dc0c7fa3cd6f14bb9d2adddc21f24",
+  "gitBlob": "1859358eac925a0fb19ae2fd1629a649864a8ae6",
+  "lines": 92,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

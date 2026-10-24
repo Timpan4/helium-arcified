@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/browser_window_state.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/browser_window_state.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:02:19.213Z",
+  "kind": "file",
+  "bytes": 8065,
+  "sha256": "ea884cae50d9e09061ccd95457a4640157c54b9e5a85b21aedfad7c3199ee484",
+  "gitBlob": "f337b9b3e08aef6e537731076abb9228dfd33fa9",
+  "lines": 202,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

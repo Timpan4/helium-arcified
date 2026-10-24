@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/extensions/browser_window_util.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/extensions/browser_window_util.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:03:28.662Z",
+  "kind": "file",
+  "bytes": 3372,
+  "sha256": "21b63e6b3bdac8ee7810e64b4d5e5818b38df3f01069cfa27276f2c57aefa897",
+  "gitBlob": "c6f2c6e6fe6ce065a17227808170fbec0e1dce66",
+  "lines": 101,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

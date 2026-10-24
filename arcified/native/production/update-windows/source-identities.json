@@ -1,0 +1,114 @@
+{
+  "issue": "https://github.com/Timpan4/helium-arcified/issues/166",
+  "key": "update-windows",
+  "status": "prepared_native_unavailable_path_not_built_or_accepted",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "chromiumVersion": "155.0.8059.79",
+  "preparedSource": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+  "scope": "Only the unbranded Windows native About update path. No authenticated channel is implemented.",
+  "sourceFiles": [
+    {
+      "path": "chrome/app/generated_resources.grd",
+      "baseSha256": "bb7090106bf2e0912d97dfe0435dd901de3cab8ac5b4565d48ae46a2f631a020",
+      "preparedSha256": "bb7090106bf2e0912d97dfe0435dd901de3cab8ac5b4565d48ae46a2f631a020",
+      "resultSha256": "d1e4dbc71a550001ba52f2f8a65d79dfbef5c112bf68cf0c2ca26094383e1637"
+    },
+    {
+      "path": "chrome/browser/resources/settings/about_page/about_page.ts",
+      "baseSha256": "10ce9b8be3b7d31138c1dc56936bbf829a78738c86bb78fc3edcaad79036870c",
+      "preparedSha256": "10ce9b8be3b7d31138c1dc56936bbf829a78738c86bb78fc3edcaad79036870c",
+      "resultSha256": "60852a783ee17c17887d3e203d15e44bc30924aa7732430d568d714549fe98eb"
+    },
+    {
+      "path": "chrome/browser/ui/webui/help/BUILD.gn",
+      "baseSha256": "34515ae3307aa138e17ce433b2eb1383ccd7d69617f81a99cce621cc69af278e",
+      "preparedSha256": "34515ae3307aa138e17ce433b2eb1383ccd7d69617f81a99cce621cc69af278e",
+      "resultSha256": "451c5cc43571f852af28f227e4b0eb9e72a2b26da2494caf8559551e59283d9d"
+    },
+    {
+      "path": "chrome/test/BUILD.gn",
+      "baseSha256": "38933520829a78288766cd702e665076f62e4ac720c82ca816d342a59a874099",
+      "preparedSha256": "38933520829a78288766cd702e665076f62e4ac720c82ca816d342a59a874099",
+      "resultSha256": "94c9d043d3c7b4d34cd38bf3ef628a9b2520a843955097ccdad2b0d1b8f4c282"
+    },
+    {
+      "path": "chrome/browser/ui/webui/help/arcified_version_updater_win.cc",
+      "baseSha256": null,
+      "resultSha256": "040c2a30c7ed453f1ef0dd6383de110f9b752e5c0b1836199cc4a6c62352aba4"
+    },
+    {
+      "path": "chrome/browser/ui/webui/help/arcified_version_updater_win_unittest.cc",
+      "baseSha256": null,
+      "resultSha256": "f58966fd47bc0cd8c0eca5d38be856b715f7d634cd92402346661ff68c56cfa4"
+    },
+    {
+      "path": "chrome/browser/ui/webui/help/arcified_version_updater_win_browsertest.cc",
+      "baseSha256": null,
+      "resultSha256": "d6670f3845ea3380fa3d6b6c535ca6a101ba50b970e1fa4990bad7109061470b"
+    }
+  ],
+  "inspectedPreparedContext": [
+    {
+      "path": "chrome/browser/ui/webui/help/version_updater.h",
+      "sha256": "f188c9280b79a7205db53ca0c984d7b7c8c6f3232ee0e0ac00f935bed0372279"
+    },
+    {
+      "path": "chrome/browser/ui/webui/help/version_updater_basic.cc",
+      "sha256": "ea232dcbd003a75205f3e4e816bc49aa1483ac4953740e85547521d05792117d"
+    },
+    {
+      "path": "chrome/browser/ui/webui/help/version_updater_win.cc",
+      "sha256": "f04f1d3e158c321a4f1adde63e282ec6c5abad49d7f4c6bbd99e9ed00baf31dc"
+    },
+    {
+      "path": "chrome/browser/ui/webui/settings/about_handler.cc",
+      "sha256": "81c01528c735195bc980f0826eade20e4b36535eb4f7c6253c4032a5d7f4a4b2"
+    },
+    {
+      "path": "chrome/browser/resources/settings/about_page/about_page.html.ts",
+      "sha256": "db89804187ce42df3a3efd26b1e068ebfe8e611a2af29f96d2e087ea56fa2648"
+    },
+    {
+      "path": "chrome/browser/upgrade_detector/get_installed_version_win.cc",
+      "sha256": "22aff31f086bdf106d6072a8f44b31c91990597038219a17c8a4dad53a286019"
+    },
+    {
+      "path": "chrome/browser/upgrade_detector/installed_version_poller.cc",
+      "sha256": "3b5b99baed5a70c9f091635f1d3841ce4eae3a9d79ff37b56d5a9a0998f56891"
+    }
+  ],
+  "productionPatch": {
+    "path": "production.patch",
+    "sha256": "af54bacfba5269403b5f2e79c566527ac78ec1e51b8e90881bfcb09568d4a7a7"
+  },
+  "tests": {
+    "unitTarget": "//chrome/test:unit_tests",
+    "unitFilter": "ArcifiedVersionUpdaterWinTest.*",
+    "unitTestCount": 3,
+    "browserTarget": "//chrome/test:browser_tests",
+    "browserFilter": "ArcifiedUpdateWindowsBrowserTest.*",
+    "browserTestCount": 1,
+    "execution": "NOT_RUN. Windows SDK/runtime/build unavailable to this task, and native builds/tests belong to root."
+  },
+  "command": {
+    "assignedPrimaryCommandId": 40829,
+    "used": false,
+    "reason": "Reuse the existing native Settings About page; no new legacy command or ActionItem is needed.",
+    "protectedLibraryCommandId": 40701
+  },
+  "acceptance": {
+    "ownerApprovedChannelAndSigning": "OPEN",
+    "authenticatedArtifactAndMetadataVerification": "OPEN",
+    "downgradeRejection": "OPEN",
+    "interruptedUpdateAndRestart": "OPEN",
+    "approvedRollbackAndRetainedData": "OPEN",
+    "windowsNativeBuildAndRuntime": "OPEN",
+    "sameWindowMultiProfileAndSavedPageHandoff": "OPEN"
+  },
+  "license": "New Arcified C++ files: GPL-3.0-only. Existing Chromium file licenses retained.",
+  "reviewResponse": {
+    "round": 1,
+    "acceptedFinding": "Added HAS_OUT_OF_PROC_TEST_RUNNER to arcified_windows_browser_tests source set",
+    "nativeChecks": "NOT_RUN; GN syntax/format only"
+  }
+}

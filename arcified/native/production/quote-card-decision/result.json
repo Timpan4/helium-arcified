@@ -1,0 +1,105 @@
+{
+  "issueKey": "quote-card-decision",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/29",
+  "disposition": "decision_ready_owner_pending",
+  "nativeAcceptance": "OPEN",
+  "ownerDecision": {
+    "state": "PENDING",
+    "accepted": false,
+    "deferred": false,
+    "reason": "Supplied issue and root controls contain no owner acceptance/defer for this feature. Coordinator consolidates the questions; no direct owner request or control mutation was made."
+  },
+  "evidencePaths": [
+    "authoritative-issue.json",
+    "decision.md",
+    "sources.json",
+    "source-identities.json",
+    "verification.md",
+    "result.json"
+  ],
+  "changes": [
+    "Recorded full assigned issue object and exact authority/foundation/prepared-source SHA-256 identities.",
+    "Documented the 2023 macOS hyperlink/image workflow, 2024 button disable behavior and unresolved current availability.",
+    "Separated attributed clipboard text, native text-fragment URLs, local PNG cards and hosted snapshot/preview services.",
+    "Proposed local privacy preview, explicit output actions, Profile-scoped disable route and portable fallback.",
+    "Recorded native source/test registration evidence and all relevant platform scenario gates as OPEN.",
+    "No code, native patch, prepared-source result file or native test registration changed; this is a decision leaf awaiting owner scope."
+  ],
+  "checks": [
+    {
+      "id": "repository_identity",
+      "status": "PASS",
+      "command": "git status --short; git branch --show-current; git rev-parse HEAD",
+      "coverage": "Branch feat/non-ai-research-production; HEAD equals assigned baseline a4b6b480d3de07857ab6e939149254a8359e5449. Existing coordinator/packet directories are untracked."
+    },
+    {
+      "id": "source_identity",
+      "status": "PASS",
+      "command": "sha256sum with the complete explicit path list in verification.md",
+      "coverage": "All files recorded in source-identities.json were hashed successfully. Hashes identify source bytes, not execution."
+    },
+    {
+      "id": "packet_structure",
+      "status": "PASS",
+      "command": "functions.exec packet validation using fast_filesystem.fs_read_many and JavaScript assertions, exact procedure in verification.md",
+      "coverage": "JSON syntax and canonical two-space format; required result fields; full assigned issue equality; known hash/path set; packet-only evidence links; Markdown local links, final LF and whitespace."
+    },
+    {
+      "id": "packet_whitespace",
+      "status": "PASS",
+      "command": "git diff --no-index --check /dev/null <each new packet file>",
+      "coverage": "Each new-file no-index comparison returned exit 1 with empty output, indicating a new-file difference without whitespace diagnostics. No staged diff or Git mutation."
+    },
+    {
+      "id": "native_and_visual",
+      "status": "NOT_RUN",
+      "reason": "Decision leaf has no accepted implementation. Root owns native build/tests, prepared source is read-only and browser/visual execution is unauthorized."
+    }
+  ],
+  "ownerQuestions": [
+    {
+      "id": "local_scope",
+      "question": "Accept the optional local PNG card, Chromium-generated text-fragment link and attributed-text fallback with exact-output preview, a Profile-scoped disable route and initially disabled state, or defer new card/fragment UI and retain only the issue 95 portable fallback?",
+      "recommendation": "Accept the local scope, subject to native implementation and per-platform acceptance.",
+      "tradeoff": "Requires UI, accessibility, privacy and native output verification; avoids a hosted service.",
+      "state": "PENDING"
+    },
+    {
+      "id": "hosted_scope",
+      "question": "Accept deferring hosted quote-preview URLs and automatic recipient link images?",
+      "recommendation": "Defer hosted previews.",
+      "tradeoff": "Local image and companion URL remain useful, but automatic social preview parity is unavailable without a separately chosen service contract.",
+      "state": "PENDING"
+    }
+  ],
+  "dependencies": [],
+  "integrationRequests": [
+    {
+      "target": "research coordinator",
+      "request": "Consolidate owner questions and record acceptance or deferral in the root/issue decision controls. Keep criterion 3 open until that record exists."
+    },
+    {
+      "target": "share-quote, issue 95",
+      "request": "Keep attributed plain text and optional Markdown as clipboard formats. Reuse a reviewed portable quote plus ordinary URL fallback; never count those formats as Share Quote hyperlink/image parity."
+    },
+    {
+      "target": "future accepted native quote implementation",
+      "request": "Reuse native selector and clipboard policy paths. Extend existing renderer_context_menu browser_tests/interactive_ui_tests registrations for preview, cancel, disabled state and exact-context output; add real card rendering/save and accessibility scenarios. No test registration change is supplied in this decision packet."
+    },
+    {
+      "target": "root lifecycle, privacy and native integration owners",
+      "request": "Retain existing Model, metadata/codec, exact native context/private and download/output classifiers. Revalidate source page/document/Profile on async completion. Do not bypass same-window multi-Profile or live saved-page handoff gates."
+    },
+    {
+      "target": "native command/resource coordinator if implementation is accepted",
+      "request": "Use only allocated legacy ID 40790 if needed, with its actual declarative ActionItem mapping. Preserve Library 40701; use ActionItems for other actions or request another coordinated ID. Reserve IDS_ARCIFIED_QUOTE_CARD_DECISION prefix for new messages."
+    }
+  ],
+  "remainingCriteria": [
+    "Owner acceptance or deferral has not been recorded. Assigned acceptance criterion 3 remains open.",
+    "Proposed card/fragment UI, settings, privacy preview and portable fallback have not been implemented or tested natively.",
+    "Historical clipboard/image delivery, current Arc service availability and Windows reference behavior remain unverified.",
+    "All listed Linux, Windows and macOS native scenarios, including actual clipboard/DLP/save, accessibility, privacy and exact-context routing, remain OPEN.",
+    "Root same-window multi-Profile and live saved-page handoff gates remain OPEN."
+  ]
+}

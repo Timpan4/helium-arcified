@@ -1,0 +1,543 @@
+{
+  "area": "release",
+  "rootThreadId": "6733348c-3696-4b31-834c-2bbca45e70d2",
+  "worktree": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-release-production",
+  "branch": "feat/non-ai-release-production",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "objective": "Production implementation of all seven assigned release leaves, independent review and local commits for root integration. Native acceptance and merge remain root-owned and OPEN.",
+  "authorization": {
+    "localPacketChanges": true,
+    "lightChecks": true,
+    "localCommitsAfterReview": true,
+    "remotePublication": false,
+    "preparedTreeAccess": "read_only",
+    "heavyCpu": false
+  },
+  "counts": {
+    "provenDone": 0,
+    "doneAwaitingRelease": 0,
+    "inProgress": 7,
+    "notStarted": 0,
+    "running": 0,
+    "queued": 0,
+    "blocked": 0,
+    "reviewing": 0,
+    "sourcePacketsReviewed": 7,
+    "compositionReviewed": 1,
+    "historicalFailedTasks": 1
+  },
+  "primaries": [
+    {
+      "key": "release-linux",
+      "taskId": "node:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-release-linux-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-release-linux-primary-v1",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "packet": "arcified/native/production/release-linux",
+      "briefRef": "task-briefs.json primaries.release-linux",
+      "sourceReview": "clean",
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "release-windows",
+      "taskId": "node:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-release-windows-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-release-windows-primary-v1",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "packet": "arcified/native/production/release-windows",
+      "briefRef": "task-briefs.json primaries.release-windows",
+      "sourceReview": "clean",
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "release-macos",
+      "taskId": "node:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-release-macos-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-release-macos-primary-v1",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "packet": "arcified/native/production/release-macos",
+      "summary": "Implemented the unblocked #133 source packet in [release-macos](/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-release-production/arcified/native/production/release-macos/README.md).\n\nIt contains a read-only Security.framework signature verifier, audit CLI, exact base/result sources, and registered native negative and signed-artifact test targets.\n\n- [Production patch](/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-release-production/arcified/native/production/release-macos/production.patch)\n- [SHA-256 source identities](/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-release-production/arcified/native/production/release-macos/source-identities.json)\n- [Checks and open acceptance](/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-release-production/arcified/native/production/release-macos/status.json)\n\nPassed C++ format/style checks, GN parse/format checks, and captured-base patch application with strict whitespace checking. Native compilation and tests did not run.\n\nCoordinator integration requires reconciling `BUILD.gn`, independent review, owner-approved identity/signing/package/support decisions, and authorized macOS verification. All release acceptance criteria remain OPEN, including notarization, installed/package signatures, registration and data-preserving upgrades.\n\nNo prepared-source writes, commits, shared-ledger edits or quilt registration occurred.",
+      "briefRef": "task-briefs.json primaries.release-macos",
+      "sourceReview": "clean",
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "engine-updates",
+      "taskId": "node:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-engine-updates-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-engine-updates-primary-v1",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "packet": "arcified/native/production/engine-updates",
+      "briefRef": "task-briefs.json primaries.engine-updates",
+      "sourceReview": "clean",
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "update-linux",
+      "taskId": "node:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-update-linux-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-update-linux-primary-v1",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "packet": "arcified/native/production/update-linux",
+      "briefRef": "task-briefs.json primaries.update-linux",
+      "sourceReview": "clean",
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "update-windows",
+      "taskId": "node:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-update-windows-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-update-windows-primary-v1",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "packet": "arcified/native/production/update-windows",
+      "summary": "Prepared the native unavailable-update path for [issue 166](https://github.com/Timpan4/helium-arcified/issues/166). Authenticated Windows updates remain OPEN.\n\n1. [Production patch](/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-release-production/arcified/native/production/update-windows/production.patch) adds an explicit unavailable result through the real Windows About updater and registers three unit tests and one native browser test.\n2. [Source identities](/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-release-production/arcified/native/production/update-windows/source-identities.json) records SHA-256 hashes for exact `base/` and `result/` files. Sparse application reconstructed the results byte for byte.\n3. [Integration instructions](/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-release-production/arcified/native/production/update-windows/README.md) identify shared hunks, test targets and required owner decisions.\n4. [Status and evidence](/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-release-production/arcified/native/production/update-windows/STATUS.md) records passing formatting, GN syntax, XML, TypeScript/JavaScript syntax and whitespace checks.\n\nNo native build or test ran. Signing, authenticated metadata/artifacts, downgrade rejection, interruption/restart, approved rollback and retained-data acceptance remain OPEN. All writes stayed inside the packet. No commits, quilt registration or publication occurred.",
+      "briefRef": "task-briefs.json primaries.update-windows",
+      "sourceReview": "clean",
+      "nativeAcceptance": "OPEN"
+    },
+    {
+      "key": "update-macos",
+      "taskId": "node:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-update-macos-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-update-macos-primary-v1",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "packet": "arcified/native/production/update-macos",
+      "briefRef": "task-briefs.json primaries.update-macos",
+      "sourceReview": "clean",
+      "nativeAcceptance": "OPEN"
+    }
+  ],
+  "reviews": [
+    {
+      "key": "release-macos",
+      "round": 1,
+      "taskId": "node:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-release-macos-review-r1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-release-macos-review-r1",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "priorFindings": [],
+      "hasPendingChildRuns": false,
+      "summary": "Clean source review. No blocking findings in the release-macos packet against baseline `a4b6b480d3de07857ab6e939149254a8359e5449`.\n\nReviewed all six proposed native files, GN dependencies/test registration, patch, manifest, README and status. API use is consistent with inspected Chromium declarations and [Apple static-validation documentation](https://developer.apple.com/documentation/security/secstaticcodecheckvalidity(_:_:_:)).\n\nChecks passed:\n\n- Exact patch reconstruction of every result file.\n- Sparse apply and whitespace checks.\n- C++ clang-format and GN format checks.\n- All base, result, patch and prepared-source hashes.\n\nEvidence caveat: recorded hashes for the coordinator's `non-ai-production-workstreams.json` and `execution-state.json` differ from their current files. The assignment hash matches.\n\nNo builds, native tests, GN generation, signing, installation or UI checks ran. Native and release acceptance remain OPEN. Owner identity, signing, channel, rollback and data choices remain unsettled. No files were changed."
+    },
+    {
+      "key": "update-windows",
+      "round": 1,
+      "taskId": "node:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-update-windows-review-r1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-update-windows-review-r1",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "priorFindings": [],
+      "hasPendingChildRuns": false,
+      "summary": "One blocking finding.\n\n1. **P1: Browser-test target cannot compile.** [BUILD.gn:89](/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-release-production/arcified/native/production/update-windows/result/chrome/browser/ui/webui/help/BUILD.gn:89) omits `defines = [ \"HAS_OUT_OF_PROC_TEST_RUNNER\" ]`. Its test includes `content/public/test/browser_test.h`, which emits `#error` without that define. The parent `browser_tests` target's defines do not propagate into this source set. Add the define to `arcified_windows_browser_tests`; otherwise the registered Windows browser-test build fails.\n\nChecks passed: all recorded SHA-256 identities, complete patch-to-base/result comparison, sparse apply check, whitespace check, C++ formatting, GN formatting, and XML syntax.\n\nNo additional blocking source findings. The unavailable implementation preserves OPEN update acceptance and owner decisions. Native compilation, tests, Windows runtime, visual behavior, signatures, rollback, and retained-data behavior remain unverified. No files were changed."
+    },
+    {
+      "key": "release-linux",
+      "round": 1,
+      "taskId": "node:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-release-linux-review-r1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-release-linux-review-r1",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "priorFindings": [],
+      "hasPendingChildRuns": false,
+      "summary": "Clean source review. No blocking findings.\n\nThe Linux GN registration, Chromium APIs, PRE_ lifecycle, preference-write callback lifetime, and test-owned file operations appear sound. The assertions cover explicit Profile placement and same-binary restart retention. The packet accurately leaves package installation, upgrade, uninstall, owner policy, and native acceptance OPEN.\n\nIndependent read-only checks passed:\n\n- Packet SHA-256 checks and all six inspected-source hashes.\n- Prepared BUILD.gn identity and new-source absence.\n- Forward/reverse patch checks and patch/result consistency.\n- Shell syntax, clang-format 23.1.3, and GN formatting.\n\nVerification limits: no native compilation, GN dependency check, browser-test execution, or installed-package testing ran. Historical authority hashes for `non-ai-production-workstreams.json` and `execution-state.json` differ from the coordinator's current files; those historical snapshots were not independently reproduced. The assignment hash matches.\n\nNo files were changed."
+    },
+    {
+      "key": "update-linux",
+      "round": 1,
+      "taskId": "node:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-update-linux-review-r1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-update-linux-review-r1",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "priorFindings": [],
+      "hasPendingChildRuns": false,
+      "summary": "Found two blocking issues.\n\n1. **[P1] Browser-test fixture cannot compile.** [arcified_update_linux_browsertest.cc:92](/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-release-production/arcified/native/production/update-linux/result/chrome/browser/ui/webui/settings/arcified_update_linux_browsertest.cc:92) default-constructs `InstalledVersionPoller::ScopedDisableForTesting`. Its constructor is private in the pinned source. Initialize it through `InstalledVersionPoller::MakeScopedDisableForTesting()`. Otherwise, the registered Linux `browser_tests` target fails compilation.\n\n2. **[P1] New GRIT part lacks required dependency registration.** [generated_resources.grd:272](/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-release-production/arcified/native/production/update-linux/result/chrome/app/generated_resources.grd:272) adds `arcified_update_linux_strings.grdp`, but the packet omits the corresponding update to `chrome/app/generated_resources.grd.gritdeps`. The existing build requires the dependency check, and [grit_info.py:174](/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/tools/grit/grit_info.py:174) rejects mismatches. Integrating this packet alone therefore fails resource generation.\n\nRead-only checks confirmed every `SHA256SUMS` entry, all prepared-source base/supporting hashes, patch applicability, and whitespace checks. The normalized patch exactly matches the complete base-to-result diff. HEAD matches the supplied baseline. The assignment hash matches; the auxiliary workstream manifest currently differs from its recorded hash.\n\nI found no additional blocking security, cancellation, or lifetime issue in the synchronous disabled updater. The tests cover relevant unavailable-state behavior once corrected. No native compilation, tests, GN/GRIT generation, WebUI build, or visual interaction ran. All issue acceptance criteria appropriately remain OPEN. No files were changed."
+    },
+    {
+      "key": "engine-updates",
+      "round": 1,
+      "taskId": "node:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-engine-updates-review-r1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-engine-updates-review-r1",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "priorFindings": [],
+      "hasPendingChildRuns": false,
+      "summary": "No blocking findings in the engine-updates packet source review.\n\nIndependently confirmed:\n\n- Browser API signatures and GN runner registration match the prepared source.\n- Patch reconstruction exactly reproduces both result snapshots.\n- All 14 recorded hashes match. The audit rerun exactly matches the retained report.\n- Four parser tests, forward/reverse patch checks, C++ formatting and GN formatting pass.\n- Historical preparation correctly identifies its different commit and tracked changes.\n\nVerification limits: no GN generation, native compilation, browser execution or installed interaction checks. YAPF/Pylint remain unavailable. The tests cover engine identity, navigation and cookie isolation. Full patch replay, security assessment, Arcified behavior and native acceptance on every target OS remain OPEN.\n\nNo files changed."
+    },
+    {
+      "key": "update-macos",
+      "round": 1,
+      "taskId": "node:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-update-macos-review-r1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-update-macos-review-r1",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "priorFindings": [],
+      "hasPendingChildRuns": false,
+      "summary": "1. **Blocking, P1: browser test uses an incompatible API.** [version_updater_arcified_mac_browsertest.cc:24](/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-release-production/arcified/native/production/update-macos/result/chrome/browser/ui/webui/help/version_updater_arcified_mac_browsertest.cc:24) calls `browser()->profile()`, repeated in the retention assertion. In the pinned source, `InProcessBrowserTest::browser()` returns `BrowserWindowInterface*`, which has `GetProfile()` and no `profile()`. The registered macOS browser-test target will fail compilation. Replace both calls with `browser()->GetProfile()` or the fixture's `GetProfile()`, then refresh the patch and hashes.\n\nNo additional blocking findings from source review of the binding, callback lifetimes, security boundary or GN/test registration.\n\nIndependent light checks passed: manifest hashes, prepared-source identities, base snapshot equality, forward/reverse sparse applicability, and exact normalized base-to-result diff equality with `production.patch`.\n\nNo native build, GN dependency resolution, browser tests, GRIT generation or visual checks ran. Full macOS platform integration and all issue acceptance criteria remain OPEN. No files were changed."
+    },
+    {
+      "key": "release-windows",
+      "round": 1,
+      "taskId": "node:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-release-windows-review-r1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-release-windows-review-r1",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "priorFindings": [],
+      "hasPendingChildRuns": false,
+      "summary": "Clean source review. No blocking findings in the three-file production patch.\n\nIndependently verified:\n\n- API compatibility against the prepared Chromium source.\n- Existing Windows GN test registration and meaningful regression cases for malformed layouts, case/version skew, and fallback behavior.\n- Exact in-memory reconstruction of all result snapshots from the patch.\n- Source, result, patch and GN evidence hashes.\n- Forward/reverse patch checks, whitespace checks and documented focused formatting checks.\n\nNonblocking evidence note: [manifest.json](/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-release-production/arcified/native/production/release-windows/manifest.json) records hashes for `non-ai-production-workstreams.json` and `execution-state.json` that differ from their current contents. Both files were modified after the manifest. Assignment and source hashes still match.\n\nVerification limits: no native compilation, test execution, installation, signature verification or Windows UX checks ran. This review covers the supplied source packet, not integrated installer behavior. All three issue acceptance criteria, owner policy decisions and native prerequisites remain OPEN. No files were changed."
+    },
+    {
+      "key": "common-integration",
+      "round": 1,
+      "taskId": "node:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-common-integration-review-r1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A120884c2-3592-431f-9c6f-efb08a15a1ed%3Adelegate-task%3Arelease-production-common-integration-review-r1",
+      "status": "failed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "patchSha256": "6d82148a4c68c51481ed30880ee2bffb58c2a7accdbabd497a995ee812c262a5",
+      "priorFindings": [],
+      "hasPendingChildRuns": false,
+      "summary": "You’ve hit your usage limit. Visit https://chatgpt.com/settings/usage to purchase more credits or try again at Oct 30th, 2026 6:41 PM."
+    },
+    {
+      "key": "common-integration",
+      "round": 2,
+      "taskId": "node:delegated-task:command%3Amcp%3A4acbc969-1b9f-4068-91e8-0c5334bb8a8c%3Adelegate-task%3Arelease-production-common-integration-review-r2-resumed",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A4acbc969-1b9f-4068-91e8-0c5334bb8a8c%3Adelegate-task%3Arelease-production-common-integration-review-r2-resumed",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "patchSha256": "fff0a1bd84be5de897109032deadc0548339b464b352962f71c3bbea29c81bd8",
+      "priorFindings": [
+        "Previous composition review ended on usage limit without source findings"
+      ],
+      "responses": "Reconciled all accepted packet corrections in frozen 26-file combined patch",
+      "summary": "Clean scoped source review. No blocking composition findings.\n\nReviewed all seven packet deltas against the frozen combined patch and sparse result:\n\n- All 26 files and packet ownership entries match the manifest.\n- The 22 files owned by one packet retain identical edits. Four shared files preserve every delta; the common final-newline correction appears once.\n- GN dependencies, OS source selection, test registration, GRIT strings/dependencies, and About status rendering remain consistent.\n- All listed base/result hashes and the combined patch SHA-256 match.\n\nNo edits, builds, native tests, GN generation, resource generation, or UI execution ran. This establishes source composition only. The documented macOS Sparkle BUILD overlap remains OPEN for full platform integration. All native and release acceptance criteria remain OPEN.",
+      "hasPendingChildRuns": false,
+      "briefRef": "task-briefs.json reviews.common-integration.round2"
+    },
+    {
+      "key": "update-windows",
+      "round": 2,
+      "taskId": "node:delegated-task:command%3Amcp%3A4acbc969-1b9f-4068-91e8-0c5334bb8a8c%3Adelegate-task%3Arelease-production-update-windows-review-r2-resumed",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A4acbc969-1b9f-4068-91e8-0c5334bb8a8c%3Adelegate-task%3Arelease-production-update-windows-review-r2-resumed",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "patchSha256": "af54bacfba5269403b5f2e79c566527ac78ec1e51b8e90881bfcb09568d4a7a7",
+      "priorFindings": [
+        "P1 browser-test source set lacks HAS_OUT_OF_PROC_TEST_RUNNER"
+      ],
+      "responses": "Added HAS_OUT_OF_PROC_TEST_RUNNER in packet and combined GN source set",
+      "summary": "Clean scoped review. No blocking source findings.\n\nThe prior P1 is corrected. `HAS_OUT_OF_PROC_TEST_RUNNER` is defined directly on `arcified_windows_browser_tests` in both the packet and combined result.\n\nIndependent checks passed:\n\n- All 30 checked hashes, including frozen patch `af54bacf…d4a7a7`.\n- Complete seven-file base-to-result diff matches the patch.\n- Forward/reverse applicability and reconstructed-result hashes.\n- C++ formatting, GN formatting, XML syntax and whitespace checks.\n\nSource review found no additional compatibility, security, callback lifetime or test-registration defect. The tests meaningfully cover unavailable-state behavior and the real AboutHandler binding.\n\nNo native compilation, GN generation, test execution or Windows visual check ran. The root baseline build does not validate these feature changes. All three issue acceptance criteria, owner policy decisions, authenticated updates, rollback and retained-data behavior remain OPEN.\n\nNo files were changed.",
+      "hasPendingChildRuns": false,
+      "briefRef": "task-briefs.json reviews.update-windows.round2"
+    },
+    {
+      "key": "update-linux",
+      "round": 2,
+      "taskId": "node:delegated-task:command%3Amcp%3A4acbc969-1b9f-4068-91e8-0c5334bb8a8c%3Adelegate-task%3Arelease-production-update-linux-review-r2-resumed",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A4acbc969-1b9f-4068-91e8-0c5334bb8a8c%3Adelegate-task%3Arelease-production-update-linux-review-r2-resumed",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "patchSha256": "7f958bd40c02ffa4a51c3d9a6b94443aa1605574d5e2834697925c1e16286fad",
+      "priorFindings": [
+        "P1 ScopedDisableForTesting private constructor",
+        "P1 GRIT part missing generated_resources.grd.gritdeps registration"
+      ],
+      "responses": "Use MakeScopedDisableForTesting and register new GRIT part in captured generated_resources.grd.gritdeps; refreshed patch and identities",
+      "summary": "Clean scoped review. No blocking source findings in frozen patch `7f958bd40c02ffa4a51c3d9a6b94443aa1605574d5e2834697925c1e16286fad`.\n\nBoth round 1 corrections are verified against the pinned source. The fixture uses `MakeScopedDisableForTesting()`, and the new GRIT part is registered in sorted `.gritdeps` order.\n\nRead-only checks passed:\n\n- Every `SHA256SUMS` entry and all prepared base/supporting source identities.\n- Forward and reverse patch applicability, with no whitespace diagnostics.\n- Complete base-to-result diff matches the frozen patch after path/index normalization.\n- Source inspection confirms Linux test registration, required dependencies, and `HAS_OUT_OF_PROC_TEST_RUNNER`.\n\nThe synchronous disabled updater introduces no observed security or lifetime blocker. The tests cover the native callback, installed-version signals, and About-page reentry.\n\nCompilation, native tests, GN/GRIT generation, WebUI type checking, and visual behavior remain unverified. All three issue acceptance criteria correctly remain OPEN. The assignment hash matches; the auxiliary workstream hash is historical and differs, as already recorded.\n\nNo files were changed.",
+      "hasPendingChildRuns": false,
+      "briefRef": "task-briefs.json reviews.update-linux.round2"
+    },
+    {
+      "key": "update-macos",
+      "round": 2,
+      "taskId": "node:delegated-task:command%3Amcp%3A4acbc969-1b9f-4068-91e8-0c5334bb8a8c%3Adelegate-task%3Arelease-production-update-macos-review-r2-resumed",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A4acbc969-1b9f-4068-91e8-0c5334bb8a8c%3Adelegate-task%3Arelease-production-update-macos-review-r2-resumed",
+      "status": "completed",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "patchSha256": "7b1761886d00782f1b5748e7b39fb82d2aceeb750242a1839d7d358b6dea8463",
+      "priorFindings": [
+        "P1 browser()->profile() absent in pinned BrowserWindowInterface"
+      ],
+      "responses": "Use BrowserWindowInterface::GetProfile in both assertions; refreshed patch and checksums",
+      "summary": "Clean scoped review. No blocking source findings in frozen patch SHA-256 `7b1761886d00782f1b5748e7b39fb82d2aceeb750242a1839d7d358b6dea8463`.\n\nThe round 1 finding is resolved. Both Profile calls use `GetProfile()`, which exists on the pinned `BrowserWindowInterface`. Callback destruction is safe because callbacks and message data remain local, with no subsequent instance access.\n\nGN source selection, dependencies, test registration and `HAS_OUT_OF_PROC_TEST_RUNNER` are consistent by source inspection. The tests cover the real unavailable binding, repeated checks, live Profile/page retention and callback destruction. They do not prove durable data preservation or authenticated updates.\n\nIndependent read-only checks passed:\n\n1. All manifest hashes and documented supporting-source identities.\n2. Every base snapshot against prepared source.\n3. Forward and reverse sparse applicability.\n4. Complete base-to-result delta comparison against the patch.\n5. Saved reconstruction against every result file.\n\nNo edits, native preparation, builds or tests ran. macOS GN resolution, compilation, GRIT generation, browser tests, visual behavior and full platform integration remain unverified. All issue acceptance criteria correctly remain OPEN, including owner policies, artifact authentication, interruption, restart, rollback and durable data retention. The reported baseline build does not validate these feature changes.",
+      "hasPendingChildRuns": false,
+      "briefRef": "task-briefs.json reviews.update-macos.round2"
+    }
+  ],
+  "completedEvidence": [
+    "25-file combined sparse source reconciliation, all modified bases match prepared source; forward/reverse applicability and complete reconstruction passed",
+    "Owner-authorized resumption reconciled all original task IDs: seven primaries completed, seven packet reviews completed, one composition review failed on prior usage limit; no live work duplicated.",
+    "All four accepted P1 fixes applied; revised packet and 26-file combined patches reconstructed exactly; formats, checksums and actual GRIT dependency check passed."
+  ],
+  "remaining": [
+    "Root reconcile and register downstream patch with other areas and the full macOS platform series",
+    "Root feature compilation, native test execution and installed visual/accessibility acceptance",
+    "Owner release identity, package/support, signing/channel/key, compatibility/rollback and data disposition decisions",
+    "Actual package lifecycle and authenticated update acceptance on every supported OS",
+    "Executed declared engine update and complete current security/provenance assessment"
+  ],
+  "nativeAcceptance": "OPEN",
+  "nextAction": "Root integrate reviewed source commit 6f5cb45380855370372bebcf3debceea1882a5aa using HANDOFF.md and integrated-identities.json. No child tasks are live. This coordinator's source work is committed; all seven issue acceptance gates remain OPEN.",
+  "reviewState": {
+    "cleanPackets": [
+      "release-linux",
+      "release-windows",
+      "release-macos",
+      "engine-updates",
+      "update-linux",
+      "update-windows",
+      "update-macos"
+    ],
+    "priorFindings": {
+      "update-windows": [
+        "P1 browser-test source set lacks HAS_OUT_OF_PROC_TEST_RUNNER"
+      ],
+      "update-linux": [
+        "P1 ScopedDisableForTesting private constructor",
+        "P1 GRIT part missing generated_resources.grd.gritdeps registration"
+      ],
+      "update-macos": [
+        "P1 browser()->profile() absent in pinned BrowserWindowInterface"
+      ]
+    },
+    "responses": {
+      "update-windows": "Added HAS_OUT_OF_PROC_TEST_RUNNER in packet and combined GN source set",
+      "update-linux": "Use MakeScopedDisableForTesting and register new GRIT part in captured generated_resources.grd.gritdeps; refreshed patch and identities",
+      "update-macos": "Use BrowserWindowInterface::GetProfile in both assertions; refreshed patch and checksums"
+    },
+    "historicalEvidence": "Root workstream and execution-state control hashes were historical snapshots and now differ. Assignment/source hashes matched reviews.",
+    "failedReview": "common-integration round 1 hit Codex usage limit, reset reported Oct 30th, 2026 6:41 PM; owner explicitly authorized resumption",
+    "unresolvedObjections": "None in reviewed packet source or composition. Platform compilation, runtime and all issue acceptance remain OPEN.",
+    "composition": "clean round 2, frozen patch fff0a1bd84be5de897109032deadc0548339b464b352962f71c3bbea29c81bd8"
+  },
+  "rootBaseline": {
+    "status": "BUILT",
+    "source": "Owner resumption message",
+    "browser": "Helium 0.19.2.1 / Chromium 155.0.8059.79",
+    "chromeDriver": "matching version, owner reported",
+    "featureAcceptance": "OPEN"
+  },
+  "coordinatorStatus": "SOURCE_PACKETS_COMMITTED_ROOT_ACCEPTANCE_OPEN",
+  "localCommits": [
+    {
+      "sha": "6f5cb45380855370372bebcf3debceea1882a5aa",
+      "purpose": "All seven reviewed production packets, reconciled 26-file patch, source identities, retained briefs/reviews and root handoff"
+    }
+  ],
+  "checkScratch": "Cleanup rejected because rm -f style commands are not permitted. Scratch is retained untracked and excluded from commit; no alternate deletion attempted. Every packet base/result and combined patch/identity is committed.",
+  "finalLocalChecks": {
+    "sourceReview": "Seven clean packet source reviews plus clean combined-source review",
+    "sourceBytes": "Reviewed patch/source hashes unchanged through commit",
+    "formatterAndLint": "Affected C++/GN formatting and strict source patch whitespace passed; staged non-patch source/metadata whitespace check passed. Raw patch artifact diff reports required context spaces.",
+    "scratch": "Untracked check directories retained after prohibited rm -f cleanup was rejected; excluded from commit.",
+    "native": "No native feature build/test/runtime/UX execution, root-only"
+  }
+}

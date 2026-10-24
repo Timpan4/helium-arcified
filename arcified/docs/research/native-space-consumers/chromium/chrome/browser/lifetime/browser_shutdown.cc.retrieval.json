@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/lifetime/browser_shutdown.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/lifetime/browser_shutdown.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:00:42.486Z",
+  "kind": "file",
+  "bytes": 12161,
+  "sha256": "798b0669fd8c3bd88686a87309a69fa49e5c90ee64448ac46b47ec0883a4907e",
+  "gitBlob": "70c82fe2723b8b7f2ac50a3a1bb4191d4168abe7",
+  "lines": 363,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

@@ -1,0 +1,116 @@
+{
+  "license": "GPL-3.0-only",
+  "issueKey": "compatibility",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/59",
+  "disposition": "TRACKING_RESEARCH_READY_FOR_INDEPENDENT_REVIEW_NATIVE_ACCEPTANCE_OPEN",
+  "evidencePaths": [
+    "README.md",
+    "issue-object.json",
+    "compatibility-matrix.json",
+    "source-identities.json",
+    "prepared-source.sha256",
+    "defects.json",
+    "checks.json"
+  ],
+  "changes": [
+    "Preserved assigned authoritative issue object and exact inspected source identities.",
+    "Defined 20 focused scenarios with all 60 Linux/Windows/macOS cells OPEN and explicit required variants/RC identities.",
+    "Recorded per-OS and optional Widevine/Cast limitations without proprietary binaries or security bypasses.",
+    "Separated source-risk candidate D1 from native runtime results; no implementation or native test registration added."
+  ],
+  "checks": [
+    {
+      "artifact": "checks.json",
+      "scope": "Light source identity, JSON formatting/structure, coverage, local-link and Markdown hygiene checks only."
+    }
+  ],
+  "ownerQuestions": [
+    {
+      "id": "Q1",
+      "question": "Which exact RC ID and per-OS installed artifact identities should issue #59 evaluate?",
+      "recommendation": "Wait for root's integrated native candidates and record the identity fields in compatibility-matrix.json before any PASS.",
+      "tradeoff": "Keeps source research usable now; native compatibility remains OPEN until actual artifacts and supported hosts are supplied."
+    },
+    {
+      "id": "Q2",
+      "question": "When an incoming OS link has no originating page, or a notification/PiP initiator no longer exists, which surviving host/Space should receive it?",
+      "recommendation": "Consolidate with focus-routing-contract #44. Preserve exact originating/registered Profile where known; keep unattributed or missing-initiator routes unavailable until the owner selects behavior.",
+      "tradeoff": "Avoids a guessed last-active Profile policy; fallback UX remains unsettled. This packet does not decide cleanup, close or source disposition."
+    },
+    {
+      "id": "Q3",
+      "question": "Which optional Cast receiver routes and lawful Widevine test configuration, if any, belong in the declared RC compatibility claim?",
+      "recommendation": "Record unsupported/unavailable combinations explicitly. Keep Widevine optional, distribute no proprietary CDM, and authorize test media/hardware separately before runtime work.",
+      "tradeoff": "Claims remain limited to observed configurations; protected streaming and receiver coverage cannot be inferred from compilation."
+    }
+  ],
+  "dependencies": [
+    {
+      "key": "site-controls",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/38",
+      "state": "Native completion/evidence unavailable to this packet; pure foundation checks are insufficient."
+    },
+    {
+      "key": "window-chrome",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/35",
+      "state": "Native host/dialog/focus results unavailable to this packet."
+    }
+  ],
+  "integrationRequests": [
+    {
+      "target": "research coordinator/root",
+      "request": "Review/import packet, declare exact per-OS RC artifacts and aggregate native workflow results. Do not treat baseline compilation as installed compatibility."
+    },
+    {
+      "target": "feature owners",
+      "request": "Supply exact RC native results and registered regression coverage for web-apps, extension-workflow, credentials-flow, print-flow, downloads, notifications/protocols, casting and PiP. Record unavailable routes with evidence."
+    },
+    {
+      "target": "downloads and window-chrome",
+      "request": "Assess D1 in defects.json and add focused native coverage for extension Save As without associated WebContents and another Profile last active. No runtime defect has been proven."
+    },
+    {
+      "target": "focus-routing-contract #44",
+      "request": "Consolidate Q2 for unattributed incoming OS links and missing initiators, without changing approved immutable Profile identity or inventing fallback policy."
+    },
+    {
+      "target": "root lifecycle owner",
+      "request": "Retain same-native-window multi-Profile and actual live saved-page handoff gates; supply their native evidence for affected matrix variants."
+    }
+  ],
+  "remainingCriteria": [
+    {
+      "criterion": 1,
+      "state": "OPEN",
+      "remaining": "Installed native install/launch/uninstall, extension popup, autofill/passkey and print/download results and required variants on each declared OS artifact."
+    },
+    {
+      "criterion": 2,
+      "state": "OPEN",
+      "remaining": "Native notification, inbound/outbound protocol, supported casting and video/document PiP return targeting, plus Q2 and approved same-host/handoff gates."
+    },
+    {
+      "criterion": 3,
+      "state": "OPEN",
+      "remaining": "Per-OS observed limitations, effective optional component states and package-level proof of no proprietary CDM bundling or suppressed security prompts."
+    }
+  ],
+  "nativeImplementation": {
+    "patch": null,
+    "baseResultFiles": "Source-only exact prepared bases in source-identities.json. No changed native result files for a tracking leaf.",
+    "nativeTestChanges": null,
+    "registration": "Inapplicable to tracking-only artifacts. Native test execution and feature-owner registered regression coverage remain OPEN.",
+    "primaryCommandId": 40728,
+    "commandUsage": "Not introduced; no command, ActionItem or resource changes."
+  },
+  "counts": {
+    "scenarios": 20,
+    "platformCells": 60,
+    "nativePass": 0,
+    "nativeFail": 0,
+    "nativeUnavailableProven": 0,
+    "nativeOpen": 60,
+    "sourceRiskCandidates": 1
+  },
+  "nativeAcceptance": "OPEN"
+}

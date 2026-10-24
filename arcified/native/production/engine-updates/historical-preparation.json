@@ -1,0 +1,111 @@
+{
+  "license": "GPL-3.0-only",
+  "status": "HISTORICAL_PREPARATION_ONLY",
+  "scope": "Read existing coordinator evidence; this packet did not prepare, build or update Chromium.",
+  "preparationManifest": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/preparation.json",
+  "forkCommit": "05ace22efb8564d0294b8efa1b3f3651b76cef07",
+  "forkTrackedChanges": true,
+  "linuxPlatformCommit": "b154afccb44729359c816754c7741efb3cb8f497",
+  "chromiumVersion": "155.0.8059.79",
+  "stages": [
+    {
+      "name": "retrieve-chromium",
+      "status": "PASSED"
+    },
+    {
+      "name": "unpack-chromium",
+      "status": "PASSED"
+    },
+    {
+      "name": "retrieve-dependencies",
+      "status": "PASSED"
+    },
+    {
+      "name": "unpack-dependencies",
+      "status": "PASSED"
+    },
+    {
+      "name": "source-version",
+      "status": "PASSED"
+    },
+    {
+      "name": "prune",
+      "status": "PASSED"
+    },
+    {
+      "name": "patches",
+      "status": "PASSED"
+    },
+    {
+      "name": "domains",
+      "status": "PASSED"
+    },
+    {
+      "name": "names",
+      "status": "PASSED"
+    },
+    {
+      "name": "translations",
+      "status": "PASSED"
+    },
+    {
+      "name": "version",
+      "status": "PASSED"
+    },
+    {
+      "name": "copy-resources",
+      "status": "PASSED"
+    },
+    {
+      "name": "generate-resources",
+      "status": "PASSED"
+    },
+    {
+      "name": "replace-resources",
+      "status": "PASSED"
+    },
+    {
+      "name": "output-directory",
+      "status": "PASSED"
+    },
+    {
+      "name": "gn-arguments",
+      "status": "PASSED"
+    },
+    {
+      "name": "gn-generate",
+      "status": "PASSED"
+    }
+  ],
+  "logReview": {
+    "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/patches.log",
+    "method": "fast_filesystem fs_rg full finite file search",
+    "pattern": "fuzz|offset|Hunk #|FAILED|Reversed|\\.rej",
+    "matchedLines": 0,
+    "scope": "No matching diagnostic in historical strict-apply log. This is not an executed engine update or proof of Arcified native patch integration."
+  },
+  "conflicts": {
+    "status": "NOT_EXECUTED_FOR_NEW_REVISION",
+    "records": null
+  },
+  "refreshes": {
+    "status": "NOT_EXECUTED_FOR_NEW_REVISION",
+    "records": null
+  },
+  "archivePublisherClaims": [
+    {
+      "file": "chromium-155.0.8059.79-base.tar.zst",
+      "sha256": "f13f912e271466bb9283f39e85a1672c128bc02b70f37067682300daf37902f2"
+    },
+    {
+      "file": "chromium-155.0.8059.79-linux-x64.tar.zst",
+      "sha256": "b47f683357883a4b177f5bd01b702810050b622bc83e0c99d9a6f9c8e1172e6a"
+    }
+  ],
+  "archiveScope": "Values read from retained publisher checksum sidecars. Large archives were not rehashed in this light packet; historical preparation records verified retrieval. A checksum alone does not establish publisher authenticity.",
+  "nativeAcceptance": {
+    "linux": "OPEN",
+    "windows": "OPEN",
+    "macos": "OPEN"
+  }
+}

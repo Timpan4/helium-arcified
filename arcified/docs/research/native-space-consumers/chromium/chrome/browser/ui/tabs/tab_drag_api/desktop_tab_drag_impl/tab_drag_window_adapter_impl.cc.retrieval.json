@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/tabs/tab_drag_api/desktop_tab_drag_impl/tab_drag_window_adapter_impl.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/tabs/tab_drag_api/desktop_tab_drag_impl/tab_drag_window_adapter_impl.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:23.634Z",
+  "kind": "file",
+  "bytes": 11889,
+  "sha256": "2b70899f73f4d72041a4d231508376b87d87475dd7310e2187d953ceadf37f6c",
+  "gitBlob": "51527ff278c64dd70b3f618a5057b82b6ade939f",
+  "lines": 341,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

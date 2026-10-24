@@ -1,0 +1,809 @@
+{
+  "issueKey": "release-ux-check",
+  "area": "release",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "nativeAcceptance": "OPEN",
+  "featureRows": [
+    {
+      "issueKey": "release-linux",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/131",
+      "title": "Install a Linux Arcified package safely",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork"
+      ],
+      "dependencies": [
+        "native-linux",
+        "session-durability",
+        "schema-migrations"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "release-linux/criterion/1",
+          "criterion": "Decide supported package/distribution format and fork-owned application identity before publishing.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "release-linux/criterion/2",
+          "criterion": "Verify clean install, upgrade and uninstall data choices on supported Linux environments.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "release-linux/criterion/3",
+          "criterion": "Report source provenance and native smoke checks; keep signing/release credentials out of artifacts.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "release-windows",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/132",
+      "title": "Install a signed Windows Arcified package",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork"
+      ],
+      "dependencies": [
+        "native-windows",
+        "session-durability",
+        "schema-migrations"
+      ],
+      "declaredTargetPlatforms": [
+        "Windows"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "release-windows/criterion/1",
+          "criterion": "Use authorized signing/release infrastructure and verify package signatures.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "release-windows/criterion/2",
+          "criterion": "Test clean install, default-browser registration, upgrade and retained Profile data.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "release-windows/criterion/3",
+          "criterion": "Keep rollback/downgrade behavior explicit and surface update/security failures without bypassing OS trust.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "release-macos",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/133",
+      "title": "Install a signed macOS Arcified app",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork"
+      ],
+      "dependencies": [
+        "native-macos",
+        "session-durability",
+        "schema-migrations"
+      ],
+      "declaredTargetPlatforms": [
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "release-macos/criterion/1",
+          "criterion": "Use authorized signing/notarization infrastructure and verify the installed artifact and package signatures.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "release-macos/criterion/2",
+          "criterion": "Test clean install, protocol/default-browser registration, upgrade while preserving user data.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "release-macos/criterion/3",
+          "criterion": "Explain architecture/OS support and retain security prompts; do not treat a development app as a signed release.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "engine-updates",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/41",
+      "title": "Prove a repeatable Chromium update procedure",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork",
+        "dia-security"
+      ],
+      "dependencies": [
+        "native-linux",
+        "native-windows",
+        "native-macos"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "engine-updates/criterion/1",
+          "criterion": "Track the pinned engine source and known security changes using current authoritative release information.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "engine-updates/criterion/2",
+          "criterion": "Execute the procedure for one declared engine revision/update, recording patch conflicts, refresh steps and focused native results on all target OSes.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "engine-updates/criterion/3",
+          "criterion": "Publish patch conflicts and release provenance; do not substitute extension CI for native browser verification.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "update-linux",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/165",
+      "title": "Deliver authenticated Arcified updates on Linux",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork",
+        "dia-security"
+      ],
+      "dependencies": [
+        "release-linux",
+        "session-durability"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "update-linux/criterion/1",
+          "criterion": "The fork owner approves channel/service ownership and signing/key infrastructure before any publication.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "update-linux/criterion/2",
+          "criterion": "Verify installed-to-updated artifact identity/signatures and reject tampered metadata or incompatible downgrades.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "update-linux/criterion/3",
+          "criterion": "Exercise interrupted/failed update, restart and the approved rollback behavior while retaining Profile/workspace data.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "update-windows",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/166",
+      "title": "Deliver authenticated Arcified updates on Windows",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork",
+        "dia-security"
+      ],
+      "dependencies": [
+        "release-windows",
+        "session-durability"
+      ],
+      "declaredTargetPlatforms": [
+        "Windows"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "update-windows/criterion/1",
+          "criterion": "The fork owner approves channel/service ownership and signing/key infrastructure before any publication.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "update-windows/criterion/2",
+          "criterion": "Verify installed-to-updated artifact identity/signatures and reject tampered metadata or incompatible downgrades.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "update-windows/criterion/3",
+          "criterion": "Exercise interrupted/failed update, restart and the approved rollback behavior while retaining Profile/workspace data.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "update-macos",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/167",
+      "title": "Deliver authenticated Arcified updates on macOS",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork",
+        "dia-security"
+      ],
+      "dependencies": [
+        "release-macos",
+        "session-durability"
+      ],
+      "declaredTargetPlatforms": [
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "update-macos/criterion/1",
+          "criterion": "The fork owner approves channel/service ownership and signing/key infrastructure before any publication.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "update-macos/criterion/2",
+          "criterion": "Verify installed-to-updated artifact identity/signatures and reject tampered metadata or incompatible downgrades.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "update-macos/criterion/3",
+          "criterion": "Exercise interrupted/failed update, restart and the approved rollback behavior while retaining Profile/workspace data.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

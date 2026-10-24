@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/cocoa/browser_window_command_handler.mm",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/cocoa/browser_window_command_handler.mm?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:28.009Z",
+  "kind": "file",
+  "bytes": 5374,
+  "sha256": "571a6c7f4226ea6b9fc61d7b3b79c81476a46c84177306d8604443630abee7af",
+  "gitBlob": "f837d50040150caf73edd2356e5073bfbf528511",
+  "lines": 154,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

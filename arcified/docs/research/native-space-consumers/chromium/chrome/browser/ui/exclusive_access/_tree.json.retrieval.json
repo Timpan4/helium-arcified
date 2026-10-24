@@ -1,0 +1,10 @@
+{
+  "path": "chrome/browser/ui/exclusive_access/",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/exclusive_access/?format=JSON",
+  "retrievedAt": "2026-10-23T15:00:39.045Z",
+  "kind": "tree",
+  "bytes": 6163,
+  "sha256": "ded2b437af3ee0d0c265a42231edfe16a6900a82bfeb60e7b2ffdd57f4641530",
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

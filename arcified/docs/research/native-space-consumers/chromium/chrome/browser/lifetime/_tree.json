@@ -1,0 +1,311 @@
+{
+  "id": "b67f10d5ef353a26b349dc518f2ba898f550ddbb",
+  "entries": [
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1382dfab4917ff69ff10f115417b8870fd6787ac",
+      "name": "BUILD.gn"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "075fffdefea14a84d783d05bcfcd3996c5077663",
+      "name": "DEPS"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4692e666b0a24d2467fd8fcd3e9b7b9d586aae04",
+      "name": "DIR_METADATA"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "62b3471f9dd0fe3e482f764c2c32dbc0b5f7135b",
+      "name": "OWNERS"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "8674dc0699aa619cd5eb2b183b1d0f0e12970d85",
+      "name": "android"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "120cee0391d43f84215726f0711409d23964514c",
+      "name": "application_lifetime.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d96e31c42a959f4090cc07d0d12078766c4c9598",
+      "name": "application_lifetime.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9db7aaf335929bd468c84a368381af0e84127db7",
+      "name": "application_lifetime_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "35b4c8d3ba62c9e3d235fea1dab8501404141b2a",
+      "name": "application_lifetime_android.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e63935632d59952e6c843c3aa5d9866022e9af12",
+      "name": "application_lifetime_aura.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "152c107ab6fc1a3318b384cf28404dac2b149e14",
+      "name": "application_lifetime_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2dfe778b60bd42d0cd5b42b21cb3aa1f356ec4e2",
+      "name": "application_lifetime_chromeos.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "49918cde7f0dc3c072d746f6e89a5b16e839e492",
+      "name": "application_lifetime_chromeos.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a5f179be3981ce584386653168fdaa2fe5b3c3b2",
+      "name": "application_lifetime_chromeos_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "35dd33dd4621238c544b8e7f599a60d329654ee1",
+      "name": "application_lifetime_chromeos_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "75976a22229e0df87cc6c1c27ffdf6cf38db4a25",
+      "name": "application_lifetime_desktop.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7f7c94144139fb08cf5bcd66025e67bb18bcf251",
+      "name": "application_lifetime_desktop.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2ac59286ed0756cf034f557e0181e4c3237f678e",
+      "name": "application_lifetime_mac.mm"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "78aa67714c02471e7167c3d7514b357386e3e3fb",
+      "name": "browser_close_manager.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e5ec35a6b53c1c4c4aee2546b630fb0a8e25b4f8",
+      "name": "browser_close_manager.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b480469e740ceb121e3c899e5ecdb68f4061aa8a",
+      "name": "browser_close_manager_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "70c82fe2723b8b7f2ac50a3a1bb4191d4168abe7",
+      "name": "browser_shutdown.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d0f64cba09e1d317e63c8c2329305e4ed62393ed",
+      "name": "browser_shutdown.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "49c5624af561ce8b891d1d651f57d0cb7dd92fdb",
+      "name": "browser_shutdown_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0e7d0f2ef1f5f878ccd249da3257cf3bc4e41960",
+      "name": "restartability_monitor.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "14d3eb5c1747f54a910ef3c710d556056ae05d30",
+      "name": "restartability_monitor.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b48ecd8d2de2a4116d78699c95ffb8757f7ae03d",
+      "name": "restartability_monitor_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1008935cb56fda57065bf48804fe446e8bd3eec8",
+      "name": "scheduled_restart_manager.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "de1f14ca0ec882c6c9cf0ffb1392806a8026fb97",
+      "name": "scheduled_restart_manager.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0bb4712275e3c0b35c9e90619e4fc827db71d73f",
+      "name": "scheduled_restart_manager_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "62c38eb3dcbd2fb14aa7a75bcf3edb9d0eaa4dd5",
+      "name": "scheduled_restart_manager_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a9b67a12e85268928049601bd311ccd1d48c21f5",
+      "name": "scheduled_restart_test_utils.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "920cd6d4beaecf98a01229be59f0ecb177cdf334",
+      "name": "scheduled_restart_test_utils.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "33bd47deaba36a49ff9b193fecbc90f7f13aa5d3",
+      "name": "session_end_listener_linux.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "23b1ee6c6a41cc87ea2b3c3e0a195a3beb99eb33",
+      "name": "session_end_listener_linux.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d8d6afa2593b13db20de89c56842dbc73aaf8537",
+      "name": "session_end_listener_linux_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b06e219533cd0308fff7dfdf88eb3159108bdd66",
+      "name": "smart_restart_manager.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f635a1b09f7b7d85d96881393f393e92f0b525dd",
+      "name": "smart_restart_manager.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "446401d2528f1b685a8e689f22b1c3edebc93000",
+      "name": "smart_restart_manager_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5693c99f4a4ed84d88338b59ba18b89db114aebe",
+      "name": "smart_restart_metrics_observer.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "96ae18bb7764dcbf66eebc0a56bdfc64beb712be",
+      "name": "smart_restart_metrics_observer.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "35934b308887d58aaecf5166c3e7b001534f90ee",
+      "name": "smart_restart_metrics_observer_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "13080eda48f773f72f2046fd16a9fdc29fc5423c",
+      "name": "smart_restart_metrics_observer_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "942233325c87972ab4f1005d3c28c3dfaed32512",
+      "name": "smart_restart_policy.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d56cdb7bd29644675cf98cbd649d862e6c82fb1e",
+      "name": "smart_restart_policy.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f43da29547e2abe1999b6e85f39d9ae0c5cdeced",
+      "name": "smart_restart_policy_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4d226a3183eef234910ca6209ee3bfb75f868467",
+      "name": "switch_utils.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "304b8ec1876be113962e5532af0845eab53dad50",
+      "name": "switch_utils.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "86e50d691bb9be255c3cd3ceb27315e421e6ad36",
+      "name": "switch_utils_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c29a996851cf253d60bd0fbb1b1f48aa107b5539",
+      "name": "termination_notification.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "732592b26f10db54aacbe84d270c36dedc13fd68",
+      "name": "termination_notification.h"
+    }
+  ]
+}

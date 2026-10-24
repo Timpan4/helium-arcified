@@ -1,0 +1,26 @@
+{
+  "spaces": [
+    {
+      "id": "snapshot-a",
+      "name": "Research",
+      "urls": [
+        "https://example.test/second?order=2",
+        "https://example.test/first?order=1",
+        "https://example.test/second?order=2"
+      ],
+      "savedAt": "2026-10-23T12:34:56.789Z"
+    },
+    {
+      "id": "snapshot-b",
+      "name": "Research",
+      "urls": ["http://example.test/other"],
+      "savedAt": ""
+    },
+    {
+      "id": "snapshot-empty",
+      "name": "Empty snapshot",
+      "urls": [],
+      "savedAt": "2026-10-22T00:00:00.000Z"
+    }
+  ]
+}

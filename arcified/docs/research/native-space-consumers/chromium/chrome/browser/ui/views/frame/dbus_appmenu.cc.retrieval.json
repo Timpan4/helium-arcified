@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/views/frame/dbus_appmenu.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/frame/dbus_appmenu.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:02:19.321Z",
+  "kind": "file",
+  "bytes": 24285,
+  "sha256": "ae738e988f476bf3ba08a6b1e8f912edfcc4eec3fe0661cfb1fe33818a4e15c3",
+  "gitBlob": "35a78946cd703e548c70896e9f763de4bcd40dcb",
+  "lines": 685,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

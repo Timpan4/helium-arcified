@@ -1,0 +1,233 @@
+{
+  "license": "GPL-3.0-only",
+  "preparedRoot": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+  "chromiumVersion": "155.0.8059.79",
+  "heliumVersionFields": "0.19.2.1",
+  "baseInterpretation": "These are exact prepared, downstream-patched bytes, not pristine Chromium tag identities. No native source was changed.",
+  "nativePatch": null,
+  "nativeTestRegistration": null,
+  "nativeResultFiles": "Inapplicable for this tracking leaf. No native implementation or test registration was authored. Runtime acceptance remains OPEN.",
+  "externalRetrieval": "None. Local prepared source and recorded foundation evidence only. No reference app executed or downloaded.",
+  "sources": [
+    {
+      "id": "S01",
+      "sha256": "6364ce04bcd72b472e54baac73c17372bfde3447a7c76a6ac6b54131da83ad1e",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/VERSION",
+      "kind": "prepared-source",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "S02",
+      "sha256": "f90bd429ce786628f9fbe7a4022580c177f90cdcaa9128c8db8e4b13b5861d29",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/web_applications/web_app_launch_process.cc",
+      "kind": "prepared-source",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "S03",
+      "sha256": "14ca277d1525fea817f49c9f5c5e6f8c61dcf80281a2928b9dd5e2b3ca428b04",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/views/extensions/extension_popup.cc",
+      "kind": "prepared-source",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "S04",
+      "sha256": "efbba810c7f6407c42faeb0d60c7b942057b13da07601ed33481164a0311421c",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/ui/autofill/autofill_popup_controller_impl.cc",
+      "kind": "prepared-source",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "S05",
+      "sha256": "7ead6e3671ed9ee53ac25d00a5d30f7ab85de0554419e5270b2cb6bf2c45c995",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/webauthn/chrome_authenticator_request_delegate.cc",
+      "kind": "prepared-source",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "S06",
+      "sha256": "68c3b79e3f2383c5bdb13ecdf88f7ff9acfa32d9788a3f7665852ac6557b09ac",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/printing/print_preview_dialog_controller.cc",
+      "kind": "prepared-source",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "S07",
+      "sha256": "694311f23044517c0ed16cebd016fcec6ab6d24b3ed62f6bd2538c0e19543feb",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/download/download_file_picker.cc",
+      "kind": "prepared-source",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "S08",
+      "sha256": "679caf6f8768e45058a639bc409cb911caf0dcea82390543e743c956fcb51b11",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/notifications/non_persistent_notification_handler.cc",
+      "kind": "prepared-source",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "S09",
+      "sha256": "3277ea48cd1273eeaa11f4e31b6e2d64c80f428a2181b593e0fc025cb7ca23ac",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/notifications/persistent_notification_handler.cc",
+      "kind": "prepared-source",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "S10",
+      "sha256": "96eb87783f25bd90946f5e1f50c5d510cc1a14b23cf618f5e353274c99d07ba9",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/external_protocol/external_protocol_handler.cc",
+      "kind": "prepared-source",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "S11",
+      "sha256": "73a24bfbf5e6422e8004a7f9e983d4704b78e670b02c2be932800a92b9ad80d5",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/media/router/media_router_feature.cc",
+      "kind": "prepared-source",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "S12",
+      "sha256": "a9ab5d6195b5474d6bb58570a45e16d84b30614b4e733353ddaf795953c92d33",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/picture_in_picture/picture_in_picture_window_manager.cc",
+      "kind": "prepared-source",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "S13",
+      "sha256": "4582c3205a869e55108e3b92329cc3c210b75bd6e75b3b04393e01950a2dffe8",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/third_party/widevine/cdm/widevine.gni",
+      "kind": "prepared-source",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "S14",
+      "sha256": "20de375707692099b3132084695377ce5fec0aec05813dedcce094b8eda44386",
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/third_party/widevine/LICENSE",
+      "kind": "prepared-source",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "A01",
+      "sha256": "cc8ec03443b18a749b486e484a56b86218d8f41653970dea94185f76c9685354",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+      "kind": "authority-or-foundation",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "A02",
+      "sha256": "4f9c0d697e2c391ab190f42367d9b87f359578d4dfe8f70a49cd05b2cca3fe64",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+      "kind": "authority-or-foundation",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "A03",
+      "sha256": "244488864d15d093f7f80e1cc40f490a979454e2a8e74db438c7e51283518a1c",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md",
+      "kind": "authority-or-foundation",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "A04",
+      "sha256": "e5951ba265be3587cb1df8f2ab73ce6768071ac55b8d481240ed57819b39ab56",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md",
+      "kind": "authority-or-foundation",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "A05",
+      "sha256": "dae2aed7885b1f03f5f96a1285265a1189b8776a6472880c0f12c94de7f7ad02",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json",
+      "kind": "authority-or-foundation",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "A06",
+      "sha256": "fd02cba2760abf61977572263995789beb28a72d75c64e5a00ade6911d133785",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/publication/compatibility.md",
+      "kind": "authority-or-foundation",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "A07",
+      "sha256": "733db8ca63d1668e786c1574872e1adf74bcd69addd012e58fe714381eee1470",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/artifacts.md",
+      "kind": "authority-or-foundation",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    },
+    {
+      "id": "A08",
+      "sha256": "c27728f78d80d7eb6ab9f2d9136fb53ecd59fb69693d969c6092f9573602459b",
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/flags.gn",
+      "kind": "authority-or-foundation",
+      "inspected": "2026-10-24",
+      "evidenceClass": "source-only",
+      "resultPath": null,
+      "resultSha256": null
+    }
+  ]
+}

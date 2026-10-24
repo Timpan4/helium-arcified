@@ -1,0 +1,89 @@
+{
+  "id": "2f076d643e6c47a6b91467978643c2913a251b60",
+  "entries": [
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "267426617db6c99b8b6979f584a65afb2a64587c",
+      "name": "DEPS"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "f88ee2f34bb45bbb5d605b7910b1928340c61444",
+      "name": "android"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4bcaee051fdfccf68158de4f4379360717c4dcfa",
+      "name": "browser_collection.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7a29c88fca3f8d4f9ff0ba7f859613ea4d1a3d4e",
+      "name": "browser_collection_observer.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "309eced7f092e28c5c9f7119696860068d626ed9",
+      "name": "browser_window_features.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8a2e9f19aa3f5deba0c76f6420f9e156159509ae",
+      "name": "browser_window_interface.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6f6d87a62486e6d5c905c15b19e0d2b10bcbe014",
+      "name": "browser_window_interface_iterator.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1a5d23a99e231f1328d5a9e1815729bc7e5fb965",
+      "name": "browser_window_interface_iterator_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6ecba965f89fdfb9d1ebacc318d8b7470e6ffaa3",
+      "name": "create_browser_window.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6781bb5ac0dd291717ad5828ff3ed43965465b61",
+      "name": "desktop_browser_window_capabilities.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "67af5a42c04eec3fec5364b13d7715fac7bf5e68",
+      "name": "embedder_browser_window_features.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "51c2405a17809fc3b8063cfbf64d243e31fb73a0",
+      "name": "global_browser_collection.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cdbf80fedbfd3e690eac10859d9290db29bacfdd",
+      "name": "global_browser_collection_platform_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2614940f0116c087a79db634f390edee5155ec08",
+      "name": "profile_browser_collection.h"
+    }
+  ]
+}

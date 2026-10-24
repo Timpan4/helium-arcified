@@ -1,0 +1,143 @@
+{
+  "issueKey": "release-ux-check",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/161",
+  "disposition": "TRACKING_EVIDENCE_PREPARED_NATIVE_EXECUTION_BLOCKED",
+  "nativeAcceptance": "OPEN",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "evidencePaths": [
+    "README.md",
+    "matrix-index.json",
+    "source-family-coverage.json",
+    "cross-cutting-scenarios.json",
+    "source-identities.json",
+    "authority-snapshot.json",
+    "checks.json",
+    "matrix/platform.json",
+    "matrix/core.json",
+    "matrix/data.json",
+    "matrix/navigation.json",
+    "matrix/appearance.json",
+    "matrix/library.json",
+    "matrix/media.json",
+    "matrix/extras.json",
+    "matrix/assistant.json",
+    "matrix/performance.json",
+    "matrix/sync.json",
+    "matrix/research.json",
+    "matrix/release.json"
+  ],
+  "changes": [
+    "Reconciled all 135 active non-AI items to the full root manifest.",
+    "Mapped the entire 164-record catalog and all 558 acceptance criteria to issue URLs and explicit Linux/Windows/macOS scenario states.",
+    "Preserved all 23 workflow families, 43 source families and 19 historical/optional dispositions.",
+    "Added 16 concrete cross-cutting scenario definitions covering native ownership/focus, accessibility/input, restart/failure/data safety and optional states.",
+    "Recorded source identities, existing foundation evidence boundaries, missing runtime/support evidence and coordinator integration needs."
+  ],
+  "checks": {
+    "record": "checks.json",
+    "packetStructure": "PASS",
+    "catalogAndFamilyCoverage": "PASS",
+    "formatAndWhitespace": "PASS",
+    "sourceIdentity": "PASS_WITH_DOCUMENTED_ROOT_CONTROL_DRIFT",
+    "nativeExecution": "NOT_RUN",
+    "nativePasses": 0
+  },
+  "ownerQuestions": [
+    {
+      "question": "Which OS versions, architectures, Linux display/compositor environments, assistive technologies, IMEs and touch/input devices define the first release support matrix?",
+      "recommendation": "Record an explicit owner-approved support matrix; keep unavailable combinations OPEN with reasons.",
+      "tradeoff": "Makes release support explicit without guessing exclusions or treating absent hardware as a successful test.",
+      "route": "Research coordinator consolidates with release/root; do not ask the owner again from this leaf."
+    },
+    {
+      "question": "Which optional-feature candidates are accepted for the first release, and which are visibly deferred in their owning issues?",
+      "recommendation": "Keep local core usable without services; require disabled and authorized-enabled/failure evidence for accepted optional features.",
+      "tradeoff": "Deferred features remain visible rather than receiving an unverified parity claim.",
+      "route": "Research coordinator consolidates owning-issue decisions at root."
+    }
+  ],
+  "dependencies": [
+    {
+      "issueKey": "release-linux",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/131",
+      "state": "OPEN",
+      "evidence": "Authoritative release assignment requirements retained in authority-snapshot.json; no installed-candidate runtime evidence supplied.",
+      "needed": "Installed candidate identity, declared support and package/install/native results from release owner."
+    },
+    {
+      "issueKey": "release-windows",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/132",
+      "state": "OPEN",
+      "evidence": "Authoritative release assignment requirements retained in authority-snapshot.json; no installed-candidate runtime evidence supplied.",
+      "needed": "Installed candidate identity, declared support and package/install/native results from release owner."
+    },
+    {
+      "issueKey": "release-macos",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/133",
+      "state": "OPEN",
+      "evidence": "Authoritative release assignment requirements retained in authority-snapshot.json; no installed-candidate runtime evidence supplied.",
+      "needed": "Installed candidate identity, declared support and package/install/native results from release owner."
+    }
+  ],
+  "integrationRequests": [
+    {
+      "owner": "release coordinator",
+      "request": "Supply installed package/executable SHA-256, source and ordered patch/build/test provenance, declared platform/input support and optional-feature configuration for each release candidate."
+    },
+    {
+      "owner": "feature coordinators",
+      "request": "Join each active criterion and applicable cross-cutting case to registered native tests and installed interaction results. Preserve optional/deferred dispositions and relevant evidence reuse conditions."
+    },
+    {
+      "owner": "root",
+      "request": "Run native/visual acceptance only under later suitable host/candidate execution authority. Preserve same-window multi-Profile and exact-object saved-page handoff gates, lifecycle/codec and private/download authorities."
+    },
+    {
+      "owner": "research coordinator",
+      "request": "Reconcile separately owned focus-routing-contract #44; retain existing root lifecycle/provider questions rather than requesting new decisions from this leaf."
+    }
+  ],
+  "remainingCriteria": [
+    {
+      "criterion": "Map every accepted feature and source-family disposition to an issue and a native scenario result on Linux, Windows and macOS.",
+      "state": "OPEN",
+      "reason": "Documentary mapping/scenario coverage is prepared; installed-candidate per-platform execution, accepted support/optional dispositions and native evidence remain unavailable."
+    },
+    {
+      "criterion": "Exercise accessibility, touch/keyboard/IME, restart, failure and data-loss cases for affected surfaces and record unsupported hardware/OS combinations.",
+      "state": "OPEN",
+      "reason": "Documentary mapping/scenario coverage is prepared; installed-candidate per-platform execution, accepted support/optional dispositions and native evidence remain unavailable."
+    },
+    {
+      "criterion": "Keep unknown and unverified items open; report implemented, tested and released states separately and reuse unchanged passing evidence.",
+      "state": "OPEN",
+      "reason": "Documentary mapping/scenario coverage is prepared; installed-candidate per-platform execution, accepted support/optional dispositions and native evidence remain unavailable."
+    },
+    {
+      "criterion": "Use the accepted per-feature matrix and per-OS implementation/test/release states. Packaging success cannot substitute for absent functionality; optional/deferred items require a visible disposition.",
+      "state": "OPEN",
+      "reason": "Documentary mapping/scenario coverage is prepared; installed-candidate per-platform execution, accepted support/optional dispositions and native evidence remain unavailable."
+    }
+  ],
+  "productionPatch": null,
+  "preparedSourceChanges": [],
+  "nativeTestRegistration": null,
+  "nonimplementationReason": "Tracking leaf adds no product behavior. A production patch, prepared result file or registered browser test would manufacture implementation. Scenario definitions and source inspections are not executed native acceptance.",
+  "coverage": {
+    "result": "PASS",
+    "issueRows": 164,
+    "activeManifestKeys": 135,
+    "acceptanceScenarios": 558,
+    "platformScenarioSlots": 1674,
+    "openNativeSlots": 1296,
+    "laterPrioritySlots": 252,
+    "ownerExcludedSlots": 54,
+    "otherDeclaredOsSlots": 72,
+    "workflowFamilies": 23,
+    "sourceFamilies": 43,
+    "historicalDispositionRows": 19,
+    "crossCuttingCases": 16,
+    "nativePasses": 0
+  },
+  "publication": "No remote mutation, PR work, account access, live-host change, stage or commit. Packet only."
+}

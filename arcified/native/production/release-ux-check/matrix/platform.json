@@ -1,0 +1,1724 @@
+{
+  "issueKey": "release-ux-check",
+  "area": "platform",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "nativeAcceptance": "OPEN",
+  "featureRows": [
+    {
+      "issueKey": "native-linux",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/16",
+      "title": "Boot a downstream native Arcified build on Linux",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork"
+      ],
+      "dependencies": [],
+      "declaredTargetPlatforms": [
+        "Linux"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "native-linux/criterion/1",
+          "criterion": "Record source revision, patch application and build commands, and a launch artifact.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "native-linux/criterion/2",
+          "criterion": "Exercise native navigation, an extension, a download, and profile restart. Keep extension-only CI evidence separate.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "native-linux/criterion/3",
+          "criterion": "Carry changes as fork-owned downstream integration and preserve the inherited patch order.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "native-windows",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/17",
+      "title": "Boot a downstream native Arcified build on Windows",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork"
+      ],
+      "dependencies": [],
+      "declaredTargetPlatforms": [
+        "Windows"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "native-windows/criterion/1",
+          "criterion": "Record the Windows toolchain, source revision, patch application and native build result.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "native-windows/criterion/2",
+          "criterion": "Launch and exercise navigation, a download, an extension, window controls, and profile restart.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "native-windows/criterion/3",
+          "criterion": "Report native smoke results rather than treating Bun checks as browser verification.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "native-macos",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/18",
+      "title": "Boot a downstream native Arcified build on macOS",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork"
+      ],
+      "dependencies": [],
+      "declaredTargetPlatforms": [
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "NOT_APPLICABLE_DECLARED_OS",
+          "implemented": "NOT_CLAIMED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "native-macos/criterion/1",
+          "criterion": "Record toolchain, architecture, source revision, patch application and native build result.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "native-macos/criterion/2",
+          "criterion": "Launch and exercise navigation, an extension, a download, native menus, and profile restart.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "native-macos/criterion/3",
+          "criterion": "Keep signing credentials out of source and distinguish unsigned development builds from distributable releases.",
+          "results": {
+            "Linux": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "NOT_APPLICABLE_DECLARED_OS",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "accessibility",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/149",
+      "title": "Operate Spaces and the sidebar with assistive technology",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork",
+        "arc-shortcuts"
+      ],
+      "dependencies": [
+        "folders",
+        "sidebar-layout"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "accessibility/criterion/1",
+          "criterion": "Expose names, roles, selected/expanded states, hierarchy and changes for Spaces, tabs, folders and menus.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "accessibility/criterion/2",
+          "criterion": "Provide non-drag routes for reorder/move/pin and sensible focus after close, delete, undo or reveal.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "accessibility/criterion/3",
+          "criterion": "Verify with platform accessibility tools on Linux, Windows and macOS, including forced contrast and reduced motion.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "ime-localization",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/113",
+      "title": "Edit browser chrome reliably with IME and bidirectional text",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork"
+      ],
+      "dependencies": [
+        "command-bar"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "ime-localization/criterion/1",
+          "criterion": "Composition, candidate windows, dead keys and clipboard operations do not trigger browser commands prematurely.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "ime-localization/criterion/2",
+          "criterion": "Handle Unicode, RTL, long labels and translated text without clipping actions or losing logical focus order.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "ime-localization/criterion/3",
+          "criterion": "Exercise native input methods on each supported OS and keep strings externalizable.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "window-chrome",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/35",
+      "title": "Respect native caption controls, displays and window states",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork",
+        "dia"
+      ],
+      "dependencies": [
+        "native-linux",
+        "native-windows",
+        "native-macos"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "window-chrome/criterion/1",
+          "criterion": "Test move/resize/maximize/minimize/fullscreen and platform snap/tiling with correct hit regions.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "window-chrome/criterion/2",
+          "criterion": "Handle mixed display scales, display removal and small windows without offscreen or unreachable controls.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "window-chrome/criterion/3",
+          "criterion": "Restore window geometry safely and retain permission dialogs, popups and tab focus on the right window.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "automation",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/130",
+      "title": "Expose permissioned browser automation through platform adapters",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "artifact",
+        "arc-developer"
+      ],
+      "dependencies": [
+        "automation-contract",
+        "window-ownership"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Arc feature evidence is macOS-heavy or macOS-only as recorded in the dossier. Windows parity is not assumed; Linux is a downstream design target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "automation/criterion/1",
+          "criterion": "Demonstrate only the approved first operation end to end on each supported adapter, with stable object identifiers and explicit platform limitations.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "automation/criterion/2",
+          "criterion": "Keep script execution and page JavaScript behind explicit authorization and normal browser security boundaries.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "automation/criterion/3",
+          "criterion": "Return structured errors for missing objects/permissions and prevent private/Profile data leakage.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "extension-workflow",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/61",
+      "title": "Keep extension toolbar actions usable in compact chrome",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork",
+        "arc-sidebar"
+      ],
+      "dependencies": [
+        "site-controls"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "extension-workflow/criterion/1",
+          "criterion": "Install a synthetic test extension and open its popup/options/side panel from compact chrome.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "extension-workflow/criterion/2",
+          "criterion": "Permission prompts and extension actions target the correct Profile and active split/page.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "extension-workflow/criterion/3",
+          "criterion": "Disable/uninstall and restart leave no stale toolbar state or orphaned popup.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "web-apps",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/62",
+      "title": "Preserve installed web app launch and window behavior",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork"
+      ],
+      "dependencies": [
+        "window-chrome"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "web-apps/criterion/1",
+          "criterion": "Install/launch/uninstall a public fixture app with distinct app identity.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "web-apps/criterion/2",
+          "criterion": "Protocol/external links, app windows and default-browser entry obey the chosen routing and Profile boundary.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "web-apps/criterion/3",
+          "criterion": "Restart and window controls work on each target OS, with unsupported capabilities recorded.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "credentials-flow",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/137",
+      "title": "Keep autofill and passkey prompts attached to the right page",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork"
+      ],
+      "dependencies": [
+        "site-controls",
+        "peek",
+        "split-horizontal"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "credentials-flow/criterion/1",
+          "criterion": "Use synthetic test credentials to exercise fill, save and passkey prompts without exposing values in diagnostics.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "credentials-flow/criterion/2",
+          "criterion": "Prompts display the correct origin/Profile and follow the focused page without allowing cross-pane confusion.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "credentials-flow/criterion/3",
+          "criterion": "Cancel, deny, navigate and close the parent leave no stale prompt or leaked data.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "print-flow",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/138",
+      "title": "Print and save a page to PDF from compact chrome",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork",
+        "artifact"
+      ],
+      "dependencies": [
+        "site-controls",
+        "split-horizontal"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "print-flow/criterion/1",
+          "criterion": "Print preview uses the intended tab or split pane with correct page title and selection.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "print-flow/criterion/2",
+          "criterion": "Native dialog, cancellation, destination errors and PDF output work on each supported OS.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "print-flow/criterion/3",
+          "criterion": "Closing/switching a Space while preview is open preserves browser ownership and does not print another page.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "gesture-navigation",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/101",
+      "title": "Route trackpad and touch gestures to Spaces or history",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-history",
+        "arc-windows"
+      ],
+      "dependencies": [
+        "spaces",
+        "sidebar-layout"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "gesture-navigation/criterion/1",
+          "criterion": "Define gesture ownership for Space changes, page history and horizontal webpage content, with pointer/keyboard alternatives.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "gesture-navigation/criterion/2",
+          "criterion": "Test begin/update/cancel/commit, direction and multiple displays on supported native devices.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "gesture-navigation/criterion/3",
+          "criterion": "Keep selected page/focus stable through interrupted gestures and record hardware/OS limitations.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "browser-diagnostics",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/142",
+      "title": "Open native task manager and performance recording",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "artifact",
+        "arc-developer"
+      ],
+      "dependencies": [
+        "command-bar"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Arc feature evidence is macOS-heavy or macOS-only as recorded in the dossier. Windows parity is not assumed; Linux is a downstream design target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "browser-diagnostics/criterion/1",
+          "criterion": "Open Chromium task manager and an explicit start/stop/cancel trace flow from native commands.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "browser-diagnostics/criterion/2",
+          "criterion": "Show the intended process/page scope and protect secret/page content in diagnostics exports.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "browser-diagnostics/criterion/3",
+          "criterion": "Use a synthetic scenario to verify output and cancellation on each supported platform.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "security-surfaces",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/143",
+      "title": "Preserve trustworthy security prompts in compact browser chrome",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "fork",
+        "dia-security"
+      ],
+      "dependencies": [
+        "site-controls",
+        "peek",
+        "split-horizontal"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "security-surfaces/criterion/1",
+          "criterion": "Exercise interstitials, before-unload, capture/permission indicators, external-protocol prompts and extension dialogs.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "security-surfaces/criterion/2",
+          "criterion": "Test active tabs, hidden sidebar, Peek and split panes with hostile synthetic origins and navigation changes.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "security-surfaces/criterion/3",
+          "criterion": "Keep existing Helium ad-blocking/site exceptions discoverable and preserve reload/unsaved-work protections; implement missing integration only.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "layout-inspection",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/65",
+      "title": "Inspect local page spacing with reversible layout tools",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "yab-dev"
+      ],
+      "dependencies": [
+        "developer-mode"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "YAB sources describe macOS/WebKit. Arc/Dia documentation contributes only where explicitly cited. Linux and Windows are independent downstream targets.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "layout-inspection/criterion/1",
+          "criterion": "Grant access to a selected local origin and show which element/rule is being measured or changed.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "layout-inspection/criterion/2",
+          "criterion": "Preview/edit a style, undo/reset it and copy an explicit original/new-value summary with source attribution.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "layout-inspection/criterion/3",
+          "criterion": "Keep edits page-scoped and temporary unless explicitly exported, redact secrets and preserve ordinary Chromium DevTools access.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

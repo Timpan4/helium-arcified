@@ -1,0 +1,8 @@
+{
+  "issueKey": "reference-windows-artifacts",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/31",
+  "primaryCommandId": 40792,
+  "owner": "assigned primary",
+  "scope": "This packet only. Coordinator reconciles common source changes.",
+  "nativeAcceptance": "OPEN"
+}

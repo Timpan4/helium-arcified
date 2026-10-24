@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/views/color_provider_browser_helper.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/color_provider_browser_helper.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:23.745Z",
+  "kind": "file",
+  "bytes": 1850,
+  "sha256": "3d7124965371ab0ff1d5ed4a7873041726719d634440281f6452867e71fe8162",
+  "gitBlob": "9569989a8816fb48bc095bad67c8ae5b44cab0a9",
+  "lines": 48,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

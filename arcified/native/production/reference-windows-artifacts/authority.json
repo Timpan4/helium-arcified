@@ -1,0 +1,85 @@
+{
+  "license": "GPL-3.0-only",
+  "issue": {
+    "key": "reference-windows-artifacts",
+    "title": "Identify official Windows Arc and Dia reference packages",
+    "area": "research",
+    "build": "Acquire supported official Windows packages for the Windows reference scenarios.",
+    "accept": [
+      "Record official acquisition URL, exact version/build, package type, architecture and SHA-256 before inspection.",
+      "Use REA's supported archive/PE/resource routes and state signatures, extraction and runtime limitations separately.",
+      "Do not reuse macOS hashes as Windows evidence or run installers without a supported authorized test environment."
+    ],
+    "blocked": [],
+    "sources": [
+      "artifact",
+      "arc-history",
+      "dia"
+    ],
+    "sourceUrls": [
+      "https://releases.arc.net/release/Arc-1.170.0-89123.dmg",
+      "https://releases.diabrowser.com/release/Dia-latest.dmg",
+      "https://start.arc.net/release-notes",
+      "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+      "https://www.diabrowser.com/changelog"
+    ],
+    "kind": "research",
+    "phase": "Evidence, decisions and gates",
+    "disposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+    "referencePlatforms": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+    "referenceNote": "REA 6.7.0 bundle/resource observations recorded in artifacts.md; no application execution or native-performance measurement.",
+    "openQuestions": "Native integration, failure behavior and applicable platform results must be proven for this slice; unavailable checks stay open.",
+    "readiness": "Proposed work after native/reference prerequisites and explicit decisions in this issue.",
+    "priority": "Before AI",
+    "number": 31,
+    "url": "https://github.com/Timpan4/helium-arcified/issues/31",
+    "primaryCommandId": 40792
+  },
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "coordinatorBranch": "feat/non-ai-research-production",
+  "observedHead": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "capturedAt": "2026-10-23T22:34:44Z",
+  "files": [
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+      "sha256": "cc8ec03443b18a749b486e484a56b86218d8f41653970dea94185f76c9685354",
+      "readWith": "fast_filesystem"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+      "sha256": "daf98f1cf993c1a21686289a88489bf001266d7fff4d85089d30055584c8a7b0",
+      "readWith": "fast_filesystem"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md",
+      "sha256": "244488864d15d093f7f80e1cc40f490a979454e2a8e74db438c7e51283518a1c",
+      "readWith": "fast_filesystem"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md",
+      "sha256": "e5951ba265be3587cb1df8f2ab73ce6768071ac55b8d481240ed57819b39ab56",
+      "readWith": "fast_filesystem"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json",
+      "sha256": "dae2aed7885b1f03f5f96a1285265a1189b8776a6472880c0f12c94de7f7ad02",
+      "readWith": "fast_filesystem"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/research/arc-dia/artifacts.md",
+      "sha256": "733db8ca63d1668e786c1574872e1adf74bcd69addd012e58fe714381eee1470",
+      "readWith": "fast_filesystem"
+    }
+  ],
+  "authorityInterpretation": [
+    "Research only. Existing 51 local foundation slices and synthetic lifecycle tests do not establish native behavior.",
+    "Preserve lifecycle v3 Model, metadata/codec, command targets and authoritative private/download classification.",
+    "Same actual native window across Profiles and same-live-page saved handoff remain native gates. Model::OpenItem is not native completion.",
+    "Root owns lifecycle ownership/lifetime authority and prepared Chromium source/build/test execution. This packet changes none of them.",
+    "Focus-routing-contract is a separate research-area leaf. This artifact-acquisition leaf neither owns nor changes that contract.",
+    "No production UI, command, message, native patch or registered native test is justified by acquisition research. Assigned command 40792 is unused; Library 40701 is unchanged.",
+    "The prepared Chromium 155.0.8059.79 tree was not read or modified; no prepared base/result files apply to this nonimplementation leaf.",
+    "Activity, cleanup, destructive-action and populated migration/source-disposition decisions remain open."
+  ],
+  "nativeAcceptance": "OPEN"
+}

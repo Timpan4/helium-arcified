@@ -1,0 +1,56 @@
+{
+  "issue": {
+    "key": "focus-routing-contract",
+    "title": "Define which page, pane or overlay receives a browser action",
+    "area": "research",
+    "build": "Specify active surface separately from selected workspace item and fixture the routing rules.",
+    "accept": [
+      "Address/reload/find/zoom/security/credential commands target the active page surface; move/keep/archive target the selected workspace object.",
+      "Record focus entry/exit for split, Peek, chrome reveal, modal, fullscreen and close with visible and accessible active-state cues.",
+      "Use synthetic scenario tables and have the owner settle unresolved product behavior; platform presentation may vary while targeting semantics remain consistent."
+    ],
+    "blocked": [
+      "lifecycle-contract"
+    ],
+    "sources": [
+      "arc-splits",
+      "arc-peek",
+      "yab"
+    ],
+    "sourceUrls": [
+      "https://start.arc.net/master-multitasking",
+      "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+      "https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2026-Release-Notes",
+      "https://yetanotherbrowser.com/manual",
+      "https://yetanotherbrowser.com/changelog"
+    ],
+    "kind": "decision",
+    "phase": "Evidence, decisions and gates",
+    "disposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+    "referencePlatforms": "YAB sources describe macOS/WebKit. Arc/Dia documentation contributes only where explicitly cited. Linux and Windows are independent downstream targets.",
+    "referenceNote": "YAB official manual/product documentation, reviewed 2026-10-23. Its inconsistent version labels and vendor size/performance claims do not establish runtime results.",
+    "openQuestions": "The fork owner records the named scope/security/service decision before implementation or external access.",
+    "readiness": "Publish as an owner decision, not an automatically accepted implementation.",
+    "priority": "Before AI",
+    "number": 44,
+    "url": "https://github.com/Timpan4/helium-arcified/issues/44",
+    "primaryCommandId": 40744
+  },
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "rootAuthorityPaths": [
+    "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md",
+    "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md",
+    "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json"
+  ],
+  "sharedContracts": {
+    "ownership": "Each primary owns only its issue packet and feature evidence. Area coordinator resolves common source changes within its worktree; root resolves cross-area integration. Do not create competing workspace models, page registries, codecs or private/download authorities.",
+    "commandIds": {
+      "primary": 40744,
+      "libraryReserved": 40701,
+      "rule": "Each issue has one unique primary native command ID. Prefer pure ActionItems for other new actions or request another coordinated legacy ID. Each legacy command also needs the existing declarative ActionItem mapping."
+    },
+    "existingFoundations": "51 independently reviewed local slices are integrated in baseline; their pure tests do not prove native UX."
+  },
+  "interpretation": "Issue object copied without edits. Other entries are selected authority fields, not a new root contract.",
+  "nativeAcceptance": "OPEN"
+}

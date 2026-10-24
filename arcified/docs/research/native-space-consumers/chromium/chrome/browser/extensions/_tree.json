@@ -1,0 +1,3617 @@
+{
+  "id": "cd31ad8343dc6707078ee25fd3fe9f546f74623c",
+  "entries": [
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "563383fc71d7bc73f0af0fd2130879d0844ba2af",
+      "name": "BUILD.gn"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "71589622bac2b2c65a5d3a20a6e74246497dc123",
+      "name": "DEPS"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e1d704c380f20949b8c56343e0fad90c783aac6e",
+      "name": "DIR_METADATA"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b76b7b78c4e65fdab47e389647783f5570fbf3f1",
+      "name": "OWNERS"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "997e8709e8f1b3af4266db1b6a03cba85b921bf5",
+      "name": "activity_log"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2c7b87006f57bd3bdf718d421e1ca00a561c6f87",
+      "name": "ai_language_model_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "707f1df8237af700a09c0f724e921cc97b9cfb52",
+      "name": "alert_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b1c76f0f32762439e43d4c091ff677300f96ec0f",
+      "name": "all_urls_apitest.cc"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "e0c0739ce44eacb54d2bd2532e3c2cd5c74ff468",
+      "name": "api"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dcb165343ab0c6655204987f5fc54bcc7826ec5d",
+      "name": "api_binding_perf_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5ebfb365995159a60a0e118d85e3ce04963ac02c",
+      "name": "app_background_page_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fb3b655ad57f9471364631e3de239ed15eea170f",
+      "name": "app_process_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e00e7cab1fbad922008c642bdc9e7ededee3052e",
+      "name": "app_tab_helper.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2e680cfd103d2a4a3bae1b581db654fd78c1f6df",
+      "name": "app_tab_helper.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c61ee8dcf792c7ac5d7de327ef1d08d23c644de6",
+      "name": "app_tab_helper_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bc70026997a27118cd322480d9596e1918ee1418",
+      "name": "app_window_overrides_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d8d138deac07dfdccc1dd12347e8cba462d516fb",
+      "name": "app_window_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "aa8a20416d7cbdcb33008b2412a45cd815e54d1f",
+      "name": "autoplay_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2f5f386519262de4773d0572655b3f8fc824287c",
+      "name": "back_forward_cache_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d99baa8b9dcfeeb6375da6864ae50f99b7b5de9e",
+      "name": "background_app_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7e50185ac5c007c2f8586dc3e1f74614ae5632c3",
+      "name": "background_color_provider_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1920d25e47e00ef00fc60645aee73947bd061396",
+      "name": "background_header_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f3ac6d04545498f089de9639afdf1dbe220f5d23",
+      "name": "background_page_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1692ed2edad9935f8dd424b6a0cbf683544012d7",
+      "name": "background_script_executor_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "17f86a8ac93d930bfd879d27eb628b2fd221ce50",
+      "name": "background_scripts_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f3bd475e63d795b5804d586a730d4895284c2802",
+      "name": "background_xhr_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ff38e5241c5ee018c7b5c49d9ea2fcf50061531c",
+      "name": "blocked_action_waiter.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "38e19c9b7aef7eb1ed923a441aca8ab8c695a987",
+      "name": "blocked_action_waiter.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9abd78bdc23165c95b27575047d3373d1cc5563b",
+      "name": "blocklist_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "81f8c20b1588e0b2a5a41db3c6e77863134f191c",
+      "name": "blocklist_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6332f31be284e6a6803ee7230f17460fd624b4cf",
+      "name": "blocklist_states_interaction_unittest.cc"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "fa6da6366e401090396878d9f6e87b5256cf154b",
+      "name": "bookmarks"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b48c0452f31bf4e0456aa27af252a58ec10264f8",
+      "name": "browser_extension_window_controller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "14e18855e2a87c3b3be80d6e417b1f0ccf9e66ea",
+      "name": "browser_extension_window_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c6f2c6e6fe6ce065a17227808170fbec0e1dce66",
+      "name": "browser_window_util.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ceaff87f60fa349c20a47e8359d9d5d4790da801",
+      "name": "browser_window_util.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "aa6f681144d100691a9379eb3bb9a50a9def8344",
+      "name": "browsertest_util.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "39e140165b53ee7b18f07e42a306323d14b04acf",
+      "name": "browsertest_util.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5616f36e0f6c609b89df8bb168dd915eb38108c2",
+      "name": "browsertest_util_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4b687fedb653a92d396d14f7f4b655209b45197b",
+      "name": "browsing_data_test_utils.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0f2f43c8c2dc9d227625f08d16ad7077b58c8fc1",
+      "name": "browsing_data_test_utils.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "159a8f991c0d766542a9baf4f6c17460111fe557",
+      "name": "cache_wasm_extension_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f0ec84549f8e87cadf83fdcca6227d7efd5f172b",
+      "name": "calculator_app_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4df386911070c58e04814c0e0c90fa23b84227eb",
+      "name": "chrome_app_api_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2e09dc212c7300af3ad2bd0f11139e8233e00fb7",
+      "name": "chrome_app_deprecation.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "83741c42d03cfa14f8d89765ae09522552a5f5a6",
+      "name": "chrome_app_deprecation.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9506e6afc6b79e44d44d3ae2aa13ecff8451a0cc",
+      "name": "chrome_app_icon.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "62373ea7660b5365cf194eff500a8e0c75667d46",
+      "name": "chrome_app_icon.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3d5cdd8c44fcd17b3d7a5371213319bee07a1ccc",
+      "name": "chrome_app_icon_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dcdb14b40e9773e6731743874342b6750b7745f2",
+      "name": "chrome_app_icon_loader.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9da1b53c13cc20e47ab4f3a35acba0a499155743",
+      "name": "chrome_app_icon_loader.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "118f937702f3391669db69bda70d1556c0302f5d",
+      "name": "chrome_app_icon_service.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2cb31da3e0cd838155aba1ede922001f3f9ca38d",
+      "name": "chrome_app_icon_service.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "87e9c38fcb8aeb1525300ee8bfd765e8dab60e62",
+      "name": "chrome_app_icon_service_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a1903ba007bca93dbec2fd7830eafd200946b449",
+      "name": "chrome_app_icon_service_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0e61dab93adff058921be206befc4dcd283b76a7",
+      "name": "chrome_app_icon_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e8b1e39b6fa8e6a1d86ee0c96292a364b9da2c4f",
+      "name": "chrome_app_sorting.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "32308d6a511aa0b7e0a7059bd2cd3e23c08b39e5",
+      "name": "chrome_app_sorting.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7c60db8ccbe4316d2c2cc58b00684c3c392e2ba8",
+      "name": "chrome_app_sorting_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0f93ea0ccf25e8125ecb835da1ca62669db66545",
+      "name": "chrome_component_extension_resource_manager.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "37ab81dbb632f02961ff07f4cbd8e34342468f7b",
+      "name": "chrome_component_extension_resource_manager.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cf66f83d77d8bbf64d5cad1bf3ff37eca68d40b9",
+      "name": "chrome_component_extension_resource_manager_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a75ae6df76bcf884d0da9857fc16800c0325311b",
+      "name": "chrome_content_browser_client_extensions_part.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a613db426284c8b9e84882fe662cf1771f8c8c22",
+      "name": "chrome_content_browser_client_extensions_part.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6ac60b2faaffbe6f5a8ed303c81d4aaab1cb5358",
+      "name": "chrome_content_browser_client_extensions_part_bindings.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3a05b1ead8fbe6eb2d6e4cd3babf55dd95e2aefd",
+      "name": "chrome_content_verifier_delegate.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8ee50b01405965ffbbc73ca73efbe36f7e784a4d",
+      "name": "chrome_content_verifier_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9381391e5cbc8f60053521bdbd37cbbc68b981f5",
+      "name": "chrome_content_verifier_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9c368aad687965d053c3f1872632a8f40391e221",
+      "name": "chrome_extension_cookies.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f6720d8ad5db5368dc3269a8fb7e75da4efd6adf",
+      "name": "chrome_extension_cookies.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "13912723c86493ad5439e831f72ca5d191a56fb8",
+      "name": "chrome_extension_cookies_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fdc8f93040c01036cb9846f8ee253260f391e6e9",
+      "name": "chrome_extension_cookies_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "12b02d0966b89fa44f88c9a9a148c513bcccd1db",
+      "name": "chrome_extension_frame_host.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "971d2e85341c94adf39a98293a1995c1e60a9df5",
+      "name": "chrome_extension_frame_host.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9cfacb4358c329d4ea2b37680281b05c70f1899c",
+      "name": "chrome_extension_function_details.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "490ed6b92c90db773cf955fe1a343d8994b085e1",
+      "name": "chrome_extension_function_details.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8c508cd5fc629e8ad589966dd7895b005fb5f385",
+      "name": "chrome_extension_function_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0eaffcfa82689c579fc8861f9eccddf53de1fa12",
+      "name": "chrome_extension_host_delegate.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "544a2f038c26ad121fe076c8f0803c9b62681b91",
+      "name": "chrome_extension_host_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9966211c1b3d4642b2950d898e0dcf883becde72",
+      "name": "chrome_extension_host_delegate_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7ff5fb309529d5a776f0fdb29e07ef1e001f06f4",
+      "name": "chrome_extension_registrar_delegate.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3c4784f0c2b722f8e3f02d35820dbf384e7b3b0a",
+      "name": "chrome_extension_registrar_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c31a741d21e0206ee73860aa4cf7c643125f4c04",
+      "name": "chrome_extension_system.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0373d16166af05160eb7718e9ed9e80dfa08da4d",
+      "name": "chrome_extension_system.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f90ff5001791b2ad67cbb227df149fef130541c7",
+      "name": "chrome_extension_system_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8bb6081455ad4bd714e901c445ff8f0e0123d34a",
+      "name": "chrome_extension_system_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "118b05f11e164f30698398d86c0b0d89edf115ac",
+      "name": "chrome_extension_test.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e523103555faf726ee5b878264789496671b79c7",
+      "name": "chrome_extension_test.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "09db01e6a5cb946868dbf674de6e2fbce11356dd",
+      "name": "chrome_extension_test_notification_observer.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "175dc937845f4bcb8bfa08ed951849b37c2956b5",
+      "name": "chrome_extension_test_notification_observer.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "32198cfb48f8e0a3ad8c15d8da74fb9c31763df0",
+      "name": "chrome_extension_test_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d1981e62bb0fb1f82e060338dffcb21de6f93fda",
+      "name": "chrome_extension_web_contents_observer.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f6a9482268ea574f129b02c42f107481c14427d0",
+      "name": "chrome_extension_web_contents_observer.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "58a8c25ab6204cf43fd767957f9f12b64bf5f3af",
+      "name": "chrome_extension_web_contents_observer_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a251aaaa53378a88f8ff5e60221ed502b633b297",
+      "name": "chrome_extensions_browser_api_provider.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bd2d1debe9a18781c02df95d187dec21e871da83",
+      "name": "chrome_extensions_browser_api_provider.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "18c8da68d3917ac40afcd0c5552d85c0a5f5118c",
+      "name": "chrome_extensions_browser_client.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "144050ac4c34ede283ed6ede06854645add841e2",
+      "name": "chrome_extensions_browser_client.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "baee550229a0eab8d1d15efa1235ccfc31de5158",
+      "name": "chrome_extensions_browser_client_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "51ad3a6222861d98a622897e53832d2aa7caaa8b",
+      "name": "chrome_extensions_browser_client_non_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5f73978f85c5c3faabc55f8ac8afcd28c9dd318d",
+      "name": "chrome_extensions_browser_interface_binders.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "05287b586f2044f614fc06576471c31d301c9a60",
+      "name": "chrome_extensions_browser_interface_binders.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "db09ab2e5a2c0aaee244db009280461c92976e9b",
+      "name": "chrome_kiosk_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1a8672be64d1f0aa5eae74934ea49dfe58065435",
+      "name": "chrome_kiosk_delegate_chromeos.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "da6644a0793d15e22476f860d277c09f61bddf94",
+      "name": "chrome_kiosk_delegate_non_chromeos.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2d14356e7cbaef3daeeb97731e07899dc1c25a09",
+      "name": "chrome_process_manager_delegate.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "eca8c37f4738db447b8429f407647e082ee87508",
+      "name": "chrome_process_manager_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e72fde17796ace6dbd8b4a1b4f3cc2fe50b187ba",
+      "name": "chrome_safe_browsing_delegate.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "84d8b8f59dc6215853f2dc6a689e193c5c3d3cf9",
+      "name": "chrome_safe_browsing_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6214a3845a4f6f4e0b0c9b13b976179380aa1dab",
+      "name": "chrome_test_extension_loader.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2dac35c7a8e2c08135bf445aa7825a9d60a17310",
+      "name": "chrome_test_extension_loader.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e542c7d4f7012c2f73967fde848414be709d048a",
+      "name": "chrome_test_extension_loader_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ae274b717e35cf545448bcaff7589cd119f79256",
+      "name": "chrome_theme_url_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "41e23eca4ac729ad47a4d11140f035281bdbc896",
+      "name": "chrome_url_request_util.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c411b22deb5aceda855d4fea65512aed11b28f46",
+      "name": "chrome_url_request_util.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3afe2cd255dac7cd9bb3d13123e49ffcc7070c57",
+      "name": "chrome_zipfile_installer.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "697a368c7dea9166d5da146978fe81b49324afe8",
+      "name": "chrome_zipfile_installer.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dbde86342eb68a51526201827c6b6f9ef4fd1fb9",
+      "name": "clipboard_extension_apitest_chromeos.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d2d8014a8090361b10a6adcd54b8a9586a1b345b",
+      "name": "clipboard_extension_helper_chromeos.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3334b387812f7faeed1944b1d91ca9478f06a577",
+      "name": "clipboard_extension_helper_chromeos.h"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "f534cd0bc821f27456f8aa189e852b2c217d0110",
+      "name": "commands"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "da15f6f0f28419e32a9051749f08865cdd6ce939",
+      "name": "component_extension_browsertest.cc"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "52b7a44d4542b8c0c133f8d8766a5f56300ae933",
+      "name": "component_extensions_allowlist"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "80927be5adaa7dac216aabc1cb8644e0edd44d9d",
+      "name": "component_loader.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0a47e6ac8a4aa7d82ab46f52e0bd13853ee99bdc",
+      "name": "component_loader.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2d2c332880ffeced368c11b004eb3c96f6ae823d",
+      "name": "component_loader_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5daeb2712bc0f0bbb86c452121b47fa1cd699b1e",
+      "name": "component_loader_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "73ff1a1909dc90073c9563d67139b34717872910",
+      "name": "component_loader_prefs.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d70a17219b04a0ee6087683a3c2f35721c75c4bf",
+      "name": "component_loader_prefs.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "48cbd769b3fdbfa79e4ea9b6ce5fe7eb71715bb6",
+      "name": "component_loader_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4c35b6125903f35a849fb76f93dbf8d3f0615cb9",
+      "name": "content_capabilities_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d1f9c3dd9c9a2bd71f697cf483f4b58168c81e59",
+      "name": "content_script_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "339ca0e31bedfaa5b88d5a57c8e005ef82bc4918",
+      "name": "content_script_matching_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6952b319fd941a704c25364811b62e0b09539569",
+      "name": "content_security_policy_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "27262f652896a6ebc63e815ed6e792d7da9d3a0a",
+      "name": "content_verifier_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dcf65e50012ecb831ca253c9c27bfca94b1da5cc",
+      "name": "content_verifier_hash_fetch_behavior_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f1be3790c8c1cd9f5c52670dd495fa8798d02a02",
+      "name": "content_verifier_test_utils.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d6000445077b4b1c13ea53ae9ba7b25ba86b5124",
+      "name": "content_verifier_test_utils.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3cdc11f653c65d78503317b596a1aef9e9da9536",
+      "name": "context_menu_helpers.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1d64e41ecb3fb2f28be4d36f3067fb9681160fe0",
+      "name": "context_menu_helpers.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fe0bbb043a2664202b914213d29d01e5e9cd35a6",
+      "name": "context_menu_helpers_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b8800790e5e3e09103611bb40cdf71ba33ed4e4e",
+      "name": "context_menu_matcher.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d97f34ade5bad84611a33e9706ac3b28efed4542",
+      "name": "context_menu_matcher.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ed1a29342cd9efd8b3d49147c4c4a3751de09ae2",
+      "name": "context_menu_matcher_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7167f720475dae114914d8cf08bee435f41fc55f",
+      "name": "corrupted_extension_reinstaller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "79e5be2303cb8dc95a59a8cb057405fd2fe7c201",
+      "name": "corrupted_extension_reinstaller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "baa43adaa4fbfb08bdb9641040fc0f968626f73a",
+      "name": "corrupted_extension_reinstaller_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "505163b1cadd7fc8d10d62e0339e9595e03dc570",
+      "name": "corrupted_extension_reinstaller_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "af9ab5a62ccfc32ef59675fdd0e9a668b8f29150",
+      "name": "corrupted_extension_reinstaller_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "aa466c78270f2c3409a08c839dec64eff362da32",
+      "name": "cross_origin_isolation_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "379d2bd713597240e6b63fd301e2f96db3c979db",
+      "name": "cross_origin_xhr_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "118a021767881329b61ce801db9d939772177b8f",
+      "name": "crx_installer_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e9a9cec0ae34eb6e3749ed911a9c77f7ec9d9b0d",
+      "name": "cws_info_service_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e26a6349f2227f60076e06666fdce0d633e52549",
+      "name": "cws_info_service_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "34344b6e8251c74f230e506db3d4690fdc4f88bb",
+      "name": "cws_info_service_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f0a726b8f8368821cac03b674e6dabaf4b156fc8",
+      "name": "data_deleter.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8d3d7225e6e18d0e051942a2090a398bced05c20",
+      "name": "data_deleter.h"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "1fd0697b7eaaff0d520e68025c5168efd44de3e0",
+      "name": "default_extensions"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7cb884e7f2a1dbc40e5407115c5877dbb461dfd8",
+      "name": "delayed_setting_change_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "04b6f7ec3e6e8a48fb74058920fa3f42599f59cb",
+      "name": "desktop_android_extensions_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0fb3b88b61063732ff0101cd480703da14817346",
+      "name": "device_permissions_dialog_controller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "411523429f7c0d914b3fce990703f66dfa1204ad",
+      "name": "device_permissions_dialog_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "60e0306baf8d255b091005f3fbf160dc23074078",
+      "name": "devtools_util.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "483d7cc7733a8b952d80ef0cd19ba2fee7446f82",
+      "name": "devtools_util.h"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "ef0729a11e3a9b8e47ef40fc7f11185a2713ad42",
+      "name": "error_console"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "af724b01e006358f97b30d4750f6fc8289f16629",
+      "name": "event_metrics_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "01e758d3115eba9b18f93d53ae5fc7e21caea00b",
+      "name": "event_router_forwarder.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bb3974c55a7b4283909a5311b30dc49b59f5a256",
+      "name": "event_router_forwarder.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4b00947f20322697de6c9442422226d5413e5a12",
+      "name": "event_router_forwarder_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "99172388753af2d652b52550e6aa004416195cd0",
+      "name": "events_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c34bb38ea96e570261a9c81887e2d02be14532df",
+      "name": "extension_action_dispatcher.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bf5e651a00be2b078373e3bbc3c8e1feba74479b",
+      "name": "extension_action_dispatcher.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "97b65097c8ab89d8a6553c5f804fa058022989ff",
+      "name": "extension_action_icon_factory_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0dcadbfb9888ba79d55846b5758ffc5c56eb9ea4",
+      "name": "extension_action_runner.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a77ff25dedf6abd4963adaba55d51c210e5650d5",
+      "name": "extension_action_runner.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "967bfd6adb0b8f494867ec8d3c3c7450af16f773",
+      "name": "extension_action_runner_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ef5798d91f833cdc46b44a6633e85d2aa61b02d1",
+      "name": "extension_action_runner_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e04448b526a0061c90b00a66cfa79008c41c85f3",
+      "name": "extension_action_storage_manager.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9b65c7a702e599e158fd3d0695c1e2b09f1d60b3",
+      "name": "extension_action_storage_manager.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "79ae3e353ffe9f1551fa48d745bdb6d98d388fe5",
+      "name": "extension_action_test_util.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "04e35c8010602041adf85d31619e70c5b00ade7a",
+      "name": "extension_action_test_util.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "586ce17c2cec48e9467de952a51b4a3c4a8ce0b9",
+      "name": "extension_allowlist_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3edb7ee9c96040a4ebcaa18dd8afdfecbb2d82bf",
+      "name": "extension_allowlist_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b05c7322f5f5f3d7fceb8fb76d4be72f6323261e",
+      "name": "extension_allowlist_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4743bd19dfb52eb11865e04cd8e71324ee4391ed",
+      "name": "extension_api_frame_id_map_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "11961116af7a74f70452c21ebbf6b0a979a02ef0",
+      "name": "extension_api_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6b32948f6f12bc91dd6d84dce7c43116f8ea605f",
+      "name": "extension_api_unittest.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "10b52adec2a32a1a3c9d0eff04aa1d5394b38483",
+      "name": "extension_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5af202e8176a729da0cf0e2b429903ce8f0e3e25",
+      "name": "extension_apitest.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bfd1927e42e839f6a2fd6860c441c8fb71f9005a",
+      "name": "extension_assets_manager_chromeos.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "93f1751a32ee3d0b6ebb1afd7d26df9dbe3a87ec",
+      "name": "extension_assets_manager_chromeos.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a660340bb1958d84de0461483897d49d18032658",
+      "name": "extension_bindings_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "16a9a905b8cd8e4fd07863afe377cb01862ee8b0",
+      "name": "extension_bookmarklet_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8c0df08bd63d29152ed358d7010640f9a22ea19c",
+      "name": "extension_browser_test_util.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b5367b28930f155384daef6d2061555eecd052aa",
+      "name": "extension_browser_test_util.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ab11a7517cac4042de867b991e5dd19344864965",
+      "name": "extension_browser_window_helper.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "809af7245706dee449b1b676449a6e412c6f3d3f",
+      "name": "extension_browser_window_helper.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e27cee591105936c48bbc2768372d90d9754e877",
+      "name": "extension_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "89e2f97ab94eb2aa49d6cab37848fb029d396903",
+      "name": "extension_browsertest.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9ba5f26da28dc0fffcdc5c583014b1e022e4338d",
+      "name": "extension_browsertest_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3c19c785d901bbe6d7a0d617943153112af18461",
+      "name": "extension_browsertest_platform_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "94c8566bd203a9761fb3bb1267940957862095d1",
+      "name": "extension_browsertest_platform_delegate_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "92c13d2ff8db8f921ff5cc45f1266daed7d8f3b8",
+      "name": "extension_browsertest_platform_delegate_non_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d03181d20037642de1dea85eb52083addc5dc95b",
+      "name": "extension_commands_global_registry.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "885b238522ea70865c306ad33af283bf698d634a",
+      "name": "extension_commands_global_registry.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1a776c9bea658350c67141fe6b632f9566028689",
+      "name": "extension_commands_global_registry_interactive_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ec834740aa2e5ad2df5b77e924d03abdfd2b0faa",
+      "name": "extension_commands_global_registry_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1e239298fab827300c4f1645a2d588e48413ddbb",
+      "name": "extension_context_menu_model.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "aa5a679a42837404b61f13cb5bc3ac0f0baec98a",
+      "name": "extension_context_menu_model.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2bf313ab9c464cdee0ee888ad21aa310bf787b47",
+      "name": "extension_context_menu_model_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3707f5b8401ce0720ea609f765189ef0d8261423",
+      "name": "extension_cookies_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "429115218fc2e477a409d32f565c4022044e37b8",
+      "name": "extension_cookies_test_helper.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "59dcb07ecbd082130751a34db54754c7ebbe910a",
+      "name": "extension_cookies_test_helper.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7bffeaad2ba83be16c3ecf8b90b4a06d486e99cd",
+      "name": "extension_crash_recovery_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fe1e90f81e6e50413e968615aa86d09b207ed386",
+      "name": "extension_csp_bypass_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4748b33a7d55c28f1c61418071ee5059c2a17d5c",
+      "name": "extension_disabled_ui.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f3abfa715a98c1541f7ea168d07804537b45984e",
+      "name": "extension_disabled_ui_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0a48544022bc5baaef355bdf51c4b3739370cbf9",
+      "name": "extension_disabled_ui_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "95c83d23de54e2ef77f85d97eda3a9eb70cc84a0",
+      "name": "extension_disabled_ui_desktop.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8bd438678b258ae682c762887a649c1c45b50824",
+      "name": "extension_dom_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2691975ded8afb41db281e2767a4400e113f6802",
+      "name": "extension_dom_clipboard_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5c67fe9c6458eb73796ff1dcb7c14c2c2bda1947",
+      "name": "extension_error_controller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f9e5a4bb958c139596f8d423d0dec3af18bc2db2",
+      "name": "extension_error_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cb0e20a355c9e2d93b22005361cda08fb506e8ee",
+      "name": "extension_error_controller_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d1543d4df37015aaa05c3b9772622fbf6b0d006d",
+      "name": "extension_error_controller_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "76108388f4db791080425c4c32bf37ea1ea942e5",
+      "name": "extension_error_controller_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "40f84f424360c364e03637295b9385b11abccb34",
+      "name": "extension_error_ui.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7077ba4de1e1160d9158d93cc878587e8fd34246",
+      "name": "extension_error_ui_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0b41559f3ec3d69f51b56ca725bb50271e2eba03",
+      "name": "extension_error_ui_android.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "28dd75a78d6c964dde24fc3a6aa4c677036e357f",
+      "name": "extension_error_ui_default_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "40f1907495c451b5dba6d1c536f8e46536785750",
+      "name": "extension_error_ui_desktop.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fb7bba86e0336c0b4c800bc68726f4965e0b08b9",
+      "name": "extension_error_ui_desktop.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "044b2d4e3e7499ec9ac09b5bfa0b49180ae6ee43",
+      "name": "extension_fileapi_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f887ed455fc082160f0ae4b2782a3ce620b7568b",
+      "name": "extension_frame_host_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2a47bc1e1b5dd197bd39334fcbcdbdf6e45ed5c2",
+      "name": "extension_fullscreen_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "42147b313db0e89e8feb7276f77cac2f8867ce2b",
+      "name": "extension_function_registration_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8a168df892f48512ca647148c5d2a77855b00304",
+      "name": "extension_functional_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "aa8521ad1f39a0732de2acea9eb277da87a881b9",
+      "name": "extension_garbage_collector.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "206111b85383101cd04b005b377b4bc8022f8b56",
+      "name": "extension_garbage_collector.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "addb1186ea70a1c4fd3f0177a315625f60b28595",
+      "name": "extension_garbage_collector_chromeos.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "62b3e2bc97eb4b96a02ade1a5be8a05bc2cad7ec",
+      "name": "extension_garbage_collector_chromeos.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "17a61a456bf628bee739f1080b9ade20457a3242",
+      "name": "extension_garbage_collector_chromeos_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e9842e90089cca6199f8b0018a5d05d6daf97c3b",
+      "name": "extension_garbage_collector_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5b275e8a1b00cccf077a96991e347a973a85ccf9",
+      "name": "extension_garbage_collector_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "30ce53dd78c280817b77dee67b7513f484fb19e0",
+      "name": "extension_garbage_collector_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b0d56ae85fd76e619058dd0bcfa29b5e63b64a92",
+      "name": "extension_geolocation_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5d9142eed9e7f63559c2e44a18e364916a4001dc",
+      "name": "extension_get_views_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4da21540c60d3c2c3896afcd5ad83d7fe0480b05",
+      "name": "extension_icon_source_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b089fefce844f6b47fe97d225cfbcd57629a7da4",
+      "name": "extension_incognito_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d458d3cd1a89a659747d1ff734a57b5746230287",
+      "name": "extension_inspection_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "586e85ed28f13833ed56722486e65b4b1583ca66",
+      "name": "extension_install_error_menu_item_id_provider.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6b92cde59b543bd81a291b41f3cb90732384edcd",
+      "name": "extension_install_error_menu_item_id_provider.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b07aaf556e8dcfc575ccf6fd6a0f2a8cbcdaed99",
+      "name": "extension_install_prompt.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7edcac89efe1e347d695d529b24b94844d475b2a",
+      "name": "extension_install_prompt.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7fc6eed6a9fa12eb9a4352eddc3f0fdac297c839",
+      "name": "extension_install_prompt_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "eff16a31d7f683c7bc7e65dc6a01da016f06b157",
+      "name": "extension_install_prompt_show_params.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a41ac2beba57047bdcc8fe6d433ecf895ca31634",
+      "name": "extension_install_prompt_show_params.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "55800a62a49aed438169ae71fb54e45cd3cc5edd",
+      "name": "extension_install_prompt_show_params_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "620f08c6f31f2ad507582b5c0c262b3b1b8a5e6d",
+      "name": "extension_install_prompt_test_helper.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c7fe473158ca9d6b63cf62dbf436e2a58ee523dd",
+      "name": "extension_install_prompt_test_helper.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b4155d3fc8c6cb9c91f430d1b5f3f01abf1fc2eb",
+      "name": "extension_install_prompt_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "eb4b4d8816102795b9e6e00cc7e40786f5477781",
+      "name": "extension_install_ui_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ab4e9861c72da66d4715962210bef1d1682f7d22",
+      "name": "extension_keybinding_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e5b7a1e7c2f4a819cafa4a7147f12d31e309f070",
+      "name": "extension_keybinding_interactive_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "798cdfdbec657ecd23b36139286999d76b1b90d4",
+      "name": "extension_keybinding_registry.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "70a84b7a4d20a5803a7b534898383ac05f67a2fa",
+      "name": "extension_keybinding_registry.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d77b7bc39307ff1e23fc445a10bdbad213bb68b0",
+      "name": "extension_l10n_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a54a648fa7a5c5781eb7e7c288afae44476f20e3",
+      "name": "extension_loading_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b3eec417cffd098be797515c47ef09a415f91a87",
+      "name": "extension_management.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "096375cc675a490735bd71a093a2a67662dfd7f4",
+      "name": "extension_management.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "38387b7019de89215eddb37d215cf4a2a9bdead1",
+      "name": "extension_management_constants.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "04e64f997a73330c09cdd30c4ac66d9fd6e1e8c4",
+      "name": "extension_management_constants.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c5d39eeddc0eede173e648866e5629e7672c3ebb",
+      "name": "extension_management_internal.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bcc39247287f21655e8db6a95378bee4b1ffbe9b",
+      "name": "extension_management_internal.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "91b6feb6cbb11d5c067b0d503646b5bde0113e1c",
+      "name": "extension_management_internal_fuzzer.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "825aee6ff9ccf2f8962bbdf121d3516c4c007bb2",
+      "name": "extension_management_test_util.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "17b27e84a6671e31c45bc239292684fe5b81ac0b",
+      "name": "extension_management_test_util.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c3cb5b65abd5cb09b654c5921d99f14f166d9a78",
+      "name": "extension_management_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fd7959c959074b2a95b9d6d43b34ef168cac6c2d",
+      "name": "extension_menu_icon_loader.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1c4781b22483720f6ba1cdc01b37862c90fe779b",
+      "name": "extension_menu_icon_loader.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3b399f6fe46ea27f26847cb7a84ee3be482effaa",
+      "name": "extension_menu_model_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7846e917404507659395b2ea28d8ac145e66626b",
+      "name": "extension_menu_model_android.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fc360b643ff689d0391cba64363d9aabb614cd3a",
+      "name": "extension_migrator.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e86b4c2c44f2aff222f81728e5d2b449d4a27a4a",
+      "name": "extension_migrator.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5a50217d594f1d2e84686e9e118593a2cc1859a3",
+      "name": "extension_migrator_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "082f62aa47fe40f129cd98b7b127add85767f58a",
+      "name": "extension_modules_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ac186393731d002806ad0a145413152ad9c5b7f2",
+      "name": "extension_navigation_throttle_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8b52fb1b25631e77ad4d4eef69e4ee49ef29d106",
+      "name": "extension_override_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "76027f65bf0557520830342f0237e9dc3c700577",
+      "name": "extension_prefs_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a43c3208709c1a2852977901ff950ba8355b338d",
+      "name": "extension_prefs_unittest.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1f7779a23249d863fa3d0d151bf6d47df9c6eda8",
+      "name": "extension_protocols_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2aa680d39a1f6311e8c74bf58c6eb0980e2ba5bb",
+      "name": "extension_resource_request_policy_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5e61e9e45ccf6078b5f5d2acf725077b7bc6d798",
+      "name": "extension_safety_check_utils.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e6ef811e317a2065e764e5c6c286c5d75c17e9b1",
+      "name": "extension_safety_check_utils.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c8f417b4884f4edef33e817bf14803987f379868",
+      "name": "extension_safety_check_utils_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c5b89795d1a1e40377fdc1d8ed421b3078f1fd37",
+      "name": "extension_script_tracker_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7c89a818e99937c00c318d4cafe699e39625fef4",
+      "name": "extension_secure_context_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e1637ebd52198bd5307a750e6c61fbd2bf2bf379",
+      "name": "extension_security_exploit_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cd4868e7557b54afa3dab3dabeba900b6ca8f16c",
+      "name": "extension_service.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7a9bd6b8dd7ac837891cad160ea00780b26907fb",
+      "name": "extension_service.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bb2c381f36af089dd2126548a7219e982b4817b5",
+      "name": "extension_service_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ee0c293fdaaa2c8961a96fff227f6a020286e757",
+      "name": "extension_service_test_base.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "55a50a902cff03aa6be1b766f0e8f4db8c7846e3",
+      "name": "extension_service_test_base.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d0ddf169edf4c99cc97432d5f085d770f61a91ea",
+      "name": "extension_service_test_with_install.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "10a966335a7da7ace6b7588b93956770facf25f9",
+      "name": "extension_service_test_with_install.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "53f2e74ea68670674490db6614743c47fd9d323a",
+      "name": "extension_service_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "336ee813bbc8cf66ef14bd0fb5fbb7087ed430e5",
+      "name": "extension_service_user_test_base.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c11d3933eee355a47013b44a3d9d94edc636251c",
+      "name": "extension_service_user_test_base.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4a9fc8e7d90d5a91be59a42edb5144024d60e1d0",
+      "name": "extension_shared_array_buffer_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a8a0215ea1ac1be85f57d3719655be5385acd4f3",
+      "name": "extension_special_storage_policy.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3b91b12ac0f93b394bfcaf861a5c795e14d6a990",
+      "name": "extension_special_storage_policy.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ed6f57969d98d1ffecc7f07e705c335043e24093",
+      "name": "extension_special_storage_policy_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0bbd6d2353212b175a9c3cbe404b9a034019c0da",
+      "name": "extension_startup_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "71c4c9d19078df3bef1b032e3c24e22da3fbe1e3",
+      "name": "extension_tab_util.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "386c18a618a128684526ecac08b127c35cfcf43a",
+      "name": "extension_tab_util.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "25328f99e6cc2c68ff488fca3cf63cd910ec99ed",
+      "name": "extension_tab_util_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2213bfc30587af69c0b839c07177573b807741e2",
+      "name": "extension_tab_util_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "90c8ab9abb2c49d6d66c7033d722acfe3578a933",
+      "name": "extension_telemetry_service_verdict_handler.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e2aae07574ea0fe96d55bcd6aa1240f44bb4a392",
+      "name": "extension_telemetry_service_verdict_handler.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e4ba39bfc91e1d425b8668f7411a945d79f0c16d",
+      "name": "extension_telemetry_service_verdict_handler_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f30ce98fd5e013511294d036875b09a720ef0676",
+      "name": "extension_ui_util.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5e1789d7dac5b5ed5348bfde5e0e2cda02e2fa04",
+      "name": "extension_ui_util.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d9bdb05467cf5ffea79b57d74b7e5aaca92ee4bf",
+      "name": "extension_ui_util_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "72148d4bc29c33a84013e706f05705a71ef686ec",
+      "name": "extension_uninstall_dialog.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7d4532e1d9fe888a3c54ef008a8d182c279a75b5",
+      "name": "extension_uninstall_dialog.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1486e34b0c5d2b7f0699f0ffb7574a48bdc31304",
+      "name": "extension_uninstall_dialog_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "13884b1d50a57ed79e05f86e1c74c4c05452612c",
+      "name": "extension_unload_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1eb62bae6edc0903e6896b2af9635ce13f855aa1",
+      "name": "extension_untrusted_webui_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fbc45907851be3be0f6d94511d4f5954c64f01f7",
+      "name": "extension_url_loader_throttle_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fe6cd3abf0cd3582255f1f315782cc928790948e",
+      "name": "extension_url_overrides.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a0fd1aed58cdd3c58b2963d75a015f5b55eabf7a",
+      "name": "extension_url_overrides.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7762e0c775c22d8d21a160a744c0a95e8ef7bab8",
+      "name": "extension_url_overrides_registrar.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a96c74089af379cc93b4944d15a3c41d92772594",
+      "name": "extension_url_overrides_registrar.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2f9c15d922211519dadb645fdad32f5bca2f2e9f",
+      "name": "extension_url_overrides_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "af693e1b10f0833dbbb8798d21aeae2972ab107b",
+      "name": "extension_url_rewrite_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "57cc003fd059c6ec2daee46cf443351dd96f090a",
+      "name": "extension_user_activation_service_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "aab9054989f8e8d3dc8c2e5cff47b8bbaf1d6e3d",
+      "name": "extension_user_script_loader_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6fad403ccf6e143f680bce7328bc86d8cacd58f1",
+      "name": "extension_user_script_loader_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d9010f12386ea79398d7add153d58c8162bb108f",
+      "name": "extension_util.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ee8c578adea2c9be4dc0bad6bc3b528c7c0dd033",
+      "name": "extension_util.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b2d8af8f5666a03e3a43cf884eefdb8d89371348",
+      "name": "extension_util_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a7ef2cd80bd4797fedfa64fe3208cf56de3cc3ae",
+      "name": "extension_view.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "432a52132703595156b5f245aadd468f61620ac7",
+      "name": "extension_view_host.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e21d9c7ceef7cdb88f041440d9d52a2ce7618537",
+      "name": "extension_view_host.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e8e5e53dece0021b75f894f7cd2d0e188fef309d",
+      "name": "extension_view_host_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a3249ac7778474cd0eeb6488121c0e4be6841e24",
+      "name": "extension_view_host_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9a4ba3283b69abe28b36ca0f270f73bcb2fd00f5",
+      "name": "extension_view_host_factory_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "561e41587b508667c5854d1eb9911e8509908f94",
+      "name": "extension_view_host_web_modal_handler.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "652b85f8a5f780a7a9d75bfe43e401a3ae71a573",
+      "name": "extension_view_host_web_modal_handler.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5de3fb0050fc9963c7b0377b6a8a4b04d9f10f7c",
+      "name": "extension_web_storage_durability_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c1321d7bddd21fcc7c3829b371ed7a3cb6775344",
+      "name": "extension_websocket_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ab5c7ab225af3d49be32e0516d3b47adf7fa864e",
+      "name": "extension_webui_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c0059e3e02cf745a107b99a8f33eae81aa0bad01",
+      "name": "extension_with_management_policy_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "70e5d436b65f98ce8787a6a2644d385daccdf295",
+      "name": "extension_with_management_policy_apitest.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "61da3d99df33f47abef61e38ccd79d0dad9eca6d",
+      "name": "extensions_disabled_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e38150c6a098f46f5f64e8cb163f822b349a4362",
+      "name": "external_component_loader.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "81c26918756ba67d0c3a0aa327c425460367f768",
+      "name": "external_component_loader.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "314185592cac3432ba52e9956e55e1edda4e02ce",
+      "name": "external_extension_install_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c5c9a0b1c6bb6006a5a965eb42758a223971c233",
+      "name": "external_install_error.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "438a7080fb8715bf1ab9a1101003a4dd5ea6a294",
+      "name": "external_install_error_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9226be0b3de0beb73a9404361b7ad1c6919bb50d",
+      "name": "external_install_error_android.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f598d5798a46fe332fa37c4370bf46b6431ef545",
+      "name": "external_install_error_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5ca0841aea486bd735d8334f7fe8b3df0624e416",
+      "name": "external_install_error_desktop.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2b290bfc1bbe2e9b7a3836d0747a722442e2df43",
+      "name": "external_install_error_desktop.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d03576cfabe20157f34ece264e0eca5190090c99",
+      "name": "external_install_manager.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e615b4ed1c5b699c7ad00af81600de5ba940c9d8",
+      "name": "external_install_manager.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "259fb520a1cd7bba20b29052619c86a97def6139",
+      "name": "external_install_manager_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2e967937831e381b1161f5cb2b913ba6c0debf69",
+      "name": "external_install_manager_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "80f0b68ac019c09ac31078c79ad5a77faf7ca121",
+      "name": "external_loader.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "80e2ef7356c0da7c6843003f3f61cb14bc2a305c",
+      "name": "external_loader.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5e2e10600f588ab6bd19babaf6d73ba44b787c1e",
+      "name": "external_policy_loader.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a42bb71ff2e437961e3126f188a0eacced3c0cd4",
+      "name": "external_policy_loader.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f0f45a3e94dd20a96f3237096dcbf793ffd5be73",
+      "name": "external_policy_loader_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ea4bcf8481415676d2a02de78a71b8f4d8fed656",
+      "name": "external_pref_loader.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ce0e47ebc29a892c190793dc36d860100e03629c",
+      "name": "external_pref_loader.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "def1f8e52f05d72beb1708b8891e031ebc5eed98",
+      "name": "external_pref_loader_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1cf32e1b816acb5316337a7303fd905929d3335b",
+      "name": "external_provider_impl.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3959d466ab6d3fc30f22f4d4fab51fbf06b4c943",
+      "name": "external_provider_impl.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2c3c94503fcf47fe336d14fa5c1df02d13459bf8",
+      "name": "external_provider_impl_chromeos_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "79df435d70f3f43b3b5adf6a7098ea6173fed1a8",
+      "name": "external_provider_impl_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "80ac525552c03f173ae13812bce4dc57222dec53",
+      "name": "external_provider_manager.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "89901d53574f97e48ce004b5147ac179eec319cf",
+      "name": "external_provider_manager.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9818b14538852807e615eec8ae8b123a72bbc723",
+      "name": "external_provider_manager_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b7e36c2913ccb8f7d6d887531be03c001e241b42",
+      "name": "external_provider_manager_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "134e3e86d03fc164796ffe26dd56e31a6fcdc835",
+      "name": "external_registry_loader_win.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "162198a4930f039859ab1f04c79ff4b13eb10e71",
+      "name": "external_registry_loader_win.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e6f9234fbdef2ebda8b740c2c85e873a00f9594e",
+      "name": "external_registry_loader_win_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "450dd6ef326fc0d1b56559c674515396af4c9e4d",
+      "name": "external_testing_loader.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "67e3b01a727f8f2794745ee17eef85b929114260",
+      "name": "external_testing_loader.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "222d98ec22f347c7525c5fcef745c0955be58332",
+      "name": "fake_crx_installer.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "afea9fea82c6830b22ceb6995802c8fd1d31cd94",
+      "name": "fake_crx_installer.h"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "6314821a4ecce9ab2431a7bb06e020df0345812f",
+      "name": "favicon"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "324f953d504d963be6c15172f2d3974e06260533",
+      "name": "feature_provider_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dbd31b01fd32d28f6843a50e7b135a19d586f07a",
+      "name": "fetch_apitest.cc"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "e968f807e61ec78dfd6628fab8072a44fa899bd6",
+      "name": "file_handlers"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d1bc24d630807a6ffbab660af903be8d80dd1627",
+      "name": "file_iframe_apitest.cc"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "32fac432cd6fa74f6541c60b24b478650f52dea2",
+      "name": "forced_extensions"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3f53af3971ffe6b9539105c4d615bbca74a9d1d9",
+      "name": "glic_util.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c9126bbb5233cf1549997cbe209e05944af1d285",
+      "name": "glic_util.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "21d9f5dba8a3eaed029d5fa11aa3a637a389dc21",
+      "name": "google_docs_offline_ukm_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5866d212a23ac04d36edc7ded9789865f7ac74b5",
+      "name": "gpu_browsertest.cc"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "e68cb4d74810a247b3368521838017881100d0ba",
+      "name": "guest_view"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "22532acb1d0b12979453d01b76b7d8faeb15e498",
+      "name": "initial_external_extension_loader.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "01a6f8c699d1534bd365819a2c6cd0f80b2b78c2",
+      "name": "initial_external_extension_loader.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "65b4a3e85ec0e88eafeddf011dc658ddb522386e",
+      "name": "initial_external_extension_loader_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a9fd3fc5571c92657a379d1812f8734ff683e3cd",
+      "name": "initial_external_extension_loader_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7f83e21a1f3a2db4ec02d7bff1541798e8e3e2a8",
+      "name": "install_tracker_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "82d6bd257d3ed5fa513b3f828e3aaad90638df16",
+      "name": "install_tracker_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dc5fabadce0ac15ff5c048b43172ebab9c81781e",
+      "name": "install_verifier_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "93cff9f03655cae903833a9772d891102c2a8255",
+      "name": "install_verifier_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "834b1b8d366c87acb82400dbdbe73c1c4f9122fd",
+      "name": "install_verifier_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c91163c7b045e19e9938dfff2f86c697a1865690",
+      "name": "installed_loader.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "59e2f7a2b13643e3189bf56bec54cd669d1faf4c",
+      "name": "installed_loader.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "540aa45c88cfce095c9826a8f177ac280e136d3e",
+      "name": "installed_loader_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7d629fca6fb2a2d6d9d57f84f901b3268209c3b7",
+      "name": "isolated_world_csp_browsertest.cc"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "0e87d247ec3ca0fdc5d4438a4a9c765e78e4e6b9",
+      "name": "keyed_services"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1c2d6a9d302213b2bd4f2d7e3320d77ed428ce24",
+      "name": "launch_util.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c758010819ce4e9e0f63fcd20e95bfb17c670525",
+      "name": "launch_util.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "37f120e4b4b5ef9be80f8e8bdd66a73bcf9af340",
+      "name": "lazy_background_page_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ed8598efb6a9b7a4004b87d44f4017f76fc82b43",
+      "name": "load_error_waiter.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3514aea1068936f36d099aa68b93f4752e2217e6",
+      "name": "load_error_waiter.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d6c54b34eeb2818914b13d297364b6d3adf7068f",
+      "name": "loading_predictor_extension_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e08e1ed0800653d201d182d028aa6cba5b9939d3",
+      "name": "locked_fullscreen_window_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "49f9282d60c5daa9ae3add2c6f5426f7dc15c226",
+      "name": "low_trust_policy_install_block_manager.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d8576ccac9ce8a71029a3b019ae69c6ced400a38",
+      "name": "low_trust_policy_install_block_manager.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cf3f6a1f8b56a500b070128f2b4d55d7ae58d24b",
+      "name": "low_trust_policy_install_block_manager_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0134249d74eb0d6815dc30b050b683594cc1b784",
+      "name": "managed_toolbar_pin_mode.h"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "155c5b946e6eb4b488b78b4e8a29694e9357914f",
+      "name": "management"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "883512b199e5490c91c58729b290c7143c6cadf3",
+      "name": "manifest_v2_handler_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e2db5d10dc7668ad829c671677b830b37d1d4e5d",
+      "name": "manifest_v2_handler_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2d2f3ab0642dececdac12ad8707d470d6020dc01",
+      "name": "manifest_v2_util_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a31c870f5ec6f1fb63fc7c52b0a76144397b5a89",
+      "name": "manifest_v3_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e16ea92ccf30a445cbe77ee28540da7e6eb01031",
+      "name": "menu_icon_loader.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "649e6650ceb860a0ec64b14e29da4561ac93adcb",
+      "name": "menu_manager.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "db3cb8d02622d905a40f1dad1559589c79766528",
+      "name": "menu_manager.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fd9859a1f10900df31e6ea513c0af9c66eefd7c5",
+      "name": "menu_manager_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "348f1fec5b6165ac3148ac5c5c3d470795218d8d",
+      "name": "menu_manager_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5a83442d4cb1879526653164a2d18dbfa8009ef7",
+      "name": "menu_manager_test_observer.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "47f287c3f6d3c42764ff7907892b140735c16f6b",
+      "name": "menu_manager_test_observer.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "febefa2449a2668a8fc08e4818d6187c6cd30d1f",
+      "name": "menu_manager_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a7ac2a7c8f8a7ec662fcae82f2dd6b626ff4f52b",
+      "name": "mixin_based_extension_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f0facd8801779be7545913b6a9fb61255b530db0",
+      "name": "mixin_based_extension_apitest.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5463ccd0dd01cf87fd0143283819c15eaed02ba8",
+      "name": "mock_crx_installer.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "701528262b99d3193173dfce88cee398fa585536",
+      "name": "mock_crx_installer.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4240932140536aa4362e3225c7c5e5c1d45ef16b",
+      "name": "mock_extension_special_storage_policy.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "31bf8cf145c96307caa092b570cca5fa688aa744",
+      "name": "mock_extension_special_storage_policy.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fd3212bdc54b5e1ac2574d63f929a92dbbd6196d",
+      "name": "mock_window_controller_list_observer.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b1fb0b77da512d261fdba5ced3598c36f70f29b9",
+      "name": "mock_window_controller_list_observer.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "872e4cd1f05d1af90ad55df2c8c3ee2757ee3e7b",
+      "name": "mutation_observers_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ab234e7aa65e7818b7619881a5ad176bc5494c7d",
+      "name": "native_bindings_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "37547328faf729f1e57a032f151b1c2fe01f3566",
+      "name": "navigation_extension_enabler.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "100fe4600d0863fe544f439e780299ea990d1453",
+      "name": "navigation_extension_enabler.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "662eac6d34990197ed15f265fa70001412e9fd25",
+      "name": "navigation_extension_enabler_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a5870114d9037915a2e6197083ffd9e6d3ecb46f",
+      "name": "offscreen_document_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1322c2778c32c9b09d01fea7d34688f9aed06a71",
+      "name": "omaha_attributes_handler.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2305d926014c143137c0edffb4a2fd4f47ed3dbb",
+      "name": "omaha_attributes_handler.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0f68af4df6d3db064f79c16e729690c2aab30911",
+      "name": "omaha_attributes_handler_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f7437a9919d9b0c6ae0f78dac49d6f3ac321d9a5",
+      "name": "omnibox_focus_interactive_uitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9ee4de85f55dd5fa826dfb45fbdf95733f39e7c2",
+      "name": "open_tab_helper.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0406dca60e4fa664ffa1f0d01e90fb3537914d51",
+      "name": "open_tab_helper.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "44faf2de7a4fa604bebc91b52b63ec31d51ab98e",
+      "name": "options_page_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "16ab79fc643dbffedb5aa4fa4fb5c770f0261905",
+      "name": "orb_and_cors_extension_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e14bf40bd20637ce0094d2a3e7619514a64648e0",
+      "name": "pack_extension_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d2df1d699c613ffe0f2215ac6e3361c3a8e2e0a1",
+      "name": "pack_extension_job.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "db62aa1d0181957a43bf974991e3be6b140643bd",
+      "name": "pack_extension_job.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cfd5b5e5b2b7afb55f61ca3832d4231855a1718d",
+      "name": "pack_extension_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b5479cf065e1d7164af26527046a945140d9ae51",
+      "name": "permission_message_combinations_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5cdf1a73a1bcbc47a09bf720fad2a5ddb0318019",
+      "name": "permission_messages_unittest.cc"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "7b8568345a9e8233610f0dbd6f60b44db3ea63fc",
+      "name": "permissions"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d8ed8ec2072fee04af91124d0ee2389626f94f86",
+      "name": "permissions_based_management_policy_provider.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b6217cff664f4a88b8b74b89bdaded923ff6c1bb",
+      "name": "permissions_based_management_policy_provider.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "00d83de7f7a49b4f6f06a8055fcfb5cebe667aab",
+      "name": "permissions_based_management_policy_provider_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "25ec9cd653153e192080f2b4f3da5d16414a828b",
+      "name": "permissions_url_constants.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6721c9469530d4a2b7325a79cbb36150a34a54ce",
+      "name": "permissions_url_constants.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "70dd994b6144fc43a1e9a53f811cf8a73f77c807",
+      "name": "plugin_manager.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ab3cd2432d3beb4cb496950a4e16ae3914e95489",
+      "name": "plugin_manager.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ac047776ee1dc9c173a4463163ccc3f2e100e4db",
+      "name": "policy_dse_ntp_override_metrics_reporter.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c6c145e2ae37bbf892c6f43cdb6ee74983e93ea3",
+      "name": "policy_dse_ntp_override_metrics_reporter.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7014086ea559a3575dc64dc0e4d2bde16f4962c2",
+      "name": "policy_dse_ntp_override_metrics_reporter_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3510302288a1c74fb329d9afae58e2852c741205",
+      "name": "policy_handlers.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e1d8923ebb526da104088157176f4cdf33450a86",
+      "name": "policy_handlers.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "79ece111296c4936a73aab9d4ddfb98a06a7c54a",
+      "name": "policy_handlers_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "12c3f32b3e9397c6b64cb094cf82889680a25174",
+      "name": "policy_test_utils.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4c7823fd70f1d4e1829ef6d1b7214e0d5c33bb0c",
+      "name": "policy_test_utils.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "be00d72d2a77f714cedb589e8fb2bffea9582995",
+      "name": "pref_mapping.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5b74589b4bbc2ab5106aaf7222e985aac1034702",
+      "name": "pref_mapping.h"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "6228c54907709309edd2deb2de89711d797ce2ec",
+      "name": "preference"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0d681e3a260a1f944f26089b5379636d847c221f",
+      "name": "preinstalled_extensions.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "399a7f4b8dbb10128a1eb0926d38afc5eeceb81d",
+      "name": "preinstalled_extensions.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "14d5b2cc890433f94b5d948143c2f48df8d99491",
+      "name": "preinstalled_extensions_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dc1de9bf692ccf5671ecf86141bb5194851a4b67",
+      "name": "process_management_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "259aaa8b5cd86bc5592498dcf5be617bdfc4c262",
+      "name": "process_manager_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "745c894682bf4481570412c3b4076b18bc9e746d",
+      "name": "process_map_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cd8aeabb5561cc4692f3e9d3e702d40852a32d8b",
+      "name": "process_util_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9c54b89e20411b03190a0e3a6af7937b51830ea1",
+      "name": "profile_util.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "15dfd2b69be94e158c6a2be5f6a981e9f5aefebb",
+      "name": "profile_util.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "23c65c847f8b9d249bf8f289a40c743e84586ce6",
+      "name": "profile_util_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f0ae5c7ec54cfc15b745e4d08f491889393c637f",
+      "name": "protocol_handler_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d1da58494e85b6128ea5869cc6ce47f01f502084",
+      "name": "renderer_initialization_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "4b0306d94b1a53b5d28d3dd205159be74d4ed071",
+      "name": "renderer_startup_helper_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c46be73a21018e99639ea4cd5c3bc886c73f630a",
+      "name": "safe_browsing_verdict_handler.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "38eb2b13ef68efc2bec4f96b91a8d9d9c2ecd82e",
+      "name": "safe_browsing_verdict_handler.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "23a41438967f0578fffb94dfa04deab7c8d14ba6",
+      "name": "safe_browsing_verdict_handler_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "731679e4bf9439162177f6e6d7fb93ab297f66df",
+      "name": "sandboxed_pages_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "529a19ebde887d29b48a25d13a0c86ad24382467",
+      "name": "scoped_test_mv2_enabler.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7d2f5cbcf5f104f6f90e6610c41091248ba36ee2",
+      "name": "scoped_test_mv2_enabler.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "813f932b997465b3361c6d1601392e5d47213155",
+      "name": "scoped_test_mv2_enabler_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "5ae8d447b5e12709c6a9402837859848c7a8f337",
+      "name": "script_executor_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "376f431287114f2ff19778874deab200a5b2e22d",
+      "name": "script_injection_tracker_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f088f93a41595dd198b9378436a3ccff1217227e",
+      "name": "service_worker_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "68dd47455531c62d9222bb4e157df7f8a012bdac",
+      "name": "service_worker_apitest.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e26dcd16a6161747188d6095775041688ded66ab",
+      "name": "service_worker_event_dispatching_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cedd4a7c9c5bbaabc796a8a3d2bcf8b7ffd1eff3",
+      "name": "service_worker_installation_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8ac184fe2e9d82f1ba6be60c74867e0267c4fa62",
+      "name": "service_worker_lifetime_keepalive_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "21f0475fffec65f734ca9b1fef7b83cee5154f5e",
+      "name": "service_worker_registration_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e8841fe25986a097df0ad4f053b48523f90409af",
+      "name": "service_worker_tracking_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e6e4ece3e4fb0dc5f99a13477152dd61c5312726",
+      "name": "settings_api_helpers.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "75c5cd67715aa548305a83fc55a5c029a1974d2e",
+      "name": "settings_api_helpers.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6b353ed58febfbc5e712343e5a67f78d772ba8d9",
+      "name": "shared_module_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "489496d86987c21df9be90d92caa040e9af9b2c7",
+      "name": "shared_module_service_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a38aa4e25cf4d0398e58e0725fd47a499f4cf073",
+      "name": "shared_module_service_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a1b5e792132683a799475a3409604fde1d922ab7",
+      "name": "shared_module_service_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a472fa5da77eb065ed64e48d18a3a771e74552ab",
+      "name": "shared_worker_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "bd39ec44130ef63a3a66e4248a4647ddfe8c5211",
+      "name": "side_panel_helper.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "cbea50cf7f47c2505950d6a86cedfd3a940cd5a6",
+      "name": "side_panel_helper.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "78087d6c78c2587e1d6008874909058019c5853d",
+      "name": "side_panel_manifest_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e7f2b1c6912344bc6921f62dcb0da704bab0792e",
+      "name": "signin_test_util.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2bd719427e245632f2a45a6c23122b68bda23492",
+      "name": "signin_test_util.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "9051353454d30a6d7411b69ce30e503b560a90c1",
+      "name": "standard_management_policy_provider.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "243dd1a492546191088d8065ae0faabaf8c880b5",
+      "name": "standard_management_policy_provider.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a716299efc10af1e198da0b0f383a6d58ee0ed61",
+      "name": "standard_management_policy_provider_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "18315a2af7d968f669261007e3bfa28823f4993d",
+      "name": "startup_helper.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c84857d45930481c6df657336898d0e725463982",
+      "name": "startup_helper.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "195b2057ac94c6c8934ab9582e3ea6dfe3b19871",
+      "name": "startup_helper_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dd4478b5c39360edb1cf7c1f9aecbd520c397397",
+      "name": "stubs_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6f007f8be02805ed68f1752827d05bf4a39d9b16",
+      "name": "subscribe_page_action_browsertest.cc"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "19819acb5d7d22e2537dffaecf8d554d5d63cb43",
+      "name": "sync"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "42883a04ea5ed1b33173ac9cdf7a8486f9bcfa8e",
+      "name": "system_cpu_apitest.cc"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "ae9b9b22b570db652e6365cc965ca2962cddae9d",
+      "name": "system_display"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "432050962788623284400f597cfc67b74c86d794",
+      "name": "system_memory_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "53aac17912093ccc8264773fb8c4133b47ebc3b2",
+      "name": "tab_helper.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2ecce8e1b7a94196ae31c5dac0dc14fd405af3d3",
+      "name": "tab_helper.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1f0e8a50de55d090fec607c94f4be3b6e19a64fd",
+      "name": "tab_helper_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "dbde8ab62e7db7e5b949e396f62fcd4989526bf4",
+      "name": "test_extension_action_dispatcher_observer.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "1b837b311da1ecfdf9b22aef59e69791aa09f092",
+      "name": "test_extension_action_dispatcher_observer.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c8c9021c80f2c3cf1516f9fa6030ca3b4a8cfc8e",
+      "name": "test_extension_environment.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6d52b247f2d11527418c9807e19fb3d9ed1103f0",
+      "name": "test_extension_environment.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e03e95fe6a6a69f829dc4bac506ffd6cf3026fbb",
+      "name": "test_extension_menu_icon_loader.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "d4e374f9ef9fcdbdcb5a9fa887fef58e0ba301c9",
+      "name": "test_extension_menu_icon_loader.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "95119c069b2eb21162a5601e33b8188c5e728edd",
+      "name": "test_extension_menu_model_android.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3a7f800c3f6719d1f267ab6e346fa22d65392f5e",
+      "name": "test_extension_menu_model_android.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "28c17a8263fbdbd4227da14dd8b7fa314db33e22",
+      "name": "test_extension_service.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e55e3f9e761893bedff6d39a052a42116766dda2",
+      "name": "test_extension_service.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "442a3948e738578611ea728e42a307bf5891c0d9",
+      "name": "test_extension_system.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ccfa1698d5cc5ae61d4ba448854d465c5e80ec29",
+      "name": "test_extension_system.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f019ca6e2d83c83c2053d07021dfa28be5711da8",
+      "name": "test_resources_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ba0ab123b0cb8f5e05d9571ea421ed66f4015f8c",
+      "name": "theme_installed_infobar_delegate.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "a6266ad70988e20abbfe76047a0e0983b7bb8e2a",
+      "name": "theme_installed_infobar_delegate.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "68c88d3a4dc77b106b32a005ee387f35ec681117",
+      "name": "unpacked_installer_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "747a23314c7b5a88fd85a00ecac24a1a15349b2f",
+      "name": "unpacked_installer_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "098bb6699066212a6533540f5813af0f2a0a82e9",
+      "name": "update_install_gate_unittest.cc"
+    },
+    {
+      "mode": 16384,
+      "type": "tree",
+      "id": "62b4140dd8a5d038d0f2787843aac58977311e6b",
+      "name": "updater"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "50b055d352ffd8677ae47f83b916a29361016135",
+      "name": "user_host_restrictions_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "897f86d4b2281669e93325837d21704b1da81bae",
+      "name": "user_script_csp_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0acae0ce0bcdd7e613a2b91f96a4fd0f53e612b9",
+      "name": "user_script_listener.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "18b712c408a1ba4a0d0e2a420e7f1a90e2a4cc48",
+      "name": "user_script_listener.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "53087c8e1f9bbd96198a6a71b8b308989fef1aa8",
+      "name": "user_script_listener_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e9b6402861dd2222087278bdf3c01ef21628ad27",
+      "name": "user_script_listener_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6ec257b174f3b3d310caa9457cae6e0d6d988a4b",
+      "name": "user_script_world_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "0a1e38b074f8dabb0b238d2f7ff4ae14d3daa3f2",
+      "name": "user_script_world_configuration_manager_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "863e49495009cfe6e5383c92c25651fd02f5c07d",
+      "name": "user_scripts_test_util.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "b6f438ce3b304f40a98c5b256bde40c75c9c68d1",
+      "name": "user_scripts_test_util.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "6a05d0d1155d9e9c95ba6ecaff2ae45130f9441c",
+      "name": "view_extension_source_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "3bf51637034bffcd60e11e7efcb26095c83550e5",
+      "name": "warning_badge_service.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f6883ca51142ecf3ece3d7c618606a084aa966d6",
+      "name": "warning_badge_service.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "74e4d9c7893b58695ad0a5701f5ef6b6657fe9a2",
+      "name": "warning_badge_service_factory.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2f6fefbcc097206090459f6f29a8f4c8c849c1d7",
+      "name": "warning_badge_service_factory.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "45a746830dd1f1022655a565b750fb536329effa",
+      "name": "warning_badge_service_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "06750f814072251b09c2cd69233cac5eac19bfea",
+      "name": "wasm_app_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fc5b5d9bcd816e796eec755e79a15d79f18bdc7e",
+      "name": "wasm_mv3_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "356d8fab8327082a88e19066e788d9d2fc617c23",
+      "name": "web_accessible_resources_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "544f8223b0eddec76ef434d673d0690d6406274f",
+      "name": "web_contents_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "78c759bd63be2804dd9ac77be0018d05e074a4a5",
+      "name": "webstore_domain_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "17ca6a8f1436165962408ecb89d996538695dede",
+      "name": "webstore_install_with_prompt.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "fad5ef7e0793cfbef0967bb4eef2b26115cfcc41",
+      "name": "webstore_install_with_prompt.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "f119e3f78b63950ab693de9a9fb5c8382b2a7f0c",
+      "name": "webstore_installer_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "890d85d04888f3b7ae1f0c05f8ddbdfecee58eeb",
+      "name": "webstore_installer_test.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "ec3db59a2e9f6d76245bd19a834b304a9f9d7734",
+      "name": "webstore_installer_test.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "412c0fbb278bc96fa60e70b5ddd09bc635cce7b8",
+      "name": "webstore_installer_unittest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "194649f4ecd56417357456acdf2f752a23fd2729",
+      "name": "webstore_reinstaller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "747dded7c451fb90204bb6070390faa4aa71dc5c",
+      "name": "webstore_reinstaller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "7323aa28ca86e6bf198d54fabc80e2dd782ded3d",
+      "name": "webstore_reinstaller_browsertest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2465fb793e284a380c4467c1886181df4ca0fd93",
+      "name": "webstore_standalone_installer.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "335db5231616fd466b268614c31e609b637bec4c",
+      "name": "webstore_standalone_installer.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "e104b37da6ce5581e02a78313c3c30c256ce834e",
+      "name": "window_controller.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "70c9a7442bd23127975f368353882d63f46887a2",
+      "name": "window_controller.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "8ae6253374ae1325dd53349ce2a0bc15a230d36b",
+      "name": "window_controller_list.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "046faeb2232b9bf0cacc890bfb9b579c0c1048a4",
+      "name": "window_controller_list.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "2cdaec401d3757fa4f7c39b453367c83aaf52891",
+      "name": "window_controller_list_observer.h"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "c4c2a827f7bb72f22d45cfeafc9a6f13bdce7d4c",
+      "name": "window_open_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "09564094d07f02c358cf19639a01187baf4f51c7",
+      "name": "worker_apitest.cc"
+    },
+    {
+      "mode": 33188,
+      "type": "blob",
+      "id": "eea598a58e3cda9da46c17539391344502ede745",
+      "name": "zipfile_installer_unittest.cc"
+    }
+  ]
+}

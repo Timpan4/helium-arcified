@@ -1,0 +1,10 @@
+{
+  "path": "chrome/browser/ui/browser_window/public/",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/browser_window/public/?format=JSON",
+  "retrievedAt": "2026-10-23T15:00:02.584Z",
+  "kind": "tree",
+  "bytes": 2268,
+  "sha256": "9b33f3a171d94dd42424ad370a94a25fcad9e04563ee916e1466566dd72629c2",
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

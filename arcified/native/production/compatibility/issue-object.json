@@ -1,0 +1,43 @@
+{
+  "license": "GPL-3.0-only",
+  "authorityPath": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "issue": {
+    "key": "compatibility",
+    "title": "Record the native Chromium compatibility release matrix",
+    "area": "research",
+    "build": "Aggregate focused native workflow results into a finite compatibility matrix for a declared release candidate, filing defects separately.",
+    "accept": [
+      "Exercise install/launch/uninstall of a web app, extension popups, autofill/passkeys and print/download dialogs on native builds.",
+      "Verify notification clicks, protocol links, casting where supported and return from PiP choose the correct window/Profile.",
+      "Record per-OS compatibility and Widevine limitations; never bundle proprietary CDMs or suppress security prompts."
+    ],
+    "blocked": [
+      "site-controls",
+      "window-chrome"
+    ],
+    "sources": [
+      "fork",
+      "dia",
+      "artifact"
+    ],
+    "sourceUrls": [
+      "https://github.com/Timpan4/helium-arcified/tree/main/arcified",
+      "https://github.com/Timpan4/helium-arcified/blob/main/patches/series",
+      "https://www.diabrowser.com/changelog",
+      "https://releases.arc.net/release/Arc-1.170.0-89123.dmg",
+      "https://releases.diabrowser.com/release/Dia-latest.dmg"
+    ],
+    "readiness": "Proposed work after native/reference prerequisites and explicit decisions in this issue.",
+    "phase": "Evidence, decisions and gates",
+    "kind": "tracking",
+    "disposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+    "referencePlatforms": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+    "referenceNote": "REA 6.7.0 bundle/resource observations recorded in artifacts.md; no application execution or native-performance measurement.",
+    "openQuestions": "Native integration, failure behavior and applicable platform results must be proven for this slice; unavailable checks stay open.",
+    "priority": "Before AI",
+    "number": 59,
+    "url": "https://github.com/Timpan4/helium-arcified/issues/59",
+    "primaryCommandId": 40728
+  }
+}

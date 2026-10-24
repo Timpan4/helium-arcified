@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/extensions/extension_tab_util.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/extensions/extension_tab_util.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:23.617Z",
+  "kind": "file",
+  "bytes": 45449,
+  "sha256": "c6919164dd0f69213437eaf3c22201eb2395ebea3506771274844552b7aebc8b",
+  "gitBlob": "71c4c9d19078df3bef1b032e3c24e22da3fbe1e3",
+  "lines": 1294,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

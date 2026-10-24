@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/views/permissions/permission_prompt_desktop.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/permissions/permission_prompt_desktop.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:02:19.480Z",
+  "kind": "file",
+  "bytes": 2500,
+  "sha256": "9b0714a41a9df070cc2ee687b612ae50448ce326509f5ea681f19d2c4eb0f051",
+  "gitBlob": "289df4b2daa0fb13955b282f98adf477e88bfa6d",
+  "lines": 83,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

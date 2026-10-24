@@ -1,0 +1,710 @@
+{
+  "area": "research",
+  "rootThreadId": "6733348c-3696-4b31-834c-2bbca45e70d2",
+  "worktree": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production",
+  "branch": "feat/non-ai-research-production",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "authority": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+  "nativeAcceptance": "OPEN",
+  "state": "REVIEWED_RESEARCH_HANDOFF_READY_NATIVE_AND_OWNER_GATES_OPEN",
+  "authorization": {
+    "localPackets": true,
+    "scopedCommitsAfterReview": true,
+    "preparedSource": "READ_ONLY",
+    "heavyCpu": false,
+    "remotePublication": false
+  },
+  "counts": {
+    "provenDone": 0,
+    "doneAwaitingRelease": 0,
+    "inProgress": 12,
+    "notStarted": 0
+  },
+  "tasks": [
+    {
+      "key": "compatibility",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-compatibility-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-compatibility-primary-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "packetState": "REVIEWED_CLEAN_DOCUMENTARY_SCOPE",
+      "hasPendingChildRuns": false
+    },
+    {
+      "key": "runtime-reference",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-runtime-reference-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-runtime-reference-primary-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "packetState": "REVIEWED_CLEAN_DOCUMENTARY_SCOPE",
+      "hasPendingChildRuns": false
+    },
+    {
+      "key": "retirements",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-retirements-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-retirements-primary-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "packetState": "REVIEWED_CLEAN_DOCUMENTARY_SCOPE",
+      "hasPendingChildRuns": false
+    },
+    {
+      "key": "release-ux-check",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-release-ux-check-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-release-ux-check-primary-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "packetState": "REVIEWED_CLEAN_DOCUMENTARY_SCOPE",
+      "hasPendingChildRuns": false
+    },
+    {
+      "key": "automation-contract",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-automation-contract-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-automation-contract-primary-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "packetState": "REVIEWED_CLEAN_DOCUMENTARY_SCOPE",
+      "hasPendingChildRuns": false
+    },
+    {
+      "key": "integration-policy",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-integration-policy-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-integration-policy-primary-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "packetState": "REVIEWED_CLEAN_DOCUMENTARY_SCOPE",
+      "hasPendingChildRuns": false
+    },
+    {
+      "key": "arc-import-format",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-arc-import-format-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-arc-import-format-primary-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "packetState": "REVIEWED_CLEAN_DOCUMENTARY_SCOPE",
+      "hasPendingChildRuns": false
+    },
+    {
+      "key": "favorite-previews-decision",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-favorite-previews-decision-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-favorite-previews-decision-primary-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "packetState": "REVIEWED_CLEAN_DOCUMENTARY_SCOPE",
+      "hasPendingChildRuns": false
+    },
+    {
+      "key": "quote-card-decision",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-quote-card-decision-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-quote-card-decision-primary-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "packetState": "REVIEWED_CLEAN_DOCUMENTARY_SCOPE",
+      "hasPendingChildRuns": false
+    },
+    {
+      "key": "easel-collaboration-decision",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-easel-collaboration-decision-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-easel-collaboration-decision-primary-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "packetState": "REVIEWED_CLEAN_DOCUMENTARY_SCOPE",
+      "hasPendingChildRuns": false
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-reference-windows-artifacts-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-reference-windows-artifacts-primary-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "packetState": "REVIEWED_CLEAN_DOCUMENTARY_SCOPE",
+      "hasPendingChildRuns": false
+    },
+    {
+      "key": "focus-routing-contract",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-focus-routing-contract-primary-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-focus-routing-contract-primary-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "hasPendingChildRuns": false,
+      "packetState": "REVIEWED_CLEAN_DOCUMENTARY_SCOPE"
+    }
+  ],
+  "nextAction": "Root integrates reviewed local evidence commits, reconciles cross-area Notes/provider/focus/import choices and records actual owner answers. Root owns feature compilation, runtime, visual/platform acceptance and publication. No local child work remains.",
+  "assignmentReceipt": {
+    "clientRequestId": "research-production-aggregate-assignment-receipt-v1",
+    "delivery": "steered",
+    "rootThreadId": "6733348c-3696-4b31-834c-2bbca45e70d2"
+  },
+  "resumeTrigger": "T3 delegated task completion notifications",
+  "remainingWork": [
+    "Root integration and remote publication, outside this coordinator's authorization.",
+    "Actual owner settlement for the preserved unresolved product/service/import/focus questions.",
+    "Authorized export originals and exact grammar/build support.",
+    "Full Windows payload/signature/host/account/reference runtime evidence.",
+    "Installed per-OS RC compatibility/UX results, native feature compilation/tests, same-window multi-Profile and same-live-page handoff proof."
+  ],
+  "runtimeCounts": {
+    "primaryRunning": 0,
+    "primaryCompleted": 12,
+    "leafReviewsCompleted": 12,
+    "coordinatorReviewsCompleted": 1,
+    "reviewRunning": 0,
+    "queued": 0,
+    "failed": 0,
+    "blocked": 0,
+    "delegatedTasksTotal": 25,
+    "delegatedTasksCompleted": 25
+  },
+  "reviewTasks": [
+    {
+      "key": "compatibility",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-compatibility-review-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-compatibility-review-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "round": 1,
+      "hasPendingChildRuns": false,
+      "disposition": "CLEAN_BOUNDED_REVIEW"
+    },
+    {
+      "key": "easel-collaboration-decision",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-easel-collaboration-decision-review-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-easel-collaboration-decision-review-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "round": 1,
+      "hasPendingChildRuns": false,
+      "disposition": "CLEAN_BOUNDED_REVIEW"
+    },
+    {
+      "key": "arc-import-format",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-arc-import-format-review-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-arc-import-format-review-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "round": 1,
+      "hasPendingChildRuns": false,
+      "disposition": "CLEAN_BOUNDED_REVIEW"
+    },
+    {
+      "key": "runtime-reference",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-runtime-reference-review-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-runtime-reference-review-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "round": 1,
+      "hasPendingChildRuns": false,
+      "disposition": "CLEAN_BOUNDED_REVIEW"
+    },
+    {
+      "key": "retirements",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-retirements-review-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-retirements-review-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "round": 1,
+      "hasPendingChildRuns": false,
+      "disposition": "CLEAN_BOUNDED_REVIEW"
+    },
+    {
+      "key": "release-ux-check",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-release-ux-check-review-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-release-ux-check-review-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "round": 1,
+      "hasPendingChildRuns": false,
+      "disposition": "CLEAN_BOUNDED_REVIEW"
+    },
+    {
+      "key": "automation-contract",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-automation-contract-review-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-automation-contract-review-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "round": 1,
+      "hasPendingChildRuns": false,
+      "disposition": "CLEAN_BOUNDED_REVIEW"
+    },
+    {
+      "key": "integration-policy",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-integration-policy-review-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-integration-policy-review-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "round": 1,
+      "hasPendingChildRuns": false,
+      "disposition": "CLEAN_BOUNDED_REVIEW"
+    },
+    {
+      "key": "quote-card-decision",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-quote-card-decision-review-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-quote-card-decision-review-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "round": 1,
+      "hasPendingChildRuns": false,
+      "disposition": "CLEAN_BOUNDED_REVIEW"
+    },
+    {
+      "key": "favorite-previews-decision",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-favorite-previews-decision-review-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-favorite-previews-decision-review-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "round": 1,
+      "hasPendingChildRuns": false,
+      "disposition": "CLEAN_BOUNDED_REVIEW"
+    },
+    {
+      "key": "reference-windows-artifacts",
+      "taskId": "node:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-reference-windows-artifacts-review-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3Af010c78e-bfa9-4959-98d2-0a357188888b%3Adelegate-task%3Aresearch-production-reference-windows-artifacts-review-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "round": 1,
+      "hasPendingChildRuns": false,
+      "disposition": "CLEAN_BOUNDED_REVIEW"
+    },
+    {
+      "key": "focus-routing-contract",
+      "taskId": "node:delegated-task:command%3Amcp%3A9306c82a-7a06-40ba-b08d-160563ead7a5%3Adelegate-task%3Aresearch-production-focus-routing-contract-review-v1",
+      "childThreadId": "thread:delegated-task:command%3Amcp%3A9306c82a-7a06-40ba-b08d-160563ead7a5%3Adelegate-task%3Aresearch-production-focus-routing-contract-review-v1",
+      "providerInstanceId": "codex",
+      "model": "gpt-6.1-sol",
+      "options": [
+        {
+          "id": "reasoningEffort",
+          "value": "high"
+        },
+        {
+          "id": "serviceTier",
+          "value": "default"
+        }
+      ],
+      "status": "completed",
+      "workState": "result_available",
+      "assignmentVerified": true,
+      "round": 1,
+      "brief": "arcified/docs/production/research/focus-review-request-round-1.json",
+      "hasPendingChildRuns": false,
+      "disposition": "CLEAN_BOUNDED_REVIEW"
+    }
+  ],
+  "dependencies": [
+    {
+      "key": "arc-import-format",
+      "consumerThreadId": "mcp:555d1ef2-5df3-47ca-93fa-91fd6b0c3e3b",
+      "deliveryToData": "reviewed settled handoff steered",
+      "deliveryToRoot": "reviewed settled handoff steered",
+      "boundary": "No observed original export corpus, exact grammar/builds unknown, support lists empty. Documentary Markdown export distinct from installed-browser Dia importer. Independent review pending. Unknown formats and destructive/import policies OPEN.",
+      "packet": "arcified/native/production/arc-import-format",
+      "nextAction": "Root/data consume reviewed evidence. Actual export fixtures, grammar and owner mapping choices remain OPEN."
+    }
+  ],
+  "packetCounts": {
+    "delivered": 12,
+    "inIndependentReview": 0,
+    "awaitingPrimary": 0,
+    "reviewedClean": 12,
+    "needsCorrection": 0
+  },
+  "ownerDecisionConsolidation": {
+    "artifact": "arcified/docs/production/research/owner-decisions.json",
+    "state": "INDEPENDENTLY_REVIEWED_OWNER_ANSWERS_PENDING",
+    "rootDelivery": "Material handoffs and reviewed packet commits delivered; final coordinator commit accompanies the final parent handoff.",
+    "ownerAsked": false,
+    "knownCrossAreaConflict": "Proposed Notes import/view/export-only retirement disposition must be reconciled with notes implementation by root."
+  },
+  "pendingSteers": [],
+  "resumption": {
+    "requestedByOwner": true,
+    "model": "codex/gpt-6.1-sol",
+    "options": {
+      "reasoningEffort": "high",
+      "serviceTier": "default"
+    },
+    "recordedTasksReconciled": 23,
+    "completed": 23,
+    "live": 0,
+    "failed": 0,
+    "restarted": 0,
+    "newReviews": 1,
+    "usageLimitObserved": false,
+    "noAstraEscalation": true
+  },
+  "baselineBuild": {
+    "source": "Owner/root resumption message",
+    "state": "BUILT",
+    "heliumVersion": "0.19.2.1",
+    "chromiumVersion": "155.0.8059.79",
+    "chromeDriver": "matching",
+    "featureCompilation": "OPEN",
+    "runtime": "OPEN",
+    "uxAcceptance": "OPEN"
+  },
+  "localCommits": [
+    {
+      "sha": "67bc932296b818548bd3e70a114d71252239faa6",
+      "scope": "Eleven independently reviewed research/decision/tracking packets and their round 1 reviews.",
+      "nativeFeatureCompletion": false
+    },
+    {
+      "sha": "6826304dc00ec86707af893799d73231efef0f8b",
+      "scope": "Focus routing decision packet and clean independent round 1 review.",
+      "nativeFeatureCompletion": false
+    }
+  ],
+  "checks": {
+    "reviewedInputIdentity": {
+      "files": 120,
+      "matched": 120,
+      "mismatches": 0,
+      "committedPacketFiles": 116,
+      "localIgnoredAcquisitionInputs": 4,
+      "artifact": "reviewed-input-identities.json"
+    },
+    "focusSyntax": "PASS",
+    "focusArtifactAudit": "PASS: 31 synthetic focus rows and 8 external-route rows; no native routing executed.",
+    "stagedDiffWhitespace": {
+      "status": "PASS",
+      "command": "git -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol diff --cached --check",
+      "note": "Original vendor XML descriptors retain exact CRLF bytes. No actual spaces/tabs at line ends. No persistent Git config changed."
+    },
+    "nativeFeatureChecks": "NOT_RUN_ROOT_ONLY"
+  },
+  "coordinatorReview": {
+    "taskId": "node:delegated-task:command%3Amcp%3A9306c82a-7a06-40ba-b08d-160563ead7a5%3Adelegate-task%3Aresearch-production-coordinator-consolidation-review-v1",
+    "childThreadId": "thread:delegated-task:command%3Amcp%3A9306c82a-7a06-40ba-b08d-160563ead7a5%3Adelegate-task%3Aresearch-production-coordinator-consolidation-review-v1",
+    "status": "completed",
+    "providerInstanceId": "codex",
+    "model": "gpt-6.1-sol",
+    "options": [
+      {
+        "id": "reasoningEffort",
+        "value": "high"
+      },
+      {
+        "id": "serviceTier",
+        "value": "default"
+      }
+    ],
+    "assignmentVerified": true,
+    "round": 1,
+    "brief": "coordinator-review-request-round-1.json",
+    "report": "coordinator-consolidation-review-round-1.md",
+    "workState": "result_available",
+    "hasPendingChildRuns": false,
+    "disposition": "CLEAN_BOUNDED_REVIEW",
+    "actionableFindings": 0
+  },
+  "handoff": {
+    "summary": "results.json",
+    "decisions": "owner-decisions.json",
+    "review": "coordinator-consolidation-review-round-1.md",
+    "sourceIdentities": "reviewed-input-identities.json",
+    "originalBriefs": "briefs/",
+    "finalParentClientRequestId": "research-production-final-reviewed-handoff-v1",
+    "issueCompletionClaim": "NONE; research evidence is reviewed, all twelve native issue gates remain OPEN."
+  }
+}

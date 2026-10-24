@@ -1,0 +1,99 @@
+{
+  "issueKey": "favorite-previews-decision",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/28",
+  "disposition": "decision_evidence_ready_owner_acceptance_pending",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "evidencePaths": [
+    "decision.md",
+    "assignment.snapshot.json",
+    "sources.json",
+    "source-identities.json",
+    "inputs.sha256",
+    "checks.md",
+    "ownership.json"
+  ],
+  "changes": [
+    "Inventoried the December 16, 2021 sites and later documented mail, Confluence and retired GitHub previews.",
+    "Recommended per-site defer/replace with candidate data/actions, disable controls and stale-state behavior, explicitly unaccepted.",
+    "Separated People Cards, badges, calendar countdown/Join, AI link summaries, local folder previews and media status.",
+    "Recorded source retrieval limits, exact local input identities and platform/native proof gaps. No implementation, patch, registered test or account access."
+  ],
+  "checks": [
+    {
+      "check": "sha256sum --check arcified/native/production/favorite-previews-decision/inputs.sha256",
+      "outcome": "PASS: all recorded input identities match"
+    },
+    {
+      "check": "jq syntax for all packet JSON files",
+      "outcome": "PASS"
+    },
+    {
+      "check": "git diff --no-index --check /dev/null for each packet file",
+      "outcome": "PASS: no whitespace diagnostics"
+    },
+    {
+      "check": "fast_filesystem-backed programmatic formatting, required fields, local links, evidence paths, inventory and authoritative acceptance equality",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Public primary-source web open/find/search",
+      "outcome": "S1-S4 retrieved; U1/U2 404; U3 direct open timeout, archive available"
+    },
+    {
+      "check": "Native, account, visual and platform execution",
+      "outcome": "NOT RUN; native acceptance OPEN"
+    }
+  ],
+  "ownerQuestions": [
+    "Accept deferring Notion, Figma, Linear, Confluence, Gmail and Outlook Mail account previews, and replacing retired GitHub hover previews only through separately accepted Live Folders? Recommended yes; ordinary Favorites remain the navigation route.",
+    "If any deferred preview is required, which named provider/domain/tenant and read fields are accepted, and is navigation-only sufficient? Recommend choosing an explicit row and keeping writes excluded.",
+    "For each selected site, accept Profile/account ownership, provider/account disable and stale/unknown presentation, then settle authentication, credential storage, retention, revocation, refresh policy and private-context availability through integration-policy before implementation? Recommended yes."
+  ],
+  "dependencies": [],
+  "integrationRequests": [
+    {
+      "target": "research coordinator / root decision record",
+      "request": "Consolidate the packet questions and record the owner's accepted scope in the authoritative issue/root record before account integration. Obtain fresh independent review. Do not treat this recommendation as approval."
+    },
+    {
+      "target": "integration-policy (#26)",
+      "request": "If any provider is selected, settle named domains/tenant scope, permissions, account/Profile ownership, auth/storage/retention/revocation/refresh and unsupported contexts. This packet selects none."
+    },
+    {
+      "target": "live-folders (#150)",
+      "request": "Carry only the proposed GitHub replacement into the separate optional workflow. Do not claim that generic Live Folders cover other Favorite previews."
+    },
+    {
+      "target": "retirements (#23), calendar and favorites",
+      "request": "Retain GitHub Preview retirement and deferred People Cards; keep calendar-specific previews under calendar; preserve canonical Favorite identity and existing lifecycle/native gates."
+    }
+  ],
+  "remainingCriteria": [
+    {
+      "criterion": "The owner records accepted scope before any account integration is implemented; generic Live Folders do not imply coverage.",
+      "state": "OPEN_OWNER_DECISION",
+      "needed": "Coordinator records the actual owner answer; no owner approval is inferred."
+    },
+    {
+      "criterion": "Any subsequently accepted native behavior",
+      "state": "OPEN_NATIVE_ACCEPTANCE",
+      "needed": "Real patch and owning GN tests, same-window multi-Profile and saved-page handoff gates, installed platform/interaction/failure evidence. Current decision scope needs no fake patch or test."
+    }
+  ],
+  "nativePatch": {
+    "status": "INAPPLICABLE_DECISION_ONLY",
+    "reason": "No account integration is accepted or implemented; patches/series and prepared source untouched."
+  },
+  "nativeTestRegistration": {
+    "status": "INAPPLICABLE_DECISION_ONLY",
+    "reason": "No production behavior change to register; future accepted integration requires real owning native targets."
+  },
+  "preparedSource": {
+    "access": "READ_ONLY",
+    "baseIdentity": "source-identities.json entry for chrome/VERSION",
+    "resultFiles": [],
+    "version": "155.0.8059.79"
+  },
+  "ownerDecisionRecorded": false,
+  "nativeAcceptance": "OPEN"
+}

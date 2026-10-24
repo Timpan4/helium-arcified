@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/lifetime/application_lifetime_desktop.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/lifetime/application_lifetime_desktop.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:02:19.503Z",
+  "kind": "file",
+  "bytes": 21325,
+  "sha256": "27e2808680f780802674444cf4597c2bbedd7877a96f848440dac00aab3eb1f5",
+  "gitBlob": "75976a22229e0df87cc6c1c27ffdf6cf38db4a25",
+  "lines": 583,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

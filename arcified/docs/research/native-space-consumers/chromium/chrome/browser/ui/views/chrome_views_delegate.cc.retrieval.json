@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/views/chrome_views_delegate.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/chrome_views_delegate.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:06:07.417Z",
+  "kind": "file",
+  "bytes": 8132,
+  "sha256": "f6ccfc8504642f882fc2d109619da80709328a6dd04914e98bcaf8c6478cca28",
+  "gitBlob": "8704f190c55a26ec3ebf577fb044ed1e2fb04044",
+  "lines": 227,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

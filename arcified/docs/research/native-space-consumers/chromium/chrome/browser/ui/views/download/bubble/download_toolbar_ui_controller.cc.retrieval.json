@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/views/download/bubble/download_toolbar_ui_controller.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/views/download/bubble/download_toolbar_ui_controller.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:02:19.226Z",
+  "kind": "file",
+  "bytes": 45947,
+  "sha256": "377c47e8a556d09ca0527bae49efc3ef1e639838356e08c6abeb9d104f8045e9",
+  "gitBlob": "68ff79372263e666d408619a49e71e0a7a08be05",
+  "lines": 1242,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

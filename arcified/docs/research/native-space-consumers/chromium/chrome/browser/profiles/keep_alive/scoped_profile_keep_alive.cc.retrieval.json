@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/profiles/keep_alive/scoped_profile_keep_alive.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/profiles/keep_alive/scoped_profile_keep_alive.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:03:28.439Z",
+  "kind": "file",
+  "bytes": 4330,
+  "sha256": "8ff801b2c40bfb7e6cc5dfa7c3d14d6da83ed3cc6f2ae37408c9ce805da33a82",
+  "gitBlob": "8cb88e914b401018e107811c1fcdd0c820eea610",
+  "lines": 122,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

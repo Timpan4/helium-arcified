@@ -1,0 +1,893 @@
+{
+  "issueKey": "release-ux-check",
+  "area": "library",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "nativeAcceptance": "OPEN",
+  "featureRows": [
+    {
+      "issueKey": "library",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/19",
+      "title": "Open a unified Library for saved browsing material",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-library"
+      ],
+      "dependencies": [],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Arc feature evidence is macOS-heavy or macOS-only as recorded in the dossier. Windows parity is not assumed; Linux is a downstream design target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "library/criterion/1",
+          "criterion": "Start with a native Library entry point and an existing local history/saved-link source; open/navigate it by sidebar and command action.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "library/criterion/2",
+          "criterion": "Show source type and actions without mixing private/Profile data; empty and unavailable entries are clear.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "library/criterion/3",
+          "criterion": "Selecting an entry opens or restores the intended object and returns focus predictably.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "library/criterion/4",
+          "criterion": "Record provider disposition for Spaces organizer, media/captures, created items, downloads and Archive; open the existing provider and show unavailable ones honestly.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "downloads",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/36",
+      "title": "Manage downloads with clear progress and recovery",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-library",
+        "dia"
+      ],
+      "dependencies": [
+        "native-linux",
+        "native-windows",
+        "native-macos"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Arc feature evidence is macOS-heavy or macOS-only as recorded in the dossier. Windows parity is not assumed; Linux is a downstream design target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "downloads/criterion/1",
+          "criterion": "Progress, pause/resume where supported, cancel, retry, open and reveal-in-folder reflect the actual download state.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "downloads/criterion/2",
+          "criterion": "Use safe filenames/origin presentation and existing dangerous-download protections; do not bypass OS trust prompts.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "downloads/criterion/3",
+          "criterion": "Downloads continue through Space switches and expose failures and missing files after restart.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "downloads/criterion/4",
+          "criterion": "Do not present partial, quarantined or blocked files as completed and safe; distinguish remove-reference from real-file deletion.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "recent-files",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/53",
+      "title": "Drag recent downloads and captures from the sidebar",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-library"
+      ],
+      "dependencies": [
+        "downloads"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Arc feature evidence is macOS-heavy or macOS-only as recorded in the dossier. Windows parity is not assumed; Linux is a downstream design target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "recent-files/criterion/1",
+          "criterion": "List only accessible recent files and let users choose which supported types appear.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "recent-files/criterion/2",
+          "criterion": "Drag-out, copy, open and reveal work through each OS's native file integration.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "recent-files/criterion/3",
+          "criterion": "Missing/moved/deleted files and denied access never produce a misleading successful action.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "recent-files/criterion/4",
+          "criterion": "Do not present partial, quarantined or blocked files as completed and safe; distinguish remove-reference from real-file deletion.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "capture",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/37",
+      "title": "Capture a full page and reuse it from Library",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-capture"
+      ],
+      "dependencies": [
+        "library"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Arc feature evidence is macOS-heavy or macOS-only as recorded in the dossier. Windows parity is not assumed; Linux is a downstream design target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "capture/criterion/1",
+          "criterion": "Capture the selected page or split pane at the intended scale without including hidden/private content. The region-capture slice owns the region picker.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "capture/criterion/2",
+          "criterion": "Cancel, copy, save and filename selection use native clipboard/file flows with recoverable failures.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "capture/criterion/3",
+          "criterion": "Store Library references and respect permission, sensitive-content and capture restrictions.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "capture/criterion/4",
+          "criterion": "Capture the full scrollable page at a documented scale, including long-page and viewport-only limitations; region selection is separate.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "region-capture",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/60",
+      "title": "Capture a selected region with a cancellable picker",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-capture"
+      ],
+      "dependencies": [
+        "capture"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Arc feature evidence is macOS-heavy or macOS-only as recorded in the dossier. Windows parity is not assumed; Linux is a downstream design target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "region-capture/criterion/1",
+          "criterion": "Show the exact capture boundary and allow keyboard/pointer cancellation before saving.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "region-capture/criterion/2",
+          "criterion": "Target the intended page/pane and respect scaling, sensitive-content and capture restrictions.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "region-capture/criterion/3",
+          "criterion": "Add the resulting image to Library without capturing hidden or unselected content.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "library-file-removal",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/63",
+      "title": "Remove Library entries and delete real files safely",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-library"
+      ],
+      "dependencies": [
+        "library",
+        "downloads"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Arc feature evidence is macOS-heavy or macOS-only as recorded in the dossier. Windows parity is not assumed; Linux is a downstream design target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "library-file-removal/criterion/1",
+          "criterion": "Name the action and affected file clearly; use OS Trash/recycle behavior when supported.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "library-file-removal/criterion/2",
+          "criterion": "If recoverable deletion is unavailable, disclose the fallback before an explicit permanent-delete choice.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "library-file-removal/criterion/3",
+          "criterion": "Missing files, quarantine, locked files and failed deletion retain truthful state and do not report success.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "issueKey": "history-controls",
+      "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/102",
+      "title": "Browse and clear local history separately from Archive",
+      "kind": "implementation",
+      "priority": "Before AI",
+      "recordedDisposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+      "scopeDecision": "ACTIVE_TRACKED_NATIVE_ACCEPTANCE_OPEN",
+      "sourceFamilies": [
+        "arc-library",
+        "arc-command"
+      ],
+      "dependencies": [
+        "profiles"
+      ],
+      "declaredTargetPlatforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "sourceReferenceLimit": "Arc feature evidence is macOS-heavy or macOS-only as recorded in the dossier. Windows parity is not assumed; Linux is a downstream design target.",
+      "optionalStateScenarioIds": [],
+      "crossCuttingRequirement": "Assess every affected surface against cross-cutting-scenarios.json; no implicit N/A.",
+      "platformStates": {
+        "Linux": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "Windows": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        },
+        "macOS": {
+          "applicability": "OPEN",
+          "implemented": "UNVERIFIED",
+          "tested": "NOT_RUN",
+          "released": "UNVERIFIED",
+          "candidate": null,
+          "nativeEvidence": []
+        }
+      },
+      "scenarios": [
+        {
+          "id": "history-controls/criterion/1",
+          "criterion": "Search/open/delete selected history records and explain which browsing records are affected.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "history-controls/criterion/2",
+          "criterion": "Clearing history does not silently delete files, pinned destinations, boards or Archive unless explicitly chosen.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        },
+        {
+          "id": "history-controls/criterion/3",
+          "criterion": "Private-mode exclusions and per-Profile scope hold through restart and undo/error behavior where supported.",
+          "results": {
+            "Linux": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "Windows": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            },
+            "macOS": {
+              "status": "OPEN",
+              "execution": "NOT_RUN",
+              "evidence": []
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

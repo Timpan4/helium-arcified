@@ -1,0 +1,121 @@
+{
+  "recordedAt": "2026-10-23 22:28:50 UTC",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "coordinatorBranch": "feat/non-ai-research-production",
+  "preparedSource": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+  "preparedVersion": "155.0.8059.79",
+  "nativePatch": null,
+  "resultFiles": [],
+  "nativeTestChanges": [],
+  "reason": "Decision leaf, owner scope not accepted. No native implementation or prepared-source mutation is appropriate. Hashes identify inspected bytes only, not build or native acceptance.",
+  "files": [
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+      "sha256": "cc8ec03443b18a749b486e484a56b86218d8f41653970dea94185f76c9685354",
+      "role": "root_authority",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+      "sha256": "daf98f1cf993c1a21686289a88489bf001266d7fff4d85089d30055584c8a7b0",
+      "role": "root_authority",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/lifecycle-contract.md",
+      "sha256": "244488864d15d093f7f80e1cc40f490a979454e2a8e74db438c7e51283518a1c",
+      "role": "root_authority",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/native-space-integration.md",
+      "sha256": "e5951ba265be3587cb1df8f2ab73ce6768071ac55b8d481240ed57819b39ab56",
+      "role": "root_authority",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/execution-state.json",
+      "sha256": "dae2aed7885b1f03f5f96a1285265a1189b8776a6472880c0f12c94de7f7ad02",
+      "role": "root_authority",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/features/private_browsing/operation_boundary.h",
+      "sha256": "28f9003e0830237b5ebff14a4956bdbfa614325e094e4cb22a7ed3037d5cc390",
+      "role": "existing_foundation",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/features/private_browsing/context_boundary.h",
+      "sha256": "6872ac47c8437fb5707b39062d8871e8afac6f28ce1d4560939b3fad347110dc",
+      "role": "existing_foundation",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/coverage-review.md",
+      "sha256": "831f24150c102821df6f828d11ea38f894f0d120116462d4beb2efda94c593a3",
+      "role": "existing_foundation",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/VERSION",
+      "sha256": "6364ce04bcd72b472e54baac73c17372bfde3447a7c76a6ac6b54131da83ad1e",
+      "role": "prepared_source_read_only",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/renderer_context_menu/link_to_text_menu_observer.cc",
+      "sha256": "57d7d286069c44d21ace1c394e3aee92decb6ec97466722700933f4865d94723",
+      "role": "prepared_source_read_only",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/renderer_context_menu/link_to_text_menu_observer.h",
+      "sha256": "6af90ee733907d6324588f97fae788be4936f405f9759823ee21a09977a79544",
+      "role": "prepared_source_read_only",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/renderer_context_menu/render_view_context_menu.cc",
+      "sha256": "4f2bd11f5e619cfbb87a0be0f9d5d032c5a47aa99943951584b2024a4a08ab10",
+      "role": "prepared_source_read_only",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/renderer_context_menu/render_view_context_menu_browsertest.cc",
+      "sha256": "90d7b16b702e17a8db24a34c88cf65a8c192e623b8cf493d7682bb3759e98259",
+      "role": "prepared_source_read_only",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/renderer_context_menu/link_to_text_menu_observer_interactive_uitest.cc",
+      "sha256": "cd536f5cd9a712889d1b35e540ca2339820476979f808789470c8d63dc88ac03",
+      "role": "prepared_source_read_only",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/chrome/browser/renderer_context_menu/BUILD.gn",
+      "sha256": "dd40b8409a643378c6486041fb2e2373229eee8603998570ea09f620751651a2",
+      "role": "prepared_source_read_only",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/components/shared_highlighting/core/common/shared_highlighting_features.cc",
+      "sha256": "b9e0aaebc7758183d2da3231ff66a12154bf340774d42995a192902e5ad80991",
+      "role": "prepared_source_read_only",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/components/shared_highlighting/core/common/disabled_sites.cc",
+      "sha256": "bde3d35ee0896900ed52ac307b590b33ff2c174975a5a910bfba8760e517d466",
+      "role": "prepared_source_read_only",
+      "modifiedByThisPacket": false
+    },
+    {
+      "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src/components/shared_highlighting/core/common/fragment_directives_utils.h",
+      "sha256": "53f5a93e260642f563898fb1b70ecf08833990505eda3cba80b497522121ebde",
+      "role": "prepared_source_read_only",
+      "modifiedByThisPacket": false
+    }
+  ]
+}

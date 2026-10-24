@@ -1,0 +1,36 @@
+{
+  "key": "quote-card-decision",
+  "title": "Decide a local replacement for historical Share Quote cards",
+  "area": "research",
+  "build": "Separate useful local quote-card/text-fragment sharing from clipboard formats and hosted snapshots.",
+  "accept": [
+    "Use 2023 Share Quote evidence and document hyperlink/image behavior and current uncertainty.",
+    "Recommend supported local card/text-fragment behavior, privacy preview and a disable route.",
+    "Record owner acceptance/defer and a portable fallback rather than claiming Markdown copy reproduces Share Quote."
+  ],
+  "blocked": [],
+  "sources": [
+    "arc-sharing",
+    "arc-history"
+  ],
+  "sourceUrls": [
+    "https://resources.arc.net/hc/en-us/articles/19228534606743-Share-Spaces-Folders-Splits-with-Anyone",
+    "https://resources.arc.net/hc/en-us/articles/20498293324823-Arc-for-macOS-2024-2026-Release-Notes",
+    "https://start.arc.net/release-notes"
+  ],
+  "kind": "decision",
+  "phase": "Evidence, decisions and gates",
+  "disposition": "Historical/retired reference. Recommended replacement or decision, not current runtime parity.",
+  "referencePlatforms": "Arc feature evidence is macOS-heavy or macOS-only as recorded in the dossier. Windows parity is not assumed; Linux is a downstream design target.",
+  "referenceNote": "The linked reference documents/release histories describe this workflow family. Acceptance below specifies the intended improved Arcified behavior.",
+  "openQuestions": "The fork owner records the named scope/security/service decision before implementation or external access.",
+  "readiness": "Publish as an owner decision, not an automatically accepted implementation.",
+  "priority": "Before AI",
+  "number": 29,
+  "url": "https://github.com/Timpan4/helium-arcified/issues/29",
+  "primaryCommandId": 40790,
+  "assignmentPath": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+  "assignmentSha256": "cc8ec03443b18a749b486e484a56b86218d8f41653970dea94185f76c9685354",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "authority": "Full assigned leaf object copied without invented owner approval."
+}

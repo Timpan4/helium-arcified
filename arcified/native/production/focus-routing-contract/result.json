@@ -1,0 +1,194 @@
+{
+  "issueKey": "focus-routing-contract",
+  "issueUrl": "https://github.com/Timpan4/helium-arcified/issues/44",
+  "disposition": "DECISION_EVIDENCE_READY_OWNER_REVIEW_REQUIRED",
+  "evidencePaths": [
+    "ownership.json",
+    "authority.json",
+    "sources.json",
+    "identities.sha256",
+    "decision.md",
+    "routing-fixtures.json",
+    "verify-packet.mjs",
+    "checks.md",
+    "result.json",
+    "compatibility-consolidation.json",
+    "compatibility-inputs.sha256"
+  ],
+  "changes": [
+    "Preserved full assigned issue object and selected root authority fields.",
+    "Recorded prepared-source and foundation byte identities with exact inspected call sites.",
+    "Specified distinct active-page and selected-workspace command targets, eligibility boundaries, focus entry/exit and visible/accessibility cue requirements.",
+    "Added synthetic scenario table and machine-readable fixtures with OPEN results on every target platform.",
+    "Prepared owner questions and integration requests without production code, native patch, command mapping, test registration or shared-control changes.",
+    "Consolidated compatibility #59 Q2 as Q5/Q6 with exact-Profile preservation, unavailable unresolved routes and external-event synthetic fixtures; retained D1 as an attributed source-risk candidate."
+  ],
+  "checks": [
+    {
+      "name": "baseline",
+      "status": "PASS",
+      "command": "git rev-parse HEAD",
+      "result": "a4b6b480d3de07857ab6e939149254a8359e5449"
+    },
+    {
+      "name": "source-identity",
+      "status": "PASS",
+      "command": "sha256sum --check arcified/native/production/focus-routing-contract/identities.sha256",
+      "result": "All 20 listed file hashes matched, including 9 prepared-source/version files."
+    },
+    {
+      "name": "syntax",
+      "status": "PASS",
+      "command": "node --check arcified/native/production/focus-routing-contract/verify-packet.mjs",
+      "result": "Exit 0, no syntax diagnostics after compatibility consolidation."
+    },
+    {
+      "name": "packet-audit",
+      "status": "PASS",
+      "command": "node arcified/native/production/focus-routing-contract/verify-packet.mjs",
+      "scope": "JSON canonical formatting, fixture coverage/target consistency, evidence paths/newlines/trailing whitespace. No routing implementation executed.",
+      "result": "PASS decision artifact audit: 31 synthetic focus rows; 8 external-route rows; all nine command families; platform results OPEN."
+    },
+    {
+      "name": "compatibility-input-identity",
+      "status": "PASS",
+      "command": "sha256sum --check arcified/native/production/focus-routing-contract/compatibility-inputs.sha256",
+      "scope": "Exact two sibling packet inputs, including D1 classification; read-only.",
+      "result": "Both compatibility input hashes matched. Compatibility packet unchanged by this leaf."
+    }
+  ],
+  "ownerQuestions": [
+    {
+      "id": "Q1",
+      "question": "When pointer or keyboard focus enters a split pane, should workspace selection stay on the explicitly selected object until an explicit workspace selection, or also select that pane's workspace object?",
+      "recommendation": "Keep workspace selection independent and visibly label both active page and selected object.",
+      "tradeoff": "Stable organization targets avoid silently moving/archiving another object, but users need clear distinct cues.",
+      "status": "UNRESOLVED",
+      "authority": "Coordinator consolidates with owner; this packet records no approval."
+    },
+    {
+      "id": "Q2",
+      "question": "For target choice only, should generic Close request dismissal of the active Peek, otherwise close the active pane/page, or require explicit surface close controls?",
+      "recommendation": "Route generic Close to the active surface's close/dismiss intent, keeping Archive a separate selected-object command.",
+      "tradeoff": "Consistent surface targeting is convenient; explicit controls reduce ambiguity. Any actual hide/close, protected-work handling and undo still require root lifecycle policy and native completion.",
+      "status": "UNRESOLVED",
+      "authority": "Do not settle destructive/lifetime policy in this leaf."
+    },
+    {
+      "id": "Q3",
+      "question": "After a permitted dismissal or close invalidates focus, should return prefer an eligible live Peek parent, then a surviving visible sibling, then an accessible empty host, or wait in the empty host for explicit selection?",
+      "recommendation": "Use eligible parent, then visible sibling, then empty host. Do not reopen, clone, or activate a hidden/background page as fallback.",
+      "tradeoff": "Automatic return preserves continuity but requires visible, live, permitted targets and native focus acknowledgement. If several siblings qualify, ordering remains with the split/tab-order owner.",
+      "status": "UNRESOLVED",
+      "authority": "Focus fallback only; no preview-retention or deletion policy is implied."
+    },
+    {
+      "id": "Q4",
+      "question": "Should the first production scope expose a separately labeled Reload selected action for explicit multi-selection, or leave bulk reload unavailable while ordinary Reload remains active-page-only?",
+      "recommendation": "Leave bulk reload unavailable in this scope and retain active-page-only default. A future explicit bulk command needs its own review.",
+      "tradeoff": "This matches issue 44 but differs from Chromium's current multi-selection ReloadInternal behavior. Preserving bulk convenience requires a distinct action rather than implicit default fan-out.",
+      "status": "UNRESOLVED",
+      "authority": "Acceptance already requires ordinary reload to target the active surface; that requirement is not reopened."
+    },
+    {
+      "id": "Q5",
+      "source": "compatibility #59 Q2",
+      "question": "When an incoming OS link has no originating page, or a notification/PiP initiator no longer exists, which surviving host/Space should receive it?",
+      "recommendation": "Keep these routes unavailable until owner settlement. For a known exact originating/registered Profile, recommend an explicit destination choice restricted to a host context and Space with that same real Profile, after native liveness/attachment validation. Do not automatically select a last-active host/Space or create one.",
+      "tradeoff": "Avoids silently targeting an unrelated context. An explicit same-Profile destination choice adds interaction and still needs root's native ownership proof; no destination policy or approval exists yet.",
+      "status": "UNRESOLVED",
+      "authority": "Consolidates compatibility Q2. Exact known Profile is preserved, not selected from last-active state. Local focus-return Q3 does not authorize external event routing."
+    },
+    {
+      "id": "Q6",
+      "source": "compatibility #59 Q2, unattributed variant",
+      "question": "If an incoming OS link has no resolvable exact originating or registered Profile, should an explicit Profile-and-Space chooser be supported, or should the route remain unavailable?",
+      "recommendation": "Keep the route unavailable pending an owner-approved attribution/selection workflow. Never infer a Profile from last-active state, workspace selection, URL/title or an unrelated native dialog parent.",
+      "tradeoff": "Avoids invented attribution and credential-context changes; unattributed OS-link UX remains incomplete until the owner chooses scope and native validation is implemented.",
+      "status": "UNRESOLVED",
+      "authority": "No chooser, default Profile, provider rule, host creation or owner approval is implemented or inferred here."
+    }
+  ],
+  "dependencies": [
+    {
+      "key": "lifecycle-contract",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/24",
+      "status": "OPEN_NATIVE_AND_REMAINING_POLICY",
+      "evidence": "Root lifecycle v3 and native-space-integration source design; exact identities in sources.json.",
+      "preserve": "No new cleanup, private/download classifier, destructive/source-disposition or non-link routing policy."
+    },
+    {
+      "key": "native-window-ownership",
+      "status": "OPEN",
+      "evidence": "Same-window multi-Profile activation and live saved-page handoff remain root production gates."
+    },
+    {
+      "key": "coordinator-independent-review",
+      "status": "REQUIRED",
+      "evidence": "No nested delegation or independent review performed by this leaf."
+    },
+    {
+      "key": "compatibility",
+      "url": "https://github.com/Timpan4/helium-arcified/issues/59",
+      "status": "INDEPENDENT_REVIEW_PENDING_NATIVE_OPEN",
+      "evidence": "Read-only compatibility result.json/Q2 and defects.json/D1, snapshotted and hashed in compatibility-consolidation.json and compatibility-inputs.sha256."
+    }
+  ],
+  "integrationRequests": [
+    {
+      "id": "I1",
+      "owner": "commands/window-ownership",
+      "request": "Reuse existing PageCommandTarget; supply real activation binding and native generation/document/eligibility validation, including Profile chrome and platform menus."
+    },
+    {
+      "id": "I2",
+      "owner": "coordinator/root",
+      "request": "Consolidate Q1-Q6 with owner and retain root-owned lifetime/destructive/navigation choices. Reconcile Chromium multi-selection ReloadInternal with active-only ordinary reload."
+    },
+    {
+      "id": "I3",
+      "owner": "split/Peek/chrome/fullscreen/accessibility",
+      "request": "Implement accepted entry/exit and distinct visible/accessible active-page and workspace-selection cues using real native owners."
+    },
+    {
+      "id": "I4",
+      "owner": "coordinator/root/native test owners",
+      "request": "After actual production integration, register meaningful browser/interactive tests and installed per-platform scenarios using real page/Profile/host identities, cancellation, modal/security/credential flows, stale generations, multi-Profile isolation and live handoff."
+    },
+    {
+      "id": "I5",
+      "owner": "research coordinator/root, notifications/PiP/protocols, downloads/window-chrome",
+      "request": "Consolidate compatibility Q2 under focus Q5/Q6. Preserve known exact originating/registered Profile; leave missing/unattributed host/Space routes OPEN/unavailable. Assess compatibility D1 and obtain authorized native regression evidence; do not report a reproduced defect or guessed last-active fallback."
+    }
+  ],
+  "remainingCriteria": [
+    {
+      "criterion": "Active-surface versus selected-object routing",
+      "evidence": "Specified and synthetically fixtured; actual production binding/native command behavior OPEN."
+    },
+    {
+      "criterion": "Split, Peek, chrome, modal, fullscreen and close entry/exit with cues",
+      "evidence": "Specified/proposed and covered by synthetic table; Q1-Q3, native focus success and visual/accessibility observations OPEN."
+    },
+    {
+      "criterion": "Synthetic scenario tables and owner settlement across platform presentation",
+      "evidence": "Table and fixtures delivered; Q1-Q6 UNRESOLVED, coordinator review/owner recording and Linux/Windows/macOS execution OPEN."
+    },
+    {
+      "criterion": "External activation and missing-initiator targeting",
+      "evidence": "Proposed Profile-preserving target constraints and synthetic variants recorded. Q5/Q6, exact native route implementation and Linux/Windows/macOS native evidence OPEN. Compatibility D1 remains source-risk only."
+    }
+  ],
+  "nativePatch": {
+    "status": "INAPPLICABLE_TO_DECISION_LEAF",
+    "reason": "Owner focus choices and root production host/lifetime proof are unresolved; no justified native implementation in this leaf. No fake patch or tests supplied.",
+    "baseAndResult": "Exact read-only prepared base files identified in sources.json; no changed result-source variant."
+  },
+  "nativeTestRegistration": {
+    "status": "INAPPLICABLE_TO_DECISION_LEAF",
+    "reason": "No production code changed. Synthetic artifact audit is not a registered native test. I4 requests actual tests after real integration."
+  },
+  "primaryCommandId": 40744,
+  "messagePrefix": "IDS_ARCIFIED_FOCUS_ROUTING_CONTRACT",
+  "nativeAcceptance": "OPEN"
+}

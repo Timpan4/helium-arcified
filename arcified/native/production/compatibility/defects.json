@@ -1,0 +1,36 @@
+{
+  "license": "GPL-3.0-only",
+  "issueKey": "compatibility",
+  "runtimeDefects": [],
+  "publication": "Local candidate records only; no remote issues filed.",
+  "candidates": [
+    {
+      "id": "D1",
+      "state": "SOURCE_RISK_NOT_RUNTIME_REPRODUCED",
+      "title": "Extension Save As may acquire an unrelated Profile's last-active native parent",
+      "owner": "downloads",
+      "ownerIssue": "https://github.com/Timpan4/helium-arcified/issues/36",
+      "affectedSource": "S07",
+      "lines": "44-60, 77-93",
+      "platforms": [
+        "linux",
+        "windows"
+      ],
+      "observation": "The picker permits EXTENSION_API without associated WebContents. If owning_window is absent or lacks a host, it uses GetLastActiveBrowserWindowInterfaceWithAnyProfile()->GetWindow()->GetNativeWindow(). DownloadPrefs still comes from the DownloadItem BrowserContext.",
+      "inference": "An extension request originating in Profile A may be parented to the last-active Profile B host. Source alone does not prove actual UI misrouting or data access across Profiles.",
+      "scenario": "download-extension",
+      "reproductionPrerequisites": [
+        "Declared native RC and authorized extension fixture",
+        "Profile A owns the test extension/download",
+        "Profile B is last active",
+        "Request has no associated WebContents"
+      ],
+      "expectedEvidence": [
+        "Actual owning dialog native handle and Profile context",
+        "DownloadItem BrowserContext and final target identity",
+        "Cancel/complete and return focus observations"
+      ],
+      "recommendedAction": "Coordinator forwards to downloads and window-chrome owners for native regression coverage and ownership review; no patch or new classifier in this packet."
+    }
+  ]
+}

@@ -1,0 +1,480 @@
+{
+  "issueKey": "retirements",
+  "kind": "required_native_scenarios_not_executed",
+  "executionAuthority": "Root/coordinator owns native execution; browser and visual execution were not authorized for this leaf.",
+  "sharedGates": [
+    "Same actual native-window multi-Profile Space selection with real storage/authentication isolation.",
+    "Live saved-page handoff preserving TabModel/WebContents/controller/document identity; no clone or Model::OpenItem proxy pass.",
+    "Real target resolution, private/download classifiers, failure/cancellation handling and existing lifecycle/metadata codec remain authoritative.",
+    "Unavailable routes stay unavailable. Inspection of a source symbol does not prove a compiled/exposed native action."
+  ],
+  "scenarios": [
+    {
+      "featureKey": "notes",
+      "requiredSuccess": "Preview and open an owner-authorized legacy HTML note locally; export without an Arcified account; new-document routing uses the explicitly selected destination.",
+      "requiredFailureOrUnsupported": "Unsupported/malformed or missing shared content is identified without executing imported script or changing originals; no fake native editor or remote recovery.",
+      "platformResults": {
+        "linux": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "windows": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "macos": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        }
+      },
+      "evidence": null
+    },
+    {
+      "featureKey": "reader-mode",
+      "requiredSuccess": "Open and close the actual reading surface from a real selected native page; verify keyboard focus, accessible names and return to the same page/Profile.",
+      "requiredFailureOrUnsupported": "Exercise an unsupported document and private/download-classified content through the existing classifier. Preserve the original page; no blank or falsely successful reader surface.",
+      "platformResults": {
+        "linux": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "windows": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "macos": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        }
+      },
+      "evidence": null
+    },
+    {
+      "featureKey": "paste-go",
+      "requiredSuccess": "Invoke an explicit paste/navigation action with a synthetic URL; verify native validation, selected page and real Profile/window target.",
+      "requiredFailureOrUnsupported": "Cancel paste/navigation and exercise an invalid/disallowed URL. No background clipboard reads, unintended tab creation or navigation after cancellation.",
+      "platformResults": {
+        "linux": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "windows": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "macos": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        }
+      },
+      "evidence": null
+    },
+    {
+      "featureKey": "recent-tab",
+      "requiredSuccess": "Use active-tab status, recent switcher and ordered traversal by keyboard and accessibility tooling with multiple Spaces/windows.",
+      "requiredFailureOrUnsupported": "Switch to a saved page already live elsewhere through the actual handoff path without duplicate/reload. No status indicator may falsely imply a different page is active.",
+      "platformResults": {
+        "linux": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "windows": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "macos": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        }
+      },
+      "evidence": null
+    },
+    {
+      "featureKey": "command-education",
+      "requiredSuccess": "Discover a supported verb and keyboard hint, invoke it through the real ActionItem target and dismiss help back to the initiating control.",
+      "requiredFailureOrUnsupported": "An unavailable legacy command stays unavailable; changing Profile/Space while help or the command bar is open must not dispatch a stale target.",
+      "platformResults": {
+        "linux": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "windows": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "macos": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        }
+      },
+      "evidence": null
+    },
+    {
+      "featureKey": "github-previews",
+      "requiredSuccess": "Without provider access, navigate an ordinary GitHub bookmark/folder. If separately approved, exercise the actual Live Folder with named Profile/provider scope.",
+      "requiredFailureOrUnsupported": "Disabled, logged-out, revoked, offline and stale states must be explicit. Imported metadata never silently authenticates or discovers an account.",
+      "platformResults": {
+        "linux": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "windows": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "macos": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        }
+      },
+      "evidence": null
+    },
+    {
+      "featureKey": "icloud-sync",
+      "requiredSuccess": "Use local import/export, Profile organization and session recovery while no Arcified account or sync service is configured.",
+      "requiredFailureOrUnsupported": "No iCloud enrollment, new sync backend, remote conflict repair or mandatory account gate. Native settings/onboarding must accurately describe exclusion.",
+      "platformResults": {
+        "linux": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "windows": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "macos": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        }
+      },
+      "evidence": null
+    },
+    {
+      "featureKey": "legacy-boost",
+      "requiredSuccess": "Under the Boost leaf's approved scope, apply and revert a declarative style/zap in the actual page and inspect persistence and disable controls.",
+      "requiredFailureOrUnsupported": "Leave imported executable content inert. Unsupported legacy data, origin mismatch and disable/revert failures are visible without claiming full compatibility.",
+      "platformResults": {
+        "linux": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "windows": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "macos": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        }
+      },
+      "evidence": null
+    },
+    {
+      "featureKey": "ask-page",
+      "requiredSuccess": "Use ordinary native local find without a provider or page-content upload.",
+      "requiredFailureOrUnsupported": "The retired/later AI route remains unavailable unless separate consent and provider work is accepted. No ask-page success screen backed by ordinary find.",
+      "platformResults": {
+        "linux": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "windows": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "macos": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        }
+      },
+      "evidence": null
+    },
+    {
+      "featureKey": "arc-sunset",
+      "requiredSuccess": "Preview an authorized observed export, report supported/unmapped fields, then import through the existing codec into the explicitly chosen local target; re-export without an account.",
+      "requiredFailureOrUnsupported": "Keep originals; malformed/unknown formats, absent hosted content and Profile ambiguity remain unresolved or reported. No inferred conversion of live page credentials or automatic source removal.",
+      "platformResults": {
+        "linux": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "windows": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "macos": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        }
+      },
+      "evidence": null
+    },
+    {
+      "featureKey": "people-cards",
+      "requiredSuccess": "Open the site's own profile page or ordinary bookmark.",
+      "requiredFailureOrUnsupported": "No enrichment calls, person matching or fabricated card. Historical feature help must not advertise a service as available.",
+      "platformResults": {
+        "linux": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "windows": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "macos": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        }
+      },
+      "evidence": null
+    },
+    {
+      "featureKey": "favorite-previews",
+      "requiredSuccess": "Open Notion, Figma and Linear ordinary favorites independently. Any later accepted per-site preview needs its own exact data/action scenario.",
+      "requiredFailureOrUnsupported": "No undocumented recent-document requests or actions. Disabled/offline/stale or unavailable previews must not present cached data as current; generic folder previews do not pass.",
+      "platformResults": {
+        "linux": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "windows": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "macos": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        }
+      },
+      "evidence": null
+    },
+    {
+      "featureKey": "dia-memory",
+      "requiredSuccess": "Confirm retirement documentation shows both conflicting primary references and ordinary local history remains independently usable.",
+      "requiredFailureOrUnsupported": "No passive personal-summary collection or proof-of-deletion claim. Installed Dia state is an external research check requiring later authorization, not a native Arcified pass.",
+      "platformResults": {
+        "linux": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "windows": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "macos": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        }
+      },
+      "evidence": null
+    },
+    {
+      "featureKey": "mobile-arc-search",
+      "requiredSuccess": "Confirm desktop scope/help distinguishes iOS and Android references; inspect only an authorized provided link export through import-format work.",
+      "requiredFailureOrUnsupported": "No desktop parity claim for mobile-only AI/gestures, no sync enrollment, and no claim a link list contains complete session or Profile data.",
+      "platformResults": {
+        "linux": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "windows": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "macos": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        }
+      },
+      "evidence": null
+    },
+    {
+      "featureKey": "dia-work",
+      "requiredSuccess": "Navigate ordinary work websites without a connector; desktop scope/help accurately marks connectors/decks/Morning Brief as deferred.",
+      "requiredFailureOrUnsupported": "No automatic authentication, connected-tool calls, generated deck/report or background briefing is implied by ordinary site support.",
+      "platformResults": {
+        "linux": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "windows": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "macos": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        }
+      },
+      "evidence": null
+    },
+    {
+      "featureKey": "vendor-services",
+      "requiredSuccess": "Open an actually present local export or ordinary link while accurately identifying unavailable hosted functionality.",
+      "requiredFailureOrUnsupported": "Missing/expired/disabled vendor content stays unavailable. No fake store/service success, account creation, remote data-recovery promise or replacement sync backend.",
+      "platformResults": {
+        "linux": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "windows": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        },
+        "macos": {
+          "implementation": "NOT_PROVEN_BY_THIS_PACKET",
+          "nativeExecution": "NOT_RUN",
+          "visualExecution": "NOT_RUN",
+          "release": "NOT_PROVEN",
+          "nativeAcceptance": "OPEN"
+        }
+      },
+      "evidence": null
+    }
+  ],
+  "registeredTestsAdded": [],
+  "testRegistrationDisposition": "INAPPLICABLE_FOR_RESEARCH_ONLY_PACKET",
+  "nativeAcceptance": "OPEN"
+}

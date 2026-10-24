@@ -1,0 +1,12 @@
+{
+  "path": "chrome/browser/ui/web_modal/browser_window_modal_dialog_delegate.cc",
+  "commit": "a49e2e3d4addfd84e765b52afe230bedb81096db",
+  "url": "https://chromium.googlesource.com/chromium/src/+/a49e2e3d4addfd84e765b52afe230bedb81096db/chrome/browser/ui/web_modal/browser_window_modal_dialog_delegate.cc?format=TEXT",
+  "retrievedAt": "2026-10-23T15:01:23.740Z",
+  "kind": "file",
+  "bytes": 6310,
+  "sha256": "31894ce5f98449c997eca5d9b813ea70aea2f90d3ed0b993dab79a04cf7f3394",
+  "gitBlob": "6ef238d19456472914e3e212c89d09310b3d8de7",
+  "lines": 140,
+  "proof": "Read-only source retrieval only. No prepared tree, compilation, or runtime execution."
+}

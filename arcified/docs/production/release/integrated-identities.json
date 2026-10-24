@@ -1,0 +1,272 @@
+{
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "preparedSource": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+  "preparedSourceAccess": "READ_ONLY",
+  "patch": "integrated.patch",
+  "patchSha256": "fff0a1bd84be5de897109032deadc0548339b464b352962f71c3bbea29c81bd8",
+  "files": [
+    {
+      "path": "chrome/app/arcified_update_linux_strings.grdp",
+      "baseSha256": null,
+      "preparedSha256": null,
+      "resultSha256": "e29d5abb39c8085650eb77a52fa6a01fdbb99887edc543a3c1302f23c1b2a437",
+      "packets": [
+        "update-linux"
+      ]
+    },
+    {
+      "path": "chrome/app/generated_resources.grd",
+      "baseSha256": "bb7090106bf2e0912d97dfe0435dd901de3cab8ac5b4565d48ae46a2f631a020",
+      "preparedSha256": "bb7090106bf2e0912d97dfe0435dd901de3cab8ac5b4565d48ae46a2f631a020",
+      "resultSha256": "e287cd4b73f5c563d933e35e325e678c7a823b08d404c68deea435a78f4aba55",
+      "packets": [
+        "update-linux",
+        "update-windows",
+        "update-macos"
+      ]
+    },
+    {
+      "path": "chrome/browser/resources/settings/about_page/about_page.ts",
+      "baseSha256": "10ce9b8be3b7d31138c1dc56936bbf829a78738c86bb78fc3edcaad79036870c",
+      "preparedSha256": "10ce9b8be3b7d31138c1dc56936bbf829a78738c86bb78fc3edcaad79036870c",
+      "resultSha256": "e3e37344cf46c56074aea16161f816616d79812cccf35631e1a7bf410fa865ed",
+      "packets": [
+        "update-linux",
+        "update-windows"
+      ]
+    },
+    {
+      "path": "chrome/browser/ui/webui/help/BUILD.gn",
+      "baseSha256": "34515ae3307aa138e17ce433b2eb1383ccd7d69617f81a99cce621cc69af278e",
+      "preparedSha256": "34515ae3307aa138e17ce433b2eb1383ccd7d69617f81a99cce621cc69af278e",
+      "resultSha256": "b903341a3fc47723b5f406c5aef59651ce60a36fb9942326c3f6046c27e4833b",
+      "packets": [
+        "update-linux",
+        "update-windows",
+        "update-macos"
+      ]
+    },
+    {
+      "path": "chrome/browser/ui/webui/help/version_updater_arcified_linux.cc",
+      "baseSha256": null,
+      "preparedSha256": null,
+      "resultSha256": "d1e5ab23db2f02de515a3f2d63948784b5e2d3c5f51042776f7b5e9874208e7c",
+      "packets": [
+        "update-linux"
+      ]
+    },
+    {
+      "path": "chrome/browser/ui/webui/settings/BUILD.gn",
+      "baseSha256": "f6b26cbffd42cef403132ccde1ce54145ac5dd0a0a2897af7f833c4dd898287e",
+      "preparedSha256": "f6b26cbffd42cef403132ccde1ce54145ac5dd0a0a2897af7f833c4dd898287e",
+      "resultSha256": "093537660f29bb12b40c52164f17261cea812c44cce1c254056984dc4bc66609",
+      "packets": [
+        "update-linux"
+      ]
+    },
+    {
+      "path": "chrome/browser/ui/webui/settings/arcified_update_linux_browsertest.cc",
+      "baseSha256": null,
+      "preparedSha256": null,
+      "resultSha256": "3325cf528933982f1864d7f7c5d03a906fa7f57b58f3fbf6ac7d72ec251e0b4e",
+      "packets": [
+        "update-linux"
+      ]
+    },
+    {
+      "path": "chrome/browser/ui/webui/help/arcified_version_updater_win.cc",
+      "baseSha256": null,
+      "preparedSha256": null,
+      "resultSha256": "040c2a30c7ed453f1ef0dd6383de110f9b752e5c0b1836199cc4a6c62352aba4",
+      "packets": [
+        "update-windows"
+      ]
+    },
+    {
+      "path": "chrome/browser/ui/webui/help/arcified_version_updater_win_browsertest.cc",
+      "baseSha256": null,
+      "preparedSha256": null,
+      "resultSha256": "d6670f3845ea3380fa3d6b6c535ca6a101ba50b970e1fa4990bad7109061470b",
+      "packets": [
+        "update-windows"
+      ]
+    },
+    {
+      "path": "chrome/browser/ui/webui/help/arcified_version_updater_win_unittest.cc",
+      "baseSha256": null,
+      "preparedSha256": null,
+      "resultSha256": "f58966fd47bc0cd8c0eca5d38be856b715f7d634cd92402346661ff68c56cfa4",
+      "packets": [
+        "update-windows"
+      ]
+    },
+    {
+      "path": "chrome/test/BUILD.gn",
+      "baseSha256": "38933520829a78288766cd702e665076f62e4ac720c82ca816d342a59a874099",
+      "preparedSha256": "38933520829a78288766cd702e665076f62e4ac720c82ca816d342a59a874099",
+      "resultSha256": "a33e98b27757846c22b123016e15de9a4ce8b37e65d13ea748607c90868dbc98",
+      "packets": [
+        "update-windows",
+        "update-macos",
+        "release-linux"
+      ]
+    },
+    {
+      "path": "chrome/browser/ui/webui/help/version_updater_arcified_mac.cc",
+      "baseSha256": null,
+      "preparedSha256": null,
+      "resultSha256": "b64412d2024549b742989032b3c2c1c8894ceca2108915e80e334e6ddf63e785",
+      "packets": [
+        "update-macos"
+      ]
+    },
+    {
+      "path": "chrome/browser/ui/webui/help/version_updater_arcified_mac_browsertest.cc",
+      "baseSha256": null,
+      "preparedSha256": null,
+      "resultSha256": "08854f9b5c1a63546711a16d155212ad6ff9ac9bf18997871274c1ad7fd7a30f",
+      "packets": [
+        "update-macos"
+      ]
+    },
+    {
+      "path": "chrome/browser/profiles/BUILD.gn",
+      "baseSha256": "5e42da6ceefd3bcaf2a418d43bb3c5372c8e1d9d8ecbdf84d081127f5b56d15c",
+      "preparedSha256": "5e42da6ceefd3bcaf2a418d43bb3c5372c8e1d9d8ecbdf84d081127f5b56d15c",
+      "resultSha256": "a1f297e94119d02edcef1041c799ee845f415c15e582b8539fac432d364554e6",
+      "packets": [
+        "engine-updates"
+      ]
+    },
+    {
+      "path": "chrome/browser/profiles/arcified_engine_update_browsertest.cc",
+      "baseSha256": null,
+      "preparedSha256": null,
+      "resultSha256": "0ec5e90fdbd38faea9ba681be52bacaccce00dd3a0faae0c69e9bb213f360556",
+      "packets": [
+        "engine-updates"
+      ]
+    },
+    {
+      "path": "chrome/installer/util/helper.cc",
+      "baseSha256": "0b780a6da731723090d7570147b7a391335622f7bec095659777c98f07445309",
+      "preparedSha256": "0b780a6da731723090d7570147b7a391335622f7bec095659777c98f07445309",
+      "resultSha256": "a3176bc8daeddb71d6cdcaecf1059bacb759021f90a1dab129c17b021f4259b5",
+      "packets": [
+        "release-windows"
+      ]
+    },
+    {
+      "path": "chrome/installer/util/helper.h",
+      "baseSha256": "4b6d074765edecc89717d994d073651800d7f80095558f8421468fda19004452",
+      "preparedSha256": "4b6d074765edecc89717d994d073651800d7f80095558f8421468fda19004452",
+      "resultSha256": "8d60a2d5e772da4e003934981f7c077141090dbab8b1e5a81ed52fd6dc52fb49",
+      "packets": [
+        "release-windows"
+      ]
+    },
+    {
+      "path": "chrome/installer/util/helper_unittest.cc",
+      "baseSha256": "81364c7cfa2fc0cb3d223bfc97a33a6481c2549a04fe66042f94991c33ed7d4a",
+      "preparedSha256": "81364c7cfa2fc0cb3d223bfc97a33a6481c2549a04fe66042f94991c33ed7d4a",
+      "resultSha256": "b2d2cb4c1c85c0074dd433840eb68c12ef897f46467befd243127a9354a4dd50",
+      "packets": [
+        "release-windows"
+      ]
+    },
+    {
+      "path": "chrome/installer/mac/BUILD.gn",
+      "baseSha256": "343c88f19e9a57c9687b253fdf0655cfb4210d5db2be53ca7b5560d7ec30e935",
+      "preparedSha256": "343c88f19e9a57c9687b253fdf0655cfb4210d5db2be53ca7b5560d7ec30e935",
+      "resultSha256": "157c3e50acfdf4a9c55f0f6c2f9169db1ae6413dff0895753aa74fad2a1c6232",
+      "packets": [
+        "release-macos"
+      ]
+    },
+    {
+      "path": "chrome/installer/mac/arcified_signature_artifact_test.cc",
+      "baseSha256": null,
+      "preparedSha256": null,
+      "resultSha256": "4a96968570ea72f092cbaf2e5bbe082050ccb20b7bcca662378e3550f920672d",
+      "packets": [
+        "release-macos"
+      ]
+    },
+    {
+      "path": "chrome/installer/mac/arcified_signature_audit_main.cc",
+      "baseSha256": null,
+      "preparedSha256": null,
+      "resultSha256": "323f7ade372fb2bea571663f5c6b4c4303afb5c7dbaaae72aaedc6a691b0adcc",
+      "packets": [
+        "release-macos"
+      ]
+    },
+    {
+      "path": "chrome/installer/mac/arcified_signature_verifier.cc",
+      "baseSha256": null,
+      "preparedSha256": null,
+      "resultSha256": "bcf6e5c6e260cddd65dbc3605839ba8f33e4a9239ce6ad07149b24335d5854ec",
+      "packets": [
+        "release-macos"
+      ]
+    },
+    {
+      "path": "chrome/installer/mac/arcified_signature_verifier.h",
+      "baseSha256": null,
+      "preparedSha256": null,
+      "resultSha256": "8850671ab0fc2375d1ec7bce96ac2f8747eb4d0547abb6076ade9581892ca5e8",
+      "packets": [
+        "release-macos"
+      ]
+    },
+    {
+      "path": "chrome/installer/mac/arcified_signature_verifier_unittest.cc",
+      "baseSha256": null,
+      "preparedSha256": null,
+      "resultSha256": "c724338935a80428cdd7445cf611b23f3882ad7a4b0d79467766536d8f7692dd",
+      "packets": [
+        "release-macos"
+      ]
+    },
+    {
+      "path": "chrome/browser/arcified/release_linux_browsertest.cc",
+      "baseSha256": null,
+      "preparedSha256": null,
+      "resultSha256": "5befb1f0f8161b560a21e5a4f64fd976f01333e2bdeacb8755f1f4b09316813f",
+      "packets": [
+        "release-linux"
+      ]
+    },
+    {
+      "path": "chrome/app/generated_resources.grd.gritdeps",
+      "baseSha256": "bcb6af069d4a518e4e5fa5b9b002929a2bb6ef7870a2c063f1a494736d69f967",
+      "preparedSha256": "bcb6af069d4a518e4e5fa5b9b002929a2bb6ef7870a2c063f1a494736d69f967",
+      "resultSha256": "bec6ed94e6952ace39f768fc07195b614466eed219060c3660b55bf4651565fa",
+      "packets": [
+        "update-linux"
+      ]
+    }
+  ],
+  "scope": "Sparse reconciliation of seven packets. This is not native integration, compilation or acceptance.",
+  "checks": {
+    "baseAndPreparedHashes": "PASS for every modified source and every shared packet base",
+    "forwardPatchCheck": "PASS, git apply --check --whitespace=error-all",
+    "reversePatchCheck": "PASS, git apply --reverse --check",
+    "reconstruction": "PASS, revised 26-file complete sparse application matched all result files byte for byte",
+    "mergedGnSyntaxAndFormat": "PASS, prepared GN format and dry-run",
+    "mergedResourceXml": "PASS, xmllint --noout --nonet",
+    "mergedWhitespace": "PASS, git diff --no-index --check emitted no diagnostics, expected differing-tree exit 1",
+    "nativeBuildAndTests": "NOT_RUN",
+    "macosPlatformOverlay": "OPEN, known Sparkle help BUILD.gn overlap must be refreshed after full platform series",
+    "gritDependencyCheck": "PASS, prepared tools/grit/grit_info.py --check-grit-deps on coordinator-owned sparse resource inputs with read-only links to unchanged prepared GRIT parts; no GRIT resource generation or native build"
+  },
+  "reviewResponses": {
+    "acceptedFindings": [
+      "Private ScopedDisableForTesting constructor corrected using MakeScopedDisableForTesting",
+      "New GRIT part registered in generated_resources.grd.gritdeps",
+      "Added HAS_OUT_OF_PROC_TEST_RUNNER to arcified_windows_browser_tests source set",
+      "macOS test uses BrowserWindowInterface::GetProfile()"
+    ],
+    "reviewStatus": "All corrected packets and combined source have clean independent reviews. Exact reports in review-evidence.json."
+  }
+}

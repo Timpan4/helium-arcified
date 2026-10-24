@@ -1,0 +1,1964 @@
+{
+  "issue": "https://github.com/Timpan4/helium-arcified/issues/41",
+  "fork": {
+    "commit": "a4b6b480d3de07857ab6e939149254a8359e5449",
+    "tracked_changes": false,
+    "files_sha256": {
+      "chromium_version.txt": "fda36b155d508c38b759a12899cb489eb630d7374e6eacf3ee1e2acb92a4eb1c",
+      "version.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "revision.txt": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+      "downloads.ini": "232fa8f2f717ab199da94f549efc182aaae05cd2dc07868408c9f1dca9bd96f4",
+      "deps.ini": "db1a8acc515b62147c6825503e33598e50d4598e9b525631f759536e857f1bf1",
+      "flags.gn": "c27728f78d80d7eb6ab9f2d9136fb53ecd59fb69693d969c6092f9573602459b",
+      "pruning.list": "844c2e368cb05a42bc0ba3834a0019d8772c5cf82b2e3eadd7de8a89645bdbac",
+      "domain_regex.list": "cf128b0f182692dbf90553aaedd0d3ebc1982076dd94ad94f344bb3677455d2c",
+      "domain_substitution.list": "5e2dd6e26dd1fd208e7e81aebf111fcd1741f36c5e4877572b4d666b6ddd87a6",
+      "patches/brave/chrome-importer-files.patch": "0465655fef9ee8a2b7f980ac0df7bfcfa755335f63bd70dbb7249810c6c8f3af",
+      "patches/brave/custom-importer.patch": "023f5f4807844f8f034c6a407fa33b54c9addcd4bd107aaec58ccc158c5b472a",
+      "patches/brave/fix-component-content-settings-store.patch": "3273c14018197c99b7180b394858a2ad836a85610a6656711a9d0a1f333bdff9",
+      "patches/brave/tab-cycling-mru-impl.patch": "3260d3dca144922bdc3992315abbed376f3c8318ac7c365f680f7f28128c480f",
+      "patches/bromite/disable-fetching-field-trials.patch": "b997dfe17a5eb0895d8527a505f282d1078c776765a80b1e807bdcaccfe288f0",
+      "patches/bromite/fingerprinting-flags-client-rects-and-measuretext.patch": "5a51f6754b5ca4328e748ac6f7bdc11c04bfa787458b9525ea3e7bce94544de4",
+      "patches/bromite/flag-max-connections-per-host.patch": "6ee9113baa05937672df5a548393d3dbae950e9d651fd1b422ed47358538a971",
+      "patches/debian/disable-google-api-warning.patch": "9e548b6b6008cb04b2091b1e3cad6531e493a674d40b5e5b01f8c467eff1f9f6",
+      "patches/helium/core/add-arc-importer.patch": "5f4418f50c5609218d046168611a76905aafc3707389df284003da7448198e88",
+      "patches/helium/core/add-component-l10n-support.patch": "b80c9d314c7c15a9ac651b3a0b6d656ecc83ff69880154c43a0ff5d23d702450",
+      "patches/helium/core/add-component-managed-schema-support.patch": "f4bc3dd96b06e8789ada8dbc979c1b15d7a78e3389e930e333dd7769b9f257fa",
+      "patches/helium/core/add-default-browser-reject-button.patch": "031bb5e95279b96e0e7aa9f8d4bdb4e98ca407e81b95258f8f5e9175d82a434c",
+      "patches/helium/core/add-helium-versioning.patch": "c92fa1d5105d17042b4bf9958640eb47020763fb9708ec2f36b44a2afe36d8bb",
+      "patches/helium/core/add-low-power-framerate-flag.patch": "e571eac95a111558ed43a82b31714f0ee1a3931f660ef825d0210f548e69be67",
+      "patches/helium/core/add-middle-click-autoscroll-flag.patch": "979df9be80228c671f2b35afb767514e0a0fa7d48f67a6abb0531b9c7543fb5a",
+      "patches/helium/core/add-native-bangs.patch": "2c4a1f3a50d772f7499a577daa67a680490484ed173d89cd1f5039d85c5a00d1",
+      "patches/helium/core/add-update-channel-flag.patch": "4a5138dada09dc1dab95ec5c6ec32ad85b91de9de9591e29c6cabfdd854cbd8b",
+      "patches/helium/core/add-updater-preference.patch": "51f927c69935fd8bb8f58f77b6043a92df6e5d704590b476a0192da8e91b5fa5",
+      "patches/helium/core/add-zen-importer.patch": "2f92e76e90b4bd7c7f909f19677cfce3bdeaf81e5600b8ce711a48ca9ba3112f",
+      "patches/helium/core/bookmark-open-all-confirmation-flag.patch": "7782fcdfafed777fa40b2e20cd428a3333b0018cb7ada87818d74af04d3deabd",
+      "patches/helium/core/browser-window-context-menu.patch": "963efc0ec805e80792915ffd25c3e3d082f7078cf33331ed950e21af4b24ba80",
+      "patches/helium/core/change-chromium-branding.patch": "0c120626d572a621171b6ab235fcd74a7f3be627fb2adcb8b24f1445b745342f",
+      "patches/helium/core/clean-omnibox-suggestions.patch": "709fa57728f82f5fc3bac9ce2f7d307e94281a84a3f81a80519812a0d7faa3b5",
+      "patches/helium/core/close-tabs-to-left.patch": "830be565b7e7c283462ecb8764fce26c20e590b43e36a56bd9c901e2c47cdaf7",
+      "patches/helium/core/component-updates.patch": "d274755bf115e87129aa6eeb0ae3f59e1d5a183fc97cb4bb88f4d35b24c78a91",
+      "patches/helium/core/copy-url-tab-context-menu.patch": "c3000915510cd095564b584a46d3f03496968757a1f8187678bdde5968cf97c9",
+      "patches/helium/core/crash-reporter-privacy-tweaks.patch": "364db55b545a40436e6c3cdaa01432499ea9ffbb1ad4053679dc75f06b387ae2",
+      "patches/helium/core/crash-reporting-prefs.patch": "ec3920ef61a5ce3d7469e41d70d9185beb553d87f6bcbbfa4a42a4fd5aa905fb",
+      "patches/helium/core/custom-keyboard-shortcuts.patch": "5dff60546d45d192a3f85174687959abdae7e7936cea66c4d096419484748a88",
+      "patches/helium/core/custom-profile-avatar.patch": "1ac78f597e5bfc41873cc947ef772c672576cdd1f41896d22001bcc9d3eba37b",
+      "patches/helium/core/degoogle-context-menu.patch": "e67ae5597934ef737bdd3b84430803d947703c17b83992ac03c84bfa9dcdade5",
+      "patches/helium/core/disable-ad-topics-and-etc.patch": "b8587a591515496b24f6321cab8ef479005618b98d43940086e66c51b3312244",
+      "patches/helium/core/disable-annoying-infobars.patch": "4ce62bc82b463c7bb7a373afc0262a98637aaa511dff40966e8500b419ad3503",
+      "patches/helium/core/disable-bookmarks-bar.patch": "fdab3b82915c13246fe2960ae07ebb1b253bcc98fd788f58b42540ba8000c453",
+      "patches/helium/core/disable-fedcm-bubble.patch": "dd2a1141c18fb45acf56126efbbf89024f4a707eb7a99ef6a9673e2fe30245bb",
+      "patches/helium/core/disable-history-clusters.patch": "215cbebe751834fafe8ea59fa869d39ab90560c3785834689b31dd9fbd5de990",
+      "patches/helium/core/disable-live-caption-completely.patch": "b6ce5947b966ac92d05adca61ad21c907028c623696e841ffe6ee17c81be4c90",
+      "patches/helium/core/disable-non-standard-auth-features.patch": "0964120095dfa71074108c5b7edc55944dcfb2f7113acb0301a9463ba150d505",
+      "patches/helium/core/disable-ntp-footer.patch": "abb1869cecba9458f0beb51e249fb719afc121fd953b640eb72f11e8383f0e24",
+      "patches/helium/core/disable-outdated-build-detector.patch": "55affebf4bd3a116209cf11cccf65ddfb96536ad8e0f7a7e3e7834af6b879bed",
+      "patches/helium/core/disable-password-manager.patch": "e41a90415095fd62b02224679cc1a8d1fd4d770918067370edb7dcc575f8c26a",
+      "patches/helium/core/disable-side-panel-flyover.patch": "b39461628442558fb5bda5451db89f9b67be9cf7e011d1aa2d9e88c12eb6721e",
+      "patches/helium/core/disable-touch-ui.patch": "7ff54ec4db9f952eb18f4481e4bc136c71a18f5086b938d3fe5b9992cc530218",
+      "patches/helium/core/disable-unsupported-importers.patch": "05cca876e4872ec2ee36ccb5cbee3765c4de2ce1e90e43ff016136bff27ad08d",
+      "patches/helium/core/disable-update-toast.patch": "a363303c987488abd3739fdf072ac8c2b11f5d949d66ac2800a847b021ee631b",
+      "patches/helium/core/disable-user-education-nags.patch": "c9bc1d51fc61b0c806563e492a7bcacce4486a704e1b2ffad4cfbd7e1e9bb199",
+      "patches/helium/core/enable-back-to-opener.patch": "e1d76dbb2c503a03daede504d3999a27eebcd9e2262fa1e5bdea8c4af3eeecbf",
+      "patches/helium/core/enable-bookmark-bar-settings.patch": "13de384476bbac120e07d9853c753f8c3c77eae0184cdcd4ffe6be5fff71db84",
+      "patches/helium/core/enable-glow-up-features.patch": "bca746db0f35f75e40c0e1bfaab3e4a2f87c992e9e03dc0efa12c640087ea933",
+      "patches/helium/core/enable-screenshots.patch": "3e160b640b011fb10cb27d3a409e8c4e14c8f3cdb72c2332d739c929e18883ac",
+      "patches/helium/core/enable-tab-hover-cards.patch": "bd77867345d1f55fd08fd6eebcdf171f32e8d2f6f4a4136082814b78c9339fea",
+      "patches/helium/core/exclude-irrelevant-flags.patch": "4489b19b8df1b750aa5a9222e8e0130fe52b23c0bc312cde781715a4651bf102",
+      "patches/helium/core/fix-building-without-safebrowsing.patch": "0563314ecc2e301201d1375e8861422e2dcaee0c555d47f794fdbf3a6ffd547b",
+      "patches/helium/core/fix-instance-id-stuck.patch": "4de237768a897c11d4e5849a6bf13cca78f263df1a24435844e1036221afae8a",
+      "patches/helium/core/fix-tab-sync-unreached-error.patch": "face8d8b05ca635878fffd434705542e22776efd1e273cb0cdd40bbc01958230",
+      "patches/helium/core/fixups-chrome-webstore-script.patch": "ae784188e6e85fb9db0e39cc412ab3dc3e6e7e920bc0b717453a631b11a8a488",
+      "patches/helium/core/fixups-component-setup.patch": "1d97e1192c277a3ff791c9702f9480d929dd05ddcceb43912a93f951dc71d35b",
+      "patches/helium/core/flags-setup.patch": "3e549e4cf3c5bd30533ba754d2fe6c0b1ea3c40f0ca8b2e9c30cd6ee0de84b8a",
+      "patches/helium/core/force-paste-action.patch": "b6af7f6e6a78281fe740cbc68af1b37ca21468c95e1ff0ff03ebfb3ffcbc4e6b",
+      "patches/helium/core/hibernate-tab-context-menu.patch": "a3cb607bfdd10e5af9ee8fdaccaf2d9123cfb82405eb523a0d9d273f118e9b48",
+      "patches/helium/core/increase-incognito-storage-quota.patch": "6e9924ded8f370633f4d99d7bb8d393ccc71c77225c0aed5cc546742c5485724",
+      "patches/helium/core/infinite-tab-freezing.patch": "90818e5c3c1f456cafce200dae28b0421cca5729685f1b34f575c81fc5878838",
+      "patches/helium/core/keyboard-shortcuts.patch": "b3915c2f5beea45c7e9828d627c4f299f014fcea7bfbdb4a8c8f1da48f8eda37",
+      "patches/helium/core/lazy-session-restore.patch": "9d72a652f626edc8505db638a890d2a8eacc8ca269f9811888696447f4755c10",
+      "patches/helium/core/memory-saving-by-default.patch": "82858575aac6d0088c6a1c146c7cb0011e96c3556e674f23a136d99e4a3c271d",
+      "patches/helium/core/mute-tab-context-menu.patch": "9e23448687616657b940058ad3fc6774dddd4483e039cc151ec5b0f9749595aa",
+      "patches/helium/core/network/disable-ech-flag.patch": "49a1ab5745651ee7ee62bf5c7f882bfead8c3e788780db58a887d1f3a7b6cc0b",
+      "patches/helium/core/network/dns-providers.patch": "746e1e66bfaae46a200485437de2ebdc83771d345098ddbb7ce279397f29f4d0",
+      "patches/helium/core/network/global-privacy-control-pref.patch": "7747e4f435a5e565f1e2e609fd12a56d91e19b926ad4a5403a874a3bc9579ebe",
+      "patches/helium/core/network/ignore-system-proxy-server-flag.patch": "e68a5de0bd21f95e27004fbbeacd9f43d0694a34e530742da1fd1f345c381951",
+      "patches/helium/core/network/quic-v2-flag.patch": "b629e44e2ebac87ccd9fc820f9093157a4736e61b10ff775d1c1e3451b88bd4b",
+      "patches/helium/core/network/split-clienthello.patch": "cf57b433f9c7c3b847cd048e54225e30f4a06f8e04cb759713af927a265a0838",
+      "patches/helium/core/noise/audio.patch": "69732d0e532033bda29af91ae0611f45e05b101b9e36affe186cff4b1816990f",
+      "patches/helium/core/noise/canvas.patch": "8692e269e63de4262ac5ba55d1a14b90e14bffc03ad00d7822cbfafc1b10a8fa",
+      "patches/helium/core/noise/core.patch": "2211d32273a7a8d520cdb804ace723bbbb0700ea514b5f7bd7471008cbd33bd3",
+      "patches/helium/core/noise/hardware-concurrency.patch": "eac6cfbf192d22d370f9fada012f5e2d2fbcd9d9cdb9e5dba54028ad4122229c",
+      "patches/helium/core/onboarding-page.patch": "3b7fe4ca338b681e35d1caddbe510dd6d9f96881aa8aa4435eced3cca3b3ec24",
+      "patches/helium/core/open-new-tabs-next-to-active-tab-option.patch": "60b801d026a82053cc05b82953263bbe9695b0a4da9b8f0d8806b09ff444fb74",
+      "patches/helium/core/override-chrome-protocol.patch": "1c8b1a92a24b1fa6c9c100ac1d941e197c326fa4786f7872328c82febca1aa3b",
+      "patches/helium/core/prefer-https-by-default.patch": "89e216c1dcf5c28b42c70e7b8e9465d7143620711e73a888558f38af006fa0e0",
+      "patches/helium/core/prioritize-platform-policy-loading.patch": "17725bd99a9ae0edc2c8859cf26816faf92c63b42ef0e55c32daac04aa8ee906",
+      "patches/helium/core/proxy-extension-downloads.patch": "f9ac80de1a700c6f3849334956a6eb9d0a32925501807b8257ece875247bb6f9",
+      "patches/helium/core/rbe-nativelink-config.patch": "6ac5a6239f1308ee0ad64239e56b6d19057a1c2f5b5ad6f948de4956cd3cbf1f",
+      "patches/helium/core/reduce-accept-language-headers.patch": "e2b48476a4902ceb736407fd5813f324b6d7a5bb9961e7eb875ecf977b711a7e",
+      "patches/helium/core/reenable-spellcheck-downloads.patch": "50709b8aedba9f2c9f840ec452ce078523657950d9050dcea4365459c87720bd",
+      "patches/helium/core/reenable-update-checks.patch": "15f0858ba901c0db1a81a4c405fbcad68c35ec49a3cab1e1f0494f8a1d6880fb",
+      "patches/helium/core/remove-dead-toolbar-actions.patch": "90c15dc07cac46572086f5f3305cf6a80d0f6f02ff92e0edc0f467425a4f7cf6",
+      "patches/helium/core/remove-experimental-webui.patch": "73be07f491a539e9111719658f9dc08c1232488fcd4ec003743f122107b8aa22",
+      "patches/helium/core/remove-unused-ai-resources.patch": "5aa12116be37268b971d9d5314b095a6e5d29d2967fc7d2682c5aa54bad16f9a",
+      "patches/helium/core/replace-default-profile-name.patch": "1813db5a136ff7049ce20365829597af452901e028b682bed3894fd6deb908a0",
+      "patches/helium/core/ridiculous-google-compat-exceptions.patch": "20546cf571d5c9e3fdaf97a0e018f859d4ee25968b25d250f29c776bf1adec90",
+      "patches/helium/core/scan-chrome-native-messaging-hosts.patch": "f1f968332beffcd58e4dc013e20ea597c3403ea1a220187c43e377256b845e30",
+      "patches/helium/core/search/add-kagi-image-search.patch": "326329ac09fce96bbcd460cdd4e9da4e0a994b294640d184f968ead5dd316775",
+      "patches/helium/core/search/break-favicons.patch": "a154951983415bec3fe1b19ddfb5b61bbff88586f5c25a9b96351b2da382ac93",
+      "patches/helium/core/search/engine-defaults.patch": "22f1bcd4bab81076eb4769d6e4246ea8a53c774db976ff1c0f440d97f6e0f902",
+      "patches/helium/core/search/fix-brave-name.patch": "1dad3b5d3adf76634f502abbf48322f5ea848eea4ab58f230e6aebe707990e70",
+      "patches/helium/core/search/fix-search-engine-icons.patch": "bebe4be7038101eb11aa15c10fe93b1341a642705fdb9692ba3ca6c30eb0b47f",
+      "patches/helium/core/search/force-eu-search-features.patch": "4e8e6d5dd86acd6c78478849c0d5366adaf66e8d6d15563fee0d99601f2d3f0f",
+      "patches/helium/core/search/omnibox-default-search-icon.patch": "a1af709be945e835c3d9a003fff9d8824f9ef6b286a629452273dd7df257f58c",
+      "patches/helium/core/search/remove-description-snippet-deps.patch": "96838945381c6b796539778a735553fe5a4923532d38ed996d17a5143729b8db",
+      "patches/helium/core/search/restore-google.patch": "65c56eb71a7836c9dd86fb637eef35e025ec1f014f28687f068868d623e1e228",
+      "patches/helium/core/services-prefs.patch": "a1185f535f8c9f934de3932dd15a00079fd3e6f54941123c8cf0a8773e6ab2a0",
+      "patches/helium/core/services-schema-nag.patch": "41591fa784cba30d9ea7d6943cc67f27c47e3e1f87fa547a75e64fe7656128fd",
+      "patches/helium/core/shift-right-click-context-menu.patch": "419fddf1adab0c65f442fc4c6917a34097a5ecc629f495f5db8a5bdb5d20ac87",
+      "patches/helium/core/simplify-context-menu.patch": "dd87ff7bfe0a356b94b0ff7bad324fead2a0f2c7624390b5c970a896aa368ec3",
+      "patches/helium/core/spoof-chrome-ua-brand.patch": "f3abc81c13f53fd7c89cdec535958e222fecb268c2102917de982f6482304d48",
+      "patches/helium/core/spoof-extension-downloader-platform.patch": "ea4739242c2732e9c31d2af0de3240b38ac156e1763b25ec994f965678cdce52",
+      "patches/helium/core/sync/datatype-policy.patch": "9897ceb0c7123accc96de5ae90ba1f5a2c8a7a7d1b6ee15ac546c2dd6cfa8e5d",
+      "patches/helium/core/sync/disable-google-backed-sync-integrations.patch": "239f4325815e62362724202498357280cb403b0e05670cd808d7af1257c3de86",
+      "patches/helium/core/sync/engine-interface.patch": "579500db0f0ac7978ad98162ae86fdf40edb92ea972d1dd3fda0898fe862ec06",
+      "patches/helium/core/sync/history-expiration-threshold.patch": "a9c53b577586a5d3f0419a1fd692c53dc4273d0dec6931a5449fd10f86e9e7aa",
+      "patches/helium/core/sync/loopback-server-in-memory.patch": "9d9d22f1e577563ad10cd499d158fc97a8d9e1b65db7bc5609a4b43db0d02792",
+      "patches/helium/core/sync/provider/api.patch": "1e54ffb9b2f512ab994e1233d2b52e9352e792a79cac358fd383714319b47fa5",
+      "patches/helium/core/sync/provider/exclude-from-vault.patch": "b463b9380c11a81b5b03b6561b8580baba4be39f53b064f677c4a8a7726d1aa7",
+      "patches/helium/core/sync/provider/manifest-handler.patch": "5b178e104e6a81c081902b484253428bef20b3ce023ab87217a46ceb60f55075",
+      "patches/helium/core/sync/provider/profile-prefs.patch": "7206c5c5e9ddbb09b637d63067e75c772d35b48c23bb29358b642f9c73c5ef80",
+      "patches/helium/core/sync/provider/repository.patch": "58c57d4f13cc860d6c75f6b3b3ab6ccff191ab6126eef8ffbd4c31aa7eb4e48b",
+      "patches/helium/core/sync/provider/service.patch": "6e3bce693689e5f4d9d1b84e5abbd479b24dd4ada12970b6c58e008f3c6fb296",
+      "patches/helium/core/sync/service-backends.patch": "7461729986ed19e80f3b2024e26954f135c1bfc6069ee5604280bbdf0e10e798",
+      "patches/helium/core/sync/vault-encryption.patch": "170b13df1f76a7551101984286fb3280c06e32af90de3c678e48b7346f882d96",
+      "patches/helium/core/sync/vault-engine-backend.patch": "d7a33c25b7ec3b81c16f25b31533d7f5fb5dff4c4972dbeb7ab01a07db259ddc",
+      "patches/helium/core/sync/vault-format.patch": "1f424aeed0faaf43f085ebad06ac5394b7019987ab0aa03441f2907dc8d2c648",
+      "patches/helium/core/sync/vault-store.patch": "dbe0531e2bb92496e408f1b44e9167fccc31c0dabd1d10f4395481c96a4be638",
+      "patches/helium/core/sync/vault-transport.patch": "b14f80b92a10a84978e57555f990327a71deba576e7bc964735128df4ffe5183",
+      "patches/helium/core/tab-cycling-mru.patch": "f46ed52302e03aa1eee41b59ce85b42da87c884c84e4639e7282cf96772e947f",
+      "patches/helium/core/ublock-dns-uncloaking.patch": "fd15d5b9a3bc17cc919cfd8a1559435b9423a4dcf662e6b2e9b81e6a627a6679",
+      "patches/helium/core/ublock-helium-services.patch": "55e6430966cac3af2f9714776dbee3fe6536ee3e1033adefa357202e59af29b3",
+      "patches/helium/core/ublock-install-as-component.patch": "d7619783e2bd9f03e78ffd95424345f2ca59db61291f84ec17231ccfaa98ac9f",
+      "patches/helium/core/ublock-reconfigure-defaults.patch": "fa138b81625c6b94280692c455478e7704a22f6a1175b524294238004e67527e",
+      "patches/helium/core/ublock-setup-sources.patch": "3fd5d316cae9964740035e3d5f9081a85a71b374c646c64bbd3af4a2ac25a75e",
+      "patches/helium/core/unbreak-chromium-link.patch": "6558255db76cfbf9bdbf72cb36fa57a4e44f4e33e0510df08c0b1852b1c9fe28",
+      "patches/helium/core/update-credits.patch": "0c764aacb04b9a64aa19a5024b16ae8241a41dcebf60bf380d2ac2479c49215d",
+      "patches/helium/core/update-default-browser-prefs.patch": "04c0c8c67f5457206afbce614364c20fc8ce4168ba925858706ece94cc0a3da8",
+      "patches/helium/core/use-system-python3.patch": "53a25d1ca57b1b887509470b2c0d7c95ed514ebd7abd9ef59b8fba7dc2f7486d",
+      "patches/helium/core/webrtc-default-handling-policy.patch": "cead2e06116b5f2af909cb86c0e42025e2c0ca3c948fc4e2c12937d369033296",
+      "patches/helium/settings/about-page-tweaks.patch": "ddeda955d8c6f5fd413f71311a1be77349ac71397cce6dc1dd370d71b2d68806",
+      "patches/helium/settings/add-search-engine-button.patch": "4c1bfe98e23b212946d3571f3daabc18e8fad6ba017bf2f27bdac39e442013e4",
+      "patches/helium/settings/clear-browsing-data-popup.patch": "8bdb1cf5a7cbecece1ee902a71b35e3e4d9d31a2069becca45710bf641d100ac",
+      "patches/helium/settings/crash-reporting-settings.patch": "24e584f2eedc2a603580987908ab8ad81e46dfbf020b46eac52bfd7e7c0dd693",
+      "patches/helium/settings/custom-keyboard-shortcuts-page.patch": "7366ceb1e286412904fe494936b7b3ec436a3798cc9192a115f75f8380a5eda1",
+      "patches/helium/settings/custom-profile-avatar-ui.patch": "7ded6928cb069028e9cd64f4924138fc27ac114fbcae7af93990df4dac3ef5e2",
+      "patches/helium/settings/disable-safety-hub-page.patch": "442002b593c8010045cab8c2469e0844623a0d2755c46fbc0d8e33928a2ad9a2",
+      "patches/helium/settings/fix-appearance-page.patch": "d86af4e2a54e8ff1e87f541a5f0350256dfd5851ad31e670802d3dbc2e9ff596",
+      "patches/helium/settings/fix-page-names.patch": "e14e4f3faefd7b1445192a7c36e771a46e82fa0d62708fe3f69f9d051195283e",
+      "patches/helium/settings/fix-section-separators.patch": "00864f9fd8f9ffa8d44802394dfccd9e2149540e9f7f907407eb7f511f594abe",
+      "patches/helium/settings/fix-text-on-cookies-page.patch": "a1f16fecdfb30b91daa65ef4e931896b5bcd10b0c630a7bfca6771684e745bfb",
+      "patches/helium/settings/helium-noise-settings.patch": "23c27ff31792bcad5853837d7b676730e91a438056b9d795dac8d52f4f8b27e7",
+      "patches/helium/settings/move-search-suggest.patch": "a36b1581fbc5e730003e9771a37ff166b88c2a2974c299cb2137b5b79bba791a",
+      "patches/helium/settings/network-and-security-page.patch": "73a2427c637443073d0997ae45c2ce8117c64facba3736da22573d01951e5366",
+      "patches/helium/settings/privacy-page-tweaks.patch": "1e3cf004b7ebd94a40f14a69a744a791a87187d89b749e346f79e93a415f58c2",
+      "patches/helium/settings/reenable-update-status.patch": "5c03418dcd22928fda24db1a8e5637c320e53079959b2bf26001078cd805aef3",
+      "patches/helium/settings/remove-autofill.patch": "293d60ad7f75292d4fb27b571d42f49ffc4b4d77f1c8d354105a6bb7c5f41abb",
+      "patches/helium/settings/remove-profile-page-sections.patch": "34f267ec3fc56fcc9aa5455dd434dca60f509fbc67a85504496f46bb96055180",
+      "patches/helium/settings/remove-results-help-link.patch": "671eeabe147de349fae20c0bfafb91977e36dd5e40f44dfd225150ab1edc823e",
+      "patches/helium/settings/remove-safety-hub-entry-points.patch": "2f4cb1dee24b19a056a43ddf49530dbb98e8453b52c920901ae8d9d60ea7e0f5",
+      "patches/helium/settings/remove-translate-section.patch": "cfbeb58280a0e52432b4d473a8f5513333d30da6d5da80ec3522573855b56e6d",
+      "patches/helium/settings/reorder-settings-menu.patch": "5c713a5c8b7585a1d4f69186f832e8543bf709373033b53a3d64e279746e315d",
+      "patches/helium/settings/settings-page-icons.patch": "5277b3b730dc9eea6d05e52edb054b5b31a8401fbda647557a57c3c80b50c4d5",
+      "patches/helium/settings/setup-behavior-settings-page.patch": "7a4b862f5cfea36cfae82ae6b173f65ec3a559eb89ba5a830244874c5bddb85f",
+      "patches/helium/settings/sync-setup-contract.patch": "7e094e584a3cdbb217e132cd072f68117c1bb9107c481bf6f06e51de2ca60c5c",
+      "patches/helium/settings/update-search-suggest-text.patch": "77c6ecb2fa2beeacf46eb861668993129799f559300cbfc0222dd064a8955b36",
+      "patches/helium/ui/add-more-zoom-presets.patch": "8dc5e902ab5fc774eaa67e07653013670f638db23bd560c3d02a966e659f3ac2",
+      "patches/helium/ui/add-specific-error-for-disabled-extension-downloads.patch": "7e16e1bcdc5f320b6ddef80f392a636bf6f1cd01806ad7ce4c14531e2056cbbf",
+      "patches/helium/ui/always-use-better-ntp.patch": "8d50d6a30885bf273be24d35e480c78d524350000bb3e4279780577a2657b3dd",
+      "patches/helium/ui/app-menu-button.patch": "4cb7e96f7be4a948127ce6c1bd16facd608ef55f2e49926b04dd85cb75eea3e6",
+      "patches/helium/ui/app-menu-model.patch": "bab1179322a9946f45dc4590a73ac5423a7a5e2d8d0438bb684d0b85abdd1356",
+      "patches/helium/ui/app-menu-style.patch": "a423e11d144d8ac7642c0c351a4dcaa7469804f6bcef0b3e234434fdc9297dd2",
+      "patches/helium/ui/bangs-ui.patch": "b5227270385870ee791a962a2555de851deeb6d6454ebc16f2302328e32ac7b5",
+      "patches/helium/ui/bookmark-button-bg-fix.patch": "96068ab5e7a1647a4f30a5d61b469805a7366f5c8d86977016c391db74893ad2",
+      "patches/helium/ui/bookmarks-bar-padding.patch": "8f017a804f12cf7103533f6f3618203ee4af708e4ad733e3ed3bd9c4d5254a5d",
+      "patches/helium/ui/center-window-on-launch.patch": "16821ce176f736c47fbfc0142e4a8069b00bd9a6a4bfc9ddb306e258c447a27f",
+      "patches/helium/ui/clean-incognito-guest-ntp.patch": "320909021772abd99eed61f37427b9a72f3fa24f7f929a42fe9de1afd7b6517c",
+      "patches/helium/ui/clean-new-tab-page.patch": "f0c8e39557c68a2b399d05ac7f32a67be0d2deb06b77275f937657f09ba2b3f3",
+      "patches/helium/ui/clean-up-installed-extension-bubble.patch": "be3906fabffacfbee27bfb747e2236d50281a34376e3297c388c71444f70be78",
+      "patches/helium/ui/compact-debugger-warning.patch": "121696b74b3450f08053ebe3c9d814d28fe49027fe1d438ca31b93a085bda2e1",
+      "patches/helium/ui/crash-dialog.patch": "e611058b12c69d3d6ac2e103cae5a82cbd760c202aa1110407387a6926b98740",
+      "patches/helium/ui/crashes-webui-fixes.patch": "45219f92c270452069cae1f550d99bd117bf538e710d1a9dfd7a4d89ba9e4301",
+      "patches/helium/ui/custom-keyboard-shortcuts-wiring.patch": "82b6316cd8a2c4c49ad7288990964d8db8a2dc58202fe322dfc6e582e4f7c4c9",
+      "patches/helium/ui/default-theme.patch": "9d541a574222bdd31ebdfa28cb056fcc88dfa394edac5384a381496e925f6e8a",
+      "patches/helium/ui/disable-ink-ripple-effect.patch": "5b3d1a8715ab0d056ac233b6f5d0d6fd23c5a4ee463bbfe884c89a47637404b6",
+      "patches/helium/ui/disable-tab-group-editor-footer.patch": "052b52f224c7c66047d73fa81920ceb5ca6455f664a161088b6906dc855df03f",
+      "patches/helium/ui/dont-antialias-rects.patch": "8b14fff38d28de09d9b4d1f6df9c1b1905414fa639c5630925b99d6cf84fc473",
+      "patches/helium/ui/enable-fluent-scrollbar.patch": "16744486f284105b23605fa2926dc59d2a88607eaa6b4a57a721d1510614e611",
+      "patches/helium/ui/exclusive-access-bubble.patch": "ec1a2c4aa07198f79e48018170d8662e3e8c4a0399674753d36e789ef1922fd7",
+      "patches/helium/ui/find-bar.patch": "c5ed4532b3ba83d93e54eec5530861bf24df961112ad07376576822324f9b748",
+      "patches/helium/ui/fix-caption-button-bounds.patch": "a9df926c6e0d01dad50fc55668c305e546820e8ef32d17f01e425ada15893c5a",
+      "patches/helium/ui/fix-customize-side-panel.patch": "f58ecca10a25ac83185156e99ef83387dd6de209bea86c570a3e9e8bb02b1885",
+      "patches/helium/ui/fix-layout-separators.patch": "40461b385d8a6bb6052ec0c2a3249450776a2735bb2cc44d658beda31e85f56c",
+      "patches/helium/ui/fix-windows-ui-position.patch": "c5b8e5bc200924f183c826ffed1d50e73b8fdd7b8d9a3126e0567319046cac3b",
+      "patches/helium/ui/frame-background.patch": "f2bbe1434d23beefd863c85141ed11e3c5ddf6d58b1b8fc16fecb53b9cb9d018",
+      "patches/helium/ui/frame-radius-helper.patch": "694f378391beaaaa6d21495515ddb0e1defa845c4244ba339a63092f6b6f9ebb",
+      "patches/helium/ui/generate-standard-qr-codes.patch": "e8779936678225835f83c7c1dd9439d9c0d2e3a3ba0ee5c5b75f3b944f603cce",
+      "patches/helium/ui/helium-color-mixers.patch": "7af084ea934187ed0fd030882995f629f1aeab928313c429c2ec3faca469d1ab",
+      "patches/helium/ui/helium-color-scheme.patch": "688d4d72f3dd9aaa200794e6aeab37f76d9df60716b1f8b797bb8ab7c748b5bf",
+      "patches/helium/ui/helium-logo-icons.patch": "6542a67c2c7e2e835af4b2988c7abf7a7ff496ad033083aa5b200fc3e8b4c652",
+      "patches/helium/ui/helium-noise-page-info.patch": "2380c8f9df85d72457b7c502ef08ea256c3154c8701ad147776dccdaa21f87e8",
+      "patches/helium/ui/hide-page-actions-flag.patch": "1f91d3bc6ec3001ea4aed3e7341927aa8e4b96fb9a0df28c4142ea4b6790a754",
+      "patches/helium/ui/hide-pip-live-caption-button.patch": "1f8b39a3bd7d6fa95aea72c27ac3da27504235520642d9dbd1abdae1657e9e29",
+      "patches/helium/ui/improve-flags-webui.patch": "bdbd4596233c74077ed10c24f65709c113fc38ce55da3f59db861a631a3533d0",
+      "patches/helium/ui/infobar.patch": "715765db720c3aa1089edc1fe60c2ea3ed8be40f9185ea9761410c64bb4e20f0",
+      "patches/helium/ui/layout/centered-address-bar.patch": "37f5e9533c7b60447476b62c055c085c0aa7a66e17608c2700bd003d74eb3353",
+      "patches/helium/ui/layout/compact.patch": "698c9d1fee1851920b008a46a0efa031ed613abd317077e504ec065e3947caf0",
+      "patches/helium/ui/layout/context-menu.patch": "af7e34535a598e5153d0fe08fe83fa13325c9adebb0437c4811a3978828d8a3f",
+      "patches/helium/ui/layout/core.patch": "27b27093c5d2e57d0394b07e7c7f727daca7734a787ffa782945ad181dce0592",
+      "patches/helium/ui/layout/dynamic.patch": "d377fbf5dd8e64c3f9401002632b9bf849f2538929ae70b9ffa1ba05f03ae26f",
+      "patches/helium/ui/layout/frame-grab-handle.patch": "21266f94dd5ec117c5a2227ed2e579dbc1a48a36270aec72eb8add6344251361",
+      "patches/helium/ui/layout/horizontal-tabs.patch": "7be8a7cf180428f75527d2b32fdbb48def7d70b432e4b3b8bc1942002c7227b7",
+      "patches/helium/ui/layout/min-window-width.patch": "272925c8690ecdee5704b15512de1386c0edea3124cb7d81a84a93a7449a5c2d",
+      "patches/helium/ui/layout/minimal-location-bar.patch": "0ae9b73440ed10a37962d2da573e5a0f058456c961b099426a975e95140e472a",
+      "patches/helium/ui/layout/settings.patch": "2f1e4ea679e38c425cba6d505d0c53265a2f275ef2ea2c0b5eb852cee05d2672",
+      "patches/helium/ui/layout/shortcuts.patch": "ae53ebad5c4472624d708e96d9dcafeb5e8828a588c4b4bf7e672c02ecaa8418",
+      "patches/helium/ui/layout/toolbar-actions.patch": "8c419a38f1cee388a3fb5ca52ce49a8bfab325324fcddb16f9fc7b32e018bf2f",
+      "patches/helium/ui/layout/toolbar-layout.patch": "028d84e7544e5fa31d5e2fb0d31f781feb9a3698778388460fa4c3933684dfd7",
+      "patches/helium/ui/layout/toolbar-overflow.patch": "ca698e30b96a1512388c4da7977ea352509960558daac28a08f27773f626666f",
+      "patches/helium/ui/layout/vertical.patch": "883b51abbe5bcdac3dd04fb0f8f0dcc513c4ccdd803721c0fb461649d3f180b3",
+      "patches/helium/ui/layout/zen-caption-buttons.patch": "6842520da9d8a55b6f286ab65c1d7eeef1fbcca692e656cf567877f7b5eae31e",
+      "patches/helium/ui/layout/zen-mode-wiring.patch": "96198f58a4e6931d67a275df31525d9ef02136f1386244d0bfa076972695f8ad",
+      "patches/helium/ui/layout/zen-mode.patch": "01f6474815b935b397c71f2dcf110d4295e67977cec77a714cfe433e88602fa5",
+      "patches/helium/ui/layout-constants.patch": "c8c0309d8b7254b4a4e77ec21b4e668de6c7130906b15e087b9566aa1fa13eab",
+      "patches/helium/ui/layout-provider.patch": "54cbc62dfb7e11d6fd1ab0fddb7c519dd96ca0423ee6f1c4fd13e5f587d3cbea",
+      "patches/helium/ui/licenses-in-credits.patch": "565f829d58fccf424efd689d656aee73c13aeb6b0c9881c7f3ebfc0e7f49fa97",
+      "patches/helium/ui/location-bar-page-action.patch": "dae488b879cbad22cd3eccc123277c9b976df1d080e265f84741808e1e26ac7e",
+      "patches/helium/ui/location-bar.patch": "be0628e074a1a128e4b1594299440c95713e03f46719aebd3b70b203e99380f0",
+      "patches/helium/ui/multi-contents-drop-target.patch": "7b222974b4e90045580f0dfb36837b83125666cd510f0b7add7a8f0d77621949",
+      "patches/helium/ui/multi-contents-view.patch": "dae65237ba436f514006ad7c53cfee02e05ba4a30287c5cc92b739ac0842cf6a",
+      "patches/helium/ui/native-frame-materials.patch": "ea0dd83ee489cfefa0efc3de19d07d61ee807ecaf1624206cc2aa78237781301",
+      "patches/helium/ui/omnibox.patch": "003c60a0fa0f93dc17134df750996fa6d514b5d2dac75e96ab3e47e770af3c60",
+      "patches/helium/ui/page-zoom-indicator.patch": "3b4658303ecc23515e054ebfefe9fbd0117184b0373e3b1164105228bb01506a",
+      "patches/helium/ui/pdf-viewer.patch": "d496009011fe3445f3a0388f774590f43d4d957a77a8f49a561d2a916c146c35",
+      "patches/helium/ui/profile-customization-cleanup.patch": "7b7b09465e209140cca5c43e1adf719f579ab1f42a7f158dda378d59a508cb26",
+      "patches/helium/ui/profile-picker-cleanup.patch": "1c2e5807b2b7da5e34d83bf7ec262e5e41ff40b78e3e6c61713d4ab73c420361",
+      "patches/helium/ui/progress-bar.patch": "e03376c60b334c270fb22e0a7b8180daf0dde4fba01eb0ad725cc0cd4986c5af",
+      "patches/helium/ui/pwa-toolbar.patch": "215c4556c4e06fec49108f2308868f5efddd3d740752d873eafa27a574df6f3a",
+      "patches/helium/ui/reduce-text-button-height.patch": "32073b3cbdbb56fde6393242c557af2959257b2e6b2f967616106984de633166",
+      "patches/helium/ui/remove-autofill-link-to-password-manager.patch": "a2000bbe9fb6baf9d3e268a6f9d98d21956462c5429f90bd988404bc52988f17",
+      "patches/helium/ui/remove-dead-profile-actions.patch": "b228b313c6a0d0f935db0559e395e021f7608e40822780badad1d1368122e465",
+      "patches/helium/ui/remove-dead-toolbar-actions.patch": "b97c0df1edfd649075189eec3d6f04d5251e687914f96a0486c2a693c981e1c3",
+      "patches/helium/ui/remove-devtools-annoyances.patch": "31c89013c5fa164f39d1d94cda2939fd83cfbcfca9930b24ab8384b5dc3f6776",
+      "patches/helium/ui/remove-google-promotional-resources.patch": "f5801da97148af936f6e4bb899cd24441c020b9fe378118a383f5828f9fcacb0",
+      "patches/helium/ui/remove-reading-list-from-app-menu.patch": "eb848bb4a240a76ebc8808226c29d4645eabdfc5a2cefab9fb3b95fe356a129f",
+      "patches/helium/ui/remove-split-view-mini-toolbar.patch": "97af1dc4df89b911afba72260c1331f0d9a3828f924ff3294e73efcb520b457c",
+      "patches/helium/ui/remove-toolbar-corners.patch": "d5f5cc924c78e999cd792e6da9912cd0d117a3da20271eccaba8afaf2cabaada",
+      "patches/helium/ui/remove-toolbar-dividers.patch": "81f2ffb43bd9e6830f61fac7d8d2d065339d523db4171fa4f502d013725217c3",
+      "patches/helium/ui/restyle-ntp-tiles.patch": "09e50504621f1085fd704f8c060fcfa682f1a62206b673e17c874b1c567b8212",
+      "patches/helium/ui/rounded-frame-corners.patch": "e7f458480d9c22046bf380e8f3c440ee4e714deba10f44318e5b23f109a7cb0f",
+      "patches/helium/ui/selected-keyword-view.patch": "1035596b97dcd534bed30f900a37a710c9ce4166d013086cd623d321e6df123b",
+      "patches/helium/ui/show-tabs-from-non-account-backends.patch": "d118428b1ef4ec41f4a0b07d3aa9bd3c28a4a3b5d184e1e589bc9ed598fd21e1",
+      "patches/helium/ui/side-panel-webui-customize.patch": "1bd31ae3c2fad9e4d4e6d38b95cd9be9a75161c61455ecc852ec3a0efc6d0368",
+      "patches/helium/ui/side-panel-webui-general.patch": "c5f6cbf976a1edeac47340d7741c95ac1140b1eadcb248804fa980f0e1cef529",
+      "patches/helium/ui/side-panel.patch": "b8f7c0c6967e22e0de0d2666be9270eaee91a928aa72b137b6b9f5d537e42241",
+      "patches/helium/ui/split-view.patch": "c247cdebe3f9599c14985a3041d8878be476e30d35ecec86ca3db8f790fd6799",
+      "patches/helium/ui/square-interstitial-buttons.patch": "c64ddcb448147e23c56cd5be1a7ddf86eb9adb5a49e603e4f2b9a0b90606900d",
+      "patches/helium/ui/square-ntp-monograms.patch": "fa3915b89670c9d32d6fc5ca3a42d9942c9b449ebbc78ce5d42afeb63fe2ec3b",
+      "patches/helium/ui/status-bubble.patch": "5c4aa34d1e76b67fd239056e1775d56f944220512394b47b199c57d9823dc5d4",
+      "patches/helium/ui/tab-favicon-retention.patch": "91e55cc317893766e3b7b41786b19ef74290a10cd2fe9658da5b25d7836cb335",
+      "patches/helium/ui/tab-icon.patch": "6752c1e987caacd6f91fe549a1d7fc4df029e3c829a38a1e1bd6fb0b8d0b83ee",
+      "patches/helium/ui/tab-search-in-toolbar.patch": "12cebcd99ff128229e02715afba4dd572720b7853c000f5a1900b74f7b51e532",
+      "patches/helium/ui/tab-strip-controls.patch": "7b216af47b63eff34765ba8c746169ce627f0939ea5c91ca95c065bfd829b7be",
+      "patches/helium/ui/tabs.patch": "815f1e86d0cd2b02ee7c91e0cefdcce1adb601fef06e3320d3070d14b7cb7a8c",
+      "patches/helium/ui/toast.patch": "9ffd78b27e68847a756011b31a2ab919eeee53d37ea2738a277c837c2e0ac0f6",
+      "patches/helium/ui/toolbar-button-prefs.patch": "d505bf1361f5a095a3bed40191038cb6e234ee4dac3ae6a6174cfbee7f64d1b1",
+      "patches/helium/ui/toolbar-window-frame-hit-test.patch": "2e0ab216d13f6642e3719ecfc30ae1e193f0563067cf4be856b65fdd113229bd",
+      "patches/helium/ui/toolbar.patch": "a3a8f7a31adb12dd80c0aaa90df821a8d788234fd55fd093972b35815b23f56a",
+      "patches/helium/ui/ublock-show-in-settings.patch": "65536e1630251fb35b763307529ef811c22e98aa2c28cb86a038c640eeb6cd2c",
+      "patches/helium/ui/update-cr-components.patch": "39357e475c75585bb84053ee1df74db6a4f6a469e9afabe8750a2b4e9b8bf2aa",
+      "patches/inox-patchset/disable-autofill-download-manager.patch": "cda5446010c5f98f67658c7b99f0dd8614409966fcf1f67640207a6463c85b66",
+      "patches/inox-patchset/disable-battery-status-service.patch": "aa88071a85afede12dbb0c1e8abe52a13b41ecacf01f1f7f0bf3989da6181eac",
+      "patches/inox-patchset/disable-rlz.patch": "fd0283a48f09bbd68d8cf845d8822c3df1aa10ff9aacf4fa0c9c464d7779c1ab",
+      "patches/inox-patchset/disable-update-pings.patch": "2d55af29e85ea1825930c1bf0ff79931a942450d9c5475ee6344c58c9e46debe",
+      "patches/inox-patchset/fix-building-without-safebrowsing.patch": "656a8239102fe65978024284cf7a3ee7001fb73b96a2829e9fce7311c4b6a013",
+      "patches/inox-patchset/modify-default-prefs.patch": "0b162073e158bfdea654e8ed0c82da239946820f20f4a23e0a0f3134ce6dbdfc",
+      "patches/iridium-browser/browser-disable-profile-auto-import-on-first-run.patch": "17d3dda41830aa1fa6b6f787329c059c8881960ce1fd2566a826387f7c07c89a",
+      "patches/iridium-browser/safe-browsing-disable-reporting.patch": "d4378d8eec4f524e594a991022c702269bdbd167c1480936f4e41b5379d65bdd",
+      "patches/iridium-browser/updater-disable-auto-update.patch": "63008ec1ac532e13013fb047c13b7d30719f94abaa3979895877a3d8bf67d201",
+      "patches/series": "3a47e3bad192c541bcdfa645485f28babad8602c19b8986cc74f962e311ef9b8",
+      "patches/ungoogled-chromium/add-components-ungoogled.patch": "548a6cffdf431b1b05f5eca215c88f8e0267f8a011d404729d8b1b4ffd3de710",
+      "patches/ungoogled-chromium/add-credits.patch": "9804fd81ace177b532a910618db0323e2c217416a3ea6333a895e3c9cdb8ac31",
+      "patches/ungoogled-chromium/add-flag-for-bookmark-bar-ntp.patch": "124c9fbcc6afa42b495175be3ce014900045c0900f94128654deea0a5a893c96",
+      "patches/ungoogled-chromium/add-flag-for-close-confirmation.patch": "32316640949cfbf02e3868a8f5625fa33bc24e8460982bce8ec82b0c973a8234",
+      "patches/ungoogled-chromium/add-flag-for-custom-ntp.patch": "11592476479c2277b4ec2b3a4ac2352c45edfa3267cb9bd8d71da92e63fe3c03",
+      "patches/ungoogled-chromium/add-flag-for-disabling-link-drag.patch": "858830ce3635f382b460d81a1e22bf542e30b8013ea97477f7d7bca782471f1a",
+      "patches/ungoogled-chromium/add-flag-for-incognito-themes.patch": "d033257e53c64300b150c0504687b2e88f6ace72e4cd9ec7363e3a34e849277d",
+      "patches/ungoogled-chromium/add-flag-for-omnibox-autocomplete-filtering.patch": "e631dd9d6f498bca74416a3cd3729c5ca8bf975d936ef1d038a1821090682cef",
+      "patches/ungoogled-chromium/add-flag-for-search-engine-collection.patch": "5319b45f4f10f748098492ca68b04876a4af51b063efacbc447bd32f09fc150b",
+      "patches/ungoogled-chromium/add-flag-for-tab-hover-cards.patch": "2e7c45ae4fe8b223ee67509ca37a6827138480bf3eacc0e5d276868bb41fa572",
+      "patches/ungoogled-chromium/add-flag-to-change-http-accept-header.patch": "810c81357dd87ab884f86d326b984e86e8aba58f875c9499667f8187e60b9f4a",
+      "patches/ungoogled-chromium/add-flag-to-clear-data-on-exit.patch": "bccb5d1ffe7258dfd9eaa0130c94ae6f719615591c6d6e140bb9b89666dfac22",
+      "patches/ungoogled-chromium/add-flag-to-close-window-with-last-tab.patch": "f1d26af1373aff90b36027c09583390bbb89eabe58d31ec9951922870d704832",
+      "patches/ungoogled-chromium/add-flag-to-configure-extension-downloading.patch": "65085b295dd3c72f7d7688525353df35c54c4f8e02b409b15883bb769a3766df",
+      "patches/ungoogled-chromium/add-flag-to-convert-popups-to-tabs.patch": "22e459a91b634f9c4430dbbcfed6a73025bad0fab31186a862ac7fbac7cb2465",
+      "patches/ungoogled-chromium/add-flag-to-disable-beforeunload.patch": "4304444883e24d395fe43e9ddc5a6bc51cff4b55ac7bcf6bbf8dfa0b995b8c03",
+      "patches/ungoogled-chromium/add-flag-to-disable-local-history-expiration.patch": "17725af3d00ea821dff9b1d6f1ed59b4aca340114691a823f495a3472e38a6a3",
+      "patches/ungoogled-chromium/add-flag-to-disable-tls-grease.patch": "3017c3752428bb1b2c77373c632e3da0239c404d640c79f8316681635aaf9163",
+      "patches/ungoogled-chromium/add-flag-to-force-punycode-hostnames.patch": "52480662769d166f2df93e37088e8ffcf94f1386d1c9aff238fc7ebb6a8b66fd",
+      "patches/ungoogled-chromium/add-flag-to-hide-crashed-bubble.patch": "eee0fa345187edd691ea92acf2b7c2585d26e11b725f2dee3145f599633f287d",
+      "patches/ungoogled-chromium/add-flag-to-hide-extensions-menu.patch": "02bc249cdf0880c68f6214578cfc49060b616aebd5c2be21fd2ed4159eeac944",
+      "patches/ungoogled-chromium/add-flag-to-hide-fullscreen-exit-ui.patch": "2799364fd92840a433d2e93fc9647ee283cae0fd4f836d9ecda9c91052c31fab",
+      "patches/ungoogled-chromium/add-flag-to-hide-tab-close-buttons.patch": "d37ed239cd01fb006d4c761102adebbee4b90b0b87d44974f9d07c55d9bcb8f0",
+      "patches/ungoogled-chromium/add-flag-to-increase-incognito-storage-quota.patch": "d8f085154f1f3bbc7527998cf7cac262a52dd0936e83e2d2a32e9039d1036c70",
+      "patches/ungoogled-chromium/add-flag-to-reduce-system-info.patch": "9aabe52d04eb99c0fa339e4294bae0f8c5ab42b61d09859013a954a2e8a2fb67",
+      "patches/ungoogled-chromium/add-flag-to-remove-client-hints.patch": "4c89ee51b57ccee0cf68d5c2899662a07722a816b5437a254bb4bea68ba9c262",
+      "patches/ungoogled-chromium/add-flag-to-scroll-tabs.patch": "4b3d67b820eeebd6f41448a3badc20c41d15c1956526330b4d931531eb5c8121",
+      "patches/ungoogled-chromium/add-flag-to-show-avatar-button.patch": "b8bbec059b05281d3552a7da5ad73999560ccfc5a44b34464f90f5a41b197bb8",
+      "patches/ungoogled-chromium/add-flag-to-spoof-webgl-renderer-info.patch": "8fcb0316059dc53407403088560c707db5f6d7489df9079aad297470692a0aa3",
+      "patches/ungoogled-chromium/add-flags-for-existing-switches.patch": "ab9e60b3180ecc21b67330b718d205911993a846ee6d6bd54cbfc56bd4871dd9",
+      "patches/ungoogled-chromium/add-flags-for-referrer-customization.patch": "d82695e878e883f00eb3dbb127fc87ac6b794baefbcc5cfd3f872654e60fa0e2",
+      "patches/ungoogled-chromium/add-ipv6-probing-option.patch": "3b27a09e0e1e966924be7cf866ee06a3aeadd1d611482c6da4a024a558c82c76",
+      "patches/ungoogled-chromium/add-suggestions-url-field.patch": "47ff8550d91975100d48f87cc56fad76493d7e31881c93967bf27ff44dd5b8bf",
+      "patches/ungoogled-chromium/add-ungoogled-flag-headers.patch": "fe4570aa11ad780ab22459420f8e88f100604f9b06543b6e1dbfee14a91b0fa7",
+      "patches/ungoogled-chromium/block-requests.patch": "7c8e119209aa3428a6de196c222fcbc98339bd4e0d880994ac7e6ea0e7cd1d7f",
+      "patches/ungoogled-chromium/block-trk-and-subdomains.patch": "422012872ff6b6b58f421b0ce3a685c442e6a7260c26f5941741646e78567a8a",
+      "patches/ungoogled-chromium/bundle-hyphenation-patterns.patch": "8288f8b98f4526759833a68ee3b27472eec4a175888ad2555d41f558d4db9f5b",
+      "patches/ungoogled-chromium/disable-ai-search-shortcuts.patch": "4fa40ab6927754efb04a028006fe02dbda55fd7560133fa0934a99d84dff1aca",
+      "patches/ungoogled-chromium/disable-ai.patch": "1968d9e18d947f47fede0d1b4902523edd7246605b58625e994b1e3d692304a2",
+      "patches/ungoogled-chromium/disable-dial-repeating-discovery.patch": "74ac795c6b5f734786b5dd9ae6e19360dfbed25083e643d521118ed8d19b1ff3",
+      "patches/ungoogled-chromium/disable-domain-reliability.patch": "480c9f86a9fdc80ce3c22d6031ea5177cba3123eb03da7b37d3173ee91fe7173",
+      "patches/ungoogled-chromium/disable-fonts-googleapis-references.patch": "3d9ddb1eb2917c7f54e4734f4d92b21d54b653e935eab7454006a9edfd377f45",
+      "patches/ungoogled-chromium/disable-gaia.patch": "046ed0cf962254b1963da43ce57c2b2cab399bab722d3a0565cc59bf3c035112",
+      "patches/ungoogled-chromium/disable-gcm.patch": "69206c51832bdb0993a3346e83cd101044cf4dae7e45e0037cfcb28ed48a4def",
+      "patches/ungoogled-chromium/disable-google-host-detection.patch": "b176de7e2f542ac0b6c08c21efd8f8e64f68ca074f977c8ea44e4582b1b41924",
+      "patches/ungoogled-chromium/disable-intranet-redirect-detector.patch": "7e7106e0cacf438a7d97f7f5d337f691637423b8192da3e07697f8e56851165b",
+      "patches/ungoogled-chromium/disable-mei-preload.patch": "380432b35f2e9931ba71e474bb32106966dd2c4948a9839589b7a3b114d3c680",
+      "patches/ungoogled-chromium/disable-network-time-tracker.patch": "04278b44bfa8f0a3979e406e7208d6f27f278bfea1e3fd500c176cf7eac52d4e",
+      "patches/ungoogled-chromium/disable-privacy-sandbox.patch": "9443aa1f9f3535cb8b902c6816c4e23f4af4e8cad357dc410ed685372f1f0b25",
+      "patches/ungoogled-chromium/disable-profile-avatar-downloading.patch": "3f105601f1b15815bd14c7a6c0aaba8e9443c7239db97644cd36220859576a22",
+      "patches/ungoogled-chromium/disable-tos-dialog.patch": "b8d1364f3b6aaf641827a23474338fa97358eda9738ba3df6e09c1e6f349c640",
+      "patches/ungoogled-chromium/disable-untraceable-urls.patch": "2cd58f27c87375eac1e0ffed2ecb5310dde13e0581ae8cc36c8e706af78025f7",
+      "patches/ungoogled-chromium/disable-webrtc-log-uploader.patch": "87025da2cd78fc438fddbaabb151804caf301f5feb6d5803ac1458f480b44435",
+      "patches/ungoogled-chromium/disable-webstore-urls.patch": "297e6c0c3c1fa838d1679c9800444392771bba0b02c5af002868bd5795668bd0",
+      "patches/ungoogled-chromium/enable-certificate-transparency-and-add-flag.patch": "600a8eff342d95f27c9badcbd54c2eef7f8139579133a75d8fefa0a40ef8f44c",
+      "patches/ungoogled-chromium/enable-menu-on-reload-button.patch": "f82fca9b9b8da8b2e8212945cb8ab65da3bcadedab1952315d3e0046754ad501",
+      "patches/ungoogled-chromium/enable-paste-and-go-new-tab-button.patch": "5c64d116a548b123364c76e735efd239909354429618253d37d73c39c5821635",
+      "patches/ungoogled-chromium/extensions-manifestv2.patch": "527eae46758ec7e53734289f4d9b0ca3088cc8369aec7267ad89da349c21e188",
+      "patches/ungoogled-chromium/fix-building-with-prunned-binaries.patch": "8a1eaf934f653b7d50e4954f5d79a780187d618a96e98736463133e7c2f9c3b4",
+      "patches/ungoogled-chromium/fix-building-without-mdns-and-service-discovery.patch": "77b56b96898e4d4b5278087a4867cabc29ecc282674bb824962e3a84ea255f66",
+      "patches/ungoogled-chromium/fix-building-without-safebrowsing.patch": "33e568edde713d55d3b2f001f7c4bc166322f4af2ed52e8d06be71e46b866b93",
+      "patches/ungoogled-chromium/fix-learn-doubleclick-hsts.patch": "40635334ab8b227930eeaeaec96b3b9600f83ca6f4e1741388876509f4ebd104",
+      "patches/ungoogled-chromium/move-js-optimizer-unfamiliar-sites.patch": "f43fc7c1fb5e989df2c5621a0eca2b6aa2ab6356d182205aef870c89cbeac604",
+      "patches/ungoogled-chromium/prepopulated-search-engines.patch": "6106f02739dbe497ca21d09a8694fb06db46d3b2add5f7a1a62807e064af0cea",
+      "patches/ungoogled-chromium/remove-f1-shortcut.patch": "c87bf8d05dda4b8b45fd761bed12394d36b443e975a8024ab818beb12e89a2d9",
+      "patches/ungoogled-chromium/remove-navigation-source-param.patch": "640eea992b89e8683b2717ae852ea288a6a29728a6333b2d5b3810de4a5bcf3d",
+      "patches/ungoogled-chromium/remove-pac-size-limit.patch": "437dfe711214144b0df4138d5eb34cf4c86c43ac12ed7fc881b4568c06380bee",
+      "patches/ungoogled-chromium/remove-uneeded-ui.patch": "7089fb377c7bd47eb63acfcc6f6636b80ec9d5391f0e623d03b45469f8035daf",
+      "patches/ungoogled-chromium/remove-unused-preferences-fields.patch": "58337ae8e896e3e05fe394e8decd5fc1299d5e87727f9483cc5b6b59e1c9cc1b",
+      "patches/ungoogled-chromium/toggle-translation-via-switch.patch": "5345080e7b56eca340e9464777279d68be6994a05f41e451562b32cb65d0966b",
+      "patches/upstream-fixes/missing-dependencies.patch": "fe13efba6ac34ad05b8adc4db18a14b4a6e13ced1d7f9dd0b86a9e8d2b9ef26f",
+      "patches/upstream-fixes/tab-restore-live-tabs.patch": "dcf5c414ec52bfc151e48731bf90ab01155afa841e5aee9e2b735eba30afb07e",
+      "utils/.coveragerc": "c6c1df790a763caaa8a64c7a58a4f4a9a2f634670796e6497c9fb6df4c2d7782",
+      "utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utils/_common.py": "09a82e8e4d72569f03a48a8165c015094279b1ff52864a22e25144ca5715bbbe",
+      "utils/_extraction.py": "a197f48790e2b00596e6ed50b0b9471e33f5335046c588cb9a53bd9819c35f0e",
+      "utils/clone.py": "3d8c8b961a490291cc3aa95a4019a0735927d8a2e80c88c6b56862f8660bbe33",
+      "utils/domain_substitution.py": "7d6579c523d05313a547bddea486834e9977fd11649d7fc829307e1a32711c50",
+      "utils/downloads.py": "0d89f9ee50fcfe953beacfb2e4ebd1263505548ea6b57a9fd17bfd697c60d967",
+      "utils/filescfg.py": "679d425b5f3a610c7fd4d8d2392e4add55c4090248d17e8e17ab2936b54164eb",
+      "utils/generate_resources.py": "28d0bd832683b25d300959fe2129474ed4851e4318b8664fd9060573a0ae0006",
+      "utils/helium_version.py": "a186d15484737b08220361f325680b1cf7b6ff3a07dd2679106aacf58eaba654",
+      "utils/i18n_apply.py": "fa84a9038c97654185bf57641a162a5481bdda337c86a7df9e73882c7d7463ca",
+      "utils/make_domsub_script.py": "931a76a073a28c1b188972bc88d641ac88373a4f2f89794bc32a4e915b656819",
+      "utils/name_substitution.py": "b7a2a6e52eb68a6da99c5b27efe1cc818ab79791a5c0a2bb32b2662b3af175dc",
+      "utils/name_substitution_utils.py": "18f5ca110ed26729f310e0e5148b8a0e01f10d627fda96ba01f7452bfd069218",
+      "utils/patches.py": "a3fdc694a8308ea378c3cedc01aaf35c615a14c0697f496d15b9d0f0f2381dec",
+      "utils/prune_binaries.py": "0943d60a55f3557de11f19608ab5644508e4aeece87cc6557492b603dc695a50",
+      "utils/pytest.ini": "e38f1cb41992a34f306d143f1cb06f8e385145d29082711b1f4153586148dfc7",
+      "utils/replace_resources.py": "c7977525761a12d0ff31ecf63c03b86fc4687d399c56d04fd815ac565f71b021",
+      "utils/tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utils/tests/test_domain_substitution.py": "e808cbebd332cd3c1e15dcab2e8d7676ba579a6d190f730af699bc145cef8630",
+      "utils/tests/test_patches.py": "3a2f0ead4ae31eeb0e4bd47aeb51731487fbf29d83ab6806491eedc2e3e44b67",
+      "utils/third_party/README.md": "d2a14cf1118e11b8c40410057fc78a23f8ac25eaa32ff4c909f227272cfc6b3e",
+      "utils/third_party/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utils/third_party/schema.py": "94790d0499d51d948774716645b5a2a636b4fd70821807c980e7a2e1552a84b8",
+      "devutils/.coveragerc": "c6c1df790a763caaa8a64c7a58a4f4a9a2f634670796e6497c9fb6df4c2d7782",
+      "devutils/README.md": "b6a83499c5156ba655dd8980606b3590e1ba88c392fd4064a458501921ef271e",
+      "devutils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "devutils/_lint_tests.py": "911330dd22a58db97f44d219e580b734ad797f6ea5d3ae270f26be40fa11311f",
+      "devutils/check_all_code.sh": "a16a3b0a2127ff3f34e42789cb8981b52e3b5971689ef2e50f1f008af2ed6de3",
+      "devutils/check_downloads_ini.py": "d53d9deeca0e0f6791aa15a8b19169b137012d75c62fc58c42ec82960d30d713",
+      "devutils/check_files_exist.py": "ab871e32623de150fdb480e742f00bcd14cb36266bac29e6f9afa9ef4fe1f59e",
+      "devutils/check_gn_flags.py": "c56700ec35197f7086f03c2c98b78da6da7a31939b45f50a1219d7758b365189",
+      "devutils/check_patch_files.py": "c3e5c524ef4d76c8e0c3f636aff02205a1a1422931e05e24e7655bdc34497a6b",
+      "devutils/clear-ublock-assets.js": "bc8ef77254a13b9ae56980b7710db2e69547dd0bcf0f2e1e5688c819252c3d16",
+      "devutils/i18n.py": "6bed2fb4f00b3b108dd7a9a0125fe48b34ceb642aa0ad7a4cea2951506770c81",
+      "devutils/i18n_clean.py": "e3951be6c7a7d38ce9482a5f028be17431a084e58f47498752073d0328540b6d",
+      "devutils/i18n_forage.py": "4f85af2fc7b33c137e8bc9ef5b8280c4c1596997b8e68b6ab0d8c980f969df78",
+      "devutils/i18n_generate.py": "bbed860e3dc2eb1e5d9d928561b86a2bf8e244b6e365e9841996190b887d1216",
+      "devutils/i18n_lint.py": "c474ac36a51fc1723f8a442462382d00e38f663635b5019bea732bbc731f321c",
+      "devutils/i18n_translate.py": "2d0fd0bc57ed65cbf48694123a6696b0b6af359fd12c96785ef70d347773a274",
+      "devutils/lint.py": "6166a51faf60fc08d0491668ee9564302ba1822258c45d164cb7d85269328a80",
+      "devutils/print_tag_version.sh": "5f40480c7fa2ad933b7423225af1b2d2b7a0804a09066b65236001e42c8b86dc",
+      "devutils/pytest.ini": "3ce2da06eb4181329d39090bb1202a2f5d627f1d7033a8f85c9812bce2573a8a",
+      "devutils/run_devutils_pylint.py": "088540cee36e39df3dac0707ce73d5dc5600e13576334411a72af9650a486f29",
+      "devutils/run_devutils_tests.sh": "ca618bbe0f1bf8a54db58b59b7d20017accf6d82525fe7e28335e38f356d4681",
+      "devutils/run_devutils_yapf.sh": "b633c67382672ae582c1fe01e0f16439ad5f59a67f26aabc83c3fe32397a4b54",
+      "devutils/run_other_pylint.py": "beb8adaaa205050ac1ede964175f8688f56c348c51aca2046714ea611e144769",
+      "devutils/run_other_yapf.sh": "c54e4c591e7deb12d263919f002ce63f3b81eed3346e8a48e7eea240607bf150",
+      "devutils/run_utils_pylint.py": "c2ddb75e08c6a74f4616ae370def1e82cfa3d490c8e2ffb2b55c0ea7f7ddcb0f",
+      "devutils/run_utils_tests.sh": "f60ffb28c9dc3fce9484165527127c60c9265ded5cb8ff530f08516992d40d23",
+      "devutils/run_utils_yapf.sh": "aca143c2c0cb23bfcca2830a3c0c2ed6dc237e05d345cb788e180da95f443072",
+      "devutils/set_quilt_vars.fish": "4950263968776a807f753e9e3691335dd9a486e2321a7c693b522cfc6dd6720e",
+      "devutils/set_quilt_vars.sh": "d7b50181008b702c9433cc21e8f451111737d01cc60783c1525e8e2f096602dd",
+      "devutils/tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "devutils/tests/test_check_patch_files.py": "954f412a9eac99b79cb2f2f2891113f3f3c0304d4fc2cf160996c6d1114e5a40",
+      "devutils/tests/test_validate_patches.py": "1875f1815ccda784e2889e794bc35de821d3f2ae90315f39740e38a2638d2704",
+      "devutils/third_party/README.md": "41cb8be93989edd694113281a3f0ea20e26b0fbe83f360178f4c165a9b1f7999",
+      "devutils/third_party/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "devutils/third_party/unidiff/__init__.py": "b89d61fb436f7a87b32c28a110222101463c0741abf05b8187b7c4ba9617baf9",
+      "devutils/third_party/unidiff/__version__.py": "9f976abba0125d01f41cb7e7e8cb86a3a04f98ce135cd7eb691fccd56eeb089a",
+      "devutils/third_party/unidiff/constants.py": "618b560f76622095c6f3686ff865efdc832bc67ae38d1642b284727c5bd21157",
+      "devutils/third_party/unidiff/errors.py": "2fb558a292259bbd4f21c603b3669fc70154bf091dd416bd20b333c5a5c4697a",
+      "devutils/third_party/unidiff/patch.py": "272d0f439c489062e6d775e081205e8ae8711348edf997608733037eaf524eea",
+      "devutils/update_lists.py": "dfb3a15cd9023668c31c46907587fbca0fb5a11fcbe67d71fcbb5c4dbcfee1df",
+      "devutils/update_platform_patches.py": "f610b5e223cce3303f26a49a42d0f33896380d1d56f1e500e94c9325f88ae1ca",
+      "devutils/validate_config.py": "f598e76044852710db0d9b9b0dd16ef89ad7be118014965dbacf578802407e04",
+      "devutils/validate_patches.py": "a0c50684673306038d921f196a44eca1800a7875d0646a40555bf381a8e6a6fa",
+      "resources/branding/app_icon/file.png": "2f9c1ff09e26139e8aa393264d21cc187fdc8d5f582420b3649ae75287237b67",
+      "resources/branding/app_icon/raw.png": "757f00b34f506cc7419437f62951dad7419e7270ae99658f7b554ba3a39f9edd",
+      "resources/branding/product_logo.icon": "8345c64dbfe398644d077a2d3b9850ddf751a0f1df8f7dc691223ee3a567e6be",
+      "resources/branding/product_logo.png": "f23dcd2abb4396316c8a651bb9b2300332a72a725039e93626eae4d2f1609895",
+      "resources/branding/product_logo.svg": "de835ce289a29864efef11cba50e87697ad46868f927872091a3b7eaafb31d62",
+      "resources/branding/product_logo_200.png": "fb2e51a1f3e0b5e4ba0007b730dde95774b2a785837b528172ec1644c1906fc8",
+      "resources/branding/product_logo_22_mono.png": "07821f959201921306ef53a1d74c00b144f8020addaf78aa1724a8b4724ac4b4",
+      "resources/branding/product_logo_color.icon": "59ee53973c3d6c734b83bf578fca5ae9fff155d5cd52fb1772c70a09f531a1ee",
+      "resources/branding/product_logo_white.png": "48d56cf031215559a983116d0bf97a57401ec77e67e7fb2b93d3bfbc31fbf926",
+      "resources/branding/product_logo_white_200.png": "0588caa4f0dd1d266556a36356947e999c89774a91416340bdda1842adde1399",
+      "resources/favicons/favicon_bookmarks_16.png": "20b08ce622648a683fe49dd615ea2671d17f3b04a66625e71109e92421589a52",
+      "resources/favicons/favicon_bookmarks_32.png": "b0c809cf48532fdf3c462105e790a2085a2e02d5aee2a050d16be91e40580f22",
+      "resources/favicons/favicon_conflicts_16.png": "aac20392e330b40c31a8557122c77a66147e5602917b55ffcc9f78b413da2ab8",
+      "resources/favicons/favicon_conflicts_32.png": "78dd890c8c6508b05898e81ce1bc7467ef1571b78f78f09e81472665b556a29e",
+      "resources/favicons/favicon_downloads_16.png": "5ed073ca369d47c50fbc8ef8c15aaac7bfce087c9a315977466fb77b14be6c93",
+      "resources/favicons/favicon_downloads_32.png": "491956ef6bb03218cae6db071de5b0cd36bbc00f598c02fcd1529a5189fb56a3",
+      "resources/favicons/favicon_flags_16.png": "d56fa6e3a738a8bc3f2c528908e2a6d573cc170151aca168f760b34fa5ed45cb",
+      "resources/favicons/favicon_flags_32.png": "82d968848963ec85bb09d4545b41733081dbf2c67916210d7af2c730276842d1",
+      "resources/favicons/favicon_flags_48.png": "3946a209e06e2347e28f3331ed75cc6b11fa975665e78f098f1710585dd500c4",
+      "resources/favicons/favicon_history_16.png": "746a5edd5fc9b6ed570ef11aa38e2ee6e641c661f5d8cd02ee41ca881bf7e1d5",
+      "resources/favicons/favicon_history_32.png": "4bc8d5470ef9edc5cdb14b840b9e5e40e4a38b693088266ad289eebd456e484f",
+      "resources/favicons/favicon_history_48.png": "f63eaf63596499013818e368c261adef648876e0312b9342aaf3459b97ab2e65",
+      "resources/favicons/favicon_management_16.png": "122ca249121c94fd4784e257f9f9b64a7840ec1c76e47198abe8a8154c0903ae",
+      "resources/favicons/favicon_management_32.png": "96339d425e7aa32deca78dc4e928b1a3f48a5e48622373377e28abd60ae8b613",
+      "resources/favicons/favicon_ntp_16.png": "7457d22930b63b0875ce7dea737f71a3e95316763d4e005281c028e537197809",
+      "resources/favicons/favicon_ntp_32.png": "e10004045eed76c9aff6d2cb745c48920ecc388941716f55748d540b6b9178c5",
+      "resources/favicons/favicon_plugins_16.png": "b376f484dbfcda22715d198f9d287c28192d1cc45e239c0982c19666d641a532",
+      "resources/favicons/favicon_plugins_32.png": "cc3a74a3c2ae7f290e1e7dc9d708f813b147e21ebd8cefd7410f88fc86a7fb19",
+      "resources/favicons/favicon_settings_16.png": "348a857cf3a3ccbaf11b8282d80e32d0cf022ec0975152e1f9bf1c803f85ead1",
+      "resources/favicons/favicon_settings_32.png": "298a8a0d8849f7e316128f2326df0b53fa3aeef08f4dad2f0bec4617f503652d",
+      "resources/generate_resources.txt": "b62e169818cf145d59778dc1f112826eca62a8a0da0e2a999a263433298b45a3",
+      "resources/helium_resources.txt": "2b06544926369a71b32234622e4dd5ac4ce27de5787795890f004fa13ea0e023",
+      "i18n/README.md": "8b6f6072e77703b89f3e201f32de512cfcdc683534fccf9c65e429bf780f464b",
+      "i18n/languages.json": "08af6f60f49c7c6f9ad5cdbef4d56529a27a68d5a49eecaf6d81557c4cfc8ff3",
+      "i18n/owners.yml": "c20968f6c75de5aab8be246a5f792a267e6da65fabb87210c65486d211ffbd67",
+      "i18n/prompt.md": "b12a2f768c9afa33007de496e5f61fd176f00ae43817aa0fe375c4e0224159ca",
+      "i18n/source.gen.json": "62f5c63d8c64d0bac39a2ce712423e24049999bcbc4708284cab3808a2378420",
+      "i18n/translations/af.json": "ebe993e9e15b0eed97a59b463cfecaa1aa7b8f6a9382653b20de078ea7fe1422",
+      "i18n/translations/am.json": "cd105cf7bfb8048d4d2c54c09e2140a8cbc1c0eeed8724b48bedc2e28d019c13",
+      "i18n/translations/ar.json": "29634e7d17d52249b34f97b339a0c10a08bf1e321e74a0d95379852075b49f8b",
+      "i18n/translations/as.json": "8cf90687977cec6afac68b586c3b8ad54b8c72931d670b7bca1fba2f2196f855",
+      "i18n/translations/az.json": "3245be684bf35062a4037a49d3f9117f25873e32315023a4180dd9a73b1df648",
+      "i18n/translations/be.json": "61a606680c4190136be2b8615b567de1b19ffe18bccfa9391dad5deba42714ab",
+      "i18n/translations/bg.json": "e2357bec181630b9f84ca826cebea2f1d39c0d92e22709752e2f22c7349adc54",
+      "i18n/translations/bn.json": "8eddeb9c0b5b1161ed006b505bbd23cb81b9cac22f2ab9e24b28136d53ed012b",
+      "i18n/translations/bs.json": "c8b720a8a8dacfecb884d1552d7005266201a8e59008226f5ca0eeec94e73be7",
+      "i18n/translations/ca.json": "6b40c3ce4ac03489c11bff58eddda17d10639301a2a049bb40ce1edcd80de9b8",
+      "i18n/translations/cs.json": "2943b60924e03d0cefd7b832bedcdbd493f0220e47a873bc98f3fb9113614d92",
+      "i18n/translations/cy.json": "499f29f7ab289329f25b98f315de0793360395d1b1c7d79879b3c08862968f9e",
+      "i18n/translations/da.json": "11f23510659f6683be88020b160767bb03a1ef898ec4091c83ef8a8d9589bb82",
+      "i18n/translations/de.json": "2da2b9744040c1da7ba6b8c9c9bca7319a66db1fd4a47509f831c8df05069b8f",
+      "i18n/translations/el.json": "5f64840308490f6f15f093a612eb1832f9d53ab0f22b0cdc494fc2cea4bfb962",
+      "i18n/translations/en-GB.json": "12e99ede871117264a1c6a3c68ee8abd5ea333316a8f0c11faaeb743d6bb6063",
+      "i18n/translations/es-419.json": "3214c9163ceb5f316d530b3ac138c4a755a435c9e5f65089486091d52cdb4425",
+      "i18n/translations/es.json": "2e23216fce5802056a2e2b4267db98315fe66ba48a706dbfd1775b7ac99aaff0",
+      "i18n/translations/et.json": "a89b265f97f0c08f0abdf1d36c2020c7fa3467f199499d61a272a30f5b13584f",
+      "i18n/translations/eu.json": "eb4f78da9d6cec563cc63189aeb4c2914807ee70af44bff1987749a6c617b238",
+      "i18n/translations/fa.json": "727354659e9ba0e0ee102ab8b7ac989d680f93d8377c39fd2e543537d02b3d9c",
+      "i18n/translations/fi.json": "bbd17ca889331dc9aeba00630381631832789a4ef40f39e1fbdcca8b90997653",
+      "i18n/translations/fil.json": "8be9802a2b20eb39da08d708836d8a89311d5d2a2d14820dd9df2c571ffeed17",
+      "i18n/translations/fr-CA.json": "1c6deea3dc106a61b22a1b83f35df0cc41b3840bf2a4c32f694ceda05f56b775",
+      "i18n/translations/fr.json": "95ad25a32a19873a046fac7bfefa517eba945a870d3d90142d8966d136e54cd5",
+      "i18n/translations/gl.json": "ef414f5fb063cdf6d94b736db74b2309d4c81dde5f2011dc0ded717be0b75a63",
+      "i18n/translations/gu.json": "afade05c89e463aeb4e4182aa2515da8c554d8b69c2439a7e80363d609e03380",
+      "i18n/translations/he.json": "e65f3d9d7976128c847968b367983fd4f2edad344e6d0c0d6a843d8e12569b82",
+      "i18n/translations/hi.json": "3d52f4d6daf0d609c42e28399e6130f083aa2a04f7ab99c8bbfc7a4a6e45f076",
+      "i18n/translations/hr.json": "74308a99f01e7d79aedffae6676d21b37818cf52a3fb7e37878ecc8d975b9f32",
+      "i18n/translations/hu.json": "5443b680f790ce5b5573c6d8874cfbb35b76b54d062aca4e5c95e5ea85b9db6c",
+      "i18n/translations/hy.json": "f732c79beb32d326232ae98df8c13f7d0e206459b18771bf35bdb423a48032bf",
+      "i18n/translations/id.json": "8c137f49bc9a3819a3980d50bb90dd0743bd5c8f5c3c328ab92c85cc9d314a62",
+      "i18n/translations/is.json": "c3430168d06062719bdab436ee6f995126f635a745bff12735c191d53c8c134a",
+      "i18n/translations/it.json": "6c67954f62c4fd3fb9ea5d09b9ce031185d63c6efa80ebc3df8c156a435a597e",
+      "i18n/translations/ja.json": "2dba42aa1c0714d56f5c59c09f0d055d09aa1a6724a91f970eeca5ec6e116347",
+      "i18n/translations/ka.json": "732890b70635582b28ac2211c73ebc8c9afbdd88f4de7175df4165575df43d66",
+      "i18n/translations/kk.json": "3c3b24c12c7abedcc1a55f7e6b12fb85c83a348ed5af3256696ce342c30938a3",
+      "i18n/translations/km.json": "3e4b1853479c475c91ace21451ffe794e856c86fdc5178f514ede31669bb694d",
+      "i18n/translations/kn.json": "bdfaaefa490a3c8bf4beaf2b1616e594b6dec71b78783525a5161143dab07a8d",
+      "i18n/translations/ko.json": "3d83b3b39bc4b905e6a7c0a9c152db9431a265f14c697e910616063ef8db14f9",
+      "i18n/translations/ky.json": "5860a1e340dd713b941f00ace01ad30dc72e4e25b87d4a03260dbe1f23c17783",
+      "i18n/translations/lo.json": "bdefc5ecb89cf3e341bc3391b86261cd460fa42b1c25fea203b135167e19b2bc",
+      "i18n/translations/lt.json": "499d3220d04f5aa8a0434c0fcdc67ca58d02e05402a4c95b124694dc6d3d8832",
+      "i18n/translations/lv.json": "0d573493b3a2ce4c0d9e35806bbbec1e6ff158bafb4d03411cfc60d3086bf91c",
+      "i18n/translations/mk.json": "a2b197f3d20f5f59b4b2721895caf3d15b77afebbdaef14e55b74c92a0acc4a5",
+      "i18n/translations/ml.json": "44679d40cdc481fd0eca93ce981943b21cb22057d58a464e7a89e36f473089ce",
+      "i18n/translations/mn.json": "949df9139d471fbdde117fa0732dca51a70a0fbff4335b6f7429e11510ee7f28",
+      "i18n/translations/mr.json": "f276c3207a5a344d4826b8f473da95b09c9b6cdb622e68e21ac7f135574d8235",
+      "i18n/translations/ms.json": "a8f3b93b5b8e3378960b3db0b1565da13c66d11cf69b9f01e9505f26ba2c04f7",
+      "i18n/translations/my.json": "b00a734758110945ce8a064b30b7e2b1ce23f20d05f21c35896ffbe419d19412",
+      "i18n/translations/nb.json": "92385579246dccc15aeb7826faa2adc9e0f03acada26325e1fa4c633285bf300",
+      "i18n/translations/ne.json": "32585f0a9f75ad1ef0bf246247a2450a9d9e140d28f6e39bfd306972154f8251",
+      "i18n/translations/nl.json": "aba6c24d4381ee836c0af4d5450e794afd80792145e40b68b709453d5e03f8bb",
+      "i18n/translations/or.json": "29fc81594ce50f74f89d80c5ae054a8e41924b3512b256bf31b30832912ad662",
+      "i18n/translations/pa.json": "aeaea4d8aff1cb2eb76aa69113321be2f5f325ef16f156607584a8f0f3ea8399",
+      "i18n/translations/pl.json": "5514d714ad4a4583bc5eadd64c58309d3029bb40c911e9ab4f7ca39598ea433b",
+      "i18n/translations/pt-BR.json": "d8d95209e9ad378681eeaa1609833e79e8812686f37bb439f43798884271c561",
+      "i18n/translations/pt-PT.json": "7362399745eb8100a386b3b93ae59ab8cd863af5e23e69da46a032f8c1f168d4",
+      "i18n/translations/ro.json": "475806a3e69074f3a84bdae8e5c70133a4706859aa27d8a51082d8f33c406e56",
+      "i18n/translations/ru.json": "368c76517c5fadff53543862aec4c6a42ae8d01b9146d9ed7cdcb20167e2117f",
+      "i18n/translations/si.json": "1f75fe860dc90c9d8de04c61ae4bb3893f2bd47cca1e7dab14e2d89197268031",
+      "i18n/translations/sk.json": "d332abf0514db69706c518fdea90731e5ac572158c5ab2646756b46765fc121b",
+      "i18n/translations/sl.json": "3bc4ef5acf350c721d8d1810ad6927eec615b1a9951e69ccfac740420fbea3c8",
+      "i18n/translations/sq.json": "81d2efb4a46c9f94241148a8a990ac4459e6c9d19927645fa9ae72903177e95a",
+      "i18n/translations/sr-Latn.json": "07ccd640c152deef2551a6987ad86dcad53369b68a518e8c29ebdd95345382ed",
+      "i18n/translations/sr.json": "5dd11a8c1e6589e26b03ca0cf0295fd379edc285d9b7333e50180d5b90b4569a",
+      "i18n/translations/sv.json": "03e9f7d945fdb061fd0c8e8a56d34af7008e258a3728ab77476822d3e1ab162b",
+      "i18n/translations/sw.json": "4abe1ee3d2a2301a7619c5684ee37ef6dcea729a7b00acc8554e93e2c5f69613",
+      "i18n/translations/ta.json": "7177e92fe2f274154929e5c3e5bf1a69d43f0b8b54f2fd69d003ca55bae3f872",
+      "i18n/translations/te.json": "d48608d0ec5dedd5f01d5f6d4c9d0630019fc41ed8427a53647f6073dd872947",
+      "i18n/translations/th.json": "20306869e713ad7621ff9b094484f5923036fce031273d4396a436baa73b08a1",
+      "i18n/translations/tr.json": "ca44df05baeb86e56ec230ae21a2f469d463125b6525515a59dcd0f436f9c817",
+      "i18n/translations/uk.json": "a418b769f8952425b81cd746708829065512cef63fd1bd132ef2aa3868a867f4",
+      "i18n/translations/ur.json": "09729fda73fb2bf9de7b8f59e8905ea961dce136bbac7f822023790d207b1252",
+      "i18n/translations/uz.json": "881dda9cf2af3aa051f8b4e8d6c3f647522092af9eb728288917eda1502eebab",
+      "i18n/translations/vi.json": "5dee0699cb58137e03b97a61bb1cec34b033a76b659b84e2448000a07c464305",
+      "i18n/translations/zh-CN.json": "28e2b58056d937d0c81d6a662ef8a3092c6104b1cf14fe2f22c690d34ca93101",
+      "i18n/translations/zh-HK.json": "b727facbdd1add68e9ec44f5b215b88e0d23029bec965f2106fa2b2d0904da0c",
+      "i18n/translations/zh-TW.json": "04bb63fb432a838ed863f1f9de95ec72d228db5412ac6f4f24eca475bd2743f5",
+      "i18n/translations/zu.json": "47b94580ac5b2e2a670c04407cb3ee264115c121d4852fa357684458b2319a05",
+      "arcified/native/tooling/input_identity.py": "18a236cd6a51f02ea4c71b9fa1464035faebd2c31d2e5c8fd0aae81ee9215746",
+      "arcified/native/tooling/linux.py": "28d6c752689d74218f2de7c4a66d22a23ead7ee2cf2d2b399936336cfff299ae",
+      "arcified/native/tooling/macos.py": "0119df0a6060fc99b59ae7ba8bf4e247ca5e417603865c7c269b55b48612b130",
+      "arcified/native/tooling/test_input_identity.py": "50583b187d17ab72943f354385e35f02826f8c5412f45d4e3eb26fd73fd20039",
+      "arcified/native/tooling/test_linux.py": "90be5305c743fc4c70ef86e82318fdee1326fcfc00b5ef39eab8692ae09c317b",
+      "arcified/native/tooling/test_macos.py": "9dcde3c892f2fe616ec3547687b3af6caaa7dc817fcf5c333b31f3bb8ccff8c2",
+      "arcified/native/tooling/test_windows.py": "1abae9de41824b528d5a5d76a36399c6471ef848210ed2112eeaa17915d186d4",
+      "arcified/native/tooling/windows.py": "856e68daf7c682eaca0ae3cb80f52089edb7ab7720da796482bbaaf14ea0dbc3"
+    },
+    "patches_in_order": [
+      {
+        "path": "upstream-fixes/missing-dependencies.patch",
+        "sha256": "fe13efba6ac34ad05b8adc4db18a14b4a6e13ced1d7f9dd0b86a9e8d2b9ef26f"
+      },
+      {
+        "path": "upstream-fixes/tab-restore-live-tabs.patch",
+        "sha256": "dcf5c414ec52bfc151e48731bf90ab01155afa841e5aee9e2b735eba30afb07e"
+      },
+      {
+        "path": "inox-patchset/fix-building-without-safebrowsing.patch",
+        "sha256": "656a8239102fe65978024284cf7a3ee7001fb73b96a2829e9fce7311c4b6a013"
+      },
+      {
+        "path": "inox-patchset/disable-autofill-download-manager.patch",
+        "sha256": "cda5446010c5f98f67658c7b99f0dd8614409966fcf1f67640207a6463c85b66"
+      },
+      {
+        "path": "inox-patchset/disable-update-pings.patch",
+        "sha256": "2d55af29e85ea1825930c1bf0ff79931a942450d9c5475ee6344c58c9e46debe"
+      },
+      {
+        "path": "inox-patchset/disable-rlz.patch",
+        "sha256": "fd0283a48f09bbd68d8cf845d8822c3df1aa10ff9aacf4fa0c9c464d7779c1ab"
+      },
+      {
+        "path": "iridium-browser/safe-browsing-disable-reporting.patch",
+        "sha256": "d4378d8eec4f524e594a991022c702269bdbd167c1480936f4e41b5379d65bdd"
+      },
+      {
+        "path": "ungoogled-chromium/disable-google-host-detection.patch",
+        "sha256": "b176de7e2f542ac0b6c08c21efd8f8e64f68ca074f977c8ea44e4582b1b41924"
+      },
+      {
+        "path": "ungoogled-chromium/toggle-translation-via-switch.patch",
+        "sha256": "5345080e7b56eca340e9464777279d68be6994a05f41e451562b32cb65d0966b"
+      },
+      {
+        "path": "ungoogled-chromium/disable-untraceable-urls.patch",
+        "sha256": "2cd58f27c87375eac1e0ffed2ecb5310dde13e0581ae8cc36c8e706af78025f7"
+      },
+      {
+        "path": "ungoogled-chromium/disable-profile-avatar-downloading.patch",
+        "sha256": "3f105601f1b15815bd14c7a6c0aaba8e9443c7239db97644cd36220859576a22"
+      },
+      {
+        "path": "ungoogled-chromium/disable-gcm.patch",
+        "sha256": "69206c51832bdb0993a3346e83cd101044cf4dae7e45e0037cfcb28ed48a4def"
+      },
+      {
+        "path": "ungoogled-chromium/disable-domain-reliability.patch",
+        "sha256": "480c9f86a9fdc80ce3c22d6031ea5177cba3123eb03da7b37d3173ee91fe7173"
+      },
+      {
+        "path": "ungoogled-chromium/block-trk-and-subdomains.patch",
+        "sha256": "422012872ff6b6b58f421b0ce3a685c442e6a7260c26f5941741646e78567a8a"
+      },
+      {
+        "path": "ungoogled-chromium/disable-gaia.patch",
+        "sha256": "046ed0cf962254b1963da43ce57c2b2cab399bab722d3a0565cc59bf3c035112"
+      },
+      {
+        "path": "ungoogled-chromium/disable-fonts-googleapis-references.patch",
+        "sha256": "3d9ddb1eb2917c7f54e4734f4d92b21d54b653e935eab7454006a9edfd377f45"
+      },
+      {
+        "path": "ungoogled-chromium/disable-webstore-urls.patch",
+        "sha256": "297e6c0c3c1fa838d1679c9800444392771bba0b02c5af002868bd5795668bd0"
+      },
+      {
+        "path": "ungoogled-chromium/fix-learn-doubleclick-hsts.patch",
+        "sha256": "40635334ab8b227930eeaeaec96b3b9600f83ca6f4e1741388876509f4ebd104"
+      },
+      {
+        "path": "ungoogled-chromium/disable-webrtc-log-uploader.patch",
+        "sha256": "87025da2cd78fc438fddbaabb151804caf301f5feb6d5803ac1458f480b44435"
+      },
+      {
+        "path": "ungoogled-chromium/disable-ai.patch",
+        "sha256": "1968d9e18d947f47fede0d1b4902523edd7246605b58625e994b1e3d692304a2"
+      },
+      {
+        "path": "ungoogled-chromium/fix-building-with-prunned-binaries.patch",
+        "sha256": "8a1eaf934f653b7d50e4954f5d79a780187d618a96e98736463133e7c2f9c3b4"
+      },
+      {
+        "path": "ungoogled-chromium/disable-network-time-tracker.patch",
+        "sha256": "04278b44bfa8f0a3979e406e7208d6f27f278bfea1e3fd500c176cf7eac52d4e"
+      },
+      {
+        "path": "ungoogled-chromium/disable-mei-preload.patch",
+        "sha256": "380432b35f2e9931ba71e474bb32106966dd2c4948a9839589b7a3b114d3c680"
+      },
+      {
+        "path": "ungoogled-chromium/fix-building-without-safebrowsing.patch",
+        "sha256": "33e568edde713d55d3b2f001f7c4bc166322f4af2ed52e8d06be71e46b866b93"
+      },
+      {
+        "path": "ungoogled-chromium/remove-unused-preferences-fields.patch",
+        "sha256": "58337ae8e896e3e05fe394e8decd5fc1299d5e87727f9483cc5b6b59e1c9cc1b"
+      },
+      {
+        "path": "ungoogled-chromium/block-requests.patch",
+        "sha256": "7c8e119209aa3428a6de196c222fcbc98339bd4e0d880994ac7e6ea0e7cd1d7f"
+      },
+      {
+        "path": "ungoogled-chromium/disable-privacy-sandbox.patch",
+        "sha256": "9443aa1f9f3535cb8b902c6816c4e23f4af4e8cad357dc410ed685372f1f0b25"
+      },
+      {
+        "path": "ungoogled-chromium/extensions-manifestv2.patch",
+        "sha256": "527eae46758ec7e53734289f4d9b0ca3088cc8369aec7267ad89da349c21e188"
+      },
+      {
+        "path": "ungoogled-chromium/remove-f1-shortcut.patch",
+        "sha256": "c87bf8d05dda4b8b45fd761bed12394d36b443e975a8024ab818beb12e89a2d9"
+      },
+      {
+        "path": "ungoogled-chromium/move-js-optimizer-unfamiliar-sites.patch",
+        "sha256": "f43fc7c1fb5e989df2c5621a0eca2b6aa2ab6356d182205aef870c89cbeac604"
+      },
+      {
+        "path": "ungoogled-chromium/remove-navigation-source-param.patch",
+        "sha256": "640eea992b89e8683b2717ae852ea288a6a29728a6333b2d5b3810de4a5bcf3d"
+      },
+      {
+        "path": "ungoogled-chromium/bundle-hyphenation-patterns.patch",
+        "sha256": "8288f8b98f4526759833a68ee3b27472eec4a175888ad2555d41f558d4db9f5b"
+      },
+      {
+        "path": "ungoogled-chromium/disable-tos-dialog.patch",
+        "sha256": "b8d1364f3b6aaf641827a23474338fa97358eda9738ba3df6e09c1e6f349c640"
+      },
+      {
+        "path": "bromite/disable-fetching-field-trials.patch",
+        "sha256": "b997dfe17a5eb0895d8527a505f282d1078c776765a80b1e807bdcaccfe288f0"
+      },
+      {
+        "path": "ungoogled-chromium/add-ungoogled-flag-headers.patch",
+        "sha256": "fe4570aa11ad780ab22459420f8e88f100604f9b06543b6e1dbfee14a91b0fa7"
+      },
+      {
+        "path": "inox-patchset/modify-default-prefs.patch",
+        "sha256": "0b162073e158bfdea654e8ed0c82da239946820f20f4a23e0a0f3134ce6dbdfc"
+      },
+      {
+        "path": "inox-patchset/disable-battery-status-service.patch",
+        "sha256": "aa88071a85afede12dbb0c1e8abe52a13b41ecacf01f1f7f0bf3989da6181eac"
+      },
+      {
+        "path": "debian/disable-google-api-warning.patch",
+        "sha256": "9e548b6b6008cb04b2091b1e3cad6531e493a674d40b5e5b01f8c467eff1f9f6"
+      },
+      {
+        "path": "iridium-browser/updater-disable-auto-update.patch",
+        "sha256": "63008ec1ac532e13013fb047c13b7d30719f94abaa3979895877a3d8bf67d201"
+      },
+      {
+        "path": "iridium-browser/browser-disable-profile-auto-import-on-first-run.patch",
+        "sha256": "17d3dda41830aa1fa6b6f787329c059c8881960ce1fd2566a826387f7c07c89a"
+      },
+      {
+        "path": "bromite/fingerprinting-flags-client-rects-and-measuretext.patch",
+        "sha256": "5a51f6754b5ca4328e748ac6f7bdc11c04bfa787458b9525ea3e7bce94544de4"
+      },
+      {
+        "path": "bromite/flag-max-connections-per-host.patch",
+        "sha256": "6ee9113baa05937672df5a548393d3dbae950e9d651fd1b422ed47358538a971"
+      },
+      {
+        "path": "ungoogled-chromium/add-components-ungoogled.patch",
+        "sha256": "548a6cffdf431b1b05f5eca215c88f8e0267f8a011d404729d8b1b4ffd3de710"
+      },
+      {
+        "path": "ungoogled-chromium/add-ipv6-probing-option.patch",
+        "sha256": "3b27a09e0e1e966924be7cf866ee06a3aeadd1d611482c6da4a024a558c82c76"
+      },
+      {
+        "path": "ungoogled-chromium/disable-intranet-redirect-detector.patch",
+        "sha256": "7e7106e0cacf438a7d97f7f5d337f691637423b8192da3e07697f8e56851165b"
+      },
+      {
+        "path": "ungoogled-chromium/fix-building-without-mdns-and-service-discovery.patch",
+        "sha256": "77b56b96898e4d4b5278087a4867cabc29ecc282674bb824962e3a84ea255f66"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-configure-extension-downloading.patch",
+        "sha256": "65085b295dd3c72f7d7688525353df35c54c4f8e02b409b15883bb769a3766df"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-for-search-engine-collection.patch",
+        "sha256": "5319b45f4f10f748098492ca68b04876a4af51b063efacbc447bd32f09fc150b"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-disable-beforeunload.patch",
+        "sha256": "4304444883e24d395fe43e9ddc5a6bc51cff4b55ac7bcf6bbf8dfa0b995b8c03"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-force-punycode-hostnames.patch",
+        "sha256": "52480662769d166f2df93e37088e8ffcf94f1386d1c9aff238fc7ebb6a8b66fd"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-show-avatar-button.patch",
+        "sha256": "b8bbec059b05281d3552a7da5ad73999560ccfc5a44b34464f90f5a41b197bb8"
+      },
+      {
+        "path": "ungoogled-chromium/add-suggestions-url-field.patch",
+        "sha256": "47ff8550d91975100d48f87cc56fad76493d7e31881c93967bf27ff44dd5b8bf"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-hide-crashed-bubble.patch",
+        "sha256": "eee0fa345187edd691ea92acf2b7c2585d26e11b725f2dee3145f599633f287d"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-scroll-tabs.patch",
+        "sha256": "4b3d67b820eeebd6f41448a3badc20c41d15c1956526330b4d931531eb5c8121"
+      },
+      {
+        "path": "ungoogled-chromium/enable-paste-and-go-new-tab-button.patch",
+        "sha256": "5c64d116a548b123364c76e735efd239909354429618253d37d73c39c5821635"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-for-bookmark-bar-ntp.patch",
+        "sha256": "124c9fbcc6afa42b495175be3ce014900045c0900f94128654deea0a5a893c96"
+      },
+      {
+        "path": "ungoogled-chromium/enable-menu-on-reload-button.patch",
+        "sha256": "f82fca9b9b8da8b2e8212945cb8ab65da3bcadedab1952315d3e0046754ad501"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-for-omnibox-autocomplete-filtering.patch",
+        "sha256": "e631dd9d6f498bca74416a3cd3729c5ca8bf975d936ef1d038a1821090682cef"
+      },
+      {
+        "path": "ungoogled-chromium/disable-dial-repeating-discovery.patch",
+        "sha256": "74ac795c6b5f734786b5dd9ae6e19360dfbed25083e643d521118ed8d19b1ff3"
+      },
+      {
+        "path": "ungoogled-chromium/remove-uneeded-ui.patch",
+        "sha256": "7089fb377c7bd47eb63acfcc6f6636b80ec9d5391f0e623d03b45469f8035daf"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-close-window-with-last-tab.patch",
+        "sha256": "f1d26af1373aff90b36027c09583390bbb89eabe58d31ec9951922870d704832"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-convert-popups-to-tabs.patch",
+        "sha256": "22e459a91b634f9c4430dbbcfed6a73025bad0fab31186a862ac7fbac7cb2465"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-disable-local-history-expiration.patch",
+        "sha256": "17725af3d00ea821dff9b1d6f1ed59b4aca340114691a823f495a3472e38a6a3"
+      },
+      {
+        "path": "ungoogled-chromium/prepopulated-search-engines.patch",
+        "sha256": "6106f02739dbe497ca21d09a8694fb06db46d3b2add5f7a1a62807e064af0cea"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-clear-data-on-exit.patch",
+        "sha256": "bccb5d1ffe7258dfd9eaa0130c94ae6f719615591c6d6e140bb9b89666dfac22"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-for-close-confirmation.patch",
+        "sha256": "32316640949cfbf02e3868a8f5625fa33bc24e8460982bce8ec82b0c973a8234"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-for-custom-ntp.patch",
+        "sha256": "11592476479c2277b4ec2b3a4ac2352c45edfa3267cb9bd8d71da92e63fe3c03"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-for-tab-hover-cards.patch",
+        "sha256": "2e7c45ae4fe8b223ee67509ca37a6827138480bf3eacc0e5d276868bb41fa572"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-hide-tab-close-buttons.patch",
+        "sha256": "d37ed239cd01fb006d4c761102adebbee4b90b0b87d44974f9d07c55d9bcb8f0"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-disable-tls-grease.patch",
+        "sha256": "3017c3752428bb1b2c77373c632e3da0239c404d640c79f8316681635aaf9163"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-change-http-accept-header.patch",
+        "sha256": "810c81357dd87ab884f86d326b984e86e8aba58f875c9499667f8187e60b9f4a"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-for-disabling-link-drag.patch",
+        "sha256": "858830ce3635f382b460d81a1e22bf542e30b8013ea97477f7d7bca782471f1a"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-hide-extensions-menu.patch",
+        "sha256": "02bc249cdf0880c68f6214578cfc49060b616aebd5c2be21fd2ed4159eeac944"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-hide-fullscreen-exit-ui.patch",
+        "sha256": "2799364fd92840a433d2e93fc9647ee283cae0fd4f836d9ecda9c91052c31fab"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-for-incognito-themes.patch",
+        "sha256": "d033257e53c64300b150c0504687b2e88f6ace72e4cd9ec7363e3a34e849277d"
+      },
+      {
+        "path": "ungoogled-chromium/add-flags-for-referrer-customization.patch",
+        "sha256": "d82695e878e883f00eb3dbb127fc87ac6b794baefbcc5cfd3f872654e60fa0e2"
+      },
+      {
+        "path": "ungoogled-chromium/add-flags-for-existing-switches.patch",
+        "sha256": "ab9e60b3180ecc21b67330b718d205911993a846ee6d6bd54cbfc56bd4871dd9"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-reduce-system-info.patch",
+        "sha256": "9aabe52d04eb99c0fa339e4294bae0f8c5ab42b61d09859013a954a2e8a2fb67"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-remove-client-hints.patch",
+        "sha256": "4c89ee51b57ccee0cf68d5c2899662a07722a816b5437a254bb4bea68ba9c262"
+      },
+      {
+        "path": "ungoogled-chromium/remove-pac-size-limit.patch",
+        "sha256": "437dfe711214144b0df4138d5eb34cf4c86c43ac12ed7fc881b4568c06380bee"
+      },
+      {
+        "path": "ungoogled-chromium/enable-certificate-transparency-and-add-flag.patch",
+        "sha256": "600a8eff342d95f27c9badcbd54c2eef7f8139579133a75d8fefa0a40ef8f44c"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-spoof-webgl-renderer-info.patch",
+        "sha256": "8fcb0316059dc53407403088560c707db5f6d7489df9079aad297470692a0aa3"
+      },
+      {
+        "path": "ungoogled-chromium/add-flag-to-increase-incognito-storage-quota.patch",
+        "sha256": "d8f085154f1f3bbc7527998cf7cac262a52dd0936e83e2d2a32e9039d1036c70"
+      },
+      {
+        "path": "ungoogled-chromium/add-credits.patch",
+        "sha256": "9804fd81ace177b532a910618db0323e2c217416a3ea6333a895e3c9cdb8ac31"
+      },
+      {
+        "path": "ungoogled-chromium/disable-ai-search-shortcuts.patch",
+        "sha256": "4fa40ab6927754efb04a028006fe02dbda55fd7560133fa0934a99d84dff1aca"
+      },
+      {
+        "path": "brave/chrome-importer-files.patch",
+        "sha256": "0465655fef9ee8a2b7f980ac0df7bfcfa755335f63bd70dbb7249810c6c8f3af"
+      },
+      {
+        "path": "brave/custom-importer.patch",
+        "sha256": "023f5f4807844f8f034c6a407fa33b54c9addcd4bd107aaec58ccc158c5b472a"
+      },
+      {
+        "path": "brave/fix-component-content-settings-store.patch",
+        "sha256": "3273c14018197c99b7180b394858a2ad836a85610a6656711a9d0a1f333bdff9"
+      },
+      {
+        "path": "brave/tab-cycling-mru-impl.patch",
+        "sha256": "3260d3dca144922bdc3992315abbed376f3c8318ac7c365f680f7f28128c480f"
+      },
+      {
+        "path": "helium/core/add-zen-importer.patch",
+        "sha256": "2f92e76e90b4bd7c7f909f19677cfce3bdeaf81e5600b8ce711a48ca9ba3112f"
+      },
+      {
+        "path": "helium/core/add-arc-importer.patch",
+        "sha256": "5f4418f50c5609218d046168611a76905aafc3707389df284003da7448198e88"
+      },
+      {
+        "path": "helium/core/disable-unsupported-importers.patch",
+        "sha256": "05cca876e4872ec2ee36ccb5cbee3765c4de2ce1e90e43ff016136bff27ad08d"
+      },
+      {
+        "path": "helium/core/fix-building-without-safebrowsing.patch",
+        "sha256": "0563314ecc2e301201d1375e8861422e2dcaee0c555d47f794fdbf3a6ffd547b"
+      },
+      {
+        "path": "helium/core/services-prefs.patch",
+        "sha256": "a1185f535f8c9f934de3932dd15a00079fd3e6f54941123c8cf0a8773e6ab2a0"
+      },
+      {
+        "path": "helium/core/services-schema-nag.patch",
+        "sha256": "41591fa784cba30d9ea7d6943cc67f27c47e3e1f87fa547a75e64fe7656128fd"
+      },
+      {
+        "path": "helium/core/override-chrome-protocol.patch",
+        "sha256": "1c8b1a92a24b1fa6c9c100ac1d941e197c326fa4786f7872328c82febca1aa3b"
+      },
+      {
+        "path": "helium/core/onboarding-page.patch",
+        "sha256": "3b7fe4ca338b681e35d1caddbe510dd6d9f96881aa8aa4435eced3cca3b3ec24"
+      },
+      {
+        "path": "helium/core/change-chromium-branding.patch",
+        "sha256": "0c120626d572a621171b6ab235fcd74a7f3be627fb2adcb8b24f1445b745342f"
+      },
+      {
+        "path": "helium/core/scan-chrome-native-messaging-hosts.patch",
+        "sha256": "f1f968332beffcd58e4dc013e20ea597c3403ea1a220187c43e377256b845e30"
+      },
+      {
+        "path": "helium/core/search/restore-google.patch",
+        "sha256": "65c56eb71a7836c9dd86fb637eef35e025ec1f014f28687f068868d623e1e228"
+      },
+      {
+        "path": "helium/core/search/engine-defaults.patch",
+        "sha256": "22f1bcd4bab81076eb4769d6e4246ea8a53c774db976ff1c0f440d97f6e0f902"
+      },
+      {
+        "path": "helium/core/search/fix-search-engine-icons.patch",
+        "sha256": "bebe4be7038101eb11aa15c10fe93b1341a642705fdb9692ba3ca6c30eb0b47f"
+      },
+      {
+        "path": "helium/core/search/force-eu-search-features.patch",
+        "sha256": "4e8e6d5dd86acd6c78478849c0d5366adaf66e8d6d15563fee0d99601f2d3f0f"
+      },
+      {
+        "path": "helium/core/search/remove-description-snippet-deps.patch",
+        "sha256": "96838945381c6b796539778a735553fe5a4923532d38ed996d17a5143729b8db"
+      },
+      {
+        "path": "helium/core/search/break-favicons.patch",
+        "sha256": "a154951983415bec3fe1b19ddfb5b61bbff88586f5c25a9b96351b2da382ac93"
+      },
+      {
+        "path": "helium/core/search/omnibox-default-search-icon.patch",
+        "sha256": "a1af709be945e835c3d9a003fff9d8824f9ef6b286a629452273dd7df257f58c"
+      },
+      {
+        "path": "helium/core/search/add-kagi-image-search.patch",
+        "sha256": "326329ac09fce96bbcd460cdd4e9da4e0a994b294640d184f968ead5dd316775"
+      },
+      {
+        "path": "helium/core/search/fix-brave-name.patch",
+        "sha256": "1dad3b5d3adf76634f502abbf48322f5ea848eea4ab58f230e6aebe707990e70"
+      },
+      {
+        "path": "helium/core/sync/engine-interface.patch",
+        "sha256": "579500db0f0ac7978ad98162ae86fdf40edb92ea972d1dd3fda0898fe862ec06"
+      },
+      {
+        "path": "helium/core/sync/service-backends.patch",
+        "sha256": "7461729986ed19e80f3b2024e26954f135c1bfc6069ee5604280bbdf0e10e798"
+      },
+      {
+        "path": "helium/core/sync/datatype-policy.patch",
+        "sha256": "9897ceb0c7123accc96de5ae90ba1f5a2c8a7a7d1b6ee15ac546c2dd6cfa8e5d"
+      },
+      {
+        "path": "helium/core/sync/vault-format.patch",
+        "sha256": "1f424aeed0faaf43f085ebad06ac5394b7019987ab0aa03441f2907dc8d2c648"
+      },
+      {
+        "path": "helium/core/sync/vault-encryption.patch",
+        "sha256": "170b13df1f76a7551101984286fb3280c06e32af90de3c678e48b7346f882d96"
+      },
+      {
+        "path": "helium/core/sync/vault-transport.patch",
+        "sha256": "b14f80b92a10a84978e57555f990327a71deba576e7bc964735128df4ffe5183"
+      },
+      {
+        "path": "helium/core/sync/vault-store.patch",
+        "sha256": "dbe0531e2bb92496e408f1b44e9167fccc31c0dabd1d10f4395481c96a4be638"
+      },
+      {
+        "path": "helium/core/sync/loopback-server-in-memory.patch",
+        "sha256": "9d9d22f1e577563ad10cd499d158fc97a8d9e1b65db7bc5609a4b43db0d02792"
+      },
+      {
+        "path": "helium/core/sync/history-expiration-threshold.patch",
+        "sha256": "a9c53b577586a5d3f0419a1fd692c53dc4273d0dec6931a5449fd10f86e9e7aa"
+      },
+      {
+        "path": "helium/core/sync/vault-engine-backend.patch",
+        "sha256": "d7a33c25b7ec3b81c16f25b31533d7f5fb5dff4c4972dbeb7ab01a07db259ddc"
+      },
+      {
+        "path": "helium/core/sync/provider/api.patch",
+        "sha256": "1e54ffb9b2f512ab994e1233d2b52e9352e792a79cac358fd383714319b47fa5"
+      },
+      {
+        "path": "helium/core/sync/provider/manifest-handler.patch",
+        "sha256": "5b178e104e6a81c081902b484253428bef20b3ce023ab87217a46ceb60f55075"
+      },
+      {
+        "path": "helium/core/sync/provider/service.patch",
+        "sha256": "6e3bce693689e5f4d9d1b84e5abbd479b24dd4ada12970b6c58e008f3c6fb296"
+      },
+      {
+        "path": "helium/core/sync/provider/profile-prefs.patch",
+        "sha256": "7206c5c5e9ddbb09b637d63067e75c772d35b48c23bb29358b642f9c73c5ef80"
+      },
+      {
+        "path": "helium/core/sync/provider/repository.patch",
+        "sha256": "58c57d4f13cc860d6c75f6b3b3ab6ccff191ab6126eef8ffbd4c31aa7eb4e48b"
+      },
+      {
+        "path": "helium/core/sync/provider/exclude-from-vault.patch",
+        "sha256": "b463b9380c11a81b5b03b6561b8580baba4be39f53b064f677c4a8a7726d1aa7"
+      },
+      {
+        "path": "helium/core/sync/disable-google-backed-sync-integrations.patch",
+        "sha256": "239f4325815e62362724202498357280cb403b0e05670cd808d7af1257c3de86"
+      },
+      {
+        "path": "helium/settings/setup-behavior-settings-page.patch",
+        "sha256": "7a4b862f5cfea36cfae82ae6b173f65ec3a559eb89ba5a830244874c5bddb85f"
+      },
+      {
+        "path": "helium/core/keyboard-shortcuts.patch",
+        "sha256": "b3915c2f5beea45c7e9828d627c4f299f014fcea7bfbdb4a8c8f1da48f8eda37"
+      },
+      {
+        "path": "helium/core/update-default-browser-prefs.patch",
+        "sha256": "04c0c8c67f5457206afbce614364c20fc8ce4168ba925858706ece94cc0a3da8"
+      },
+      {
+        "path": "helium/core/add-default-browser-reject-button.patch",
+        "sha256": "031bb5e95279b96e0e7aa9f8d4bdb4e98ca407e81b95258f8f5e9175d82a434c"
+      },
+      {
+        "path": "helium/core/proxy-extension-downloads.patch",
+        "sha256": "f9ac80de1a700c6f3849334956a6eb9d0a32925501807b8257ece875247bb6f9"
+      },
+      {
+        "path": "helium/core/reenable-update-checks.patch",
+        "sha256": "15f0858ba901c0db1a81a4c405fbcad68c35ec49a3cab1e1f0494f8a1d6880fb"
+      },
+      {
+        "path": "helium/core/add-native-bangs.patch",
+        "sha256": "2c4a1f3a50d772f7499a577daa67a680490484ed173d89cd1f5039d85c5a00d1"
+      },
+      {
+        "path": "helium/core/disable-bookmarks-bar.patch",
+        "sha256": "fdab3b82915c13246fe2960ae07ebb1b253bcc98fd788f58b42540ba8000c453"
+      },
+      {
+        "path": "helium/core/reenable-spellcheck-downloads.patch",
+        "sha256": "50709b8aedba9f2c9f840ec452ce078523657950d9050dcea4365459c87720bd"
+      },
+      {
+        "path": "helium/core/prefer-https-by-default.patch",
+        "sha256": "89e216c1dcf5c28b42c70e7b8e9465d7143620711e73a888558f38af006fa0e0"
+      },
+      {
+        "path": "helium/core/enable-tab-hover-cards.patch",
+        "sha256": "bd77867345d1f55fd08fd6eebcdf171f32e8d2f6f4a4136082814b78c9339fea"
+      },
+      {
+        "path": "helium/core/memory-saving-by-default.patch",
+        "sha256": "82858575aac6d0088c6a1c146c7cb0011e96c3556e674f23a136d99e4a3c271d"
+      },
+      {
+        "path": "helium/core/disable-history-clusters.patch",
+        "sha256": "215cbebe751834fafe8ea59fa869d39ab90560c3785834689b31dd9fbd5de990"
+      },
+      {
+        "path": "helium/core/unbreak-chromium-link.patch",
+        "sha256": "6558255db76cfbf9bdbf72cb36fa57a4e44f4e33e0510df08c0b1852b1c9fe28"
+      },
+      {
+        "path": "helium/core/update-credits.patch",
+        "sha256": "0c764aacb04b9a64aa19a5024b16ae8241a41dcebf60bf380d2ac2479c49215d"
+      },
+      {
+        "path": "helium/core/disable-user-education-nags.patch",
+        "sha256": "c9bc1d51fc61b0c806563e492a7bcacce4486a704e1b2ffad4cfbd7e1e9bb199"
+      },
+      {
+        "path": "helium/core/replace-default-profile-name.patch",
+        "sha256": "1813db5a136ff7049ce20365829597af452901e028b682bed3894fd6deb908a0"
+      },
+      {
+        "path": "helium/core/disable-live-caption-completely.patch",
+        "sha256": "b6ce5947b966ac92d05adca61ad21c907028c623696e841ffe6ee17c81be4c90"
+      },
+      {
+        "path": "helium/core/spoof-extension-downloader-platform.patch",
+        "sha256": "ea4739242c2732e9c31d2af0de3240b38ac156e1763b25ec994f965678cdce52"
+      },
+      {
+        "path": "helium/core/spoof-chrome-ua-brand.patch",
+        "sha256": "f3abc81c13f53fd7c89cdec535958e222fecb268c2102917de982f6482304d48"
+      },
+      {
+        "path": "helium/core/add-helium-versioning.patch",
+        "sha256": "c92fa1d5105d17042b4bf9958640eb47020763fb9708ec2f36b44a2afe36d8bb"
+      },
+      {
+        "path": "helium/core/degoogle-context-menu.patch",
+        "sha256": "e67ae5597934ef737bdd3b84430803d947703c17b83992ac03c84bfa9dcdade5"
+      },
+      {
+        "path": "helium/core/fix-tab-sync-unreached-error.patch",
+        "sha256": "face8d8b05ca635878fffd434705542e22776efd1e273cb0cdd40bbc01958230"
+      },
+      {
+        "path": "helium/core/fix-instance-id-stuck.patch",
+        "sha256": "4de237768a897c11d4e5849a6bf13cca78f263df1a24435844e1036221afae8a"
+      },
+      {
+        "path": "helium/core/flags-setup.patch",
+        "sha256": "3e549e4cf3c5bd30533ba754d2fe6c0b1ea3c40f0ca8b2e9c30cd6ee0de84b8a"
+      },
+      {
+        "path": "helium/core/add-low-power-framerate-flag.patch",
+        "sha256": "e571eac95a111558ed43a82b31714f0ee1a3931f660ef825d0210f548e69be67"
+      },
+      {
+        "path": "helium/core/bookmark-open-all-confirmation-flag.patch",
+        "sha256": "7782fcdfafed777fa40b2e20cd428a3333b0018cb7ada87818d74af04d3deabd"
+      },
+      {
+        "path": "helium/core/add-update-channel-flag.patch",
+        "sha256": "4a5138dada09dc1dab95ec5c6ec32ad85b91de9de9591e29c6cabfdd854cbd8b"
+      },
+      {
+        "path": "helium/core/add-updater-preference.patch",
+        "sha256": "51f927c69935fd8bb8f58f77b6043a92df6e5d704590b476a0192da8e91b5fa5"
+      },
+      {
+        "path": "helium/core/add-middle-click-autoscroll-flag.patch",
+        "sha256": "979df9be80228c671f2b35afb767514e0a0fa7d48f67a6abb0531b9c7543fb5a"
+      },
+      {
+        "path": "helium/core/exclude-irrelevant-flags.patch",
+        "sha256": "4489b19b8df1b750aa5a9222e8e0130fe52b23c0bc312cde781715a4651bf102"
+      },
+      {
+        "path": "helium/core/disable-outdated-build-detector.patch",
+        "sha256": "55affebf4bd3a116209cf11cccf65ddfb96536ad8e0f7a7e3e7834af6b879bed"
+      },
+      {
+        "path": "helium/core/remove-dead-toolbar-actions.patch",
+        "sha256": "90c15dc07cac46572086f5f3305cf6a80d0f6f02ff92e0edc0f467425a4f7cf6"
+      },
+      {
+        "path": "helium/core/add-component-l10n-support.patch",
+        "sha256": "b80c9d314c7c15a9ac651b3a0b6d656ecc83ff69880154c43a0ff5d23d702450"
+      },
+      {
+        "path": "helium/core/add-component-managed-schema-support.patch",
+        "sha256": "f4bc3dd96b06e8789ada8dbc979c1b15d7a78e3389e930e333dd7769b9f257fa"
+      },
+      {
+        "path": "helium/core/prioritize-platform-policy-loading.patch",
+        "sha256": "17725bd99a9ae0edc2c8859cf26816faf92c63b42ef0e55c32daac04aa8ee906"
+      },
+      {
+        "path": "helium/core/ublock-setup-sources.patch",
+        "sha256": "3fd5d316cae9964740035e3d5f9081a85a71b374c646c64bbd3af4a2ac25a75e"
+      },
+      {
+        "path": "helium/core/ublock-install-as-component.patch",
+        "sha256": "d7619783e2bd9f03e78ffd95424345f2ca59db61291f84ec17231ccfaa98ac9f"
+      },
+      {
+        "path": "helium/core/ublock-reconfigure-defaults.patch",
+        "sha256": "fa138b81625c6b94280692c455478e7704a22f6a1175b524294238004e67527e"
+      },
+      {
+        "path": "helium/core/ublock-helium-services.patch",
+        "sha256": "55e6430966cac3af2f9714776dbee3fe6536ee3e1033adefa357202e59af29b3"
+      },
+      {
+        "path": "helium/core/ublock-dns-uncloaking.patch",
+        "sha256": "fd15d5b9a3bc17cc919cfd8a1559435b9423a4dcf662e6b2e9b81e6a627a6679"
+      },
+      {
+        "path": "helium/core/clean-omnibox-suggestions.patch",
+        "sha256": "709fa57728f82f5fc3bac9ce2f7d307e94281a84a3f81a80519812a0d7faa3b5"
+      },
+      {
+        "path": "helium/core/increase-incognito-storage-quota.patch",
+        "sha256": "6e9924ded8f370633f4d99d7bb8d393ccc71c77225c0aed5cc546742c5485724"
+      },
+      {
+        "path": "helium/core/noise/core.patch",
+        "sha256": "2211d32273a7a8d520cdb804ace723bbbb0700ea514b5f7bd7471008cbd33bd3"
+      },
+      {
+        "path": "helium/core/noise/canvas.patch",
+        "sha256": "8692e269e63de4262ac5ba55d1a14b90e14bffc03ad00d7822cbfafc1b10a8fa"
+      },
+      {
+        "path": "helium/core/noise/audio.patch",
+        "sha256": "69732d0e532033bda29af91ae0611f45e05b101b9e36affe186cff4b1816990f"
+      },
+      {
+        "path": "helium/core/noise/hardware-concurrency.patch",
+        "sha256": "eac6cfbf192d22d370f9fada012f5e2d2fbcd9d9cdb9e5dba54028ad4122229c"
+      },
+      {
+        "path": "helium/core/network/disable-ech-flag.patch",
+        "sha256": "49a1ab5745651ee7ee62bf5c7f882bfead8c3e788780db58a887d1f3a7b6cc0b"
+      },
+      {
+        "path": "helium/core/network/global-privacy-control-pref.patch",
+        "sha256": "7747e4f435a5e565f1e2e609fd12a56d91e19b926ad4a5403a874a3bc9579ebe"
+      },
+      {
+        "path": "helium/core/network/quic-v2-flag.patch",
+        "sha256": "b629e44e2ebac87ccd9fc820f9093157a4736e61b10ff775d1c1e3451b88bd4b"
+      },
+      {
+        "path": "helium/core/network/split-clienthello.patch",
+        "sha256": "cf57b433f9c7c3b847cd048e54225e30f4a06f8e04cb759713af927a265a0838"
+      },
+      {
+        "path": "helium/core/network/dns-providers.patch",
+        "sha256": "746e1e66bfaae46a200485437de2ebdc83771d345098ddbb7ce279397f29f4d0"
+      },
+      {
+        "path": "helium/core/network/ignore-system-proxy-server-flag.patch",
+        "sha256": "e68a5de0bd21f95e27004fbbeacd9f43d0694a34e530742da1fd1f345c381951"
+      },
+      {
+        "path": "helium/core/reduce-accept-language-headers.patch",
+        "sha256": "e2b48476a4902ceb736407fd5813f324b6d7a5bb9961e7eb875ecf977b711a7e"
+      },
+      {
+        "path": "helium/core/disable-ad-topics-and-etc.patch",
+        "sha256": "b8587a591515496b24f6321cab8ef479005618b98d43940086e66c51b3312244"
+      },
+      {
+        "path": "helium/core/infinite-tab-freezing.patch",
+        "sha256": "90818e5c3c1f456cafce200dae28b0421cca5729685f1b34f575c81fc5878838"
+      },
+      {
+        "path": "helium/core/disable-touch-ui.patch",
+        "sha256": "7ff54ec4db9f952eb18f4481e4bc136c71a18f5086b938d3fe5b9992cc530218"
+      },
+      {
+        "path": "helium/core/open-new-tabs-next-to-active-tab-option.patch",
+        "sha256": "60b801d026a82053cc05b82953263bbe9695b0a4da9b8f0d8806b09ff444fb74"
+      },
+      {
+        "path": "helium/core/disable-update-toast.patch",
+        "sha256": "a363303c987488abd3739fdf072ac8c2b11f5d949d66ac2800a847b021ee631b"
+      },
+      {
+        "path": "helium/core/disable-fedcm-bubble.patch",
+        "sha256": "dd2a1141c18fb45acf56126efbbf89024f4a707eb7a99ef6a9673e2fe30245bb"
+      },
+      {
+        "path": "helium/core/webrtc-default-handling-policy.patch",
+        "sha256": "cead2e06116b5f2af909cb86c0e42025e2c0ca3c948fc4e2c12937d369033296"
+      },
+      {
+        "path": "helium/core/browser-window-context-menu.patch",
+        "sha256": "963efc0ec805e80792915ffd25c3e3d082f7078cf33331ed950e21af4b24ba80"
+      },
+      {
+        "path": "helium/core/disable-ntp-footer.patch",
+        "sha256": "abb1869cecba9458f0beb51e249fb719afc121fd953b640eb72f11e8383f0e24"
+      },
+      {
+        "path": "helium/core/tab-cycling-mru.patch",
+        "sha256": "f46ed52302e03aa1eee41b59ce85b42da87c884c84e4639e7282cf96772e947f"
+      },
+      {
+        "path": "helium/core/component-updates.patch",
+        "sha256": "d274755bf115e87129aa6eeb0ae3f59e1d5a183fc97cb4bb88f4d35b24c78a91"
+      },
+      {
+        "path": "helium/core/fixups-component-setup.patch",
+        "sha256": "1d97e1192c277a3ff791c9702f9480d929dd05ddcceb43912a93f951dc71d35b"
+      },
+      {
+        "path": "helium/core/fixups-chrome-webstore-script.patch",
+        "sha256": "ae784188e6e85fb9db0e39cc412ab3dc3e6e7e920bc0b717453a631b11a8a488"
+      },
+      {
+        "path": "helium/core/hibernate-tab-context-menu.patch",
+        "sha256": "a3cb607bfdd10e5af9ee8fdaccaf2d9123cfb82405eb523a0d9d273f118e9b48"
+      },
+      {
+        "path": "helium/core/disable-side-panel-flyover.patch",
+        "sha256": "b39461628442558fb5bda5451db89f9b67be9cf7e011d1aa2d9e88c12eb6721e"
+      },
+      {
+        "path": "helium/core/custom-profile-avatar.patch",
+        "sha256": "1ac78f597e5bfc41873cc947ef772c672576cdd1f41896d22001bcc9d3eba37b"
+      },
+      {
+        "path": "helium/core/close-tabs-to-left.patch",
+        "sha256": "830be565b7e7c283462ecb8764fce26c20e590b43e36a56bd9c901e2c47cdaf7"
+      },
+      {
+        "path": "helium/core/custom-keyboard-shortcuts.patch",
+        "sha256": "5dff60546d45d192a3f85174687959abdae7e7936cea66c4d096419484748a88"
+      },
+      {
+        "path": "helium/core/copy-url-tab-context-menu.patch",
+        "sha256": "c3000915510cd095564b584a46d3f03496968757a1f8187678bdde5968cf97c9"
+      },
+      {
+        "path": "helium/core/mute-tab-context-menu.patch",
+        "sha256": "9e23448687616657b940058ad3fc6774dddd4483e039cc151ec5b0f9749595aa"
+      },
+      {
+        "path": "helium/core/simplify-context-menu.patch",
+        "sha256": "dd87ff7bfe0a356b94b0ff7bad324fead2a0f2c7624390b5c970a896aa368ec3"
+      },
+      {
+        "path": "helium/core/disable-annoying-infobars.patch",
+        "sha256": "4ce62bc82b463c7bb7a373afc0262a98637aaa511dff40966e8500b419ad3503"
+      },
+      {
+        "path": "helium/core/enable-screenshots.patch",
+        "sha256": "3e160b640b011fb10cb27d3a409e8c4e14c8f3cdb72c2332d739c929e18883ac"
+      },
+      {
+        "path": "helium/core/enable-glow-up-features.patch",
+        "sha256": "bca746db0f35f75e40c0e1bfaab3e4a2f87c992e9e03dc0efa12c640087ea933"
+      },
+      {
+        "path": "helium/core/enable-bookmark-bar-settings.patch",
+        "sha256": "13de384476bbac120e07d9853c753f8c3c77eae0184cdcd4ffe6be5fff71db84"
+      },
+      {
+        "path": "helium/core/force-paste-action.patch",
+        "sha256": "b6af7f6e6a78281fe740cbc68af1b37ca21468c95e1ff0ff03ebfb3ffcbc4e6b"
+      },
+      {
+        "path": "helium/core/shift-right-click-context-menu.patch",
+        "sha256": "419fddf1adab0c65f442fc4c6917a34097a5ecc629f495f5db8a5bdb5d20ac87"
+      },
+      {
+        "path": "helium/core/crash-reporter-privacy-tweaks.patch",
+        "sha256": "364db55b545a40436e6c3cdaa01432499ea9ffbb1ad4053679dc75f06b387ae2"
+      },
+      {
+        "path": "helium/core/crash-reporting-prefs.patch",
+        "sha256": "ec3920ef61a5ce3d7469e41d70d9185beb553d87f6bcbbfa4a42a4fd5aa905fb"
+      },
+      {
+        "path": "helium/core/remove-unused-ai-resources.patch",
+        "sha256": "5aa12116be37268b971d9d5314b095a6e5d29d2967fc7d2682c5aa54bad16f9a"
+      },
+      {
+        "path": "helium/core/remove-experimental-webui.patch",
+        "sha256": "73be07f491a539e9111719658f9dc08c1232488fcd4ec003743f122107b8aa22"
+      },
+      {
+        "path": "helium/core/rbe-nativelink-config.patch",
+        "sha256": "6ac5a6239f1308ee0ad64239e56b6d19057a1c2f5b5ad6f948de4956cd3cbf1f"
+      },
+      {
+        "path": "helium/core/disable-non-standard-auth-features.patch",
+        "sha256": "0964120095dfa71074108c5b7edc55944dcfb2f7113acb0301a9463ba150d505"
+      },
+      {
+        "path": "helium/core/use-system-python3.patch",
+        "sha256": "53a25d1ca57b1b887509470b2c0d7c95ed514ebd7abd9ef59b8fba7dc2f7486d"
+      },
+      {
+        "path": "helium/core/lazy-session-restore.patch",
+        "sha256": "9d72a652f626edc8505db638a890d2a8eacc8ca269f9811888696447f4755c10"
+      },
+      {
+        "path": "helium/core/enable-back-to-opener.patch",
+        "sha256": "e1d76dbb2c503a03daede504d3999a27eebcd9e2262fa1e5bdea8c4af3eeecbf"
+      },
+      {
+        "path": "helium/core/ridiculous-google-compat-exceptions.patch",
+        "sha256": "20546cf571d5c9e3fdaf97a0e018f859d4ee25968b25d250f29c776bf1adec90"
+      },
+      {
+        "path": "helium/core/disable-password-manager.patch",
+        "sha256": "e41a90415095fd62b02224679cc1a8d1fd4d770918067370edb7dcc575f8c26a"
+      },
+      {
+        "path": "helium/settings/settings-page-icons.patch",
+        "sha256": "5277b3b730dc9eea6d05e52edb054b5b31a8401fbda647557a57c3c80b50c4d5"
+      },
+      {
+        "path": "helium/settings/move-search-suggest.patch",
+        "sha256": "a36b1581fbc5e730003e9771a37ff166b88c2a2974c299cb2137b5b79bba791a"
+      },
+      {
+        "path": "helium/settings/remove-autofill.patch",
+        "sha256": "293d60ad7f75292d4fb27b571d42f49ffc4b4d77f1c8d354105a6bb7c5f41abb"
+      },
+      {
+        "path": "helium/settings/remove-profile-page-sections.patch",
+        "sha256": "34f267ec3fc56fcc9aa5455dd434dca60f509fbc67a85504496f46bb96055180"
+      },
+      {
+        "path": "helium/settings/fix-page-names.patch",
+        "sha256": "e14e4f3faefd7b1445192a7c36e771a46e82fa0d62708fe3f69f9d051195283e"
+      },
+      {
+        "path": "helium/settings/disable-safety-hub-page.patch",
+        "sha256": "442002b593c8010045cab8c2469e0844623a0d2755c46fbc0d8e33928a2ad9a2"
+      },
+      {
+        "path": "helium/settings/remove-results-help-link.patch",
+        "sha256": "671eeabe147de349fae20c0bfafb91977e36dd5e40f44dfd225150ab1edc823e"
+      },
+      {
+        "path": "helium/settings/about-page-tweaks.patch",
+        "sha256": "ddeda955d8c6f5fd413f71311a1be77349ac71397cce6dc1dd370d71b2d68806"
+      },
+      {
+        "path": "helium/settings/remove-translate-section.patch",
+        "sha256": "cfbeb58280a0e52432b4d473a8f5513333d30da6d5da80ec3522573855b56e6d"
+      },
+      {
+        "path": "helium/settings/remove-safety-hub-entry-points.patch",
+        "sha256": "2f4cb1dee24b19a056a43ddf49530dbb98e8453b52c920901ae8d9d60ea7e0f5"
+      },
+      {
+        "path": "helium/settings/reenable-update-status.patch",
+        "sha256": "5c03418dcd22928fda24db1a8e5637c320e53079959b2bf26001078cd805aef3"
+      },
+      {
+        "path": "helium/settings/privacy-page-tweaks.patch",
+        "sha256": "1e3cf004b7ebd94a40f14a69a744a791a87187d89b749e346f79e93a415f58c2"
+      },
+      {
+        "path": "helium/settings/fix-section-separators.patch",
+        "sha256": "00864f9fd8f9ffa8d44802394dfccd9e2149540e9f7f907407eb7f511f594abe"
+      },
+      {
+        "path": "helium/settings/fix-text-on-cookies-page.patch",
+        "sha256": "a1f16fecdfb30b91daa65ef4e931896b5bcd10b0c630a7bfca6771684e745bfb"
+      },
+      {
+        "path": "helium/settings/update-search-suggest-text.patch",
+        "sha256": "77c6ecb2fa2beeacf46eb861668993129799f559300cbfc0222dd064a8955b36"
+      },
+      {
+        "path": "helium/settings/fix-appearance-page.patch",
+        "sha256": "d86af4e2a54e8ff1e87f541a5f0350256dfd5851ad31e670802d3dbc2e9ff596"
+      },
+      {
+        "path": "helium/settings/reorder-settings-menu.patch",
+        "sha256": "5c713a5c8b7585a1d4f69186f832e8543bf709373033b53a3d64e279746e315d"
+      },
+      {
+        "path": "helium/settings/add-search-engine-button.patch",
+        "sha256": "4c1bfe98e23b212946d3571f3daabc18e8fad6ba017bf2f27bdac39e442013e4"
+      },
+      {
+        "path": "helium/settings/custom-profile-avatar-ui.patch",
+        "sha256": "7ded6928cb069028e9cd64f4924138fc27ac114fbcae7af93990df4dac3ef5e2"
+      },
+      {
+        "path": "helium/settings/custom-keyboard-shortcuts-page.patch",
+        "sha256": "7366ceb1e286412904fe494936b7b3ec436a3798cc9192a115f75f8380a5eda1"
+      },
+      {
+        "path": "helium/settings/clear-browsing-data-popup.patch",
+        "sha256": "8bdb1cf5a7cbecece1ee902a71b35e3e4d9d31a2069becca45710bf641d100ac"
+      },
+      {
+        "path": "helium/settings/crash-reporting-settings.patch",
+        "sha256": "24e584f2eedc2a603580987908ab8ad81e46dfbf020b46eac52bfd7e7c0dd693"
+      },
+      {
+        "path": "helium/settings/helium-noise-settings.patch",
+        "sha256": "23c27ff31792bcad5853837d7b676730e91a438056b9d795dac8d52f4f8b27e7"
+      },
+      {
+        "path": "helium/settings/network-and-security-page.patch",
+        "sha256": "73a2427c637443073d0997ae45c2ce8117c64facba3736da22573d01951e5366"
+      },
+      {
+        "path": "helium/settings/sync-setup-contract.patch",
+        "sha256": "7e094e584a3cdbb217e132cd072f68117c1bb9107c481bf6f06e51de2ca60c5c"
+      },
+      {
+        "path": "helium/ui/layout-constants.patch",
+        "sha256": "c8c0309d8b7254b4a4e77ec21b4e668de6c7130906b15e087b9566aa1fa13eab"
+      },
+      {
+        "path": "helium/ui/layout-provider.patch",
+        "sha256": "54cbc62dfb7e11d6fd1ab0fddb7c519dd96ca0423ee6f1c4fd13e5f587d3cbea"
+      },
+      {
+        "path": "helium/ui/update-cr-components.patch",
+        "sha256": "39357e475c75585bb84053ee1df74db6a4f6a469e9afabe8750a2b4e9b8bf2aa"
+      },
+      {
+        "path": "helium/ui/always-use-better-ntp.patch",
+        "sha256": "8d50d6a30885bf273be24d35e480c78d524350000bb3e4279780577a2657b3dd"
+      },
+      {
+        "path": "helium/ui/clean-new-tab-page.patch",
+        "sha256": "f0c8e39557c68a2b399d05ac7f32a67be0d2deb06b77275f937657f09ba2b3f3"
+      },
+      {
+        "path": "helium/ui/remove-toolbar-corners.patch",
+        "sha256": "d5f5cc924c78e999cd792e6da9912cd0d117a3da20271eccaba8afaf2cabaada"
+      },
+      {
+        "path": "helium/ui/location-bar.patch",
+        "sha256": "be0628e074a1a128e4b1594299440c95713e03f46719aebd3b70b203e99380f0"
+      },
+      {
+        "path": "helium/ui/location-bar-page-action.patch",
+        "sha256": "dae488b879cbad22cd3eccc123277c9b976df1d080e265f84741808e1e26ac7e"
+      },
+      {
+        "path": "helium/ui/tabs.patch",
+        "sha256": "815f1e86d0cd2b02ee7c91e0cefdcce1adb601fef06e3320d3070d14b7cb7a8c"
+      },
+      {
+        "path": "helium/ui/tab-icon.patch",
+        "sha256": "6752c1e987caacd6f91fe549a1d7fc4df029e3c829a38a1e1bd6fb0b8d0b83ee"
+      },
+      {
+        "path": "helium/ui/tab-favicon-retention.patch",
+        "sha256": "91e55cc317893766e3b7b41786b19ef74290a10cd2fe9658da5b25d7836cb335"
+      },
+      {
+        "path": "helium/ui/tab-strip-controls.patch",
+        "sha256": "7b216af47b63eff34765ba8c746169ce627f0939ea5c91ca95c065bfd829b7be"
+      },
+      {
+        "path": "helium/ui/toolbar.patch",
+        "sha256": "a3a8f7a31adb12dd80c0aaa90df821a8d788234fd55fd093972b35815b23f56a"
+      },
+      {
+        "path": "helium/ui/remove-toolbar-dividers.patch",
+        "sha256": "81f2ffb43bd9e6830f61fac7d8d2d065339d523db4171fa4f502d013725217c3"
+      },
+      {
+        "path": "helium/ui/toolbar-window-frame-hit-test.patch",
+        "sha256": "2e0ab216d13f6642e3719ecfc30ae1e193f0563067cf4be856b65fdd113229bd"
+      },
+      {
+        "path": "helium/ui/toolbar-button-prefs.patch",
+        "sha256": "d505bf1361f5a095a3bed40191038cb6e234ee4dac3ae6a6174cfbee7f64d1b1"
+      },
+      {
+        "path": "helium/ui/tab-search-in-toolbar.patch",
+        "sha256": "12cebcd99ff128229e02715afba4dd572720b7853c000f5a1900b74f7b51e532"
+      },
+      {
+        "path": "helium/ui/omnibox.patch",
+        "sha256": "003c60a0fa0f93dc17134df750996fa6d514b5d2dac75e96ab3e47e770af3c60"
+      },
+      {
+        "path": "helium/ui/app-menu-style.patch",
+        "sha256": "a423e11d144d8ac7642c0c351a4dcaa7469804f6bcef0b3e234434fdc9297dd2"
+      },
+      {
+        "path": "helium/ui/app-menu-model.patch",
+        "sha256": "bab1179322a9946f45dc4590a73ac5423a7a5e2d8d0438bb684d0b85abdd1356"
+      },
+      {
+        "path": "helium/ui/app-menu-button.patch",
+        "sha256": "4cb7e96f7be4a948127ce6c1bd16facd608ef55f2e49926b04dd85cb75eea3e6"
+      },
+      {
+        "path": "helium/ui/remove-reading-list-from-app-menu.patch",
+        "sha256": "eb848bb4a240a76ebc8808226c29d4645eabdfc5a2cefab9fb3b95fe356a129f"
+      },
+      {
+        "path": "helium/ui/remove-split-view-mini-toolbar.patch",
+        "sha256": "97af1dc4df89b911afba72260c1331f0d9a3828f924ff3294e73efcb520b457c"
+      },
+      {
+        "path": "helium/ui/split-view.patch",
+        "sha256": "c247cdebe3f9599c14985a3041d8878be476e30d35ecec86ca3db8f790fd6799"
+      },
+      {
+        "path": "helium/ui/frame-radius-helper.patch",
+        "sha256": "694f378391beaaaa6d21495515ddb0e1defa845c4244ba339a63092f6b6f9ebb"
+      },
+      {
+        "path": "helium/ui/multi-contents-view.patch",
+        "sha256": "dae65237ba436f514006ad7c53cfee02e05ba4a30287c5cc92b739ac0842cf6a"
+      },
+      {
+        "path": "helium/ui/rounded-frame-corners.patch",
+        "sha256": "e7f458480d9c22046bf380e8f3c440ee4e714deba10f44318e5b23f109a7cb0f"
+      },
+      {
+        "path": "helium/ui/fix-layout-separators.patch",
+        "sha256": "40461b385d8a6bb6052ec0c2a3249450776a2735bb2cc44d658beda31e85f56c"
+      },
+      {
+        "path": "helium/ui/multi-contents-drop-target.patch",
+        "sha256": "7b222974b4e90045580f0dfb36837b83125666cd510f0b7add7a8f0d77621949"
+      },
+      {
+        "path": "helium/ui/fix-customize-side-panel.patch",
+        "sha256": "f58ecca10a25ac83185156e99ef83387dd6de209bea86c570a3e9e8bb02b1885"
+      },
+      {
+        "path": "helium/ui/side-panel.patch",
+        "sha256": "b8f7c0c6967e22e0de0d2666be9270eaee91a928aa72b137b6b9f5d537e42241"
+      },
+      {
+        "path": "helium/ui/remove-dead-toolbar-actions.patch",
+        "sha256": "b97c0df1edfd649075189eec3d6f04d5251e687914f96a0486c2a693c981e1c3"
+      },
+      {
+        "path": "helium/ui/remove-dead-profile-actions.patch",
+        "sha256": "b228b313c6a0d0f935db0559e395e021f7608e40822780badad1d1368122e465"
+      },
+      {
+        "path": "helium/ui/clean-up-installed-extension-bubble.patch",
+        "sha256": "be3906fabffacfbee27bfb747e2236d50281a34376e3297c388c71444f70be78"
+      },
+      {
+        "path": "helium/ui/add-specific-error-for-disabled-extension-downloads.patch",
+        "sha256": "7e16e1bcdc5f320b6ddef80f392a636bf6f1cd01806ad7ce4c14531e2056cbbf"
+      },
+      {
+        "path": "helium/ui/selected-keyword-view.patch",
+        "sha256": "1035596b97dcd534bed30f900a37a710c9ce4166d013086cd623d321e6df123b"
+      },
+      {
+        "path": "helium/ui/bookmark-button-bg-fix.patch",
+        "sha256": "96068ab5e7a1647a4f30a5d61b469805a7366f5c8d86977016c391db74893ad2"
+      },
+      {
+        "path": "helium/ui/restyle-ntp-tiles.patch",
+        "sha256": "09e50504621f1085fd704f8c060fcfa682f1a62206b673e17c874b1c567b8212"
+      },
+      {
+        "path": "helium/ui/side-panel-webui-general.patch",
+        "sha256": "c5f6cbf976a1edeac47340d7741c95ac1140b1eadcb248804fa980f0e1cef529"
+      },
+      {
+        "path": "helium/ui/side-panel-webui-customize.patch",
+        "sha256": "1bd31ae3c2fad9e4d4e6d38b95cd9be9a75161c61455ecc852ec3a0efc6d0368"
+      },
+      {
+        "path": "helium/ui/helium-logo-icons.patch",
+        "sha256": "6542a67c2c7e2e835af4b2988c7abf7a7ff496ad033083aa5b200fc3e8b4c652"
+      },
+      {
+        "path": "helium/ui/square-ntp-monograms.patch",
+        "sha256": "fa3915b89670c9d32d6fc5ca3a42d9942c9b449ebbc78ce5d42afeb63fe2ec3b"
+      },
+      {
+        "path": "helium/ui/default-theme.patch",
+        "sha256": "9d541a574222bdd31ebdfa28cb056fcc88dfa394edac5384a381496e925f6e8a"
+      },
+      {
+        "path": "helium/ui/toast.patch",
+        "sha256": "9ffd78b27e68847a756011b31a2ab919eeee53d37ea2738a277c837c2e0ac0f6"
+      },
+      {
+        "path": "helium/ui/square-interstitial-buttons.patch",
+        "sha256": "c64ddcb448147e23c56cd5be1a7ddf86eb9adb5a49e603e4f2b9a0b90606900d"
+      },
+      {
+        "path": "helium/ui/center-window-on-launch.patch",
+        "sha256": "16821ce176f736c47fbfc0142e4a8069b00bd9a6a4bfc9ddb306e258c447a27f"
+      },
+      {
+        "path": "helium/ui/remove-devtools-annoyances.patch",
+        "sha256": "31c89013c5fa164f39d1d94cda2939fd83cfbcfca9930b24ab8384b5dc3f6776"
+      },
+      {
+        "path": "helium/ui/remove-google-promotional-resources.patch",
+        "sha256": "f5801da97148af936f6e4bb899cd24441c020b9fe378118a383f5828f9fcacb0"
+      },
+      {
+        "path": "helium/ui/bookmarks-bar-padding.patch",
+        "sha256": "8f017a804f12cf7103533f6f3618203ee4af708e4ad733e3ed3bd9c4d5254a5d"
+      },
+      {
+        "path": "helium/ui/profile-picker-cleanup.patch",
+        "sha256": "1c2e5807b2b7da5e34d83bf7ec262e5e41ff40b78e3e6c61713d4ab73c420361"
+      },
+      {
+        "path": "helium/ui/disable-tab-group-editor-footer.patch",
+        "sha256": "052b52f224c7c66047d73fa81920ceb5ca6455f664a161088b6906dc855df03f"
+      },
+      {
+        "path": "helium/ui/profile-customization-cleanup.patch",
+        "sha256": "7b7b09465e209140cca5c43e1adf719f579ab1f42a7f158dda378d59a508cb26"
+      },
+      {
+        "path": "helium/ui/bangs-ui.patch",
+        "sha256": "b5227270385870ee791a962a2555de851deeb6d6454ebc16f2302328e32ac7b5"
+      },
+      {
+        "path": "helium/ui/infobar.patch",
+        "sha256": "715765db720c3aa1089edc1fe60c2ea3ed8be40f9185ea9761410c64bb4e20f0"
+      },
+      {
+        "path": "helium/ui/reduce-text-button-height.patch",
+        "sha256": "32073b3cbdbb56fde6393242c557af2959257b2e6b2f967616106984de633166"
+      },
+      {
+        "path": "helium/ui/pwa-toolbar.patch",
+        "sha256": "215c4556c4e06fec49108f2308868f5efddd3d740752d873eafa27a574df6f3a"
+      },
+      {
+        "path": "helium/ui/helium-color-mixers.patch",
+        "sha256": "7af084ea934187ed0fd030882995f629f1aeab928313c429c2ec3faca469d1ab"
+      },
+      {
+        "path": "helium/ui/frame-background.patch",
+        "sha256": "f2bbe1434d23beefd863c85141ed11e3c5ddf6d58b1b8fc16fecb53b9cb9d018"
+      },
+      {
+        "path": "helium/ui/status-bubble.patch",
+        "sha256": "5c4aa34d1e76b67fd239056e1775d56f944220512394b47b199c57d9823dc5d4"
+      },
+      {
+        "path": "helium/ui/clean-incognito-guest-ntp.patch",
+        "sha256": "320909021772abd99eed61f37427b9a72f3fa24f7f929a42fe9de1afd7b6517c"
+      },
+      {
+        "path": "helium/ui/enable-fluent-scrollbar.patch",
+        "sha256": "16744486f284105b23605fa2926dc59d2a88607eaa6b4a57a721d1510614e611"
+      },
+      {
+        "path": "helium/ui/helium-color-scheme.patch",
+        "sha256": "688d4d72f3dd9aaa200794e6aeab37f76d9df60716b1f8b797bb8ab7c748b5bf"
+      },
+      {
+        "path": "helium/ui/improve-flags-webui.patch",
+        "sha256": "bdbd4596233c74077ed10c24f65709c113fc38ce55da3f59db861a631a3533d0"
+      },
+      {
+        "path": "helium/ui/ublock-show-in-settings.patch",
+        "sha256": "65536e1630251fb35b763307529ef811c22e98aa2c28cb86a038c640eeb6cd2c"
+      },
+      {
+        "path": "helium/ui/licenses-in-credits.patch",
+        "sha256": "565f829d58fccf424efd689d656aee73c13aeb6b0c9881c7f3ebfc0e7f49fa97"
+      },
+      {
+        "path": "helium/ui/remove-autofill-link-to-password-manager.patch",
+        "sha256": "a2000bbe9fb6baf9d3e268a6f9d98d21956462c5429f90bd988404bc52988f17"
+      },
+      {
+        "path": "helium/ui/fix-caption-button-bounds.patch",
+        "sha256": "a9df926c6e0d01dad50fc55668c305e546820e8ef32d17f01e425ada15893c5a"
+      },
+      {
+        "path": "helium/ui/find-bar.patch",
+        "sha256": "c5ed4532b3ba83d93e54eec5530861bf24df961112ad07376576822324f9b748"
+      },
+      {
+        "path": "helium/ui/custom-keyboard-shortcuts-wiring.patch",
+        "sha256": "82b6316cd8a2c4c49ad7288990964d8db8a2dc58202fe322dfc6e582e4f7c4c9"
+      },
+      {
+        "path": "helium/ui/crash-dialog.patch",
+        "sha256": "e611058b12c69d3d6ac2e103cae5a82cbd760c202aa1110407387a6926b98740"
+      },
+      {
+        "path": "helium/ui/crashes-webui-fixes.patch",
+        "sha256": "45219f92c270452069cae1f550d99bd117bf538e710d1a9dfd7a4d89ba9e4301"
+      },
+      {
+        "path": "helium/ui/layout/core.patch",
+        "sha256": "27b27093c5d2e57d0394b07e7c7f727daca7734a787ffa782945ad181dce0592"
+      },
+      {
+        "path": "helium/ui/layout/settings.patch",
+        "sha256": "2f1e4ea679e38c425cba6d505d0c53265a2f275ef2ea2c0b5eb852cee05d2672"
+      },
+      {
+        "path": "helium/ui/layout/context-menu.patch",
+        "sha256": "af7e34535a598e5153d0fe08fe83fa13325c9adebb0437c4811a3978828d8a3f"
+      },
+      {
+        "path": "helium/ui/layout/shortcuts.patch",
+        "sha256": "ae53ebad5c4472624d708e96d9dcafeb5e8828a588c4b4bf7e672c02ecaa8418"
+      },
+      {
+        "path": "helium/ui/layout/centered-address-bar.patch",
+        "sha256": "37f5e9533c7b60447476b62c055c085c0aa7a66e17608c2700bd003d74eb3353"
+      },
+      {
+        "path": "helium/ui/layout/frame-grab-handle.patch",
+        "sha256": "21266f94dd5ec117c5a2227ed2e579dbc1a48a36270aec72eb8add6344251361"
+      },
+      {
+        "path": "helium/ui/layout/horizontal-tabs.patch",
+        "sha256": "7be8a7cf180428f75527d2b32fdbb48def7d70b432e4b3b8bc1942002c7227b7"
+      },
+      {
+        "path": "helium/ui/layout/toolbar-layout.patch",
+        "sha256": "028d84e7544e5fa31d5e2fb0d31f781feb9a3698778388460fa4c3933684dfd7"
+      },
+      {
+        "path": "helium/ui/layout/minimal-location-bar.patch",
+        "sha256": "0ae9b73440ed10a37962d2da573e5a0f058456c961b099426a975e95140e472a"
+      },
+      {
+        "path": "helium/ui/layout/dynamic.patch",
+        "sha256": "d377fbf5dd8e64c3f9401002632b9bf849f2538929ae70b9ffa1ba05f03ae26f"
+      },
+      {
+        "path": "helium/ui/layout/compact.patch",
+        "sha256": "698c9d1fee1851920b008a46a0efa031ed613abd317077e504ec065e3947caf0"
+      },
+      {
+        "path": "helium/ui/layout/vertical.patch",
+        "sha256": "883b51abbe5bcdac3dd04fb0f8f0dcc513c4ccdd803721c0fb461649d3f180b3"
+      },
+      {
+        "path": "helium/ui/layout/toolbar-overflow.patch",
+        "sha256": "ca698e30b96a1512388c4da7977ea352509960558daac28a08f27773f626666f"
+      },
+      {
+        "path": "helium/ui/layout/toolbar-actions.patch",
+        "sha256": "8c419a38f1cee388a3fb5ca52ce49a8bfab325324fcddb16f9fc7b32e018bf2f"
+      },
+      {
+        "path": "helium/ui/layout/zen-mode-wiring.patch",
+        "sha256": "96198f58a4e6931d67a275df31525d9ef02136f1386244d0bfa076972695f8ad"
+      },
+      {
+        "path": "helium/ui/layout/zen-caption-buttons.patch",
+        "sha256": "6842520da9d8a55b6f286ab65c1d7eeef1fbcca692e656cf567877f7b5eae31e"
+      },
+      {
+        "path": "helium/ui/layout/zen-mode.patch",
+        "sha256": "01f6474815b935b397c71f2dcf110d4295e67977cec77a714cfe433e88602fa5"
+      },
+      {
+        "path": "helium/ui/layout/min-window-width.patch",
+        "sha256": "272925c8690ecdee5704b15512de1386c0edea3124cb7d81a84a93a7449a5c2d"
+      },
+      {
+        "path": "helium/ui/generate-standard-qr-codes.patch",
+        "sha256": "e8779936678225835f83c7c1dd9439d9c0d2e3a3ba0ee5c5b75f3b944f603cce"
+      },
+      {
+        "path": "helium/ui/pdf-viewer.patch",
+        "sha256": "d496009011fe3445f3a0388f774590f43d4d957a77a8f49a561d2a916c146c35"
+      },
+      {
+        "path": "helium/ui/hide-pip-live-caption-button.patch",
+        "sha256": "1f8b39a3bd7d6fa95aea72c27ac3da27504235520642d9dbd1abdae1657e9e29"
+      },
+      {
+        "path": "helium/ui/disable-ink-ripple-effect.patch",
+        "sha256": "5b3d1a8715ab0d056ac233b6f5d0d6fd23c5a4ee463bbfe884c89a47637404b6"
+      },
+      {
+        "path": "helium/ui/dont-antialias-rects.patch",
+        "sha256": "8b14fff38d28de09d9b4d1f6df9c1b1905414fa639c5630925b99d6cf84fc473"
+      },
+      {
+        "path": "helium/ui/fix-windows-ui-position.patch",
+        "sha256": "c5b8e5bc200924f183c826ffed1d50e73b8fdd7b8d9a3126e0567319046cac3b"
+      },
+      {
+        "path": "helium/ui/native-frame-materials.patch",
+        "sha256": "ea0dd83ee489cfefa0efc3de19d07d61ee807ecaf1624206cc2aa78237781301"
+      },
+      {
+        "path": "helium/ui/page-zoom-indicator.patch",
+        "sha256": "3b4658303ecc23515e054ebfefe9fbd0117184b0373e3b1164105228bb01506a"
+      },
+      {
+        "path": "helium/ui/add-more-zoom-presets.patch",
+        "sha256": "8dc5e902ab5fc774eaa67e07653013670f638db23bd560c3d02a966e659f3ac2"
+      },
+      {
+        "path": "helium/ui/helium-noise-page-info.patch",
+        "sha256": "2380c8f9df85d72457b7c502ef08ea256c3154c8701ad147776dccdaa21f87e8"
+      },
+      {
+        "path": "helium/ui/show-tabs-from-non-account-backends.patch",
+        "sha256": "d118428b1ef4ec41f4a0b07d3aa9bd3c28a4a3b5d184e1e589bc9ed598fd21e1"
+      },
+      {
+        "path": "helium/ui/compact-debugger-warning.patch",
+        "sha256": "121696b74b3450f08053ebe3c9d814d28fe49027fe1d438ca31b93a085bda2e1"
+      },
+      {
+        "path": "helium/ui/progress-bar.patch",
+        "sha256": "e03376c60b334c270fb22e0a7b8180daf0dde4fba01eb0ad725cc0cd4986c5af"
+      },
+      {
+        "path": "helium/ui/exclusive-access-bubble.patch",
+        "sha256": "ec1a2c4aa07198f79e48018170d8662e3e8c4a0399674753d36e789ef1922fd7"
+      },
+      {
+        "path": "helium/ui/hide-page-actions-flag.patch",
+        "sha256": "1f91d3bc6ec3001ea4aed3e7341927aa8e4b96fb9a0df28c4142ea4b6790a754"
+      }
+    ]
+  },
+  "prepared_source": {
+    "path": "/home/timpan4/.t3/builds/arcified-linux-155-native-v1/src",
+    "chromium_version": "155.0.8059.79",
+    "helium_version": "0.19.2.1",
+    "files_sha256": {
+      "chrome/VERSION": "6364ce04bcd72b472e54baac73c17372bfde3447a7c76a6ac6b54131da83ad1e",
+      "DEPS": "0de821c77defd871dfad6c35deedd27a58e39fb26f9f89be798df8f703288881",
+      "chrome/browser/profiles/BUILD.gn": "5e42da6ceefd3bcaf2a418d43bb3c5372c8e1d9d8ecbdf84d081127f5b56d15c",
+      "chrome/test/BUILD.gn": "38933520829a78288766cd702e665076f62e4ac720c82ca816d342a59a874099"
+    },
+    "scope": "Selected file identities only; not a pristine-tree or archive attestation."
+  },
+  "native_build": "OPEN",
+  "native_acceptance": {
+    "linux": "OPEN",
+    "windows": "OPEN",
+    "macos": "OPEN"
+  },
+  "update_execution": "OPEN",
+  "security_review": "See security-review.json; refresh authoritative sources per update."
+}

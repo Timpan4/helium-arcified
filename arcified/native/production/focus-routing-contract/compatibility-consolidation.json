@@ -1,0 +1,55 @@
+{
+  "issueKey": "focus-routing-contract",
+  "sourceIssue": "https://github.com/Timpan4/helium-arcified/issues/59",
+  "sourceState": "Compatibility packet reported finished and in independent review by coordinator. No clean review or native PASS inferred.",
+  "inputs": [
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/result.json",
+      "sha256": "ccc6ddc189019f56fd14a05eea93ac9f1b282c848e32a89a1bd236434f0f0203"
+    },
+    {
+      "path": "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/compatibility/defects.json",
+      "sha256": "f43c6f82e90a2e9ea55d21a63db95e17bc9b80d5065ca0c5a46973cbc8337390"
+    }
+  ],
+  "compatibilityQuestion": {
+    "id": "Q2",
+    "question": "When an incoming OS link has no originating page, or a notification/PiP initiator no longer exists, which surviving host/Space should receive it?",
+    "recommendation": "Consolidate with focus-routing-contract #44. Preserve exact originating/registered Profile where known; keep unattributed or missing-initiator routes unavailable until the owner selects behavior.",
+    "tradeoff": "Avoids a guessed last-active Profile policy; fallback UX remains unsettled. This packet does not decide cleanup, close or source disposition."
+  },
+  "compatibilityCandidate": {
+    "id": "D1",
+    "state": "SOURCE_RISK_NOT_RUNTIME_REPRODUCED",
+    "title": "Extension Save As may acquire an unrelated Profile's last-active native parent",
+    "owner": "downloads",
+    "ownerIssue": "https://github.com/Timpan4/helium-arcified/issues/36",
+    "affectedSource": "S07",
+    "lines": "44-60, 77-93",
+    "platforms": [
+      "linux",
+      "windows"
+    ],
+    "observation": "The picker permits EXTENSION_API without associated WebContents. If owning_window is absent or lacks a host, it uses GetLastActiveBrowserWindowInterfaceWithAnyProfile()->GetWindow()->GetNativeWindow(). DownloadPrefs still comes from the DownloadItem BrowserContext.",
+    "inference": "An extension request originating in Profile A may be parented to the last-active Profile B host. Source alone does not prove actual UI misrouting or data access across Profiles.",
+    "scenario": "download-extension",
+    "reproductionPrerequisites": [
+      "Declared native RC and authorized extension fixture",
+      "Profile A owns the test extension/download",
+      "Profile B is last active",
+      "Request has no associated WebContents"
+    ],
+    "expectedEvidence": [
+      "Actual owning dialog native handle and Profile context",
+      "DownloadItem BrowserContext and final target identity",
+      "Cancel/complete and return focus observations"
+    ],
+    "recommendedAction": "Coordinator forwards to downloads and window-chrome owners for native regression coverage and ownership review; no patch or new classifier in this packet."
+  },
+  "focusQuestions": [
+    "Q5",
+    "Q6"
+  ],
+  "evidenceClass": "Read-only sibling packet evidence. D1 source observations are attributed to compatibility; underlying Chromium download source not independently re-inspected in this consolidation.",
+  "nativeAcceptance": "OPEN"
+}

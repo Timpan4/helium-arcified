@@ -1,0 +1,41 @@
+{
+  "license": "GPL-3.0-only",
+  "assignmentPath": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/production/research/assignment.json",
+  "baseline": "a4b6b480d3de07857ab6e939149254a8359e5449",
+  "issue": {
+    "key": "runtime-reference",
+    "title": "Observe reference UX on supported desktop operating systems",
+    "area": "research",
+    "build": "Observe reference desktop apps on their supported operating systems to settle details static inspection cannot prove.",
+    "accept": [
+      "Use the recorded macOS artifacts for macOS and separately identified Windows packages for Windows, with authorized test accounts/Profiles. Linux has no official reference product.",
+      "Cover Peek/pin URL rules, tab handoff, folder preview, split transitions, sidebar reveal, media return and native dialogs with screenshots/recordings and scenario notes.",
+      "Separate platform differences, retired actions and inaccessible login-dependent features; update affected acceptance criteria instead of claiming generic parity."
+    ],
+    "blocked": [
+      "reference-windows-artifacts"
+    ],
+    "sources": [
+      "artifact",
+      "arc-status",
+      "dia"
+    ],
+    "sourceUrls": [
+      "https://releases.arc.net/release/Arc-1.170.0-89123.dmg",
+      "https://releases.diabrowser.com/release/Dia-latest.dmg",
+      "https://resources.arc.net/hc/en-us/articles/44412972248471-Arc-Sunset-Key-Dates-and-What-to-Expect",
+      "https://www.diabrowser.com/changelog"
+    ],
+    "readiness": "Proposed work after native/reference prerequisites and explicit decisions in this issue.",
+    "phase": "Evidence, decisions and gates",
+    "kind": "research",
+    "disposition": "Recommended core integration or verification, with improvements preferred over literal Arc replication.",
+    "referencePlatforms": "Reference platform support is limited to the cited source. Documentary macOS or Windows coverage does not prove native behavior; Linux is a downstream design and verification target.",
+    "referenceNote": "REA 6.7.0 bundle/resource observations recorded in artifacts.md; no application execution or native-performance measurement.",
+    "openQuestions": "Only macOS images were acquired in this investigation; Windows acquisition and supported hosts/accounts remain prerequisites to Windows observations.",
+    "priority": "Before AI",
+    "number": 42,
+    "url": "https://github.com/Timpan4/helium-arcified/issues/42",
+    "primaryCommandId": 40799
+  }
+}

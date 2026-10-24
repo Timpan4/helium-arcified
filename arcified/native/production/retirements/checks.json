@@ -1,0 +1,65 @@
+{
+  "recordedOn": "2026-10-24",
+  "status": "PASS_RESEARCH_PACKET_CHECKS_ONLY",
+  "baseline": {
+    "head": "a4b6b480d3de07857ab6e939149254a8359e5449",
+    "branch": "feat/non-ai-research-production",
+    "status": "PASS"
+  },
+  "syntax": {
+    "command": "node --check arcified/native/production/retirements/packet-check.js",
+    "exitCode": 0
+  },
+  "packetLint": {
+    "command": "node --input-type=commonjs -e <packet-check.js plus fast_filesystem-supplied UTF-8 input payload>",
+    "commandConstruction": "Exact host orchestration is recorded in checks.md.",
+    "exitCode": 0,
+    "failures": [],
+    "dispositionRecords": 16,
+    "platformScenarioStates": 48,
+    "jsonFiles": 8,
+    "localLinkTargets": [
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/dispositions.json",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/assignment-snapshot.json",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/source-identities.sha256",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/coverage-matrix.md",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/arc-ux.md",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/docs/research/arc-dia/artifacts.md",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/sources.json",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/native-source-identities.json",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/verification-scenarios.json",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/checks.md",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/result.json",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/checks.json",
+      "/home/timpan4/.t3/worktrees/helium-arcified/feat-non-ai-research-production/arcified/native/production/retirements/packet-check.js"
+    ]
+  },
+  "localMarkdownLinks": {
+    "status": "PASS",
+    "checkedTargets": 13,
+    "mechanism": "fast_filesystem.fs_stat_many; every target exists without error"
+  },
+  "sourceIdentity": {
+    "command": "sha256sum --check arcified/native/production/retirements/source-identities.sha256",
+    "initialExitCode": 1,
+    "initialMatchCount": 12,
+    "initialChangedCount": 1,
+    "initialChangedPath": "/home/timpan4/.t3/worktrees/helium-arcified/t3-a4238261/arcified/docs/non-ai-production-workstreams.json",
+    "inspectedManifestChange": "Actual settings verification and shared dependencies added. Retirement key, URL, command ID and writable ownership unchanged.",
+    "finalExitCode": 0,
+    "finalMatchCount": 13
+  },
+  "formatting": {
+    "json": "JSON.stringify(value, null, 2) plus LF; canonical formatting checked for every JSON file.",
+    "markdown": "Existing document convention; table columns, trailing whitespace and LF checked. No repository Markdown formatter/linter or installed Prettier/Markdownlint found."
+  },
+  "gitDiffCheck": {
+    "command": "git diff --check -- arcified/native/production/retirements",
+    "exitCode": 0,
+    "limitation": "Packet is untracked; content lint separately covers its contents."
+  },
+  "nativeBuild": "NOT_RUN",
+  "nativeTests": "NOT_RUN",
+  "browserOrVisual": "NOT_RUN",
+  "nativeAcceptance": "OPEN"
+}

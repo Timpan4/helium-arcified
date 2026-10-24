@@ -1,0 +1,252 @@
+diff --git a/chrome/app/generated_resources.grd b/chrome/app/generated_resources.grd
+index 18f57d7e..5f33c873 100644
+--- a/chrome/app/generated_resources.grd
++++ b/chrome/app/generated_resources.grd
+@@ -11844,6 +11844,9 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Google
+ 
+       <!-- Automatic updates -->
+       <if expr="is_macosx">
++        <message name="IDS_ARCIFIED_UPDATE_MACOS_UNAVAILABLE" desc="Status shown on the About page while authenticated Arcified updates for macOS are unavailable.">
++          Arcified updates for macOS are unavailable in this build.
++        </message>
+         <message name="IDS_PROMOTE_INFOBAR_TEXT" desc="The text to show in the automatic update setup infobar.  Mac-only.">
+           <ph name="PRODUCT_NAME">$1<ex>Helium</ex></ph> may not be able to keep itself updated
+         </message>
+@@ -20261,4 +20264,4 @@ Please help our engineers fix this problem. Tell us what happened right before y
+     </message>
+   </messages>
+ </release>
+-</grit>
+\ No newline at end of file
++</grit>
+diff --git a/chrome/browser/ui/webui/help/BUILD.gn b/chrome/browser/ui/webui/help/BUILD.gn
+index 17d8d3e2..9c1a53a8 100644
+--- a/chrome/browser/ui/webui/help/BUILD.gn
++++ b/chrome/browser/ui/webui/help/BUILD.gn
+@@ -2,8 +2,20 @@
+ # Use of this source code is governed by a BSD-style license that can be
+ # found in the LICENSE file.
+ 
++import("//chrome/browser/buildflags.gni")
+ import("//chrome/common/features.gni")
+ 
++if (is_mac) {
++  # No macOS update service or signing infrastructure is approved for Arcified.
++  # Do not inherit either Chromium's updater or the platform Sparkle service.
++  assert(!enable_updater,
++         "Arcified macOS updates require owner approval in issue #167.")
++  if (defined(enable_sparkle)) {
++    assert(!enable_sparkle,
++           "Arcified macOS updates require owner approval in issue #167.")
++  }
++}
++
+ source_set("help") {
+   public = [ "version_updater.h" ]
+   public_deps = [ "//base" ]
+@@ -36,16 +48,11 @@ source_set("help") {
+   }
+ 
+   if (is_mac) {
+-    sources = [ "version_updater_mac.mm" ]
++    sources = [ "version_updater_arcified_mac.cc" ]
+     deps += [
+-      "//base:i18n",
+-      "//chrome/app:branded_strings",
+       "//chrome/app:generated_resources_grit",
+-      "//chrome/browser/updater",
+-      "//chrome/updater:browser_sources",
+       "//ui/base",
+     ]
+-    frameworks = [ "Foundation.framework" ]
+   }
+ 
+   if (is_win) {
+@@ -71,6 +78,28 @@ source_set("help") {
+   }
+ }
+ 
++if (is_mac) {
++  source_set("browser_tests") {
++    testonly = true
++    defines = [ "HAS_OUT_OF_PROC_TEST_RUNNER" ]
++    sources = [ "version_updater_arcified_mac_browsertest.cc" ]
++    deps = [
++      ":help",
++      "//base",
++      "//base/test:test_support",
++      "//chrome/browser/profiles:profile",
++      "//chrome/browser/ui",
++      "//chrome/browser/ui/tabs:tab_strip",
++      "//chrome/common",
++      "//chrome/test:test_support_ui",
++      "//components/prefs",
++      "//content/public/browser",
++      "//content/test:test_support",
++      "//testing/gtest",
++    ]
++  }
++}
++
+ if (!is_android) {
+   source_set("test_support") {
+     testonly = true
+diff --git a/chrome/browser/ui/webui/help/version_updater_arcified_mac.cc b/chrome/browser/ui/webui/help/version_updater_arcified_mac.cc
+new file mode 100644
+index 00000000..0dfd981f
+--- /dev/null
++++ b/chrome/browser/ui/webui/help/version_updater_arcified_mac.cc
+@@ -0,0 +1,39 @@
++// Copyright 2026 The Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include <memory>
++#include <string>
++
++#include "chrome/browser/ui/webui/help/version_updater.h"
++#include "chrome/grit/generated_resources.h"
++#include "ui/base/l10n/l10n_util.h"
++
++namespace {
++
++// Native About-page binding until issue #167 has an approved update service.
++// No updater, installation, relaunch, or Profile service is invoked here.
++class ArcifiedMacVersionUpdater : public VersionUpdater {
++ public:
++  void CheckForUpdate(StatusCallback status_callback,
++                      PromoteCallback promote_callback) override {
++    const std::u16string message =
++        l10n_util::GetStringUTF16(IDS_ARCIFIED_UPDATE_MACOS_UNAVAILABLE);
++    // Either callback may destroy this updater. Everything needed below is
++    // owned by this call, with no subsequent access to the instance.
++    if (promote_callback) {
++      promote_callback.Run(PROMOTE_HIDDEN);
++    }
++    // DISABLED is hidden by the About page. Report the failed check explicitly
++    // without claiming the installed version is current or ready to relaunch.
++    status_callback.Run(FAILED, 0, false, false, std::string(), 0, message);
++  }
++
++  void PromoteUpdater() override {}
++};
++
++}  // namespace
++
++std::unique_ptr<VersionUpdater> VersionUpdater::Create(
++    content::WebContents* /*web_contents*/) {
++  return std::make_unique<ArcifiedMacVersionUpdater>();
++}
+diff --git a/chrome/browser/ui/webui/help/version_updater_arcified_mac_browsertest.cc b/chrome/browser/ui/webui/help/version_updater_arcified_mac_browsertest.cc
+new file mode 100644
+index 00000000..1929634c
+--- /dev/null
++++ b/chrome/browser/ui/webui/help/version_updater_arcified_mac_browsertest.cc
+@@ -0,0 +1,95 @@
++// Copyright 2026 The Arcified Authors
++// SPDX-License-Identifier: GPL-3.0-only
++
++#include <cstdint>
++#include <string>
++
++#include "base/run_loop.h"
++#include "base/test/bind.h"
++#include "chrome/browser/profiles/profile.h"
++#include "chrome/browser/ui/browser.h"
++#include "chrome/browser/ui/tabs/tab_strip_model.h"
++#include "chrome/browser/ui/webui/help/version_updater.h"
++#include "chrome/common/pref_names.h"
++#include "chrome/test/base/in_process_browser_test.h"
++#include "components/prefs/pref_service.h"
++#include "content/public/browser/web_contents.h"
++#include "content/public/test/browser_test.h"
++#include "testing/gtest/include/gtest/gtest.h"
++
++using ArcifiedMacUpdateBrowserTest = InProcessBrowserTest;
++
++IN_PROC_BROWSER_TEST_F(ArcifiedMacUpdateBrowserTest,
++                       UnavailableCheckRetainsProfileAndLivePage) {
++  Profile* const profile = browser()->GetProfile();
++  content::WebContents* const page =
++      browser()->tab_strip_model()->GetActiveWebContents();
++  ASSERT_TRUE(page);
++  const auto page_url = page->GetLastCommittedURL();
++  const int tab_count = browser()->tab_strip_model()->count();
++  const std::string homepage = "https://update-macos.invalid/retained";
++  profile->GetPrefs()->SetString(prefs::kHomePage, homepage);
++
++  auto updater = VersionUpdater::Create(page);
++  ASSERT_TRUE(updater);
++  int status_calls = 0;
++  int promotion_calls = 0;
++  auto status = base::BindLambdaForTesting(
++      [&](VersionUpdater::Status value, int progress, bool rollback,
++          bool powerwash, const std::string& version, int64_t size,
++          const std::u16string& message) {
++        ++status_calls;
++        EXPECT_EQ(value, VersionUpdater::FAILED);
++        EXPECT_EQ(progress, 0);
++        EXPECT_FALSE(rollback);
++        EXPECT_FALSE(powerwash);
++        EXPECT_TRUE(version.empty());
++        EXPECT_EQ(size, 0);
++        EXPECT_FALSE(message.empty());
++      });
++  auto promotion =
++      base::BindLambdaForTesting([&](VersionUpdater::PromotionState value) {
++        ++promotion_calls;
++        EXPECT_EQ(value, VersionUpdater::PROMOTE_HIDDEN);
++      });
++
++  updater->CheckForUpdate(status, promotion);
++  base::RunLoop().RunUntilIdle();
++  EXPECT_EQ(status_calls, 1);
++  EXPECT_EQ(promotion_calls, 1);
++  // A direct promotion request and another check cannot enable installation or
++  // turn an unavailable result into "up to date" or "relaunch".
++  updater->PromoteUpdater();
++  updater->CheckForUpdate(status, promotion);
++  base::RunLoop().RunUntilIdle();
++  EXPECT_EQ(status_calls, 2);
++  EXPECT_EQ(promotion_calls, 2);
++  EXPECT_EQ(profile->GetPrefs()->GetString(prefs::kHomePage), homepage);
++  EXPECT_EQ(browser()->GetProfile(), profile);
++  EXPECT_EQ(page->GetBrowserContext(), profile);
++  EXPECT_EQ(browser()->tab_strip_model()->GetActiveWebContents(), page);
++  EXPECT_EQ(browser()->tab_strip_model()->count(), tab_count);
++  EXPECT_EQ(page->GetLastCommittedURL(), page_url);
++}
++
++IN_PROC_BROWSER_TEST_F(ArcifiedMacUpdateBrowserTest,
++                       PromotionCallbackCanDestroyUpdater) {
++  auto updater = VersionUpdater::Create(
++      browser()->tab_strip_model()->GetActiveWebContents());
++  ASSERT_TRUE(updater);
++  int status_calls = 0;
++  updater->CheckForUpdate(
++      base::BindLambdaForTesting([&](VersionUpdater::Status status, int, bool,
++                                     bool, const std::string&, int64_t,
++                                     const std::u16string&) {
++        ++status_calls;
++        EXPECT_EQ(status, VersionUpdater::FAILED);
++      }),
++      base::BindLambdaForTesting([&](VersionUpdater::PromotionState state) {
++        EXPECT_EQ(state, VersionUpdater::PROMOTE_HIDDEN);
++        updater.reset();
++      }));
++  base::RunLoop().RunUntilIdle();
++  EXPECT_FALSE(updater);
++  EXPECT_EQ(status_calls, 1);
++}
+diff --git a/chrome/test/BUILD.gn b/chrome/test/BUILD.gn
+index 9f31e904..b580439e 100644
+--- a/chrome/test/BUILD.gn
++++ b/chrome/test/BUILD.gn
+@@ -2586,6 +2586,7 @@ if (!is_android) {
+     if (is_mac) {
+       deps += [
+         "//chrome/browser/ui:browser_commands_mac",
++        "//chrome/browser/ui/webui/help:browser_tests",
+         "//chrome/updater:browser_sources",
+       ]
+     }
+
