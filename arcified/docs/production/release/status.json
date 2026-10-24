@@ -478,12 +478,14 @@
     "All four accepted P1 fixes applied; revised packet and 26-file combined patches reconstructed exactly; formats, checksums and actual GRIT dependency check passed."
   ],
   "remaining": [
-    "Collect and reconcile production packets",
-    "Run light applicable validation and independent fresh review rounds",
-    "Commit reviewed source packets locally and report exact commits and remaining native gates to root"
+    "Root reconcile and register downstream patch with other areas and the full macOS platform series",
+    "Root feature compilation, native test execution and installed visual/accessibility acceptance",
+    "Owner release identity, package/support, signing/channel/key, compatibility/rollback and data disposition decisions",
+    "Actual package lifecycle and authenticated update acceptance on every supported OS",
+    "Executed declared engine update and complete current security/provenance assessment"
   ],
   "nativeAcceptance": "OPEN",
-  "nextAction": "Commit exact reviewed packets and coordinator handoff locally, then send root commit SHA and artifact paths. Root retains integration, compilation, runtime, UX and publication.",
+  "nextAction": "Root integrate reviewed source commit 6f5cb45380855370372bebcf3debceea1882a5aa using HANDOFF.md and integrated-identities.json. No child tasks are live. This coordinator's source work is committed; all seven issue acceptance gates remain OPEN.",
   "reviewState": {
     "cleanPackets": [
       "release-linux",
@@ -523,7 +525,19 @@
     "chromeDriver": "matching version, owner reported",
     "featureAcceptance": "OPEN"
   },
-  "coordinatorStatus": "REVIEWED_SOURCE_READY_FOR_LOCAL_COMMIT",
-  "localCommits": [],
-  "checkScratch": "Cleanup rejected because rm -f style commands are not permitted. Scratch is retained untracked and excluded from commit; no alternate deletion attempted. Every packet base/result and combined patch/identity is committed."
+  "coordinatorStatus": "SOURCE_PACKETS_COMMITTED_ROOT_ACCEPTANCE_OPEN",
+  "localCommits": [
+    {
+      "sha": "6f5cb45380855370372bebcf3debceea1882a5aa",
+      "purpose": "All seven reviewed production packets, reconciled 26-file patch, source identities, retained briefs/reviews and root handoff"
+    }
+  ],
+  "checkScratch": "Cleanup rejected because rm -f style commands are not permitted. Scratch is retained untracked and excluded from commit; no alternate deletion attempted. Every packet base/result and combined patch/identity is committed.",
+  "finalLocalChecks": {
+    "sourceReview": "Seven clean packet source reviews plus clean combined-source review",
+    "sourceBytes": "Reviewed patch/source hashes unchanged through commit",
+    "formatterAndLint": "Affected C++/GN formatting and strict source patch whitespace passed; staged non-patch source/metadata whitespace check passed. Raw patch artifact diff reports required context spaces.",
+    "scratch": "Untracked check directories retained after prohibited rm -f cleanup was rejected; excluded from commit.",
+    "native": "No native feature build/test/runtime/UX execution, root-only"
+  }
 }
